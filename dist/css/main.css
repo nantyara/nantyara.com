@@ -98,4 +98,5 @@
 
          .main > .item > pre {
              margin-left: 20px;
+             white-space: pre-wrap;
          }
