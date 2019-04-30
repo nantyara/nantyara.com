@@ -6,7 +6,7 @@ path = Pathname.new(__FILE__)
 schedules =
   YAML.load_file(path + '../../data/schedules.yml').
     select { |s| s['date'] < Time.now }.
-    sort_by { |s| s['date'] }
+    sort_by { |s| s['date'] }.reverse
 
 current = false
 
