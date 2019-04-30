@@ -5,7 +5,7 @@ require 'yaml'
 path = Pathname.new(__FILE__)
 schedules =
   YAML.load_file(path + '../../data/schedules.yml').
-    select { |s| s['date'] >= Time.now.to_date }.
+    select { |s| s['date'] >= Time.now }.
     sort_by { |s| s['date'] }
 
 current = true
