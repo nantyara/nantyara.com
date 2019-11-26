@@ -36,6 +36,10 @@
              line-height: 1.5; 
          }
 
+         p {
+             margin-left: 10px;
+         }
+
          .header {
              margin: 10px auto;
              background-color: rgba(0,0,0,0);
