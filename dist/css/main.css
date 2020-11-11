@@ -2,6 +2,7 @@
              margin: 0;
              /* Background pattern from Toptal Subtle Patterns */
              background-image: url('../img/fancy-cushion.png');
+             background-color: black;
          }
 
          /* タイポグラフィにrem単位を使用するよう切り替えます。見出しのline-heightを修正。 */
