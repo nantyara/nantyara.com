@@ -1,14 +1,17 @@
 ---
 interface Props {
   title: string;
+  artist?: string;
   release_date: string;
   type: string;
+  format?: string;
+  label?: string;
   jacket_image?: string;
   description?: string;
   links?: Array<{ platform: string; url: string }>;
 }
 
-const { title, release_date, type, jacket_image, description, links } = Astro.props;
+const { title, artist, release_date, type, format, label, jacket_image, description, links } = Astro.props;
 
 const formatDate = (dateStr: string) => {
   const date = new Date(dateStr);
@@ -20,42 +23,364 @@ const typeLabel = {
   album: 'アルバム',
   ep: 'EP'
 };
+
+const typeBadgeColors = {
+  single: 'var(--retro-pink)',
+  album: 'var(--retro-purple)',
+  ep: 'var(--retro-cyan)'
+};
+
+const badgeColor = typeBadgeColors[type as keyof typeof typeBadgeColors] || 'var(--retro-pink)';
 ---
 
-<div class="item">
-  <div class="title">
-    <span class="day">{typeLabel[type as keyof typeof typeLabel] || type}</span>
-    {title}
-  </div>
-  <p>{formatDate(release_date)}</p>
-  {description && <pre>{description}</pre>}
-  {links && links.length > 0 && (
-    <div class="links">
-      {links.map(link => (
-        <a href={link.url} target="_blank" rel="noopener noreferrer">{link.platform}</a>
-      ))}
+<article class="release-card">
+  <div class="card-layout">
+    {jacket_image && (
+      <div class="jacket-wrapper">
+        <div class="record-peek"></div>
+        <img
+          src={jacket_image}
+          alt={`${title} ジャケット`}
+          class="jacket-image"
+          loading="lazy"
+          width="300"
+          height="300"
+        />
+      </div>
+    )}
+
+    <div class="card-content">
+      <div class="type-badge" style={`background: ${badgeColor}`}>
+        {typeLabel[type as keyof typeof typeLabel] || type}
+      </div>
+
+      <h3 class="release-title">{title}</h3>
+
+      {artist && (
+        <div class="release-artist">{artist}</div>
+      )}
+
+      <div class="release-meta">
+        <div class="release-date">
+          <span class="date-icon">📅</span>
+          {formatDate(release_date)}
+        </div>
+        {(format || label) && (
+          <div class="release-info">
+            {format && <span class="format">{format}</span>}
+            {label && <span class="label">{label}</span>}
+          </div>
+        )}
+      </div>
+
+      {description && (
+        <pre class="release-description">{description}</pre>
+      )}
+
+      {links && links.length > 0 && (
+        <div class="streaming-links">
+          {links.map(link => (
+            <a
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="streaming-button"
+            >
+              <span class="button-icon">🎵</span>
+              {link.platform}
+            </a>
+          ))}
+        </div>
+      )}
     </div>
-  )}
-</div>
+  </div>
+</article>
 
 <style>
-  .links {
-    margin: 10px 20px;
+  .release-card {
+    width: 100%;
+    max-width: 500px;
+    background: linear-gradient(135deg, var(--bg-medium) 0%, var(--bg-dark) 100%);
+    border: 2px solid var(--retro-purple);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow:
+      0 4px 0 rgba(0, 0, 0, 0.3),
+      0 0 20px rgba(157, 78, 221, 0.3),
+      inset 0 0 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .release-card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 8px 0 rgba(0, 0, 0, 0.3),
+      0 0 30px rgba(157, 78, 221, 0.6),
+      0 0 40px rgba(255, 110, 199, 0.3),
+      inset 0 0 30px rgba(0, 0, 0, 0.3);
+    border-color: var(--retro-pink);
+  }
+
+  .card-layout {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  /* ジャケット画像 */
+  .jacket-wrapper {
+    flex-shrink: 0;
+    width: 150px;
+    height: 150px;
+    position: relative;
+  }
+
+  .jacket-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 3px solid var(--retro-pink);
+    box-shadow:
+      0 0 15px rgba(255, 110, 199, 0.5),
+      inset 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+
+  /* レコード覗き見エフェクト */
+  .record-peek {
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    width: 30px;
+    height: 120px;
+    background: radial-gradient(circle, #222 30%, #000 70%);
+    border-radius: 0 15px 15px 0;
+    transform: translateY(-50%);
+    box-shadow:
+      inset 2px 0 5px rgba(0, 0, 0, 0.5),
+      0 0 10px rgba(0, 0, 0, 0.8);
+    z-index: 1;
+  }
+
+  /* カードコンテンツ */
+  .card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .type-badge {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 5px 12px;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 12px;
+    box-shadow:
+      0 3px 0 rgba(0, 0, 0, 0.3),
+      0 0 10px rgba(255, 110, 199, 0.4);
+    letter-spacing: 1px;
+  }
+
+  .release-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    text-shadow:
+      2px 2px 0 rgba(157, 78, 221, 0.5),
+      0 0 10px rgba(255, 110, 199, 0.3);
+    line-height: 1.4;
+  }
+
+  .release-artist {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--retro-cyan);
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  }
+
+  .release-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .release-date {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--pastel-lavender);
+  }
+
+  .date-icon {
+    font-size: 1rem;
+  }
+
+  .release-info {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
+    font-size: 0.8rem;
   }
 
-  .links a {
-    background: #789;
+  .format,
+  .label {
+    padding: 3px 10px;
+    background: rgba(157, 78, 221, 0.3);
+    border: 1px solid var(--retro-purple);
+    border-radius: 10px;
+    color: var(--pastel-pink);
+  }
+
+  .release-description {
+    font-family: var(--font-base);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--text-light);
+    margin: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    border: 1px solid rgba(157, 78, 221, 0.2);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* ストリーミングリンク */
+  .streaming-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+  }
+
+  .streaming-button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, var(--retro-purple) 0%, var(--retro-pink) 100%);
     color: white;
-    padding: 5px 15px;
-    border-radius: 3px;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow:
+      0 3px 0 rgba(0, 0, 0, 0.3),
+      0 0 10px rgba(255, 110, 199, 0.3);
+    transition: all 0.3s ease;
+    min-height: 38px;
   }
 
-  .links a:hover {
-    background: #567;
+  .streaming-button:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 5px 0 rgba(0, 0, 0, 0.3),
+      0 0 20px rgba(255, 110, 199, 0.6);
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+
+  .streaming-button:active {
+    transform: translateY(0);
+    box-shadow:
+      0 2px 0 rgba(0, 0, 0, 0.3),
+      0 0 10px rgba(255, 110, 199, 0.3);
+  }
+
+  .button-icon {
+    font-size: 1rem;
+  }
+
+  /* レスポンシブ対応 */
+  @media (max-width: 768px) {
+    .release-card {
+      max-width: 100%;
+    }
+
+    .card-layout {
+      flex-direction: column;
+      align-items: center;
+      padding: 16px;
+    }
+
+    .jacket-wrapper {
+      width: 180px;
+      height: 180px;
+    }
+
+    .record-peek {
+      display: none;
+    }
+
+    .card-content {
+      width: 100%;
+      align-items: center;
+      text-align: center;
+    }
+
+    .type-badge {
+      align-self: center;
+    }
+
+    .streaming-links {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .card-layout {
+      padding: 14px;
+    }
+
+    .jacket-wrapper {
+      width: 150px;
+      height: 150px;
+    }
+
+    .release-title {
+      font-size: 1.1rem;
+    }
+
+    .release-artist {
+      font-size: 0.9rem;
+    }
+
+    .release-date {
+      font-size: 0.85rem;
+    }
+
+    .release-info {
+      font-size: 0.75rem;
+    }
+
+    .release-description {
+      font-size: 0.8rem;
+      padding: 8px;
+    }
+
+    .streaming-button {
+      font-size: 0.8rem;
+      padding: 7px 14px;
+      min-height: 36px;
+    }
+  }
+
+  /* アニメーション無効化（アクセシビリティ） */
+  @media (prefers-reduced-motion: reduce) {
+    .release-card,
+    .streaming-button {
+      transition: none !important;
+    }
+
+    .release-card:hover,
+    .streaming-button:hover {
+      transform: none;
+    }
   }
 </style>

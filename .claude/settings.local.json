@@ -8,7 +8,23 @@
       "Bash(npm run dev:*)",
       "Bash(npm run build:*)",
       "Bash(git add:*)",
-      "Bash(git commit -m \"$\\(cat <<''EOF''\nAstro移行: Ruby/ERBからAstroへ完全移行\n\n- Astroプロジェクトセットアップ（package.json, astro.config.mjs）\n- 既存機能移行（スケジュールページ: 今後/過去）\n- 新規5ページ追加（音源、メンバー、沿革、ギャラリー、リンク）\n- データスキーマ作成（YAML形式）\n- Chrome拡張追加（X投稿収集用）\n- .gitignore更新（Astro/Node.js対応）\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAstro移行: Ruby/ERBからAstroへ完全移行\n\n- Astroプロジェクトセットアップ（package.json, astro.config.mjs）\n- 既存機能移行（スケジュールページ: 今後/過去）\n- 新規5ページ追加（音源、メンバー、沿革、ギャラリー、リンク）\n- データスキーマ作成（YAML形式）\n- Chrome拡張追加（X投稿収集用）\n- .gitignore更新（Astro/Node.js対応）\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)",
+      "Bash(wrangler pages project list:*)",
+      "Bash(wrangler pages project create:*)",
+      "Bash(wrangler pages deploy:*)",
+      "Bash(git rm:*)",
+      "Bash(git commit:*)",
+      "Bash(wrangler pages deployment tail:*)",
+      "WebSearch",
+      "WebFetch(domain:diskunion.net)",
+      "Bash(ls:*)",
+      "Bash(file:*)",
+      "Bash(for:*)",
+      "Bash(do echo \"$f:\")",
+      "Bash(identify:*)",
+      "Bash(done)",
+      "Bash(convert:*)"
     ]
   }
 }

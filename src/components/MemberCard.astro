@@ -9,61 +9,377 @@ interface Props {
     twitter?: string;
     instagram?: string;
     tiktok?: string;
+    note?: string;
   };
   color?: string;
 }
 
-const { name, nickname, image, join_date, bio, social, color } = Astro.props;
+const { name, nickname, image, join_date, bio, social, color = '#FF69B4' } = Astro.props;
 
 const formatDate = (dateStr: string) => {
   const date = new Date(dateStr);
-  return date.toLocaleDateString('ja-JP', { year: 'numeric', month: 'long' });
+  const year = date.getFullYear();
+  const month = date.toLocaleDateString('ja-JP', { month: 'long' });
+  return `${year}年${month}〜`;
 };
 ---
 
-<div class="item member-card">
-  <div class="title" style={color ? `background-color: ${color}` : ''}>
-    {nickname || name}
+<article class="member-card" style={`--member-color: ${color}`}>
+  <div class="polaroid-frame">
+    {image ? (
+      <img
+        src={image}
+        alt={nickname || name}
+        class="member-image"
+        loading="lazy"
+        width="300"
+        height="300"
+      />
+    ) : (
+      <div class="member-image-placeholder">
+        <span class="placeholder-icon">👤</span>
+      </div>
+    )}
+
+    <div class="polaroid-caption">
+      <div class="member-name">{nickname || name}</div>
+      {join_date && (
+        <div class="join-date">
+          <span class="date-icon">🎤</span>
+          {formatDate(join_date)}
+        </div>
+      )}
+    </div>
+
+    <div class="sticker-badge">
+      ✨
+    </div>
   </div>
-  {join_date && <p>加入: {formatDate(join_date)}</p>}
-  {bio && <pre>{bio}</pre>}
+
+  {bio && (
+    <pre class="member-bio">{bio}</pre>
+  )}
+
   {social && (
     <div class="social-links">
       {social.twitter && (
-        <a href={social.twitter} target="_blank" rel="noopener noreferrer">Twitter</a>
+        <a
+          href={social.twitter}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-button twitter"
+        >
+          𝕏
+        </a>
       )}
       {social.instagram && (
-        <a href={social.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a
+          href={social.instagram}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-button instagram"
+        >
+          📷
+        </a>
       )}
       {social.tiktok && (
-        <a href={social.tiktok} target="_blank" rel="noopener noreferrer">TikTok</a>
+        <a
+          href={social.tiktok}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-button tiktok"
+        >
+          🎵
+        </a>
+      )}
+      {social.note && (
+        <a
+          href={social.note}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-button note"
+        >
+          📝
+        </a>
       )}
     </div>
   )}
-</div>
+</article>
 
 <style>
   .member-card {
-    min-height: 200px;
+    width: 100%;
+    max-width: 320px;
+    padding: 20px;
+    background: linear-gradient(135deg, var(--bg-medium) 0%, var(--bg-dark) 100%);
+    border: 2px solid var(--member-color, var(--retro-pink));
+    border-radius: 12px;
+    box-shadow:
+      0 4px 0 rgba(0, 0, 0, 0.3),
+      0 0 20px var(--member-color, rgba(255, 110, 199, 0.3)),
+      inset 0 0 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
   }
 
-  .social-links {
-    margin: 10px 20px;
+  .member-card:hover {
+    transform: translateY(-4px) rotate(2deg);
+    box-shadow:
+      0 8px 0 rgba(0, 0, 0, 0.3),
+      0 0 30px var(--member-color, rgba(255, 110, 199, 0.6)),
+      0 0 40px rgba(0, 255, 255, 0.2),
+      inset 0 0 30px rgba(0, 0, 0, 0.3);
+  }
+
+  /* ポラロイド風フレーム */
+  .polaroid-frame {
+    background: white;
+    padding: 12px;
+    padding-bottom: 50px;
+    border-radius: 4px;
+    box-shadow:
+      0 4px 8px rgba(0, 0, 0, 0.5),
+      inset 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transform: rotate(-2deg);
+    transition: transform 0.3s ease;
+  }
+
+  .member-card:hover .polaroid-frame {
+    transform: rotate(0deg);
+  }
+
+  .member-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    display: block;
+    border-radius: 2px;
+  }
+
+  .member-image-placeholder {
+    width: 100%;
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
   }
 
-  .social-links a {
-    background: #789;
-    color: white;
-    padding: 5px 15px;
-    border-radius: 3px;
-    text-decoration: none;
+  .placeholder-icon {
+    font-size: 4rem;
+    opacity: 0.3;
+  }
+
+  .polaroid-caption {
+    margin-top: 12px;
+  }
+
+  .member-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--bg-dark);
+    text-align: center;
+    font-family: var(--font-digital);
+    letter-spacing: 1px;
+  }
+
+  .join-date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 6px;
+    font-size: 0.8rem;
+    color: #666;
+  }
+
+  .date-icon {
     font-size: 0.9rem;
   }
 
-  .social-links a:hover {
-    background: #567;
+  /* ステッカーバッジ */
+  .sticker-badge {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 50px;
+    height: 50px;
+    background: var(--member-color, var(--retro-pink));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow:
+      0 4px 8px rgba(0, 0, 0, 0.4),
+      0 0 15px var(--member-color, rgba(255, 110, 199, 0.6)),
+      inset 0 2px 4px rgba(255, 255, 255, 0.3);
+    transform: rotate(12deg);
+    border: 3px solid white;
+    animation: sticker-float 3s ease-in-out infinite;
+  }
+
+  @keyframes sticker-float {
+    0%, 100% { transform: rotate(12deg) translateY(0); }
+    50% { transform: rotate(12deg) translateY(-5px); }
+  }
+
+  /* メンバーBIO */
+  .member-bio {
+    font-family: var(--font-base);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--text-light);
+    margin: 16px 0 0 0;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    border: 1px solid var(--member-color, rgba(255, 110, 199, 0.2));
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* ソーシャルリンク */
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--retro-purple) 0%, var(--retro-pink) 100%);
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow:
+      0 4px 0 rgba(0, 0, 0, 0.3),
+      0 0 15px rgba(255, 110, 199, 0.4);
+    transition: all 0.3s ease;
+  }
+
+  .social-button:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow:
+      0 6px 0 rgba(0, 0, 0, 0.3),
+      0 0 25px rgba(255, 110, 199, 0.6);
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+
+  .social-button:active {
+    transform: translateY(0) scale(1);
+    box-shadow:
+      0 2px 0 rgba(0, 0, 0, 0.3),
+      0 0 10px rgba(255, 110, 199, 0.4);
+  }
+
+  .social-button.twitter {
+    background: linear-gradient(135deg, #000 0%, #333 100%);
+  }
+
+  .social-button.instagram {
+    background: linear-gradient(135deg, #E1306C 0%, #FD1D1D 50%, #F77737 100%);
+  }
+
+  .social-button.tiktok {
+    background: linear-gradient(135deg, #000 0%, #EE1D52 50%, #69C9D0 100%);
+  }
+
+  .social-button.note {
+    background: linear-gradient(135deg, #41C9B4 0%, #41C9B4 100%);
+  }
+
+  /* レスポンシブ対応 */
+  @media (max-width: 768px) {
+    .member-card {
+      max-width: 100%;
+      padding: 16px;
+    }
+
+    .polaroid-frame {
+      padding: 10px;
+      padding-bottom: 45px;
+    }
+
+    .member-name {
+      font-size: 1rem;
+    }
+
+    .sticker-badge {
+      width: 45px;
+      height: 45px;
+      font-size: 1.3rem;
+      bottom: -8px;
+      right: -8px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .member-card {
+      padding: 14px;
+    }
+
+    .polaroid-frame {
+      padding: 8px;
+      padding-bottom: 40px;
+    }
+
+    .member-name {
+      font-size: 0.95rem;
+    }
+
+    .join-date {
+      font-size: 0.75rem;
+    }
+
+    .member-bio {
+      font-size: 0.8rem;
+      padding: 10px;
+    }
+
+    .social-button {
+      width: 44px;
+      height: 44px;
+      font-size: 1.2rem;
+    }
+
+    .sticker-badge {
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+    }
+  }
+
+  /* アニメーション無効化（アクセシビリティ） */
+  @media (prefers-reduced-motion: reduce) {
+    .member-card,
+    .polaroid-frame,
+    .social-button,
+    .sticker-badge {
+      transition: none !important;
+      animation: none !important;
+    }
+
+    .member-card:hover,
+    .social-button:hover {
+      transform: none;
+    }
+
+    .polaroid-frame {
+      transform: rotate(-2deg);
+    }
+
+    .member-card:hover .polaroid-frame {
+      transform: rotate(-2deg);
+    }
   }
 </style>

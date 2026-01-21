@@ -1,27 +1,243 @@
 - id: release-001
-  title: デビューシングル「なんちゃらソング」
-  release_date: 2019-01-15
+  title: 夜の煙突
+  artist: なんちゃらアイドル / カーネーション
+  release_date: 2020-01-29
   type: single
-  jacket_image: /releases/single-001.jpg
+  format: 7"
+  label: なりすレコード
+  jacket_image: /releases/yoru-no-entotsu.webp
   description: |
-    なんちゃらアイドル待望のデビューシングル！
+    カーネーションのポップ・アンセム「夜の煙突」を、御茶海マミとあおはるによる2人組ユニット"なんちゃらアイドル"が、チップチューンテイストでカバー。
+    初の全国流通盤として7インチでリリース。
   links:
     - platform: Spotify
-      url: https://spotify.com/
+      url: https://open.spotify.com/intl-ja/artist/0Tir7YkPE9wVla7Ci1Tiaz
     - platform: Apple Music
-      url: https://music.apple.com/
+      url: https://music.apple.com/us/artist/nantyara-idol/1438973839
     - platform: YouTube Music
-      url: https://music.youtube.com/
+      url: https://music.youtube.com/channel/UC3I0TwX4iBOwOkPU07ypnpw
 
 - id: release-002
-  title: 1stアルバム「なんちゃらワールド」
-  release_date: 2019-06-20
+  title: さよならOdyssey
+  artist: なんちゃらアイドル
+  release_date: 2020-11-11
   type: album
-  jacket_image: /releases/album-001.jpg
+  format: CD
+  label: ウルトラヴァイヴ
+  jacket_image: /releases/sayonara-odyssey.webp
   description: |
-    初のフルアルバム！全10曲収録
+    なんちゃらアイドルのアルバム。
   links:
     - platform: Spotify
-      url: https://spotify.com/
+      url: https://open.spotify.com/intl-ja/artist/0Tir7YkPE9wVla7Ci1Tiaz
     - platform: Apple Music
-      url: https://music.apple.com/
+      url: https://music.apple.com/us/artist/nantyara-idol/1438973839
+
+- id: release-003
+  title: PansyとDaisy/今夜、全てのBarで
+  artist: なんちゃらアイドル
+  release_date: 2021-07-17
+  type: single
+  format: 7"
+  label: なりすレコード
+  jacket_image: /releases/pansy-to-daisy.webp
+  description: |
+    第二期なんちゃらアイドルの最初のシングル。
+    「PansyとDaisy」は2分36秒のブラスロック。「今夜、全てのBarで」はネオソウルで、過去最遅のBPMにのせて、汗をかかずに踊るダンスミュージック。
+    RSD DROPS 2021の限定商品。
+  tracks:
+    - A1. PansyとDaisy
+    - B1. 今夜、全てのBarで
+  links:
+    - platform: Spotify
+      url: https://open.spotify.com/intl-ja/artist/0Tir7YkPE9wVla7Ci1Tiaz
+    - platform: Apple Music
+      url: https://music.apple.com/us/artist/nantyara-idol/1438973839
+
+- id: release-004
+  title: M.A.M.I.
+  artist: なんちゃらアイドル loves 一色進&松田信男
+  release_date: 2021-12-22
+  type: album
+  format: CD
+  label: ウルトラヴァイヴ
+  jacket_image: /releases/mami.webp
+  description: |
+    「地下アイドル界の最終兵器」とされるなんちゃらアイドルと、伝説的バンド・CINEMAのメンバーによる「奇跡のコラボレーション・アルバム」。
+    アイドルおよびJ-POPのジャンル枠を超えた作品。
+  links:
+    - platform: Spotify
+      url: https://open.spotify.com/intl-ja/artist/0Tir7YkPE9wVla7Ci1Tiaz
+    - platform: Apple Music
+      url: https://music.apple.com/us/artist/nantyara-idol/1438973839
+
+- id: release-005
+  title: 嘲笑
+  artist: なんちゃらアイドル
+  release_date: 2022-12-21
+  type: single
+  format: 7"
+  label: なりすレコード
+  jacket_image: /releases/choushou.webp
+  description: |
+    なんちゃらアイドルのシングル。
+  links:
+    - platform: Spotify
+      url: https://open.spotify.com/intl-ja/artist/0Tir7YkPE9wVla7Ci1Tiaz
+    - platform: Apple Music
+      url: https://music.apple.com/us/artist/nantyara-idol/1438973839
+
+- id: release-006
+  title: Life Goes On
+  artist: なんちゃらアイドル
+  release_date: 2022-12-21
+  type: album
+  format: CD
+  label: ウルトラヴァイヴ
+  jacket_image: /releases/life-goes-on.webp
+  description: |
+    なんちゃらアイドルの2ndアルバム。
+  links:
+    - platform: Spotify
+      url: https://open.spotify.com/intl-ja/artist/0Tir7YkPE9wVla7Ci1Tiaz
+    - platform: Apple Music
+      url: https://music.apple.com/us/artist/nantyara-idol/1438973839
+
+- id: release-007
+  title: 運命の人/ 楽園 / 眠るなBABE
+  artist: なんちゃらアイドル
+  release_date: 2023-07-07
+  type: single
+  format: 8cm CD
+  label: なりすレコード
+  jacket_image: /releases/unmei-no-hito.webp
+  description: |
+    「短冊CDの日 2023.7.7.」を記念してリリースされた8cmCD。
+    なんちゃらアイドルによる初のカバー・アルバムの先行シングル。平成の名曲3曲を収録。
+    スピッツ、THE YELLOW MONKEY、T.V.Jesusの楽曲をカバー。サウンドプロデュースはスキップカウズのギタリストが担当。
+    短冊CDの誕生35周年を記念した複数アーティストによる特別企画。
+  tracks:
+    - 運命の人
+    - 楽園
+    - 眠るなBABE
+  links:
+    - platform: Spotify
+      url: https://open.spotify.com/intl-ja/artist/0Tir7YkPE9wVla7Ci1Tiaz
+    - platform: Apple Music
+      url: https://music.apple.com/us/artist/nantyara-idol/1438973839
+
+- id: release-008
+  title: Silver METAL Love Song, Baby
+  artist: なんちゃらアイドル loves 大高ジャッキー
+  release_date: 2023-10-04
+  type: album
+  format: CD
+  label: Insense Music Works Inc.
+  jacket_image: /releases/silver-metal-love-song.webp
+  description: |
+    「地下アイドル界の最終兵器」と元SUPER STUPIDの大高ジャッキーのコラボアルバム。
+    祖父尼淳監修による、メタルプログレ要素とサージェント・ペパーズ的な作風を特徴とする作品。
+    結成9年目の地下アイドルグループによる年間200本以上のライブ活動を背景とした制作。
+  links:
+    - platform: Spotify
+      url: https://open.spotify.com/intl-ja/artist/0Tir7YkPE9wVla7Ci1Tiaz
+    - platform: Apple Music
+      url: https://music.apple.com/us/artist/nantyara-idol/1438973839
+
+- id: release-009
+  title: 芸術偶像mode
+  artist: MAMI MISAMI / 御茶海マミ
+  release_date: 2023-11-29
+  type: single
+  format: 8cm CD
+  label: なりすレコード
+  jacket_image: /releases/geijutsu-guzo-mode.webp
+  description: |
+    なんちゃらアイドルのメンバーである御茶海マミによる初のソロ全国流通盤。
+    デビュー10周年を控えた時期のリリースで、珍しい8センチCD（短冊CD）フォーマットでの展開。
+  links:
+    - platform: Spotify
+      url: https://open.spotify.com/intl-ja/artist/0Tir7YkPE9wVla7Ci1Tiaz
+    - platform: Apple Music
+      url: https://music.apple.com/us/artist/nantyara-idol/1438973839
+
+- id: release-010
+  title: SWEET DROPS
+  artist: なんちゃらアイドル loves 鈴木祥子
+  release_date: 2023-11-29
+  type: single
+  format: 8cm CD
+  label: なりすレコード
+  jacket_image: /releases/sweet-drops.webp
+  description: |
+    デビュー当初から「曲と性格は良いアイドル」をモットーに活動してきたなんちゃらアイドルと鈴木祥子のコラボレーション。
+  links:
+    - platform: Spotify
+      url: https://open.spotify.com/intl-ja/artist/0Tir7YkPE9wVla7Ci1Tiaz
+    - platform: Apple Music
+      url: https://music.apple.com/us/artist/nantyara-idol/1438973839
+
+- id: release-011
+  title: Sentimental Jukebox
+  artist: なんちゃらアイドル
+  release_date: 2023-12-13
+  type: album
+  format: CD
+  label: ウルトラヴァイヴ
+  jacket_image: /releases/sentimental-jukebox.webp
+  description: |
+    3rdアルバムは、まさかのカバー・アルバム。
+  links:
+    - platform: Spotify
+      url: https://open.spotify.com/intl-ja/artist/0Tir7YkPE9wVla7Ci1Tiaz
+    - platform: Apple Music
+      url: https://music.apple.com/us/artist/nantyara-idol/1438973839
+
+- id: release-012
+  title: もしかして君だけが苦しいって思ってないかい? / CICADA / 凍える太陽
+  artist: なんちゃらアイドル
+  release_date: 2024-12-21
+  type: single
+  format: 8cm CD
+  label: なりすレコード
+  jacket_image: /releases/moshikashite.webp
+  description: |
+    2024年最初で最後のシングルは、「オセロケッツ」の10枚目のシングルを大胆にEDMでカバー。
+  links:
+    - platform: Spotify
+      url: https://open.spotify.com/intl-ja/artist/0Tir7YkPE9wVla7Ci1Tiaz
+    - platform: Apple Music
+      url: https://music.apple.com/us/artist/nantyara-idol/1438973839
+
+- id: release-013
+  title: V.A.「シューティング スター」収録「LOVE マシーン」
+  artist: なんちゃらアイドル Loves スキップカウズ
+  release_date: 2024-11-11
+  type: album
+  format: CD (2枚組)
+  label: なりすレコード
+  jacket_image: /releases/shooting-star.webp
+  description: |
+    コンピレーションアルバム「シューティング スター」に参加。
+    Disc2の10番目に「なんちゃらアイドル Loves スキップカウズ/LOVE マシーン」を収録。
+  links:
+    - platform: Spotify
+      url: https://open.spotify.com/intl-ja/artist/0Tir7YkPE9wVla7Ci1Tiaz
+    - platform: Apple Music
+      url: https://music.apple.com/us/artist/nantyara-idol/1438973839
+
+- id: release-014
+  title: グッバイ・マイガール c/w ブラックコーヒー
+  artist: なんちゃらアイドル loves 豊田道倫
+  release_date: 2026-01-28
+  type: single
+  format: 8cm CD
+  label: なりすレコード
+  jacket_image: /releases/goodbye-my-girl.webp
+  description: |
+    「地下アイドル界の最終兵器」として知られるなんちゃらアイドルと豊田道倫による異色のコラボレーション。
+  links:
+    - platform: Spotify
+      url: https://open.spotify.com/intl-ja/artist/0Tir7YkPE9wVla7Ci1Tiaz
+    - platform: Apple Music
+      url: https://music.apple.com/us/artist/nantyara-idol/1438973839

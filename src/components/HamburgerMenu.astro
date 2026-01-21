@@ -1,0 +1,311 @@
+---
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+
+const menuItems = [
+  { href: '/', label: 'ライブ予定', icon: '📅' },
+  { href: '/releases', label: '音源', icon: '🎵' },
+  { href: '/members', label: 'メンバー', icon: '👥' },
+  { href: '/history', label: '沿革', icon: '📖' },
+  { href: '/gallery', label: 'ギャラリー', icon: '📸' },
+  { href: '/links', label: 'リンク', icon: '🔗' },
+];
+---
+
+<nav class="hamburger-nav">
+  <button class="hamburger-button" aria-label="メニュー" aria-expanded="false">
+    <span class="hamburger-icon">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </span>
+  </button>
+
+  <div class="menu-overlay"></div>
+
+  <div class="menu-drawer">
+    <div class="menu-header">
+      <h2 class="menu-title">MENU</h2>
+      <button class="close-button" aria-label="閉じる">✕</button>
+    </div>
+
+    <ul class="menu-list">
+      {menuItems.map(item => (
+        <li class="menu-item">
+          <a
+            href={item.href}
+            class={`menu-link ${currentPath === item.href ? 'active' : ''}`}
+            aria-current={currentPath === item.href ? 'page' : undefined}
+          >
+            <span class="menu-icon">{item.icon}</span>
+            <span class="menu-label">{item.label}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</nav>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerButton = document.querySelector('.hamburger-button');
+    const closeButton = document.querySelector('.close-button');
+    const menuOverlay = document.querySelector('.menu-overlay');
+    const menuDrawer = document.querySelector('.menu-drawer');
+
+    const openMenu = () => {
+      menuDrawer?.classList.add('open');
+      menuOverlay?.classList.add('open');
+      hamburgerButton?.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    };
+
+    const closeMenu = () => {
+      menuDrawer?.classList.remove('open');
+      menuOverlay?.classList.remove('open');
+      hamburgerButton?.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    };
+
+    hamburgerButton?.addEventListener('click', openMenu);
+    closeButton?.addEventListener('click', closeMenu);
+    menuOverlay?.addEventListener('click', closeMenu);
+
+    // メニューリンククリック時も閉じる
+    document.querySelectorAll('.menu-link').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+  });
+</script>
+
+<style>
+  .hamburger-nav {
+    position: relative;
+    z-index: 1000;
+  }
+
+  /* ハンバーガーボタン */
+  .hamburger-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--retro-purple) 0%, var(--retro-pink) 100%);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1002;
+    box-shadow:
+      0 4px 0 rgba(0, 0, 0, 0.3),
+      0 0 20px rgba(255, 110, 199, 0.5);
+    transition: all 0.3s ease;
+  }
+
+  .hamburger-button:hover {
+    transform: scale(1.1);
+    box-shadow:
+      0 6px 0 rgba(0, 0, 0, 0.3),
+      0 0 30px rgba(255, 110, 199, 0.8);
+  }
+
+  .hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .line {
+    width: 24px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  /* オーバーレイ */
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+
+  .menu-overlay.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* メニュードロワー */
+  .menu-drawer {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+    border-left: 3px solid var(--retro-pink);
+    box-shadow: -4px 0 30px rgba(0, 0, 0, 0.8);
+    transition: right 0.3s ease;
+    z-index: 1001;
+    overflow-y: auto;
+  }
+
+  .menu-drawer.open {
+    right: 0;
+  }
+
+  /* メニューヘッダー */
+  .menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+    border-bottom: 2px solid var(--retro-pink);
+    background: linear-gradient(90deg, var(--retro-purple) 0%, var(--retro-pink) 100%);
+  }
+
+  .menu-title {
+    font-size: 2rem;
+    font-weight: 900;
+    color: white;
+    text-shadow:
+      2px 2px 0 rgba(0, 0, 0, 0.5),
+      0 0 15px rgba(255, 255, 255, 0.5);
+    margin: 0;
+    letter-spacing: 3px;
+  }
+
+  .close-button {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .close-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+  }
+
+  /* メニューリスト */
+  .menu-list {
+    list-style: none;
+    padding: 20px 0;
+    margin: 0;
+  }
+
+  .menu-item {
+    margin: 0;
+  }
+
+  .menu-link {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 30px;
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+  }
+
+  .menu-link:hover {
+    background: rgba(255, 110, 199, 0.1);
+    border-left-color: var(--retro-pink);
+  }
+
+  .menu-link.active {
+    background: linear-gradient(90deg, rgba(0, 255, 255, 0.2) 0%, transparent 100%);
+    border-left-color: var(--retro-cyan);
+    color: var(--retro-cyan);
+  }
+
+  .menu-icon {
+    font-size: 1.8rem;
+    width: 40px;
+    text-align: center;
+  }
+
+  .menu-label {
+    flex: 1;
+  }
+
+  /* レスポンシブ対応 */
+  @media (max-width: 480px) {
+    .hamburger-button {
+      width: 52px;
+      height: 52px;
+      top: 15px;
+      right: 15px;
+    }
+
+    .line {
+      width: 20px;
+    }
+
+    .menu-drawer {
+      max-width: 100%;
+    }
+
+    .menu-header {
+      padding: 20px 15px;
+    }
+
+    .menu-title {
+      font-size: 1.5rem;
+    }
+
+    .close-button {
+      width: 44px;
+      height: 44px;
+    }
+
+    .menu-link {
+      padding: 18px 20px;
+      font-size: 1.1rem;
+    }
+
+    .menu-icon {
+      font-size: 1.5rem;
+      width: 35px;
+    }
+  }
+
+  /* アニメーション無効化（アクセシビリティ） */
+  @media (prefers-reduced-motion: reduce) {
+    .hamburger-button,
+    .menu-overlay,
+    .menu-drawer,
+    .menu-link,
+    .close-button {
+      transition: none !important;
+    }
+
+    .hamburger-button:hover,
+    .close-button:hover {
+      transform: none;
+    }
+  }
+</style>

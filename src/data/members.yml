@@ -1,25 +1,23 @@
 - id: member-001
-  name: さまみ
-  nickname: さまみ
-  image: /members/member-001.jpg
+  name: 御茶海マミ
+  nickname: マミ
+  image: /members/mami.webp
   join_date: 2018-10-01
   bio: |
-    なんちゃらアイドルのメンバー。
-    よろしくお願いします！
+    気遣い
   social:
     twitter: https://x.com/samami27
-    instagram: https://instagram.com/
+    note: https://note.com/misamimami
   color: "#FF69B4"
 
 - id: member-002
-  name: よくわかんない
-  nickname: よくわかんない
-  image: /members/member-002.jpg
-  join_date: 2019-01-15
+  name: あおはる
+  nickname: あおはる
+  image: /members/aoharu.webp
+  join_date: 2018-10-01
   bio: |
-    なんちゃらアイドルのメンバー。
-    頑張ります！
+    足るを知る
   social:
     twitter: https://x.com/yokuwakan_nai
-    instagram: https://instagram.com/
-  color: "#87CEEB"
+    note: https://note.com/yokuwakan_nai
+  color: "#00FFFF"

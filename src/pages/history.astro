@@ -1,48 +1,145 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { readFileSync } from 'node:fs';
-import { parse } from 'yaml';
-
-const historyYaml = readFileSync('src/data/history.yml', 'utf-8');
-const history = parse(historyYaml);
-
-// 年度を降順にソート
-const sortedHistory = history.sort((a: any, b: any) => b.year - a.year);
-
-const formatDate = (dateStr: string) => {
-  const date = new Date(dateStr);
-  return date.toLocaleDateString('ja-JP', { month: 'long', day: 'numeric' });
-};
 ---
 
 <Layout title="沿革 | なんちゃらアイドル">
-  {sortedHistory.map((yearData: any) => (
-    <div class="history-year">
-      <h2 class="year-title">{yearData.year}</h2>
-      {yearData.events.map((event: any) => (
-        <div class="item">
-          <div class="title">
-            <span class="day">{formatDate(event.date)}</span>
-            {event.title}
-          </div>
-          {event.description && <pre>{event.description}</pre>}
-        </div>
-      ))}
+  <div class="under-construction">
+    <div class="construction-icon">🚧</div>
+    <h2 class="construction-title">工事中</h2>
+    <p class="construction-message">
+      このページは現在準備中です。<br>
+      もうしばらくお待ちください。
+    </p>
+    <div class="construction-animation">
+      <span class="dot">●</span>
+      <span class="dot">●</span>
+      <span class="dot">●</span>
     </div>
-  ))}
+  </div>
 </Layout>
 
 <style>
-  .history-year {
-    width: 100%;
-    margin-bottom: 30px;
+  .under-construction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    padding: 40px 20px;
+    text-align: center;
   }
 
-  .year-title {
-    color: #f0f8ff;
-    text-shadow: 1px -1px 0 pink;
-    text-align: center;
-    font-size: 2rem;
-    margin: 20px 0;
+  .construction-icon {
+    font-size: 5rem;
+    margin-bottom: 30px;
+    animation: bounce 2s infinite;
+  }
+
+  .construction-title {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--text-light);
+    text-shadow:
+      3px 3px 0 var(--retro-pink),
+      6px 6px 0 var(--retro-cyan),
+      9px 9px 0 var(--retro-purple);
+    margin: 0 0 30px 0;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+
+  .construction-message {
+    font-size: 1.2rem;
+    color: var(--pastel-lavender);
+    line-height: 1.8;
+    margin: 0 0 40px 0;
+  }
+
+  .construction-animation {
+    display: flex;
+    gap: 15px;
+  }
+
+  .dot {
+    font-size: 1.5rem;
+    color: var(--retro-pink);
+    animation: pulse 1.5s infinite;
+  }
+
+  .dot:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+
+  .dot:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 0.3;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.3);
+    }
+  }
+
+  /* レスポンシブ対応 */
+  @media (max-width: 768px) {
+    .construction-icon {
+      font-size: 4rem;
+    }
+
+    .construction-title {
+      font-size: 2.2rem;
+      text-shadow:
+        2px 2px 0 var(--retro-pink),
+        4px 4px 0 var(--retro-cyan),
+        6px 6px 0 var(--retro-purple);
+    }
+
+    .construction-message {
+      font-size: 1.1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .construction-icon {
+      font-size: 3rem;
+    }
+
+    .construction-title {
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+      text-shadow:
+        2px 2px 0 var(--retro-pink),
+        4px 4px 0 var(--retro-cyan);
+    }
+
+    .construction-message {
+      font-size: 1rem;
+    }
+
+    .dot {
+      font-size: 1.2rem;
+    }
+  }
+
+  /* アニメーション無効化（アクセシビリティ） */
+  @media (prefers-reduced-motion: reduce) {
+    .construction-icon,
+    .dot {
+      animation: none !important;
+    }
   }
 </style>

@@ -1,23 +1,25 @@
 social:
   - name: Twitter（公式）
     url: https://x.com/nantyaraidol
-  - name: Twitter（さまみ）
-    url: https://x.com/samami27
-  - name: Twitter（よくわかんない）
-    url: https://x.com/yokuwakan_nai
+  - name: なりすレコード (Twitter)
+    url: https://x.com/narisu_records
 
 streaming:
-  - name: Spotify
-    url: https://spotify.com/
   - name: Apple Music
-    url: https://music.apple.com/
+    url: https://music.apple.com/us/artist/nantyara-idol/1438973839
+  - name: Spotify
+    url: https://open.spotify.com/intl-ja/artist/0Tir7YkPE9wVla7Ci1Tiaz
   - name: YouTube Music
-    url: https://music.youtube.com/
+    url: https://music.youtube.com/channel/UC3I0TwX4iBOwOkPU07ypnpw
 
 video:
-  - name: YouTube Channel
-    url: https://youtube.com/
+  - name: YouTube
+    url: https://www.youtube.com/@nagaokatasuku
+
+podcast:
+  - name: Podcast
+    url: https://podcast.nantyara.com
 
 store:
-  - name: Official Store
-    url: https://example.com/store
+  - name: BASE Shop
+    url: https://nantyara.thebase.in/

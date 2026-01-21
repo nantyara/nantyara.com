@@ -9,46 +9,209 @@ let imageFiles: string[] = [];
 if (existsSync(picturesDir)) {
   imageFiles = readdirSync(picturesDir)
     .filter(file => /\.(jpg|jpeg|png|gif|webp)$/i.test(file))
-    .map(file => `/pictures/${file}`);
+    .map(file => `/pictures/${file}`)
+    .sort(); // ファイル名順にソート
 }
+
+// ランダム回転角度を生成（フォトフレーム風）
+const randomRotations = [-2, -1, 0, 1, 2];
+const getRandomRotation = () => {
+  return randomRotations[Math.floor(Math.random() * randomRotations.length)];
+};
 ---
 
 <Layout title="ギャラリー | なんちゃらアイドル">
   {imageFiles.length === 0 ? (
-    <div class="item">
+    <div class="empty-state">
       <div class="title">準備中</div>
       <p>現在、写真を準備中です。しばらくお待ちください。</p>
+      <div class="loading-animation">
+        <span class="loading-dot">●</span>
+        <span class="loading-dot">●</span>
+        <span class="loading-dot">●</span>
+      </div>
     </div>
   ) : (
-    <div class="gallery">
-      {imageFiles.map(image => (
-        <div class="gallery-item">
-          <img src={image} alt="ギャラリー画像" loading="lazy" />
-        </div>
+    <div class="gallery-grid">
+      {imageFiles.map((image, index) => (
+        <article class="photo-frame" style={`transform: rotate(${getRandomRotation()}deg)`}>
+          <div class="frame-inner">
+            <img
+              src={image}
+              alt={`ギャラリー画像 ${String(index + 1).padStart(3, '0')}`}
+              loading="lazy"
+              width="400"
+              height="400"
+            />
+            <div class="photo-number">{String(index + 1).padStart(3, '0')}</div>
+          </div>
+        </article>
       ))}
     </div>
   )}
 </Layout>
 
 <style>
-  .gallery {
+  .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 10px;
-    padding: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px;
     width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
   }
 
-  .gallery-item {
+  .photo-frame {
+    background: white;
+    padding: 15px;
+    padding-bottom: 50px;
+    border-radius: 4px;
+    box-shadow:
+      0 4px 8px rgba(0, 0, 0, 0.5),
+      inset 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .photo-frame:hover {
+    transform: rotate(0deg) scale(1.05) translateY(-8px) !important;
+    box-shadow:
+      0 12px 24px rgba(0, 0, 0, 0.6),
+      0 0 30px rgba(255, 110, 199, 0.6),
+      0 0 40px rgba(0, 255, 255, 0.3),
+      inset 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+
+  .frame-inner {
+    position: relative;
+  }
+
+  .photo-frame img {
+    width: 100%;
+    height: auto;
     aspect-ratio: 1;
-    overflow: hidden;
-    border-radius: 5px;
-    background: #eee;
+    object-fit: cover;
+    display: block;
+    border-radius: 2px;
   }
 
-  .gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .photo-number {
+    position: absolute;
+    bottom: -40px;
+    right: 5px;
+    background: var(--retro-yellow);
+    color: var(--bg-dark);
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-family: var(--font-digital);
+    font-weight: 700;
+    font-size: 0.8rem;
+    box-shadow:
+      0 2px 4px rgba(0, 0, 0, 0.3),
+      0 0 10px rgba(255, 214, 10, 0.5);
+    letter-spacing: 2px;
+  }
+
+  /* 空状態のローディングアニメーション */
+  .loading-animation {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+  }
+
+  .loading-dot {
+    font-size: 1.5rem;
+    color: var(--retro-pink);
+    animation: loading-bounce 1.4s infinite ease-in-out both;
+  }
+
+  .loading-dot:nth-child(1) {
+    animation-delay: -0.32s;
+  }
+
+  .loading-dot:nth-child(2) {
+    animation-delay: -0.16s;
+  }
+
+  @keyframes loading-bounce {
+    0%, 80%, 100% {
+      transform: scale(0);
+      opacity: 0.3;
+    }
+    40% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  /* レスポンシブ対応 */
+  @media (max-width: 1024px) {
+    .gallery-grid {
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 25px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .gallery-grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 15px;
+    }
+
+    .photo-frame {
+      padding: 12px;
+      padding-bottom: 45px;
+    }
+
+    .photo-number {
+      bottom: -35px;
+      font-size: 0.75rem;
+      padding: 5px 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .gallery-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 10px;
+    }
+
+    .photo-frame {
+      max-width: 320px;
+      margin: 0 auto;
+      padding: 10px;
+      padding-bottom: 40px;
+    }
+
+    .photo-number {
+      bottom: -32px;
+      font-size: 0.7rem;
+      padding: 4px 8px;
+    }
+
+    .photo-frame:hover {
+      transform: rotate(0deg) scale(1.02) translateY(-4px) !important;
+    }
+  }
+
+  /* アニメーション無効化（アクセシビリティ） */
+  @media (prefers-reduced-motion: reduce) {
+    .photo-frame,
+    .loading-dot {
+      transition: none !important;
+      animation: none !important;
+    }
+
+    .photo-frame:hover {
+      transform: none !important;
+      box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.5),
+        inset 0 0 10px rgba(0, 0, 0, 0.1);
+    }
   }
 </style>

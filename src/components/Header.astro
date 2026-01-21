@@ -1,3 +1,151 @@
-<div class="header">
-  <div class="title">なんちゃらアイドル</div>
-</div>
+---
+// src/components/Header.astro
+---
+
+<header class="header">
+  <h1 class="title glitch neon-glow" data-text="なんちゃらアイドル">
+    なんちゃらアイドル
+  </h1>
+</header>
+
+<style>
+  .header {
+    text-align: center;
+    padding: 40px 20px;
+    margin: 0 0 30px 0;
+    background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+    border-bottom: 3px solid var(--retro-pink);
+    box-shadow: 0 4px 20px rgba(255, 110, 199, 0.3);
+  }
+
+  .title {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--text-light);
+    text-shadow:
+      3px 3px 0 var(--retro-pink),
+      6px 6px 0 var(--retro-cyan),
+      9px 9px 0 var(--retro-purple);
+    margin: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  /* グリッチエフェクト */
+  .glitch {
+    position: relative;
+    display: inline-block;
+  }
+
+  .glitch::before,
+  .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+  }
+
+  .glitch::before {
+    left: 3px;
+    text-shadow: -3px 0 var(--retro-cyan);
+    clip: rect(44px, 9999px, 56px, 0);
+    animation: glitch-anim-1 3s infinite linear alternate-reverse;
+  }
+
+  .glitch::after {
+    left: -3px;
+    text-shadow: -3px 0 var(--retro-pink);
+    clip: rect(44px, 9999px, 56px, 0);
+    animation: glitch-anim-2 2.5s infinite linear alternate-reverse;
+  }
+
+  @keyframes glitch-anim-1 {
+    0%, 100% {
+      clip: rect(10px, 9999px, 31px, 0);
+    }
+    50% {
+      clip: rect(70px, 9999px, 71px, 0);
+    }
+  }
+
+  @keyframes glitch-anim-2 {
+    0%, 100% {
+      clip: rect(30px, 9999px, 91px, 0);
+    }
+    50% {
+      clip: rect(80px, 9999px, 20px, 0);
+    }
+  }
+
+  /* ネオングロー */
+  .neon-glow {
+    animation: neon-flicker 3s infinite alternate;
+  }
+
+  @keyframes neon-flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      text-shadow:
+        3px 3px 0 var(--retro-pink),
+        6px 6px 0 var(--retro-cyan),
+        9px 9px 0 var(--retro-purple),
+        0 0 10px rgba(255, 110, 199, 0.8),
+        0 0 20px rgba(0, 255, 255, 0.8),
+        0 0 30px rgba(157, 78, 221, 0.8);
+    }
+    20%, 24%, 55% {
+      text-shadow:
+        3px 3px 0 var(--retro-pink),
+        6px 6px 0 var(--retro-cyan),
+        9px 9px 0 var(--retro-purple);
+    }
+  }
+
+  /* レスポンシブ対応 */
+  @media (max-width: 768px) {
+    .header {
+      padding: 30px 15px;
+    }
+
+    .title {
+      font-size: 2.2rem;
+      text-shadow:
+        2px 2px 0 var(--retro-pink),
+        4px 4px 0 var(--retro-cyan),
+        6px 6px 0 var(--retro-purple);
+    }
+
+    .glitch::before {
+      left: 2px;
+    }
+
+    .glitch::after {
+      left: -2px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .header {
+      padding: 20px 10px;
+    }
+
+    .title {
+      font-size: 1.8rem;
+      text-shadow:
+        2px 2px 0 var(--retro-pink),
+        4px 4px 0 var(--retro-cyan);
+      letter-spacing: 1px;
+    }
+  }
+
+  /* アニメーション無効化（アクセシビリティ） */
+  @media (prefers-reduced-motion: reduce) {
+    .glitch::before,
+    .glitch::after,
+    .neon-glow {
+      animation: none !important;
+    }
+  }
+</style>

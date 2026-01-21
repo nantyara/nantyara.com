@@ -10,8 +10,18 @@ const categories: Record<string, string> = {
   social: 'SNS',
   streaming: '音楽配信',
   video: '動画',
+  podcast: 'Podcast',
   store: 'グッズ',
   related: '関連サイト',
+};
+
+const categoryIcons: Record<string, string> = {
+  social: '🐦',
+  streaming: '🎵',
+  video: '📺',
+  podcast: '🎙️',
+  store: '🛒',
+  related: '🔗',
 };
 ---
 
@@ -22,14 +32,17 @@ const categories: Record<string, string> = {
 
     return (
       <div class="link-category">
-        <h2 class="category-title">{label}</h2>
+        <h2 class="category-title">
+          <span class="category-icon">{categoryIcons[key]}</span>
+          {label}
+        </h2>
         <div class="link-items">
           {categoryLinks.map((link: any) => (
-            <div class="item link-item">
-              <a href={link.url} target="_blank" rel="noopener noreferrer">
-                {link.name}
-              </a>
-            </div>
+            <a href={link.url} target="_blank" rel="noopener noreferrer" class="link-item">
+              <span class="link-icon">{categoryIcons[key]}</span>
+              <span class="link-name">{link.name}</span>
+              <span class="link-arrow">→</span>
+            </a>
           ))}
         </div>
       </div>
@@ -39,41 +52,176 @@ const categories: Record<string, string> = {
 
 <style>
   .link-category {
-    width: 100%;
-    margin-bottom: 30px;
+    max-width: 900px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
   }
 
   .category-title {
-    color: #f0f8ff;
-    text-shadow: 1px -1px 0 pink;
-    text-align: center;
-    font-size: 1.5rem;
-    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--text-light);
+    text-shadow:
+      2px 2px 0 var(--retro-pink),
+      4px 4px 0 var(--retro-cyan),
+      6px 6px 0 var(--retro-purple);
+    margin: 0 0 30px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .category-icon {
+    font-size: 2.5rem;
+    filter: drop-shadow(0 0 10px rgba(255, 110, 199, 0.8));
   }
 
   .link-items {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
   }
 
   .link-item {
-    width: auto;
-    min-width: 200px;
-    padding: 0;
-  }
-
-  .link-item a {
-    display: block;
-    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 25px;
+    background: linear-gradient(135deg, var(--retro-purple) 0%, var(--retro-pink) 100%);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    color: white;
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+    box-shadow:
+      0 4px 0 rgba(0, 0, 0, 0.3),
+      0 0 20px rgba(255, 110, 199, 0.5);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
   }
 
-  .link-item a:hover {
-    background: #ddd;
+  .link-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .link-item:hover::before {
+    left: 100%;
+  }
+
+  .link-item:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 8px 0 rgba(0, 0, 0, 0.3),
+      0 0 30px rgba(255, 110, 199, 0.8),
+      0 0 50px rgba(0, 255, 255, 0.4);
+    border-color: var(--retro-cyan);
+  }
+
+  .link-icon {
+    font-size: 1.8rem;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+  }
+
+  .link-name {
+    flex: 1;
+  }
+
+  .link-arrow {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+
+  .link-item:hover .link-arrow {
+    transform: translateX(5px);
+  }
+
+  /* レスポンシブ対応 */
+  @media (max-width: 768px) {
+    .category-title {
+      font-size: 1.6rem;
+      gap: 12px;
+    }
+
+    .category-icon {
+      font-size: 2rem;
+    }
+
+    .link-items {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    .link-item {
+      padding: 18px 20px;
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .link-category {
+      padding: 0 10px;
+      margin-bottom: 40px;
+    }
+
+    .category-title {
+      font-size: 1.4rem;
+      gap: 10px;
+      text-shadow:
+        2px 2px 0 var(--retro-pink),
+        4px 4px 0 var(--retro-cyan);
+    }
+
+    .category-icon {
+      font-size: 1.8rem;
+    }
+
+    .link-item {
+      padding: 16px 18px;
+      font-size: 0.95rem;
+      gap: 12px;
+    }
+
+    .link-icon {
+      font-size: 1.5rem;
+    }
+
+    .link-arrow {
+      font-size: 1.3rem;
+    }
+  }
+
+  /* アニメーション無効化（アクセシビリティ） */
+  @media (prefers-reduced-motion: reduce) {
+    .link-item,
+    .link-item::before,
+    .link-arrow {
+      transition: none !important;
+    }
+
+    .link-item:hover {
+      transform: none;
+    }
+
+    .link-item:hover .link-arrow {
+      transform: none;
+    }
+
+    .link-item:hover::before {
+      left: -100%;
+    }
   }
 </style>

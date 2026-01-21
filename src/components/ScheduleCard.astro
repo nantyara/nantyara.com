@@ -4,23 +4,303 @@ interface Props {
   title: string;
   site: string;
   content: string;
+  images?: string[];
 }
 
-const { date, title, site, content } = Astro.props;
+const { date, title, site, content, images } = Astro.props;
 
-// 日付フォーマット（MM/DD形式）
+// 日付フォーマット
 const formatDate = (d: Date) => {
+  const year = d.getFullYear();
   const month = String(d.getMonth() + 1).padStart(2, '0');
   const day = String(d.getDate()).padStart(2, '0');
-  return `${month}/${day}`;
+  const weekdays = ['日', '月', '火', '水', '木', '金', '土'];
+  const weekday = weekdays[d.getDay()];
+  return { year, month, day, weekday };
 };
+
+const dateInfo = formatDate(date);
 ---
 
-<div class="item">
-  <div class="title">
-    <span class="day">{formatDate(date)}</span>
-    {title}
+<article class="schedule-card">
+  <div class="card-header stripe-pattern">
+    <div class="date-badge">
+      <span class="date-year">{dateInfo.year}</span>
+      <span class="date-main">{dateInfo.month}/{dateInfo.day}</span>
+      <span class="date-weekday">({dateInfo.weekday})</span>
+    </div>
+    <h3 class="card-title">{title}</h3>
   </div>
-  <p>{site}</p>
-  <pre>{content}</pre>
-</div>
+
+  <div class="card-body">
+    <div class="venue-info">
+      <span class="venue-icon">📍</span>
+      <span class="venue-name">{site}</span>
+    </div>
+
+    {content && (
+      <pre class="event-details">{content}</pre>
+    )}
+
+    {images && images.length > 0 && (
+      <button class="view-details-btn" data-schedule-title={title}>
+        <span class="btn-icon">🖼️</span>
+        詳細を見る ({images.length}枚)
+      </button>
+    )}
+  </div>
+</article>
+
+<style>
+  .schedule-card {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    background: linear-gradient(135deg, var(--bg-medium) 0%, var(--bg-dark) 100%);
+    border: 2px solid var(--retro-pink);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow:
+      0 4px 0 rgba(0, 0, 0, 0.3),
+      0 0 20px rgba(255, 110, 199, 0.3),
+      inset 0 0 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .schedule-card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 8px 0 rgba(0, 0, 0, 0.3),
+      0 0 30px rgba(255, 110, 199, 0.6),
+      0 0 40px rgba(0, 255, 255, 0.3),
+      inset 0 0 30px rgba(0, 0, 0, 0.3);
+    border-color: var(--retro-cyan);
+  }
+
+  .card-header {
+    background: linear-gradient(135deg, var(--retro-cyan) 0%, var(--retro-purple) 100%);
+    padding: 20px;
+    position: relative;
+  }
+
+  .stripe-pattern {
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(255, 255, 255, 0.1) 10px,
+      rgba(255, 255, 255, 0.1) 20px
+    );
+  }
+
+  .date-badge {
+    display: inline-block;
+    background: var(--retro-yellow);
+    color: var(--bg-dark);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-family: var(--font-digital);
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    box-shadow:
+      0 3px 0 rgba(0, 0, 0, 0.3),
+      0 0 10px rgba(255, 214, 10, 0.5);
+    letter-spacing: 1px;
+  }
+
+  .date-year {
+    margin-right: 8px;
+    opacity: 0.7;
+  }
+
+  .date-main {
+    font-size: 1.1rem;
+    margin-right: 6px;
+  }
+
+  .date-weekday {
+    opacity: 0.8;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    text-shadow:
+      2px 2px 0 rgba(0, 0, 0, 0.5),
+      0 0 10px rgba(255, 255, 255, 0.5);
+    line-height: 1.4;
+  }
+
+  .card-body {
+    padding: 20px;
+  }
+
+  .venue-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    background: rgba(255, 110, 199, 0.1);
+    border-left: 4px solid var(--retro-pink);
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
+
+  .venue-icon {
+    font-size: 1.2rem;
+  }
+
+  .venue-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--pastel-pink);
+  }
+
+  .event-details {
+    font-family: var(--font-base);
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin: 0;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    border: 1px solid rgba(255, 110, 199, 0.2);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .view-details-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    margin-top: 16px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, var(--retro-purple) 0%, var(--retro-pink) 100%);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow:
+      0 4px 0 rgba(0, 0, 0, 0.3),
+      0 0 15px rgba(255, 110, 199, 0.4);
+    transition: all 0.3s ease;
+    min-height: 44px;
+  }
+
+  .view-details-btn:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 6px 0 rgba(0, 0, 0, 0.3),
+      0 0 25px rgba(255, 110, 199, 0.6);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .view-details-btn:active {
+    transform: translateY(0);
+    box-shadow:
+      0 2px 0 rgba(0, 0, 0, 0.3),
+      0 0 15px rgba(255, 110, 199, 0.4);
+  }
+
+  .btn-icon {
+    font-size: 1.2rem;
+  }
+
+  /* レスポンシブ対応 */
+  @media (max-width: 768px) {
+    .schedule-card {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .card-header {
+      padding: 16px;
+    }
+
+    .date-badge {
+      font-size: 0.85rem;
+      padding: 6px 14px;
+    }
+
+    .date-main {
+      font-size: 1rem;
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+    }
+
+    .card-body {
+      padding: 16px;
+    }
+
+    .venue-info {
+      padding: 10px 14px;
+    }
+
+    .venue-name {
+      font-size: 0.95rem;
+    }
+
+    .event-details {
+      font-size: 0.85rem;
+      padding: 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .card-header {
+      padding: 14px;
+    }
+
+    .date-badge {
+      font-size: 0.8rem;
+      padding: 5px 12px;
+    }
+
+    .date-year {
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .card-title {
+      font-size: 1rem;
+    }
+
+    .card-body {
+      padding: 14px;
+    }
+
+    .venue-info {
+      padding: 8px 12px;
+    }
+
+    .venue-name {
+      font-size: 0.9rem;
+    }
+
+    .event-details {
+      font-size: 0.8rem;
+      padding: 8px;
+    }
+  }
+
+  /* アニメーション無効化（アクセシビリティ） */
+  @media (prefers-reduced-motion: reduce) {
+    .schedule-card {
+      transition: none !important;
+    }
+
+    .schedule-card:hover {
+      transform: none;
+    }
+  }
+</style>
