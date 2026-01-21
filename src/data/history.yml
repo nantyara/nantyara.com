@@ -1,0 +1,25 @@
+- year: 2019
+  events:
+    - date: 2019-12-02
+      title: また捕まる前に是非対バンせねばと思ったのだ
+      description: |
+        新宿LOVE TKOにて開催
+    - date: 2019-06-20
+      title: 1stアルバム「なんちゃらワールド」リリース
+      description: |
+        初のフルアルバムをリリース
+    - date: 2019-04-27
+      title: ワンマンライブ開催
+      description: |
+        新宿にて初の単独公演
+    - date: 2019-01-15
+      title: デビューシングル「なんちゃらソング」リリース
+      description: |
+        待望のデビュー作品をリリース
+
+- year: 2018
+  events:
+    - date: 2018-10-01
+      title: なんちゃらアイドル結成
+      description: |
+        活動スタート

@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ScheduleCard from '../components/ScheduleCard.astro';
+import { readFileSync } from 'node:fs';
+import { parse } from 'yaml';
+
+const schedulesYaml = readFileSync('src/data/schedules.yml', 'utf-8');
+const allSchedules = parse(schedulesYaml);
+
+const expireTime = new Date(Date.now() - 12 * 60 * 60 * 1000);
+
+// 過去の予定をフィルタ & 逆順ソート
+const schedules = allSchedules
+  .filter(s => new Date(s.date) < expireTime)
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+---
+
+<Layout title="これまでの予定 | なんちゃらアイドル">
+  {schedules.map(schedule => (
+    <ScheduleCard
+      date={new Date(schedule.date)}
+      title={schedule.title}
+      site={schedule.site}
+      content={schedule.content}
+    />
+  ))}
+</Layout>

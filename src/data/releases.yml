@@ -1,0 +1,27 @@
+- id: release-001
+  title: デビューシングル「なんちゃらソング」
+  release_date: 2019-01-15
+  type: single
+  jacket_image: /releases/single-001.jpg
+  description: |
+    なんちゃらアイドル待望のデビューシングル！
+  links:
+    - platform: Spotify
+      url: https://spotify.com/
+    - platform: Apple Music
+      url: https://music.apple.com/
+    - platform: YouTube Music
+      url: https://music.youtube.com/
+
+- id: release-002
+  title: 1stアルバム「なんちゃらワールド」
+  release_date: 2019-06-20
+  type: album
+  jacket_image: /releases/album-001.jpg
+  description: |
+    初のフルアルバム！全10曲収録
+  links:
+    - platform: Spotify
+      url: https://spotify.com/
+    - platform: Apple Music
+      url: https://music.apple.com/

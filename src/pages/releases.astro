@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ReleaseCard from '../components/ReleaseCard.astro';
+import { readFileSync } from 'node:fs';
+import { parse } from 'yaml';
+
+const releasesYaml = readFileSync('src/data/releases.yml', 'utf-8');
+const releases = parse(releasesYaml);
+
+// リリース日が新しい順にソート
+const sortedReleases = releases.sort((a: any, b: any) =>
+  new Date(b.release_date).getTime() - new Date(a.release_date).getTime()
+);
+---
+
+<Layout title="音源 | なんちゃらアイドル">
+  {sortedReleases.map((release: any) => (
+    <ReleaseCard {...release} />
+  ))}
+</Layout>

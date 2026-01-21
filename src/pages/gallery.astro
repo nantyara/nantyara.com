@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { readdirSync, existsSync } from 'node:fs';
+
+// public/pictures/ ディレクトリから画像を読み込み
+const picturesDir = 'public/pictures';
+let imageFiles: string[] = [];
+
+if (existsSync(picturesDir)) {
+  imageFiles = readdirSync(picturesDir)
+    .filter(file => /\.(jpg|jpeg|png|gif|webp)$/i.test(file))
+    .map(file => `/pictures/${file}`);
+}
+---
+
+<Layout title="ギャラリー | なんちゃらアイドル">
+  {imageFiles.length === 0 ? (
+    <div class="item">
+      <div class="title">準備中</div>
+      <p>現在、写真を準備中です。しばらくお待ちください。</p>
+    </div>
+  ) : (
+    <div class="gallery">
+      {imageFiles.map(image => (
+        <div class="gallery-item">
+          <img src={image} alt="ギャラリー画像" loading="lazy" />
+        </div>
+      ))}
+    </div>
+  )}
+</Layout>
+
+<style>
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .gallery-item {
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 5px;
+    background: #eee;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>

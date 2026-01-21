@@ -1,0 +1,29 @@
+---
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+
+const menuItems = [
+  { href: '/', label: '今後の予定' },
+  { href: '/past', label: 'これまでの予定' },
+  { href: '/releases', label: '音源' },
+  { href: '/members', label: 'メンバー' },
+  { href: '/history', label: '沿革' },
+  { href: '/gallery', label: 'ギャラリー' },
+  { href: '/links', label: 'リンク' },
+];
+---
+
+<div class="menu">
+  {menuItems.map(item => (
+    <div class={currentPath === item.href ? 'active' : ''}>
+      {currentPath === item.href ? (
+        <span>{item.label}</span>
+      ) : (
+        <a href={item.href}>{item.label}</a>
+      )}
+    </div>
+  ))}
+</div>

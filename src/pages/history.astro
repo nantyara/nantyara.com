@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { readFileSync } from 'node:fs';
+import { parse } from 'yaml';
+
+const historyYaml = readFileSync('src/data/history.yml', 'utf-8');
+const history = parse(historyYaml);
+
+// 年度を降順にソート
+const sortedHistory = history.sort((a: any, b: any) => b.year - a.year);
+
+const formatDate = (dateStr: string) => {
+  const date = new Date(dateStr);
+  return date.toLocaleDateString('ja-JP', { month: 'long', day: 'numeric' });
+};
+---
+
+<Layout title="沿革 | なんちゃらアイドル">
+  {sortedHistory.map((yearData: any) => (
+    <div class="history-year">
+      <h2 class="year-title">{yearData.year}</h2>
+      {yearData.events.map((event: any) => (
+        <div class="item">
+          <div class="title">
+            <span class="day">{formatDate(event.date)}</span>
+            {event.title}
+          </div>
+          {event.description && <pre>{event.description}</pre>}
+        </div>
+      ))}
+    </div>
+  ))}
+</Layout>
+
+<style>
+  .history-year {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .year-title {
+    color: #f0f8ff;
+    text-shadow: 1px -1px 0 pink;
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px 0;
+  }
+</style>

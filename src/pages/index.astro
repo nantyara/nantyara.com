@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ScheduleCard from '../components/ScheduleCard.astro';
+import { readFileSync } from 'node:fs';
+import { parse } from 'yaml';
+
+// YAMLファイル読み込み
+const schedulesYaml = readFileSync('src/data/schedules.yml', 'utf-8');
+const allSchedules = parse(schedulesYaml);
+
+// 12時間ルール: 現在時刻 - 12時間を基準に振り分け
+const expireTime = new Date(Date.now() - 12 * 60 * 60 * 1000);
+
+// 今後の予定をフィルタ & ソート
+const schedules = allSchedules
+  .filter(s => new Date(s.date) >= expireTime)
+  .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+---
+
+<Layout title="今後の予定 | なんちゃらアイドル">
+  {schedules.map(schedule => (
+    <ScheduleCard
+      date={new Date(schedule.date)}
+      title={schedule.title}
+      site={schedule.site}
+      content={schedule.content}
+    />
+  ))}
+</Layout>

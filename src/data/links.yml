@@ -1,0 +1,23 @@
+social:
+  - name: Twitter（公式）
+    url: https://x.com/nantyaraidol
+  - name: Twitter（さまみ）
+    url: https://x.com/samami27
+  - name: Twitter（よくわかんない）
+    url: https://x.com/yokuwakan_nai
+
+streaming:
+  - name: Spotify
+    url: https://spotify.com/
+  - name: Apple Music
+    url: https://music.apple.com/
+  - name: YouTube Music
+    url: https://music.youtube.com/
+
+video:
+  - name: YouTube Channel
+    url: https://youtube.com/
+
+store:
+  - name: Official Store
+    url: https://example.com/store

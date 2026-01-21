@@ -1,0 +1,61 @@
+---
+interface Props {
+  title: string;
+  release_date: string;
+  type: string;
+  jacket_image?: string;
+  description?: string;
+  links?: Array<{ platform: string; url: string }>;
+}
+
+const { title, release_date, type, jacket_image, description, links } = Astro.props;
+
+const formatDate = (dateStr: string) => {
+  const date = new Date(dateStr);
+  return date.toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' });
+};
+
+const typeLabel = {
+  single: 'シングル',
+  album: 'アルバム',
+  ep: 'EP'
+};
+---
+
+<div class="item">
+  <div class="title">
+    <span class="day">{typeLabel[type as keyof typeof typeLabel] || type}</span>
+    {title}
+  </div>
+  <p>{formatDate(release_date)}</p>
+  {description && <pre>{description}</pre>}
+  {links && links.length > 0 && (
+    <div class="links">
+      {links.map(link => (
+        <a href={link.url} target="_blank" rel="noopener noreferrer">{link.platform}</a>
+      ))}
+    </div>
+  )}
+</div>
+
+<style>
+  .links {
+    margin: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .links a {
+    background: #789;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  .links a:hover {
+    background: #567;
+  }
+</style>

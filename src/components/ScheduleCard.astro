@@ -1,0 +1,26 @@
+---
+interface Props {
+  date: Date;
+  title: string;
+  site: string;
+  content: string;
+}
+
+const { date, title, site, content } = Astro.props;
+
+// 日付フォーマット（MM/DD形式）
+const formatDate = (d: Date) => {
+  const month = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${month}/${day}`;
+};
+---
+
+<div class="item">
+  <div class="title">
+    <span class="day">{formatDate(date)}</span>
+    {title}
+  </div>
+  <p>{site}</p>
+  <pre>{content}</pre>
+</div>

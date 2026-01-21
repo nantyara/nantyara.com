@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>X Post Collector</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>X Post Collector</h1>
+
+    <div class="status">
+      <p id="account-info">アカウント: <span id="account-name">-</span></p>
+      <p id="post-count">収集済み投稿: <span id="count">0</span></p>
+      <p id="status-text">ステータス: <span id="status">待機中</span></p>
+    </div>
+
+    <div class="buttons">
+      <button id="start-btn" class="btn btn-primary">収集開始</button>
+      <button id="stop-btn" class="btn btn-danger" disabled>停止</button>
+    </div>
+
+    <div class="buttons">
+      <button id="download-json-btn" class="btn btn-secondary" disabled>JSONダウンロード</button>
+      <button id="download-images-btn" class="btn btn-secondary" disabled>画像一括ダウンロード</button>
+    </div>
+
+    <div class="progress">
+      <div id="progress-bar" class="progress-bar"></div>
+    </div>
+
+    <div class="info">
+      <p class="small">使い方: Xのプロフィールページでこのボタンを押してください</p>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

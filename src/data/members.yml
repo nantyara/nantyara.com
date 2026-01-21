@@ -1,0 +1,25 @@
+- id: member-001
+  name: さまみ
+  nickname: さまみ
+  image: /members/member-001.jpg
+  join_date: 2018-10-01
+  bio: |
+    なんちゃらアイドルのメンバー。
+    よろしくお願いします！
+  social:
+    twitter: https://x.com/samami27
+    instagram: https://instagram.com/
+  color: "#FF69B4"
+
+- id: member-002
+  name: よくわかんない
+  nickname: よくわかんない
+  image: /members/member-002.jpg
+  join_date: 2019-01-15
+  bio: |
+    なんちゃらアイドルのメンバー。
+    頑張ります！
+  social:
+    twitter: https://x.com/yokuwakan_nai
+    instagram: https://instagram.com/
+  color: "#87CEEB"

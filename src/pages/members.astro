@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MemberCard from '../components/MemberCard.astro';
+import { readFileSync } from 'node:fs';
+import { parse } from 'yaml';
+
+const membersYaml = readFileSync('src/data/members.yml', 'utf-8');
+const members = parse(membersYaml);
+
+// 加入日順にソート
+const sortedMembers = members.sort((a: any, b: any) =>
+  new Date(a.join_date).getTime() - new Date(b.join_date).getTime()
+);
+---
+
+<Layout title="メンバー | なんちゃらアイドル">
+  {sortedMembers.map((member: any) => (
+    <MemberCard {...member} />
+  ))}
+</Layout>

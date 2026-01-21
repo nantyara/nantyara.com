@@ -1,0 +1,69 @@
+---
+interface Props {
+  name: string;
+  nickname?: string;
+  image?: string;
+  join_date?: string;
+  bio?: string;
+  social?: {
+    twitter?: string;
+    instagram?: string;
+    tiktok?: string;
+  };
+  color?: string;
+}
+
+const { name, nickname, image, join_date, bio, social, color } = Astro.props;
+
+const formatDate = (dateStr: string) => {
+  const date = new Date(dateStr);
+  return date.toLocaleDateString('ja-JP', { year: 'numeric', month: 'long' });
+};
+---
+
+<div class="item member-card">
+  <div class="title" style={color ? `background-color: ${color}` : ''}>
+    {nickname || name}
+  </div>
+  {join_date && <p>加入: {formatDate(join_date)}</p>}
+  {bio && <pre>{bio}</pre>}
+  {social && (
+    <div class="social-links">
+      {social.twitter && (
+        <a href={social.twitter} target="_blank" rel="noopener noreferrer">Twitter</a>
+      )}
+      {social.instagram && (
+        <a href={social.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
+      )}
+      {social.tiktok && (
+        <a href={social.tiktok} target="_blank" rel="noopener noreferrer">TikTok</a>
+      )}
+    </div>
+  )}
+</div>
+
+<style>
+  .member-card {
+    min-height: 200px;
+  }
+
+  .social-links {
+    margin: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .social-links a {
+    background: #789;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  .social-links a:hover {
+    background: #567;
+  }
+</style>

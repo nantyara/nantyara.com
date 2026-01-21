@@ -1,0 +1,29 @@
+---
+import Header from '../components/Header.astro';
+import Navigation from '../components/Navigation.astro';
+import '../styles/main.css';
+
+interface Props {
+  title?: string;
+}
+
+const { title = 'なんちゃらアイドル' } = Astro.props;
+const currentPath = new URL(Astro.request.url).pathname;
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{title}</title>
+    <meta name="description" content="なんちゃらアイドル公式サイト">
+  </head>
+  <body>
+    <Header />
+    <Navigation currentPath={currentPath} />
+    <div class="main">
+      <slot />
+    </div>
+  </body>
+</html>
