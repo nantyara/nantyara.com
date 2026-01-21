@@ -1,0 +1,373 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="お問い合わせ | なんちゃらアイドル">
+
+  <div class="contact-container">
+    <div class="contact-card">
+      <div class="contact-header">
+        <h2 class="contact-title">お問い合わせ</h2>
+        <p class="contact-subtitle">Contact Us</p>
+      </div>
+
+      <div class="contact-body">
+        <p class="contact-description">
+          なんちゃらアイドルへのお問い合わせは、<br>
+          下記メールアドレスまでお願いいたします。
+        </p>
+
+        <a
+          href="mailto:nagaokatasuku@nantyara.com"
+          class="email-link"
+        >
+          <span class="email-icon">📧</span>
+          <span class="email-address">nagaokatasuku@nantyara.com</span>
+        </a>
+
+        <div class="contact-notice">
+          <h3 class="notice-title">オファーについて</h3>
+          <p class="notice-text">
+            オファーの際は、以下の情報をお知らせいただけますと幸いです。
+          </p>
+          <ul class="notice-list">
+            <li class="notice-item">
+              <span class="notice-bullet">●</span>
+              <span class="notice-content">持ち時間</span>
+            </li>
+            <li class="notice-item">
+              <span class="notice-bullet">●</span>
+              <span class="notice-content">ギャラ</span>
+            </li>
+            <li class="notice-item">
+              <span class="notice-bullet">●</span>
+              <span class="notice-content">配信の有無</span>
+            </li>
+            <li class="notice-item">
+              <span class="notice-bullet">●</span>
+              <span class="notice-content">チケット代</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  .contact-card {
+    background: linear-gradient(135deg, var(--bg-medium) 0%, var(--bg-dark) 100%);
+    border: 3px solid var(--retro-pink);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow:
+      0 4px 0 rgba(0, 0, 0, 0.3),
+      0 0 20px rgba(255, 110, 199, 0.3),
+      inset 0 0 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .contact-header {
+    background: linear-gradient(135deg, var(--retro-cyan) 0%, var(--retro-purple) 100%);
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(255, 255, 255, 0.1) 10px,
+      rgba(255, 255, 255, 0.1) 20px
+    );
+  }
+
+  .contact-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: white;
+    margin: 0 0 10px 0;
+    text-shadow:
+      3px 3px 0 rgba(0, 0, 0, 0.5),
+      0 0 10px rgba(255, 255, 255, 0.5);
+    letter-spacing: 2px;
+  }
+
+  .contact-subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--retro-yellow);
+    margin: 0;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  .contact-body {
+    padding: 40px 30px;
+  }
+
+  .contact-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    text-align: center;
+    margin: 0 0 30px 0;
+  }
+
+  .email-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px 30px;
+    background: linear-gradient(135deg, var(--retro-purple) 0%, var(--retro-pink) 100%);
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    box-shadow:
+      0 4px 0 rgba(0, 0, 0, 0.3),
+      0 0 20px rgba(255, 110, 199, 0.4);
+    transition: all 0.3s ease;
+    margin: 0 auto 40px;
+    max-width: 100%;
+    word-break: break-all;
+  }
+
+  .email-link:hover {
+    transform: translateY(-3px);
+    box-shadow:
+      0 6px 0 rgba(0, 0, 0, 0.3),
+      0 0 30px rgba(255, 110, 199, 0.6),
+      0 0 40px rgba(0, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .email-link:active {
+    transform: translateY(0);
+    box-shadow:
+      0 2px 0 rgba(0, 0, 0, 0.3),
+      0 0 15px rgba(255, 110, 199, 0.4);
+  }
+
+  .email-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .email-address {
+    font-family: var(--font-digital);
+    letter-spacing: 1px;
+  }
+
+  .contact-notes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .note-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-left: 4px solid var(--retro-cyan);
+    border-radius: 4px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--pastel-lavender);
+    margin: 0;
+  }
+
+  .note-icon {
+    font-size: 1.3rem;
+    flex-shrink: 0;
+  }
+
+  .contact-notice {
+    margin-top: 40px;
+    padding: 25px;
+    background: rgba(255, 110, 199, 0.1);
+    border: 2px solid var(--retro-pink);
+    border-radius: 8px;
+    box-shadow:
+      0 0 15px rgba(255, 110, 199, 0.2),
+      inset 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .notice-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--retro-pink);
+    margin: 0 0 15px 0;
+    text-shadow: 0 0 10px rgba(255, 110, 199, 0.5);
+  }
+
+  .notice-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-light);
+    margin: 0 0 15px 0;
+  }
+
+  .notice-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .notice-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1rem;
+    color: var(--pastel-lavender);
+  }
+
+  .notice-bullet {
+    color: var(--retro-cyan);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .notice-content {
+    flex: 1;
+  }
+
+  /* レスポンシブ対応 */
+  @media (max-width: 768px) {
+    .contact-container {
+      padding: 30px 15px;
+    }
+
+    .contact-header {
+      padding: 25px 20px;
+    }
+
+    .contact-title {
+      font-size: 2rem;
+    }
+
+    .contact-subtitle {
+      font-size: 0.9rem;
+    }
+
+    .contact-body {
+      padding: 30px 20px;
+    }
+
+    .contact-description {
+      font-size: 1rem;
+    }
+
+    .email-link {
+      font-size: 1rem;
+      padding: 18px 25px;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .email-icon {
+      font-size: 1.3rem;
+    }
+
+    .contact-notice {
+      margin-top: 35px;
+      padding: 22px;
+    }
+
+    .notice-title {
+      font-size: 1.25rem;
+    }
+
+    .notice-text {
+      font-size: 1rem;
+    }
+
+    .notice-item {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .contact-container {
+      padding: 20px 10px;
+    }
+
+    .contact-header {
+      padding: 20px 15px;
+    }
+
+    .contact-title {
+      font-size: 1.6rem;
+      letter-spacing: 1px;
+    }
+
+    .contact-subtitle {
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+    }
+
+    .contact-body {
+      padding: 25px 15px;
+    }
+
+    .contact-description {
+      font-size: 0.95rem;
+      margin-bottom: 25px;
+    }
+
+    .email-link {
+      font-size: 0.9rem;
+      padding: 16px 20px;
+    }
+
+    .note-item {
+      padding: 12px 15px;
+      font-size: 0.9rem;
+    }
+
+    .note-icon {
+      font-size: 1.2rem;
+    }
+
+    .contact-notice {
+      margin-top: 30px;
+      padding: 20px;
+    }
+
+    .notice-title {
+      font-size: 1.2rem;
+    }
+
+    .notice-text {
+      font-size: 0.95rem;
+    }
+
+    .notice-item {
+      font-size: 0.95rem;
+    }
+  }
+
+  /* アニメーション無効化（アクセシビリティ） */
+  @media (prefers-reduced-motion: reduce) {
+    .email-link {
+      transition: none !important;
+    }
+
+    .email-link:hover {
+      transform: none;
+    }
+  }
+</style>

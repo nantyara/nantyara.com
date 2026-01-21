@@ -114,13 +114,19 @@
     }
 
     .hero-image {
-      aspect-ratio: 16 / 9;
+      object-fit: contain;
+      max-height: 300px;
+    }
+
+    .hero-image-wrapper {
+      background: linear-gradient(135deg, var(--bg-medium) 0%, var(--bg-dark) 100%);
     }
   }
 
   @media (max-width: 480px) {
     .hero-image {
-      aspect-ratio: 4 / 3;
+      object-fit: contain;
+      max-height: 250px;
     }
 
     .hero-image-wrapper {
