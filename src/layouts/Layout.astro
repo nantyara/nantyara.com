@@ -25,6 +25,9 @@ const isTopPage = currentPath === '/';
     <meta property="og:url" content="https://nantyara.com">
     <title>{title}</title>
     <link rel="icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
   </head>
   <body class="scanlines vhs-distortion">
     <HamburgerMenu currentPath={currentPath} />
@@ -33,9 +36,9 @@ const isTopPage = currentPath === '/';
       <main class="main">
         <slot />
       </main>
-      <footer class="footer">
-        <p>&copy; 2018-2026 なんちゃらアイドル</p>
-      </footer>
     </div>
+    <footer class="footer">
+      <p>&copy; 2018-2026 なんちゃらアイドル</p>
+    </footer>
   </body>
 </html>

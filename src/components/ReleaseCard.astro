@@ -37,7 +37,6 @@ const badgeColor = typeBadgeColors[type as keyof typeof typeBadgeColors] || 'var
   <div class="card-layout">
     {jacket_image && (
       <div class="jacket-wrapper">
-        <div class="record-peek"></div>
         <img
           src={jacket_image}
           alt={`${title} ジャケット`}
@@ -144,22 +143,6 @@ const badgeColor = typeBadgeColors[type as keyof typeof typeBadgeColors] || 'var
     box-shadow:
       0 0 15px rgba(255, 110, 199, 0.5),
       inset 0 0 20px rgba(0, 0, 0, 0.3);
-  }
-
-  /* レコード覗き見エフェクト */
-  .record-peek {
-    position: absolute;
-    top: 50%;
-    right: -15px;
-    width: 30px;
-    height: 120px;
-    background: radial-gradient(circle, #222 30%, #000 70%);
-    border-radius: 0 15px 15px 0;
-    transform: translateY(-50%);
-    box-shadow:
-      inset 2px 0 5px rgba(0, 0, 0, 0.5),
-      0 0 10px rgba(0, 0, 0, 0.8);
-    z-index: 1;
   }
 
   /* カードコンテンツ */
@@ -312,10 +295,6 @@ const badgeColor = typeBadgeColors[type as keyof typeof typeBadgeColors] || 'var
     .jacket-wrapper {
       width: 180px;
       height: 180px;
-    }
-
-    .record-peek {
-      display: none;
     }
 
     .card-content {

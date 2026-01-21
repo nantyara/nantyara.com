@@ -3,7 +3,6 @@ interface Props {
   name: string;
   nickname?: string;
   image?: string;
-  join_date?: string;
   bio?: string;
   social?: {
     twitter?: string;
@@ -14,14 +13,7 @@ interface Props {
   color?: string;
 }
 
-const { name, nickname, image, join_date, bio, social, color = '#FF69B4' } = Astro.props;
-
-const formatDate = (dateStr: string) => {
-  const date = new Date(dateStr);
-  const year = date.getFullYear();
-  const month = date.toLocaleDateString('ja-JP', { month: 'long' });
-  return `${year}年${month}〜`;
-};
+const { name, nickname, image, bio, social, color = '#FF69B4' } = Astro.props;
 ---
 
 <article class="member-card" style={`--member-color: ${color}`}>
@@ -43,12 +35,6 @@ const formatDate = (dateStr: string) => {
 
     <div class="polaroid-caption">
       <div class="member-name">{nickname || name}</div>
-      {join_date && (
-        <div class="join-date">
-          <span class="date-icon">🎤</span>
-          {formatDate(join_date)}
-        </div>
-      )}
     </div>
 
     <div class="sticker-badge">
@@ -173,31 +159,23 @@ const formatDate = (dateStr: string) => {
   }
 
   .polaroid-caption {
-    margin-top: 12px;
-  }
-
-  .member-name {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--bg-dark);
-    text-align: center;
-    font-family: var(--font-digital);
-    letter-spacing: 1px;
-  }
-
-  .join-date {
+    margin-top: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
-    margin-top: 6px;
-    font-size: 0.8rem;
-    color: #666;
+    min-height: 30px;
   }
 
-  .date-icon {
-    font-size: 0.9rem;
+  .member-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--bg-dark);
+    text-align: center;
+    font-family: 'RocknRoll One', var(--font-digital);
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.8);
   }
+
 
   /* ステッカーバッジ */
   .sticker-badge {
