@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import HeroImage from '../components/HeroImage.astro';
 import ScheduleCard from '../components/ScheduleCard.astro';
 import { readFileSync } from 'node:fs';
 import { parse } from 'yaml';
@@ -27,8 +26,6 @@ const schedules = [...upcomingSchedules, ...pastSchedules];
 ---
 
 <Layout title="ライブ予定 | なんちゃらアイドル">
-  <HeroImage />
-
   <div class="schedule-controls">
     <div class="filter-buttons">
       <button class="filter-btn active" data-filter="upcoming">

@@ -28,8 +28,8 @@ const isTopPage = currentPath === '/';
   </head>
   <body class="scanlines vhs-distortion">
     <HamburgerMenu currentPath={currentPath} />
+    <Header />
     <div class="site-container">
-      {!isTopPage && <Header />}
       <main class="main">
         <slot />
       </main>
