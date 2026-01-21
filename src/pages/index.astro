@@ -304,10 +304,15 @@ const schedules = [...upcomingSchedules, ...pastSchedules];
 
   .schedule-item {
     display: flex;
+    flex: 0 0 auto;
   }
 
   /* レスポンシブ対応 */
   @media (max-width: 768px) {
+    .schedule-item {
+      width: 100%;
+    }
+
     .filter-btn {
       font-size: 0.9rem;
       padding: 10px 20px;
