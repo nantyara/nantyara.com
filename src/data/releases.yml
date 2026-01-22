@@ -19,12 +19,14 @@
   label: ウルトラヴァイヴ
   jacket_image: /releases/sayonara-odyssey.webp
   description: |
-    なんちゃらアイドルのアルバム。
+    なんちゃらアイドルの 1st アルバム。
   links:
     - platform: Spotify
       url: https://open.spotify.com/intl-ja/album/1TkGaB3NkkMqEOXHXcx1vZ?si=IwCm74PBS6mWFQmWpinsxA
     - platform: Apple Music
       url: https://music.apple.com/us/album/%E3%81%95%E3%82%88%E3%81%AA%E3%82%89odyssey/1537916528
+    - platform: YouTube Music
+      url: https://music.youtube.com/playlist?list=OLAK5uy_lIyhImfqMTnZ0dZDshCbj8rUwSBbj5k5s&si=KNcbhJhmFcVAy5uq
 
 - id: release-003
   title: PansyとDaisy/今夜、全てのBarで
@@ -79,12 +81,14 @@
   label: ウルトラヴァイヴ
   jacket_image: /releases/life-goes-on.webp
   description: |
-    なんちゃらアイドルの2ndアルバム。
+    なんちゃらアイドルの 2nd アルバム。
   links:
     - platform: Spotify
       url: https://open.spotify.com/intl-ja/album/3P0WgIMV1Wmt7iUchXeve8?si=CvFmLZx7Q1OjOkeUmNQ9pg
     - platform: Apple Music
       url: https://music.apple.com/us/album/life-goes-on/1657617641
+    - platform: YouTube Music
+      url: https://music.youtube.com/playlist?list=OLAK5uy_k6s1E0yLlcn3m3YqLEwMxt9qAdOwVTkwM&si=h8FocOw174FdKaLn
 
 - id: release-007
   title: 運命の人/ 楽園 / 眠るなBABE
@@ -121,6 +125,8 @@
       url: https://open.spotify.com/intl-ja/album/4vR2BpDnZ9BLJCg6hAL50I?si=EI4tlnW4QMeWZI4_vbT4Qw
     - platform: Apple Music
       url: https://music.apple.com/us/album/silver-metal-love-song-baby/1711745389
+    - platform: YouTube Music
+      url: https://music.youtube.com/playlist?list=OLAK5uy_nBqvfpq4siwDcbOMEdNsXvEuxPFDzEF_Q&si=EdWGQTYymBwFRDQz
 
 - id: release-009
   title: 芸術偶像mode
@@ -165,6 +171,8 @@
       url: https://open.spotify.com/intl-ja/album/0PCiHe3iC2jktjhCRyeasv?si=xvI5ypxeS_eeVTV1BaXWpw
     - platform: Apple Music
       url: https://music.apple.com/us/album/sentimental-jukebox/1721093143
+    - platform: YouTube Music
+      url: https://music.youtube.com/playlist?list=OLAK5uy_m-z9Y8P9mAw9cR4KoEhJEK2R0ij4PAdAg&si=LBY28cUIuf_za0nN
 
 - id: release-012
   title: もしかして君だけが苦しいって思ってないかい? / CICADA / 凍える太陽

@@ -91,6 +91,37 @@
 --apple-music-pink: #FF6B81;
 ```
 
+## BASE公式ロゴの使用
+
+このディレクトリには、BASEの公式サービスロゴが含まれています。
+
+**ファイル:**
+- `base_logo_horizontal_white.png` - 横型ロゴ（白）
+- `base_logo_horizontal_black.png` - 横型ロゴ（黒）
+- `base_logo_vertical_white.png` - 縦型ロゴ（白）
+- `base_logo_vertical_black.png` - 縦型ロゴ（黒）
+
+**ダウンロード元:**
+- 公式ブランドガイドライン: https://binc.jp/en/brand-guideline
+- ダウンロードURL: https://binc.jp/wp-content/themes/base-corporate/assets/download/base_service.zip
+
+**使用許可:**
+- 個人ブログやSNSでのBASEサービス紹介に限定して使用可能
+- なんちゃらアイドル公式サイトのLinksページでのBASE Shopへのリンク表示に使用
+
+**使用ルール:**
+- 最小サイズ: Web 50px、印刷 18mm
+- ティピ（テント）なしでの使用禁止
+- 回転・変形・色変更禁止
+- オブジェクトの重ね合わせ禁止
+- トリミング・フィルター・効果の使用禁止
+
+**禁止事項:**
+- アプリアイコンやSNSプロフィール画像としての使用
+- ロゴ入り製品の無断販売
+
+**ダウンロード日:** 2026-01-23
+
 ## Font Awesomeライセンス
 
 Font Awesome Free is free, open source, and GPL friendly. You can use it for commercial projects, open source projects, or really almost whatever you want.

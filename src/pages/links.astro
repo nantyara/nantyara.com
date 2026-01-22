@@ -16,12 +16,61 @@ const categories: Record<string, string> = {
 };
 
 const categoryIcons: Record<string, string> = {
-  social: '🐦',
-  streaming: '🎵',
-  video: '📺',
-  podcast: '🎙️',
-  store: '🛒',
-  related: '🔗',
+  social: 'fa-solid fa-share-nodes',
+  streaming: 'fa-solid fa-music',
+  video: 'fa-solid fa-video',
+  podcast: 'fa-solid fa-microphone',
+  store: 'fa-solid fa-cart-shopping',
+  related: 'fa-solid fa-link',
+};
+
+// サービスごとのアイコンとスタイルクラスを取得
+const getServiceInfo = (name: string, category: string) => {
+  const nameLower = name.toLowerCase();
+
+  // X (Twitter)
+  if (nameLower.includes('x') || nameLower.includes('twitter')) {
+    return { icon: 'fa-brands fa-x-twitter', class: 'x-link' };
+  }
+  // Spotify
+  if (nameLower.includes('spotify')) {
+    return { icon: 'fa-brands fa-spotify', class: 'spotify-link' };
+  }
+  // Apple Music
+  if (nameLower.includes('apple')) {
+    return { icon: 'fa-brands fa-apple', class: 'apple-link' };
+  }
+  // YouTube Music / YouTube
+  if (nameLower.includes('youtube')) {
+    return { icon: 'fa-brands fa-youtube', class: 'youtube-link' };
+  }
+  // Facebook
+  if (nameLower.includes('facebook')) {
+    return { icon: 'fa-brands fa-facebook', class: 'facebook-link' };
+  }
+  // Instagram
+  if (nameLower.includes('instagram')) {
+    return { icon: 'fa-brands fa-instagram', class: 'instagram-link' };
+  }
+  // LINE
+  if (nameLower.includes('line')) {
+    return { icon: 'fa-brands fa-line', class: 'line-link' };
+  }
+  // TikTok
+  if (nameLower.includes('tiktok')) {
+    return { icon: 'fa-brands fa-tiktok', class: 'tiktok-link' };
+  }
+  // Podcast
+  if (nameLower.includes('podcast')) {
+    return { icon: 'fa-solid fa-podcast', class: 'podcast-link' };
+  }
+  // BASE Shop
+  if (nameLower.includes('base')) {
+    return { icon: 'base-logo', class: 'base-link' };
+  }
+
+  // デフォルト
+  return { icon: categoryIcons[category] || 'fa-solid fa-link', class: 'default-link' };
 };
 ---
 
@@ -33,17 +82,24 @@ const categoryIcons: Record<string, string> = {
     return (
       <div class="link-category">
         <h2 class="category-title">
-          <span class="category-icon">{categoryIcons[key]}</span>
+          <i class={categoryIcons[key]}></i>
           {label}
         </h2>
         <div class="link-items">
-          {categoryLinks.map((link: any) => (
-            <a href={link.url} target="_blank" rel="noopener noreferrer" class="link-item">
-              <span class="link-icon">{categoryIcons[key]}</span>
-              <span class="link-name">{link.name}</span>
-              <span class="link-arrow">→</span>
-            </a>
-          ))}
+          {categoryLinks.map((link: any) => {
+            const serviceInfo = getServiceInfo(link.name, key);
+            return (
+              <a href={link.url} target="_blank" rel="noopener noreferrer" class={`link-item ${serviceInfo.class}`}>
+                {serviceInfo.icon === 'base-logo' ? (
+                  <img src="/icons/base_logo_horizontal_black.png" alt="BASE" class="link-icon base-logo-img" />
+                ) : (
+                  <i class={`link-icon ${serviceInfo.icon}`}></i>
+                )}
+                <span class="link-name">{link.name}</span>
+                <i class="link-arrow fa-solid fa-arrow-right"></i>
+              </a>
+            );
+          })}
         </div>
       </div>
     );
@@ -74,7 +130,7 @@ const categoryIcons: Record<string, string> = {
     text-transform: uppercase;
   }
 
-  .category-icon {
+  .category-title i {
     font-size: 2.5rem;
     filter: drop-shadow(0 0 10px rgba(255, 110, 199, 0.8));
   }
@@ -105,6 +161,7 @@ const categoryIcons: Record<string, string> = {
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    min-height: 48px;
   }
 
   .link-item::before {
@@ -136,17 +193,111 @@ const categoryIcons: Record<string, string> = {
     filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
   }
 
+  .base-logo-img {
+    height: 32px;
+    width: auto;
+    filter: none;
+  }
+
   .link-name {
     flex: 1;
   }
 
   .link-arrow {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     transition: transform 0.3s ease;
   }
 
   .link-item:hover .link-arrow {
     transform: translateX(5px);
+  }
+
+  /* 各サービスの公式ブランドカラー */
+  .x-link {
+    background: #000000;
+  }
+
+  .x-link:hover {
+    background: #1a1a1a;
+  }
+
+  .spotify-link {
+    background: #1DB954;
+  }
+
+  .spotify-link:hover {
+    background: #1ed760;
+  }
+
+  .apple-link {
+    background: linear-gradient(135deg, #FA243C 0%, #FF6B81 100%);
+  }
+
+  .apple-link:hover {
+    background: linear-gradient(135deg, #FF6B81 0%, #FA243C 100%);
+  }
+
+  .youtube-link {
+    background: #FF0000;
+  }
+
+  .youtube-link:hover {
+    background: #cc0000;
+  }
+
+  .facebook-link {
+    background: #1877F2;
+  }
+
+  .facebook-link:hover {
+    background: #0c63d4;
+  }
+
+  .instagram-link {
+    background: linear-gradient(135deg, #833AB4 0%, #FD1D1D 50%, #FCAF45 100%);
+  }
+
+  .instagram-link:hover {
+    background: linear-gradient(135deg, #FCAF45 0%, #FD1D1D 50%, #833AB4 100%);
+  }
+
+  .line-link {
+    background: #06C755;
+  }
+
+  .line-link:hover {
+    background: #05b04b;
+  }
+
+  .tiktok-link {
+    background: #000000;
+    border-color: #00F2EA;
+  }
+
+  .tiktok-link:hover {
+    background: #1a1a1a;
+    box-shadow:
+      0 8px 0 rgba(0, 0, 0, 0.3),
+      0 0 30px rgba(0, 242, 234, 0.8);
+  }
+
+  .podcast-link {
+    background: linear-gradient(135deg, #9933CC 0%, #6B1FA0 100%);
+  }
+
+  .podcast-link:hover {
+    background: linear-gradient(135deg, #6B1FA0 0%, #9933CC 100%);
+  }
+
+  .base-link {
+    background: #FFFFFF;
+    color: #000000;
+    border-color: #E0E0E0;
+  }
+
+  .base-link:hover {
+    background: #F5F5F5;
+    border-color: #CCCCCC;
   }
 
   /* レスポンシブ対応 */
@@ -156,7 +307,7 @@ const categoryIcons: Record<string, string> = {
       gap: 12px;
     }
 
-    .category-icon {
+    .category-title i {
       font-size: 2rem;
     }
 
@@ -185,7 +336,7 @@ const categoryIcons: Record<string, string> = {
         4px 4px 0 var(--retro-cyan);
     }
 
-    .category-icon {
+    .category-title i {
       font-size: 1.8rem;
     }
 
@@ -193,6 +344,7 @@ const categoryIcons: Record<string, string> = {
       padding: 16px 18px;
       font-size: 0.95rem;
       gap: 12px;
+      min-height: 44px;
     }
 
     .link-icon {
@@ -200,7 +352,7 @@ const categoryIcons: Record<string, string> = {
     }
 
     .link-arrow {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
     }
   }
 
