@@ -61,6 +61,7 @@ googleCalendarUrl.searchParams.set('text', title);
 googleCalendarUrl.searchParams.set('dates', `${formatGoogleCalDate(eventDate)}/${formatGoogleCalDate(eventEndDate)}`);
 googleCalendarUrl.searchParams.set('details', content || '');
 googleCalendarUrl.searchParams.set('location', site);
+googleCalendarUrl.searchParams.set('ctz', 'Asia/Tokyo');
 
 // OGP用
 const ogTitle = `${title} | なんちゃらアイドル`;
