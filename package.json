@@ -12,7 +12,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.16.0",
+    "astro": "^5.16.13",
     "yaml": "^2.3.4"
   },
   "devDependencies": {
