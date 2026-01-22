@@ -1,0 +1,143 @@
+---
+interface Props {
+  url: string;
+  title: string;
+  description?: string;
+}
+
+const { url, title, description } = Astro.props;
+
+// URLエンコード
+const encodedUrl = encodeURIComponent(url);
+const encodedTitle = encodeURIComponent(title);
+const encodedText = encodeURIComponent(`${title}${description ? ' ' + description : ''}`);
+
+// SNS共有URL
+const twitterUrl = `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedText}`;
+const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
+const lineUrl = `https://line.me/R/msg/text/?${encodedText}%0A${encodedUrl}`;
+---
+
+<div class="share-buttons">
+  <a href={twitterUrl} target="_blank" rel="noopener noreferrer" class="share-button twitter">
+    𝕏
+  </a>
+  <a href={facebookUrl} target="_blank" rel="noopener noreferrer" class="share-button facebook">
+    📘 Facebook
+  </a>
+  <a href={lineUrl} target="_blank" rel="noopener noreferrer" class="share-button line">
+    💬 LINE
+  </a>
+  <button class="share-button copy" data-url={url}>
+    🔗 URLコピー
+  </button>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.share-button.copy').forEach(button => {
+      button.addEventListener('click', async () => {
+        const url = button.getAttribute('data-url');
+        if (!url) return;
+
+        try {
+          if (navigator.clipboard) {
+            await navigator.clipboard.writeText(url);
+          } else {
+            // フォールバック（古いブラウザ）
+            const input = document.createElement('input');
+            input.value = url;
+            document.body.appendChild(input);
+            input.select();
+            document.execCommand('copy');
+            document.body.removeChild(input);
+          }
+
+          const originalText = button.textContent;
+          button.textContent = '✅ コピーしました！';
+          setTimeout(() => {
+            button.textContent = originalText;
+          }, 2000);
+        } catch (err) {
+          console.error('コピーに失敗しました:', err);
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .share-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .share-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    min-height: 44px;
+    background: linear-gradient(135deg, var(--retro-purple) 0%, var(--retro-pink) 100%);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow:
+      0 4px 0 rgba(0, 0, 0, 0.3),
+      0 0 15px rgba(255, 110, 199, 0.4);
+  }
+
+  .share-button:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 6px 0 rgba(0, 0, 0, 0.3),
+      0 0 25px rgba(255, 110, 199, 0.6);
+  }
+
+  .share-button:active {
+    transform: translateY(0);
+    box-shadow:
+      0 2px 0 rgba(0, 0, 0, 0.3),
+      0 0 15px rgba(255, 110, 199, 0.4);
+  }
+
+  .share-button.twitter {
+    background: #000000;
+  }
+
+  .share-button.facebook {
+    background: #1877F2;
+  }
+
+  .share-button.line {
+    background: #06C755;
+  }
+
+  @media (max-width: 480px) {
+    .share-buttons {
+      flex-direction: column;
+    }
+
+    .share-button {
+      width: 100%;
+    }
+  }
+
+  /* アニメーション無効化（アクセシビリティ） */
+  @media (prefers-reduced-motion: reduce) {
+    .share-button {
+      transition: none !important;
+    }
+
+    .share-button:hover {
+      transform: none;
+    }
+  }
+</style>

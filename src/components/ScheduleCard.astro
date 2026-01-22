@@ -5,9 +5,10 @@ interface Props {
   site: string;
   content: string;
   images?: string[];
+  slug?: string;
 }
 
-const { date, title, site, content, images } = Astro.props;
+const { date, title, site, content, images, slug } = Astro.props;
 
 // 日付フォーマット
 const formatDate = (d: Date) => {
@@ -22,36 +23,75 @@ const formatDate = (d: Date) => {
 const dateInfo = formatDate(date);
 ---
 
-<article class="schedule-card">
-  <div class="card-header stripe-pattern">
-    <div class="date-badge">
-      <span class="date-year">{dateInfo.year}</span>
-      <span class="date-main">{dateInfo.month}/{dateInfo.day}</span>
-      <span class="date-weekday">({dateInfo.weekday})</span>
+{slug ? (
+  <a href={`/events/${slug}`} class="schedule-card-link">
+    <article class="schedule-card">
+      <div class="card-header stripe-pattern">
+        <div class="date-badge">
+          <span class="date-year">{dateInfo.year}</span>
+          <span class="date-main">{dateInfo.month}/{dateInfo.day}</span>
+          <span class="date-weekday">({dateInfo.weekday})</span>
+        </div>
+        <h3 class="card-title">{title}</h3>
+      </div>
+
+      <div class="card-body">
+        <div class="venue-info">
+          <span class="venue-icon">📍</span>
+          <span class="venue-name">{site}</span>
+        </div>
+
+        {content && (
+          <pre class="event-details">{content}</pre>
+        )}
+
+        {images && images.length > 0 && (
+          <div class="view-details-btn">
+            <span class="btn-icon">🖼️</span>
+            詳細を見る ({images.length}枚)
+          </div>
+        )}
+      </div>
+    </article>
+  </a>
+) : (
+  <article class="schedule-card">
+    <div class="card-header stripe-pattern">
+      <div class="date-badge">
+        <span class="date-year">{dateInfo.year}</span>
+        <span class="date-main">{dateInfo.month}/{dateInfo.day}</span>
+        <span class="date-weekday">({dateInfo.weekday})</span>
+      </div>
+      <h3 class="card-title">{title}</h3>
     </div>
-    <h3 class="card-title">{title}</h3>
-  </div>
 
-  <div class="card-body">
-    <div class="venue-info">
-      <span class="venue-icon">📍</span>
-      <span class="venue-name">{site}</span>
+    <div class="card-body">
+      <div class="venue-info">
+        <span class="venue-icon">📍</span>
+        <span class="venue-name">{site}</span>
+      </div>
+
+      {content && (
+        <pre class="event-details">{content}</pre>
+      )}
+
+      {images && images.length > 0 && (
+        <button class="view-details-btn" data-schedule-title={title}>
+          <span class="btn-icon">🖼️</span>
+          詳細を見る ({images.length}枚)
+        </button>
+      )}
     </div>
-
-    {content && (
-      <pre class="event-details">{content}</pre>
-    )}
-
-    {images && images.length > 0 && (
-      <button class="view-details-btn" data-schedule-title={title}>
-        <span class="btn-icon">🖼️</span>
-        詳細を見る ({images.length}枚)
-      </button>
-    )}
-  </div>
-</article>
+  </article>
+)}
 
 <style>
+  .schedule-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
   .schedule-card {
     display: flex;
     flex-direction: column;
@@ -67,6 +107,7 @@ const dateInfo = formatDate(date);
     transition: all 0.3s ease;
   }
 
+  .schedule-card-link:hover .schedule-card,
   .schedule-card:hover {
     transform: translateY(-4px);
     box-shadow:

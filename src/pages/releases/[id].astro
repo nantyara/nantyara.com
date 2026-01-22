@@ -1,0 +1,491 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ShareButtons from '../../components/ShareButtons.astro';
+import { readFileSync } from 'node:fs';
+import { parse } from 'yaml';
+
+export async function getStaticPaths() {
+  const releasesYaml = readFileSync('src/data/releases.yml', 'utf-8');
+  const releases = parse(releasesYaml);
+
+  return releases.map((release: any) => ({
+    params: { id: release.id },
+    props: { release },
+  }));
+}
+
+interface ReleaseType {
+  id: string;
+  title: string;
+  artist?: string;
+  release_date: string;
+  type: string;
+  format?: string;
+  label?: string;
+  jacket_image?: string;
+  description?: string;
+  tracks?: string[];
+  links?: Array<{ platform: string; url: string }>;
+}
+
+const { release } = Astro.props as { release: ReleaseType };
+const { id, title, artist, release_date, type, format, label, jacket_image, description, tracks, links } = release;
+
+// 日付フォーマット
+const releaseDate = new Date(release_date);
+const formatDate = (d: Date) => `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日`;
+
+// タイプラベル
+const typeLabel: Record<string, string> = {
+  single: 'シングル',
+  album: 'アルバム',
+  ep: 'EP'
+};
+
+// OGP用
+const ogTitle = `${title} | なんちゃらアイドル`;
+const ogDescription = artist
+  ? `${artist} - ${formatDate(releaseDate)}リリース`
+  : `${formatDate(releaseDate)}リリース`;
+const ogImage = jacket_image
+  ? `https://nantyara.com${jacket_image}`
+  : 'https://nantyara.com/img/ogp-default.png';
+---
+
+<Layout title={ogTitle}>
+  <Fragment slot="head">
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:description" content={ogDescription} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:type" content="music.album" />
+    <meta property="og:url" content={`https://nantyara.com/releases/${id}`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={ogTitle} />
+    <meta name="twitter:description" content={ogDescription} />
+    <meta name="twitter:image" content={ogImage} />
+  </Fragment>
+
+  <article class="release-detail">
+    <div class="release-header">
+      {jacket_image && (
+        <div class="jacket-wrapper">
+          <img src={jacket_image} alt={title} class="jacket-image-large" loading="eager" />
+        </div>
+      )}
+      <div class="release-info">
+        <div class="type-badge">{typeLabel[type] || type}</div>
+        <h1 class="release-title">{title}</h1>
+        {artist && <p class="artist-name">{artist}</p>}
+        <p class="release-date">📅 {formatDate(releaseDate)}</p>
+        <div class="release-meta">
+          {format && <span class="meta-item">Format: {format}</span>}
+          {label && <span class="meta-item">Label: {label}</span>}
+        </div>
+      </div>
+    </div>
+
+    {description && (
+      <div class="description-section">
+        <h2 class="section-title">説明</h2>
+        <pre class="description-text">{description}</pre>
+      </div>
+    )}
+
+    {tracks && tracks.length > 0 && (
+      <div class="tracks-section">
+        <h2 class="section-title">収録曲</h2>
+        <ol class="track-list">
+          {tracks.map((track: string) => (
+            <li class="track-item">{track}</li>
+          ))}
+        </ol>
+      </div>
+    )}
+
+    {links && links.length > 0 && (
+      <div class="streaming-section">
+        <h2 class="section-title">ストリーミング</h2>
+        <div class="streaming-links">
+          {links.map((link: { platform: string; url: string }) => (
+            <a href={link.url} target="_blank" rel="noopener noreferrer" class="streaming-button">
+              🎵 {link.platform}
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <div class="share-section">
+      <h2 class="section-title">シェア</h2>
+      <ShareButtons
+        url={`https://nantyara.com/releases/${id}`}
+        title={title}
+        description={`${artist || ''} - ${formatDate(releaseDate)}リリース`}
+      />
+    </div>
+
+    <div class="back-link-wrapper">
+      <a href="/releases" class="back-link">
+        ← リリース一覧に戻る
+      </a>
+    </div>
+  </article>
+</Layout>
+
+<style>
+  .release-detail {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  .release-header {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    padding: 30px;
+    background: linear-gradient(135deg, var(--bg-medium) 0%, var(--bg-dark) 100%);
+    border: 2px solid var(--retro-purple);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(157, 78, 221, 0.5);
+  }
+
+  .jacket-wrapper {
+    flex-shrink: 0;
+  }
+
+  .jacket-image-large {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 4px solid var(--retro-pink);
+    box-shadow: 0 8px 20px rgba(255, 110, 199, 0.5);
+  }
+
+  .release-info {
+    flex: 1;
+    min-width: 250px;
+  }
+
+  .type-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    background: var(--retro-purple);
+    color: white;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .release-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--text-light);
+    margin: 0 0 10px 0;
+    text-shadow: 2px 2px 0 rgba(157, 78, 221, 0.5);
+    line-height: 1.3;
+  }
+
+  .artist-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--retro-cyan);
+    margin: 0 0 15px 0;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  }
+
+  .release-date {
+    font-size: 1.1rem;
+    color: var(--pastel-lavender);
+    margin: 0 0 15px 0;
+  }
+
+  .release-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .meta-item {
+    padding: 5px 12px;
+    background: rgba(157, 78, 221, 0.3);
+    border: 1px solid var(--retro-purple);
+    border-radius: 15px;
+    font-size: 0.85rem;
+    color: var(--pastel-pink);
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--retro-pink);
+    margin: 0 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--retro-pink);
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .description-section {
+    margin-bottom: 40px;
+  }
+
+  .description-text {
+    font-family: var(--font-base);
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin: 0;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    border: 2px solid rgba(157, 78, 221, 0.3);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .tracks-section {
+    margin-bottom: 40px;
+  }
+
+  .track-list {
+    list-style: none;
+    padding: 0;
+    counter-reset: track-counter;
+  }
+
+  .track-item {
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    background: rgba(255, 110, 199, 0.1);
+    border-left: 4px solid var(--retro-cyan);
+    border-radius: 4px;
+    font-size: 1rem;
+    color: var(--text-light);
+    transition: all 0.3s ease;
+  }
+
+  .track-item::before {
+    counter-increment: track-counter;
+    content: counter(track-counter) ". ";
+    font-weight: 700;
+    color: var(--retro-cyan);
+    margin-right: 8px;
+  }
+
+  .track-item:hover {
+    background: rgba(255, 110, 199, 0.2);
+    border-left-color: var(--retro-pink);
+  }
+
+  .streaming-section {
+    margin-bottom: 40px;
+  }
+
+  .streaming-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .streaming-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, var(--retro-purple) 0%, var(--retro-pink) 100%);
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow:
+      0 4px 0 rgba(0, 0, 0, 0.3),
+      0 0 15px rgba(255, 110, 199, 0.4);
+    transition: all 0.3s ease;
+    min-height: 44px;
+  }
+
+  .streaming-button:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 6px 0 rgba(0, 0, 0, 0.3),
+      0 0 25px rgba(255, 110, 199, 0.6);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .streaming-button:active {
+    transform: translateY(0);
+    box-shadow:
+      0 2px 0 rgba(0, 0, 0, 0.3),
+      0 0 15px rgba(255, 110, 199, 0.4);
+  }
+
+  .back-link-wrapper {
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, var(--retro-purple) 0%, var(--retro-pink) 100%);
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow:
+      0 4px 0 rgba(0, 0, 0, 0.3),
+      0 0 15px rgba(255, 110, 199, 0.4);
+    transition: all 0.3s ease;
+  }
+
+  .back-link:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 6px 0 rgba(0, 0, 0, 0.3),
+      0 0 25px rgba(255, 110, 199, 0.6);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .back-link:active {
+    transform: translateY(0);
+    box-shadow:
+      0 2px 0 rgba(0, 0, 0, 0.3),
+      0 0 15px rgba(255, 110, 199, 0.4);
+  }
+
+  /* レスポンシブ対応 */
+  @media (max-width: 768px) {
+    .release-detail {
+      padding: 30px 16px;
+    }
+
+    .release-header {
+      flex-direction: column;
+      align-items: center;
+      padding: 25px 20px;
+    }
+
+    .jacket-image-large {
+      width: 250px;
+      height: 250px;
+    }
+
+    .release-info {
+      text-align: center;
+    }
+
+    .release-title {
+      font-size: 2rem;
+    }
+
+    .artist-name {
+      font-size: 1.1rem;
+    }
+
+    .release-date {
+      font-size: 1rem;
+    }
+
+    .release-meta {
+      justify-content: center;
+    }
+
+    .section-title {
+      font-size: 1.3rem;
+    }
+
+    .description-text {
+      font-size: 0.9rem;
+      padding: 16px;
+    }
+
+    .track-item {
+      font-size: 0.9rem;
+      padding: 10px 16px;
+    }
+
+    .streaming-links {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .release-detail {
+      padding: 20px 12px;
+    }
+
+    .release-header {
+      padding: 20px 16px;
+    }
+
+    .jacket-image-large {
+      width: 200px;
+      height: 200px;
+    }
+
+    .release-title {
+      font-size: 1.6rem;
+    }
+
+    .artist-name {
+      font-size: 1rem;
+    }
+
+    .release-date {
+      font-size: 0.9rem;
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+    }
+
+    .description-text {
+      font-size: 0.85rem;
+      padding: 14px;
+    }
+
+    .track-item {
+      font-size: 0.85rem;
+      padding: 10px 14px;
+    }
+
+    .streaming-button {
+      font-size: 0.9rem;
+      padding: 10px 20px;
+      min-height: 40px;
+    }
+
+    .streaming-links {
+      flex-direction: column;
+    }
+
+    .streaming-button {
+      width: 100%;
+    }
+  }
+
+  /* アニメーション無効化（アクセシビリティ） */
+  @media (prefers-reduced-motion: reduce) {
+    .track-item,
+    .streaming-button,
+    .back-link {
+      transition: none !important;
+    }
+
+    .track-item:hover,
+    .streaming-button:hover,
+    .back-link:hover {
+      transform: none;
+    }
+  }
+</style>

@@ -1,5 +1,6 @@
 ---
 interface Props {
+  id?: string;
   title: string;
   artist?: string;
   release_date: string;
@@ -11,7 +12,7 @@ interface Props {
   links?: Array<{ platform: string; url: string }>;
 }
 
-const { title, artist, release_date, type, format, label, jacket_image, description, links } = Astro.props;
+const { id, title, artist, release_date, type, format, label, jacket_image, description, links } = Astro.props;
 
 const formatDate = (dateStr: string) => {
   const date = new Date(dateStr);
@@ -33,69 +34,127 @@ const typeBadgeColors = {
 const badgeColor = typeBadgeColors[type as keyof typeof typeBadgeColors] || 'var(--retro-pink)';
 ---
 
-<article class="release-card">
-  <div class="card-layout">
-    {jacket_image && (
-      <div class="jacket-wrapper">
-        <img
-          src={jacket_image}
-          alt={`${title} ジャケット`}
-          class="jacket-image"
-          loading="lazy"
-          width="300"
-          height="300"
-        />
+{id ? (
+  <a href={`/releases/${id}`} class="release-card-link">
+    <article class="release-card">
+      <div class="card-layout">
+        {jacket_image && (
+          <div class="jacket-wrapper">
+            <img
+              src={jacket_image}
+              alt={`${title} ジャケット`}
+              class="jacket-image"
+              loading="lazy"
+              width="300"
+              height="300"
+            />
+          </div>
+        )}
+
+        <div class="card-content">
+          <div class="type-badge" style={`background: ${badgeColor}`}>
+            {typeLabel[type as keyof typeof typeLabel] || type}
+          </div>
+
+          <h3 class="release-title">{title}</h3>
+
+          {artist && (
+            <div class="release-artist">{artist}</div>
+          )}
+
+          <div class="release-meta">
+            <div class="release-date">
+              <span class="date-icon">📅</span>
+              {formatDate(release_date)}
+            </div>
+            {(format || label) && (
+              <div class="release-info">
+                {format && <span class="format">{format}</span>}
+                {label && <span class="label">{label}</span>}
+              </div>
+            )}
+          </div>
+
+          {description && (
+            <pre class="release-description">{description}</pre>
+          )}
+        </div>
       </div>
-    )}
-
-    <div class="card-content">
-      <div class="type-badge" style={`background: ${badgeColor}`}>
-        {typeLabel[type as keyof typeof typeLabel] || type}
-      </div>
-
-      <h3 class="release-title">{title}</h3>
-
-      {artist && (
-        <div class="release-artist">{artist}</div>
+    </article>
+  </a>
+) : (
+  <article class="release-card">
+    <div class="card-layout">
+      {jacket_image && (
+        <div class="jacket-wrapper">
+          <img
+            src={jacket_image}
+            alt={`${title} ジャケット`}
+            class="jacket-image"
+            loading="lazy"
+            width="300"
+            height="300"
+          />
+        </div>
       )}
 
-      <div class="release-meta">
-        <div class="release-date">
-          <span class="date-icon">📅</span>
-          {formatDate(release_date)}
+      <div class="card-content">
+        <div class="type-badge" style={`background: ${badgeColor}`}>
+          {typeLabel[type as keyof typeof typeLabel] || type}
         </div>
-        {(format || label) && (
-          <div class="release-info">
-            {format && <span class="format">{format}</span>}
-            {label && <span class="label">{label}</span>}
+
+        <h3 class="release-title">{title}</h3>
+
+        {artist && (
+          <div class="release-artist">{artist}</div>
+        )}
+
+        <div class="release-meta">
+          <div class="release-date">
+            <span class="date-icon">📅</span>
+            {formatDate(release_date)}
+          </div>
+          {(format || label) && (
+            <div class="release-info">
+              {format && <span class="format">{format}</span>}
+              {label && <span class="label">{label}</span>}
+            </div>
+          )}
+        </div>
+
+        {description && (
+          <pre class="release-description">{description}</pre>
+        )}
+
+        {links && links.length > 0 && (
+          <div class="streaming-links">
+            {links.map(link => (
+              <a
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="streaming-button"
+              >
+                <span class="button-icon">🎵</span>
+                {link.platform}
+              </a>
+            ))}
           </div>
         )}
       </div>
-
-      {description && (
-        <pre class="release-description">{description}</pre>
-      )}
-
-      {links && links.length > 0 && (
-        <div class="streaming-links">
-          {links.map(link => (
-            <a
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="streaming-button"
-            >
-              <span class="button-icon">🎵</span>
-              {link.platform}
-            </a>
-          ))}
-        </div>
-      )}
     </div>
-  </div>
-</article>
+  </article>
+)}
 
 <style>
+  .release-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
   .release-card {
     width: 100%;
     max-width: 500px;
@@ -110,6 +169,7 @@ const badgeColor = typeBadgeColors[type as keyof typeof typeBadgeColors] || 'var
     transition: all 0.3s ease;
   }
 
+  .release-card-link:hover .release-card,
   .release-card:hover {
     transform: translateY(-4px);
     box-shadow:
