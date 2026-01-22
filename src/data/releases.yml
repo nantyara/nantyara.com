@@ -9,13 +9,6 @@
   description: |
     カーネーションのポップ・アンセム「夜の煙突」を、御茶海マミとあおはるによる2人組ユニット"なんちゃらアイドル"が、チップチューンテイストでカバー。
     初の全国流通盤として7インチでリリース。
-  links:
-    - platform: Spotify
-      url: https://open.spotify.com/intl-ja/artist/0Tir7YkPE9wVla7Ci1Tiaz
-    - platform: Apple Music
-      url: https://music.apple.com/us/artist/nantyara-idol/1438973839
-    - platform: YouTube Music
-      url: https://music.youtube.com/channel/UC3I0TwX4iBOwOkPU07ypnpw
 
 - id: release-002
   title: さよならOdyssey
@@ -29,9 +22,9 @@
     なんちゃらアイドルのアルバム。
   links:
     - platform: Spotify
-      url: https://open.spotify.com/intl-ja/artist/0Tir7YkPE9wVla7Ci1Tiaz
+      url: https://open.spotify.com/intl-ja/album/1TkGaB3NkkMqEOXHXcx1vZ?si=IwCm74PBS6mWFQmWpinsxA
     - platform: Apple Music
-      url: https://music.apple.com/us/artist/nantyara-idol/1438973839
+      url: https://music.apple.com/us/album/%E3%81%95%E3%82%88%E3%81%AA%E3%82%89odyssey/1537916528
 
 - id: release-003
   title: PansyとDaisy/今夜、全てのBarで
@@ -48,11 +41,6 @@
   tracks:
     - A1. PansyとDaisy
     - B1. 今夜、全てのBarで
-  links:
-    - platform: Spotify
-      url: https://open.spotify.com/intl-ja/artist/0Tir7YkPE9wVla7Ci1Tiaz
-    - platform: Apple Music
-      url: https://music.apple.com/us/artist/nantyara-idol/1438973839
 
 - id: release-004
   title: M.A.M.I.
@@ -67,9 +55,9 @@
     アイドルおよびJ-POPのジャンル枠を超えた作品。
   links:
     - platform: Spotify
-      url: https://open.spotify.com/intl-ja/artist/0Tir7YkPE9wVla7Ci1Tiaz
+      url: https://open.spotify.com/intl-ja/album/4GbHJienZfi2cUua84du8i?si=f3W7zYDHS4WCDNp0gn8wRA
     - platform: Apple Music
-      url: https://music.apple.com/us/artist/nantyara-idol/1438973839
+      url: https://music.apple.com/us/album/m-a-m-i/1598097854
 
 - id: release-005
   title: 嘲笑
@@ -81,11 +69,6 @@
   jacket_image: /releases/choushou.webp
   description: |
     なんちゃらアイドルのシングル。
-  links:
-    - platform: Spotify
-      url: https://open.spotify.com/intl-ja/artist/0Tir7YkPE9wVla7Ci1Tiaz
-    - platform: Apple Music
-      url: https://music.apple.com/us/artist/nantyara-idol/1438973839
 
 - id: release-006
   title: Life Goes On
@@ -99,9 +82,9 @@
     なんちゃらアイドルの2ndアルバム。
   links:
     - platform: Spotify
-      url: https://open.spotify.com/intl-ja/artist/0Tir7YkPE9wVla7Ci1Tiaz
+      url: https://open.spotify.com/intl-ja/album/3P0WgIMV1Wmt7iUchXeve8?si=CvFmLZx7Q1OjOkeUmNQ9pg
     - platform: Apple Music
-      url: https://music.apple.com/us/artist/nantyara-idol/1438973839
+      url: https://music.apple.com/us/album/life-goes-on/1657617641
 
 - id: release-007
   title: 運命の人/ 楽園 / 眠るなBABE
@@ -120,11 +103,6 @@
     - 運命の人
     - 楽園
     - 眠るなBABE
-  links:
-    - platform: Spotify
-      url: https://open.spotify.com/intl-ja/artist/0Tir7YkPE9wVla7Ci1Tiaz
-    - platform: Apple Music
-      url: https://music.apple.com/us/artist/nantyara-idol/1438973839
 
 - id: release-008
   title: Silver METAL Love Song, Baby
@@ -140,9 +118,9 @@
     結成9年目の地下アイドルグループによる年間200本以上のライブ活動を背景とした制作。
   links:
     - platform: Spotify
-      url: https://open.spotify.com/intl-ja/artist/0Tir7YkPE9wVla7Ci1Tiaz
+      url: https://open.spotify.com/intl-ja/album/4vR2BpDnZ9BLJCg6hAL50I?si=EI4tlnW4QMeWZI4_vbT4Qw
     - platform: Apple Music
-      url: https://music.apple.com/us/artist/nantyara-idol/1438973839
+      url: https://music.apple.com/us/album/silver-metal-love-song-baby/1711745389
 
 - id: release-009
   title: 芸術偶像mode
@@ -157,9 +135,9 @@
     デビュー10周年を控えた時期のリリースで、珍しい8センチCD（短冊CD）フォーマットでの展開。
   links:
     - platform: Spotify
-      url: https://open.spotify.com/intl-ja/artist/0Tir7YkPE9wVla7Ci1Tiaz
+      url: https://open.spotify.com/intl-ja/album/7a9woMKNYxsAguyeFbflvi?si=ys_akqfFQnOukknQWvQvhw
     - platform: Apple Music
-      url: https://music.apple.com/us/artist/nantyara-idol/1438973839
+      url: https://music.apple.com/us/album/%E8%8A%B8%E8%A1%93%E5%81%B6%E5%83%8Fmode-single/1717996295
 
 - id: release-010
   title: SWEET DROPS
@@ -171,11 +149,6 @@
   jacket_image: /releases/sweet-drops.webp
   description: |
     デビュー当初から「曲と性格は良いアイドル」をモットーに活動してきたなんちゃらアイドルと鈴木祥子のコラボレーション。
-  links:
-    - platform: Spotify
-      url: https://open.spotify.com/intl-ja/artist/0Tir7YkPE9wVla7Ci1Tiaz
-    - platform: Apple Music
-      url: https://music.apple.com/us/artist/nantyara-idol/1438973839
 
 - id: release-011
   title: Sentimental Jukebox
@@ -189,9 +162,9 @@
     3rdアルバムは、まさかのカバー・アルバム。
   links:
     - platform: Spotify
-      url: https://open.spotify.com/intl-ja/artist/0Tir7YkPE9wVla7Ci1Tiaz
+      url: https://open.spotify.com/intl-ja/album/0PCiHe3iC2jktjhCRyeasv?si=xvI5ypxeS_eeVTV1BaXWpw
     - platform: Apple Music
-      url: https://music.apple.com/us/artist/nantyara-idol/1438973839
+      url: https://music.apple.com/us/album/sentimental-jukebox/1721093143
 
 - id: release-012
   title: もしかして君だけが苦しいって思ってないかい? / CICADA / 凍える太陽
@@ -203,11 +176,6 @@
   jacket_image: /releases/moshikashite.webp
   description: |
     2024年最初で最後のシングルは、「オセロケッツ」の10枚目のシングルを大胆にEDMでカバー。
-  links:
-    - platform: Spotify
-      url: https://open.spotify.com/intl-ja/artist/0Tir7YkPE9wVla7Ci1Tiaz
-    - platform: Apple Music
-      url: https://music.apple.com/us/artist/nantyara-idol/1438973839
 
 - id: release-013
   title: V.A.「シューティング スター」収録「LOVE マシーン」
@@ -220,11 +188,6 @@
   description: |
     コンピレーションアルバム「シューティング スター」に参加。
     Disc2の10番目に「なんちゃらアイドル Loves スキップカウズ/LOVE マシーン」を収録。
-  links:
-    - platform: Spotify
-      url: https://open.spotify.com/intl-ja/artist/0Tir7YkPE9wVla7Ci1Tiaz
-    - platform: Apple Music
-      url: https://music.apple.com/us/artist/nantyara-idol/1438973839
 
 - id: release-014
   title: グッバイ・マイガール c/w ブラックコーヒー
@@ -236,8 +199,3 @@
   jacket_image: /releases/goodbye-my-girl.webp
   description: |
     「地下アイドル界の最終兵器」として知られるなんちゃらアイドルと豊田道倫による異色のコラボレーション。
-  links:
-    - platform: Spotify
-      url: https://open.spotify.com/intl-ja/artist/0Tir7YkPE9wVla7Ci1Tiaz
-    - platform: Apple Music
-      url: https://music.apple.com/us/artist/nantyara-idol/1438973839
