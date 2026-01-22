@@ -34,127 +34,91 @@ const typeBadgeColors = {
 const badgeColor = typeBadgeColors[type as keyof typeof typeBadgeColors] || 'var(--retro-pink)';
 ---
 
-{id ? (
-  <a href={`/releases/${id}`} class="release-card-link">
-    <article class="release-card">
-      <div class="card-layout">
-        {jacket_image && (
-          <div class="jacket-wrapper">
-            <img
-              src={jacket_image}
-              alt={`${title} ジャケット`}
-              class="jacket-image"
-              loading="lazy"
-              width="300"
-              height="300"
-            />
-          </div>
-        )}
-
-        <div class="card-content">
-          <div class="type-badge" style={`background: ${badgeColor}`}>
-            {typeLabel[type as keyof typeof typeLabel] || type}
-          </div>
-
-          <h3 class="release-title">{title}</h3>
-
-          {artist && (
-            <div class="release-artist">{artist}</div>
-          )}
-
-          <div class="release-meta">
-            <div class="release-date">
-              <span class="date-icon">📅</span>
-              {formatDate(release_date)}
-            </div>
-            {(format || label) && (
-              <div class="release-info">
-                {format && <span class="format">{format}</span>}
-                {label && <span class="label">{label}</span>}
-              </div>
-            )}
-          </div>
-
-          {description && (
-            <pre class="release-description">{description}</pre>
-          )}
-        </div>
+<article class="release-card">
+  <div class="card-layout">
+    {jacket_image && (
+      <div class="jacket-wrapper">
+        <img
+          src={jacket_image}
+          alt={`${title} ジャケット`}
+          class="jacket-image"
+          loading="lazy"
+          width="300"
+          height="300"
+        />
       </div>
-    </article>
-  </a>
-) : (
-  <article class="release-card">
-    <div class="card-layout">
-      {jacket_image && (
-        <div class="jacket-wrapper">
-          <img
-            src={jacket_image}
-            alt={`${title} ジャケット`}
-            class="jacket-image"
-            loading="lazy"
-            width="300"
-            height="300"
-          />
-        </div>
+    )}
+
+    <div class="card-content">
+      <div class="type-badge" style={`background: ${badgeColor}`}>
+        {typeLabel[type as keyof typeof typeLabel] || type}
+      </div>
+
+      {id ? (
+        <a href={`/releases/${id}`} class="release-title-link">
+          <h3 class="release-title">{title}</h3>
+        </a>
+      ) : (
+        <h3 class="release-title">{title}</h3>
       )}
 
-      <div class="card-content">
-        <div class="type-badge" style={`background: ${badgeColor}`}>
-          {typeLabel[type as keyof typeof typeLabel] || type}
+      {artist && (
+        <div class="release-artist">{artist}</div>
+      )}
+
+      <div class="release-meta">
+        <div class="release-date">
+          <span class="date-icon">📅</span>
+          {formatDate(release_date)}
         </div>
-
-        <h3 class="release-title">{title}</h3>
-
-        {artist && (
-          <div class="release-artist">{artist}</div>
-        )}
-
-        <div class="release-meta">
-          <div class="release-date">
-            <span class="date-icon">📅</span>
-            {formatDate(release_date)}
+        {(format || label) && (
+          <div class="release-info">
+            {format && <span class="format">{format}</span>}
+            {label && <span class="label">{label}</span>}
           </div>
-          {(format || label) && (
-            <div class="release-info">
-              {format && <span class="format">{format}</span>}
-              {label && <span class="label">{label}</span>}
-            </div>
-          )}
-        </div>
-
-        {description && (
-          <pre class="release-description">{description}</pre>
         )}
+      </div>
 
-        {links && links.length > 0 && (
-          <div class="streaming-links">
-            {links.map(link => (
+      {description && (
+        <pre class="release-description">{description}</pre>
+      )}
+
+      {links && links.length > 0 && (
+        <div class="streaming-links">
+          {links.map(link => {
+            const platformLower = link.platform.toLowerCase();
+            let iconClass = 'fa-solid fa-music';
+            let buttonClass = 'streaming-button';
+
+            if (platformLower.includes('spotify')) {
+              iconClass = 'fa-brands fa-spotify';
+              buttonClass = 'streaming-button spotify-button';
+            } else if (platformLower.includes('apple')) {
+              iconClass = 'fa-brands fa-apple';
+              buttonClass = 'streaming-button apple-button';
+            }
+
+            return (
               <a
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="streaming-button"
+                class={buttonClass}
+                aria-label={`${link.platform}で聴く`}
               >
-                <span class="button-icon">🎵</span>
-                {link.platform}
+                <i class={iconClass}></i>
+                <span class="button-text">{link.platform}</span>
               </a>
-            ))}
-          </div>
-        )}
-      </div>
+            );
+          })}
+        </div>
+      )}
     </div>
-  </article>
-)}
+  </div>
+</article>
+
 
 <style>
-  .release-card-link {
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
   .release-card {
     width: 100%;
     max-width: 500px;
@@ -169,15 +133,18 @@ const badgeColor = typeBadgeColors[type as keyof typeof typeBadgeColors] || 'var
     transition: all 0.3s ease;
   }
 
-  .release-card-link:hover .release-card,
-  .release-card:hover {
-    transform: translateY(-4px);
-    box-shadow:
-      0 8px 0 rgba(0, 0, 0, 0.3),
-      0 0 30px rgba(157, 78, 221, 0.6),
-      0 0 40px rgba(255, 110, 199, 0.3),
-      inset 0 0 30px rgba(0, 0, 0, 0.3);
-    border-color: var(--retro-pink);
+  .release-title-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    transition: all 0.3s ease;
+  }
+
+  .release-title-link:hover {
+    color: var(--retro-cyan);
+    text-shadow:
+      2px 2px 0 rgba(157, 78, 221, 0.5),
+      0 0 15px rgba(0, 255, 255, 0.6);
   }
 
   .card-layout {
@@ -305,39 +272,53 @@ const badgeColor = typeBadgeColors[type as keyof typeof typeBadgeColors] || 'var
   .streaming-button {
     display: flex;
     align-items: center;
-    gap: 6px;
-    padding: 8px 16px;
+    gap: 8px;
+    padding: 10px 18px;
     background: linear-gradient(135deg, var(--retro-purple) 0%, var(--retro-pink) 100%);
     color: white;
     text-decoration: none;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 600;
-    border-radius: 20px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+    border: none;
     box-shadow:
-      0 3px 0 rgba(0, 0, 0, 0.3),
-      0 0 10px rgba(255, 110, 199, 0.3);
+      0 2px 4px rgba(0, 0, 0, 0.2),
+      0 0 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    min-height: 38px;
+    min-height: 44px;
+  }
+
+  .streaming-button i {
+    font-size: 1.1rem;
   }
 
   .streaming-button:hover {
     transform: translateY(-2px);
     box-shadow:
-      0 5px 0 rgba(0, 0, 0, 0.3),
-      0 0 20px rgba(255, 110, 199, 0.6);
-    border-color: rgba(255, 255, 255, 0.4);
+      0 4px 8px rgba(0, 0, 0, 0.3),
+      0 0 15px rgba(0, 0, 0, 0.2);
   }
 
   .streaming-button:active {
     transform: translateY(0);
-    box-shadow:
-      0 2px 0 rgba(0, 0, 0, 0.3),
-      0 0 10px rgba(255, 110, 199, 0.3);
   }
 
-  .button-icon {
-    font-size: 1rem;
+  /* Spotify - 公式ブランドカラー */
+  .spotify-button {
+    background: #1DB954;
+  }
+
+  .spotify-button:hover {
+    background: #1ed760;
+  }
+
+  /* Apple Music - 公式ブランドカラー */
+  .apple-button {
+    background: linear-gradient(135deg, #FA243C 0%, #FF6B81 100%);
+  }
+
+  .apple-button:hover {
+    background: linear-gradient(135deg, #FF6B81 0%, #FA243C 100%);
   }
 
   /* レスポンシブ対応 */

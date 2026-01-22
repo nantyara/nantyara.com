@@ -106,11 +106,26 @@ const ogImage = jacket_image
       <div class="streaming-section">
         <h2 class="section-title">ストリーミング</h2>
         <div class="streaming-links">
-          {links.map((link: { platform: string; url: string }) => (
-            <a href={link.url} target="_blank" rel="noopener noreferrer" class="streaming-button">
-              🎵 {link.platform}
-            </a>
-          ))}
+          {links.map((link: { platform: string; url: string }) => {
+            const platformLower = link.platform.toLowerCase();
+            let iconClass = 'fa-solid fa-music';
+            let buttonClass = 'streaming-button';
+
+            if (platformLower.includes('spotify')) {
+              iconClass = 'fa-brands fa-spotify';
+              buttonClass = 'streaming-button spotify-button';
+            } else if (platformLower.includes('apple')) {
+              iconClass = 'fa-brands fa-apple';
+              buttonClass = 'streaming-button apple-button';
+            }
+
+            return (
+              <a href={link.url} target="_blank" rel="noopener noreferrer" class={buttonClass} aria-label={`${link.platform}で聴く`}>
+                <i class={iconClass}></i>
+                <span class="button-text">{link.platform}</span>
+              </a>
+            );
+          })}
         </div>
       </div>
     )}
@@ -294,35 +309,53 @@ const ogImage = jacket_image
   .streaming-button {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
+    gap: 10px;
     padding: 12px 24px;
     background: linear-gradient(135deg, var(--retro-purple) 0%, var(--retro-pink) 100%);
     color: white;
     text-decoration: none;
     font-size: 1rem;
     font-weight: 700;
-    border-radius: 25px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 28px;
+    border: none;
     box-shadow:
-      0 4px 0 rgba(0, 0, 0, 0.3),
-      0 0 15px rgba(255, 110, 199, 0.4);
+      0 2px 4px rgba(0, 0, 0, 0.2),
+      0 0 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    min-height: 44px;
+    min-height: 48px;
+  }
+
+  .streaming-button i {
+    font-size: 1.3rem;
   }
 
   .streaming-button:hover {
     transform: translateY(-2px);
     box-shadow:
-      0 6px 0 rgba(0, 0, 0, 0.3),
-      0 0 25px rgba(255, 110, 199, 0.6);
-    border-color: rgba(255, 255, 255, 0.5);
+      0 4px 8px rgba(0, 0, 0, 0.3),
+      0 0 15px rgba(0, 0, 0, 0.2);
   }
 
   .streaming-button:active {
     transform: translateY(0);
-    box-shadow:
-      0 2px 0 rgba(0, 0, 0, 0.3),
-      0 0 15px rgba(255, 110, 199, 0.4);
+  }
+
+  /* Spotify - 公式ブランドカラー */
+  .spotify-button {
+    background: #1DB954;
+  }
+
+  .spotify-button:hover {
+    background: #1ed760;
+  }
+
+  /* Apple Music - 公式ブランドカラー */
+  .apple-button {
+    background: linear-gradient(135deg, #FA243C 0%, #FF6B81 100%);
+  }
+
+  .apple-button:hover {
+    background: linear-gradient(135deg, #FF6B81 0%, #FA243C 100%);
   }
 
   .back-link-wrapper {

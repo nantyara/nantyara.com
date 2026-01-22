@@ -19,23 +19,23 @@ const lineUrl = `https://line.me/R/msg/text/?${encodedText}%0A${encodedUrl}`;
 ---
 
 <div class="share-buttons">
-  <a href={twitterUrl} target="_blank" rel="noopener noreferrer" class="share-button twitter">
-    𝕏
+  <a href={twitterUrl} target="_blank" rel="noopener noreferrer" class="share-button x-button" aria-label="X（旧Twitter）でシェア">
+    <i class="fa-brands fa-x-twitter"></i>
   </a>
-  <a href={facebookUrl} target="_blank" rel="noopener noreferrer" class="share-button facebook">
-    📘 Facebook
+  <a href={facebookUrl} target="_blank" rel="noopener noreferrer" class="share-button facebook-button" aria-label="Facebookでシェア">
+    <i class="fa-brands fa-facebook-f"></i>
   </a>
-  <a href={lineUrl} target="_blank" rel="noopener noreferrer" class="share-button line">
-    💬 LINE
+  <a href={lineUrl} target="_blank" rel="noopener noreferrer" class="share-button line-button" aria-label="LINEでシェア">
+    <i class="fa-brands fa-line"></i>
   </a>
-  <button class="share-button copy" data-url={url}>
-    🔗 URLコピー
+  <button class="share-button copy-button" data-url={url} aria-label="URLをコピー">
+    <i class="fa-solid fa-link"></i>
   </button>
 </div>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.share-button.copy').forEach(button => {
+    document.querySelectorAll('.share-button.copy-button').forEach(button => {
       button.addEventListener('click', async () => {
         const url = button.getAttribute('data-url');
         if (!url) return;
@@ -53,11 +53,13 @@ const lineUrl = `https://line.me/R/msg/text/?${encodedText}%0A${encodedUrl}`;
             document.body.removeChild(input);
           }
 
-          const originalText = button.textContent;
-          button.textContent = '✅ コピーしました！';
-          setTimeout(() => {
-            button.textContent = originalText;
-          }, 2000);
+          const icon = button.querySelector('i');
+          if (icon) {
+            icon.className = 'fa-solid fa-check';
+            setTimeout(() => {
+              icon.className = 'fa-solid fa-link';
+            }, 2000);
+          }
         } catch (err) {
           console.error('コピーに失敗しました:', err);
         }
@@ -78,55 +80,76 @@ const lineUrl = `https://line.me/R/msg/text/?${encodedText}%0A${encodedUrl}`;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 12px 20px;
+    width: 48px;
+    height: 48px;
     min-height: 44px;
-    background: linear-gradient(135deg, var(--retro-purple) 0%, var(--retro-pink) 100%);
-    color: white;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 25px;
-    font-size: 1rem;
-    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.25rem;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow:
-      0 4px 0 rgba(0, 0, 0, 0.3),
-      0 0 15px rgba(255, 110, 199, 0.4);
+      0 2px 4px rgba(0, 0, 0, 0.2),
+      0 0 10px rgba(0, 0, 0, 0.1);
   }
 
   .share-button:hover {
     transform: translateY(-2px);
     box-shadow:
-      0 6px 0 rgba(0, 0, 0, 0.3),
-      0 0 25px rgba(255, 110, 199, 0.6);
+      0 4px 8px rgba(0, 0, 0, 0.3),
+      0 0 15px rgba(0, 0, 0, 0.2);
   }
 
   .share-button:active {
     transform: translateY(0);
-    box-shadow:
-      0 2px 0 rgba(0, 0, 0, 0.3),
-      0 0 15px rgba(255, 110, 199, 0.4);
   }
 
-  .share-button.twitter {
+  /* X (Twitter) - 公式ブランドカラー */
+  .x-button {
     background: #000000;
+    color: white;
   }
 
-  .share-button.facebook {
+  .x-button:hover {
+    background: #1a1a1a;
+  }
+
+  /* Facebook - 公式ブランドカラー */
+  .facebook-button {
     background: #1877F2;
+    color: white;
   }
 
-  .share-button.line {
+  .facebook-button:hover {
+    background: #0c63d4;
+  }
+
+  /* LINE - 公式ブランドカラー */
+  .line-button {
     background: #06C755;
+    color: white;
+  }
+
+  .line-button:hover {
+    background: #05b04b;
+  }
+
+  /* URLコピー */
+  .copy-button {
+    background: linear-gradient(135deg, var(--retro-purple) 0%, var(--retro-pink) 100%);
+    color: white;
+  }
+
+  .copy-button:hover {
+    background: linear-gradient(135deg, var(--retro-pink) 0%, var(--retro-purple) 100%);
   }
 
   @media (max-width: 480px) {
-    .share-buttons {
-      flex-direction: column;
-    }
-
     .share-button {
-      width: 100%;
+      width: 44px;
+      height: 44px;
+      font-size: 1.1rem;
     }
   }
 
