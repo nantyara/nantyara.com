@@ -117,6 +117,9 @@ const ogImage = jacket_image
             } else if (platformLower.includes('apple')) {
               iconClass = 'fa-brands fa-apple';
               buttonClass = 'streaming-button apple-button';
+            } else if (platformLower.includes('youtube')) {
+              iconClass = 'fa-brands fa-youtube';
+              buttonClass = 'streaming-button youtube-button';
             }
 
             return (
@@ -356,6 +359,15 @@ const ogImage = jacket_image
 
   .apple-button:hover {
     background: linear-gradient(135deg, #FF6B81 0%, #FA243C 100%);
+  }
+
+  /* YouTube Music - 公式ブランドカラー */
+  .youtube-button {
+    background: #FF0000;
+  }
+
+  .youtube-button:hover {
+    background: #cc0000;
   }
 
   .back-link-wrapper {

@@ -96,6 +96,9 @@ const badgeColor = typeBadgeColors[type as keyof typeof typeBadgeColors] || 'var
             } else if (platformLower.includes('apple')) {
               iconClass = 'fa-brands fa-apple';
               buttonClass = 'streaming-button apple-button';
+            } else if (platformLower.includes('youtube')) {
+              iconClass = 'fa-brands fa-youtube';
+              buttonClass = 'streaming-button youtube-button';
             }
 
             return (
@@ -319,6 +322,15 @@ const badgeColor = typeBadgeColors[type as keyof typeof typeBadgeColors] || 'var
 
   .apple-button:hover {
     background: linear-gradient(135deg, #FF6B81 0%, #FA243C 100%);
+  }
+
+  /* YouTube Music - 公式ブランドカラー */
+  .youtube-button {
+    background: #FF0000;
+  }
+
+  .youtube-button:hover {
+    background: #cc0000;
   }
 
   /* レスポンシブ対応 */

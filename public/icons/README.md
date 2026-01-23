@@ -77,6 +77,17 @@
   - バッジの改変禁止
   - 使用前にIdentity Guidelinesの確認必須
 
+#### YouTube Music
+- **公式ブランドカラー**: `#FF0000` (YouTube Red)
+- **Font Awesomeアイコン**: `fa-youtube`
+- **公式ガイドライン**: https://brand.youtube/
+- **API ブランディングガイドライン**: https://developers.google.com/youtube/terms/branding-guidelines
+- **使用ルール**:
+  - YouTubeロゴの色は変更不可
+  - 単一の背景色で使用
+  - YouTubeのコンテンツにリンクする場合のみ使用可能
+  - 最小サイズ要件あり
+
 ## カラーコード一覧
 
 ```css
@@ -89,6 +100,7 @@
 --spotify-green: #1DB954;
 --apple-music-red: #FA243C;
 --apple-music-pink: #FF6B81;
+--youtube-red: #FF0000;
 ```
 
 ## BASE公式ロゴの使用
