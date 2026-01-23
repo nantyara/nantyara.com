@@ -60,13 +60,24 @@
     御茶海マミ
   images:
     - /events/20260216-kaku-misami-202602.jpeg
-- id: event-20260215-tokyo-club
-  slug: 20260215-tokyo-club
-  date: 2026-02-15 19:00:00 +0900
-  title: 東京俱楽部
-  site: 東京俱楽部
+- id: event-20260215-rahmons
+  slug: 20260215-rahmons
+  date: 2026-02-15 16:00:00 +0900
+  title: GOKUAKU POST VALENTINE'S DAY LIVE RAHMON'S
+  site: 東京倶楽部 水道橋店
   content: |
-    なんちゃらアイドル出演
+    【出演】
+    MaMi RAHMON (vo)
+    AO RAHMON (pf)
+    TSUBU RAHMON (d)
+    On Mayu RAHMON (b)
+    AB RAHMON (gt)
+
+    開場/開演　16:00/16:30
+    ADV　¥3,500 [+TAX]
+    DOOR　¥3,800 [+1D & TAX]
+  images:
+    - /events/20260215-rahmons.jpg
 - id: event-20260214-uerin-50th
   slug: 20260214-uerin-50th
   date: 2026-02-14 16:15:00 +0900
