@@ -27,6 +27,8 @@
   site: 東新宿 LOVE TKO
   content: |
     なんちゃらアイドル出演
+  images:
+    - /events/20260216-yuru-oneman-1.jpeg
 - id: event-20260215-tokyo-club
   slug: 20260215-tokyo-club
   date: 2026-02-15 19:00:00 +0900
