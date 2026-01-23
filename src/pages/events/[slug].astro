@@ -312,16 +312,18 @@ const ogImage = images && images.length > 0
   }
 
   .image-grid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
-    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   .event-image {
     width: 100%;
-    max-width: 600px;
     height: auto;
+    max-height: 600px;
+    object-fit: contain;
     border-radius: 8px;
     border: 3px solid var(--retro-cyan);
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
