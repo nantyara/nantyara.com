@@ -1,6 +1,7 @@
 - id: event-20260225-ottanta
   slug: 20260225-ottanta
   date: 2026-02-25 19:00:00 +0900
+  end: 2026-02-25 22:00:00 +0900
   title: 蒲田 Ottanta
   site: 蒲田 Ottanta
   content: |
@@ -118,6 +119,7 @@
 - id: event-20260124-hpro-kamata
   slug: 20260124-hpro-kamata
   date: 2026-01-24 13:00:00 +0900
+  end: 2026-01-24 15:00:00 +0900
   title: Hプロダクション Wonderful Days in 蒲田2
   site: 黒湯の温泉ゆ〜シティー蒲田 YCKホール
   content: |

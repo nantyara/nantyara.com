@@ -18,6 +18,7 @@ export async function getStaticPaths() {
 
 interface ScheduleType {
   date: string;
+  end?: string;
   title: string;
   site: string;
   content?: string;
@@ -26,7 +27,7 @@ interface ScheduleType {
 }
 
 const { schedule } = Astro.props as { schedule: ScheduleType };
-const { date, title, site, content, images } = schedule;
+const { date, end, title, site, content, images } = schedule;
 
 // 日付フォーマット
 const eventDate = new Date(date);
@@ -51,8 +52,8 @@ const formatGoogleCalDate = (d: Date) => {
   return `${year}${month}${day}T${hour}${minute}00`;
 };
 
-// イベント終了時刻（開始から2時間後）
-const eventEndDate = new Date(eventDate.getTime() + 2 * 60 * 60 * 1000);
+// イベント終了時刻（endフィールドがあればそれを使用、なければ開始から4時間後）
+const eventEndDate = end ? new Date(end) : new Date(eventDate.getTime() + 4 * 60 * 60 * 1000);
 
 // Google Calendar URL
 const googleCalendarUrl = new URL('https://calendar.google.com/calendar/render');
