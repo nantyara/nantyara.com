@@ -26,7 +26,10 @@ const dateInfo = formatDate(date);
 {slug ? (
   <a href={`/events/${slug}`} class="schedule-card-link">
     <article class="schedule-card">
-      <div class="card-header stripe-pattern">
+      <div
+        class={`card-header ${images && images.length > 0 ? 'has-image' : 'stripe-pattern'}`}
+        style={images && images.length > 0 ? `background-image: url('${images[0]}')` : ''}
+      >
         <div class="date-badge">
           <span class="date-year">{dateInfo.year}</span>
           <span class="date-main">{dateInfo.month}/{dateInfo.day}</span>
@@ -49,7 +52,10 @@ const dateInfo = formatDate(date);
   </a>
 ) : (
   <article class="schedule-card">
-    <div class="card-header stripe-pattern">
+    <div
+      class={`card-header ${images && images.length > 0 ? 'has-image' : 'stripe-pattern'}`}
+      style={images && images.length > 0 ? `background-image: url('${images[0]}')` : ''}
+    >
       <div class="date-badge">
         <span class="date-year">{dateInfo.year}</span>
         <span class="date-main">{dateInfo.month}/{dateInfo.day}</span>
@@ -118,6 +124,29 @@ const dateInfo = formatDate(date);
       rgba(255, 255, 255, 0.1) 10px,
       rgba(255, 255, 255, 0.1) 20px
     );
+  }
+
+  .card-header.has-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .card-header.has-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+  }
+
+  .card-header.has-image .date-badge,
+  .card-header.has-image .card-title {
+    position: relative;
+    z-index: 1;
   }
 
   .date-badge {
