@@ -21,11 +21,21 @@
     おとなの文化祭
 - id: event-20260127-12th-anniversary
   slug: 20260127-12th-anniversary
-  date: 2026-01-27 19:00:00 +0900
-  title: なんちゃらアイドル12周年
+  date: 2026-01-27 18:30:00 +0900
+  title: S.B.Q.アイドル部主催なんちゃらアイドル12周年ソウルメイトフェス！in 渋谷ラママ
   site: 渋谷 La.mama
   content: |
-    12周年記念イベント
+    【出演】
+    なんちゃらアイドル / MCあんにゅ / POPPY / 小日向由衣
+
+    OPEN/START　18:30/19:00
+    ADV　￥2,500＋D
+
+    【ツイキャスプレミア配信】
+    ¥2,000
+    https://premier.twitcasting.tv/c:shibuya_lamama/shopcart/413447
+  images:
+    - /events/20260127-12th-anniversary-1.jpeg
 - id: event-20260124-hpro-kamata
   slug: 20260124-hpro-kamata
   date: 2026-01-24 13:00:00 +0900
