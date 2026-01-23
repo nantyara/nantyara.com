@@ -1,0 +1,90 @@
+- id: event-20260225-ottanta
+  slug: 20260225-ottanta
+  date: 2026-02-25 19:00:00 +0900
+  end: 2026-02-25 22:00:00 +0900
+  title: 蒲田 Ottanta
+  site: 蒲田 Ottanta
+  content: |
+    なんてったってアイドル
+- id: event-20260222-swingy
+  slug: 20260222-swingy
+  date: 2026-02-22 19:00:00 +0900
+  title: Swingy
+  site: 新検見川 Swingy
+  content: |
+    なんちゃらアイドル出演
+- id: event-20260221-nuru-birthday
+  slug: 20260221-nuru-birthday
+  date: 2026-02-21 19:00:00 +0900
+  title: ぬるバースデー
+  site: 渋谷 La.mama
+  content: |
+    ぬるバースデー
+- id: event-20260216-yuru-oneman
+  slug: 20260216-yuru-oneman
+  date: 2026-02-16 19:00:00 +0900
+  title: ゆるワンマン
+  site: 東新宿 LOVE TKO
+  content: |
+    なんちゃらアイドル出演
+- id: event-20260215-tokyo-club
+  slug: 20260215-tokyo-club
+  date: 2026-02-15 19:00:00 +0900
+  title: 東京俱楽部
+  site: 東京俱楽部
+  content: |
+    なんちゃらアイドル出演
+- id: event-20260214-uerin-birthday
+  slug: 20260214-uerin-birthday
+  date: 2026-02-14 19:00:00 +0900
+  title: うえりんバースデー
+  site: 池袋手刀
+  content: |
+    乙女の夕べ with 24's
+- id: event-20260212-lamama
+  slug: 20260212-lamama
+  date: 2026-02-12 19:00:00 +0900
+  title: 渋谷 La.mama
+  site: 渋谷 La.mama
+  content: |
+    なんちゃらアイドル出演
+- id: event-20260210-bar-event
+  slug: 20260210-bar-event
+  date: 2026-02-10 19:00:00 +0900
+  title: バーイベ
+  site: 新宿 歌舞伎町 Drunken Shrimp
+  content: |
+    御茶海マミ
+- id: event-20260207-mitsushitsu
+  slug: 20260207-mitsushitsu
+  date: 2026-02-07 17:00:00 +0900
+  title: 「密室」御茶海マミ主催ライブ
+  site: 渋谷La.mama
+  content: |
+    御茶海マミ生誕ライブ
+    OPEN 17:00 / START 18:00
+    ¥2,500+ドリンク代
+
+    【出演】
+    御茶海マミ
+    MCあんにゅ
+    なんちゃらアイドル
+    Crawl
+    三月碧
+
+    【TIME TABLE】
+    18:00-18:25 御茶海マミ
+    18:30-19:00 三月碧
+    19:05-19:35 MCあんにゅ
+    19:50-20:25 Crawl
+    20:40-21:10 なんちゃらアイドル
+  images:
+    - /events/20260207-mitsushitsu-1.png
+    - /events/20260207-mitsushitsu-2.png
+- id: event-20260202-lovetko
+  slug: 20260202-lovetko
+  date: 2026-02-02 19:00:00 +0900
+  title: LOVE TKO
+  site: 東新宿 LOVE TKO
+  content: |
+    ゆるワンマン

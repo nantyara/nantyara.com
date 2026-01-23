@@ -1,12 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ScheduleCard from '../components/ScheduleCard.astro';
-import { readFileSync } from 'node:fs';
-import { parse } from 'yaml';
+import { loadAllSchedules } from '../utils/schedules';
 
-// YAMLファイル読み込み
-const schedulesYaml = readFileSync('src/data/schedules.yml', 'utf-8');
-const allSchedules = parse(schedulesYaml);
+// YAMLファイル読み込み（全ての schedules/*.yml を統合）
+const allSchedules = loadAllSchedules();
 
 // 12時間ルール: 現在時刻 - 12時間を基準に振り分け
 const expireTime = Date.now() - 12 * 60 * 60 * 1000;

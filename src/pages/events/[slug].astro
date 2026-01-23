@@ -1,12 +1,10 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import ShareButtons from '../../components/ShareButtons.astro';
-import { readFileSync } from 'node:fs';
-import { parse } from 'yaml';
+import { loadAllSchedules } from '../../utils/schedules';
 
 export async function getStaticPaths() {
-  const schedulesYaml = readFileSync('src/data/schedules.yml', 'utf-8');
-  const schedules = parse(schedulesYaml);
+  const schedules = loadAllSchedules();
 
   return schedules
     .filter((s: any) => s.slug) // slugがあるイベントのみ

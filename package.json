@@ -9,7 +9,8 @@
     "dev": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "validate-yaml": "node scripts/validate-yaml.js"
   },
   "dependencies": {
     "astro": "^5.16.13",
