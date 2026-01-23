@@ -50,8 +50,11 @@ const badgeColor = typeBadgeColors[type as keyof typeof typeBadgeColors] || 'var
     )}
 
     <div class="card-content">
-      <div class="type-badge" style={`background: ${badgeColor}`}>
-        {typeLabel[type as keyof typeof typeLabel] || type}
+      <div class="badge-container">
+        <div class="type-badge" style={`background: ${badgeColor}`}>
+          {typeLabel[type as keyof typeof typeLabel] || type}
+        </div>
+        <div class="release-status-badge" data-release-date={release_date}></div>
       </div>
 
       {id ? (
@@ -186,9 +189,15 @@ const badgeColor = typeBadgeColors[type as keyof typeof typeBadgeColors] || 'var
     gap: 12px;
   }
 
+  .badge-container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
   .type-badge {
     display: inline-block;
-    align-self: flex-start;
     padding: 5px 12px;
     color: white;
     font-size: 0.75rem;
@@ -199,6 +208,46 @@ const badgeColor = typeBadgeColors[type as keyof typeof typeBadgeColors] || 'var
       0 3px 0 rgba(0, 0, 0, 0.3),
       0 0 10px rgba(255, 110, 199, 0.4);
     letter-spacing: 1px;
+  }
+
+  .release-status-badge {
+    display: none;
+    padding: 5px 12px;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 12px;
+    box-shadow:
+      0 3px 0 rgba(0, 0, 0, 0.3),
+      0 0 10px rgba(255, 110, 199, 0.4);
+    letter-spacing: 1px;
+    animation: pulse 2s infinite;
+  }
+
+  .release-status-badge.coming-soon {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--retro-cyan) 0%, var(--retro-purple) 100%);
+  }
+
+  .release-status-badge.new {
+    display: inline-block;
+    background: linear-gradient(135deg, #FF6B6B 0%, #FFD93D 100%);
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      box-shadow:
+        0 3px 0 rgba(0, 0, 0, 0.3),
+        0 0 10px rgba(255, 110, 199, 0.4);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow:
+        0 3px 0 rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(255, 110, 199, 0.8);
+    }
   }
 
   .release-title {
@@ -427,5 +476,50 @@ const badgeColor = typeBadgeColors[type as keyof typeof typeBadgeColors] || 'var
     .streaming-button:hover {
       transform: none;
     }
+
+    .release-status-badge {
+      animation: none !important;
+    }
   }
 </style>
+
+<script>
+  // リリース状態バッジの動的表示
+  function updateReleaseStatusBadges() {
+    const badges = document.querySelectorAll('.release-status-badge');
+    const now = new Date();
+
+    badges.forEach(badge => {
+      const releaseDateStr = badge.getAttribute('data-release-date');
+      if (!releaseDateStr) return;
+
+      const releaseDate = new Date(releaseDateStr);
+      const daysDiff = Math.floor((releaseDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
+      const daysAfterRelease = Math.floor((now.getTime() - releaseDate.getTime()) / (1000 * 60 * 60 * 24));
+
+      // 発売日より前（30日以内）: "発売間近！"
+      if (daysDiff >= 0 && daysDiff <= 30) {
+        badge.textContent = '発売間近！';
+        badge.classList.add('coming-soon');
+        badge.classList.remove('new');
+      }
+      // 発売日から30日以内: "New!"
+      else if (daysAfterRelease >= 0 && daysAfterRelease <= 30) {
+        badge.textContent = 'New!';
+        badge.classList.add('new');
+        badge.classList.remove('coming-soon');
+      }
+      // それ以外: バッジを表示しない
+      else {
+        badge.classList.remove('coming-soon', 'new');
+      }
+    });
+  }
+
+  // ページ読み込み時に実行
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updateReleaseStatusBadges);
+  } else {
+    updateReleaseStatusBadges();
+  }
+</script>

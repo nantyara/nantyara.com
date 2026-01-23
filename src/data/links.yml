@@ -11,6 +11,8 @@ streaming:
     url: https://open.spotify.com/intl-ja/artist/0Tir7YkPE9wVla7Ci1Tiaz
   - name: YouTube Music
     url: https://music.youtube.com/channel/UC3I0TwX4iBOwOkPU07ypnpw
+  - name: LINE MUSIC
+    url: https://music.line.me/webapp/artist/mi00000000140e6f0a
 
 video:
   - name: YouTube
