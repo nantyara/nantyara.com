@@ -44,13 +44,6 @@ const dateInfo = formatDate(date);
         {content && (
           <pre class="event-details">{content}</pre>
         )}
-
-        {images && images.length > 0 && (
-          <div class="view-details-btn">
-            <span class="btn-icon">🖼️</span>
-            詳細を見る ({images.length}枚)
-          </div>
-        )}
       </div>
     </article>
   </a>
@@ -73,13 +66,6 @@ const dateInfo = formatDate(date);
 
       {content && (
         <pre class="event-details">{content}</pre>
-      )}
-
-      {images && images.length > 0 && (
-        <button class="view-details-btn" data-schedule-title={title}>
-          <span class="btn-icon">🖼️</span>
-          詳細を見る ({images.length}枚)
-        </button>
       )}
     </div>
   </article>
@@ -212,47 +198,6 @@ const dateInfo = formatDate(date);
     border: 1px solid rgba(255, 110, 199, 0.2);
     white-space: pre-wrap;
     word-wrap: break-word;
-  }
-
-  .view-details-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    width: 100%;
-    margin-top: 16px;
-    padding: 12px 20px;
-    background: linear-gradient(135deg, var(--retro-purple) 0%, var(--retro-pink) 100%);
-    color: white;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 25px;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    box-shadow:
-      0 4px 0 rgba(0, 0, 0, 0.3),
-      0 0 15px rgba(255, 110, 199, 0.4);
-    transition: all 0.3s ease;
-    min-height: 44px;
-  }
-
-  .view-details-btn:hover {
-    transform: translateY(-2px);
-    box-shadow:
-      0 6px 0 rgba(0, 0, 0, 0.3),
-      0 0 25px rgba(255, 110, 199, 0.6);
-    border-color: rgba(255, 255, 255, 0.5);
-  }
-
-  .view-details-btn:active {
-    transform: translateY(0);
-    box-shadow:
-      0 2px 0 rgba(0, 0, 0, 0.3),
-      0 0 15px rgba(255, 110, 199, 0.4);
-  }
-
-  .btn-icon {
-    font-size: 1.2rem;
   }
 
   /* レスポンシブ対応 */
