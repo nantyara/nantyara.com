@@ -27,6 +27,8 @@
       url: https://music.apple.com/us/album/%E3%81%95%E3%82%88%E3%81%AA%E3%82%89odyssey/1537916528
     - platform: YouTube Music
       url: https://music.youtube.com/playlist?list=OLAK5uy_lIyhImfqMTnZ0dZDshCbj8rUwSBbj5k5s&si=KNcbhJhmFcVAy5uq
+    - platform: LINE MUSIC
+      url: https://lin.ee/0sCKji6
 
 - id: release-003
   title: PansyとDaisy/今夜、全てのBarで
@@ -91,6 +93,8 @@
       url: https://music.apple.com/us/album/life-goes-on/1657617641
     - platform: YouTube Music
       url: https://music.youtube.com/playlist?list=OLAK5uy_k6s1E0yLlcn3m3YqLEwMxt9qAdOwVTkwM&si=h8FocOw174FdKaLn
+    - platform: LINE MUSIC
+      url: https://lin.ee/BmMalawQ
 
 - id: release-007
   title: 運命の人/ 楽園 / 眠るなBABE
@@ -175,6 +179,8 @@
       url: https://music.apple.com/us/album/sentimental-jukebox/1721093143
     - platform: YouTube Music
       url: https://music.youtube.com/playlist?list=OLAK5uy_m-z9Y8P9mAw9cR4KoEhJEK2R0ij4PAdAg&si=LBY28cUIuf_za0nN
+    - platform: LINE MUSIC
+      url: https://lin.ee/HvkCwjg
 
 - id: release-012
   title: もしかして君だけが苦しいって思ってないかい? / CICADA / 凍える太陽
