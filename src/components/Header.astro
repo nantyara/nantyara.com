@@ -3,8 +3,10 @@
 ---
 
 <header class="header">
-  <h1 class="title glitch neon-glow" data-text="なんちゃらアイドル">
-    なんちゃらアイドル
+  <h1 class="title-wrapper">
+    <a href="/" class="title-link glitch neon-glow" data-text="なんちゃらアイドル">
+      なんちゃらアイドル
+    </a>
   </h1>
 </header>
 
@@ -18,7 +20,12 @@
     box-shadow: 0 4px 20px rgba(255, 110, 199, 0.3);
   }
 
-  .title {
+  .title-wrapper {
+    margin: 0;
+  }
+
+  .title-link {
+    display: inline-block;
     font-family: 'Yusei Magic', sans-serif;
     font-size: 3rem;
     font-weight: 400;
@@ -27,8 +34,13 @@
       3px 3px 0 var(--retro-pink),
       6px 6px 0 var(--retro-cyan),
       9px 9px 0 var(--retro-purple);
-    margin: 0;
+    text-decoration: none;
     letter-spacing: 2px;
+    transition: transform 0.3s ease;
+  }
+
+  .title-link:hover {
+    transform: scale(1.05);
   }
 
   /* グリッチエフェクト */
@@ -109,7 +121,7 @@
       padding: 30px 15px;
     }
 
-    .title {
+    .title-link {
       font-size: 2.2rem;
       text-shadow:
         2px 2px 0 var(--retro-pink),
@@ -131,7 +143,7 @@
       padding: 20px 10px;
     }
 
-    .title {
+    .title-link {
       font-size: 1.8rem;
       text-shadow:
         2px 2px 0 var(--retro-pink),
