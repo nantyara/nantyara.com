@@ -310,6 +310,7 @@ p {
 
 .footer p {
   margin: 0;
+  font-family: 'Yusei Magic', sans-serif;
   font-size: 0.9rem;
   color: var(--pastel-lavender);
   text-shadow: 0 0 5px rgba(229, 204, 255, 0.5);

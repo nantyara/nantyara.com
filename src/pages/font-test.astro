@@ -1,0 +1,147 @@
+---
+// フォントテストページ
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>フォントテスト - なんちゃらアイドル</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Hachi+Maru+Pop&family=Yusei+Magic&family=Kosugi+Maru&family=Reggae+One&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --retro-pink: #FF6EC7;
+        --retro-cyan: #00FFFF;
+        --retro-purple: #9D4EDD;
+        --bg-dark: #0A0A0A;
+        --bg-medium: #1A1A2E;
+        --text-light: #F0F0F0;
+      }
+
+      body {
+        margin: 0;
+        padding: 40px 20px;
+        background: var(--bg-dark);
+        background-image:
+          radial-gradient(circle at 20% 50%, rgba(157, 78, 221, 0.1) 0%, transparent 50%),
+          radial-gradient(circle at 80% 80%, rgba(255, 110, 199, 0.1) 0%, transparent 50%);
+        color: var(--text-light);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      h2 {
+        color: var(--retro-cyan);
+        font-size: 1.2rem;
+        margin: 60px 0 20px 0;
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--retro-cyan);
+      }
+
+      .font-sample {
+        text-align: center;
+        padding: 60px 20px;
+        margin-bottom: 20px;
+        background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+        border: 3px solid var(--retro-pink);
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(255, 110, 199, 0.3);
+      }
+
+      .title {
+        font-size: 3.5rem;
+        font-weight: 900;
+        color: var(--text-light);
+        text-shadow:
+          3px 3px 0 var(--retro-pink),
+          6px 6px 0 var(--retro-cyan),
+          9px 9px 0 var(--retro-purple);
+        margin: 0;
+        letter-spacing: 2px;
+      }
+
+      .font1 { font-family: 'Dela Gothic One', sans-serif; }
+      .font2 { font-family: 'Hachi Maru Pop', sans-serif; }
+      .font3 { font-family: 'Yusei Magic', sans-serif; }
+      .font4 { font-family: 'Kosugi Maru', sans-serif; }
+      .font5 { font-family: 'Reggae One', sans-serif; }
+
+      .note {
+        margin-top: 20px;
+        font-size: 0.9rem;
+        color: var(--retro-cyan);
+        opacity: 0.7;
+      }
+
+      @media (max-width: 768px) {
+        .title {
+          font-size: 2.2rem;
+          text-shadow:
+            2px 2px 0 var(--retro-pink),
+            4px 4px 0 var(--retro-cyan),
+            6px 6px 0 var(--retro-purple);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .title {
+          font-size: 1.8rem;
+        }
+
+        .font-sample {
+          padding: 40px 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 style="color: var(--retro-pink); text-align: center; font-size: 2rem; margin-bottom: 40px;">
+        フォント比較テスト
+      </h1>
+
+      <h2>1. Dela Gothic One（太めでインパクト、レトロポスター風）</h2>
+      <div class="font-sample">
+        <div class="title font1">なんちゃらアイドル</div>
+        <div class="note">推奨：太くてインパクトがあり、80-90年代のポスター風</div>
+      </div>
+
+      <h2>2. Hachi Maru Pop（丸みがあってポップ、アイドル雑誌風）</h2>
+      <div class="font-sample">
+        <div class="title font2">なんちゃらアイドル</div>
+        <div class="note">推奨：かわいらしくてポップ、アイドル雑誌のタイトル風</div>
+      </div>
+
+      <h2>3. Yusei Magic（手書き風、カジュアル）</h2>
+      <div class="font-sample">
+        <div class="title font3">なんちゃらアイドル</div>
+        <div class="note">手書き風でカジュアル、親しみやすい印象</div>
+      </div>
+
+      <h2>4. Kosugi Maru（丸ゴシック、読みやすい）</h2>
+      <div class="font-sample">
+        <div class="title font4">なんちゃらアイドル</div>
+        <div class="note">丸ゴシック体、読みやすくてバランスが良い</div>
+      </div>
+
+      <h2>5. Reggae One（レゲエ風、ユニーク）</h2>
+      <div class="font-sample">
+        <div class="title font5">なんちゃらアイドル</div>
+        <div class="note">レゲエ風のユニークなフォント、個性的</div>
+      </div>
+
+      <div style="text-align: center; margin-top: 60px; padding: 20px;">
+        <a href="/" style="color: var(--retro-cyan); text-decoration: none; font-size: 1.1rem;">
+          ← トップページに戻る
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
