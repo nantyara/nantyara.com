@@ -7,11 +7,25 @@
     ライブ
 - id: event-20260129-aoharu-birthday
   slug: 20260129-aoharu-birthday
-  date: 2026-01-29 19:00:00 +0900
-  title: あおはるバースデー
+  date: 2026-01-29 18:30:00 +0900
+  title: あおはる主催 in 渋谷La.mama 今日の君は・・・！
   site: 渋谷 La.mama
   content: |
-    あおはるバースデー
+    【出演】
+    komori + yusa（from 壊れかけのテープレコーダーズ）
+    しずくだうみ
+    sommeil sommeil
+    なんちゃらアイドル
+    あおはる
+
+    OPEN/START　18:30/19:00
+    ADV　￥2,500＋D
+
+    【ツイキャスプレミア配信】
+    ¥2,000
+  images:
+    - /events/20260129-aoharu-birthday-1.jpeg
+    - /events/20260129-aoharu-birthday-2.jpeg
 - id: event-20260128-otona-bunkasai
   slug: 20260128-otona-bunkasai
   date: 2026-01-28 19:00:00 +0900
