@@ -99,6 +99,9 @@ const badgeColor = typeBadgeColors[type as keyof typeof typeBadgeColors] || 'var
             } else if (platformLower.includes('youtube')) {
               iconClass = 'fa-brands fa-youtube';
               buttonClass = 'streaming-button youtube-button';
+            } else if (platformLower.includes('line')) {
+              iconClass = 'fa-brands fa-line';
+              buttonClass = 'streaming-button line-button';
             }
 
             return (
@@ -331,6 +334,15 @@ const badgeColor = typeBadgeColors[type as keyof typeof typeBadgeColors] || 'var
 
   .youtube-button:hover {
     background: #cc0000;
+  }
+
+  /* LINE MUSIC - 公式ブランドカラー */
+  .line-button {
+    background: #06C755;
+  }
+
+  .line-button:hover {
+    background: #05b04b;
   }
 
   /* レスポンシブ対応 */

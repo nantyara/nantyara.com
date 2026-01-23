@@ -88,6 +88,17 @@
   - YouTubeのコンテンツにリンクする場合のみ使用可能
   - 最小サイズ要件あり
 
+#### LINE MUSIC
+- **公式ブランドカラー**: `#06C755` (LINE Forest Green)
+- **Font Awesomeアイコン**: `fa-line`
+- **公式ガイドライン**: https://creative.line.me/guide/sub-brand/17
+- **LINE ブランドガイドライン**: https://creative.line.me/guide/brand-guideline/ci-guide
+- **アプリアイコンガイドライン**: https://www.line.me/en/logo
+- **使用ルール**:
+  - LINE Forest Green (#06C755) を使用
+  - LINE MUSICのサービスにリンクする場合に使用可能
+  - アイコンは小サイズでも視認性が必要
+
 ## カラーコード一覧
 
 ```css
@@ -101,6 +112,7 @@
 --apple-music-red: #FA243C;
 --apple-music-pink: #FF6B81;
 --youtube-red: #FF0000;
+--line-green: #06C755;
 ```
 
 ## BASE公式ロゴの使用
