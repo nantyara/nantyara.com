@@ -102,6 +102,8 @@ function validateRelease(release, file, index) {
 console.log('\n📅 スケジュールファイルをチェック中...\n');
 
 const schedulesDir = 'src/data/schedules';
+const allSchedules = [];
+
 if (existsSync(schedulesDir)) {
   const scheduleFiles = readdirSync(schedulesDir).filter(f => f.endsWith('.yml') || f.endsWith('.yaml'));
 
@@ -127,6 +129,8 @@ if (existsSync(schedulesDir)) {
 
       schedules.forEach((schedule, index) => {
         validateSchedule(schedule, file, index);
+        // 重複チェック用に全データを収集
+        allSchedules.push({ ...schedule, _file: file, _index: index });
       });
 
       if (!hasError) {
@@ -136,6 +140,38 @@ if (existsSync(schedulesDir)) {
       logError(file, `YAMLパースエラー: ${error.message}`);
     }
   });
+
+  // 重複チェック
+  console.log('\n🔍 スケジュールのID/Slug重複チェック中...\n');
+
+  const idMap = new Map();
+  const slugMap = new Map();
+
+  allSchedules.forEach(schedule => {
+    // ID重複チェック
+    if (schedule.id) {
+      if (idMap.has(schedule.id)) {
+        const prev = idMap.get(schedule.id);
+        logError('重複エラー', `ID "${schedule.id}" が重複しています: ${prev._file} と ${schedule._file}`);
+      } else {
+        idMap.set(schedule.id, schedule);
+      }
+    }
+
+    // Slug重複チェック
+    if (schedule.slug) {
+      if (slugMap.has(schedule.slug)) {
+        const prev = slugMap.get(schedule.slug);
+        logError('重複エラー', `Slug "${schedule.slug}" が重複しています: ${prev._file} と ${schedule._file}`);
+      } else {
+        slugMap.set(schedule.slug, schedule);
+      }
+    }
+  });
+
+  if (!hasError) {
+    console.log('\x1b[32m✓ 重複なし\x1b[0m');
+  }
 } else {
   logError(schedulesDir, 'ディレクトリが存在しません');
 }
@@ -160,8 +196,24 @@ if (existsSync(releasesFile)) {
         validateRelease(release, releasesFile, index);
       });
 
+      // ID重複チェック
+      console.log('\n🔍 リリースのID重複チェック中...\n');
+
+      const idMap = new Map();
+      releases.forEach((release, index) => {
+        if (release.id) {
+          if (idMap.has(release.id)) {
+            const prevIndex = idMap.get(release.id);
+            logError('重複エラー', `ID "${release.id}" が重複しています: リリース[${prevIndex}] と リリース[${index}]`);
+          } else {
+            idMap.set(release.id, index);
+          }
+        }
+      });
+
       if (!hasError) {
         logSuccess(releasesFile);
+        console.log('\x1b[32m✓ 重複なし\x1b[0m');
       }
     }
   } catch (error) {
