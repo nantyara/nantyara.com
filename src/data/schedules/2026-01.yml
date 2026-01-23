@@ -28,11 +28,18 @@
     - /events/20260129-aoharu-birthday-2.jpeg
 - id: event-20260128-otona-bunkasai
   slug: 20260128-otona-bunkasai
-  date: 2026-01-28 19:00:00 +0900
-  title: おとなの文化祭
+  date: 2026-01-28 18:00:00 +0900
+  title: S.B.Q.アイドル部主催大人の文化祭バラエティだよ人生はvol.003in 渋谷ラママ
   site: 渋谷 La.mama
   content: |
-    おとなの文化祭
+    【出演】
+    S.B.Q.アイドル部 / かわさきしずか / ケミカルシンドローム / 土萌まりな / Momoka Kagamiya / Tokyoかけひき倶楽部 / なんちゃらアイドル
+
+    OPEN/START　18:00/18:30
+    ADV　￥2,500＋D
+    配信チケット ¥2,000
+  images:
+    - /events/20260128-otona-bunkasai.jpeg
 - id: event-20260127-12th-anniversary
   slug: 20260127-12th-anniversary
   date: 2026-01-27 18:30:00 +0900

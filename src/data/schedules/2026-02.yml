@@ -20,15 +20,19 @@
   site: 渋谷 La.mama
   content: |
     ぬるバースデー
-- id: event-20260216-yuru-oneman
-  slug: 20260216-yuru-oneman
+- id: event-20260216-kaku-misami-202602
+  slug: 20260216-kaku-misami-202602
   date: 2026-02-16 19:00:00 +0900
-  title: ゆるワンマン
+  title: 隔月間御茶海マミ２月号（vol.007）
   site: 東新宿 LOVE TKO
   content: |
-    なんちゃらアイドル出演
+    出演
+    S.B.Q.
+    taberusan
+    吉田　仁郎（じろうゆ）
+    御茶海マミ
   images:
-    - /events/20260216-yuru-oneman-1.jpeg
+    - /events/20260216-kaku-misami-202602.jpeg
 - id: event-20260215-tokyo-club
   slug: 20260215-tokyo-club
   date: 2026-02-15 19:00:00 +0900

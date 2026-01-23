@@ -82,7 +82,9 @@ const googleCalendarUrl = new URL('https://calendar.google.com/calendar/render')
 googleCalendarUrl.searchParams.set('action', 'TEMPLATE');
 googleCalendarUrl.searchParams.set('text', title);
 googleCalendarUrl.searchParams.set('dates', `${formatGoogleCalDate(eventDate)}/${formatGoogleCalDate(eventEndDate)}`);
-googleCalendarUrl.searchParams.set('details', content || '');
+const eventDetailUrl = `https://nantyara.com/events/${schedule.slug}`;
+const detailsWithUrl = content ? `${content}\n\nイベント詳細: ${eventDetailUrl}` : `イベント詳細: ${eventDetailUrl}`;
+googleCalendarUrl.searchParams.set('details', detailsWithUrl);
 googleCalendarUrl.searchParams.set('location', site);
 googleCalendarUrl.searchParams.set('ctz', 'Asia/Tokyo');
 
