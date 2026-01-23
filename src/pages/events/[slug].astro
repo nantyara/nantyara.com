@@ -122,10 +122,17 @@ const ogImage = images && images.length > 0
         <p class="venue-name">📍 {site}</p>
       </div>
 
-      <div class="calendar-section">
+      <div class="actions-section">
         <a href={googleCalendarUrl.toString()} target="_blank" rel="noopener noreferrer" class="calendar-button">
           📅 Googleカレンダーに追加
         </a>
+        <div class="share-buttons-wrapper">
+          <ShareButtons
+            url={`https://nantyara.com/events/${schedule.slug}`}
+            title={title}
+            description={`${formatDate(eventDate)} @ ${site}`}
+          />
+        </div>
       </div>
 
       {content && (
@@ -146,15 +153,6 @@ const ogImage = images && images.length > 0
         </div>
       </div>
     )}
-
-    <div class="share-section">
-      <h2 class="section-title">シェア</h2>
-      <ShareButtons
-        url={`https://nantyara.com/events/${schedule.slug}`}
-        title={title}
-        description={`${formatDate(eventDate)} @ ${site}`}
-      />
-    </div>
 
     <div class="back-link-wrapper">
       <a href="/#schedule" class="back-link">
@@ -250,9 +248,17 @@ const ogImage = images && images.length > 0
     margin: 0;
   }
 
-  .calendar-section {
+  .actions-section {
     margin-bottom: 30px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .share-buttons-wrapper {
+    display: flex;
+    justify-content: center;
   }
 
   .calendar-button {
