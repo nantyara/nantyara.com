@@ -125,6 +125,32 @@
   site: 新宿 歌舞伎町 Drunken Shrimp
   content: |
     御茶海マミ
+- id: event-20260208-goodbye-my-girl
+  slug: 20260208-goodbye-my-girl
+  date: 2026-02-08 12:00:00 +0900
+  title: 『グッバイ・マイガール c/w ブラックコーヒー』リリースイベント
+  site: ULTRA SHIBUYA
+  content: |
+    【出演】
+    なんちゃらアイドル
+
+    【ゲスト】
+    S.B.Q.アイドル部
+
+    【イベント内容】
+    ミニライブ + 特典会
+
+    開場/開演　12:00/12:30
+
+    ◎特典券付きCD(1,650円)　ご予約者さま優先入場、当日入場は会場状況により12:25以降にご案内
+    ◎特別ドリンク（1,000円）を受付入場時に購入で特典券1枚付与　※1杯目のみ、以降は付与対象外
+
+    ※入場時にドリンク代700円を頂戴いたします
+
+    会場: 東京都渋谷区東1-28-9 ULTRA SHIBUYA
+    詳細: https://ultra-shibuya.com/shop/e/e10000355/
+  images:
+    - /events/20260208-goodbye-my-girl.jpeg
 - id: event-20260207-mitsushitsu
   slug: 20260207-mitsushitsu
   date: 2026-02-07 17:00:00 +0900
