@@ -1,0 +1,172 @@
+- id: event-20260225-ottanta
+  slug: 20260225-ottanta
+  date: 2026-02-25 19:00:00 +0900
+  end: 2026-02-25 22:00:00 +0900
+  title: 蒲田 Ottanta
+  site: 蒲田 Ottanta
+  content: |
+    なんてったってアイドル
+- id: event-20260222-swingy
+  slug: 20260222-swingy
+  date: 2026-02-22 19:00:00 +0900
+  title: Swingy
+  site: 新検見川 Swingy
+  content: |
+    なんちゃらアイドル出演
+- id: event-20260221-nuru-birthday
+  slug: 20260221-nuru-birthday
+  date: 2026-02-21 19:00:00 +0900
+  title: ぬるバースデー
+  site: 渋谷 La.mama
+  content: |
+    ぬるバースデー
+- id: event-20260216-yuru-oneman
+  slug: 20260216-yuru-oneman
+  date: 2026-02-16 19:00:00 +0900
+  title: ゆるワンマン
+  site: 東新宿 LOVE TKO
+  content: |
+    なんちゃらアイドル出演
+- id: event-20260215-tokyo-club
+  slug: 20260215-tokyo-club
+  date: 2026-02-15 19:00:00 +0900
+  title: 東京俱楽部
+  site: 東京俱楽部
+  content: |
+    なんちゃらアイドル出演
+- id: event-20260214-uerin-birthday
+  slug: 20260214-uerin-birthday
+  date: 2026-02-14 19:00:00 +0900
+  title: うえりんバースデー
+  site: 池袋手刀
+  content: |
+    乙女の夕べ with 24's
+- id: event-20260212-lamama
+  slug: 20260212-lamama
+  date: 2026-02-12 19:00:00 +0900
+  title: 渋谷 La.mama
+  site: 渋谷 La.mama
+  content: |
+    なんちゃらアイドル出演
+- id: event-20260210-bar-event
+  slug: 20260210-bar-event
+  date: 2026-02-10 19:00:00 +0900
+  title: バーイベ
+  site: 新宿 歌舞伎町 Drunken Shrimp
+  content: |
+    御茶海マミ
+- id: event-20260207-mitsushitsu
+  slug: 20260207-mitsushitsu
+  date: 2026-02-07 17:00:00 +0900
+  title: 「密室」御茶海マミ主催ライブ
+  site: 渋谷La.mama
+  content: |
+    御茶海マミ生誕ライブ
+    OPEN 17:00 / START 18:00
+    ¥2,500+ドリンク代
+
+    【出演】
+    御茶海マミ
+    MCあんにゅ
+    なんちゃらアイドル
+    Crawl
+    三月碧
+
+    【TIME TABLE】
+    18:00-18:25 御茶海マミ
+    18:30-19:00 三月碧
+    19:05-19:35 MCあんにゅ
+    19:50-20:25 Crawl
+    20:40-21:10 なんちゃらアイドル
+  images:
+    - /events/20260207-mitsushitsu-1.png
+    - /events/20260207-mitsushitsu-2.png
+- id: event-20260202-lovetko
+  slug: 20260202-lovetko
+  date: 2026-02-02 19:00:00 +0900
+  title: LOVE TKO
+  site: 東新宿 LOVE TKO
+  content: |
+    ゆるワンマン
+- id: event-20260130-ottanta
+  slug: 20260130-ottanta
+  date: 2026-01-30 19:00:00 +0900
+  title: 蒲田オッタンタ
+  site: 蒲田 Ottanda
+  content: |
+    ライブ
+- id: event-20260129-aoharu-birthday
+  slug: 20260129-aoharu-birthday
+  date: 2026-01-29 19:00:00 +0900
+  title: あおはるバースデー
+  site: 渋谷 La.mama
+  content: |
+    あおはるバースデー
+- id: event-20260128-otona-bunkasai
+  slug: 20260128-otona-bunkasai
+  date: 2026-01-28 19:00:00 +0900
+  title: おとなの文化祭
+  site: 渋谷 La.mama
+  content: |
+    おとなの文化祭
+- id: event-20260127-12th-anniversary
+  slug: 20260127-12th-anniversary
+  date: 2026-01-27 19:00:00 +0900
+  title: なんちゃらアイドル12周年
+  site: 渋谷 La.mama
+  content: |
+    12周年記念イベント
+- id: event-20260124-hpro-kamata
+  slug: 20260124-hpro-kamata
+  date: 2026-01-24 13:00:00 +0900
+  end: 2026-01-24 15:00:00 +0900
+  title: Hプロダクション Wonderful Days in 蒲田2
+  site: 黒湯の温泉ゆ〜シティー蒲田 YCKホール
+  content: |
+    13:00～15:00
+    観覧無料!! ※入浴券を購入して入場
+
+    【試合カード】
+    No.3 マットプロレスシングルマッチ
+    佐藤洋平本店 VS D.PUENTE
+
+    No.4 マットプロレスタッグマッチ
+    塩納一・イ・ウンチョル VS ワイルドポー・ナギ
+
+    【スペシャルゲスト】
+    なんちゃらアイドル スペシャルLIVE!!
+
+    ※大会終了後に物販ありのアフターパーティーを行います
+    ※飲食料金は実費となります
+  images:
+    - /events/20260124-hpro-1.jpeg
+    - /events/20260124-hpro-2.jpeg
+    - /events/20260124-hpro-3.jpeg
+    - /events/20260124-hpro-4.jpeg
+    - /events/20260124-hpro-5.jpeg
+    - /events/20260124-hpro-6.jpeg
+- id: event-20260121-tomoeipu
+  slug: 20260121-tomoeipu
+  date: 2026-01-21 18:30:00 +0900
+  title: ともえいぷ 投げ銭 弾き語りライヴ
+  site: 高円寺Muddy
+  content: |
+    土萌まりな × Ape presents
+    開場 18:30 / 開演 19:00
+    料金: お気持ち投げ銭（別途：お通し代500円 + ご飲食代）
+
+    【TIME TABLE】
+    19:00- うえりん（中出し少年）
+    19:35- 丸橋ミク
+    20:10- 御茶海マミ（なんちゃらアイドル）
+    20:45- Ape (Very Ape)
+    21:20- 土萌まりな
+
+    ※終演後はお客様も交えて打ち上げ!!!!
+    ※御茶海マミのみ投げ銭なし（代わりに物販&チェキあり）
+
+    会場: 東京都杉並区高円寺北3-22-7 プラザ高円寺2F
+    TEL: 03-6320-7454
+  images:
+    - /events/20260121-tomoeipu-1.jpeg
+    - /events/20260121-tomoeipu-2.jpeg

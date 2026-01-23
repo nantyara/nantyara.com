@@ -40,13 +40,24 @@
   site: 東京俱楽部
   content: |
     なんちゃらアイドル出演
-- id: event-20260214-uerin-birthday
-  slug: 20260214-uerin-birthday
-  date: 2026-02-14 19:00:00 +0900
-  title: うえりんバースデー
+- id: event-20260214-uerin-50th
+  slug: 20260214-uerin-50th
+  date: 2026-02-14 16:15:00 +0900
+  title: うえりん生誕50周年祭スペシャル！！！『おーい30年前のオレ！人生で一番長続きしてるのバンドだってよ！』
   site: 池袋手刀
   content: |
-    乙女の夕べ with 24's
+    【出演】
+    中出し少年
+    なんちゃらアイドル
+    盛りたかった千里
+    ムネノリッツァa.k.a.ポポチョリス
+    トニー大木&GGININDARS
+    ヒナトバンド(仮)
+    ニシハチヨゴレーズ
+
+    OPEN/START　16:15/16:40
+  images:
+    - /events/20260214-uerin-50th.jpeg
 - id: event-20260212-lamama
   slug: 20260212-lamama
   date: 2026-02-12 19:00:00 +0900
