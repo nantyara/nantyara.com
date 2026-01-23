@@ -1,10 +1,21 @@
 - id: event-20260130-ottanta
   slug: 20260130-ottanta
   date: 2026-01-30 19:00:00 +0900
-  title: 蒲田オッタンタ
-  site: 蒲田 Ottanda
+  title: 大田区蒲田復興協会〜つどうに焦がれた町から〜 episode 51
+  site: スタジオ・オッタンタ
   content: |
-    ライブ
+    【TIME TABLE】
+    19:30- chuppie chappar's
+    20:00- 工藤ちゃん
+    20:30- 杏栄
+    21:05- なんちゃらアイドル
+
+    開場/開演　19:00/19:30
+    チケット　¥3,000（ドリンク込み）
+
+    会場: 東京都大田区蒲田5-7-6 2F
+  images:
+    - /events/20260130-ottanta.jpg
 - id: event-20260129-aoharu-birthday
   slug: 20260129-aoharu-birthday
   date: 2026-01-29 18:30:00 +0900
