@@ -60,6 +60,8 @@
       url: https://open.spotify.com/intl-ja/album/4GbHJienZfi2cUua84du8i?si=f3W7zYDHS4WCDNp0gn8wRA
     - platform: Apple Music
       url: https://music.apple.com/us/album/m-a-m-i/1598097854
+    - platform: YouTube Music
+      url: https://music.youtube.com/playlist?list=OLAK5uy_kiohbgNK50IZ-YYSVR7OaYCcubcSn6Aio
 
 - id: release-005
   title: 嘲笑
