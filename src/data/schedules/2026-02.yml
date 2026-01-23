@@ -132,3 +132,21 @@
   site: 東新宿 LOVE TKO
   content: |
     ゆるワンマン
+- id: event-20260201-km-music
+  slug: 20260201-km-music
+  date: 2026-02-01 12:00:00 +0900
+  title: K&Mハッピーライブ
+  site: K&Mミュージック中野店
+  content: |
+    【出演】
+    小林清美
+    なんちゃらアイドル
+    仲村コニー
+    とんでもはっぷん！
+    森口しゅな
+    Classic fairy
+
+    開場/開演　12:00/12:30
+    前売り　¥3,000＋1D
+  images:
+    - /events/20260201-km-music.jpg
