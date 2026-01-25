@@ -98,15 +98,33 @@ const ogImage = images && images.length > 0
 
 <Layout title={ogTitle}>
   <Fragment slot="head">
+    <!-- Basic OGP -->
     <meta property="og:title" content={ogTitle} />
     <meta property="og:description" content={ogDescription} />
     <meta property="og:image" content={ogImage} />
     <meta property="og:type" content="event" />
     <meta property="og:url" content={`https://nantyara.com/events/${schedule.slug}`} />
+    <meta property="og:site_name" content="なんちゃらアイドル" />
+    <meta property="og:locale" content="ja_JP" />
+
+    <!-- Image details -->
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={title} />
+
+    <!-- Event specific -->
+    <meta property="event:start_time" content={eventDate.toISOString()} />
+    <meta property="event:end_time" content={eventEndDate.toISOString()} />
+    <meta property="event:location" content={site} />
+
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={ogTitle} />
     <meta name="twitter:description" content={ogDescription} />
     <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={title} />
+    <!-- <meta name="twitter:site" content="@account" /> -->
+    <!-- <meta name="twitter:creator" content="@account" /> -->
   </Fragment>
 
   <article class="event-detail">

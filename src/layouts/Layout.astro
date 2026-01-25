@@ -19,10 +19,28 @@ const isTopPage = currentPath === '/';
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#0A0A0A">
     <meta name="description" content="なんちゃらアイドル公式サイト - 80-90年代レトロビンテージな音楽ユニット。ライブスケジュール、リリース情報、メンバー紹介など。">
+
+    <!-- Basic OGP -->
     <meta property="og:title" content={title}>
     <meta property="og:description" content="なんちゃらアイドル公式サイト - 80-90年代レトロビンテージな音楽ユニット">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nantyara.com">
+    <meta property="og:site_name" content="なんちゃらアイドル">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://nantyara.com/img/ogp-default.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="なんちゃらアイドル">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content={title}>
+    <meta name="twitter:description" content="なんちゃらアイドル公式サイト - 80-90年代レトロビンテージな音楽ユニット">
+    <meta name="twitter:image" content="https://nantyara.com/img/ogp-default.png">
+    <meta name="twitter:image:alt" content="なんちゃらアイドル">
+    <!-- <meta name="twitter:site" content="@account"> -->
+    <!-- <meta name="twitter:creator" content="@account"> -->
+
     <title>{title}</title>
     <link rel="icon" href="/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
