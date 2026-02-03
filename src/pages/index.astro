@@ -113,7 +113,7 @@ const schedules = [...upcomingSchedules, ...pastSchedules];
   </div>
 </Layout>
 
-<script is:inline define:vars={{ schedules }}>
+<script is:inline define:vars={{ schedules, expireTime }}>
   document.addEventListener('DOMContentLoaded', () => {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const searchInput = document.getElementById('search-input');
@@ -128,8 +128,7 @@ const schedules = [...upcomingSchedules, ...pastSchedules];
 
     let currentFilter = 'upcoming';
 
-    // 12時間ルール: 現在時刻 - 12時間を基準に振り分け
-    const expireTime = Date.now() - 12 * 60 * 60 * 1000;
+    // 12時間ルール: サーバー側で計算されたexpireTimeを使用
 
     const filterSchedules = () => {
       const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
