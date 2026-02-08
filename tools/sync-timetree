@@ -208,10 +208,11 @@ main() {
   timetree_id: "${id}"
 EOF
 
-            # ラベルがあれば追加
+            # ラベルがあれば追加（配列形式）
             if [[ -n "$label_name" ]]; then
                 cat >> "$new_event_file" <<EOF
-  label: ${label_name}
+  labels:
+    - ${label_name}
 EOF
             fi
 

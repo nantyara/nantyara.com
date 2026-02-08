@@ -88,6 +88,8 @@
   slug: 20260216-kaku-misami-202602
   date: 2026-02-16 19:00:00 +0900
   timetree_id: "2879280176716466133"
+  labels:
+    - マミソロ
   title: 隔月間御茶海マミ２月号（vol.007）
   site: 東新宿 LOVE TKO
   content: |
@@ -170,6 +172,8 @@
   slug: 20260210-bar-event
   date: 2026-02-10 19:00:00 +0900
   timetree_id: "2879280693186283463"
+  labels:
+    - マミソロ
   title: バーイベ
   site: 新宿 歌舞伎町 Drunken Shrimp
   content: |

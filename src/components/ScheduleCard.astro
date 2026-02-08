@@ -6,9 +6,17 @@ interface Props {
   content: string;
   images?: string[];
   slug?: string;
+  labels?: string[];
 }
 
-const { date, title, site, content, images, slug } = Astro.props;
+const { date, title, site, content, images, slug, labels } = Astro.props;
+
+// ラベルの色を決定する関数
+const getLabelClass = (label: string) => {
+  if (label === 'マミソロ') return 'label-red';
+  if (label === 'あおはるソロ') return 'label-blue';
+  return '';
+};
 
 // 日付フォーマット
 const formatDate = (d: Date) => {
@@ -30,10 +38,19 @@ const dateInfo = formatDate(date);
         class={`card-header ${images && images.length > 0 ? 'has-image' : 'stripe-pattern'}`}
         style={images && images.length > 0 ? `background-image: url('${images[0]}')` : ''}
       >
-        <div class="date-badge">
-          <span class="date-year">{dateInfo.year}</span>
-          <span class="date-main">{dateInfo.month}/{dateInfo.day}</span>
-          <span class="date-weekday">({dateInfo.weekday})</span>
+        <div class="header-top">
+          <div class="date-badge">
+            <span class="date-year">{dateInfo.year}</span>
+            <span class="date-main">{dateInfo.month}/{dateInfo.day}</span>
+            <span class="date-weekday">({dateInfo.weekday})</span>
+          </div>
+          {labels && labels.length > 0 && (
+            <div class="labels-container">
+              {labels.map((label) => (
+                <span class={`label-tag ${getLabelClass(label)}`}>{label}</span>
+              ))}
+            </div>
+          )}
         </div>
         <h3 class="card-title">{title}</h3>
       </div>
@@ -56,10 +73,19 @@ const dateInfo = formatDate(date);
       class={`card-header ${images && images.length > 0 ? 'has-image' : 'stripe-pattern'}`}
       style={images && images.length > 0 ? `background-image: url('${images[0]}')` : ''}
     >
-      <div class="date-badge">
-        <span class="date-year">{dateInfo.year}</span>
-        <span class="date-main">{dateInfo.month}/{dateInfo.day}</span>
-        <span class="date-weekday">({dateInfo.weekday})</span>
+      <div class="header-top">
+        <div class="date-badge">
+          <span class="date-year">{dateInfo.year}</span>
+          <span class="date-main">{dateInfo.month}/{dateInfo.day}</span>
+          <span class="date-weekday">({dateInfo.weekday})</span>
+        </div>
+        {labels && labels.length > 0 && (
+          <div class="labels-container">
+            {labels.map((label) => (
+              <span class={`label-tag ${getLabelClass(label)}`}>{label}</span>
+            ))}
+          </div>
+        )}
       </div>
       <h3 class="card-title">{title}</h3>
     </div>
@@ -143,14 +169,23 @@ const dateInfo = formatDate(date);
     z-index: 0;
   }
 
-  .card-header.has-image .date-badge,
+  .card-header.has-image .header-top,
   .card-header.has-image .card-title {
     position: relative;
     z-index: 1;
   }
 
+  .header-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+
   .date-badge {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     background: var(--retro-yellow);
     color: var(--bg-dark);
     padding: 8px 16px;
@@ -158,7 +193,6 @@ const dateInfo = formatDate(date);
     font-family: var(--font-digital);
     font-weight: 700;
     font-size: 0.9rem;
-    margin-bottom: 12px;
     box-shadow:
       0 3px 0 rgba(0, 0, 0, 0.3),
       0 0 10px rgba(255, 214, 10, 0.5);
@@ -213,6 +247,35 @@ const dateInfo = formatDate(date);
     font-size: 1rem;
     font-weight: 600;
     color: var(--pastel-pink);
+  }
+
+  .labels-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+  }
+
+  .label-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    background: linear-gradient(135deg, var(--retro-purple) 0%, var(--retro-pink) 100%);
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 12px;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 110, 199, 0.3);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .label-tag.label-red {
+    background: linear-gradient(135deg, #ff1744 0%, #ff5252 100%);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 23, 68, 0.5);
+  }
+
+  .label-tag.label-blue {
+    background: linear-gradient(135deg, #2979ff 0%, #448aff 100%);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3), 0 0 10px rgba(41, 121, 255, 0.5);
   }
 
   .event-details {
