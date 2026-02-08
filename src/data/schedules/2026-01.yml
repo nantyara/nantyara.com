@@ -1,6 +1,7 @@
 - id: event-20260130-ottanta
   slug: 20260130-ottanta
   date: 2026-01-30 19:00:00 +0900
+  timetree_id: "2876394132044137523"
   title: 大田区蒲田復興協会〜ゴジラに焦がれた町から〜 episode 51
   site: スタジオ・オッタンタ
   content: |
@@ -40,6 +41,7 @@
 - id: event-20260128-otona-bunkasai
   slug: 20260128-otona-bunkasai
   date: 2026-01-28 18:00:00 +0900
+  timetree_id: "2647809121423869409"
   title: S.B.Q.アイドル部主催大人の文化祭バラエティだよ人生はvol.003in 渋谷ラママ
   site: 渋谷 La.mama
   content: |
@@ -71,6 +73,7 @@
 - id: event-20260124-hpro-kamata
   slug: 20260124-hpro-kamata
   date: 2026-01-24 13:00:00 +0900
+  timetree_id: "2834147806451745983"
   end: 2026-01-24 15:00:00 +0900
   title: Hプロダクション Wonderful Days in 蒲田2
   site: 黒湯の温泉ゆ〜シティー蒲田 YCKホール
