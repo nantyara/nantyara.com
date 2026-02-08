@@ -1,0 +1,170 @@
+#!/bin/bash
+
+# nantyara.com スケジュール一覧ツール
+
+set -e
+
+# シンボリックリンクを解決してプロジェクトディレクトリを取得
+SCRIPT_PATH="${BASH_SOURCE[0]}"
+while [ -L "$SCRIPT_PATH" ]; do
+    SCRIPT_DIR="$(cd "$(dirname "$SCRIPT_PATH")" && pwd)"
+    SCRIPT_PATH="$(readlink "$SCRIPT_PATH")"
+    [[ $SCRIPT_PATH != /* ]] && SCRIPT_PATH="$SCRIPT_DIR/$SCRIPT_PATH"
+done
+SCRIPT_DIR="$(cd "$(dirname "$SCRIPT_PATH")" && pwd)"
+PROJECT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+SCHEDULE_DIR="$PROJECT_DIR/src/data/schedules"
+
+# カラー定義
+COLOR_RESET="\033[0m"
+COLOR_BOLD="\033[1m"
+COLOR_DIM="\033[2m"
+COLOR_BLUE="\033[34m"
+COLOR_GREEN="\033[32m"
+COLOR_YELLOW="\033[33m"
+COLOR_CYAN="\033[36m"
+
+# ヘルプメッセージ
+show_help() {
+    cat << EOF
+Usage: $(basename "$0") [OPTIONS] [MONTH]
+
+nantyara.com のスケジュールを一覧表示します。
+
+Arguments:
+    MONTH           表示する月 (YYYY-MM形式、例: 2026-02)
+                    指定しない場合は全ての月を表示
+
+Options:
+    -u, --upcoming  今後のイベントのみ表示
+    -a, --all       全てのイベントを表示（デフォルト）
+    -h, --help      このヘルプを表示
+
+Examples:
+    $(basename "$0")                # 全イベント表示
+    $(basename "$0") 2026-02        # 2026年2月のイベントを表示
+    $(basename "$0") --upcoming     # 今後のイベントのみ表示
+
+EOF
+}
+
+# イベントを整形して表示
+format_event() {
+    local date="$1"
+    local title="$2"
+    local site="$3"
+    local slug="$4"
+
+    # 日付をフォーマット（YYYY-MM-DD HH:MM:SS +TTTT から YYYY-MM-DD HH:MM に）
+    local formatted_date=$(echo "$date" | sed -E 's/ \+[0-9]+$//' | cut -d' ' -f1,2 | cut -d':' -f1,2)
+
+    # 曜日を取得
+    local day_of_week=$(date -j -f "%Y-%m-%d" "$(echo $date | cut -d' ' -f1)" "+%a" 2>/dev/null || echo "")
+
+    echo -e "${COLOR_BOLD}${COLOR_CYAN}${formatted_date} (${day_of_week})${COLOR_RESET}"
+    echo -e "  ${COLOR_BOLD}${title}${COLOR_RESET}"
+    echo -e "  ${COLOR_DIM}📍 ${site}${COLOR_RESET}"
+    echo -e "  ${COLOR_DIM}🔗 ${slug}${COLOR_RESET}"
+    echo ""
+}
+
+# メイン処理
+main() {
+    local filter_month=""
+    local filter_upcoming=false
+
+    # 引数解析
+    while [[ $# -gt 0 ]]; do
+        case $1 in
+            -h|--help)
+                show_help
+                exit 0
+                ;;
+            -u|--upcoming)
+                filter_upcoming=true
+                shift
+                ;;
+            -a|--all)
+                filter_upcoming=false
+                shift
+                ;;
+            *)
+                filter_month="$1"
+                shift
+                ;;
+        esac
+    done
+
+    # スケジュールディレクトリの確認
+    if [[ ! -d "$SCHEDULE_DIR" ]]; then
+        echo "Error: Schedule directory not found: $SCHEDULE_DIR" >&2
+        exit 1
+    fi
+
+    # 現在の日時を取得（比較用）
+    local now=$(date +%s)
+
+    # 一時ファイル作成
+    local tmpfile=$(mktemp)
+    trap "rm -f $tmpfile" EXIT
+
+    # YAMLファイルを処理
+    local files=()
+    if [[ -n "$filter_month" ]]; then
+        # 特定の月のファイルのみ
+        local year=$(echo "$filter_month" | cut -d'-' -f1)
+        local month=$(echo "$filter_month" | cut -d'-' -f2)
+        files=("$SCHEDULE_DIR/${year}-${month}.yml")
+    else
+        # 全てのファイル
+        files=($(ls -1 "$SCHEDULE_DIR"/*.yml 2>/dev/null | sort))
+    fi
+
+    if [[ ${#files[@]} -eq 0 ]]; then
+        echo "No schedule files found." >&2
+        exit 1
+    fi
+
+    # 各ファイルからイベントを抽出
+    for file in "${files[@]}"; do
+        if [[ ! -f "$file" ]]; then
+            continue
+        fi
+
+        # yqでイベント数を取得
+        local event_count=$(yq eval 'length' "$file")
+
+        # 各イベントを処理
+        for ((i=0; i<event_count; i++)); do
+            local date=$(yq eval ".[$i].date" "$file")
+            local title=$(yq eval ".[$i].title" "$file")
+            local site=$(yq eval ".[$i].site" "$file")
+            local slug=$(yq eval ".[$i].slug" "$file")
+
+            # 日付でフィルタ（--upcoming オプションの場合）
+            if [[ "$filter_upcoming" == true ]]; then
+                local event_timestamp=$(date -j -f "%Y-%m-%d %H:%M:%S %z" "$date" +%s 2>/dev/null || echo 0)
+                if [[ $event_timestamp -lt $now ]]; then
+                    continue
+                fi
+            fi
+
+            # 一時ファイルに書き込み（日付でソート用）
+            echo "${date}|${title}|${site}|${slug}" >> "$tmpfile"
+        done
+    done
+
+    # ソートして表示
+    if [[ -s "$tmpfile" ]]; then
+        local count=$(wc -l < "$tmpfile" | tr -d ' ')
+        echo -e "${COLOR_BOLD}${COLOR_GREEN}Found $count event(s)${COLOR_RESET}\n"
+
+        sort "$tmpfile" | while IFS='|' read -r date title site slug; do
+            format_event "$date" "$title" "$site" "$slug"
+        done
+    else
+        echo "No events found."
+    fi
+}
+
+main "$@"

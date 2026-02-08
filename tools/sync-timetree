@@ -1,0 +1,250 @@
+#!/bin/bash
+
+# TimeTree公開カレンダーからイベントをインポートして、src/data/schedules/ に追加するスクリプト
+# 既存のイベントは上書きしない
+
+set -e
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+SCHEDULES_DIR="$PROJECT_DIR/src/data/schedules"
+
+# TimeTree API設定
+API_BASE_URL="https://timetreeapp.com/api/v2"
+CALENDAR_ID="yokuwakan_nai"
+UTC_OFFSET=32400  # +9時間（日本時間）
+
+# カラー定義
+COLOR_RESET="\033[0m"
+COLOR_BOLD="\033[1m"
+COLOR_GREEN="\033[32m"
+COLOR_YELLOW="\033[33m"
+COLOR_CYAN="\033[36m"
+COLOR_DIM="\033[2m"
+
+# 使い方表示
+show_help() {
+    cat << EOF
+Usage: $(basename "$0") [OPTIONS]
+
+TimeTree公開カレンダーからイベントをインポートして、src/data/schedules/ に追加します。
+
+Options:
+    --months N      取得する月数（デフォルト: 12ヶ月）
+    --dry-run       実際には保存せず、追加されるイベントを表示するのみ
+    -h, --help      このヘルプを表示
+
+Examples:
+    $(basename "$0")                # 12ヶ月分のイベントをインポート
+    $(basename "$0") --months 6     # 6ヶ月分のイベントをインポート
+    $(basename "$0") --dry-run      # ドライラン（実際には保存しない）
+
+EOF
+}
+
+# UNIXタイムスタンプ（ミリ秒）を取得
+get_timestamp_ms() {
+    local date_str="$1"
+    date -j -f "%Y-%m-%d %H:%M:%S" "$date_str" "+%s" 2>/dev/null | awk '{print $1 * 1000}'
+}
+
+# UNIXタイムスタンプ（ミリ秒）を日時文字列に変換
+timestamp_to_date() {
+    local timestamp_ms="$1"
+    local timestamp_s=$((timestamp_ms / 1000))
+    date -r "$timestamp_s" "+%Y-%m-%d %H:%M:%S +0900"
+}
+
+# イベントが既存のYAMLに存在するかチェック
+event_exists() {
+    local yaml_file="$1"
+    local timetree_id="$2"  # TimeTreeのイベントID
+
+    if [[ ! -f "$yaml_file" ]]; then
+        return 1  # ファイルが存在しない = イベントも存在しない
+    fi
+
+    # TimeTreeのイベントIDで既存のイベントをチェック
+    local count=$(yq eval ".[] | select(.timetree_id != null) | select(.timetree_id == \"$timetree_id\") | .id" "$yaml_file" 2>/dev/null | wc -l | tr -d ' ')
+
+    [[ "$count" -gt 0 ]]
+}
+
+# メイン処理
+main() {
+    local months=12
+    local dry_run=false
+
+    # 引数解析
+    while [[ $# -gt 0 ]]; do
+        case $1 in
+            --months)
+                months="$2"
+                shift 2
+                ;;
+            --dry-run)
+                dry_run=true
+                shift
+                ;;
+            -h|--help)
+                show_help
+                exit 0
+                ;;
+            *)
+                echo "Unknown option: $1" >&2
+                show_help
+                exit 1
+                ;;
+        esac
+    done
+
+    # 期間を計算
+    local now=$(date "+%Y-%m-%d 00:00:00")
+    local from_timestamp=$(get_timestamp_ms "$now")
+    local to_date=$(date -v+${months}m "+%Y-%m-%d 00:00:00")
+    local to_timestamp=$(get_timestamp_ms "$to_date")
+
+    echo -e "${COLOR_BOLD}Fetching events from $(date -j -f "%Y-%m-%d %H:%M:%S" "$now" "+%Y-%m-%d") to $(date -j -f "%Y-%m-%d %H:%M:%S" "$to_date" "+%Y-%m-%d")...${COLOR_RESET}"
+    echo -e "${COLOR_DIM}API: ${API_BASE_URL}/public_calendars/${CALENDAR_ID}/public_events${COLOR_RESET}"
+    echo ""
+
+    # TimeTree APIからイベントを取得
+    local api_url="${API_BASE_URL}/public_calendars/${CALENDAR_ID}/public_events?from=${from_timestamp}&to=${to_timestamp}&utc_offset=${UTC_OFFSET}"
+    local response=$(curl -s -H "X-Timetreea: web/2.1.0/en" -H "Accept: application/json" "$api_url")
+
+    if [[ -z "$response" ]]; then
+        echo "Error: Failed to fetch events from TimeTree API" >&2
+        exit 1
+    fi
+
+    # イベント数を取得
+    local event_count=$(echo "$response" | jq '.public_events | length')
+
+    if [[ "$event_count" -eq 0 ]]; then
+        echo "No events found."
+        exit 0
+    fi
+
+    echo -e "${COLOR_GREEN}Found $event_count events from TimeTree${COLOR_RESET}"
+    echo ""
+
+    # 一時ディレクトリ作成
+    local tmp_dir=$(mktemp -d)
+    trap "rm -rf $tmp_dir" EXIT
+
+    # イベントをJSON配列として一時ファイルに保存
+    local events_file="${tmp_dir}/events.json"
+    echo "$response" | jq '.public_events' > "$events_file"
+
+    local total_added=0
+    local total_duplicate=0
+
+    # イベント数を取得
+    local events_length=$(jq 'length' "$events_file")
+
+    # 各イベントを処理
+    for ((i=0; i<events_length; i++)); do
+        local event=$(jq -c ".[$i]" "$events_file")
+
+        # イベント情報を抽出
+        local id=$(echo "$event" | jq -r '.id')
+        local title=$(echo "$event" | jq -r '.title')
+        local note=$(echo "$event" | jq -r '.note // ""')
+        local link_url=$(echo "$event" | jq -r '.link_url // ""')
+        local start_at=$(echo "$event" | jq -r '.start_at')
+        local label_name=$(echo "$event" | jq -r '.public_calendar_label.name // ""')
+
+        # タイムスタンプを日時に変換
+        local date_formatted=$(timestamp_to_date "$start_at")
+        local date_only=$(echo "$date_formatted" | cut -d' ' -f1)
+        local year_month=$(echo "$date_only" | cut -d'-' -f1,2)
+
+        # slugを生成（日付 + timetree + IDの末尾8桁）
+        local date_compact=$(echo "$date_only" | tr -d '-')
+        local id_suffix=$(echo "$id" | tail -c 9)
+        local slug="${date_compact}-timetree-${id_suffix}"
+
+        # YAML形式のイベントデータを生成
+        local yaml_file="${SCHEDULES_DIR}/${year_month}.yml"
+
+        # 重複チェック（TimeTreeのイベントIDで判定）
+        if event_exists "$yaml_file" "$id"; then
+            echo -e "${COLOR_DIM}  ⊘ Skipping duplicate: $title on $date_only (timetree_id: $id)${COLOR_RESET}"
+            total_duplicate=$((total_duplicate + 1))
+            continue
+        fi
+
+        # contentを構築
+        if [[ -n "$note" ]]; then
+            local content="$note"
+        else
+            local content="TBD"
+        fi
+
+        if [[ -n "$link_url" ]]; then
+            content="${content}\n\n詳細: ${link_url}"
+        fi
+
+        # ラベルの表示
+        local label_display=""
+        if [[ -n "$label_name" ]]; then
+            label_display=" [${label_name}]"
+        fi
+
+        echo -e "${COLOR_GREEN}  + $title on $date_only${label_display}${COLOR_RESET}"
+
+        if [[ "$dry_run" == false ]]; then
+            # YAMLファイルに追加
+            mkdir -p "$SCHEDULES_DIR"
+
+            # 新しいイベントを一時ファイルに書き込み
+            local new_event_file="${tmp_dir}/event-${slug}.yml"
+            cat > "$new_event_file" <<EOF
+- id: event-${slug}
+  slug: ${slug}
+  date: ${date_formatted}
+  title: ${title}
+  site: ${title}
+  timetree_id: "${id}"
+EOF
+
+            # ラベルがあれば追加
+            if [[ -n "$label_name" ]]; then
+                cat >> "$new_event_file" <<EOF
+  label: ${label_name}
+EOF
+            fi
+
+            # contentを追加
+            cat >> "$new_event_file" <<EOF
+  content: |
+$(echo -e "$content" | sed 's/^/    /')
+EOF
+
+            # 既存のYAMLファイルと結合
+            if [[ -f "$yaml_file" ]]; then
+                # 既存のイベントに新しいイベントを追加
+                yq eval-all '[.[]]' "$yaml_file" "$new_event_file" | yq eval 'sort_by(.date)' - > "${tmp_dir}/merged.yml"
+                mv "${tmp_dir}/merged.yml" "$yaml_file"
+            else
+                # 新規ファイル作成
+                yq eval '.' "$new_event_file" > "$yaml_file"
+            fi
+        fi
+
+        total_added=$((total_added + 1))
+    done
+
+    echo ""
+    echo -e "${COLOR_BOLD}${dry_run:+[DRY RUN] }Summary:${COLOR_RESET}"
+    echo "  Total events fetched: $event_count"
+    echo "  New events to add: $total_added"
+    echo "  Duplicate events skipped: $total_duplicate"
+
+    if [[ "$dry_run" == true ]]; then
+        echo ""
+        echo "Run without --dry-run to actually save the changes."
+    fi
+}
+
+main "$@"
