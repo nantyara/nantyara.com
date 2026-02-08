@@ -1,0 +1,130 @@
+#!/bin/bash
+
+# 既存イベントの画像をTimeTreeから取得して追加するスクリプト
+
+set -e
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+SCHEDULES_DIR="$PROJECT_DIR/src/data/schedules"
+IMAGES_DIR="$PROJECT_DIR/public/events"
+
+# TimeTree API設定
+API_BASE_URL="https://timetreeapp.com/api/v2"
+CALENDAR_ID="yokuwakan_nai"
+UTC_OFFSET=32400
+
+# カラー定義
+COLOR_RESET="\033[0m"
+COLOR_BOLD="\033[1m"
+COLOR_GREEN="\033[32m"
+COLOR_YELLOW="\033[33m"
+COLOR_CYAN="\033[36m"
+COLOR_DIM="\033[2m"
+
+echo -e "${COLOR_BOLD}Fetching event images from TimeTree...${COLOR_RESET}"
+echo ""
+
+# TimeTree APIからイベント一覧を取得（1年分）
+now=$(date "+%Y-%m-%d 00:00:00")
+from_timestamp=$(date -j -f "%Y-%m-%d %H:%M:%S" "$now" "+%s" 2>/dev/null | awk '{print $1 * 1000}')
+to_date=$(date -v+12m "+%Y-%m-%d 00:00:00")
+to_timestamp=$(date -j -f "%Y-%m-%d %H:%M:%S" "$to_date" "+%s" 2>/dev/null | awk '{print $1 * 1000}')
+
+api_url="${API_BASE_URL}/public_calendars/${CALENDAR_ID}/public_events?from=${from_timestamp}&to=${to_timestamp}&utc_offset=${UTC_OFFSET}"
+response=$(curl -s -H "X-Timetreea: web/2.1.0/en" -H "Accept: application/json" "$api_url")
+
+# 一時ディレクトリ作成
+tmp_dir=$(mktemp -d)
+trap "rm -rf $tmp_dir" EXIT
+
+echo "$response" | jq '.public_events' > "${tmp_dir}/events.json"
+
+total_downloaded=0
+total_skipped=0
+total_errors=0
+
+# 各イベントを処理
+events_length=$(jq 'length' "${tmp_dir}/events.json")
+
+for ((i=0; i<events_length; i++)); do
+    event=$(jq -c ".[$i]" "${tmp_dir}/events.json")
+
+    timetree_id=$(echo "$event" | jq -r '.id')
+    title=$(echo "$event" | jq -r '.title')
+    image_url=$(echo "$event" | jq -r '.images.cover[0].url // ""')
+
+    # 画像URLがない場合はスキップ
+    if [[ -z "$image_url" ]]; then
+        continue
+    fi
+
+    # timetree_idで既存イベントを検索
+    found_event=""
+    for yaml_file in "$SCHEDULES_DIR"/*.yml; do
+        if [[ ! -f "$yaml_file" ]]; then
+            continue
+        fi
+
+        # timetree_idが一致するイベントを検索
+        event_data=$(yq eval ".[] | select(.timetree_id == \"$timetree_id\")" "$yaml_file" 2>/dev/null)
+
+        if [[ -n "$event_data" ]]; then
+            found_event="$event_data"
+            found_yaml="$yaml_file"
+            break
+        fi
+    done
+
+    # 既存イベントが見つからない場合はスキップ
+    if [[ -z "$found_event" ]]; then
+        continue
+    fi
+
+    # イベントのslugを取得
+    slug=$(echo "$found_event" | yq eval '.slug' -)
+
+    # 既にimagesフィールドがある場合はスキップ
+    has_images=$(echo "$found_event" | yq eval '.images' -)
+    if [[ "$has_images" != "null" ]]; then
+        echo -e "${COLOR_DIM}  ⊘ Already has images: $title (slug: $slug)${COLOR_RESET}"
+        total_skipped=$((total_skipped + 1))
+        continue
+    fi
+
+    # 画像ファイル名を生成
+    image_filename="${slug}.jpg"
+    image_path="${IMAGES_DIR}/${image_filename}"
+
+    # 既に画像ファイルが存在する場合もスキップ
+    if [[ -f "$image_path" ]]; then
+        echo -e "${COLOR_DIM}  ⊘ Image file exists: $image_filename${COLOR_RESET}"
+        total_skipped=$((total_skipped + 1))
+        continue
+    fi
+
+    # 画像をダウンロード
+    mkdir -p "$IMAGES_DIR"
+    if curl -s -o "$image_path" "$image_url"; then
+        echo -e "${COLOR_GREEN}  + Downloaded: $title${COLOR_RESET}"
+        echo -e "${COLOR_CYAN}    → ${image_filename}${COLOR_RESET}"
+
+        # YAMLファイルにimagesフィールドを追加
+        # イベントのIDを取得
+        event_id=$(echo "$found_event" | yq eval '.id' -)
+
+        # yqを使ってimagesフィールドを追加
+        yq eval "(.[] | select(.id == \"$event_id\") | .images) = [\"/events/${image_filename}\"]" -i "$found_yaml"
+
+        total_downloaded=$((total_downloaded + 1))
+    else
+        echo -e "${COLOR_YELLOW}  ⚠ Failed to download: $title${COLOR_RESET}"
+        total_errors=$((total_errors + 1))
+    fi
+done
+
+echo ""
+echo -e "${COLOR_BOLD}Summary:${COLOR_RESET}"
+echo "  Images downloaded: $total_downloaded"
+echo "  Already exists: $total_skipped"
+echo "  Errors: $total_errors"

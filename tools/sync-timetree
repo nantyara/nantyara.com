@@ -153,6 +153,7 @@ main() {
         local link_url=$(echo "$event" | jq -r '.link_url // ""')
         local start_at=$(echo "$event" | jq -r '.start_at')
         local label_name=$(echo "$event" | jq -r '.public_calendar_label.name // ""')
+        local image_url=$(echo "$event" | jq -r '.images.cover[0].url // ""')
 
         # タイムスタンプを日時に変換
         local date_formatted=$(timestamp_to_date "$start_at")
@@ -221,6 +222,36 @@ EOF
   content: |
 $(echo -e "$content" | sed 's/^/    /')
 EOF
+
+            # 画像があればダウンロードして追加
+            if [[ -n "$image_url" ]]; then
+                local image_filename="${slug}.jpg"
+                local image_path="${PROJECT_DIR}/public/events/${image_filename}"
+
+                # 既存の画像ファイルが存在する場合はスキップ
+                if [[ -f "$image_path" ]]; then
+                    echo -e "${COLOR_DIM}    ⊘ Image already exists: ${image_filename}${COLOR_RESET}"
+                    # 既存の画像パスを追加
+                    cat >> "$new_event_file" <<EOF
+  images:
+    - /events/${image_filename}
+EOF
+                else
+                    # 画像をダウンロード
+                    mkdir -p "${PROJECT_DIR}/public/events"
+                    if curl -s -o "$image_path" "$image_url"; then
+                        echo -e "${COLOR_CYAN}    → Downloaded image: ${image_filename}${COLOR_RESET}"
+
+                        # imagesフィールドを追加
+                        cat >> "$new_event_file" <<EOF
+  images:
+    - /events/${image_filename}
+EOF
+                    else
+                        echo -e "${COLOR_YELLOW}    ⚠ Failed to download image${COLOR_RESET}"
+                    fi
+                fi
+            fi
 
             # 既存のYAMLファイルと結合
             if [[ -f "$yaml_file" ]]; then
