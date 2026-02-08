@@ -1,47 +1,196 @@
-- id: event-20260225-ottanta
-  slug: 20260225-ottanta
-  date: 2026-02-25 19:00:00 +0900
-  timetree_id: "2834152394206627344"
-  end: 2026-02-25 22:30:00 +0900
-  title: なんちゃってアイドル in 蒲田オッタンタ
-  site: 蒲田 Ottanta
+- id: event-20260201-km-music
+  slug: 20260201-km-music
+  date: 2026-02-01 12:00:00 +0900
+  timetree_id: "2876393619047204347"
+  title: K&Mハッピーライブ
+  site: K&Mミュージック中野店
+  content: |
+    【出演】
+    小林清美
+    なんちゃらアイドル
+    仲村コニー
+    とんでもはっぷん！
+    森口しゅな
+    Classic fairy
+
+    開場/開演　12:00/12:30
+    前売り　¥3,000＋1D
+  images:
+    - /events/20260201-km-music.jpg
+- id: event-20260202-lovetko
+  slug: 20260202-lovetko
+  date: 2026-02-02 19:00:00 +0900
+  timetree_id: "2834148127349556885"
+  title: LOVE TKO
+  site: 東新宿 LOVE TKO
+  content: |
+    ゆるワンマン
+- id: event-20260207-mitsushitsu
+  slug: 20260207-mitsushitsu
+  date: 2026-02-07 17:00:00 +0900
+  timetree_id: "2825683977065612808"
+  title: 「密室」御茶海マミ主催ライブ
+  site: 渋谷La.mama
+  content: |
+    御茶海マミ生誕ライブ
+    OPEN 17:00 / START 18:00
+    ¥2,500+ドリンク代
+
+    【出演】
+    御茶海マミ
+    MCあんにゅ
+    なんちゃらアイドル
+    Crawl
+    三月碧
+
+    【TIME TABLE】
+    18:00-18:25 御茶海マミ
+    18:30-19:00 三月碧
+    19:05-19:35 MCあんにゅ
+    19:50-20:25 Crawl
+    20:40-21:10 なんちゃらアイドル
+  images:
+    - /events/20260207-mitsushitsu-1.png
+    - /events/20260207-mitsushitsu-2.png
+- id: event-20260208-goodbye-my-girl
+  slug: 20260208-goodbye-my-girl
+  date: 2026-02-08 12:00:00 +0900
+  timetree_id: "2890839662761494438"
+  title: 『グッバイ・マイガール c/w ブラックコーヒー』リリースイベント
+  site: ULTRA SHIBUYA
   content: |
     【出演】
     なんちゃらアイドル
+
+    【ゲスト】
     S.B.Q.アイドル部
-    Q太郎
+
+    【イベント内容】
+    ミニライブ + 特典会
+
+    開場/開演　12:00/12:30
+
+    ◎特典券付きCD(1,650円)　ご予約者さま優先入場、当日入場は会場状況により12:25以降にご案内
+    ◎特別ドリンク（1,000円）を受付入場時に購入で特典券1枚付与　※1杯目のみ、以降は付与対象外
+
+    ※入場時にドリンク代700円を頂戴いたします
+
+    ULTRA SHIBUYA店頭、またはULTRA SHIBUYAオンラインショップにて なんちゃらアイドル loves 豊田道倫『グッバイ・マイガール　c/w ブラックコーヒー』をご購入いただくと、2月8日(日)のインストアイベントを店頭にてご観覧頂けます。
+    ※イベントは観覧人数に制限を設けさせていただきます。定員に達し次第締め切りとさせていただきます。
+
+    会場: 東京都渋谷区東1-28-9 ULTRA SHIBUYA
+    詳細: https://ultra-shibuya.com/shop/e/e10000355/
+  images:
+    - /events/20260208-goodbye-my-girl.jpeg
+- id: event-20260210-bar-event
+  slug: 20260210-bar-event
+  date: 2026-02-10 19:00:00 +0900
+  timetree_id: "2879280693186283463"
+  labels:
+    - マミソロ
+  title: バーイベ
+  site: 新宿 歌舞伎町 Drunken Shrimp
+  content: |
+    御茶海マミ
+- id: event-20260212-lamama
+  slug: 20260212-lamama
+  date: 2026-02-12 19:00:00 +0900
+  timetree_id: "2694525525204026524"
+  title: なんちゃらアイドル主催 大人の文化祭～バラエティだよ人生はvol.003～
+  site: 渋谷 La.mama
+  content: |
+    【出演】
+    温-たずね-
+    マグノリアの雫。
+    S.B.Q.アイドル部
+    盛りたかった千里
+    シャンソン姉さんwithかくれみの
+    なんちゃらアイドル
 
     【TIME TABLE】
-    19:00- 太宰ちゃん
-    19:30- ひより
-    20:00- オカエリ
-    20:30- ぬる
-    21:00- あおはる
-    21:30- 御茶海マミ
-    22:00- Q太郎（物販時間DJ）
+    19:00 温-たずね-
+    19:30 マグノリアの雫。
+    20:00 S.B.Q.アイドル部
+    20:30 盛りたかった千里
+    21:00 シャンソン姉さんwithかくれみの
+    21:30 なんちゃらアイドル
 
-    開場　19:00 / 終了 22:30
-    ¥1,500（1drink込）
-- id: event-20260222-swingy
-  slug: 20260222-swingy
-  date: 2026-02-22 11:45:00 +0900
-  timetree_id: "2834150157476579119"
-  title: Wonderful days in 新検見川
-  site: 新検見川 Swingy
+    開場/開演　18:30/19:00
+    ADV　¥2,500＋1D
+
+    【ツイキャスプレミア配信】
+    ¥2,000
+  images:
+    - /events/20260212-lamama.jpeg
+- id: event-20260214-uerin-50th
+  slug: 20260214-uerin-50th
+  date: 2026-02-14 16:15:00 +0900
+  timetree_id: "2834149034334242046"
+  title: うえりん生誕50周年祭スペシャル！！！『おーい30年前のオレ！人生で一番長続きしてるのバンドだってよ！』
+  site: 池袋手刀
   content: |
-    【演目】
-    マットプロレス
-    どん子ちゃんLIVE
-    なんちゃらアイドルLIVE
-    他…
+    【出演】
+    中出し少年
+    なんちゃらアイドル
+    盛りたかった千里
+    ムネノリッツァa.k.a.ポポチョリス
+    トニー大木&GGININDARS
+    ヒナトバンド(仮)
+    ニシハチヨゴレーズ
 
-    開場/開演　11:45/12:00
-    全席自由　¥2,000（別途1オーダー制）
-    高校生半額 / 中学生以下無料
+    OPEN/START　16:15/16:40
+  images:
+    - /events/20260214-uerin-50th.jpeg
+- id: event-20260215-rahmons
+  slug: 20260215-rahmons
+  date: 2026-02-15 16:00:00 +0900
+  timetree_id: "2825683609334204261"
+  title: GOKUAKU POST VALENTINE'S DAY LIVE RAHMON'S
+  site: 東京倶楽部 水道橋店
+  content: |
+    【出演】
+    MaMi RAHMON (vo)
+    AO RAHMON (pf)
+    TSUBU RAHMON (d)
+    On Mayu RAHMON (b)
+    AB RAHMON (gt)
 
-    ※公演終了後にアフターパーティー（物販あり）開催
-
-    会場: 千葉県千葉市花見川区花園1-8-7
+    開場/開演　16:00/16:30
+    ADV　¥3,500 [+TAX]
+    DOOR　¥3,800 [+1D & TAX]
+  images:
+    - /events/20260215-rahmons.jpg
+- id: event-20260216-kaku-misami-202602
+  slug: 20260216-kaku-misami-202602
+  date: 2026-02-16 19:00:00 +0900
+  timetree_id: "2879280176716466133"
+  labels:
+    - マミソロ
+  title: 隔月間御茶海マミ２月号（vol.007）
+  site: 東新宿 LOVE TKO
+  content: |
+    出演
+    S.B.Q.
+    taberusan
+    吉田　仁郎（じろうゆ）
+    御茶海マミ
+  images:
+    - /events/20260216-kaku-misami-202602.jpeg
+- id: event-20260217-timetree-78139991
+  slug: 20260217-timetree-78139991
+  date: 2026-02-17 18:00:00 +0900
+  title: 新宿drunken shrimp
+  site: 新宿drunken shrimp
+  timetree_id: "2879281525378139991"
+  labels:
+    - あおはるソロ
+  content: |
+    あおはるバーイベント
+    time charge 1時間1000円
+    ソフトドリンク 500円〜
+    アルコールドリンク 800円〜
+    キャストドリンク 1000円
+    フードもなにか用意します。
 - id: event-20260221-nukafes
   slug: 20260221-nukafes
   date: 2026-02-21 16:00:00 +0900
@@ -84,181 +233,55 @@
     - /events/20260221-nukafes-2.jpeg
     - /events/20260221-nukafes-3.jpeg
     - /events/20260221-nukafes-4.jpeg
-- id: event-20260216-kaku-misami-202602
-  slug: 20260216-kaku-misami-202602
-  date: 2026-02-16 19:00:00 +0900
-  timetree_id: "2879280176716466133"
-  labels:
-    - マミソロ
-  title: 隔月間御茶海マミ２月号（vol.007）
-  site: 東新宿 LOVE TKO
+- id: event-20260222-swingy
+  slug: 20260222-swingy
+  date: 2026-02-22 11:45:00 +0900
+  timetree_id: "2834150157476579119"
+  title: Wonderful days in 新検見川
+  site: 新検見川 Swingy
   content: |
-    出演
-    S.B.Q.
-    taberusan
-    吉田　仁郎（じろうゆ）
-    御茶海マミ
-  images:
-    - /events/20260216-kaku-misami-202602.jpeg
-- id: event-20260215-rahmons
-  slug: 20260215-rahmons
-  date: 2026-02-15 16:00:00 +0900
-  timetree_id: "2825683609334204261"
-  title: GOKUAKU POST VALENTINE'S DAY LIVE RAHMON'S
-  site: 東京倶楽部 水道橋店
-  content: |
-    【出演】
-    MaMi RAHMON (vo)
-    AO RAHMON (pf)
-    TSUBU RAHMON (d)
-    On Mayu RAHMON (b)
-    AB RAHMON (gt)
+    【演目】
+    マットプロレス
+    どん子ちゃんLIVE
+    なんちゃらアイドルLIVE
+    他…
 
-    開場/開演　16:00/16:30
-    ADV　¥3,500 [+TAX]
-    DOOR　¥3,800 [+1D & TAX]
-  images:
-    - /events/20260215-rahmons.jpg
-- id: event-20260214-uerin-50th
-  slug: 20260214-uerin-50th
-  date: 2026-02-14 16:15:00 +0900
-  timetree_id: "2834149034334242046"
-  title: うえりん生誕50周年祭スペシャル！！！『おーい30年前のオレ！人生で一番長続きしてるのバンドだってよ！』
-  site: 池袋手刀
+    開場/開演　11:45/12:00
+    全席自由　¥2,000（別途1オーダー制）
+    高校生半額 / 中学生以下無料
+
+    ※公演終了後にアフターパーティー（物販あり）開催
+
+    会場: 千葉県千葉市花見川区花園1-8-7
+- id: event-20260223-timetree-33624847
+  slug: 20260223-timetree-33624847
+  date: 2026-02-23 17:30:00 +0900
+  title: ディスクユニオンお茶の水駅前店
+  site: ディスクユニオンお茶の水駅前店
+  timetree_id: "2895861438633624847"
+  content: |
+    TBD
+- id: event-20260225-ottanta
+  slug: 20260225-ottanta
+  date: 2026-02-25 19:00:00 +0900
+  timetree_id: "2834152394206627344"
+  end: 2026-02-25 22:30:00 +0900
+  title: なんちゃってアイドル in 蒲田オッタンタ
+  site: 蒲田 Ottanta
   content: |
     【出演】
-    中出し少年
     なんちゃらアイドル
-    盛りたかった千里
-    ムネノリッツァa.k.a.ポポチョリス
-    トニー大木&GGININDARS
-    ヒナトバンド(仮)
-    ニシハチヨゴレーズ
-
-    OPEN/START　16:15/16:40
-  images:
-    - /events/20260214-uerin-50th.jpeg
-- id: event-20260212-lamama
-  slug: 20260212-lamama
-  date: 2026-02-12 19:00:00 +0900
-  timetree_id: "2694525525204026524"
-  title: なんちゃらアイドル主催 大人の文化祭～バラエティだよ人生はvol.003～
-  site: 渋谷 La.mama
-  content: |
-    【出演】
-    温-たずね-
-    マグノリアの雫。
     S.B.Q.アイドル部
-    盛りたかった千里
-    シャンソン姉さんwithかくれみの
-    なんちゃらアイドル
+    Q太郎
 
     【TIME TABLE】
-    19:00 温-たずね-
-    19:30 マグノリアの雫。
-    20:00 S.B.Q.アイドル部
-    20:30 盛りたかった千里
-    21:00 シャンソン姉さんwithかくれみの
-    21:30 なんちゃらアイドル
+    19:00- 太宰ちゃん
+    19:30- ひより
+    20:00- オカエリ
+    20:30- ぬる
+    21:00- あおはる
+    21:30- 御茶海マミ
+    22:00- Q太郎（物販時間DJ）
 
-    開場/開演　18:30/19:00
-    ADV　¥2,500＋1D
-
-    【ツイキャスプレミア配信】
-    ¥2,000
-  images:
-    - /events/20260212-lamama.jpeg
-- id: event-20260210-bar-event
-  slug: 20260210-bar-event
-  date: 2026-02-10 19:00:00 +0900
-  timetree_id: "2879280693186283463"
-  labels:
-    - マミソロ
-  title: バーイベ
-  site: 新宿 歌舞伎町 Drunken Shrimp
-  content: |
-    御茶海マミ
-- id: event-20260208-goodbye-my-girl
-  slug: 20260208-goodbye-my-girl
-  date: 2026-02-08 12:00:00 +0900
-  timetree_id: "2890839662761494438"
-  title: 『グッバイ・マイガール c/w ブラックコーヒー』リリースイベント
-  site: ULTRA SHIBUYA
-  content: |
-    【出演】
-    なんちゃらアイドル
-
-    【ゲスト】
-    S.B.Q.アイドル部
-
-    【イベント内容】
-    ミニライブ + 特典会
-
-    開場/開演　12:00/12:30
-
-    ◎特典券付きCD(1,650円)　ご予約者さま優先入場、当日入場は会場状況により12:25以降にご案内
-    ◎特別ドリンク（1,000円）を受付入場時に購入で特典券1枚付与　※1杯目のみ、以降は付与対象外
-
-    ※入場時にドリンク代700円を頂戴いたします
-
-    ULTRA SHIBUYA店頭、またはULTRA SHIBUYAオンラインショップにて なんちゃらアイドル loves 豊田道倫『グッバイ・マイガール　c/w ブラックコーヒー』をご購入いただくと、2月8日(日)のインストアイベントを店頭にてご観覧頂けます。
-    ※イベントは観覧人数に制限を設けさせていただきます。定員に達し次第締め切りとさせていただきます。
-
-    会場: 東京都渋谷区東1-28-9 ULTRA SHIBUYA
-    詳細: https://ultra-shibuya.com/shop/e/e10000355/
-  images:
-    - /events/20260208-goodbye-my-girl.jpeg
-- id: event-20260207-mitsushitsu
-  slug: 20260207-mitsushitsu
-  date: 2026-02-07 17:00:00 +0900
-  timetree_id: "2825683977065612808"
-  title: 「密室」御茶海マミ主催ライブ
-  site: 渋谷La.mama
-  content: |
-    御茶海マミ生誕ライブ
-    OPEN 17:00 / START 18:00
-    ¥2,500+ドリンク代
-
-    【出演】
-    御茶海マミ
-    MCあんにゅ
-    なんちゃらアイドル
-    Crawl
-    三月碧
-
-    【TIME TABLE】
-    18:00-18:25 御茶海マミ
-    18:30-19:00 三月碧
-    19:05-19:35 MCあんにゅ
-    19:50-20:25 Crawl
-    20:40-21:10 なんちゃらアイドル
-  images:
-    - /events/20260207-mitsushitsu-1.png
-    - /events/20260207-mitsushitsu-2.png
-- id: event-20260202-lovetko
-  slug: 20260202-lovetko
-  date: 2026-02-02 19:00:00 +0900
-  timetree_id: "2834148127349556885"
-  title: LOVE TKO
-  site: 東新宿 LOVE TKO
-  content: |
-    ゆるワンマン
-- id: event-20260201-km-music
-  slug: 20260201-km-music
-  date: 2026-02-01 12:00:00 +0900
-  timetree_id: "2876393619047204347"
-  title: K&Mハッピーライブ
-  site: K&Mミュージック中野店
-  content: |
-    【出演】
-    小林清美
-    なんちゃらアイドル
-    仲村コニー
-    とんでもはっぷん！
-    森口しゅな
-    Classic fairy
-
-    開場/開演　12:00/12:30
-    前売り　¥3,000＋1D
-  images:
-    - /events/20260201-km-music.jpg
+    開場　19:00 / 終了 22:30
+    ¥1,500（1drink込）
