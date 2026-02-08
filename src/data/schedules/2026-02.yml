@@ -92,6 +92,8 @@
   site: 新宿 歌舞伎町 Drunken Shrimp
   content: |
     御茶海マミ
+  images:
+    - /events/drunken_shrimp.jpeg
 - id: event-20260212-lamama
   slug: 20260212-lamama
   date: 2026-02-12 19:00:00 +0900
@@ -191,6 +193,8 @@
     アルコールドリンク 800円〜
     キャストドリンク 1000円
     フードもなにか用意します。
+  images:
+    - /events/drunken_shrimp.jpeg
 - id: event-20260221-nukafes
   slug: 20260221-nukafes
   date: 2026-02-21 16:00:00 +0900
