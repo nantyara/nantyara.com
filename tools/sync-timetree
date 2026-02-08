@@ -170,6 +170,33 @@ main() {
 
         # 重複チェック（TimeTreeのイベントIDで判定）
         if event_exists "$yaml_file" "$id"; then
+            # 既存イベントの content が TBD で、TimeTree に note がある場合は更新
+            if [[ -n "$note" ]]; then
+                # 既存イベントの content を取得
+                local existing_content=$(yq eval ".[] | select(.timetree_id == \"$id\") | .content" "$yaml_file" 2>/dev/null | sed 's/^[[:space:]]*//' | sed 's/[[:space:]]*$//')
+
+                # content が "TBD" の場合のみ更新
+                if [[ "$existing_content" == "TBD" ]]; then
+                    echo -e "${COLOR_YELLOW}  ↻ Updating content: $title on $date_only${COLOR_RESET}"
+
+                    if [[ "$dry_run" == false ]]; then
+                        # contentを構築
+                        local new_content="$note"
+                        if [[ -n "$link_url" ]]; then
+                            new_content="${new_content}\n\n詳細: ${link_url}"
+                        fi
+
+                        # yqを使ってcontentを更新
+                        local event_slug=$(yq eval ".[] | select(.timetree_id == \"$id\") | .slug" "$yaml_file")
+                        yq eval "(.[] | select(.slug == \"$event_slug\") | .content) = \"$(echo -e "$new_content")\"" -i "$yaml_file"
+
+                        echo -e "${COLOR_CYAN}    → Updated from TimeTree note${COLOR_RESET}"
+                    fi
+                    total_duplicate=$((total_duplicate + 1))
+                    continue
+                fi
+            fi
+
             echo -e "${COLOR_DIM}  ⊘ Skipping duplicate: $title on $date_only (timetree_id: $id)${COLOR_RESET}"
             total_duplicate=$((total_duplicate + 1))
             continue
