@@ -9,6 +9,7 @@ interface Props {
     instagram?: string;
     tiktok?: string;
     note?: string;
+    fantia?: string;
   };
   color?: string;
 }
@@ -89,6 +90,19 @@ const { name, nickname, image, bio, social, color = '#FF69B4' } = Astro.props;
           <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24">
             <title>note</title>
             <path d="M0 .279c4.623 0 10.953-.235 15.498-.117 6.099.156 8.39 2.813 8.468 9.374.077 3.71 0 14.335 0 14.335h-6.598c0-9.296.04-10.83 0-13.759-.078-2.578-.814-3.807-2.795-4.041-2.097-.235-7.975-.04-7.975-.04v17.84H0Z"/>
+          </svg>
+        </a>
+      )}
+      {social.fantia && (
+        <a
+          href={social.fantia}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-button fantia"
+          aria-label="Fantia"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+            <path d="M5 3h14v5H10v3h7v4h-7v6H5V3z"/>
           </svg>
         </a>
       )}
@@ -286,6 +300,17 @@ const { name, nickname, image, bio, social, color = '#FF69B4' } = Astro.props;
 
   .social-button.note {
     background: linear-gradient(135deg, #41C9B4 0%, #41C9B4 100%);
+  }
+
+  .social-button.fantia {
+    background: #173969;
+    color: #8cc13f;
+    border: 2px solid rgba(140, 193, 63, 0.3);
+  }
+
+  .social-button.fantia:hover {
+    background: #1a4177;
+    border-color: rgba(140, 193, 63, 0.5);
   }
 
   /* レスポンシブ対応 */
