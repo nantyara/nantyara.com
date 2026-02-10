@@ -84,14 +84,20 @@
     - /events/20260208-goodbye-my-girl.jpeg
 - id: event-20260210-bar-event
   slug: 20260210-bar-event
-  date: 2026-02-10 19:00:00 +0900
+  date: 2026-02-10 18:00:00 +0900
   timetree_id: "2879280693186283463"
   labels:
     - マミソロ
   title: バーイベ
   site: 新宿 歌舞伎町 Drunken Shrimp
   content: |
-    御茶海マミ
+    2月10日、歌舞伎町ドランクシュリンプにて18時から御茶海マミの生誕バーイベやります！
+    みんなお祝いにきてくれたら嬉しい！
+    そして遠方のかたはこちら遠隔drinkもあります！
+
+    https://fantia.jp/products/961292
+
+    https://fantia.jp/products/961293
   images:
     - /events/drunken_shrimp.jpeg
 - id: event-20260212-lamama
