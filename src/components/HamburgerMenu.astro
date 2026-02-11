@@ -30,7 +30,6 @@ const menuItems = [
   <div class="menu-drawer">
     <div class="menu-header">
       <h2 class="menu-title">MENU</h2>
-      <button class="close-button" aria-label="閉じる">✕</button>
     </div>
 
     <ul class="menu-list">
@@ -47,13 +46,18 @@ const menuItems = [
         </li>
       ))}
     </ul>
+
+    <div class="menu-position-toggle">
+      <span class="toggle-label">ボタン位置:</span>
+      <button class="toggle-btn" data-position="left">左</button>
+      <button class="toggle-btn" data-position="right">右</button>
+    </div>
   </div>
 </nav>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+  function initHamburgerMenu() {
     const hamburgerButton = document.querySelector('.hamburger-button');
-    const closeButton = document.querySelector('.close-button');
     const menuOverlay = document.querySelector('.menu-overlay');
     const menuDrawer = document.querySelector('.menu-drawer');
 
@@ -71,15 +75,52 @@ const menuItems = [
       document.body.style.overflow = '';
     };
 
-    hamburgerButton?.addEventListener('click', openMenu);
-    closeButton?.addEventListener('click', closeMenu);
+    const toggleMenu = () => {
+      if (menuDrawer?.classList.contains('open')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    };
+
+    hamburgerButton?.addEventListener('click', toggleMenu);
     menuOverlay?.addEventListener('click', closeMenu);
 
     // メニューリンククリック時も閉じる
     document.querySelectorAll('.menu-link').forEach(link => {
       link.addEventListener('click', closeMenu);
     });
-  });
+
+    // ボタン位置トグル（イベントデリゲーション）
+    const updateToggleUI = () => {
+      const pos = document.documentElement.getAttribute('data-menu-position') || 'right';
+      document.querySelectorAll('.toggle-btn').forEach(btn => {
+        if (btn instanceof HTMLElement) {
+          btn.classList.toggle('active', btn.dataset.position === pos);
+        }
+      });
+    };
+    updateToggleUI();
+
+    document.addEventListener('click', (e) => {
+      const target = (e.target as Element)?.closest('.toggle-btn');
+      if (!target || !(target instanceof HTMLElement)) return;
+      const pos = target.dataset.position || 'right';
+      if (pos === 'left') {
+        document.documentElement.setAttribute('data-menu-position', 'left');
+      } else {
+        document.documentElement.removeAttribute('data-menu-position');
+      }
+      try { localStorage.setItem('menu-button-position', pos); } catch(e) {}
+      updateToggleUI();
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initHamburgerMenu);
+  } else {
+    initHamburgerMenu();
+  }
 </script>
 
 <style>
@@ -91,7 +132,7 @@ const menuItems = [
   /* ハンバーガーボタン */
   .hamburger-button {
     position: fixed;
-    top: 20px;
+    bottom: calc(20px + env(safe-area-inset-bottom, 0px));
     right: 20px;
     width: 56px;
     height: 56px;
@@ -104,6 +145,11 @@ const menuItems = [
       0 4px 0 rgba(0, 0, 0, 0.3),
       0 0 20px rgba(255, 110, 199, 0.5);
     transition: all 0.3s ease;
+  }
+
+  :global(html[data-menu-position="left"]) .hamburger-button {
+    right: auto;
+    left: 20px;
   }
 
   .hamburger-button:hover {
@@ -164,6 +210,8 @@ const menuItems = [
     transition: right 0.3s ease;
     z-index: 1001;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
   }
 
   .menu-drawer.open {
@@ -175,7 +223,7 @@ const menuItems = [
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 20px;
+    padding: calc(30px + env(safe-area-inset-top, 0px)) 20px 30px;
     border-bottom: 2px solid var(--retro-pink);
     background: linear-gradient(90deg, var(--retro-purple) 0%, var(--retro-pink) 100%);
   }
@@ -192,28 +240,12 @@ const menuItems = [
     letter-spacing: 4px;
   }
 
-  .close-button {
-    width: 48px;
-    height: 48px;
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid white;
-    border-radius: 50%;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-
-  .close-button:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: rotate(90deg);
-  }
-
   /* メニューリスト */
   .menu-list {
     list-style: none;
     padding: 20px 0;
     margin: 0;
+    flex: 1;
   }
 
   .menu-item {
@@ -260,8 +292,13 @@ const menuItems = [
     .hamburger-button {
       width: 52px;
       height: 52px;
-      top: 15px;
+      bottom: calc(15px + env(safe-area-inset-bottom, 0px));
       right: 15px;
+    }
+
+    :global(html[data-menu-position="left"]) .hamburger-button {
+      right: auto;
+      left: 15px;
     }
 
     .line {
@@ -273,17 +310,12 @@ const menuItems = [
     }
 
     .menu-header {
-      padding: 20px 15px;
+      padding: calc(20px + env(safe-area-inset-top, 0px)) 15px 20px;
     }
 
     .menu-title {
       font-size: 1.8rem;
       letter-spacing: 3px;
-    }
-
-    .close-button {
-      width: 44px;
-      height: 44px;
     }
 
     .menu-link {
@@ -297,18 +329,53 @@ const menuItems = [
     }
   }
 
+  /* ボタン位置トグル */
+  .menu-position-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    border-top: 1px solid rgba(255, 110, 199, 0.3);
+    margin-top: auto;
+  }
+
+  .toggle-label {
+    font-size: 0.9rem;
+    color: var(--pastel-lavender);
+  }
+
+  .toggle-btn {
+    padding: 6px 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    background: transparent;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .toggle-btn:hover {
+    border-color: var(--retro-pink);
+  }
+
+  .toggle-btn.active {
+    background: linear-gradient(135deg, var(--retro-purple) 0%, var(--retro-pink) 100%);
+    border-color: var(--retro-pink);
+    color: white;
+  }
+
   /* アニメーション無効化（アクセシビリティ） */
   @media (prefers-reduced-motion: reduce) {
     .hamburger-button,
     .menu-overlay,
     .menu-drawer,
-    .menu-link,
-    .close-button {
+    .menu-link {
       transition: none !important;
     }
 
-    .hamburger-button:hover,
-    .close-button:hover {
+    .hamburger-button:hover {
       transform: none;
     }
   }

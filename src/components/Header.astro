@@ -13,7 +13,7 @@
 <style>
   .header {
     text-align: center;
-    padding: 40px 20px;
+    padding: calc(40px + env(safe-area-inset-top, 0px)) 20px 40px;
     margin: 0 0 30px 0;
     background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
     border-bottom: 3px solid var(--retro-pink);
@@ -118,7 +118,7 @@
   /* レスポンシブ対応 */
   @media (max-width: 768px) {
     .header {
-      padding: 30px 15px;
+      padding: calc(30px + env(safe-area-inset-top, 0px)) 15px 30px;
     }
 
     .title-link {
@@ -140,7 +140,7 @@
 
   @media (max-width: 480px) {
     .header {
-      padding: 20px 10px;
+      padding: calc(20px + env(safe-area-inset-top, 0px)) 10px 20px;
     }
 
     .title-link {
