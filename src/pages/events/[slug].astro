@@ -102,6 +102,33 @@ const ogDescription = `${formatDate(eventDate)} @ ${site}`;
 const ogImage = images && images.length > 0
   ? `https://nantyara.com${images[0]}`
   : 'https://nantyara.com/img/ogp-default.png';
+
+// コンテンツ内のURLを自動リンク化する関数
+const autoLinkUrls = (text: string): string => {
+  if (!text) return '';
+
+  // HTMLエスケープ
+  const escapeHtml = (str: string): string => {
+    return str
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  };
+
+  // URL検出の正規表現（http/httpsで始まるURL）
+  const urlRegex = /(https?:\/\/[^\s<>"{}|\\^`[\]]+)/g;
+
+  // まずHTMLエスケープしてから、URLをリンクに変換
+  const escaped = escapeHtml(text);
+  const linked = escaped.replace(urlRegex, '<a href="$1" target="_blank" rel="noopener noreferrer" class="content-link">$1</a>');
+
+  // 改行を<br>に変換
+  return linked.replace(/\n/g, '<br>');
+};
+
+const contentHtml = content ? autoLinkUrls(content) : '';
 ---
 
 <Layout title={ogTitle}>
@@ -175,7 +202,7 @@ const ogImage = images && images.length > 0
       {content && (
         <div class="event-content">
           <h2 class="section-title">詳細</h2>
-          <pre class="content-text">{content}</pre>
+          <div class="content-text" set:html={contentHtml}></div>
         </div>
       )}
     </div>
@@ -384,8 +411,13 @@ const ogImage = images && images.length > 0
     background: rgba(0, 0, 0, 0.3);
     border-radius: 8px;
     border: 2px solid rgba(255, 110, 199, 0.3);
-    white-space: pre-wrap;
     word-wrap: break-word;
+  }
+
+  .content-link {
+    color: var(--retro-cyan);
+    text-decoration: underline;
+    word-break: break-all;
   }
 
   .event-images {
