@@ -57,6 +57,12 @@ const isTopPage = currentPath === '/';
     </script>
   </head>
   <body class="scanlines vhs-distortion">
+    <div id="pull-to-refresh" class="ptr">
+      <div class="ptr-indicator">
+        <span class="ptr-spinner"></span>
+        <span class="ptr-text"></span>
+      </div>
+    </div>
     <HamburgerMenu currentPath={currentPath} />
     <Header />
     <div class="site-container">
@@ -67,5 +73,70 @@ const isTopPage = currentPath === '/';
     <footer class="footer">
       <p>&copy; 2018-2026 なんちゃらアイドル</p>
     </footer>
+    <script is:inline>
+      (function() {
+        var ptr = document.getElementById('pull-to-refresh');
+        if (!ptr) return;
+
+        var startY = 0;
+        var pulling = false;
+        var threshold = 60;
+
+        document.addEventListener('touchstart', function(e) {
+          if (window.scrollY !== 0) return;
+          if (document.body.style.overflow === 'hidden') return;
+          startY = e.touches[0].clientY;
+          pulling = true;
+          ptr.classList.remove('ready', 'refreshing');
+          ptr.classList.add('pulling');
+        }, { passive: true });
+
+        document.addEventListener('touchmove', function(e) {
+          if (!pulling) return;
+          if (document.body.style.overflow === 'hidden') {
+            pulling = false;
+            ptr.style.height = '';
+            ptr.classList.remove('pulling', 'ready');
+            return;
+          }
+
+          var dy = e.touches[0].clientY - startY;
+          if (dy < 0) {
+            ptr.style.height = '';
+            ptr.classList.remove('pulling', 'ready');
+            return;
+          }
+
+          // 抵抗感のある引っ張り（対数的に減衰）
+          var dist = Math.min(dy * 0.4, 120);
+          ptr.style.height = dist + 'px';
+
+          if (dist >= threshold) {
+            ptr.classList.add('ready');
+          } else {
+            ptr.classList.remove('ready');
+          }
+
+          if (window.scrollY === 0 && dy > 0) {
+            e.preventDefault();
+          }
+        }, { passive: false });
+
+        document.addEventListener('touchend', function() {
+          if (!pulling) return;
+          pulling = false;
+
+          if (ptr.classList.contains('ready')) {
+            ptr.classList.remove('pulling', 'ready');
+            ptr.classList.add('refreshing');
+            ptr.style.height = '';
+            location.reload();
+          } else {
+            ptr.style.height = '';
+            ptr.classList.remove('pulling', 'ready');
+          }
+        }, { passive: true });
+      })();
+    </script>
   </body>
 </html>

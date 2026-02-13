@@ -48,6 +48,7 @@ body {
   line-height: 1.6;
   min-height: 100vh;
   overflow-x: hidden;
+  overscroll-behavior-y: contain;
 }
 
 /* ==========================================
@@ -457,4 +458,83 @@ p {
 
 .mb-20 {
   margin-bottom: 20px;
+}
+
+/* ==========================================
+   Pull to Refresh（PWA用）
+   ========================================== */
+
+.ptr {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  z-index: 998;
+  transition: height 0.2s ease;
+}
+
+.ptr.pulling {
+  transition: none;
+}
+
+.ptr.refreshing {
+  height: 60px;
+}
+
+.ptr-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 60px;
+  color: var(--retro-cyan);
+  font-family: var(--font-digital);
+  font-size: 0.85rem;
+  text-shadow: 0 0 8px var(--retro-cyan);
+}
+
+.ptr-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(0, 255, 255, 0.3);
+  border-top-color: var(--retro-cyan);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.ptr.pulling .ptr-spinner,
+.ptr.ready .ptr-spinner {
+  opacity: 1;
+}
+
+.ptr.refreshing .ptr-spinner {
+  opacity: 1;
+  animation: ptr-spin 0.6s linear infinite;
+}
+
+.ptr.ready .ptr-text::after {
+  content: '↑ 離して更新';
+}
+
+.ptr.pulling .ptr-text::after {
+  content: '↓ 引っ張って更新';
+}
+
+.ptr.refreshing .ptr-text::after {
+  content: '更新中...';
+}
+
+@keyframes ptr-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ptr.refreshing .ptr-spinner {
+    animation: none;
+    border-color: var(--retro-cyan);
+  }
 }
