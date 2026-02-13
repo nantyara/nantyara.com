@@ -301,7 +301,7 @@
   slug: 20260228-timetree-91082109
   date: 2026-02-28 12:00:00 +0900
   title: S.B.Q.個人撮影会
-  site: S.B.Q.個人撮影会
+  site: Studio S.B.Q
   timetree_id: "2900084367391082109"
   content: |
     2月28日撮影会！20時から予約開始！
@@ -311,3 +311,5 @@
 
     あおはる
     https://studio.quinq.net/?p=18832&ymd=1772236800
+  images:
+    - /events/20260228-timetree-91082109.jpg
