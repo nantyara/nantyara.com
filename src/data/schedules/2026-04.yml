@@ -34,6 +34,8 @@
   timetree_id: "2834153386511844422"
   content: |
     TBD
+  images:
+    - /events/ottanta-dj.jpeg
 - id: event-20260430-timetree-65989253
   slug: 20260430-timetree-65989253
   date: 2026-04-30 19:00:00 +0900
