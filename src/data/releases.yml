@@ -215,3 +215,18 @@
   jacket_image: /releases/goodbye-my-girl.webp
   description: |
     「地下アイドル界の最終兵器」として知られるなんちゃらアイドルと豊田道倫による異色のコラボレーション。
+
+- id: release-015
+  title: キルミーソフトリー c/w いつかサウナで
+  artist: なんちゃらアイドル
+  release_date: 2026-03-25
+  type: single
+  format: 7"
+  label: なりすレコード
+  jacket_image: /releases/kill-me-softly.jpeg
+  description: |
+    なんちゃらアイドル5年ぶりとなる待望の7インチ。
+    驚愕の「全曲コラボレーションアルバム」からトモフスキー、ニーネをゲストに迎えた先行シングルカット。
+  tracks:
+    - A. キルミーソフトリー (なんちゃらアイドル loves TOMOVSKY)
+    - B. いつかサウナで (なんちゃらアイドル loves ニーネ)
