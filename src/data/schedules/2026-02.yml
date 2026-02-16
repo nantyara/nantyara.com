@@ -266,6 +266,14 @@
   images:
     - /events/20260222-swingy-1.jpeg
     - /events/20260222-swingy-2.jpeg
+- id: event-20260222-timetree-54888469
+  slug: 20260222-timetree-54888469
+  date: 2026-02-22 18:00:00 +0900
+  title: インストアイベント
+  site: インストアイベント
+  timetree_id: "2901718895754888469"
+  content: |
+    TBD
 - id: event-20260223-timetree-33624847
   slug: 20260223-timetree-33624847
   date: 2026-02-23 17:30:00 +0900

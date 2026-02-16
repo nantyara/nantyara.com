@@ -45,14 +45,26 @@ EOF
 # UNIXタイムスタンプ（ミリ秒）を取得
 get_timestamp_ms() {
     local date_str="$1"
-    date -j -f "%Y-%m-%d %H:%M:%S" "$date_str" "+%s" 2>/dev/null | awk '{print $1 * 1000}'
+    if date --version >/dev/null 2>&1; then
+        # GNU date (Linux)
+        date -d "$date_str" "+%s" 2>/dev/null | awk '{print $1 * 1000}'
+    else
+        # BSD date (macOS)
+        date -j -f "%Y-%m-%d %H:%M:%S" "$date_str" "+%s" 2>/dev/null | awk '{print $1 * 1000}'
+    fi
 }
 
 # UNIXタイムスタンプ（ミリ秒）を日時文字列に変換
 timestamp_to_date() {
     local timestamp_ms="$1"
     local timestamp_s=$((timestamp_ms / 1000))
-    date -r "$timestamp_s" "+%Y-%m-%d %H:%M:%S +0900"
+    if date --version >/dev/null 2>&1; then
+        # GNU date (Linux)
+        TZ=Asia/Tokyo date -d "@$timestamp_s" "+%Y-%m-%d %H:%M:%S +0900"
+    else
+        # BSD date (macOS)
+        date -r "$timestamp_s" "+%Y-%m-%d %H:%M:%S +0900"
+    fi
 }
 
 # イベントが既存のYAMLに存在するかチェック
@@ -101,10 +113,16 @@ main() {
     # 期間を計算
     local now=$(date "+%Y-%m-%d 00:00:00")
     local from_timestamp=$(get_timestamp_ms "$now")
-    local to_date=$(date -v+${months}m "+%Y-%m-%d 00:00:00")
+    if date --version >/dev/null 2>&1; then
+        local to_date=$(date -d "+${months} months" "+%Y-%m-%d 00:00:00")
+    else
+        local to_date=$(date -v+${months}m "+%Y-%m-%d 00:00:00")
+    fi
     local to_timestamp=$(get_timestamp_ms "$to_date")
 
-    echo -e "${COLOR_BOLD}Fetching events from $(date -j -f "%Y-%m-%d %H:%M:%S" "$now" "+%Y-%m-%d") to $(date -j -f "%Y-%m-%d %H:%M:%S" "$to_date" "+%Y-%m-%d")...${COLOR_RESET}"
+    local from_display=$(echo "$now" | cut -d' ' -f1)
+    local to_display=$(echo "$to_date" | cut -d' ' -f1)
+    echo -e "${COLOR_BOLD}Fetching events from ${from_display} to ${to_display}...${COLOR_RESET}"
     echo -e "${COLOR_DIM}API: ${API_BASE_URL}/public_calendars/${CALENDAR_ID}/public_events${COLOR_RESET}"
     echo ""
 
