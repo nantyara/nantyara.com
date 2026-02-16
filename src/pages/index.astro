@@ -129,7 +129,24 @@ const schedules = [...upcomingSchedules, ...pastSchedules];
 
     let currentFilter = 'upcoming';
 
-    // 12時間ルール: サーバー側で計算されたexpireTimeを使用
+    // 12時間ルール: クライアント側で現在時刻から再計算（ビルド時の値だと古くなるため）
+    const clientExpireTime = Date.now() - 12 * 60 * 60 * 1000;
+
+    // DOM要素を現在時刻基準で並び替え（upcoming昇順 → past降順）
+    if (scheduleList) {
+      const items = Array.from(scheduleItems);
+      items.sort((a, b) => {
+        const dateA = parseInt(a.dataset.date || '0');
+        const dateB = parseInt(b.dataset.date || '0');
+        const isUpcomingA = dateA >= clientExpireTime;
+        const isUpcomingB = dateB >= clientExpireTime;
+        if (isUpcomingA && !isUpcomingB) return -1;
+        if (!isUpcomingA && isUpcomingB) return 1;
+        if (isUpcomingA) return dateA - dateB;   // upcoming: 昇順
+        return dateB - dateA;                     // past: 降順
+      });
+      items.forEach(item => scheduleList.appendChild(item));
+    }
 
     const filterSchedules = () => {
       const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
@@ -143,9 +160,9 @@ const schedules = [...upcomingSchedules, ...pastSchedules];
         // フィルター条件
         let matchesFilter = false;
         if (currentFilter === 'upcoming') {
-          matchesFilter = date >= expireTime;
+          matchesFilter = date >= clientExpireTime;
         } else if (currentFilter === 'past') {
-          matchesFilter = date < expireTime;
+          matchesFilter = date < clientExpireTime;
         } else {
           matchesFilter = true; // all
         }
