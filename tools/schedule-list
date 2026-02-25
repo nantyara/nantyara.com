@@ -38,12 +38,14 @@ Arguments:
 Options:
     -u, --upcoming  今後のイベントのみ表示
     -a, --all       全てのイベントを表示（デフォルト）
+    -t, --tbd       画像あり＆content未記入(TBD)のイベントのみ表示
     -h, --help      このヘルプを表示
 
 Examples:
     $(basename "$0")                # 全イベント表示
     $(basename "$0") 2026-02        # 2026年2月のイベントを表示
     $(basename "$0") --upcoming     # 今後のイベントのみ表示
+    $(basename "$0") --tbd          # 画像あり＆TBDのイベントを表示
 
 EOF
 }
@@ -72,6 +74,7 @@ format_event() {
 main() {
     local filter_month=""
     local filter_upcoming=false
+    local filter_tbd=false
 
     # 引数解析
     while [[ $# -gt 0 ]]; do
@@ -82,6 +85,10 @@ main() {
                 ;;
             -u|--upcoming)
                 filter_upcoming=true
+                shift
+                ;;
+            -t|--tbd)
+                filter_tbd=true
                 shift
                 ;;
             -a|--all)
@@ -140,6 +147,16 @@ main() {
             local title=$(yq eval ".[$i].title" "$file")
             local site=$(yq eval ".[$i].site" "$file")
             local slug=$(yq eval ".[$i].slug" "$file")
+
+            # TBDフィルタ（--tbd オプションの場合）
+            if [[ "$filter_tbd" == true ]]; then
+                local content=$(yq eval ".[$i].content" "$file")
+                local images=$(yq eval ".[$i].images | length" "$file")
+                # 画像なし or contentがTBDでない場合はスキップ
+                if [[ "$images" -eq 0 ]] || [[ "$(echo "$content" | tr -d '[:space:]')" != "TBD" ]]; then
+                    continue
+                fi
+            fi
 
             # 日付でフィルタ（--upcoming オプションの場合）
             if [[ "$filter_upcoming" == true ]]; then
