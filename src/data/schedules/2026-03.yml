@@ -151,12 +151,27 @@
   content: "\n\U0001F5D33/20(金) \n\U0001F4CD西川口Galaxy(駅徒歩2分) \n⏰OP11:00/ST11:15 \n\U0001F3AB前売¥1400(+１D)/配信¥2500(驚異の10カメ高画質)\n"
 - id: event-20260320-timetree-10306739
   slug: 20260320-timetree-10306739
-  date: 2026-03-20 18:00:00 +0900
-  title: 大森風に吹かれて
+  date: 2026-03-20 17:30:00 +0900
+  title: 特盛音楽祭vol.10
   site: 大森風に吹かれて
   timetree_id: "2834151408310306739"
   content: |
-    TBD
+    特盛音楽祭vol.10
+
+    【出演】
+    藤岡藤巻without藤巻
+    柿島伸次
+    なんちゃらアイドル
+    S.B.Q.アイドル部
+    工藤ちゃん
+    ちえる
+
+    OPEN 17:00 / START 17:30
+    前売 ¥3,000 / 当日 ¥3,500（+1オーダー）
+
+    チケット予約: https://tiget.net/events/467946
+  images:
+    - /events/20260320-timetree-10306739.jpeg
 - id: event-20260321-timetree-18942954
   slug: 20260321-timetree-18942954
   date: 2026-03-21 12:00:00 +0900
