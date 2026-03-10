@@ -18,14 +18,23 @@ const getLabelClass = (label: string) => {
   return '';
 };
 
-// 日付フォーマット
+// 日付フォーマット（表示は常に日本時間）
 const formatDate = (d: Date) => {
-  const year = d.getFullYear();
-  const month = String(d.getMonth() + 1).padStart(2, '0');
-  const day = String(d.getDate()).padStart(2, '0');
-  const weekdays = ['日', '月', '火', '水', '木', '金', '土'];
-  const weekday = weekdays[d.getDay()];
-  return { year, month, day, weekday };
+  const parts = new Intl.DateTimeFormat('ja-JP', {
+    timeZone: 'Asia/Tokyo',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    weekday: 'short'
+  }).formatToParts(d);
+
+  const pick = (type: string) => parts.find(p => p.type === type)?.value || '';
+  return {
+    year: Number(pick('year')),
+    month: pick('month'),
+    day: pick('day'),
+    weekday: pick('weekday')
+  };
 };
 
 const dateInfo = formatDate(date);
