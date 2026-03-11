@@ -29,14 +29,38 @@
     - /events/20260403-timetree-08482961-2.jpeg
 - id: event-20260404-timetree-36279089
   slug: 20260404-timetree-36279089
-  date: 2026-04-04 12:00:00 +0900
-  title: 渋谷la.mama
-  site: 渋谷la.mama
+  date: 2026-04-04 11:30:00 +0900
+  title: 御茶海マミ 1stソロワンマンライブ「君じゃなきゃダメって言ってよ。」
+  site: 渋谷La.mama
   timetree_id: "2834152018036279089"
   labels:
     - マミソロ
   content: |
-    TBD
+    御茶海マミ 1stソロワンマンライブ
+    「君じゃなきゃダメって言ってよ。」
+
+    OPEN 11:30 / START 12:00
+    ¥3,000 +ドリンク代
+  images:
+    - /events/20260404-lamama.jpeg
+- id: event-20260411-km-music-nakano
+  slug: 20260411-km-music-nakano
+  date: 2026-04-11 16:00:00 +0900
+  title: 小林清美生誕祭ライブ〜2026 vol.1
+  site: K&Mミュージック中野店
+  content: |
+    小林清美生誕祭ライブ〜2026 vol.1
+
+    【出演】
+    yumenouragawa
+    なんちゃらアイドル
+    ぴっぴちゃん
+    森口しゅな
+
+    開場 16:00 / 開演 16:30
+    前売 ¥3,500 +1ドリンク
+  images:
+    - /events/20260411-km-music-nakano.jpeg
 - id: event-20260412-jimbocho-waiwaihall
   slug: 20260412-jimbocho-waiwaihall
   date: 2026-04-12 18:00:00 +0900
