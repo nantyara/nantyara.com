@@ -1,3 +1,21 @@
+- id: event-20260401-timetree-46736594
+  slug: 20260401-timetree-46736594
+  date: 2026-04-01 19:00:00 +0900
+  title: 大久保ひかりのうま
+  site: 大久保ひかりのうま
+  timetree_id: "2924397651346736594"
+  content: |
+    TBD
+- id: event-20260402-timetree-58638586
+  slug: 20260402-timetree-58638586
+  date: 2026-04-02 19:00:00 +0900
+  title: 大塚Welcome back
+  site: 大塚Welcome back
+  timetree_id: "2924398032558638586"
+  content: |
+    TBD
+  images:
+    - /events/20260402-timetree-58638586.jpg
 - id: event-20260403-timetree-08482961
   slug: 20260403-timetree-08482961
   date: 2026-04-03 18:30:00 +0900
@@ -43,11 +61,22 @@
     ¥3,000 +ドリンク代
   images:
     - /events/20260404-lamama.jpeg
+- id: event-20260408-timetree-77775746
+  slug: 20260408-timetree-77775746
+  date: 2026-04-08 19:00:00 +0900
+  title: Leaf room 豪徳寺
+  site: Leaf room 豪徳寺
+  timetree_id: "2924396387577775746"
+  content: |
+    TBD
+  images:
+    - /events/20260408-timetree-77775746.jpg
 - id: event-20260411-km-music-nakano
   slug: 20260411-km-music-nakano
   date: 2026-04-11 16:00:00 +0900
   title: 小林清美生誕祭ライブ〜2026 vol.1
   site: K&Mミュージック中野店
+  timetree_id: "2924406548597983064"
   content: |
     小林清美生誕祭ライブ〜2026 vol.1
 
@@ -66,6 +95,7 @@
   date: 2026-04-12 18:00:00 +0900
   title: 第二回 Hプロ音楽祭
   site: 神保町waiwaihall
+  timetree_id: "2924399414531474458"
   content: |
     2ND H-PRO MUSIC FESTIVAL
 
@@ -123,6 +153,14 @@
   timetree_id: "2719705059863709656"
   content: |
     TBD
+- id: event-20260422-timetree-44512418
+  slug: 20260422-timetree-44512418
+  date: 2026-04-22 09:00:00 +0900
+  title: 下北沢ちょ美ひげ
+  site: 下北沢ちょ美ひげ
+  timetree_id: "2924401288244512418"
+  content: |
+    レコ発ワンマン
 - id: event-20260425-timetree-25883542
   slug: 20260425-timetree-25883542
   date: 2026-04-25 13:00:00 +0900
@@ -138,6 +176,16 @@
     13時頃〜
     観覧無料
     ※入浴券を購入してお入りください
+- id: event-20260428-timetree-77529387
+  slug: 20260428-timetree-77529387
+  date: 2026-04-28 09:00:00 +0900
+  title: 新宿dranken shrimp
+  site: 新宿dranken shrimp
+  timetree_id: "2924400278977529387"
+  labels:
+    - あおはるソロ
+  content: |
+    TBD
 - id: event-20260429-timetree-11844422
   slug: 20260429-timetree-11844422
   date: 2026-04-29 19:00:00 +0900
