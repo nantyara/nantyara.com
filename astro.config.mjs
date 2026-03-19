@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config';
-import AstroPWA from '@vite-pwa/astro';
+import AstroPWA from './integrations/pwa';
 
 // https://astro.build/config
 export default defineConfig({

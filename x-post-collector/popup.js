@@ -126,7 +126,7 @@ downloadImagesBtn.addEventListener('click', async () => {
 });
 
 // content scriptからのメッセージを受信
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+chrome.runtime.onMessage.addListener((message, _sender, _sendResponse) => {
   if (message.action === 'updateProgress') {
     collectedPosts = message.posts;
     countEl.textContent = collectedPosts.length;

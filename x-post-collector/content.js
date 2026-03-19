@@ -6,7 +6,7 @@ let accountInfo = {
 };
 
 // メッセージリスナー
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+chrome.runtime.onMessage.addListener((message, _sender, _sendResponse) => {
   if (message.action === 'startCollecting') {
     startCollecting();
   } else if (message.action === 'stopCollecting') {
