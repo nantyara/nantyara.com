@@ -9,7 +9,6 @@ interface Props {
 
 const { title = 'なんちゃらアイドル' } = Astro.props;
 const currentPath = new URL(Astro.request.url).pathname;
-const isTopPage = currentPath === '/';
 ---
 
 <!doctype html>

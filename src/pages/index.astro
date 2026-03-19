@@ -202,7 +202,7 @@ const schedules = [...upcomingSchedules, ...pastSchedules];
 
     // モーダル関連
     const openModal = (title) => {
-      const schedule = schedules.find(s => s.title === title);
+      const schedule = schedules.find((s) => s.title === title);
       if (!schedule || !schedule.images || schedule.images.length === 0) return;
 
       modalTitle.textContent = title;
