@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig, fontProviders } from 'astro/config';
 import AstroPWA from './integrations/pwa';
 
 // https://astro.build/config
@@ -11,6 +11,23 @@ export default defineConfig({
   server: {
     port: 3000,
   },
+  fonts: [
+    {
+      provider: fontProviders.google(),
+      name: 'Yusei Magic',
+      cssVariable: '--font-yusei',
+    },
+    {
+      provider: fontProviders.google(),
+      name: 'Rampart One',
+      cssVariable: '--font-rampart',
+    },
+    {
+      provider: fontProviders.google(),
+      name: 'RocknRoll One',
+      cssVariable: '--font-rocknroll',
+    },
+  ],
   integrations: [
     AstroPWA({
       registerType: 'autoUpdate',
@@ -51,34 +68,6 @@ export default defineConfig({
         // ガチガチキャッシュ設定
         globPatterns: ['**/*.{js,css,html,ico,png,jpg,jpeg,svg,webp,woff,woff2,ttf,eot,otf}'],
         runtimeCaching: [
-          {
-            urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'google-fonts-cache',
-              expiration: {
-                maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365 // 1年
-              },
-              cacheableResponse: {
-                statuses: [0, 200]
-              }
-            }
-          },
-          {
-            urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'gstatic-fonts-cache',
-              expiration: {
-                maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365
-              },
-              cacheableResponse: {
-                statuses: [0, 200]
-              }
-            }
-          },
           {
             urlPattern: /^https:\/\/cdnjs\.cloudflare\.com\/.*/i,
             handler: 'CacheFirst',
