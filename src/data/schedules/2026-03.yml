@@ -220,10 +220,24 @@
   slug: 20260321-timetree-18942954
   date: 2026-03-21 12:00:00 +0900
   title: S.B.Q.個人撮影会
-  site: S.B.Q.個人撮影会
+  site: Studio S.B.Q（市ヶ谷）
   timetree_id: "2907116405918942954"
   content: |
-    TBD
+    3月21日（土）撮影会
+
+    御茶海マミ
+    https://studio.quinq.net/?p=18875&ymd=1774051200
+
+    あおはる
+    https://studio.quinq.net/?p=18878&ymd=1774051200
+
+    1枠45分 ¥10,000（動画オプション +¥4,000）
+    12:00〜21:00（全枠満了・キャンセル待ち受付中）
+
+    東京都新宿区市谷田町3-16
+    南北線市ヶ谷駅5番出口より徒歩4分
+  images:
+    - /events/sbq-studio.jpg
 - id: event-20260322-timetree-31538284
   slug: 20260322-timetree-31538284
   date: 2026-03-22 09:00:00 +0900
