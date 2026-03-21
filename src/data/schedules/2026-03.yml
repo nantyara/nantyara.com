@@ -240,12 +240,32 @@
     - /events/sbq-studio.jpg
 - id: event-20260322-timetree-31538284
   slug: 20260322-timetree-31538284
-  date: 2026-03-22 09:00:00 +0900
-  title: 六本木MAHARAJA
-  site: 六本木MAHARAJA
+  date: 2026-03-22 15:00:00 +0900
+  end: 2026-03-22 19:00:00 +0900
+  title: 爆音！サイバー演歌會 in MAHARAJA
+  site: MAHARAJA ANNEX（六本木）
   timetree_id: "2917019194631538284"
   content: |
-    TBD
+    爆音！サイバー演歌會 in MAHARAJA
+
+    【DJ】
+    プロハン巨匠&サイバー凡ちゃん
+    御庭番
+    とらとらとらお
+
+    【LIVE】
+    なんちゃらアイドル
+    雷音こずえ（サイバー出演）
+    花村紅（サイバー出演）
+
+    【VJ】
+    バベル
+
+    15:00〜19:00
+    Fee ¥3,000（1drink込）
+
+    MAHARAJA ANNEX
+    東京都港区六本木6-1-3 六門ビル7F
   images:
     - /events/20260322-timetree-31538284.jpg
 - id: event-20260324-timetree-77566658
