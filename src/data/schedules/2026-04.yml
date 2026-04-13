@@ -116,6 +116,16 @@
   images:
     - /events/20260412-jimbocho-waiwaihall-1.jpeg
     - /events/20260412-jimbocho-waiwaihall-2.jpeg
+- id: event-20260418-timetree-77163527
+  slug: 20260418-timetree-77163527
+  date: 2026-04-18 12:00:00 +0900
+  title: SALON a Spoonful Of Sugar
+  site: SALON a Spoonful Of Sugar
+  timetree_id: "2935166255277163527"
+  content: |
+    TBD
+  images:
+    - /events/20260418-timetree-77163527.jpg
 - id: event-20260418-timetree-83678436
   slug: 20260418-timetree-83678436
   date: 2026-04-18 15:00:00 +0900
@@ -145,6 +155,16 @@
     主催者（X:@DADAFES or punkyshgz@gmail.com）
   images:
     - /events/20260418-timetree-83678436.jpg
+- id: event-20260419-timetree-74454111
+  slug: 20260419-timetree-74454111
+  date: 2026-04-19 11:00:00 +0900
+  title: 大阪オフ会
+  site: 大阪オフ会
+  timetree_id: "2939368404974454111"
+  content: |
+    TBD
+
+    詳細: https://docs.google.com/forms/d/e/1FAIpQLSebWa0QYg8Bfn5iPLiUDL-kyWDtSl6-lElLgTeSp3ovAxEw6Q/viewform
 - id: event-20260419-timetree-63709656
   slug: 20260419-timetree-63709656
   date: 2026-04-19 19:00:00 +0900
@@ -176,6 +196,16 @@
     13時頃〜
     観覧無料
     ※入浴券を購入してお入りください
+- id: event-20260426-timetree-59513706
+  slug: 20260426-timetree-59513706
+  date: 2026-04-26 15:10:00 +0900
+  title: 八王子Time Tokyo
+  site: 八王子Time Tokyo
+  timetree_id: "2935165022059513706"
+  content: |
+    TBD
+  images:
+    - /events/20260426-timetree-59513706.jpg
 - id: event-20260428-timetree-77529387
   slug: 20260428-timetree-77529387
   date: 2026-04-28 09:00:00 +0900
