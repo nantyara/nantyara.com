@@ -16,6 +16,22 @@
     TBD
   images:
     - /events/20260502-timetree-40771323.jpg
+- id: event-20260503-timetree-72681568
+  slug: 20260503-timetree-72681568
+  date: 2026-05-03 12:00:00 +0900
+  title: SBQ個人撮影会
+  site: SBQ個人撮影会
+  timetree_id: "2956677759872681568"
+  content: |
+    TBD
+- id: event-20260504-timetree-95683771
+  slug: 20260504-timetree-95683771
+  date: 2026-05-04 09:00:00 +0900
+  title: 東新宿LOVE TKO
+  site: 東新宿LOVE TKO
+  timetree_id: "2956677955595683771"
+  content: |
+    TBD
 - id: event-20260505-timetree-71545425
   slug: 20260505-timetree-71545425
   date: 2026-05-05 12:00:00 +0900
