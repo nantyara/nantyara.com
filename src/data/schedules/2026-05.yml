@@ -131,6 +131,18 @@
     - あおはるソロ
   content: |
     TBD
+- id: event-20260523-timetree-41117096
+  slug: 20260523-timetree-41117096
+  date: 2026-05-23 09:00:00 +0900
+  title: コスホリック44
+  site: コスホリック44
+  timetree_id: "2965547696041117096"
+  labels:
+    - マミソロ
+  content: |
+    TBD
+  images:
+    - /events/20260523-timetree-41117096.jpg
 - id: event-20260524-timetree-31814486
   slug: 20260524-timetree-31814486
   date: 2026-05-24 10:00:00 +0900
@@ -149,6 +161,16 @@
   timetree_id: "2945301973479606025"
   content: |
     TBD
+- id: event-20260528-timetree-77990955
+  slug: 20260528-timetree-77990955
+  date: 2026-05-28 19:00:00 +0900
+  title: 町田ヒットパレード
+  site: 町田ヒットパレード
+  timetree_id: "2965549909777990955"
+  content: |
+    TBD
+  images:
+    - /events/20260528-timetree-77990955.jpg
 - id: event-20260530-timetree-26105091
   slug: 20260530-timetree-26105091
   date: 2026-05-30 19:00:00 +0900
