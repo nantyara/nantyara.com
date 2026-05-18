@@ -313,7 +313,9 @@ EOF
     done
 
     echo ""
-    echo -e "${COLOR_BOLD}${dry_run:+[DRY RUN] }Summary:${COLOR_RESET}"
+    local dry_run_label=""
+    [[ "$dry_run" == true ]] && dry_run_label="[DRY RUN] "
+    echo -e "${COLOR_BOLD}${dry_run_label}Summary:${COLOR_RESET}"
     echo "  Total events fetched: $event_count"
     echo "  New events to add: $total_added"
     echo "  Duplicate events skipped: $total_duplicate"
