@@ -74,6 +74,16 @@
   timetree_id: "2965557213520872790"
   content: |
     TBD
+- id: event-20260620-timetree-51078065
+  slug: 20260620-timetree-51078065
+  date: 2026-06-20 12:00:00 +0900
+  title: K＆Mミュージック中野店
+  site: K＆Mミュージック中野店
+  timetree_id: "2979805885251078065"
+  content: |
+    TBD
+  images:
+    - /events/20260620-timetree-51078065.jpg
 - id: event-20260621-timetree-24878829
   slug: 20260621-timetree-24878829
   date: 2026-06-21 12:00:00 +0900

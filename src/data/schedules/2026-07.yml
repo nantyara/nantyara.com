@@ -6,3 +6,61 @@
   timetree_id: "2965560390597101336"
   content: |
     TBD
+- id: event-20260704-timetree-01295027
+  slug: 20260704-timetree-01295027
+  date: 2026-07-04 09:00:00 +0900
+  title: イベント
+  site: イベント
+  timetree_id: "2966935731601295027"
+  content: |
+    TBD
+- id: event-20260706-timetree-10521025
+  slug: 20260706-timetree-10521025
+  date: 2026-07-06 18:00:00 +0900
+  title: 東新宿LOVE TKO
+  site: 東新宿LOVE TKO
+  timetree_id: "2966935897410521025"
+  content: |
+    TBD
+- id: event-20260713-timetree-68637822
+  slug: 20260713-timetree-68637822
+  date: 2026-07-13 18:00:00 +0900
+  title: 東新宿LOVE TKO
+  site: 東新宿LOVE TKO
+  timetree_id: "2966936094668637822"
+  content: |
+    TBD
+- id: event-20260720-timetree-50570383
+  slug: 20260720-timetree-50570383
+  date: 2026-07-20 18:00:00 +0900
+  title: 東新宿LOVE TKO
+  site: 東新宿LOVE TKO
+  timetree_id: "2966936438450570383"
+  labels:
+    - マミソロ
+  content: |
+    TBD
+- id: event-20260726-timetree-26010162
+  slug: 20260726-timetree-26010162
+  date: 2026-07-26 12:00:00 +0900
+  title: SBQ個人撮影会
+  site: SBQ個人撮影会
+  timetree_id: "2966936986126010162"
+  content: |
+    TBD
+- id: event-20260728-timetree-55895027
+  slug: 20260728-timetree-55895027
+  date: 2026-07-28 19:00:00 +0900
+  title: 渋谷La.mama
+  site: 渋谷La.mama
+  timetree_id: "2966937334655895027"
+  content: |
+    TBD
+- id: event-20260731-timetree-81114432
+  slug: 20260731-timetree-81114432
+  date: 2026-07-31 19:00:00 +0900
+  title: 蒲田オッタンタ
+  site: 蒲田オッタンタ
+  timetree_id: "2966937105781114432"
+  content: |
+    TBD
