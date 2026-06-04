@@ -1,11 +1,28 @@
 - id: event-20260603-timetree-55151210
   slug: 20260603-timetree-55151210
   date: 2026-06-03 19:00:00 +0900
-  title: 渋谷la.mama
-  site: 渋谷la.mama
+  title: 大人の文化祭 〜年に一度のsexy祭り！〜
+  site: 渋谷ラママ
   timetree_id: "2834154454155151210"
   content: |
-    TBD
+    大人の文化祭 〜年に一度のsexy祭り！〜
+    なんちゃらアイドル主催
+
+    2026年6月3日（水）
+    in 渋谷ラママ
+    18時半 OPEN / 19時 START
+    ¥2,500（drink別）
+    配信 ¥2,000
+
+    SPECIAL GUEST　さしみ娘
+
+    【出演】
+    S.B.Q.アイドル部
+    おきょー
+    元祖☆令嬢倶楽部
+    山村薫
+  images:
+    - /events/20260603-timetree-55151210.jpeg
 - id: event-20260604-timetree-76183143
   slug: 20260604-timetree-76183143
   date: 2026-06-04 18:00:00 +0900
@@ -59,14 +76,32 @@
     - /events/20260606-timetree-80373455.jpg
 - id: event-20260608-timetree-56762317
   slug: 20260608-timetree-56762317
-  date: 2026-06-08 18:00:00 +0900
-  title: 東新宿LOVE TKO
+  date: 2026-06-08 19:00:00 +0900
+  title: 隔月刊御茶マニ 6月号（vol.009）
   site: 東新宿LOVE TKO
   timetree_id: "2965554246956762317"
   labels:
     - マミソロ
   content: |
-    TBD
+    隔月刊御茶マニ 6月号（vol.009）
+
+    2026年6月8日（日）
+    会場　東新宿LOVE TKO
+    18時 OPEN / 19時00分 START
+    ¥1,500（drink別）
+
+    SPECIAL GUEST
+    NEKO
+    Momoka Kagamiya
+
+    -TIME TABLE-
+    19:00　Momoka Kagamiya
+    19:45　NEKO
+    20:30　御茶海マニ
+
+    guestに負けないように、御茶海もsexyに頑張るんば！
+  images:
+    - /events/20260608-timetree-56762317.jpeg
 - id: event-20260608-timetree-32945183
   slug: 20260608-timetree-32945183
   date: 2026-06-08 18:00:00 +0900

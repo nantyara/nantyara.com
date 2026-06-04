@@ -173,12 +173,28 @@
     - /events/20260528-timetree-77990955.jpg
 - id: event-20260530-timetree-26105091
   slug: 20260530-timetree-26105091
-  date: 2026-05-30 19:00:00 +0900
-  title: 渋谷la.mama
-  site: 渋谷la.mama
+  date: 2026-05-30 18:30:00 +0900
+  title: 大人の文化祭 〜Q太郎46歳の春だから〜
+  site: 渋谷ラママ
   timetree_id: "2834153931226105091"
   content: |
-    TBD
+    大人の文化祭 〜Q太郎46歳の春だから〜
+    HAPPY BIRTHDAY Q-Taro!
+
+    2026年5月30日（土）
+    in 渋谷ラママ
+    18時 OPEN / 18時半 START
+    ¥2,500（1drink別）
+
+    【出演】
+    なんちゃらアイドル
+    S.B.Q.アイドル部
+    S.B.Q.B.B.
+    MCあんにゅ
+    POPPY
+    プロハンバーガー
+  images:
+    - /events/20260530-timetree-26105091.jpeg
 - id: event-20260531-timetree-59353344
   slug: 20260531-timetree-59353344
   date: 2026-05-31 00:00:00 +0900
