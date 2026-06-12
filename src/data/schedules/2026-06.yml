@@ -74,6 +74,18 @@
     後援　ヴィータモールせいせき
   images:
     - /events/20260606-timetree-80373455.jpg
+- id: event-20260608-timetree-32945183
+  slug: 20260608-timetree-32945183
+  date: 2026-06-08 18:00:00 +0900
+  title: 四谷OUTBREAK
+  site: 四谷OUTBREAK
+  timetree_id: "2965555547232945183"
+  labels:
+    - あおはるソロ
+  content: |
+    田村ぬかりBAND 鍵盤サポート
+  images:
+    - /events/20260608-timetree-32945183.jpg
 - id: event-20260608-timetree-56762317
   slug: 20260608-timetree-56762317
   date: 2026-06-08 19:00:00 +0900
@@ -102,18 +114,6 @@
     guestに負けないように、御茶海もsexyに頑張るんば！
   images:
     - /events/20260608-timetree-56762317.jpeg
-- id: event-20260608-timetree-32945183
-  slug: 20260608-timetree-32945183
-  date: 2026-06-08 18:00:00 +0900
-  title: 四谷OUTBREAK
-  site: 四谷OUTBREAK
-  timetree_id: "2965555547232945183"
-  labels:
-    - あおはるソロ
-  content: |
-    田村ぬかりBAND 鍵盤サポート
-  images:
-    - /events/20260608-timetree-32945183.jpg
 - id: event-20260609-timetree-05529190
   slug: 20260609-timetree-05529190
   date: 2026-06-09 19:00:00 +0900
