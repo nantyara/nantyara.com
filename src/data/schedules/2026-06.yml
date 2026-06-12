@@ -137,6 +137,37 @@
     オフィスカジュアルズ
   images:
     - /events/20260609-timetree-05529190.jpg
+- id: event-20260612-antiknock
+  slug: 20260612-antiknock
+  date: 2026-06-12 19:00:00 +0900
+  end: 2026-06-12 22:30:00 +0900
+  title: MEMORIES Vol.9 in SHINJUKU ANTIKNOCK
+  site: 新宿ANTIKNOCK
+  content: |
+    MEMORIES Vol.9
+    in SHINJUKU ANTIKNOCK
+
+    2026年6月12日（金）
+    OPEN 18:30 / START 19:00
+
+    前売 ¥3,000 / 当日 ¥3,500（＋各1D）
+    メテフェス応援チケット ¥5,500
+    （ドリンク代込み / TIGHT集合写メ付き / お礼動画付き(後日)）
+
+    【出演】
+    世界逆転宣言！
+    なんちゃらアイドル
+    TIGHT
+
+    -TIME TABLE-
+    19:00〜19:15　開園宣言
+    19:15〜19:45　世界逆転宣言！
+    19:45〜20:15　なんちゃらアイドル
+    20:15〜20:45　TIGHT
+    20:45〜20:55　全体記念撮影
+    21:00〜22:30　終演後物販
+  images:
+    - /events/20260612-antiknock.jpeg
 - id: event-20260614-timetree-42116751
   slug: 20260614-timetree-42116751
   date: 2026-06-14 13:00:00 +0900
