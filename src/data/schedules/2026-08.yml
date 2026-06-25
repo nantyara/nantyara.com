@@ -6,12 +6,28 @@
   timetree_id: "2834154847396316177"
   content: |
     TBD
+- id: event-20260801-timetree-82861467
+  slug: 20260801-timetree-82861467
+  date: 2026-08-01 12:00:00 +0900
+  title: 横須賀ヤンガーザンイエスタデイ
+  site: 横須賀ヤンガーザンイエスタデイ
+  timetree_id: "2988700077582861467"
+  content: |
+    TBD
 - id: event-20260803-timetree-18571225
   slug: 20260803-timetree-18571225
   date: 2026-08-03 18:00:00 +0900
   title: 東新宿LOVE TKO
   site: 東新宿LOVE TKO
   timetree_id: "2966938567118571225"
+  content: |
+    TBD
+- id: event-20260806-timetree-43099834
+  slug: 20260806-timetree-43099834
+  date: 2026-08-06 12:00:00 +0900
+  title: 海の家
+  site: 海の家
+  timetree_id: "2994590271943099834"
   content: |
     TBD
 - id: event-20260808-timetree-01793792
