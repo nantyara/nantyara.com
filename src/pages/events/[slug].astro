@@ -23,10 +23,12 @@ interface ScheduleType {
   images?: string[];
   slug: string;
   labels?: string[];
+  /** 開催時刻が未確定（TimeTreeの仮時刻など）の場合 true */
+  time_tbd?: boolean;
 }
 
 const { schedule } = Astro.props as { schedule: ScheduleType };
-const { date, end, title, site, content, images, labels } = schedule;
+const { date, end, title, site, content, images, labels, time_tbd } = schedule;
 
 // ラベルの色を決定する関数
 const getLabelClass = (label: string) => {
@@ -57,6 +59,10 @@ const formatDate = (d: Date) => {
   const hour = parts.find(p => p.type === 'hour')?.value;
   const minute = parts.find(p => p.type === 'minute')?.value;
 
+  // 時刻未確定のイベントは仮時刻を出さない
+  if (time_tbd) {
+    return `${year}年${month}月${day}日(${weekday}) 時間未定`;
+  }
   return `${year}年${month}月${day}日(${weekday}) ${hour}:${minute}`;
 };
 
@@ -85,23 +91,34 @@ const formatGoogleCalDate = (d: Date) => {
 // イベント終了時刻（endフィールドがあればそれを使用、なければ開始から4時間後）
 const eventEndDate = end ? new Date(end) : new Date(eventDate.getTime() + 4 * 60 * 60 * 1000);
 
-// Google Calendar URL
+// Google Calendar用の日付フォーマット（終日イベント: YYYYMMDD）
+const formatGoogleCalDateOnly = (d: Date) => formatGoogleCalDate(d).slice(0, 8);
+
+// Google Calendar URL（時間未定は終日イベントとして登録）
 const googleCalendarUrl = new URL('https://calendar.google.com/calendar/render');
 googleCalendarUrl.searchParams.set('action', 'TEMPLATE');
 googleCalendarUrl.searchParams.set('text', title);
-googleCalendarUrl.searchParams.set('dates', `${formatGoogleCalDate(eventDate)}/${formatGoogleCalDate(eventEndDate)}`);
+if (time_tbd) {
+  const nextDay = new Date(eventDate.getTime() + 24 * 60 * 60 * 1000);
+  googleCalendarUrl.searchParams.set('dates', `${formatGoogleCalDateOnly(eventDate)}/${formatGoogleCalDateOnly(nextDay)}`);
+} else {
+  googleCalendarUrl.searchParams.set('dates', `${formatGoogleCalDate(eventDate)}/${formatGoogleCalDate(eventEndDate)}`);
+}
 const eventDetailUrl = `https://nantyara.com/events/${schedule.slug}`;
 const detailsWithUrl = content ? `${content}\n\nイベント詳細: ${eventDetailUrl}` : `イベント詳細: ${eventDetailUrl}`;
 googleCalendarUrl.searchParams.set('details', detailsWithUrl);
 googleCalendarUrl.searchParams.set('location', site);
 googleCalendarUrl.searchParams.set('ctz', 'Asia/Tokyo');
 
-// OGP用
+// OGP用（基本タグは Layout に集約。イベント固有のタグだけ slot で追加）
 const ogTitle = `${title} | なんちゃらアイドル`;
 const ogDescription = `${formatDate(eventDate)} @ ${site}`;
-const ogImage = images && images.length > 0
-  ? `https://nantyara.com${images[0]}`
-  : 'https://nantyara.com/img/ogp-default.png';
+const ogImage = images && images.length > 0 ? images[0] : '/img/ogp-default.png';
+
+// TBD（詳細未定）は内部用語をそのまま出さず「詳細は後日発表」に変換
+const trimmedContent = (content ?? '').trim();
+const isTBD = trimmedContent === 'TBD' || trimmedContent.startsWith('TBD\n');
+const displayContent = isTBD ? trimmedContent.replace(/^TBD\s*/, '') : trimmedContent;
 
 // コンテンツ内のURLを自動リンク化する関数
 const autoLinkUrls = (text: string): string => {
@@ -128,38 +145,15 @@ const autoLinkUrls = (text: string): string => {
   return linked.replace(/\n/g, '<br>');
 };
 
-const contentHtml = content ? autoLinkUrls(content) : '';
+const contentHtml = displayContent ? autoLinkUrls(displayContent) : '';
 ---
 
-<Layout title={ogTitle}>
+<Layout title={ogTitle} description={ogDescription} ogImage={ogImage} ogType="article">
   <Fragment slot="head">
-    <!-- Basic OGP -->
-    <meta property="og:title" content={ogTitle} />
-    <meta property="og:description" content={ogDescription} />
-    <meta property="og:image" content={ogImage} />
-    <meta property="og:type" content="event" />
-    <meta property="og:url" content={`https://nantyara.com/events/${schedule.slug}`} />
-    <meta property="og:site_name" content="なんちゃらアイドル" />
-    <meta property="og:locale" content="ja_JP" />
-
-    <!-- Image details -->
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content={title} />
-
     <!-- Event specific -->
     <meta property="event:start_time" content={eventDate.toISOString()} />
     <meta property="event:end_time" content={eventEndDate.toISOString()} />
     <meta property="event:location" content={site} />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={ogTitle} />
-    <meta name="twitter:description" content={ogDescription} />
-    <meta name="twitter:image" content={ogImage} />
-    <meta name="twitter:image:alt" content={title} />
-    <!-- <meta name="twitter:site" content="@account" /> -->
-    <!-- <meta name="twitter:creator" content="@account" /> -->
   </Fragment>
 
   <article class="event-detail">
@@ -183,13 +177,18 @@ const contentHtml = content ? autoLinkUrls(content) : '';
     <div class="event-info">
       <div class="venue-section">
         <h2 class="section-title">会場</h2>
-        <p class="venue-name">📍 {site}</p>
+        <p class="venue-name"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> {site}</p>
       </div>
 
       <div class="actions-section">
-        <a href={googleCalendarUrl.toString()} target="_blank" rel="noopener noreferrer" class="calendar-button">
-          📅 Googleカレンダーに追加
-        </a>
+        <div class="calendar-buttons">
+          <a href={googleCalendarUrl.toString()} target="_blank" rel="noopener noreferrer" class="calendar-button">
+            <i class="fa-brands fa-google" aria-hidden="true"></i> Googleカレンダーに追加
+          </a>
+          <a href={`/events/${schedule.slug}.ics`} class="calendar-button ics-button">
+            <i class="fa-solid fa-calendar-plus" aria-hidden="true"></i> カレンダーに追加 (.ics)
+          </a>
+        </div>
         <div class="share-buttons-wrapper">
           <ShareButtons
             url={`https://nantyara.com/events/${schedule.slug}`}
@@ -199,10 +198,16 @@ const contentHtml = content ? autoLinkUrls(content) : '';
         </div>
       </div>
 
-      {content && (
+      {(isTBD || contentHtml) && (
         <div class="event-content">
           <h2 class="section-title">詳細</h2>
-          <div class="content-text" set:html={contentHtml}></div>
+          {isTBD && (
+            <div class="tbd-notice">
+              <i class="fa-solid fa-bullhorn" aria-hidden="true"></i>
+              <span>詳細は後日発表</span>
+            </div>
+          )}
+          {contentHtml && <div class="content-text" set:html={contentHtml}></div>}
         </div>
       )}
     </div>
@@ -358,6 +363,27 @@ const contentHtml = content ? autoLinkUrls(content) : '';
     align-items: center;
   }
 
+  .calendar-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .tbd-notice {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 18px;
+    margin-bottom: 16px;
+    background: rgba(255, 214, 10, 0.08);
+    border: 1px dashed rgba(255, 214, 10, 0.5);
+    border-radius: 8px;
+    color: var(--retro-yellow);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
   .share-buttons-wrapper {
     display: flex;
     justify-content: center;
@@ -367,6 +393,7 @@ const contentHtml = content ? autoLinkUrls(content) : '';
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
     padding: 14px 28px;
     min-height: 48px;
     background: linear-gradient(135deg, var(--retro-cyan) 0%, var(--retro-purple) 100%);

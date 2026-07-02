@@ -18,6 +18,13 @@ const getLabelClass = (label: string) => {
   return '';
 };
 
+// メンバーカラーをカード枠のアクセントに反映
+const accentClass = labels?.includes('マミソロ')
+  ? 'accent-red'
+  : labels?.includes('あおはるソロ')
+    ? 'accent-blue'
+    : '';
+
 // 日付フォーマット（表示は常に日本時間）
 const formatDate = (d: Date) => {
   const parts = new Intl.DateTimeFormat('ja-JP', {
@@ -38,46 +45,21 @@ const formatDate = (d: Date) => {
 };
 
 const dateInfo = formatDate(date);
+
+// TBD（詳細未定）の扱い: 内部用語をそのまま出さず「詳細は後日発表」に変換。
+// 「TBD + 詳細リンク」の形式はリンク部分だけ残す。
+const trimmedContent = (content ?? '').trim();
+const isTBD = trimmedContent === 'TBD' || trimmedContent.startsWith('TBD\n');
+const displayContent = isTBD ? trimmedContent.replace(/^TBD\s*/, '') : trimmedContent;
+
+// 長文はカード内で折りたたむ（全文は詳細ページで読める）
+const isLongContent = displayContent.split('\n').length > 12;
+
+const Wrapper = slug ? 'a' : 'div';
 ---
 
-{slug ? (
-  <a href={`/events/${slug}`} class="schedule-card-link">
-    <article class="schedule-card">
-      <div
-        class={`card-header ${images && images.length > 0 ? 'has-image' : 'stripe-pattern'}`}
-        style={images && images.length > 0 ? `background-image: url('${images[0]}')` : ''}
-      >
-        <div class="header-top">
-          <div class="date-badge">
-            <span class="date-year">{dateInfo.year}</span>
-            <span class="date-main">{dateInfo.month}/{dateInfo.day}</span>
-            <span class="date-weekday">({dateInfo.weekday})</span>
-          </div>
-          {labels && labels.length > 0 && (
-            <div class="labels-container">
-              {labels.map((label) => (
-                <span class={`label-tag ${getLabelClass(label)}`}>{label}</span>
-              ))}
-            </div>
-          )}
-        </div>
-        <h3 class="card-title">{title}</h3>
-      </div>
-
-      <div class="card-body">
-        <div class="venue-info">
-          <span class="venue-icon">📍</span>
-          <span class="venue-name">{site}</span>
-        </div>
-
-        {content && (
-          <pre class="event-details">{content}</pre>
-        )}
-      </div>
-    </article>
-  </a>
-) : (
-  <article class="schedule-card">
+<Wrapper href={slug ? `/events/${slug}` : undefined} class="schedule-card-link">
+  <article class={`schedule-card ${accentClass}`}>
     <div
       class={`card-header ${images && images.length > 0 ? 'has-image' : 'stripe-pattern'}`}
       style={images && images.length > 0 ? `background-image: url('${images[0]}')` : ''}
@@ -101,16 +83,27 @@ const dateInfo = formatDate(date);
 
     <div class="card-body">
       <div class="venue-info">
-        <span class="venue-icon">📍</span>
+        <i class="venue-icon fa-solid fa-location-dot" aria-hidden="true"></i>
         <span class="venue-name">{site}</span>
       </div>
 
-      {content && (
-        <pre class="event-details">{content}</pre>
+      {isTBD && (
+        <div class="tbd-notice">
+          <i class="fa-solid fa-bullhorn" aria-hidden="true"></i>
+          <span>詳細は後日発表</span>
+        </div>
+      )}
+
+      {displayContent && (
+        <div class={`event-details ${isLongContent ? 'clamped' : ''}`}>{displayContent}</div>
+      )}
+
+      {isLongContent && slug && (
+        <div class="read-more">続きは詳細ページで <i class="fa-solid fa-angles-right" aria-hidden="true"></i></div>
       )}
     </div>
   </article>
-)}
+</Wrapper>
 
 <style>
   .schedule-card-link {
@@ -122,7 +115,10 @@ const dateInfo = formatDate(date);
   .schedule-card {
     display: flex;
     flex-direction: column;
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    height: 100%;
     background: linear-gradient(135deg, var(--bg-medium) 0%, var(--bg-dark) 100%);
     border: 2px solid var(--retro-pink);
     border-radius: 12px;
@@ -132,6 +128,23 @@ const dateInfo = formatDate(date);
       0 0 20px rgba(255, 110, 199, 0.3),
       inset 0 0 30px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
+  }
+
+  /* メンバーカラーのアクセント（マミ=赤 / あおはる=青） */
+  .schedule-card.accent-red {
+    border-color: #ff5252;
+    box-shadow:
+      0 4px 0 rgba(0, 0, 0, 0.3),
+      0 0 20px rgba(255, 23, 68, 0.35),
+      inset 0 0 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .schedule-card.accent-blue {
+    border-color: #448aff;
+    box-shadow:
+      0 4px 0 rgba(0, 0, 0, 0.3),
+      0 0 20px rgba(41, 121, 255, 0.35),
+      inset 0 0 30px rgba(0, 0, 0, 0.3);
   }
 
   .schedule-card-link:hover .schedule-card,
@@ -165,8 +178,14 @@ const dateInfo = formatDate(date);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
+  /* タイトルの可読性を確保するグラデーションスクリム
+     （上下を濃く・中央は薄くしてフライヤーを見せる） */
   .card-header.has-image::before {
     content: '';
     position: absolute;
@@ -174,7 +193,13 @@ const dateInfo = formatDate(date);
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.15) 40%,
+      rgba(0, 0, 0, 0.2) 60%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
     z-index: 0;
   }
 
@@ -228,8 +253,8 @@ const dateInfo = formatDate(date);
     color: white;
     margin: 0;
     text-shadow:
-      2px 2px 0 rgba(0, 0, 0, 0.5),
-      0 0 10px rgba(255, 255, 255, 0.5);
+      0 1px 3px rgba(0, 0, 0, 0.9),
+      0 0 12px rgba(0, 0, 0, 0.8);
     line-height: 1.4;
   }
 
@@ -249,7 +274,8 @@ const dateInfo = formatDate(date);
   }
 
   .venue-icon {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    color: var(--retro-pink);
   }
 
   .venue-name {
@@ -287,6 +313,20 @@ const dateInfo = formatDate(date);
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3), 0 0 10px rgba(41, 121, 255, 0.5);
   }
 
+  .tbd-notice {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    background: rgba(255, 214, 10, 0.08);
+    border: 1px dashed rgba(255, 214, 10, 0.5);
+    border-radius: 4px;
+    color: var(--retro-yellow);
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
   .event-details {
     font-family: var(--font-base);
     font-size: 0.9rem;
@@ -301,13 +341,23 @@ const dateInfo = formatDate(date);
     word-wrap: break-word;
   }
 
+  /* 長文はカード内で折りたたみ、下端をフェードアウト */
+  .event-details.clamped {
+    max-height: 18em;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(180deg, #000 70%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 70%, transparent 100%);
+  }
+
+  .read-more {
+    margin-top: 8px;
+    text-align: right;
+    font-size: 0.85rem;
+    color: var(--retro-cyan);
+  }
+
   /* レスポンシブ対応 */
   @media (max-width: 768px) {
-    .schedule-card {
-      width: 100%;
-      max-width: 100%;
-    }
-
     .card-header {
       padding: 16px;
     }

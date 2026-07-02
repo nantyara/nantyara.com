@@ -1,19 +1,11 @@
 ---
+import { navItems } from '../data/nav';
+
 interface Props {
   currentPath: string;
 }
 
 const { currentPath } = Astro.props;
-
-const menuItems = [
-  { href: '/', label: 'ライブ予定', icon: '📅' },
-  { href: '/releases', label: '音源', icon: '🎵' },
-  { href: '/members', label: 'メンバー', icon: '👥' },
-  { href: '/history', label: '沿革', icon: '📖' },
-  { href: '/gallery', label: 'ギャラリー', icon: '📸' },
-  { href: '/links', label: 'リンク', icon: '🔗' },
-  { href: '/contact', label: 'お問い合わせ', icon: '✉️' },
-];
 ---
 
 <nav class="hamburger-nav">
@@ -30,17 +22,20 @@ const menuItems = [
   <div class="menu-drawer">
     <div class="menu-header">
       <h2 class="menu-title">MENU</h2>
+      <button class="menu-close" aria-label="メニューを閉じる">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
     </div>
 
     <ul class="menu-list">
-      {menuItems.map(item => (
+      {navItems.map(item => (
         <li class="menu-item">
           <a
             href={item.href}
             class={`menu-link ${currentPath === item.href ? 'active' : ''}`}
             aria-current={currentPath === item.href ? 'page' : undefined}
           >
-            <span class="menu-icon">{item.icon}</span>
+            <i class={`menu-icon ${item.icon}`} aria-hidden="true"></i>
             <span class="menu-label">{item.label}</span>
           </a>
         </li>
@@ -85,11 +80,34 @@ const menuItems = [
 
     hamburgerButton?.addEventListener('click', toggleMenu);
     menuOverlay?.addEventListener('click', closeMenu);
+    document.querySelector('.menu-close')?.addEventListener('click', closeMenu);
+
+    // ESCキーでも閉じる
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && menuDrawer?.classList.contains('open')) {
+        closeMenu();
+      }
+    });
 
     // メニューリンククリック時も閉じる
     document.querySelectorAll('.menu-link').forEach(link => {
       link.addEventListener('click', closeMenu);
     });
+
+    // 下スクロールでFABを隠す（コンテンツと被らないように）
+    let lastY = window.scrollY;
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const y = window.scrollY;
+        const shouldHide = y > lastY && y > 150 && !menuDrawer?.classList.contains('open');
+        hamburgerButton?.classList.toggle('fab-hidden', shouldHide);
+        lastY = y;
+        ticking = false;
+      });
+    }, { passive: true });
 
     // ボタン位置トグル（イベントデリゲーション）
     const updateToggleUI = () => {
@@ -150,6 +168,20 @@ const menuItems = [
   :global(html[data-menu-position="left"]) .hamburger-button {
     right: auto;
     left: 20px;
+  }
+
+  /* 下スクロール中は画面外へ */
+  .hamburger-button.fab-hidden {
+    transform: translateY(calc(100% + 40px));
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* PC幅ではヘッダーナビがあるのでFABは出さない */
+  @media (min-width: 1024px) {
+    .hamburger-button {
+      display: none;
+    }
   }
 
   .hamburger-button:hover {
@@ -240,6 +272,23 @@ const menuItems = [
     letter-spacing: 4px;
   }
 
+  .menu-close {
+    width: 44px;
+    height: 44px;
+    background: rgba(0, 0, 0, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .menu-close:hover {
+    background: rgba(0, 0, 0, 0.45);
+    transform: rotate(90deg);
+  }
+
   /* メニューリスト */
   .menu-list {
     list-style: none;
@@ -278,9 +327,14 @@ const menuItems = [
   }
 
   .menu-icon {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     width: 40px;
     text-align: center;
+    color: var(--pastel-lavender);
+  }
+
+  .menu-link.active .menu-icon {
+    color: var(--retro-cyan);
   }
 
   .menu-label {

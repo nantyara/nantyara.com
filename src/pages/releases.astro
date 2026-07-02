@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import ReleaseCard from '../components/ReleaseCard.astro';
 import { readFileSync } from 'node:fs';
 import { parse } from 'yaml';
 
@@ -11,38 +10,166 @@ const releases = parse(releasesYaml);
 const sortedReleases = releases.sort((a: any, b: any) =>
   new Date(b.release_date).getTime() - new Date(a.release_date).getTime()
 );
+
+const typeLabels: Record<string, string> = {
+  album: 'アルバム',
+  single: 'シングル',
+  ep: 'EP',
+};
+
+const releaseYear = (dateStr: string) => new Date(dateStr).getFullYear();
 ---
 
-<Layout title="音源 | なんちゃらアイドル">
-  <div class="releases-container">
+<Layout
+  title="音源 | なんちゃらアイドル"
+  description="なんちゃらアイドルのリリース音源一覧"
+>
+  <div class="releases-grid">
     {sortedReleases.map((release: any) => (
-      <ReleaseCard {...release} />
+      <a href={`/releases/${release.id}`} class="release-tile">
+        <div class="jacket-wrapper">
+          <img
+            src={release.jacket_image}
+            alt={`${release.title} のジャケット`}
+            class="jacket-image"
+            loading="lazy"
+          />
+          <span class={`type-badge type-${release.type}`}>
+            {typeLabels[release.type] ?? release.type}
+          </span>
+        </div>
+        <div class="tile-info">
+          <div class="tile-title">{release.title}</div>
+          <div class="tile-meta">
+            <span class="tile-year">{releaseYear(release.release_date)}</span>
+            <span class="tile-format">{release.format}</span>
+          </div>
+        </div>
+      </a>
     ))}
   </div>
 </Layout>
 
 <style>
-  .releases-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
+  .releases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 28px;
     padding: 20px;
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
   }
 
+  .release-tile {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.25s ease;
+  }
+
+  .release-tile:hover {
+    transform: translateY(-6px);
+  }
+
+  .jacket-wrapper {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    border: 2px solid var(--retro-purple);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow:
+      0 4px 0 rgba(0, 0, 0, 0.3),
+      0 0 15px rgba(157, 78, 221, 0.3);
+    transition: all 0.25s ease;
+  }
+
+  .release-tile:hover .jacket-wrapper {
+    border-color: var(--retro-cyan);
+    box-shadow:
+      0 8px 0 rgba(0, 0, 0, 0.3),
+      0 0 25px rgba(0, 255, 255, 0.5);
+  }
+
+  .jacket-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .type-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: white;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--retro-purple) 0%, var(--retro-pink) 100%);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 110, 199, 0.4);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .type-badge.type-album {
+    background: linear-gradient(135deg, var(--retro-cyan) 0%, var(--retro-purple) 100%);
+  }
+
+  .tile-info {
+    padding: 12px 4px 0;
+  }
+
+  .tile-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-light);
+    line-height: 1.4;
+    margin-bottom: 4px;
+  }
+
+  .release-tile:hover .tile-title {
+    color: var(--retro-cyan);
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+  }
+
+  .tile-meta {
+    display: flex;
+    gap: 12px;
+    font-family: var(--font-digital);
+    font-size: 0.85rem;
+    color: var(--pastel-lavender);
+  }
+
   @media (max-width: 768px) {
-    .releases-container {
+    .releases-grid {
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
       gap: 20px;
       padding: 15px;
     }
   }
 
   @media (max-width: 480px) {
-    .releases-container {
-      gap: 15px;
+    .releases-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
       padding: 10px;
+    }
+
+    .tile-title {
+      font-size: 0.9rem;
+    }
+  }
+
+  /* アニメーション無効化（アクセシビリティ） */
+  @media (prefers-reduced-motion: reduce) {
+    .release-tile,
+    .jacket-wrapper {
+      transition: none !important;
+    }
+
+    .release-tile:hover {
+      transform: none;
     }
   }
 </style>

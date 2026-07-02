@@ -6,63 +6,110 @@ import { loadAllSchedules } from '../utils/schedules';
 // YAMLファイル読み込み（全ての schedules/*.yml を統合）
 const allSchedules = loadAllSchedules();
 
-// 12時間ルール: 現在時刻 - 12時間を基準に振り分け
+// 昇順（古→新）の全イベント
+const schedules = [...allSchedules].sort(
+  (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+);
+
+// 12時間ルール: 現在時刻 - 12時間を基準に「今後」を判定（クライアント側でも再計算する）
 const expireTime = Date.now() - 12 * 60 * 60 * 1000;
 
-// 今後の予定（昇順：直近→未来）
-const upcomingSchedules = allSchedules
-  .filter(s => new Date(s.date).getTime() >= expireTime)
-  .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+// NEXT LIVE（直近の今後イベント）
+const nextLive = schedules.find(s => new Date(s.date).getTime() >= expireTime) ?? null;
 
-// 過去の予定（降順：新しい→古い）
-const pastSchedules = allSchedules
-  .filter(s => new Date(s.date).getTime() < expireTime)
-  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+// 月ごとにグルーピング（JST基準）
+const monthPartsFmt = new Intl.DateTimeFormat('ja-JP', {
+  timeZone: 'Asia/Tokyo',
+  year: 'numeric',
+  month: '2-digit',
+});
 
-// 結合（今後 → 過去の順）
-const schedules = [...upcomingSchedules, ...pastSchedules];
+const monthGroups: { key: string; label: string; items: typeof schedules }[] = [];
+for (const schedule of schedules) {
+  const parts = monthPartsFmt.formatToParts(new Date(schedule.date));
+  const year = parts.find(p => p.type === 'year')?.value ?? '';
+  const month = parts.find(p => p.type === 'month')?.value ?? '';
+  const key = `${year}-${month}`;
+  let group = monthGroups.find(g => g.key === key);
+  if (!group) {
+    group = { key, label: `${year}年${Number(month)}月`, items: [] };
+    monthGroups.push(group);
+  }
+  group.items.push(schedule);
+}
+
+// NEXT LIVE 用の日時表示
+const nextLiveDateFmt = (d: Date, timeTbd: boolean) => {
+  const parts = new Intl.DateTimeFormat('ja-JP', {
+    timeZone: 'Asia/Tokyo',
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric',
+    weekday: 'short',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false,
+  }).formatToParts(d);
+  const pick = (type: string) => parts.find(p => p.type === type)?.value || '';
+  const base = `${pick('year')}年${pick('month')}月${pick('day')}日(${pick('weekday')})`;
+  return timeTbd ? `${base} 時間未定` : `${base} ${pick('hour')}:${pick('minute')}`;
+};
 ---
 
-<Layout title="ライブ予定 | なんちゃらアイドル">
-  <Fragment slot="head">
-    <!-- Basic OGP -->
-    <meta property="og:title" content="ライブ予定 | なんちゃらアイドル" />
-    <meta property="og:description" content="なんちゃらアイドル公式サイト" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://nantyara.com" />
-    <meta property="og:site_name" content="なんちゃらアイドル" />
-    <meta property="og:locale" content="ja_JP" />
-    <meta property="og:image" content="https://nantyara.com/img/ogp-default.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="なんちゃらアイドル" />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="ライブ予定 | なんちゃらアイドル" />
-    <meta name="twitter:description" content="なんちゃらアイドル公式サイト" />
-    <meta name="twitter:image" content="https://nantyara.com/img/ogp-default.png" />
-    <meta name="twitter:image:alt" content="なんちゃらアイドル" />
-  </Fragment>
+<Layout
+  title="ライブ予定 | なんちゃらアイドル"
+  description="なんちゃらアイドルのライブ・イベントスケジュール"
+>
+  {nextLive && (
+    <a
+      class="next-live"
+      href={`/events/${nextLive.slug}`}
+      data-date={new Date(nextLive.date).getTime()}
+    >
+      <div class="next-live-badge">
+        <i class="fa-solid fa-star" aria-hidden="true"></i> NEXT LIVE
+      </div>
+      <div class="next-live-inner">
+        {nextLive.images && nextLive.images.length > 0 && (
+          <img
+            class="next-live-flyer"
+            src={nextLive.images[0]}
+            alt={`${nextLive.title} のフライヤー`}
+            loading="eager"
+          />
+        )}
+        <div class="next-live-info">
+          <div class="next-live-date">{nextLiveDateFmt(new Date(nextLive.date), !!nextLive.time_tbd)}</div>
+          <h2 class="next-live-title">{nextLive.title}</h2>
+          <div class="next-live-site">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            {nextLive.site}
+          </div>
+          <div class="next-live-countdown" id="next-live-countdown"></div>
+        </div>
+      </div>
+    </a>
+  )}
 
   <div class="schedule-controls">
     <div class="filter-buttons">
       <button class="filter-btn active" data-filter="upcoming">
-        📅 今後の予定
+        <i class="fa-solid fa-calendar-days" aria-hidden="true"></i> 今後の予定
       </button>
       <button class="filter-btn" data-filter="past">
-        📜 過去の予定
+        <i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i> 過去の予定
       </button>
       <button class="filter-btn" data-filter="all">
-        📋 すべて
+        <i class="fa-solid fa-list" aria-hidden="true"></i> すべて
       </button>
     </div>
 
     <div class="search-box">
+      <i class="search-icon fa-solid fa-magnifying-glass" aria-hidden="true"></i>
       <input
         type="text"
         id="search-input"
-        placeholder="🔍 イベント名や会場を検索..."
+        placeholder="イベント名や会場を検索..."
         class="search-input"
       />
     </div>
@@ -75,23 +122,31 @@ const schedules = [...upcomingSchedules, ...pastSchedules];
         <p>現在、予定されているイベントはありません。</p>
       </div>
     ) : (
-      schedules.map(schedule => (
-        <div
-          class="schedule-item"
-          data-date={new Date(schedule.date).getTime()}
-          data-title={schedule.title.toLowerCase()}
-          data-site={schedule.site.toLowerCase()}
-        >
-          <ScheduleCard
-            date={new Date(schedule.date)}
-            title={schedule.title}
-            site={schedule.site}
-            content={schedule.content}
-            images={schedule.images}
-            slug={schedule.slug}
-            labels={schedule.labels}
-          />
-        </div>
+      monthGroups.map(group => (
+        <section class="month-group" data-month={group.key}>
+          <h2 class="month-heading"><span>{group.label}</span></h2>
+          <div class="month-items">
+            {group.items.map(schedule => (
+              <div
+                class="schedule-item"
+                data-date={new Date(schedule.date).getTime()}
+                data-title={schedule.title.toLowerCase()}
+                data-site={schedule.site.toLowerCase()}
+                data-labels={(schedule.labels ?? []).join(' ').toLowerCase()}
+              >
+                <ScheduleCard
+                  date={new Date(schedule.date)}
+                  title={schedule.title}
+                  site={schedule.site}
+                  content={schedule.content}
+                  images={schedule.images}
+                  slug={schedule.slug}
+                  labels={schedule.labels}
+                />
+              </div>
+            ))}
+          </div>
+        </section>
       ))
     )}
   </div>
@@ -100,161 +155,266 @@ const schedules = [...upcomingSchedules, ...pastSchedules];
     <div class="title">該当するイベントがありません</div>
     <p>検索条件を変更してください。</p>
   </div>
-
-  <!-- モーダル -->
-  <div id="schedule-modal" class="modal">
-    <div class="modal-overlay"></div>
-    <div class="modal-content">
-      <button class="modal-close" aria-label="閉じる">✕</button>
-      <div class="modal-body">
-        <h2 id="modal-title" class="modal-title"></h2>
-        <div id="modal-images" class="modal-images"></div>
-      </div>
-    </div>
-  </div>
 </Layout>
 
-<script is:inline define:vars={{ schedules, expireTime }}>
+<script is:inline>
   document.addEventListener('DOMContentLoaded', () => {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const searchInput = document.getElementById('search-input');
     const scheduleList = document.getElementById('schedule-list');
-    const scheduleItems = document.querySelectorAll('.schedule-item');
+    const scheduleItems = Array.from(document.querySelectorAll('.schedule-item'));
+    const monthGroups = Array.from(document.querySelectorAll('.month-group'));
     const noResults = document.getElementById('no-results');
-    const modal = document.getElementById('schedule-modal');
-    const modalClose = document.querySelector('.modal-close');
-    const modalOverlay = document.querySelector('.modal-overlay');
-    const modalTitle = document.getElementById('modal-title');
-    const modalImages = document.getElementById('modal-images');
-
-    let currentFilter = 'upcoming';
 
     // 12時間ルール: クライアント側で現在時刻から再計算（ビルド時の値だと古くなるため）
     const clientExpireTime = Date.now() - 12 * 60 * 60 * 1000;
 
-    // DOM要素を現在時刻基準で並び替え（upcoming昇順 → past降順）
-    if (scheduleList) {
-      const items = Array.from(scheduleItems);
-      items.sort((a, b) => {
-        const dateA = parseInt(a.dataset.date || '0');
-        const dateB = parseInt(b.dataset.date || '0');
-        const isUpcomingA = dateA >= clientExpireTime;
-        const isUpcomingB = dateB >= clientExpireTime;
-        if (isUpcomingA && !isUpcomingB) return -1;
-        if (!isUpcomingA && isUpcomingB) return 1;
-        if (isUpcomingA) return dateA - dateB;   // upcoming: 昇順
-        return dateB - dateA;                     // past: 降順
+    // URLクエリから初期状態を復元（?filter=past&q=渋谷 みたいに共有できる）
+    const params = new URLSearchParams(location.search);
+    let currentFilter = params.get('filter') || 'upcoming';
+    if (!['upcoming', 'past', 'all'].includes(currentFilter)) currentFilter = 'upcoming';
+    if (searchInput && params.get('q')) searchInput.value = params.get('q');
+
+    const syncURL = () => {
+      const p = new URLSearchParams();
+      if (currentFilter !== 'upcoming') p.set('filter', currentFilter);
+      const q = searchInput ? searchInput.value.trim() : '';
+      if (q) p.set('q', q);
+      const qs = p.toString();
+      history.replaceState(null, '', location.pathname + (qs ? '?' + qs : ''));
+    };
+
+    // 並び順: 今後・すべて=昇順（直近が上）、過去=降順（新しい過去が上）
+    const applyOrder = (desc) => {
+      if (!scheduleList) return;
+      const groups = [...monthGroups].sort((a, b) => {
+        const ka = a.dataset.month || '';
+        const kb = b.dataset.month || '';
+        return desc ? kb.localeCompare(ka) : ka.localeCompare(kb);
       });
-      items.forEach(item => scheduleList.appendChild(item));
-    }
+      groups.forEach(g => scheduleList.appendChild(g));
+      groups.forEach(g => {
+        const wrap = g.querySelector('.month-items');
+        if (!wrap) return;
+        const items = Array.from(wrap.children).sort((x, y) => {
+          const dx = parseInt(x.dataset.date || '0');
+          const dy = parseInt(y.dataset.date || '0');
+          return desc ? dy - dx : dx - dy;
+        });
+        items.forEach(i => wrap.appendChild(i));
+      });
+    };
 
     const filterSchedules = () => {
-      const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
+      const searchTerm = searchInput ? searchInput.value.toLowerCase().trim() : '';
       let visibleCount = 0;
 
       scheduleItems.forEach(item => {
         const date = parseInt(item.dataset.date || '0');
-        const title = item.dataset.title || '';
-        const site = item.dataset.site || '';
+        const haystack = [item.dataset.title, item.dataset.site, item.dataset.labels].join(' ');
 
-        // フィルター条件
-        let matchesFilter = false;
+        let matchesFilter = true;
         if (currentFilter === 'upcoming') {
           matchesFilter = date >= clientExpireTime;
         } else if (currentFilter === 'past') {
           matchesFilter = date < clientExpireTime;
-        } else {
-          matchesFilter = true; // all
         }
 
-        // 検索条件
-        const matchesSearch = !searchTerm ||
-          title.includes(searchTerm) ||
-          site.includes(searchTerm);
-
-        if (matchesFilter && matchesSearch) {
-          item.style.display = 'block';
-          visibleCount++;
-        } else {
-          item.style.display = 'none';
-        }
+        const matchesSearch = !searchTerm || haystack.includes(searchTerm);
+        const visible = matchesFilter && matchesSearch;
+        item.style.display = visible ? 'block' : 'none';
+        if (visible) visibleCount++;
       });
 
-      // 結果がない場合
-      if (scheduleList) scheduleList.style.display = visibleCount > 0 ? 'flex' : 'none';
+      // イベントが1件も見えない月は月見出しごと隠す
+      monthGroups.forEach(group => {
+        const hasVisible = Array.from(group.querySelectorAll('.schedule-item'))
+          .some(item => item.style.display !== 'none');
+        group.style.display = hasVisible ? 'block' : 'none';
+      });
+
+      if (scheduleList) scheduleList.style.display = visibleCount > 0 ? 'block' : 'none';
       if (noResults) noResults.style.display = visibleCount === 0 ? 'block' : 'none';
     };
 
-    // フィルターボタンのクリックイベント
+    const applyFilter = () => {
+      filterButtons.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.filter === currentFilter);
+      });
+      applyOrder(currentFilter === 'past');
+      filterSchedules();
+      syncURL();
+    };
+
     filterButtons.forEach(button => {
       button.addEventListener('click', () => {
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
         currentFilter = button.dataset.filter || 'all';
-        filterSchedules();
+        applyFilter();
       });
     });
 
-    // 検索入力イベント
     if (searchInput) {
-      searchInput.addEventListener('input', filterSchedules);
-    }
-
-    // モーダル関連
-    const openModal = (title) => {
-      const schedule = schedules.find((s) => s.title === title);
-      if (!schedule || !schedule.images || schedule.images.length === 0) return;
-
-      modalTitle.textContent = title;
-      modalImages.innerHTML = '';
-
-      schedule.images.forEach((imagePath) => {
-        const img = document.createElement('img');
-        img.src = imagePath;
-        img.alt = title + ' の画像';
-        img.className = 'modal-image';
-        img.loading = 'lazy';
-        modalImages.appendChild(img);
+      searchInput.addEventListener('input', () => {
+        filterSchedules();
+        syncURL();
       });
-
-      modal.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    };
-
-    const closeModal = () => {
-      modal.classList.remove('open');
-      document.body.style.overflow = '';
-    };
-
-    // 詳細ボタンのクリックイベント
-    document.querySelectorAll('.view-details-btn').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        const title = btn.getAttribute('data-schedule-title');
-        if (title) openModal(title);
-      });
-    });
-
-    // モーダル閉じるイベント
-    if (modalClose) {
-      modalClose.addEventListener('click', closeModal);
-    }
-    if (modalOverlay) {
-      modalOverlay.addEventListener('click', closeModal);
     }
 
-    // Escapeキーで閉じる
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && modal.classList.contains('open')) {
-        closeModal();
+    // NEXT LIVE カウントダウン
+    const hero = document.querySelector('.next-live');
+    const countdown = document.getElementById('next-live-countdown');
+    if (hero && countdown) {
+      const eventTime = parseInt(hero.dataset.date || '0');
+      const now = Date.now();
+      const jstDay = (t) => new Date(t).toLocaleDateString('ja-JP', { timeZone: 'Asia/Tokyo' });
+      if (eventTime < clientExpireTime) {
+        // ビルドが古くてイベントが終わっている場合は隠す
+        hero.style.display = 'none';
+      } else if (jstDay(eventTime) === jstDay(now)) {
+        countdown.textContent = '🎤 本日開催!';
+        countdown.classList.add('today');
+      } else {
+        const days = Math.ceil((eventTime - now) / (24 * 60 * 60 * 1000));
+        countdown.textContent = `あと${days}日`;
       }
-    });
+    }
 
     // 初期表示
-    filterSchedules();
+    applyFilter();
   });
 </script>
 
 <style>
+  /* ==========================================
+     NEXT LIVE ヒーロー
+     ========================================== */
+  .next-live {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    background: linear-gradient(135deg, var(--bg-medium) 0%, var(--bg-dark) 100%);
+    border: 3px solid var(--retro-cyan);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow:
+      0 6px 0 rgba(0, 0, 0, 0.3),
+      0 0 30px rgba(0, 255, 255, 0.4);
+    transition: all 0.3s ease;
+  }
+
+  .next-live:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 10px 0 rgba(0, 0, 0, 0.3),
+      0 0 40px rgba(0, 255, 255, 0.6),
+      0 0 60px rgba(255, 110, 199, 0.3);
+  }
+
+  .next-live-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    padding: 8px 20px;
+    background: linear-gradient(135deg, var(--retro-cyan) 0%, var(--retro-purple) 100%);
+    color: white;
+    font-family: var(--font-digital);
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    border-radius: 0 0 12px 0;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  }
+
+  .next-live-inner {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .next-live-flyer {
+    width: 40%;
+    max-height: 320px;
+    object-fit: cover;
+    object-position: top;
+    flex-shrink: 0;
+  }
+
+  .next-live-info {
+    flex: 1;
+    padding: 48px 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .next-live-date {
+    font-family: var(--font-digital);
+    font-size: 1rem;
+    color: var(--retro-yellow);
+    text-shadow: 0 0 8px rgba(255, 214, 10, 0.5);
+    letter-spacing: 1px;
+  }
+
+  .next-live-title {
+    font-size: 1.6rem;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .next-live-site {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--pastel-pink);
+    font-weight: 600;
+  }
+
+  .next-live-site i {
+    color: var(--retro-pink);
+  }
+
+  .next-live-countdown {
+    font-family: var(--font-digital);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--retro-cyan);
+    text-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+    letter-spacing: 2px;
+  }
+
+  .next-live-countdown.today {
+    color: var(--retro-pink);
+    text-shadow: 0 0 12px rgba(255, 110, 199, 0.8);
+    animation: neon-flicker 3s infinite alternate;
+  }
+
+  @media (max-width: 768px) {
+    .next-live-inner {
+      flex-direction: column;
+    }
+
+    .next-live-flyer {
+      width: 100%;
+      max-height: 240px;
+    }
+
+    .next-live-info {
+      padding: 20px;
+    }
+
+    .next-live-title {
+      font-size: 1.3rem;
+    }
+  }
+
+  /* ==========================================
+     コントロール（フィルタ・検索）
+     ========================================== */
   .schedule-controls {
     max-width: 1280px;
     margin: 0 auto 30px;
@@ -299,13 +459,23 @@ const schedules = [...upcomingSchedules, ...pastSchedules];
   }
 
   .search-box {
+    position: relative;
     max-width: 600px;
     margin: 0 auto;
   }
 
+  .search-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--pastel-pink);
+    pointer-events: none;
+  }
+
   .search-input {
     width: 100%;
-    padding: 14px 20px;
+    padding: 14px 20px 14px 48px;
     font-size: 1rem;
     background: rgba(26, 26, 46, 0.8);
     border: 2px solid var(--retro-pink);
@@ -329,28 +499,63 @@ const schedules = [...upcomingSchedules, ...pastSchedules];
       inset 0 0 10px rgba(0, 0, 0, 0.3);
   }
 
+  /* ==========================================
+     月グルーピングされたスケジュール一覧
+     ========================================== */
   .schedule-list {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin: 30px auto;
-    padding: 0 20px;
     width: 100%;
-    max-width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .month-group {
+    margin-bottom: 40px;
+  }
+
+  .month-heading {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    margin: 0 0 20px;
+    padding: 12px 0;
+    text-align: center;
+    font-family: var(--font-digital);
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    color: var(--retro-cyan);
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  }
+
+  .month-heading span {
+    display: inline-block;
+    padding: 0 24px;
+    border-bottom: 2px solid var(--retro-cyan);
+  }
+
+  .month-items {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-items: stretch;
+  }
+
+  @media (min-width: 900px) {
+    .month-items {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: stretch;
+    }
   }
 
   .schedule-item {
-    flex: 0 0 auto;
+    width: 100%;
   }
 
   /* レスポンシブ対応 */
   @media (max-width: 768px) {
-    .schedule-item {
-      width: 100%;
-    }
-
     .filter-btn {
       font-size: 0.9rem;
       padding: 10px 20px;
@@ -358,7 +563,11 @@ const schedules = [...upcomingSchedules, ...pastSchedules];
 
     .search-input {
       font-size: 0.95rem;
-      padding: 12px 18px;
+      padding: 12px 18px 12px 44px;
+    }
+
+    .schedule-list {
+      padding: 0 10px;
     }
   }
 
@@ -378,193 +587,25 @@ const schedules = [...upcomingSchedules, ...pastSchedules];
 
     .search-input {
       font-size: 0.9rem;
-      padding: 12px 16px;
-    }
-  }
-
-  /* モーダル */
-  .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2000;
-    display: none;
-  }
-
-  .modal.open {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .modal-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    z-index: 2001;
-  }
-
-  .modal-content {
-    position: relative;
-    max-width: 900px;
-    max-height: 90vh;
-    width: 90%;
-    background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
-    border: 3px solid var(--retro-pink);
-    border-radius: 20px;
-    box-shadow:
-      0 8px 0 rgba(0, 0, 0, 0.5),
-      0 0 40px rgba(255, 110, 199, 0.6),
-      0 0 80px rgba(0, 255, 255, 0.3);
-    z-index: 2002;
-    overflow: hidden;
-    animation: modal-appear 0.3s ease;
-  }
-
-  @keyframes modal-appear {
-    from {
-      opacity: 0;
-      transform: scale(0.9) translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1) translateY(0);
-    }
-  }
-
-  .modal-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 48px;
-    height: 48px;
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid white;
-    border-radius: 50%;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-    z-index: 2003;
-    transition: all 0.3s ease;
-  }
-
-  .modal-close:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: rotate(90deg);
-  }
-
-  .modal-body {
-    padding: 60px 30px 30px;
-    max-height: 90vh;
-    overflow-y: auto;
-  }
-
-  .modal-title {
-    font-size: 2rem;
-    font-weight: 900;
-    color: var(--text-light);
-    text-shadow:
-      2px 2px 0 var(--retro-pink),
-      4px 4px 0 var(--retro-cyan);
-    margin: 0 0 30px 0;
-    text-align: center;
-  }
-
-  .modal-images {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .modal-image {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    border: 3px solid var(--retro-cyan);
-    box-shadow:
-      0 4px 0 rgba(0, 0, 0, 0.3),
-      0 0 20px rgba(0, 255, 255, 0.4);
-    transition: all 0.3s ease;
-    cursor: pointer;
-  }
-
-  .modal-image:hover {
-    transform: scale(1.02);
-    box-shadow:
-      0 6px 0 rgba(0, 0, 0, 0.3),
-      0 0 30px rgba(0, 255, 255, 0.6);
-  }
-
-  /* レスポンシブ対応 */
-  @media (max-width: 768px) {
-    .modal-content {
-      width: 95%;
-      max-height: 95vh;
-    }
-
-    .modal-body {
-      padding: 50px 20px 20px;
-    }
-
-    .modal-title {
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-    }
-
-    .modal-close {
-      width: 44px;
-      height: 44px;
-      top: 15px;
-      right: 15px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .modal-content {
-      width: 100%;
-      max-height: 100vh;
-      border-radius: 0;
-    }
-
-    .modal-body {
-      padding: 50px 15px 15px;
-    }
-
-    .modal-title {
-      font-size: 1.3rem;
-      text-shadow:
-        2px 2px 0 var(--retro-pink),
-        3px 3px 0 var(--retro-cyan);
-    }
-
-    .modal-images {
-      gap: 15px;
+      padding: 12px 16px 12px 42px;
     }
   }
 
   /* アニメーション無効化（アクセシビリティ） */
   @media (prefers-reduced-motion: reduce) {
     .filter-btn,
-    .search-input {
+    .search-input,
+    .next-live {
       transition: none !important;
     }
 
-    .filter-btn:hover {
+    .filter-btn:hover,
+    .next-live:hover {
       transform: none;
     }
 
-    .modal-content {
+    .next-live-countdown.today {
       animation: none !important;
-    }
-
-    .modal-image:hover,
-    .modal-close:hover {
-      transform: none;
     }
   }
 </style>

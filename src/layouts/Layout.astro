@@ -2,14 +2,26 @@
 import { Font } from 'astro:assets';
 import Header from '../components/Header.astro';
 import HamburgerMenu from '../components/HamburgerMenu.astro';
+import { navItems, snsLinks } from '../data/nav';
 import '../styles/main.css';
 
 interface Props {
   title?: string;
+  description?: string;
+  ogImage?: string;
+  ogType?: string;
 }
 
-const { title = 'なんちゃらアイドル' } = Astro.props;
+const {
+  title = 'なんちゃらアイドル',
+  description = 'なんちゃらアイドル公式サイト - スケジュール・ライブ情報',
+  ogImage = '/img/ogp-default.png',
+  ogType = 'website',
+} = Astro.props;
 const currentPath = new URL(Astro.request.url).pathname;
+const site = Astro.site ?? new URL('https://nantyara.com');
+const canonicalURL = new URL(currentPath, site);
+const ogImageURL = new URL(ogImage, site);
 ---
 
 <!doctype html>
@@ -18,7 +30,21 @@ const currentPath = new URL(Astro.request.url).pathname;
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#0A0A0A">
-    <meta name="description" content="なんちゃらアイドル公式サイト - スケジュール・ライブ情報">
+    <meta name="description" content={description}>
+
+    <!-- OGP -->
+    <link rel="canonical" href={canonicalURL}>
+    <meta property="og:title" content={title}>
+    <meta property="og:description" content={description}>
+    <meta property="og:type" content={ogType}>
+    <meta property="og:url" content={canonicalURL}>
+    <meta property="og:site_name" content="なんちゃらアイドル">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content={ogImageURL}>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content={title}>
+    <meta name="twitter:description" content={description}>
+    <meta name="twitter:image" content={ogImageURL}>
 
     <!-- PWA対応 -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -49,8 +75,33 @@ const currentPath = new URL(Astro.request.url).pathname;
     <script is:inline>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
+          // 新バージョン検知時にトーストを出す
+          // （autoUpdate なので SW 自体は勝手に切り替わる。画面の反映にはリロードが必要）
+          var showUpdateToast = function() {
+            if (document.querySelector('.update-toast')) return;
+            var toast = document.createElement('div');
+            toast.className = 'update-toast';
+            toast.innerHTML = '<span>新しい情報があります</span>';
+            var btn = document.createElement('button');
+            btn.className = 'update-toast-btn';
+            btn.textContent = '更新';
+            btn.addEventListener('click', function() { location.reload(); });
+            toast.appendChild(btn);
+            document.body.appendChild(toast);
+          };
+
           navigator.serviceWorker.register('/sw.js', { scope: '/' })
-            .then(reg => console.log('SW registered:', reg))
+            .then(reg => {
+              reg.addEventListener('updatefound', function() {
+                var nw = reg.installing;
+                if (!nw) return;
+                nw.addEventListener('statechange', function() {
+                  if (nw.state === 'activated' && navigator.serviceWorker.controller) {
+                    showUpdateToast();
+                  }
+                });
+              });
+            })
             .catch(err => console.log('SW registration failed:', err));
         });
       }
@@ -64,15 +115,41 @@ const currentPath = new URL(Astro.request.url).pathname;
       </div>
     </div>
     <HamburgerMenu currentPath={currentPath} />
-    <Header />
+    <Header currentPath={currentPath} />
     <div class="site-container">
       <main class="main">
         <slot />
       </main>
     </div>
     <footer class="footer">
+      <nav class="footer-nav" aria-label="フッターナビゲーション">
+        {navItems.map(item => (
+          <a href={item.href} class="footer-nav-link">{item.label}</a>
+        ))}
+      </nav>
+      <div class="footer-sns">
+        {snsLinks.map(sns => (
+          <a href={sns.href} target="_blank" rel="noopener noreferrer" class="footer-sns-link" aria-label={sns.label}>
+            <i class={sns.icon} aria-hidden="true"></i>
+          </a>
+        ))}
+      </div>
       <p>&copy; 2018-2026 なんちゃらアイドル</p>
     </footer>
+    <script is:inline>
+      // ファーストビューを過ぎたら装飾アニメを一時停止（省エネ）
+      (function() {
+        var tick = false;
+        window.addEventListener('scroll', function() {
+          if (tick) return;
+          tick = true;
+          requestAnimationFrame(function() {
+            document.body.classList.toggle('anim-paused', window.scrollY > window.innerHeight);
+            tick = false;
+          });
+        }, { passive: true });
+      })();
+    </script>
     <script is:inline>
       (function() {
         var ptr = document.getElementById('pull-to-refresh');

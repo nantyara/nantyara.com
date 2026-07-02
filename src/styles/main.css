@@ -115,6 +115,8 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-light);
 }
 
+/* 見出しレベルでエフェクト量を段階制御:
+   h1=二重ハードシャドウ / h2=単色シャドウ+グロー / h3以下=グローのみ */
 h1 {
   font-size: 2.5rem;
   text-shadow:
@@ -126,11 +128,12 @@ h2 {
   font-size: 2rem;
   text-shadow:
     2px 2px 0 var(--retro-purple),
-    4px 4px 0 var(--retro-cyan);
+    0 0 12px rgba(157, 78, 221, 0.5);
 }
 
 h3 {
   font-size: 1.5rem;
+  text-shadow: 0 0 8px rgba(255, 110, 199, 0.4);
 }
 
 p {
@@ -149,7 +152,8 @@ p {
 
 .glitch::before,
 .glitch::after {
-  content: attr(data-text);
+  /* 代替テキスト構文（/ ''）でスクリーンリーダーに読ませない */
+  content: attr(data-text) / '';
   position: absolute;
   top: 0;
   left: 0;
@@ -317,6 +321,53 @@ p {
   text-shadow: 0 0 5px rgba(229, 204, 255, 0.5);
 }
 
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px 24px;
+  margin-bottom: 24px;
+}
+
+.footer-nav-link {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-nav-link:hover {
+  color: var(--retro-pink);
+  text-shadow: 0 0 8px rgba(255, 110, 199, 0.6);
+}
+
+.footer-sns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.footer-sns-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 2px solid rgba(229, 204, 255, 0.4);
+  border-radius: 50%;
+  color: var(--pastel-lavender);
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.footer-sns-link:hover {
+  color: var(--retro-cyan);
+  border-color: var(--retro-cyan);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+}
+
 /* ==========================================
    レスポンシブ対応（モバイル最適化）
    ========================================== */
@@ -375,6 +426,53 @@ p {
   .empty-state p {
     font-size: 1rem;
   }
+}
+
+/* ==========================================
+   SW更新トースト
+   ========================================== */
+
+.update-toast {
+  position: fixed;
+  left: 50%;
+  bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+  transform: translateX(-50%);
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, var(--bg-medium) 0%, var(--bg-dark) 100%);
+  border: 2px solid var(--retro-cyan);
+  border-radius: 30px;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  box-shadow:
+    0 4px 0 rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.update-toast-btn {
+  padding: 8px 18px;
+  background: linear-gradient(135deg, var(--retro-cyan) 0%, var(--retro-purple) 100%);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ==========================================
+   常駐アニメーションの省エネ化:
+   ファーストビューを過ぎたら装飾アニメを一時停止
+   （body に .anim-paused が付く。Layout の scroll ハンドラ参照）
+   ========================================== */
+
+body.anim-paused::after,
+body.anim-paused .neon-glow,
+body.anim-paused .glitch::before,
+body.anim-paused .glitch::after {
+  animation-play-state: paused;
 }
 
 /* ==========================================

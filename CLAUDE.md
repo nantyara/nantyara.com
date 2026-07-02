@@ -55,7 +55,8 @@ nantyara.com/
 | `end` | | string | 終了日時（オプション） |
 | `title` | ✓ | string | イベントタイトル |
 | `site` | ✓ | string | 会場名 |
-| `label` | | string | ラベル（例：「マミソロ」「あおはるソロ」） |
+| `labels` | | array | ラベルの配列（例：「マミソロ」「あおはるソロ」）。マミソロ=赤/あおはるソロ=青のアクセントが付く |
+| `time_tbd` | | boolean | 開催時刻が未確定なら `true`（表示は「時間未定」、カレンダー登録は終日扱い） |
 | `content` | ✓ | string | イベント詳細（Markdown可） |
 | `images` | | array | 画像パスの配列 |
 

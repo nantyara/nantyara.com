@@ -17,13 +17,20 @@ import Layout from '../layouts/Layout.astro';
           下記メールアドレスまでお願いいたします。
         </p>
 
-        <a
-          href="mailto:nagaokatasuku@nantyara.com"
-          class="email-link"
-        >
-          <span class="email-icon">📧</span>
-          <span class="email-address">nagaokatasuku@nantyara.com</span>
-        </a>
+        <div class="email-actions">
+          <a
+            href="mailto:nagaokatasuku@nantyara.com"
+            class="email-link"
+          >
+            <i class="email-icon fa-solid fa-envelope" aria-hidden="true"></i>
+            <span class="email-address">nagaokatasuku@nantyara.com</span>
+          </a>
+          <button class="copy-button" data-email="nagaokatasuku@nantyara.com" aria-label="メールアドレスをコピー">
+            <i class="fa-solid fa-copy" aria-hidden="true"></i>
+            <span class="copy-label">コピー</span>
+          </button>
+        </div>
+        <p class="email-hint">タップでメーラーが開きます。開かない場合はコピーしてご利用ください。</p>
 
         <div class="contact-notice">
           <h3 class="notice-title">オファーについて</h3>
@@ -54,7 +61,62 @@ import Layout from '../layouts/Layout.astro';
   </div>
 </Layout>
 
+<script>
+  document.querySelectorAll('.copy-button').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const email = (btn as HTMLElement).dataset.email || '';
+      try {
+        await navigator.clipboard.writeText(email);
+        const label = btn.querySelector('.copy-label');
+        if (label) {
+          label.textContent = 'コピーした!';
+          setTimeout(() => { label.textContent = 'コピー'; }, 2000);
+        }
+      } catch (e) {
+        // クリップボードAPIが使えない環境では選択できるように prompt を出す
+        window.prompt('このアドレスをコピーしてください', email);
+      }
+    });
+  });
+</script>
+
 <style>
+  .email-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .copy-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    min-height: 48px;
+    background: transparent;
+    border: 2px solid var(--retro-cyan);
+    border-radius: 30px;
+    color: var(--retro-cyan);
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .copy-button:hover {
+    background: rgba(0, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+  }
+
+  .email-hint {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--pastel-lavender);
+    margin: 12px 0 0;
+  }
+
   .contact-container {
     max-width: 800px;
     margin: 0 auto;

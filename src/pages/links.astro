@@ -91,7 +91,7 @@ const getServiceInfo = (name: string, category: string) => {
             return (
               <a href={link.url} target="_blank" rel="noopener noreferrer" class={`link-item ${serviceInfo.class}`}>
                 {serviceInfo.icon === 'base-logo' ? (
-                  <img src="/icons/base_logo_horizontal_black.png" alt="BASE" class="link-icon base-logo-img" />
+                  <img src="/icons/base_logo_horizontal_white.png" alt="BASE" class="link-icon base-logo-img" />
                 ) : (
                   <i class={`link-icon ${serviceInfo.icon}`}></i>
                 )}
@@ -141,22 +141,24 @@ const getServiceInfo = (name: string, category: string) => {
     gap: 20px;
   }
 
+  /* ベースはダークカードに統一して世界観を保ち、
+     ブランド色はアイコンとホバー時のアクセントだけに使う */
   .link-item {
+    --accent: var(--retro-pink);
     display: flex;
     align-items: center;
     gap: 15px;
     padding: 20px 25px;
-    background: linear-gradient(135deg, var(--retro-purple) 0%, var(--retro-pink) 100%);
-    border: 3px solid rgba(255, 255, 255, 0.3);
+    background: linear-gradient(135deg, var(--bg-medium) 0%, var(--bg-dark) 100%);
+    border: 2px solid rgba(255, 255, 255, 0.15);
     border-radius: 15px;
-    color: white;
+    color: var(--text-light);
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 700;
-    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
     box-shadow:
       0 4px 0 rgba(0, 0, 0, 0.3),
-      0 0 20px rgba(255, 110, 199, 0.5);
+      inset 0 0 20px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     cursor: pointer;
     position: relative;
@@ -181,16 +183,17 @@ const getServiceInfo = (name: string, category: string) => {
 
   .link-item:hover {
     transform: translateY(-4px);
+    border-color: var(--accent);
     box-shadow:
       0 8px 0 rgba(0, 0, 0, 0.3),
-      0 0 30px rgba(255, 110, 199, 0.8),
-      0 0 50px rgba(0, 255, 255, 0.4);
-    border-color: var(--retro-cyan);
+      0 0 25px color-mix(in srgb, var(--accent) 55%, transparent),
+      inset 0 0 20px rgba(0, 0, 0, 0.3);
   }
 
   .link-icon {
     font-size: 1.8rem;
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+    color: var(--accent);
+    filter: drop-shadow(0 0 5px color-mix(in srgb, var(--accent) 60%, transparent));
   }
 
   .base-logo-img {
@@ -212,93 +215,17 @@ const getServiceInfo = (name: string, category: string) => {
     transform: translateX(5px);
   }
 
-  /* 各サービスの公式ブランドカラー */
-  .x-link {
-    background: #000000;
-  }
-
-  .x-link:hover {
-    background: #1a1a1a;
-  }
-
-  .spotify-link {
-    background: #1DB954;
-  }
-
-  .spotify-link:hover {
-    background: #1ed760;
-  }
-
-  .apple-link {
-    background: linear-gradient(135deg, #FA243C 0%, #FF6B81 100%);
-  }
-
-  .apple-link:hover {
-    background: linear-gradient(135deg, #FF6B81 0%, #FA243C 100%);
-  }
-
-  .youtube-link {
-    background: #FF0000;
-  }
-
-  .youtube-link:hover {
-    background: #cc0000;
-  }
-
-  .facebook-link {
-    background: #1877F2;
-  }
-
-  .facebook-link:hover {
-    background: #0c63d4;
-  }
-
-  .instagram-link {
-    background: linear-gradient(135deg, #833AB4 0%, #FD1D1D 50%, #FCAF45 100%);
-  }
-
-  .instagram-link:hover {
-    background: linear-gradient(135deg, #FCAF45 0%, #FD1D1D 50%, #833AB4 100%);
-  }
-
-  .line-link {
-    background: #06C755;
-  }
-
-  .line-link:hover {
-    background: #05b04b;
-  }
-
-  .tiktok-link {
-    background: #000000;
-    border-color: #00F2EA;
-  }
-
-  .tiktok-link:hover {
-    background: #1a1a1a;
-    box-shadow:
-      0 8px 0 rgba(0, 0, 0, 0.3),
-      0 0 30px rgba(0, 242, 234, 0.8);
-  }
-
-  .podcast-link {
-    background: linear-gradient(135deg, #9933CC 0%, #6B1FA0 100%);
-  }
-
-  .podcast-link:hover {
-    background: linear-gradient(135deg, #6B1FA0 0%, #9933CC 100%);
-  }
-
-  .base-link {
-    background: #FFFFFF;
-    color: #000000;
-    border-color: #E0E0E0;
-  }
-
-  .base-link:hover {
-    background: #F5F5F5;
-    border-color: #CCCCCC;
-  }
+  /* 各サービスのブランドカラー（アクセントのみ） */
+  .x-link { --accent: #E7E9EA; }
+  .spotify-link { --accent: #1DB954; }
+  .apple-link { --accent: #FA243C; }
+  .youtube-link { --accent: #FF0000; }
+  .facebook-link { --accent: #1877F2; }
+  .instagram-link { --accent: #FD1D1D; }
+  .line-link { --accent: #06C755; }
+  .tiktok-link { --accent: #00F2EA; }
+  .podcast-link { --accent: #B15EE0; }
+  .base-link { --accent: #00C8B4; }
 
   /* レスポンシブ対応 */
   @media (max-width: 768px) {

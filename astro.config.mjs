@@ -16,16 +16,19 @@ export default defineConfig({
       provider: fontProviders.google(),
       name: 'Yusei Magic',
       cssVariable: '--font-yusei',
+      fallbacks: ['Hiragino Maru Gothic ProN', 'sans-serif'],
     },
     {
       provider: fontProviders.google(),
       name: 'Rampart One',
       cssVariable: '--font-rampart',
+      fallbacks: ['Hiragino Maru Gothic ProN', 'sans-serif'],
     },
     {
       provider: fontProviders.google(),
       name: 'RocknRoll One',
       cssVariable: '--font-rocknroll',
+      fallbacks: ['Hiragino Maru Gothic ProN', 'sans-serif'],
     },
   ],
   integrations: [
