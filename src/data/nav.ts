@@ -12,8 +12,8 @@ export const navItems: NavItem[] = [
   { href: '/', label: 'ライブ予定', icon: 'fa-solid fa-calendar-days' },
   { href: '/releases', label: '音源', icon: 'fa-solid fa-compact-disc' },
   { href: '/members', label: 'メンバー', icon: 'fa-solid fa-users' },
+  { href: '/history', label: '沿革', icon: 'fa-solid fa-book-open' },
   // 準備中のページはコンテンツができたらここに戻す
-  // { href: '/history', label: '沿革', icon: 'fa-solid fa-book-open' },
   // { href: '/gallery', label: 'ギャラリー', icon: 'fa-solid fa-camera' },
   { href: '/links', label: 'リンク', icon: 'fa-solid fa-link' },
   { href: '/contact', label: 'お問い合わせ', icon: 'fa-solid fa-envelope' },

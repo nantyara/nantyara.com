@@ -377,6 +377,22 @@ npm run dev
 - 画像URLは外部URL（TimeTreeのCDN）なので、ローカルにダウンロードする機能は未実装
 - TimeTreeのイベント詳細（note）が空の場合、「TimeTreeからインポート」という汎用メッセージになる
 
+## gallery / history のコンテンツ運用
+
+### gallery（ライブ写真ギャラリー）
+
+- 写真は `public/gallery/` に置き、`src/data/gallery.yml` にエントリを追加（書式はファイル内コメント参照）
+- 写真が1枚も無い間は「準備中」表示。写真が入ったら `src/data/nav.ts` のコメントを外してメニューに復帰させる
+
+### history（沿革）
+
+- `/history` は `src/data/history.yml`（手動マイルストーン）と `src/data/releases.yml`（自動マージ）から年表を生成
+- `history.yml` の書式はファイル内コメント参照（date は YYYY / YYYY-MM / YYYY-MM-DD、`approx: true` で「頃」表記）
+- **ネタ元**: なんちゃラジオ全456回超の文字起こしが `~/.ghq/github.com/nantyara/podcast.nantyara.com/transcripts/` にある
+  - 生成: `transcripts/transcribe-all.sh`（whisper-cli + large-v3-turbo、レジューム可能）
+  - ここから活動のマイルストーン（初ワンマン、メンバー加入、レコ発等）を発掘して history.yml に追記していく
+  - 第001回の証言: 結成は新宿JAM（閉店済み）由来、2018年1月時点で「もう4年」→ 結成2014年頃
+
 ## 参考リンク
 
 - [Astro Documentation](https://docs.astro.build/)

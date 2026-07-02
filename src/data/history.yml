@@ -1,25 +1,23 @@
-- year: 2019
-  events:
-    - date: 2019-12-02
-      title: また捕まる前に是非対バンせねばと思ったのだ
-      description: |
-        新宿LOVE TKOにて開催
-    - date: 2019-06-20
-      title: 1stアルバム「なんちゃらワールド」リリース
-      description: |
-        初のフルアルバムをリリース
-    - date: 2019-04-27
-      title: ワンマンライブ開催
-      description: |
-        新宿にて初の単独公演
-    - date: 2019-01-15
-      title: デビューシングル「なんちゃらソング」リリース
-      description: |
-        待望のデビュー作品をリリース
+# なんちゃらアイドル沿革（手動マイルストーン）
+# リリース情報は releases.yml から自動でマージされるので、ここには書かない
+#
+# フォーマット:
+# - date: 2018-01-12        # YYYY-MM-DD / YYYY-MM / YYYY のいずれか
+#   title: なんちゃラジオ配信開始
+#   description: 任意の補足説明
+#   category: milestone | live | radio | media   # 任意（デフォルト milestone）
+#   approx: true            # 時期があいまいな場合 true（「頃」表記になる）
+#
+# ソース: なんちゃラジオの文字起こし（podcast.nantyara.com/transcripts/）から
+# 発掘したマイルストーンを順次追記していく
 
-- year: 2018
-  events:
-    - date: 2018-10-01
-      title: なんちゃらアイドル結成
-      description: |
-        活動スタート
+- date: 2014
+  title: なんちゃらアイドル結成
+  description: 新宿JAM（現在は閉店）のイベントから生まれた、御茶海マミとあおはるによる2人組アイドルユニット。
+  category: milestone
+  approx: true
+
+- date: 2018-01-12
+  title: Podcast「なんちゃラジオ」配信開始
+  description: 第001回「なんちゃラジオ開始！」を配信。以来、毎週金曜日の配信が続いている。
+  category: radio

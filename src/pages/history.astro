@@ -1,145 +1,289 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { readFileSync } from 'node:fs';
+import { parse } from 'yaml';
+
+interface HistoryEntry {
+  date: string; // YYYY | YYYY-MM | YYYY-MM-DD
+  title: string;
+  description?: string;
+  category: string;
+  approx?: boolean;
+  link?: string;
+  image?: string;
+}
+
+// 手動マイルストーン
+const historyYaml = readFileSync('src/data/history.yml', 'utf-8');
+const manualEntries: HistoryEntry[] = (parse(historyYaml) ?? []).map((e: any) => ({
+  category: 'milestone',
+  ...e,
+  date: String(e.date),
+}));
+
+// リリース情報を自動マージ
+const releasesYaml = readFileSync('src/data/releases.yml', 'utf-8');
+const releases = parse(releasesYaml) ?? [];
+const typeLabels: Record<string, string> = { album: 'アルバム', single: 'シングル', ep: 'EP' };
+const releaseEntries: HistoryEntry[] = releases.map((r: any) => ({
+  date: String(r.release_date),
+  title: `「${r.title}」リリース`,
+  description: [typeLabels[r.type] ?? r.type, r.format, r.label].filter(Boolean).join(' / '),
+  category: 'release',
+  link: `/releases/${r.id}`,
+  image: r.jacket_image,
+}));
+
+// 日付キーでソート（YYYY / YYYY-MM / YYYY-MM-DD 混在に対応するため文字列比較）
+const sortKey = (d: string) => d.padEnd(10, '0');
+const entries = [...manualEntries, ...releaseEntries].sort((a, b) =>
+  sortKey(a.date).localeCompare(sortKey(b.date))
+);
+
+// 年ごとにグルーピング（古い順）
+const yearGroups: { year: string; items: HistoryEntry[] }[] = [];
+for (const entry of entries) {
+  const year = entry.date.slice(0, 4);
+  let group = yearGroups.find(g => g.year === year);
+  if (!group) {
+    group = { year, items: [] };
+    yearGroups.push(group);
+  }
+  group.items.push(entry);
+}
+
+// 日付の表示（精度に応じて年 / 年月 / 年月日）
+const formatEntryDate = (entry: HistoryEntry) => {
+  const parts = entry.date.split('-');
+  let text = '';
+  if (parts.length === 1) text = `${Number(parts[0])}年`;
+  else if (parts.length === 2) text = `${Number(parts[1])}月`;
+  else text = `${Number(parts[1])}月${Number(parts[2])}日`;
+  return entry.approx ? `${text}頃` : text;
+};
+
+const categoryInfo: Record<string, { icon: string; label: string }> = {
+  milestone: { icon: 'fa-solid fa-star', label: 'マイルストーン' },
+  live: { icon: 'fa-solid fa-microphone', label: 'ライブ' },
+  radio: { icon: 'fa-solid fa-podcast', label: 'ラジオ' },
+  release: { icon: 'fa-solid fa-compact-disc', label: 'リリース' },
+  media: { icon: 'fa-solid fa-tv', label: 'メディア' },
+};
 ---
 
-<Layout title="沿革 | なんちゃらアイドル">
-  <div class="under-construction">
-    <div class="construction-icon">🚧</div>
-    <h2 class="construction-title">工事中</h2>
-    <p class="construction-message">
-      このページは現在準備中です。<br>
-      もうしばらくお待ちください。
-    </p>
-    <div class="construction-animation">
-      <span class="dot">●</span>
-      <span class="dot">●</span>
-      <span class="dot">●</span>
+<Layout
+  title="沿革 | なんちゃらアイドル"
+  description="なんちゃらアイドルのこれまでのあゆみ"
+>
+  <div class="history-container">
+    <div class="timeline">
+      {yearGroups.map(group => (
+        <section class="timeline-year">
+          <h2 class="year-marker"><span>{group.year}</span></h2>
+          <div class="year-entries">
+            {group.items.map(entry => {
+              const cat = categoryInfo[entry.category] ?? categoryInfo.milestone;
+              return (
+                <article class={`timeline-entry cat-${entry.category}`}>
+                  <div class="entry-icon">
+                    <i class={cat.icon} aria-hidden="true" title={cat.label}></i>
+                  </div>
+                  <div class="entry-card">
+                    <div class="entry-date">{formatEntryDate(entry)}</div>
+                    <h3 class="entry-title">
+                      {entry.link ? <a href={entry.link}>{entry.title}</a> : entry.title}
+                    </h3>
+                    {entry.description && <p class="entry-description">{entry.description}</p>}
+                  </div>
+                  {entry.image && (
+                    <a href={entry.link} class="entry-thumb">
+                      <img src={entry.image} alt={entry.title} loading="lazy" />
+                    </a>
+                  )}
+                </article>
+              );
+            })}
+          </div>
+        </section>
+      ))}
     </div>
   </div>
 </Layout>
 
 <style>
-  .under-construction {
+  .history-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 28px;
+  }
+
+  /* 縦のタイムライン */
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(
+      180deg,
+      var(--retro-pink) 0%,
+      var(--retro-purple) 50%,
+      var(--retro-cyan) 100%
+    );
+    box-shadow: 0 0 10px rgba(255, 110, 199, 0.4);
+    border-radius: 2px;
+  }
+
+  .timeline-year {
+    margin-bottom: 40px;
+  }
+
+  .year-marker {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    margin: 0 0 20px -28px;
+    padding: 12px 0 12px 28px;
+    font-family: var(--font-digital);
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+    color: var(--retro-yellow);
+    text-shadow: 0 0 12px rgba(255, 214, 10, 0.5);
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  .year-entries {
     display: flex;
     flex-direction: column;
+    gap: 20px;
+  }
+
+  .timeline-entry {
+    position: relative;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .entry-icon {
+    position: absolute;
+    left: -28px;
+    top: 14px;
+    width: 20px;
+    height: 20px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 60vh;
-    padding: 40px 20px;
-    text-align: center;
-  }
-
-  .construction-icon {
-    font-size: 5rem;
-    margin-bottom: 30px;
-    animation: bounce 2s infinite;
-  }
-
-  .construction-title {
-    font-size: 3rem;
-    font-weight: 900;
-    color: var(--text-light);
-    text-shadow:
-      3px 3px 0 var(--retro-pink),
-      6px 6px 0 var(--retro-cyan),
-      9px 9px 0 var(--retro-purple);
-    margin: 0 0 30px 0;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-  }
-
-  .construction-message {
-    font-size: 1.2rem;
-    color: var(--pastel-lavender);
-    line-height: 1.8;
-    margin: 0 0 40px 0;
-  }
-
-  .construction-animation {
-    display: flex;
-    gap: 15px;
-  }
-
-  .dot {
-    font-size: 1.5rem;
+    background: var(--bg-dark);
+    border: 2px solid var(--retro-pink);
+    border-radius: 50%;
+    font-size: 0.6rem;
     color: var(--retro-pink);
-    animation: pulse 1.5s infinite;
+    box-shadow: 0 0 8px rgba(255, 110, 199, 0.6);
   }
 
-  .dot:nth-child(2) {
-    animation-delay: 0.3s;
+  .cat-release .entry-icon {
+    border-color: var(--retro-yellow);
+    color: var(--retro-yellow);
+    box-shadow: 0 0 8px rgba(255, 214, 10, 0.6);
   }
 
-  .dot:nth-child(3) {
-    animation-delay: 0.6s;
+  .cat-radio .entry-icon {
+    border-color: var(--retro-purple);
+    color: var(--retro-purple);
+    box-shadow: 0 0 8px rgba(157, 78, 221, 0.6);
   }
 
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-20px);
-    }
+  .cat-live .entry-icon {
+    border-color: var(--retro-cyan);
+    color: var(--retro-cyan);
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
   }
 
-  @keyframes pulse {
-    0%, 100% {
-      opacity: 0.3;
-      transform: scale(1);
-    }
-    50% {
-      opacity: 1;
-      transform: scale(1.3);
-    }
+  .entry-card {
+    flex: 1;
+    padding: 16px 20px;
+    background: linear-gradient(135deg, var(--bg-medium) 0%, var(--bg-dark) 100%);
+    border: 1px solid rgba(255, 110, 199, 0.3);
+    border-radius: 8px;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
   }
 
-  /* レスポンシブ対応 */
-  @media (max-width: 768px) {
-    .construction-icon {
-      font-size: 4rem;
-    }
+  .entry-date {
+    font-family: var(--font-digital);
+    font-size: 0.85rem;
+    color: var(--pastel-lavender);
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
 
-    .construction-title {
-      font-size: 2.2rem;
-      text-shadow:
-        2px 2px 0 var(--retro-pink),
-        4px 4px 0 var(--retro-cyan),
-        6px 6px 0 var(--retro-purple);
-    }
+  .entry-title {
+    font-size: 1.1rem;
+    margin: 0 0 6px;
+    line-height: 1.5;
+  }
 
-    .construction-message {
-      font-size: 1.1rem;
-    }
+  .entry-title a {
+    color: var(--retro-cyan);
+    text-decoration: none;
+  }
+
+  .entry-title a:hover {
+    text-decoration: underline;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+  }
+
+  .entry-description {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    opacity: 0.85;
+    line-height: 1.7;
+  }
+
+  .entry-thumb {
+    flex-shrink: 0;
+    display: block;
+    width: 72px;
+    height: 72px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 2px solid var(--retro-purple);
+    box-shadow: 0 0 10px rgba(157, 78, 221, 0.4);
+  }
+
+  .entry-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
 
   @media (max-width: 480px) {
-    .construction-icon {
-      font-size: 3rem;
+    .history-container {
+      padding: 0 12px;
     }
 
-    .construction-title {
-      font-size: 1.8rem;
-      letter-spacing: 2px;
-      text-shadow:
-        2px 2px 0 var(--retro-pink),
-        4px 4px 0 var(--retro-cyan);
+    .entry-card {
+      padding: 12px 14px;
     }
 
-    .construction-message {
+    .entry-title {
       font-size: 1rem;
     }
 
-    .dot {
-      font-size: 1.2rem;
-    }
-  }
-
-  /* アニメーション無効化（アクセシビリティ） */
-  @media (prefers-reduced-motion: reduce) {
-    .construction-icon,
-    .dot {
-      animation: none !important;
+    .entry-thumb {
+      width: 56px;
+      height: 56px;
     }
   }
 </style>

@@ -1,217 +1,334 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { readdirSync, existsSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
+import { parse } from 'yaml';
 
-// public/pictures/ ディレクトリから画像を読み込み
-const picturesDir = 'public/pictures';
-let imageFiles: string[] = [];
-
-if (existsSync(picturesDir)) {
-  imageFiles = readdirSync(picturesDir)
-    .filter(file => /\.(jpg|jpeg|png|gif|webp)$/i.test(file))
-    .map(file => `/pictures/${file}`)
-    .sort(); // ファイル名順にソート
+interface GalleryPhoto {
+  src: string;
+  date: string;
+  title: string;
+  event_slug?: string;
+  caption?: string;
 }
 
-// ランダム回転角度を生成（フォトフレーム風）
-const randomRotations = [-2, -1, 0, 1, 2];
-const getRandomRotation = () => {
-  return randomRotations[Math.floor(Math.random() * randomRotations.length)];
+const galleryYaml = readFileSync('src/data/gallery.yml', 'utf-8');
+const photos: GalleryPhoto[] = (parse(galleryYaml) ?? []).filter((p: any) => p && p.src);
+
+// 新しい順にソートして年別にグルーピング
+const sorted = [...photos].sort(
+  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+);
+
+const yearGroups: { year: string; items: GalleryPhoto[] }[] = [];
+for (const photo of sorted) {
+  const year = String(new Date(photo.date).getFullYear());
+  let group = yearGroups.find(g => g.year === year);
+  if (!group) {
+    group = { year, items: [] };
+    yearGroups.push(group);
+  }
+  group.items.push(photo);
+}
+
+// フォトフレーム風のランダム回転（ビルドごとに変わらないよう index から決定）
+const rotations = [-2, -1, 0, 1, 2];
+const rotationFor = (i: number) => rotations[i % rotations.length];
+
+const formatDate = (dateStr: string) => {
+  const d = new Date(dateStr);
+  return `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, '0')}.${String(d.getDate()).padStart(2, '0')}`;
 };
 ---
 
-<Layout title="ギャラリー | なんちゃらアイドル">
-  {imageFiles.length === 0 ? (
+<Layout
+  title="ギャラリー | なんちゃらアイドル"
+  description="なんちゃらアイドルのライブ写真ギャラリー"
+>
+  {photos.length === 0 ? (
     <div class="empty-state">
       <div class="title">準備中</div>
       <p>現在、写真を準備中です。しばらくお待ちください。</p>
-      <div class="loading-animation">
-        <span class="loading-dot">●</span>
-        <span class="loading-dot">●</span>
-        <span class="loading-dot">●</span>
-      </div>
     </div>
   ) : (
-    <div class="gallery-grid">
-      {imageFiles.map((image, index) => (
-        <article class="photo-frame" style={`transform: rotate(${getRandomRotation()}deg)`}>
-          <div class="frame-inner">
-            <img
-              src={image}
-              alt={`ギャラリー画像 ${String(index + 1).padStart(3, '0')}`}
-              loading="lazy"
-              width="400"
-              height="400"
-            />
-            <div class="photo-number">{String(index + 1).padStart(3, '0')}</div>
+    <div class="gallery-container">
+      {yearGroups.map(group => (
+        <section class="year-group">
+          <h2 class="year-heading"><span>{group.year}</span></h2>
+          <div class="gallery-grid">
+            {group.items.map((photo, index) => (
+              <figure
+                class="photo-frame"
+                style={`--rot: ${rotationFor(index)}deg`}
+              >
+                <button
+                  class="photo-button"
+                  data-src={photo.src}
+                  data-title={photo.title}
+                  data-caption={photo.caption ?? ''}
+                  aria-label={`${photo.title} を拡大表示`}
+                >
+                  <img
+                    src={photo.src}
+                    alt={photo.caption ?? photo.title}
+                    loading="lazy"
+                  />
+                </button>
+                <figcaption class="photo-caption">
+                  <span class="photo-date">{formatDate(photo.date)}</span>
+                  {photo.event_slug ? (
+                    <a href={`/events/${photo.event_slug}`} class="photo-title-link">{photo.title}</a>
+                  ) : (
+                    <span class="photo-title">{photo.title}</span>
+                  )}
+                </figcaption>
+              </figure>
+            ))}
           </div>
-        </article>
+        </section>
       ))}
     </div>
   )}
+
+  <!-- ライトボックス -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <div class="lightbox-overlay"></div>
+    <button class="lightbox-close" aria-label="閉じる">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+    <figure class="lightbox-content">
+      <img id="lightbox-image" src="" alt="" />
+      <figcaption id="lightbox-caption" class="lightbox-caption"></figcaption>
+    </figure>
+  </div>
 </Layout>
 
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImage = document.getElementById('lightbox-image') as HTMLImageElement | null;
+  const lightboxCaption = document.getElementById('lightbox-caption');
+
+  const openLightbox = (src: string, title: string, caption: string) => {
+    if (!lightbox || !lightboxImage || !lightboxCaption) return;
+    lightboxImage.src = src;
+    lightboxImage.alt = caption || title;
+    lightboxCaption.textContent = caption ? `${title} — ${caption}` : title;
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeLightbox = () => {
+    if (!lightbox) return;
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  document.querySelectorAll<HTMLElement>('.photo-button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      openLightbox(btn.dataset.src || '', btn.dataset.title || '', btn.dataset.caption || '');
+    });
+  });
+
+  document.querySelector('.lightbox-overlay')?.addEventListener('click', closeLightbox);
+  document.querySelector('.lightbox-close')?.addEventListener('click', closeLightbox);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox?.classList.contains('open')) closeLightbox();
+  });
+</script>
+
 <style>
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 30px;
-    padding: 20px;
+  .gallery-container {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
   }
 
+  .year-group {
+    margin-bottom: 50px;
+  }
+
+  .year-heading {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    margin: 0 0 24px;
+    padding: 12px 0;
+    text-align: center;
+    font-family: var(--font-digital);
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    color: var(--retro-cyan);
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  .year-heading span {
+    display: inline-block;
+    padding: 0 24px;
+    border-bottom: 2px solid var(--retro-cyan);
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+  }
+
+  /* ポラロイド風フォトフレーム */
   .photo-frame {
-    background: white;
-    padding: 15px;
-    padding-bottom: 50px;
+    margin: 0;
+    background: #fdfdf8;
+    padding: 12px 12px 8px;
     border-radius: 4px;
     box-shadow:
-      0 4px 8px rgba(0, 0, 0, 0.5),
-      inset 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    cursor: pointer;
+      0 4px 12px rgba(0, 0, 0, 0.5),
+      0 0 20px rgba(255, 110, 199, 0.15);
+    transform: rotate(var(--rot, 0deg));
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
 
   .photo-frame:hover {
-    transform: rotate(0deg) scale(1.05) translateY(-8px) !important;
+    transform: rotate(0deg) scale(1.03);
     box-shadow:
-      0 12px 24px rgba(0, 0, 0, 0.6),
-      0 0 30px rgba(255, 110, 199, 0.6),
-      0 0 40px rgba(0, 255, 255, 0.3),
-      inset 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 10;
+      0 8px 20px rgba(0, 0, 0, 0.6),
+      0 0 30px rgba(0, 255, 255, 0.3);
+    z-index: 2;
   }
 
-  .frame-inner {
-    position: relative;
-  }
-
-  .photo-frame img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1;
-    object-fit: cover;
+  .photo-button {
     display: block;
-    border-radius: 2px;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: zoom-in;
   }
 
-  .photo-number {
-    position: absolute;
-    bottom: -40px;
-    right: 5px;
-    background: var(--retro-yellow);
-    color: var(--bg-dark);
-    padding: 6px 12px;
-    border-radius: 12px;
-    font-family: var(--font-digital);
-    font-weight: 700;
-    font-size: 0.8rem;
-    box-shadow:
-      0 2px 4px rgba(0, 0, 0, 0.3),
-      0 0 10px rgba(255, 214, 10, 0.5);
-    letter-spacing: 2px;
+  .photo-button img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
   }
 
-  /* 空状態のローディングアニメーション */
-  .loading-animation {
+  .photo-caption {
     display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 8px 4px 4px;
+  }
+
+  .photo-date {
+    font-family: var(--font-digital);
+    font-size: 0.75rem;
+    color: #888;
+    letter-spacing: 1px;
+  }
+
+  .photo-title,
+  .photo-title-link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    text-decoration: none;
+  }
+
+  .photo-title-link:hover {
+    color: var(--retro-purple);
+    text-decoration: underline;
+  }
+
+  /* ライトボックス */
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: none;
+    align-items: center;
     justify-content: center;
-    gap: 10px;
-    margin-top: 30px;
   }
 
-  .loading-dot {
-    font-size: 1.5rem;
-    color: var(--retro-pink);
-    animation: loading-bounce 1.4s infinite ease-in-out both;
+  .lightbox.open {
+    display: flex;
   }
 
-  .loading-dot:nth-child(1) {
-    animation-delay: -0.32s;
+  .lightbox-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
   }
 
-  .loading-dot:nth-child(2) {
-    animation-delay: -0.16s;
+  .lightbox-close {
+    position: absolute;
+    top: calc(20px + env(safe-area-inset-top, 0px));
+    right: 20px;
+    z-index: 2002;
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid white;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
   }
 
-  @keyframes loading-bounce {
-    0%, 80%, 100% {
-      transform: scale(0);
-      opacity: 0.3;
-    }
-    40% {
-      transform: scale(1);
-      opacity: 1;
-    }
+  .lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
   }
 
-  /* レスポンシブ対応 */
-  @media (max-width: 1024px) {
-    .gallery-grid {
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 25px;
-    }
+  .lightbox-content {
+    position: relative;
+    z-index: 2001;
+    margin: 0;
+    max-width: 92vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
   }
 
-  @media (max-width: 768px) {
-    .gallery-grid {
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 20px;
-      padding: 15px;
-    }
+  .lightbox-content img {
+    max-width: 92vw;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 3px solid var(--retro-cyan);
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.4);
+  }
 
-    .photo-frame {
-      padding: 12px;
-      padding-bottom: 45px;
-    }
-
-    .photo-number {
-      bottom: -35px;
-      font-size: 0.75rem;
-      padding: 5px 10px;
-    }
+  .lightbox-caption {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.95rem;
   }
 
   @media (max-width: 480px) {
     .gallery-grid {
-      grid-template-columns: 1fr;
-      gap: 20px;
-      padding: 10px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
     }
 
     .photo-frame {
-      max-width: 320px;
-      margin: 0 auto;
-      padding: 10px;
-      padding-bottom: 40px;
-    }
-
-    .photo-number {
-      bottom: -32px;
-      font-size: 0.7rem;
-      padding: 4px 8px;
-    }
-
-    .photo-frame:hover {
-      transform: rotate(0deg) scale(1.02) translateY(-4px) !important;
+      padding: 8px 8px 6px;
     }
   }
 
   /* アニメーション無効化（アクセシビリティ） */
   @media (prefers-reduced-motion: reduce) {
     .photo-frame,
-    .loading-dot {
+    .lightbox-close {
       transition: none !important;
-      animation: none !important;
     }
 
-    .photo-frame:hover {
-      transform: none !important;
-      box-shadow:
-        0 4px 8px rgba(0, 0, 0, 0.5),
-        inset 0 0 10px rgba(0, 0, 0, 0.1);
+    .photo-frame:hover,
+    .lightbox-close:hover {
+      transform: rotate(var(--rot, 0deg));
     }
   }
 </style>
