@@ -9,11 +9,15 @@
 - id: event-20260704-timetree-01295027
   slug: 20260704-timetree-01295027
   date: 2026-07-04 09:00:00 +0900
-  title: イベント
-  site: イベント
+  title: スマカノ バスツアー
+  site: スマカノ バスツアー
   timetree_id: "2966935731601295027"
-  content: |
+  content: |-
     TBD
+
+    詳細: https://www.smkn.love/sbt04/
+  images:
+    - /events/20260704-timetree-01295027.jpg
 - id: event-20260706-timetree-10521025
   slug: 20260706-timetree-10521025
   date: 2026-07-06 18:00:00 +0900
@@ -40,6 +44,8 @@
   timetree_id: "2966936094668637822"
   content: |
     TBD
+  images:
+    - /events/20260713-timetree-68637822.jpg
 - id: event-20260718-timetree-51040499
   slug: 20260718-timetree-51040499
   date: 2026-07-18 18:00:00 +0900
