@@ -12,8 +12,17 @@
   title: 渋谷la.Mama
   site: 渋谷la.Mama
   timetree_id: "2924725735140771323"
-  content: |
-    TBD
+  content: |-
+    同門対決 in 渋谷ラママ
+
+    【出演】
+    なんちゃらアイドル
+    VS
+    S.B.Q.アイドル部
+
+    開場/開演　11:00/11:30
+    ADV　¥2,500＋1D
+    配信　¥2,000
   images:
     - /events/20260502-timetree-40771323.jpg
 - id: event-20260503-timetree-72681568
@@ -77,8 +86,26 @@
   title: 新宿Antiknock
   site: 新宿Antiknock
   timetree_id: "2941003258203883511"
-  content: |
-    TBD
+  content: |-
+    SPICE GIRLS VOL.56
+
+    【出演】
+    僕には通じない / TIGHT / MANACLE / Baby inspire / なんちゃらアイドル / 憑依中毒-シャーマンホリック- / 世界逆転宣言！ / DECIDER
+
+    【タイムテーブル】
+    10:00-10:25　DECIDER
+    10:25-10:50　世界逆転宣言！
+    10:50-11:15　憑依中毒-シャーマンホリック-
+    11:15-11:40　なんちゃらアイドル
+    11:45-12:10　Baby inspire
+    12:10-12:35　MANACLE
+    12:35-13:00　TIGHT
+    13:00-13:25　僕には通じない
+
+    開場/開演　09:45/10:00　CLOSE 14:30
+    ADV　¥2,500＋1D（¥600）
+    DOOR　¥3,000＋1D（¥600）
+    TICKET：Livepocket
   images:
     - /events/20260510-timetree-03883511.jpg
 - id: event-20260516-timetree-05117798
@@ -139,8 +166,19 @@
   timetree_id: "2965547696041117096"
   labels:
     - マミソロ
-  content: |
-    TBD
+  content: |-
+    コスホリックSP S.B.Q.P.C.
+
+    新刊「悲しく放つ」御茶海マミ
+    A4 / P16+DL82cut+CD ¥2,000-
+    購入特典 撮影チケット1枚（1分）
+
+    新刊「嘘。」
+    A4 / P16+DL87cut+CD ¥2,000-
+    購入特典 撮影チケット1枚（1分）
+
+    ※開場直後の高額紙幣はご遠慮ください。
+    ※一度スペースを離れてからの返品・返金は対応できません。必ずその場でご確認ください。
   images:
     - /events/20260523-timetree-41117096.jpg
 - id: event-20260524-timetree-31814486
@@ -149,8 +187,37 @@
   title: モガフェス
   site: モガフェス
   timetree_id: "2956680523331814486"
-  content: |
-    TBD
+  content: |-
+    モガフェス in TOCHIGI 2026
+    十八歳以下入場無料！
+
+    【IDOL LIVE】
+    The Grateful a MogAAAz
+    めろん畑a go go
+    野生のうず
+    ぬ。みる
+    なんちゃらアイドル
+    ピューパ!!
+    POPPY
+    さかさまJr.
+    WHAT AM I？
+    GARUDA
+    BABYTANTS
+
+    【DJ】
+    おぺちんとイカした仲間たち
+    KAZ（RUDE58）
+    やわらぎめんま（POPPY） and more
+
+    【キッチンカー】
+    ギュウ農キッチンカー
+    ギュウ農キッチン
+    カフェQ
+
+    会場　塩谷町自然休養村センター
+    Open 10:00 / Start 10:45
+    1日チケット ¥3,500
+    通しチケット ¥5,000
   images:
     - /events/20260524-timetree-31814486.jpg
 - id: event-20260527-timetree-79606025
@@ -167,8 +234,17 @@
   title: 町田ヒットパレード
   site: 町田ヒットパレード
   timetree_id: "2965549909777990955"
-  content: |
-    TBD
+  content: |-
+    町田ヒットパレード 開店12周年大感謝祭
+
+    年間200本以上のライヴをこなすアイドル
+    なんちゃらアイドル
+
+    通常料金 時間制飲み放題
+    ゲスト来店予定時間　19時〜23時半前後
+
+    町田市原町田6-18-2　ビラ・アペックス町田B1F
+    https://hit-parade.sakura.ne.jp
   images:
     - /events/20260528-timetree-77990955.jpg
 - id: event-20260530-timetree-26105091

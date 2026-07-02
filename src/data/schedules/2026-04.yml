@@ -12,8 +12,20 @@
   title: 大塚Welcome back
   site: 大塚Welcome back
   timetree_id: "2924398032558638586"
-  content: |
-    TBD
+  content: |-
+    Let's Party!
+    Welcome back presents
+
+    【出演】
+    なんちゃらアイドル
+    有坂愛海
+    さおり凛ね
+    あちゃむ
+    江織杏
+    工藤ちゃん
+
+    開場/開演　18:15/18:45
+    TICKET　¥2,500＋1Drink¥600
   images:
     - /events/20260402-timetree-58638586.jpg
 - id: event-20260403-timetree-08482961
@@ -67,8 +79,12 @@
   title: Leaf room 豪徳寺
   site: Leaf room 豪徳寺
   timetree_id: "2924396387577775746"
-  content: |
-    TBD
+  content: |-
+    なんちゃらアイドル×加藤格
+    "ジャンルって何ですかぁ！？"
+
+    開場/開演　19:00/19:30
+    TICKET　¥2,500（別途2drink ¥1,000）
   images:
     - /events/20260408-timetree-77775746.jpg
 - id: event-20260411-km-music-nakano
@@ -122,8 +138,18 @@
   title: SALON a Spoonful Of Sugar
   site: SALON a Spoonful Of Sugar
   timetree_id: "2935166255277163527"
-  content: |
-    TBD
+  content: |-
+    真昼の大阪ツーマン 11投目！
+
+    【出演】
+    なんちゃらアイドル
+    sommeil sommeil
+
+    開場/開演　12:00/12:30
+    TICKET　¥2,500
+
+    会場　SALON a Spoonful Of Sugar
+    大阪府大阪市西区新町3-9-7 2F
   images:
     - /events/20260418-timetree-77163527.jpg
 - id: event-20260418-timetree-83678436
@@ -202,8 +228,21 @@
   title: 八王子Time Tokyo
   site: 八王子Time Tokyo
   timetree_id: "2935165022059513706"
-  content: |
-    TBD
+  content: |-
+    Synchronicity ～CYBERNETIC RESONANCE QUANTUM CONVERGENCE～
+
+    【出演】
+    石井まどか
+    爆音八幡宮
+    SBQアイドル部
+    なんちゃらアイドル
+    Beyond That World
+
+    開場/開演　15:10/15:30
+    TICKET　¥3,000（ドリンク代別途）
+
+    会場　八王子TimeTokyo
+    八王子市別所1-1-4ライブリーB1
   images:
     - /events/20260426-timetree-59513706.jpg
 - id: event-20260428-timetree-77529387
@@ -222,8 +261,19 @@
   title: 一緒に聴きたいアイドル曲ＤＪイベント なんたってアイドル
   site: 蒲田オッタンタ
   timetree_id: "2834153386511844422"
-  content: |
-    TBD
+  content: |-
+    一緒に聴きたいアイドル曲ＤＪイベント
+    なんたってアイドル
+
+    偶数月第4水曜日 19:00〜22:00
+    ¥1,500（1d.付）
+
+    DJ：なんちゃらアイドル / Q太郎 / FUKO
+    ゲストDJも歓迎！
+
+    会場　スタジオ・オッタンタ
+    大田区蒲田5-7-6 CCM蒲田ビル2F
+    TEL 03-3738-0080
   images:
     - /events/ottanta-dj.jpeg
 - id: event-20260430-timetree-65989253

@@ -13,7 +13,13 @@
   site: スマカノ バスツアー
   timetree_id: "2966935731601295027"
   content: |-
-    TBD
+    御茶海マミ・あおはるさんと行く スマカノ潮干狩りバスツアー
+
+    7/4(土) 9:00 品川集合
+    参加費 12,000円
+    お申し込み開始日 6月4日(木)
+    参加者の方には追って詳細をお伝え致します
+    詳細、お申し込みはスマカノオフィシャルサイトをご覧下さい。
 
     詳細: https://www.smkn.love/sbt04/
   images:
@@ -32,8 +38,16 @@
   title: 東京倶楽部
   site: 東京倶楽部
   timetree_id: "2994589978467648713"
-  content: |
-    TBD
+  content: |-
+    S.B.Q.B.B SPECIAL LIVE
+
+    @東京倶楽部 水道橋店
+
+    OPEN/START　19:00/19:40
+    ADV　¥3,300（1D込）
+    DOOR　¥3,850（＋order）
+
+    東京都千代田区神田駿河台2-11-16
   images:
     - /events/20260710-timetree-67648713.jpg
 - id: event-20260713-timetree-68637822
@@ -42,8 +56,20 @@
   title: 東新宿LOVE TKO
   site: 東新宿LOVE TKO
   timetree_id: "2966936094668637822"
-  content: |
-    TBD
+  content: |-
+    sommeil sommeil＆なんちゃらアイドル マンスリー2マンライブ！
+
+    open/start　18:00/19:00
+    CHARGE　¥1,500
+
+    【タイムテーブル】
+    19:00　なんちゃらアイドル（20分）
+    19:30　sommeil sommeil（20分）
+    20:00　なんちゃらアイドル（20分）
+    20:30　sommeil sommeil（20分）
+
+    第2回 8月17日（月）
+    第3回 9月14日（月）
   images:
     - /events/20260713-timetree-68637822.jpg
 - id: event-20260718-timetree-51040499
@@ -52,10 +78,21 @@
   title: 渋谷LOFT HEAVEN
   site: 渋谷LOFT HEAVEN
   timetree_id: "2983555285551040499"
-  content: |
-    TBD
+  content: |-
+    夢乃なこ Birthday Live!!
+    ゆめのなこと ゆめのなか26
 
-    詳細: https://livepocket.jp/e/20260718_yumenonaco
+    【出演】
+    Sommeil Sommeil
+    夢乃なこ
+    夢乃なこ×カレンちゃん
+    なんちゃらアイドル
+    demipogune
+
+    OPEN/START　17:30/18:00
+    ADV　¥3,000＋1D
+    DOOR　¥3,500＋1D
+    配信　¥2,000
   images:
     - /events/20260718-timetree-51040499.jpg
 - id: event-20260720-timetree-50570383
