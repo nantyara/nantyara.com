@@ -42,6 +42,16 @@ const typeLabel: Record<string, string> = {
   ep: 'EP'
 };
 
+// ストリーミングリンク（プラットフォーム別のアイコン・クラス解決）
+const streamingLinks = (links ?? []).map((link) => {
+  const p = link.platform.toLowerCase();
+  if (p.includes('spotify')) return { ...link, icon: 'fa-brands fa-spotify', cls: 'spotify-button' };
+  if (p.includes('apple')) return { ...link, icon: 'fa-brands fa-apple', cls: 'apple-button' };
+  if (p.includes('youtube')) return { ...link, icon: 'fa-brands fa-youtube', cls: 'youtube-button' };
+  if (p.includes('line')) return { ...link, icon: 'fa-brands fa-line', cls: 'line-button' };
+  return { ...link, icon: 'fa-solid fa-music', cls: '' };
+});
+
 // OGP用
 const ogTitle = `${title} | なんちゃらアイドル`;
 const ogDescription = artist
@@ -68,11 +78,27 @@ const ogImage = jacket_image ?? '/img/ogp-default.png';
         <div class="type-badge">{typeLabel[type] || type}</div>
         <h1 class="release-title">{title}</h1>
         {artist && <p class="artist-name">{artist}</p>}
-        <p class="release-date">📅 {formatDate(releaseDate)}</p>
+        <p class="release-date"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> {formatDate(releaseDate)}</p>
         <div class="release-meta">
           {format && <span class="meta-item">Format: {format}</span>}
           {label && <span class="meta-item">Label: {label}</span>}
         </div>
+        {streamingLinks.length > 0 && (
+          <div class="streaming-links header-streaming">
+            {streamingLinks.map((link) => (
+              <a
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class={`streaming-button ${link.cls}`}
+                aria-label={`${link.platform}で聴く`}
+              >
+                <i class={link.icon} aria-hidden="true"></i>
+                <span class="button-text">{link.platform}</span>
+              </a>
+            ))}
+          </div>
+        )}
       </div>
     </div>
 
@@ -91,40 +117,6 @@ const ogImage = jacket_image ?? '/img/ogp-default.png';
             <li class="track-item">{track}</li>
           ))}
         </ol>
-      </div>
-    )}
-
-    {links && links.length > 0 && (
-      <div class="streaming-section">
-        <h2 class="section-title">ストリーミング</h2>
-        <div class="streaming-links">
-          {links.map((link: { platform: string; url: string }) => {
-            const platformLower = link.platform.toLowerCase();
-            let iconClass = 'fa-solid fa-music';
-            let buttonClass = 'streaming-button';
-
-            if (platformLower.includes('spotify')) {
-              iconClass = 'fa-brands fa-spotify';
-              buttonClass = 'streaming-button spotify-button';
-            } else if (platformLower.includes('apple')) {
-              iconClass = 'fa-brands fa-apple';
-              buttonClass = 'streaming-button apple-button';
-            } else if (platformLower.includes('youtube')) {
-              iconClass = 'fa-brands fa-youtube';
-              buttonClass = 'streaming-button youtube-button';
-            } else if (platformLower.includes('line')) {
-              iconClass = 'fa-brands fa-line';
-              buttonClass = 'streaming-button line-button';
-            }
-
-            return (
-              <a href={link.url} target="_blank" rel="noopener noreferrer" class={buttonClass} aria-label={`${link.platform}で聴く`}>
-                <i class={iconClass}></i>
-                <span class="button-text">{link.platform}</span>
-              </a>
-            );
-          })}
-        </div>
       </div>
     )}
 
@@ -294,14 +286,15 @@ const ogImage = jacket_image ?? '/img/ogp-default.png';
     border-left-color: var(--retro-pink);
   }
 
-  .streaming-section {
-    margin-bottom: 40px;
-  }
-
   .streaming-links {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
+  }
+
+  /* ヘッダー内配置（ファーストビューでサブスクに飛べるように） */
+  .header-streaming {
+    margin-top: 16px;
   }
 
   .streaming-button {
