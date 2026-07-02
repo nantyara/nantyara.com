@@ -131,8 +131,15 @@ sync-timetree --dry-run        # ドライラン
 ```
 
 **重要な仕様**:
-- 既存のイベント（タイトルと日付が一致）は上書きしない
-- TimeTreeのラベル（`public_calendar_label.name`）を自動的にYAMLの`label`フィールドに反映
+- 既存イベントの判定は `timetree_id`（TimeTreeのイベントID）で行う
+- 手動編集済みの既存イベントは上書きしない
+- **content が `TBD`（または `TBD` + 詳細リンク）のままの「未編集インポートイベント」に限り、TimeTree側の変更を追従更新する**:
+  - content（note・link_url の追加）
+  - 画像（`images` 未設定ならダウンロードして追加）
+  - ラベル（`labels` 未設定なら追加）
+  - タイトル（title と site が同値＝プレースホルダのままの場合のみ。title/site 両方を更新）
+- yq への値の受け渡しは `strenv()` を使用（noteに引用符等が含まれても安全）
+- TimeTreeのラベル（`public_calendar_label.name`）を自動的にYAMLの`labels`フィールドに反映
 - イベントのslugは `YYYYMMDD-timetree-{ID末尾8桁}` 形式で生成
 
 ## TimeTree API仕様

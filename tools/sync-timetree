@@ -155,6 +155,7 @@ main() {
     echo "$response" | jq '.public_events' > "$events_file"
 
     local total_added=0
+    local total_updated=0
     local total_duplicate=0
 
     # イベント数を取得
@@ -188,35 +189,84 @@ main() {
 
         # 重複チェック（TimeTreeのイベントIDで判定）
         if event_exists "$yaml_file" "$id"; then
-            # 既存イベントの content が TBD で、TimeTree に note がある場合は更新
-            if [[ -n "$note" ]]; then
-                # 既存イベントの content を取得
-                local existing_content=$(yq eval ".[] | select(.timetree_id == \"$id\") | .content" "$yaml_file" 2>/dev/null | sed 's/^[[:space:]]*//' | sed 's/[[:space:]]*$//')
+            local existing_content=$(yq eval ".[] | select(.timetree_id == \"$id\") | .content" "$yaml_file" 2>/dev/null)
+            local event_slug=$(yq eval ".[] | select(.timetree_id == \"$id\") | .slug" "$yaml_file" 2>/dev/null)
+            local updated=false
 
-                # content が "TBD" の場合のみ更新
-                if [[ "$existing_content" == "TBD" ]]; then
-                    echo -e "${COLOR_YELLOW}  ↻ Updating content: $title on $date_only${COLOR_RESET}"
-
+            # content が TBD のまま（＝インポート後に手を入れていない）イベントだけ、
+            # TimeTree 側の変更を反映する。「TBD」単独でも「TBD + 詳細リンク」でも対象。
+            if [[ "$existing_content" == "TBD" || "$existing_content" == TBD$'\n'* ]]; then
+                # タイトルが TimeTree 側で変わっていたら反映
+                # ただし title と site が同値（＝インポート時のプレースホルダのまま）の
+                # 場合だけ。片方でも手動編集されていたら触らない。
+                local existing_title=$(yq eval ".[] | select(.timetree_id == \"$id\") | .title" "$yaml_file" 2>/dev/null)
+                local existing_site=$(yq eval ".[] | select(.timetree_id == \"$id\") | .site" "$yaml_file" 2>/dev/null)
+                if [[ -n "$title" && "$title" != "$existing_title" && "$existing_title" == "$existing_site" ]]; then
+                    echo -e "${COLOR_YELLOW}  ↻ Updating title: $existing_title → $title on $date_only${COLOR_RESET}"
                     if [[ "$dry_run" == false ]]; then
-                        # contentを構築
-                        local new_content="$note"
-                        if [[ -n "$link_url" ]]; then
-                            new_content="${new_content}\n\n詳細: ${link_url}"
-                        fi
+                        SLUG="$event_slug" TITLE="$title" \
+                            yq eval '(.[] | select(.slug == strenv(SLUG)) | .title) = strenv(TITLE) | (.[] | select(.slug == strenv(SLUG)) | .site) = strenv(TITLE)' -i "$yaml_file"
+                    fi
+                    updated=true
+                fi
 
-                        # yqを使ってcontentを更新
-                        local event_slug=$(yq eval ".[] | select(.timetree_id == \"$id\") | .slug" "$yaml_file")
-                        yq eval "(.[] | select(.slug == \"$event_slug\") | .content) = \"$(echo -e "$new_content")\"" -i "$yaml_file"
+                # contentを構築（noteが入っていれば反映、詳細リンクも維持）
+                local new_content="TBD"
+                if [[ -n "$note" ]]; then
+                    new_content="$note"
+                fi
+                if [[ -n "$link_url" ]]; then
+                    new_content="${new_content}"$'\n\n'"詳細: ${link_url}"
+                fi
 
+                if [[ "$new_content" != "$existing_content" ]]; then
+                    echo -e "${COLOR_YELLOW}  ↻ Updating content: $title on $date_only${COLOR_RESET}"
+                    if [[ "$dry_run" == false ]]; then
+                        SLUG="$event_slug" NEW_CONTENT="$new_content" \
+                            yq eval '(.[] | select(.slug == strenv(SLUG)) | .content) = strenv(NEW_CONTENT)' -i "$yaml_file"
                         echo -e "${COLOR_CYAN}    → Updated from TimeTree note${COLOR_RESET}"
                     fi
-                    total_duplicate=$((total_duplicate + 1))
-                    continue
+                    updated=true
+                fi
+
+                # 画像が未設定なら TimeTree の画像を取り込む
+                local has_images=$(yq eval ".[] | select(.timetree_id == \"$id\") | has(\"images\")" "$yaml_file" 2>/dev/null)
+                if [[ -n "$image_url" && "$has_images" != "true" ]]; then
+                    local image_filename="${event_slug}.jpg"
+                    local image_path="${PROJECT_DIR}/public/events/${image_filename}"
+                    echo -e "${COLOR_YELLOW}  ↻ Adding image: $title on $date_only${COLOR_RESET}"
+                    if [[ "$dry_run" == false ]]; then
+                        mkdir -p "${PROJECT_DIR}/public/events"
+                        if [[ -f "$image_path" ]] || curl -sf -o "$image_path" "$image_url"; then
+                            SLUG="$event_slug" IMG="/events/${image_filename}" \
+                                yq eval '(.[] | select(.slug == strenv(SLUG)) | .images) = [strenv(IMG)]' -i "$yaml_file"
+                            echo -e "${COLOR_CYAN}    → Downloaded image: ${image_filename}${COLOR_RESET}"
+                        else
+                            rm -f "$image_path"
+                            echo -e "${COLOR_YELLOW}    ⚠ Failed to download image${COLOR_RESET}"
+                        fi
+                    fi
+                    updated=true
+                fi
+
+                # ラベルが未設定なら TimeTree のラベルを反映
+                local has_labels=$(yq eval ".[] | select(.timetree_id == \"$id\") | has(\"labels\")" "$yaml_file" 2>/dev/null)
+                if [[ -n "$label_name" && "$has_labels" != "true" ]]; then
+                    echo -e "${COLOR_YELLOW}  ↻ Adding label: $title on $date_only [${label_name}]${COLOR_RESET}"
+                    if [[ "$dry_run" == false ]]; then
+                        SLUG="$event_slug" LABEL="$label_name" \
+                            yq eval '(.[] | select(.slug == strenv(SLUG)) | .labels) = [strenv(LABEL)]' -i "$yaml_file"
+                    fi
+                    updated=true
                 fi
             fi
 
-            echo -e "${COLOR_DIM}  ⊘ Skipping duplicate: $title on $date_only (timetree_id: $id)${COLOR_RESET}"
-            total_duplicate=$((total_duplicate + 1))
+            if [[ "$updated" == true ]]; then
+                total_updated=$((total_updated + 1))
+            else
+                echo -e "${COLOR_DIM}  ⊘ Skipping duplicate: $title on $date_only (timetree_id: $id)${COLOR_RESET}"
+                total_duplicate=$((total_duplicate + 1))
+            fi
             continue
         fi
 
@@ -318,6 +368,7 @@ EOF
     echo -e "${COLOR_BOLD}${dry_run_label}Summary:${COLOR_RESET}"
     echo "  Total events fetched: $event_count"
     echo "  New events to add: $total_added"
+    echo "  Existing events updated: $total_updated"
     echo "  Duplicate events skipped: $total_duplicate"
 
     if [[ "$dry_run" == true ]]; then
