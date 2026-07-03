@@ -1,11 +1,22 @@
 - id: event-20260701-timetree-97101336
   slug: 20260701-timetree-97101336
-  date: 2026-07-01 18:00:00 +0900
-  title: 大塚Welcome Back
+  date: 2026-07-01 18:45:00 +0900
+  title: Welcome back presents「Let's Party！」
   site: 大塚Welcome Back
   timetree_id: "2965560390597101336"
   content: |
-    TBD
+    【出演】
+    なんちゃらアイドル
+    デカシャツ喫茶
+    ヤギヌマメイ
+    さおり凛ね
+    723シャトンヌ⤴
+    小牧蒼
+
+    開場/開演　18:15/18:45
+    TICKET　¥2,500＋1Drink ¥600
+  images:
+    - /events/20260701-welcomeback.jpeg
 - id: event-20260704-timetree-01295027
   slug: 20260704-timetree-01295027
   date: 2026-07-04 09:00:00 +0900

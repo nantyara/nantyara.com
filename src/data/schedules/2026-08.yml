@@ -95,6 +95,35 @@
     - マミソロ
   content: |
     TBD
+- id: event-20260816-lamama
+  slug: 20260816-lamama
+  date: 2026-08-16 15:45:00 +0900
+  title: DOUGENZAKA MAUDIE PALACE 2026
+  site: 渋谷La.mama
+  content: |
+    【第二弾発表アーティスト】
+    AD／CD
+    なんちゃらアイドル
+    森ヤスアキ【BANDSET】
+    ★サブステージ★
+    C.B.Style
+    SOSHI-G a.k.a.TOMOYO-C
+
+    【発表済み第一弾アーティスト】
+    スキップカウズ
+    ザ☆ペラーズ
+    泥虎（DEIDORA）
+    the 部族
+    MAUDIE
+    ...and more!!
+
+    special guest：褒めますおじさん
+
+    開場/開演　15:30/15:45（予定）
+    Tickets　前売り¥3,000/当日¥3,500
+  images:
+    - /events/20260816-lamama.jpeg
+
 - id: event-20260817-timetree-58495452
   slug: 20260817-timetree-58495452
   date: 2026-08-17 12:00:00 +0900
