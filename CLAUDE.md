@@ -377,6 +377,23 @@ npm run dev
 - 画像URLは外部URL（TimeTreeのCDN）なので、ローカルにダウンロードする機能は未実装
 - TimeTreeのイベント詳細（note）が空の場合、「TimeTreeからインポート」という汎用メッセージになる
 
+### 2026-07-03: iOS Safari で古いスケジュールが表示され続けるバグの修正
+
+**症状**: iPhone Safari で7月の予定が出ない（8月の TBD プレースホルダは出る）が、ホーム画面 PWA は正常。
+
+**原因**:
+- 旧 PWA 設定は HTML まで precache する「ガチガチキャッシュ」で、表示の鮮度が SW 更新に完全依存だった
+- iOS Safari は SW の自動更新チェックをサボることがあり、2〜5月時代の SW+precache が7週間以上居座った
+- iOS では Safari とホーム画面 PWA は **SW ストレージが別インスタンス**なので、PWA だけ正常という非対称が起きる
+
+**対策**（再発防止の設計変更）:
+1. `globPatterns` から `html` を除外（HTML を precache しない）
+2. ナビゲーションは `NetworkFirst`（`networkTimeoutSeconds: 3`、オフライン時のみ `pages-cache` にフォールバック）
+3. `/events/` の CacheFirst ルールは画像拡張子限定に（イベント詳細ページの HTML を巻き込まない）
+4. Layout.astro の SW 登録で、ロード時と `visibilitychange`（タブ復帰）時に `reg.update()` を明示的に実行
+
+**注意**: すでに古い SW を抱えてる端末は、新 sw.js を取得するまで直らない。手動レスキューは iOS の 設定 > Safari > 詳細 > Webサイトデータ > nantyara.com を削除。
+
 ## gallery / history のコンテンツ運用
 
 ### gallery（ライブ写真ギャラリー）

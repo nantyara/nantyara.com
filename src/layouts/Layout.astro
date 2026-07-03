@@ -92,6 +92,13 @@ const ogImageURL = new URL(ogImage, site);
 
           navigator.serviceWorker.register('/sw.js', { scope: '/' })
             .then(reg => {
+              // iOS Safari は自動の SW 更新チェックをサボることがあるので、
+              // ロード時とタブ復帰時に明示的に更新チェックする
+              var checkUpdate = function() { reg.update().catch(function() {}); };
+              checkUpdate();
+              document.addEventListener('visibilitychange', function() {
+                if (document.visibilityState === 'visible') checkUpdate();
+              });
               reg.addEventListener('updatefound', function() {
                 var nw = reg.installing;
                 if (!nw) return;

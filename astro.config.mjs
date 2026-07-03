@@ -68,9 +68,27 @@ export default defineConfig({
         ]
       },
       workbox: {
-        // ガチガチキャッシュ設定
-        globPatterns: ['**/*.{js,css,html,ico,png,jpg,jpeg,svg,webp,woff,woff2,ttf,eot,otf}'],
+        // HTML は precache しない（スケジュールの鮮度が SW 更新頼みになり、
+        // iOS Safari が SW 更新をサボると何週間も古い予定が表示され続けるため）。
+        // アセットはガチガチキャッシュ、HTML はオンラインなら常にネットワーク優先。
+        globPatterns: ['**/*.{js,css,ico,png,jpg,jpeg,svg,webp,woff,woff2,ttf,eot,otf}'],
         runtimeCaching: [
+          {
+            // ページ遷移（HTML）: ネットワーク優先、オフライン時のみキャッシュ
+            urlPattern: ({ request }) => request.mode === 'navigate',
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'pages-cache',
+              networkTimeoutSeconds: 3,
+              expiration: {
+                maxEntries: 50,
+                maxAgeSeconds: 60 * 60 * 24 * 30
+              },
+              cacheableResponse: {
+                statuses: [0, 200]
+              }
+            }
+          },
           {
             urlPattern: /^https:\/\/cdnjs\.cloudflare\.com\/.*/i,
             handler: 'CacheFirst',
@@ -86,7 +104,8 @@ export default defineConfig({
             }
           },
           {
-            urlPattern: /\/events\/.*/i,
+            // フライヤー画像のみ（イベント詳細ページのHTMLを巻き込まないよう拡張子で限定）
+            urlPattern: /\/events\/.*\.(?:png|jpe?g|webp|svg|gif)$/i,
             handler: 'CacheFirst',
             options: {
               cacheName: 'event-images-cache',
