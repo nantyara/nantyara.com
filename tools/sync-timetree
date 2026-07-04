@@ -67,6 +67,12 @@ timestamp_to_date() {
     fi
 }
 
+# 会場名の表記ゆれ（空白・大文字小文字）を正規化して比較用文字列にする
+# ※ 全角スペースはバイト単位の文字クラスだと他のCJK文字を壊すので、リテラル置換で消す
+normalize_site() {
+    echo "$1" | awk '{gsub(/ /, ""); gsub(/　/, ""); print tolower($0)}'
+}
+
 # イベントが既存のYAMLに存在するかチェック
 event_exists() {
     local yaml_file="$1"
@@ -157,6 +163,8 @@ main() {
     local total_added=0
     local total_updated=0
     local total_duplicate=0
+    local total_adopted=0
+    local total_ambiguous=0
 
     # イベント数を取得
     local events_length=$(jq 'length' "$events_file")
@@ -270,6 +278,36 @@ main() {
             continue
         fi
 
+        # 養子縁組: 手動追加（sync-x 等）済みで timetree_id を持たない同日・同会場の
+        # エントリがあれば、新規作成せず timetree_id を書き足して紐づける
+        # （TimeTree 側のイベントtitleは会場名プレースホルダなので site と比較する）
+        if [[ -f "$yaml_file" ]]; then
+            local normalized_title=$(normalize_site "$title")
+            local adopt_slug=""
+            local adopt_count=0
+            while IFS=$'\t' read -r cand_slug cand_site; do
+                [[ -z "$cand_slug" ]] && continue
+                if [[ "$(normalize_site "$cand_site")" == "$normalized_title" ]]; then
+                    adopt_slug="$cand_slug"
+                    adopt_count=$((adopt_count + 1))
+                fi
+            done < <(DAY="$date_only" yq eval '.[] | select(has("timetree_id") | not) | select(.date | test("^" + strenv(DAY))) | .slug + "	" + .site' "$yaml_file" 2>/dev/null)
+
+            if [[ "$adopt_count" -eq 1 ]]; then
+                echo -e "${COLOR_YELLOW}  ⚭ Adopting existing entry: $adopt_slug ← timetree_id ${id}${COLOR_RESET}"
+                if [[ "$dry_run" == false ]]; then
+                    SLUG="$adopt_slug" TID="$id" \
+                        yq eval '(.[] | select(.slug == strenv(SLUG)) | .timetree_id) = strenv(TID) | (.[] | select(.slug == strenv(SLUG)) | .timetree_id) style="double"' -i "$yaml_file"
+                fi
+                total_adopted=$((total_adopted + 1))
+                continue
+            elif [[ "$adopt_count" -gt 1 ]]; then
+                echo -e "${COLOR_YELLOW}  ⚠ Multiple adoption candidates for: $title on $date_only — skipping (resolve manually)${COLOR_RESET}"
+                total_ambiguous=$((total_ambiguous + 1))
+                continue
+            fi
+        fi
+
         # contentを構築
         if [[ -n "$note" ]]; then
             local content="$note"
@@ -370,6 +408,10 @@ EOF
     echo "  New events to add: $total_added"
     echo "  Existing events updated: $total_updated"
     echo "  Duplicate events skipped: $total_duplicate"
+    echo "  Manual entries adopted (timetree_id attached): $total_adopted"
+    if [[ "$total_ambiguous" -gt 0 ]]; then
+        echo -e "  ${COLOR_YELLOW}Ambiguous adoptions skipped (needs manual resolution): $total_ambiguous${COLOR_RESET}"
+    fi
 
     if [[ "$dry_run" == true ]]; then
         echo ""

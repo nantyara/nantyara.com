@@ -144,8 +144,14 @@ if (existsSync(schedulesDir)) {
   // 重複チェック
   console.log('\n🔍 スケジュールのID/Slug重複チェック中...\n');
 
+  // 会場名の表記ゆれ（空白・大文字小文字）を正規化して比較する
+  function normalizeSite(site) {
+    return String(site).replace(/\s/g, '').toLowerCase();
+  }
+
   const idMap = new Map();
   const slugMap = new Map();
+  const dayVenueMap = new Map();
 
   allSchedules.forEach(schedule => {
     // ID重複チェック
@@ -165,6 +171,20 @@ if (existsSync(schedulesDir)) {
         logError('重複エラー', `Slug "${schedule.slug}" が重複しています: ${prev._file} と ${schedule._file}`);
       } else {
         slugMap.set(schedule.slug, schedule);
+      }
+    }
+
+    // 同日・同会場チェック（TimeTree/X/手動と取り込み経路が複数あるため、
+    // 同じイベントの二重登録をここで堰き止める）
+    // 本当に別イベント（昼夜2公演など）の場合は duplicate_ok: true を付けて明示する
+    if (schedule.date && schedule.site && schedule.duplicate_ok !== true) {
+      const day = String(schedule.date).slice(0, 10);
+      const key = `${day}|${normalizeSite(schedule.site)}`;
+      if (dayVenueMap.has(key)) {
+        const prev = dayVenueMap.get(key);
+        logError('重複エラー', `同日・同会場のイベントがあります（${day} ${schedule.site}）: "${prev.id}" と "${schedule.id}"。同一イベントなら統合、別イベントなら duplicate_ok: true を付けてください`);
+      } else {
+        dayVenueMap.set(key, schedule);
       }
     }
   });

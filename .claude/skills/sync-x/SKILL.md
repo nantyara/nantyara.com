@@ -98,8 +98,9 @@ touch .claude/sync-x-last-run   # mtime が最終実行日時。7日超で hook 
 - 追加/更新したイベント一覧（日付・会場・タイトル・情報源ポストURL）
 - スキップした候補と理由（既存・読解不能・自信なし）
 - **重複チェック**: 同日・同会場のエントリが2件以上ないか確認して警告
-  （手動追加エントリは timetree_id が無いので、後日 sync-timetree が同じイベントを
-  重複作成しうる。逆に TimeTree 側に既にあるなら手動追加せずそちらを更新する）
+  （validate-yaml が同日・同会場の重複をコミット時にエラーで止め、後日 TimeTree に
+  同イベントが載っても sync-timetree が「養子縁組」＝既存エントリへの timetree_id
+  書き足しで重複作成を回避する。TimeTree 側に既にあるなら手動追加せずそちらを更新する）
 - Tavily 消費の目安（search/extract の回数）
 
 ## 注意
