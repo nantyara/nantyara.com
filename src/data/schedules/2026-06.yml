@@ -23,6 +23,12 @@
     山村薫
   images:
     - /events/20260603-timetree-55151210.jpeg
+  acts:
+    - "さしみ娘"
+    - "S.B.Q.アイドル部"
+    - "おきょー"
+    - "元祖☆令嬢倶楽部"
+    - "山村薫"
 - id: event-20260604-timetree-76183143
   slug: 20260604-timetree-76183143
   date: 2026-06-04 18:00:00 +0900
@@ -45,6 +51,12 @@
     当日　¥3,500＋1D
   images:
     - /events/20260604-timetree-76183143.jpg
+  acts:
+    - "るうず"
+    - "はる陽。"
+    - "小日向由衣"
+    - "ゆいざらす"
+    - "惑星通信社"
 - id: event-20260606-timetree-80373455
   slug: 20260606-timetree-80373455
   date: 2026-06-06 11:00:00 +0900
@@ -74,6 +86,17 @@
     後援　ヴィータモールせいせき
   images:
     - /events/20260606-timetree-80373455.jpg
+  acts:
+    - "永どん"
+    - "ラブくん"
+    - "ハピ"
+    - "てるみ・てる五子"
+    - "イチバ"
+    - "紫桃さき"
+    - "カブ左衛門"
+    - "そうかニャン"
+    - "ムジナもん"
+    - "松戸くん"
 - id: event-20260608-timetree-32945183
   slug: 20260608-timetree-32945183
   date: 2026-06-08 18:00:00 +0900
@@ -86,6 +109,8 @@
     田村ぬかりBAND 鍵盤サポート
   images:
     - /events/20260608-timetree-32945183.jpg
+  acts:
+    - "田村ぬかりBAND"
 - id: event-20260608-timetree-56762317
   slug: 20260608-timetree-56762317
   date: 2026-06-08 19:00:00 +0900
@@ -114,6 +139,9 @@
     guestに負けないように、御茶海もsexyに頑張るんば！
   images:
     - /events/20260608-timetree-56762317.jpeg
+  acts:
+    - "Momoka Kagamiya"
+    - "NEKO"
 - id: event-20260609-timetree-05529190
   slug: 20260609-timetree-05529190
   date: 2026-06-09 19:00:00 +0900
@@ -137,6 +165,15 @@
     オフィスカジュアルズ
   images:
     - /events/20260609-timetree-05529190.jpg
+  acts:
+    - "小日向由衣"
+    - "銀路"
+    - "Tokyoかけひき倶楽部"
+    - "青あんぱん"
+    - "sommeil sommeil"
+    - "AciD GROMOV"
+    - "惑星通信社"
+    - "オフィスカジュアルズ"
 - id: event-20260612-antiknock
   slug: 20260612-antiknock
   date: 2026-06-12 19:00:00 +0900
@@ -169,6 +206,9 @@
   images:
     - /events/20260612-antiknock.jpeg
     - /events/20260612-timetree-42125281.jpg
+  acts:
+    - "世界逆転宣言！"
+    - "TIGHT"
 - id: event-20260614-timetree-42116751
   slug: 20260614-timetree-42116751
   date: 2026-06-14 13:00:00 +0900
@@ -210,6 +250,13 @@
     前売り　¥3,500＋1ドリンク
   images:
     - /events/20260620-timetree-51078065.jpg
+  acts:
+    - "小林清美"
+    - "ぴっぴちゃん"
+    - "LILY＆YU"
+    - "小日向由衣"
+    - "＋tic color"
+    - "小熊あやめ"
 - id: event-20260621-timetree-24878829
   slug: 20260621-timetree-24878829
   date: 2026-06-21 12:00:00 +0900
@@ -259,6 +306,9 @@
     TEL 03-3738-0080
   images:
     - /events/ottanta-dj.jpeg
+  acts:
+    - "Q太郎"
+    - "FUKO"
 - id: event-20260630-timetree-84944149
   slug: 20260630-timetree-84944149
   date: 2026-06-30 18:00:00 +0900

@@ -21,11 +21,51 @@ function logSuccess(file) {
   console.log(`\x1b[32m✓ ${file}\x1b[0m`);
 }
 
+// 警告ログ出力（エラーにはしない）
+function logWarn(file, message) {
+  console.warn(`\x1b[33m⚠ ${file}: ${message}\x1b[0m`);
+}
+
 // 日付形式チェック（ISO 8601形式 with timezone）
 function isValidDate(dateStr) {
   if (!dateStr) return false;
   const date = new Date(dateStr);
   return !isNaN(date.getTime());
+}
+
+// 会場名の表記ゆれ（空白・大文字小文字）を正規化して比較する
+function normalizeSite(site) {
+  return String(site).replace(/\s/g, '').toLowerCase();
+}
+
+// 会場マスタ（venues.yml）を読み込み、正規化名 → venue の索引を作る
+function loadVenueIndex() {
+  const venuesFile = 'src/data/venues.yml';
+  const index = new Map();
+  if (!existsSync(venuesFile)) {
+    logWarn(venuesFile, '会場マスタが見つかりません（siteの解決をスキップ）');
+    return index;
+  }
+  const venues = parse(readFileSync(venuesFile, 'utf-8')) || [];
+  const idSet = new Set();
+  venues.forEach((venue, i) => {
+    if (!venue.id || !venue.name) {
+      logError(venuesFile, `会場[${i}]: id と name は必須です`);
+      return;
+    }
+    if (idSet.has(venue.id)) {
+      logError(venuesFile, `会場id "${venue.id}" が重複しています`);
+    }
+    idSet.add(venue.id);
+    for (const label of [venue.name, ...(venue.aliases || [])]) {
+      const key = normalizeSite(label);
+      if (index.has(key) && index.get(key).id !== venue.id) {
+        logError(venuesFile, `表記 "${label}" が複数の会場（${index.get(key).id} と ${venue.id}）に解決されます`);
+      }
+      index.set(key, venue);
+    }
+  });
+  return index;
 }
 
 // スケジュールのバリデーション
@@ -55,6 +95,11 @@ function validateSchedule(schedule, file, index) {
   // images配列チェック
   if (schedule.images && !Array.isArray(schedule.images)) {
     logError(file, `イベント[${index}]: imagesは配列である必要があります`);
+  }
+
+  // acts配列チェック（対バン相手）
+  if (schedule.acts && !Array.isArray(schedule.acts)) {
+    logError(file, `イベント[${index}]: actsは配列である必要があります`);
   }
 }
 
@@ -144,10 +189,8 @@ if (existsSync(schedulesDir)) {
   // 重複チェック
   console.log('\n🔍 スケジュールのID/Slug重複チェック中...\n');
 
-  // 会場名の表記ゆれ（空白・大文字小文字）を正規化して比較する
-  function normalizeSite(site) {
-    return String(site).replace(/\s/g, '').toLowerCase();
-  }
+  const venueIndex = loadVenueIndex();
+  const unknownSites = new Map();
 
   const idMap = new Map();
   const slugMap = new Map();
@@ -176,18 +219,31 @@ if (existsSync(schedulesDir)) {
 
     // 同日・同会場チェック（TimeTree/X/手動と取り込み経路が複数あるため、
     // 同じイベントの二重登録をここで堰き止める）
+    // 会場は venues.yml で解決した venue id で比較する（別名表記でも同一会場と見なす）。
     // 本当に別イベント（昼夜2公演など）の場合は duplicate_ok: true を付けて明示する
-    if (schedule.date && schedule.site && schedule.duplicate_ok !== true) {
-      const day = String(schedule.date).slice(0, 10);
-      const key = `${day}|${normalizeSite(schedule.site)}`;
-      if (dayVenueMap.has(key)) {
-        const prev = dayVenueMap.get(key);
-        logError('重複エラー', `同日・同会場のイベントがあります（${day} ${schedule.site}）: "${prev.id}" と "${schedule.id}"。同一イベントなら統合、別イベントなら duplicate_ok: true を付けてください`);
-      } else {
-        dayVenueMap.set(key, schedule);
+    if (schedule.date && schedule.site) {
+      const normalized = normalizeSite(schedule.site);
+      const venue = venueIndex.get(normalized);
+      if (venueIndex.size > 0 && !venue && !unknownSites.has(normalized)) {
+        unknownSites.set(normalized, schedule);
+      }
+      if (schedule.duplicate_ok !== true) {
+        const day = String(schedule.date).slice(0, 10);
+        const key = `${day}|${venue ? venue.id : normalized}`;
+        if (dayVenueMap.has(key)) {
+          const prev = dayVenueMap.get(key);
+          logError('重複エラー', `同日・同会場のイベントがあります（${day} ${schedule.site}）: "${prev.id}" と "${schedule.id}"。同一イベントなら統合、別イベントなら duplicate_ok: true を付けてください`);
+        } else {
+          dayVenueMap.set(key, schedule);
+        }
       }
     }
   });
+
+  // 会場マスタに無い site 表記を警告（エラーにはしない。venues.yml への追記を促す）
+  for (const [, schedule] of unknownSites) {
+    logWarn(schedule._file, `site "${schedule.site}" が venues.yml に見つかりません（name か aliases に追記してください）`);
+  }
 
   if (!hasError) {
     console.log('\x1b[32m✓ 重複なし\x1b[0m');

@@ -1,0 +1,110 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { collectActs } from '../../utils/acts';
+
+const acts = [...collectActs().values()]
+  .sort((a, b) => b.events.length - a.events.length || a.name.localeCompare(b.name, 'ja'));
+---
+
+<Layout title="対バン | なんちゃらアイドル" description="なんちゃらアイドルがこれまでに共演したアーティストの一覧">
+  <div class="acts-page">
+    <h1 class="page-title"><i class="fa-solid fa-people-group" aria-hidden="true"></i> 対バン</h1>
+    <p class="page-lead">これまでに共演したアーティストと共演回数</p>
+
+    <div class="act-grid">
+      {acts.map(act => (
+        <a href={`/acts/${encodeURIComponent(act.name)}`} class="act-card">
+          <span class="act-name">{act.name}</span>
+          <span class="act-count">{act.events.length}回</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .acts-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  .page-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--text-light);
+    text-shadow:
+      2px 2px 0 var(--retro-pink),
+      4px 4px 0 var(--retro-cyan),
+      6px 6px 0 var(--retro-purple);
+    margin: 0 0 10px 0;
+    letter-spacing: 2px;
+  }
+
+  .page-lead {
+    text-align: center;
+    color: var(--text-light);
+    opacity: 0.8;
+    margin: 0 0 30px 0;
+  }
+
+  .act-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 12px;
+  }
+
+  .act-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 14px 18px;
+    background: linear-gradient(135deg, var(--bg-medium) 0%, var(--bg-dark) 100%);
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    color: var(--text-light);
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .act-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--retro-pink);
+    box-shadow: 0 0 18px rgba(255, 110, 199, 0.4);
+  }
+
+  .act-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+  }
+
+  .act-count {
+    flex-shrink: 0;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--retro-yellow);
+  }
+
+  @media (max-width: 768px) {
+    .page-title {
+      font-size: 1.6rem;
+    }
+    .act-grid {
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .act-card {
+      transition: none !important;
+    }
+    .act-card:hover {
+      transform: none;
+    }
+  }
+</style>

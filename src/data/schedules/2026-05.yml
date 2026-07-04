@@ -25,6 +25,8 @@
     配信　¥2,000
   images:
     - /events/20260502-timetree-40771323.jpg
+  acts:
+    - "S.B.Q.アイドル部"
 - id: event-20260503-timetree-72681568
   slug: 20260503-timetree-72681568
   date: 2026-05-03 12:00:00 +0900
@@ -80,6 +82,11 @@
 
     なんちゃらアイドル　S.B.Q.アイドル部
     乙女ダンディーズ　sommeil sommeil
+  acts:
+    - "氏神一番"
+    - "S.B.Q.アイドル部"
+    - "乙女ダンディーズ"
+    - "sommeil sommeil"
 - id: event-20260510-timetree-03883511
   slug: 20260510-timetree-03883511
   date: 2026-05-10 10:00:00 +0900
@@ -108,6 +115,14 @@
     TICKET：Livepocket
   images:
     - /events/20260510-timetree-03883511.jpg
+  acts:
+    - "僕には通じない"
+    - "TIGHT"
+    - "MANACLE"
+    - "Baby inspire"
+    - "憑依中毒-シャーマンホリック-"
+    - "世界逆転宣言！"
+    - "DECIDER"
 - id: event-20260516-timetree-05117798
   slug: 20260516-timetree-05117798
   date: 2026-05-16 19:00:00 +0900
@@ -138,6 +153,9 @@
     13:20 クミコオオシマBAND
   images:
     - /events/20260517-timetree-49456800.jpg
+  acts:
+    - "ザ・バキュームパックス"
+    - "クミコオオシマBAND"
 - id: event-20260518-timetree-33779851
   slug: 20260518-timetree-33779851
   date: 2026-05-18 18:00:00 +0900
@@ -220,6 +238,20 @@
     通しチケット ¥5,000
   images:
     - /events/20260524-timetree-31814486.jpg
+  acts:
+    - "The Grateful a MogAAAz"
+    - "めろん畑a go go"
+    - "野生のうず"
+    - "ぬ。みる"
+    - "ピューパ!!"
+    - "POPPY"
+    - "さかさまJr."
+    - "WHAT AM I？"
+    - "GARUDA"
+    - "BABYTANTS"
+    - "おぺちんとイカした仲間たち"
+    - "KAZ（RUDE58）"
+    - "やわらぎめんま（POPPY）"
 - id: event-20260527-timetree-79606025
   slug: 20260527-timetree-79606025
   date: 2026-05-27 19:00:00 +0900
@@ -271,6 +303,12 @@
     プロハンバーガー
   images:
     - /events/20260530-timetree-26105091.jpeg
+  acts:
+    - "S.B.Q.アイドル部"
+    - "S.B.Q.B.B."
+    - "MCあんにゅ"
+    - "POPPY"
+    - "プロハンバーガー"
 - id: event-20260531-timetree-59353344
   slug: 20260531-timetree-59353344
   date: 2026-05-31 00:00:00 +0900

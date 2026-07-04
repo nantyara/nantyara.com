@@ -1,0 +1,249 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { loadAllSchedules, formatDateJa } from '../../utils/schedules';
+import { loadVenues, resolveVenue, type Venue } from '../../utils/venues';
+
+export async function getStaticPaths() {
+  const venues = loadVenues();
+  const schedules = loadAllSchedules();
+
+  return venues.map(venue => {
+    const events = schedules.filter((s: any) => resolveVenue(s.site)?.id === venue.id);
+    return {
+      params: { id: venue.id },
+      props: { venue, events },
+    };
+  }).filter(({ props }) => props.events.length > 0);
+}
+
+const { venue, events } = Astro.props as { venue: Venue; events: any[] };
+
+const now = Date.now();
+const upcoming = events.filter(e => new Date(e.date).getTime() >= now).reverse(); // 近い順
+const past = events.filter(e => new Date(e.date).getTime() < now); // 新しい順
+
+const mapsUrl = venue.address
+  ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${venue.name} ${venue.address}`)}`
+  : null;
+---
+
+<Layout title={`${venue.name} | なんちゃらアイドル`} description={`${venue.name} での出演履歴（通算${events.length}回）`}>
+  <div class="venue-page">
+    <h1 class="venue-title">{venue.name}</h1>
+    <p class="venue-stats">通算 <strong>{events.length}</strong> 回出演</p>
+
+    <div class="venue-info">
+      {venue.note && <p class="venue-note">{venue.note}</p>}
+      {venue.address && (
+        <p class="venue-meta">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          {mapsUrl ? (
+            <a href={mapsUrl} target="_blank" rel="noopener noreferrer">{venue.address}</a>
+          ) : (
+            venue.address
+          )}
+        </p>
+      )}
+      {venue.url && (
+        <p class="venue-meta">
+          <i class="fa-solid fa-globe" aria-hidden="true"></i>
+          <a href={venue.url} target="_blank" rel="noopener noreferrer">公式サイト</a>
+        </p>
+      )}
+      {venue.x && (
+        <p class="venue-meta">
+          <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+          <a href={`https://x.com/${venue.x}`} target="_blank" rel="noopener noreferrer">@{venue.x}</a>
+        </p>
+      )}
+    </div>
+
+    {upcoming.length > 0 && (
+      <section class="events-section">
+        <h2 class="section-title">今後の出演</h2>
+        <ul class="event-list">
+          {upcoming.map((event: any) => (
+            <li>
+              <a href={`/events/${event.slug}`} class="event-item">
+                <span class="event-date">{formatDateJa(event.date)}</span>
+                <span class="event-name">{event.title}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {past.length > 0 && (
+      <section class="events-section">
+        <h2 class="section-title">過去の出演</h2>
+        <ul class="event-list">
+          {past.map((event: any) => (
+            <li>
+              <a href={`/events/${event.slug}`} class="event-item">
+                <span class="event-date">{formatDateJa(event.date)}</span>
+                <span class="event-name">{event.title}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <div class="back-link-wrapper">
+      <a href="/venues" class="back-link">← 会場一覧に戻る</a>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .venue-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  .venue-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--text-light);
+    text-shadow:
+      2px 2px 0 var(--retro-pink),
+      4px 4px 0 var(--retro-cyan);
+    margin: 0 0 8px 0;
+  }
+
+  .venue-stats {
+    text-align: center;
+    color: var(--retro-yellow);
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+    margin: 0 0 24px 0;
+  }
+
+  .venue-stats strong {
+    font-size: 1.5rem;
+  }
+
+  .venue-info {
+    margin-bottom: 32px;
+    padding: 20px 24px;
+    background: rgba(255, 110, 199, 0.1);
+    border: 2px solid var(--retro-pink);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(255, 110, 199, 0.3);
+  }
+
+  .venue-note {
+    color: var(--text-light);
+    opacity: 0.85;
+    margin: 0 0 10px 0;
+    font-size: 0.95rem;
+  }
+
+  .venue-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-light);
+    margin: 6px 0;
+  }
+
+  .venue-meta i {
+    color: var(--retro-pink);
+    width: 1.2em;
+    text-align: center;
+  }
+
+  .venue-meta a {
+    color: var(--retro-cyan);
+    text-decoration: underline;
+  }
+
+  .events-section {
+    margin-bottom: 32px;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--retro-pink);
+    margin: 0 0 16px 0;
+    padding-bottom: 8px;
+    border-bottom: 3px solid var(--retro-pink);
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .event-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .event-item {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding: 12px 16px;
+    background: linear-gradient(135deg, var(--bg-medium) 0%, var(--bg-dark) 100%);
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    color: var(--text-light);
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .event-item:hover {
+    border-color: var(--retro-cyan);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.35);
+  }
+
+  .event-date {
+    flex-shrink: 0;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--retro-yellow);
+  }
+
+  .event-name {
+    font-size: 0.95rem;
+  }
+
+  .back-link-wrapper {
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .back-link {
+    display: inline-flex;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, var(--retro-purple) 0%, var(--retro-pink) 100%);
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 110, 199, 0.4);
+  }
+
+  @media (max-width: 768px) {
+    .venue-title {
+      font-size: 1.7rem;
+    }
+    .event-item {
+      flex-direction: column;
+      gap: 4px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .event-item {
+      transition: none !important;
+    }
+  }
+</style>

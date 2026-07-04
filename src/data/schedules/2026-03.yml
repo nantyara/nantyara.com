@@ -18,6 +18,12 @@
     +1DRINK ¥500
   images:
     - /events/20260302-timetree-09457726.jpg
+  acts:
+    - "超処女カワアイドル あいちゃん"
+    - "zoyo"
+    - "佐倉雅"
+    - "あなるちゃん"
+    - "もんすたーばけっと"
 - id: event-20260308-timetree-91386550
   slug: 20260308-timetree-91386550
   date: 2026-03-08 18:00:00 +0900
@@ -41,6 +47,9 @@
     物販 19:00
   images:
     - /events/20260308-yucity.jpeg
+  acts:
+    - "小林清美"
+    - "S.B.Q.アイドル部"
 - id: event-20260309-timetree-18507403
   slug: 20260309-timetree-18507403
   date: 2026-03-09 19:00:00 +0900
@@ -74,6 +83,12 @@
     ¥2,500（drink別）
   images:
     - /events/20260309-timetree-18507403.jpeg
+  acts:
+    - "S.B.Q.アイドル部"
+    - "ざ☆かっぽうぎーず"
+    - "MCあんにゅとナム"
+    - "小日向由衣"
+    - "初咲里奈"
 - id: event-20260310-timetree-03141568
   slug: 20260310-timetree-03141568
   date: 2026-03-10 06:00:00 +0900
@@ -114,6 +129,15 @@
     SHINJUKU ANTIKNOCK
   images:
     - /events/20260310-timetree-03141568.jpg
+  acts:
+    - "ワタシは雨、"
+    - "BrainBeat"
+    - "終末のステラ"
+    - "残響のリフレイン"
+    - "弐ノ名"
+    - "MANACLE"
+    - "Village in Maier"
+    - "幽世脅嚇"
 - id: event-20260315-timetree-43738590
   slug: 20260315-timetree-43738590
   date: 2026-03-15 16:00:00 +0900
@@ -149,6 +173,10 @@
     詳細: https://www.smkn.love/smknmn2/
   images:
     - /events/20260315-timetree-43738590.jpeg
+  acts:
+    - "初咲里奈"
+    - "あきばもも"
+    - "MC ねんね"
 - id: event-20260316-timetree-08632232
   slug: 20260316-timetree-08632232
   date: 2026-03-16 06:00:00 +0900
@@ -193,6 +221,12 @@
     詳細: https://tiget.net/events/466670
   images:
     - /events/20260320-nishikawaguchi-galaxy.jpeg
+  acts:
+    - "アマノガワプリンセス"
+    - "CrazyFantasy"
+    - "Tuning Fill in"
+    - "リベルナント"
+    - "紅白もち"
 - id: event-20260320-timetree-10306739
   slug: 20260320-timetree-10306739
   date: 2026-03-20 17:30:00 +0900
@@ -216,6 +250,12 @@
     チケット予約: https://tiget.net/events/467946
   images:
     - /events/20260320-timetree-10306739.jpeg
+  acts:
+    - "藤岡藤巻without藤巻"
+    - "柿島伸次"
+    - "S.B.Q.アイドル部"
+    - "工藤ちゃん"
+    - "ちえる"
 - id: event-20260321-timetree-18942954
   slug: 20260321-timetree-18942954
   date: 2026-03-21 12:00:00 +0900
@@ -268,6 +308,12 @@
     東京都港区六本木6-1-3 六門ビル7F
   images:
     - /events/20260322-timetree-31538284.jpg
+  acts:
+    - "プロハン巨匠&サイバー凡ちゃん"
+    - "御庭番"
+    - "とらとらとらお"
+    - "雷音こずえ（サイバー出演）"
+    - "花村紅（サイバー出演）"
 - id: event-20260324-timetree-77566658
   slug: 20260324-timetree-77566658
   date: 2026-03-24 18:00:00 +0900
@@ -284,7 +330,7 @@
   title: 新高円寺LOFT X
   site: 新高円寺LOFT X
   timetree_id: "2907118670348174975"
-  content: |2-
+  content: |-
 
     マグノリアの雫。pre.
     『kira kira-きらきら-』#14
@@ -306,6 +352,12 @@
     詳細: https://tiget.net/events/471173
   images:
     - /events/20260327-shinkoenji-loft-x.jpg
+  acts:
+    - "リれん"
+    - "兎馬フィグ"
+    - "SEEE2"
+    - "sommeil sommeil"
+    - "マグノリアの雫。"
 - id: event-20260328-timetree-06380530
   slug: 20260328-timetree-06380530
   date: 2026-03-28 10:30:00 +0900
@@ -328,6 +380,11 @@
     チケット: https://tiget.net/events/473738
   images:
     - /events/20260328-malcolm.jpeg
+  acts:
+    - "Hellzapoppin'"
+    - "露光時間"
+    - "グレーテルは大人にならない"
+    - "sommeil sommeil"
 - id: event-20260328-timetree-76323019
   slug: 20260328-timetree-76323019
   date: 2026-03-28 16:00:00 +0900
@@ -352,13 +409,18 @@
     POPPY SUPERPOPPY
   images:
     - /events/20260328-earthdom.jpeg
+  acts:
+    - "めろん畑a go go"
+    - "MIDNIGHT LITTLE GORILLA"
+    - "The Grateful a MogAAAz"
+    - "POPPY SUPERPOPPY"
 - id: event-20260329-timetree-85310380
   slug: 20260329-timetree-85310380
   date: 2026-03-29 12:00:00 +0900
   title: 茨城県イオン笠間
   site: 茨城県イオン笠間
   timetree_id: "2834150807585310380"
-  content: |2
+  content: |
 
     ■Wonderful Days in ポレポレホール2
     2006年3月29日(日)
@@ -374,3 +436,6 @@
     子供プロレス教室
     リング体験(開放)
     他…
+  acts:
+    - "ソルトウルフ"
+    - "キャラクターズ"

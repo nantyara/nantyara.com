@@ -1,0 +1,223 @@
+# 会場マスタ
+# /venues ページの生成と、schedules の site（自由記述）の解決に使う。
+#
+# フィールド:
+#   id:      URLスラッグ（/venues/{id}）
+#   name:    正式表記（サイト表示用）
+#   aliases: schedules 側 site の表記ゆれ（任意）。
+#            比較は「空白除去＋小文字化」の正規化後に行うので、
+#            空白・大文字小文字だけの違いはここに書かなくてよい。
+#            綴り違い・別表現だけを書く。
+#   address: 住所（任意）
+#   url:     公式サイト（任意）
+#   x:       公式Xアカウント（任意、@なし）
+#   note:    補足（任意。会場ページに表示される）
+
+- id: lamama
+  name: 渋谷La.mama
+  aliases:
+    - 渋谷La.mama(昼)
+    - 渋谷ラママ
+  address: 東京都渋谷区道玄坂1-15-3 プリメーラ道玄坂B1F
+  url: https://www.lamama.net
+  x: shibuya_lamama
+- id: love-tko
+  name: 東新宿LOVE TKO
+  address: 東京都新宿区大久保1-3-22 ヴァンヴェール新宿B1F
+  x: LOVETKO2008
+- id: uminoie
+  name: 海の家
+  note: 夏季限定の海の家出演シリーズ
+- id: sbq-photokai
+  name: SBQ個人撮影会
+  note: S.B.Q.アイドル部の個人撮影会
+- id: studio-sbq
+  name: Studio S.B.Q
+  aliases:
+    - Studio S.B.Q（市ヶ谷）
+- id: sarusho
+  name: 栃木さる小
+  note: 廃校を活用した貸切イベント施設。群馬県みなかみ町の「泊まれる学校 さる小」（旧猿ヶ京小学校）と思われる
+- id: welcome-back
+  name: 大塚Welcome Back
+  address: 東京都豊島区南大塚3-44-11 フサカビルB1
+  url: https://welcomeback.jp
+  x: Welcomebackwb
+- id: outbreak
+  name: 四谷OUTBREAK
+  address: 東京都新宿区四谷2-10 第2太郎ビルB1
+  url: https://www.hor-outbreak.com
+  x: 428outbreak
+- id: km-music-nakano
+  name: K&Mミュージック中野店
+  aliases:
+    - K＆Mミュージック中野店
+  address: 東京都中野区上鷺宮1-4-3 地下1階
+  x: kmmusic2
+  note: 2026年6月28日のイベントをもって閉店
+- id: drunken-shrimp
+  name: 新宿Drunken Shrimp
+  aliases:
+    - 新宿dranken shrimp
+    - 新宿 歌舞伎町 Drunken Shrimp
+  address: 東京都新宿区歌舞伎町2-39-2 三幸ビルB館5F-E
+  note: 2026年5月末をもって無期限休止
+- id: antiknock
+  name: 新宿ANTIKNOCK
+  address: 東京都新宿区新宿4-3-15 レイフラットビルB1F
+  url: https://www.antiknock.net
+  x: antiknock1985
+- id: waiwaihall
+  name: 神保町waiwaihall
+  address: 東京都千代田区神田神保町2-4 神保町麺業会館ビルB1
+  url: https://www.waiwaihall.com
+  x: waiwaihall
+- id: ultra-shibuya
+  name: ULTRA SHIBUYA
+  address: 東京都渋谷区東1-28-9
+  url: https://ultra-shibuya.com
+  x: ultra_shibuya
+- id: time-tokyo
+  name: 八王子Time Tokyo
+  address: 東京都八王子市別所1-1-4 B1
+  url: https://time-tokyo.com
+  x: timetokyo
+- id: swingy
+  name: 新検見川Swingy
+  address: 千葉県千葉市花見川区花園1-8-7 アステージビル弐番館1F
+  url: https://swingy.therestaurant.jp
+- id: retronym
+  name: Shimokitazawa Retronym
+  address: 東京都世田谷区北沢2-15-17 下北沢コマーシャルビル3F
+  url: https://shimokitaretro.jp
+- id: sassen
+  name: SASSEN
+- id: spoonful-of-sugar
+  name: SALON a Spoonful Of Sugar
+  address: 大阪府大阪市西区新町3-9-7 2F
+  url: http://peninsula.xsrv.jp/pg4.html
+  x: _so_not_a
+  note: 大阪・新町のミュージックサロン
+- id: muddy
+  name: 高円寺Muddy
+  address: 東京都杉並区高円寺北3-22-7 プラザ高円寺2F
+  x: Muddy2360289068
+- id: maharaja-annex
+  name: MAHARAJA ANNEX（六本木）
+  address: 東京都港区六本木6-1-3 六門ビル7F
+  url: https://maharaja-r.jp/annex
+  x: maharaja_ANNEX
+- id: loft-x
+  name: 新高円寺LOFT X
+  address: 東京都杉並区梅里2-9-11 小池ビルB1
+  url: https://loftx10.wixsite.com/loft-x
+  x: Loft10X
+- id: loft-heaven
+  name: 渋谷LOFT HEAVEN
+  address: 東京都渋谷区渋谷2-12-13 八千代ビルB1F
+  url: https://www.loft-prj.co.jp/schedule/heaven
+  x: loft_heaven
+- id: leaf-room
+  name: Leaf room 豪徳寺
+  address: 東京都世田谷区豪徳寺1-23-12 コンフォート豪徳寺3F
+  url: https://leafroomgoutokuji.jimdofree.com
+  x: KAKU_leaf_room
+- id: heavens-door
+  name: 三軒茶屋HEAVEN'S DOOR
+  address: 東京都世田谷区三軒茶屋1-33-19 ケイオーハロービルB1
+  url: https://heavens-door-music.com
+  x: sanchaxheavens
+- id: galaxy
+  name: 西川口GALAXY
+  address: 埼玉県川口市西川口1-22-7 上新ハイツ西川口B1
+  url: https://galaxy-group.jp
+  x: 2019Galaxy
+- id: flight
+  name: 府中Flight
+  address: 東京都府中市緑町1-17-18 シャトーアルフィーB1F
+  url: https://www.flight1990.jp/wp
+  x: FUCHUFlight
+- id: firebird
+  name: 新松戸FIREBIRD
+  address: 千葉県松戸市新松戸2-118 新松戸ビル5F
+  url: http://www.aj-group.co.jp/firebird.html
+  x: firebird_jp
+- id: earthdom
+  name: 新大久保EARTHDOM
+  address: 東京都新宿区大久保2-32-3 リスボンビルB1
+  url: http://earthdom05.webnode.jp
+  x: earthdom
+- id: club-malcolm
+  name: 渋谷Club Malcolm
+  address: 東京都渋谷区宇田川町30-5 JOWビルB1F
+  url: https://club-malcolm.com
+  x: clubmalcolm
+- id: bright-moon
+  name: 東心斎橋bright moon
+  address: 大阪府大阪市中央区東心斎橋1-12-14 ZELKOVAビル6F
+  url: https://brightmoon.bar
+  x: brightmoon2020
+- id: cosholic
+  name: コスホリック44
+  note: コスプレイベント
+- id: ottanta
+  name: 蒲田オッタンタ
+  aliases:
+    - スタジオ・オッタンタ
+  address: 東京都大田区蒲田5-7-6 CCM蒲田ビル2F
+  url: https://studio80.org
+  note: 正式名称「Studio80（スタジオ・オッタンタ）」。DJバー/企画空間バー
+- id: chop
+  name: 池袋手刀
+- id: tokyo-club
+  name: 東京倶楽部 水道橋店
+  aliases:
+    - 東京倶楽部
+- id: diskunion-ochanomizu
+  name: ディスクユニオンお茶の水駅前店
+- id: esorabako
+  name: 絵空箱
+  aliases:
+    - 絵空箱（江戸川橋・神楽坂）
+- id: kazenifukarete
+  name: 大森風に吹かれて
+- id: hikarinouma
+  name: 大久保ひかりのうま
+- id: mele
+  name: 難波メレ
+- id: chobihige
+  name: 下北沢ちょ美ひげ
+- id: hit-parade
+  name: 町田ヒットパレード
+- id: younger-than-yesterday
+  name: 横須賀ヤンガーザンイエスタデイ
+- id: vita-seiseki
+  name: 聖蹟桜ヶ丘ヴィータモールせいせき
+- id: metamorphose
+  name: めたもるふぉーぜ
+- id: ion-kasama
+  name: イオン笠間
+  aliases:
+    - 茨城県イオン笠間
+- id: instore-event
+  name: インストアイベント
+  note: 会場未特定のインストアイベント
+- id: osaka-offkai
+  name: 大阪オフ会
+  note: オフ会イベント
+- id: mogafes
+  name: モガフェス
+  note: イベント名（会場情報なし）
+- id: sumakano-bustour
+  name: スマカノ バスツアー
+  note: バスツアーイベント
+- id: yu-city-kamata
+  name: ゆ〜シティ蒲田 YCKホール
+  aliases:
+    - 黒湯の温泉ゆ〜シティー蒲田 YCKホール
+    - ゆ〜シティ蒲田 3F YCKホール
+    - ゆ〜シティー蒲田
+  address: 東京都大田区蒲田1-26-16 3F
+  url: https://youcity26.com
+  x: youcity26
+  note: 黒湯の温泉「ゆ〜シティー蒲田」3Fのホール

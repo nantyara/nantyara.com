@@ -32,6 +32,25 @@
     21:05〜 ザ・サイレンズ
   images:
     - /events/20260801-timetree-96316177.jpg
+  acts:
+    - "ハングオーバー"
+    - "あゆライナリーパー"
+    - "Very Ape"
+    - "森ヤスアキ"
+    - "深夜徘徊"
+    - "去勢"
+    - "平成墓嵐"
+    - "森口しゅな"
+    - "Ling"
+    - "Sissylamp"
+    - "寝込みかんぱにゅら"
+    - "伊集院香織"
+    - "はる陽。"
+    - "みずすまし"
+    - "土萌まりな"
+    - "円盤少女"
+    - "すがまろ a.k.a @I・P"
+    - "ザ・サイレンズ"
 - id: event-20260801-timetree-82861467
   slug: 20260801-timetree-82861467
   date: 2026-08-01 12:00:00 +0900
@@ -76,6 +95,13 @@
     ADV/DOOR　¥2,500/¥3,000（+1DRINK ¥600）
   images:
     - /events/20260808-timetree-01793792.jpg
+  acts:
+    - "AKIARIM"
+    - "AIMIA"
+    - "AdFicTioN"
+    - "終末のステラ"
+    - "Village in Maier"
+    - "ゼンゼロランカー"
 - id: event-20260809-timetree-94823857
   slug: 20260809-timetree-94823857
   date: 2026-08-09 18:45:00 +0900
@@ -97,6 +123,12 @@
     TICKET　¥2,900＋1Drink¥600
   images:
     - /events/20260809-timetree-94823857.jpg
+  acts:
+    - "鈴木千絵"
+    - "さおり凛ね"
+    - "工藤ちゃん"
+    - "武岡あや乃"
+    - "有坂愛海"
 - id: event-20260810-timetree-54510826
   slug: 20260810-timetree-54510826
   date: 2026-08-10 18:00:00 +0900
@@ -135,7 +167,16 @@
     Tickets　前売り¥3,000/当日¥3,500
   images:
     - /events/20260816-lamama.jpeg
-
+  acts:
+    - "森ヤスアキ"
+    - "C.B.Style"
+    - "SOSHI-G a.k.a.TOMOYO-C"
+    - "スキップカウズ"
+    - "ザ☆ペラーズ"
+    - "泥虎（DEIDORA）"
+    - "the 部族"
+    - "MAUDIE"
+    - "褒めますおじさん"
 - id: event-20260817-timetree-58495452
   slug: 20260817-timetree-58495452
   date: 2026-08-17 12:00:00 +0900
@@ -225,6 +266,9 @@
     TEL 03-3738-0080
   images:
     - /events/ottanta-dj.jpeg
+  acts:
+    - "Q太郎"
+    - "FUKO"
 - id: event-20260830-timetree-48843637
   slug: 20260830-timetree-48843637
   date: 2026-08-30 12:00:00 +0900

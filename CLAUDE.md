@@ -24,6 +24,7 @@ nantyara.com/
 │   │   │   ├── 2026-01.yml     # 月ごとにファイル分割
 │   │   │   ├── 2026-02.yml
 │   │   │   └── ...
+│   │   ├── venues.yml          # 会場マスタ（正名・別名・住所・URL・X）
 │   │   └── releases.yml        # 音源リリース情報
 │   ├── pages/                  # ルーティング
 │   ├── components/             # 再利用可能なコンポーネント
@@ -58,6 +59,7 @@ nantyara.com/
 | `labels` | | array | ラベルの配列（例：「マミソロ」「あおはるソロ」）。マミソロ=赤/あおはるソロ=青のアクセントが付く |
 | `time_tbd` | | boolean | 開催時刻が未確定なら `true`（表示は「時間未定」、カレンダー登録は終日扱い） |
 | `duplicate_ok` | | boolean | 同日・同会場に本当に別イベントが並ぶ場合（昼夜2公演等）に `true`。validate-yaml の重複エラーを抑止する |
+| `acts` | | array | 対バン相手（共演アーティスト名）の配列。/acts の対バンDBの元データ。自分自身（なんちゃらアイドル・メンバーソロ名義）は入れない |
 | `content` | ✓ | string | イベント詳細（Markdown可） |
 | `images` | | array | 画像パスの配列 |
 
@@ -400,6 +402,28 @@ npm run dev
 4. Layout.astro の SW 登録で、ロード時と `visibilitychange`（タブ復帰）時に `reg.update()` を明示的に実行
 
 **注意**: すでに古い SW を抱えてる端末は、新 sw.js を取得するまで直らない。手動レスキューは iOS の 設定 > Safari > 詳細 > Webサイトデータ > nantyara.com を削除。
+
+## venues / acts（会場・対バンDB）の運用
+
+### 会場マスタ（src/data/venues.yml）
+
+- schedules の `site`（自由記述）は **ビルド時に venues.yml へ解決**される（`src/utils/venues.ts` の `resolveVenue`）。
+  比較は「空白除去＋小文字化」の正規化後なので、空白・大文字小文字の表記ゆれは吸収される。
+  綴り違い・別表現だけ `aliases` に書く
+- `/venues` に会場一覧（出演回数順）、`/venues/{id}` に会場詳細（住所・公式リンク・出演履歴）が生成される
+- **新しい会場が schedules に入ると validate-yaml が警告を出す**ので、その都度 venues.yml に追記する
+  （id と name だけの最小エントリでも OK。住所・URL・X は分かったときに埋める）
+- 正規化ロジックは `scripts/validate-yaml.js` と `src/utils/venues.ts` の2箇所にある。変えるときは両方同時に
+
+### 対バンDB（schedules の acts フィールド）
+
+- 各イベントの `acts:` 配列が対バンDBの元データ。ビルド時に `src/utils/acts.ts` の `collectActs` が集計し、
+  `/acts`（共演回数順一覧）と `/acts/{名前}`（共演履歴・初共演）を生成する
+- 名前のグルーピングも空白除去＋小文字化の正規化。表記ゆれ（例: `SBQアイドル部` → `S.B.Q.アイドル部`）は
+  **データ側を正しい表記に直す**方針（acts.yml のようなマスタはまだ無い。必要になったら導入を検討）
+- イベント追加時（/sync-x 含む）は、フライヤーや告知本文から出演者が読めるなら `acts:` も埋める
+- 2026年分の過去イベントは content からの一括抽出でバックフィル済み（2026-07-05）。
+  content が TBD のイベントは acts なし。詳細が判明したら content と一緒に acts も追記する
 
 ## gallery / history のコンテンツ運用
 

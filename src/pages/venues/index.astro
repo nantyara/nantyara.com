@@ -1,0 +1,136 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { loadAllSchedules } from '../../utils/schedules';
+import { loadVenues, resolveVenue } from '../../utils/venues';
+
+const venues = loadVenues();
+const schedules = loadAllSchedules();
+
+// 会場ごとの出演回数を集計
+const counts = new Map<string, number>();
+for (const schedule of schedules) {
+  const venue = resolveVenue(schedule.site);
+  if (venue) counts.set(venue.id, (counts.get(venue.id) ?? 0) + 1);
+}
+
+const venuesWithCount = venues
+  .map(venue => ({ venue, count: counts.get(venue.id) ?? 0 }))
+  .filter(({ count }) => count > 0)
+  .sort((a, b) => b.count - a.count || a.venue.name.localeCompare(b.venue.name, 'ja'));
+---
+
+<Layout title="会場 | なんちゃらアイドル" description="なんちゃらアイドルが出演したライブ会場の一覧">
+  <div class="venues-page">
+    <h1 class="page-title"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> 会場</h1>
+    <p class="page-lead">これまでに出演した会場と出演回数</p>
+
+    <div class="venue-grid">
+      {venuesWithCount.map(({ venue, count }) => (
+        <a href={`/venues/${venue.id}`} class="venue-card">
+          <span class="venue-name">{venue.name}</span>
+          {venue.address && <span class="venue-address">{venue.address}</span>}
+          <span class="venue-count">{count}回</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .venues-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  .page-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--text-light);
+    text-shadow:
+      2px 2px 0 var(--retro-pink),
+      4px 4px 0 var(--retro-cyan),
+      6px 6px 0 var(--retro-purple);
+    margin: 0 0 10px 0;
+    letter-spacing: 2px;
+  }
+
+  .page-lead {
+    text-align: center;
+    color: var(--text-light);
+    opacity: 0.8;
+    margin: 0 0 30px 0;
+  }
+
+  .venue-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+  }
+
+  .venue-card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 18px 20px;
+    background: linear-gradient(135deg, var(--bg-medium) 0%, var(--bg-dark) 100%);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    color: var(--text-light);
+    text-decoration: none;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .venue-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--retro-cyan);
+    box-shadow:
+      0 7px 0 rgba(0, 0, 0, 0.3),
+      0 0 20px rgba(0, 255, 255, 0.4),
+      inset 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .venue-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  .venue-address {
+    font-size: 0.8rem;
+    opacity: 0.7;
+  }
+
+  .venue-count {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--retro-yellow);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  @media (max-width: 768px) {
+    .page-title {
+      font-size: 1.6rem;
+    }
+    .venue-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .venue-card {
+      transition: none !important;
+    }
+    .venue-card:hover {
+      transform: none;
+    }
+  }
+</style>

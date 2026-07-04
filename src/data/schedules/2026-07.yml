@@ -17,6 +17,12 @@
     TICKET　¥2,500＋1Drink ¥600
   images:
     - /events/20260701-welcomeback.jpeg
+  acts:
+    - "デカシャツ喫茶"
+    - "ヤギヌマメイ"
+    - "さおり凛ね"
+    - "723シャトンヌ⤴"
+    - "小牧蒼"
 - id: event-20260704-timetree-01295027
   slug: 20260704-timetree-01295027
   date: 2026-07-04 09:00:00 +0900
@@ -83,6 +89,8 @@
     第3回 9月14日（月）
   images:
     - /events/20260713-timetree-68637822.jpg
+  acts:
+    - "sommeil sommeil"
 - id: event-20260718-timetree-51040499
   slug: 20260718-timetree-51040499
   date: 2026-07-18 18:00:00 +0900
@@ -106,6 +114,11 @@
     配信　¥2,000
   images:
     - /events/20260718-timetree-51040499.jpg
+  acts:
+    - "Sommeil Sommeil"
+    - "夢乃なこ"
+    - "夢乃なこ×カレンちゃん"
+    - "demipogune"
 - id: event-20260720-timetree-50570383
   slug: 20260720-timetree-50570383
   date: 2026-07-20 18:00:00 +0900

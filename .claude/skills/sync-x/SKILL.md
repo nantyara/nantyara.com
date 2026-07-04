@@ -69,6 +69,9 @@ yq '.[] | select(.date | test("YYYY-MM-DD"))' src/data/schedules/YYYY-MM.yml
 - `site` の表記はリポジトリ内の多数派に合わせる（例: `渋谷La.mama` / `大塚Welcome Back` /
   `東新宿LOVE TKO`）。迷ったら `grep -h "site:" src/data/schedules/*.yml | sort | uniq -c` で確認
 - `labels` は告知内容からマミソロ/あおはるソロと**断定できる場合のみ**付与。迷ったら付けない
+- ポスト本文・フライヤーから出演者が読めるなら `acts:`（対バン相手の配列）も付与する。
+  自分自身（なんちゃらアイドル・メンバーソロ名義）は入れない。表記は既存の /acts 一覧に合わせる
+- `site` が新規会場なら `src/data/venues.yml` にもエントリを追加する（validate-yaml が警告してくれる）
 - 過去イベントの告知も履歴充実のため反映してよい（表示は12時間ルールで自動的に過去扱いになる）
 
 ### 4. 反映

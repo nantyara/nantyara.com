@@ -17,6 +17,12 @@
     前売り　¥3,000＋1D
   images:
     - /events/20260201-km-music.jpg
+  acts:
+    - "小林清美"
+    - "仲村コニー"
+    - "とんでもはっぷん！"
+    - "森口しゅな"
+    - "Classic fairy"
 - id: event-20260202-lovetko
   slug: 20260202-lovetko
   date: 2026-02-02 19:00:00 +0900
@@ -52,6 +58,10 @@
   images:
     - /events/20260207-mitsushitsu-1.png
     - /events/20260207-mitsushitsu-2.png
+  acts:
+    - "MCあんにゅ"
+    - "Crawl"
+    - "三月碧"
 - id: event-20260208-goodbye-my-girl
   slug: 20260208-goodbye-my-girl
   date: 2026-02-08 12:00:00 +0900
@@ -82,6 +92,8 @@
     詳細: https://ultra-shibuya.com/shop/e/e10000355/
   images:
     - /events/20260208-goodbye-my-girl.jpeg
+  acts:
+    - "S.B.Q.アイドル部"
 - id: event-20260210-bar-event
   slug: 20260210-bar-event
   date: 2026-02-10 18:00:00 +0900
@@ -130,6 +142,12 @@
     ¥2,000
   images:
     - /events/20260212-lamama.jpeg
+  acts:
+    - "温-たずね-"
+    - "マグノリアの雫。"
+    - "S.B.Q.アイドル部"
+    - "盛りたかった千里"
+    - "シャンソン姉さんwithかくれみの"
 - id: event-20260214-uerin-50th
   slug: 20260214-uerin-50th
   date: 2026-02-14 16:15:00 +0900
@@ -149,6 +167,13 @@
     OPEN/START　16:15/16:40
   images:
     - /events/20260214-uerin-50th.jpeg
+  acts:
+    - "中出し少年"
+    - "盛りたかった千里"
+    - "ムネノリッツァa.k.a.ポポチョリス"
+    - "トニー大木&GGININDARS"
+    - "ヒナトバンド(仮)"
+    - "ニシハチヨゴレーズ"
 - id: event-20260215-rahmons
   slug: 20260215-rahmons
   date: 2026-02-15 16:00:00 +0900
@@ -184,6 +209,10 @@
     御茶海マミ
   images:
     - /events/20260216-kaku-misami-202602.jpeg
+  acts:
+    - "S.B.Q."
+    - "taberusan"
+    - "吉田　仁郎（じろうゆ）"
 - id: event-20260217-timetree-78139991
   slug: 20260217-timetree-78139991
   date: 2026-02-17 18:00:00 +0900
@@ -243,6 +272,14 @@
     - /events/20260221-nukafes-2.jpeg
     - /events/20260221-nukafes-3.jpeg
     - /events/20260221-nukafes-4.jpeg
+  acts:
+    - "ゲスバンド"
+    - "中出し少年"
+    - "オフィスカジュアルズ"
+    - "田村ぬかりBAND"
+    - "ADA-TICK"
+    - "S.B.Q.アイドル部"
+    - "S.B.Q.B.B."
 - id: event-20260222-swingy
   slug: 20260222-swingy
   date: 2026-02-22 11:45:00 +0900
@@ -266,6 +303,8 @@
   images:
     - /events/20260222-swingy-1.jpeg
     - /events/20260222-swingy-2.jpeg
+  acts:
+    - "どん子ちゃん"
 - id: event-20260222-timetree-54888469
   slug: 20260222-timetree-54888469
   date: 2026-02-22 18:00:00 +0900
@@ -298,6 +337,8 @@
     レシートと商品をご持参のうえ、カウンタースタッフにお申し出ください。
   images:
     - /events/20260223-timetree-33624847.jpg
+  acts:
+    - "Tnaka"
 - id: event-20260225-ottanta
   slug: 20260225-ottanta
   date: 2026-02-25 19:00:00 +0900
@@ -324,6 +365,13 @@
     ¥1,500（1drink込）
   images:
     - /events/ottanta-dj.jpeg
+  acts:
+    - "S.B.Q.アイドル部"
+    - "Q太郎"
+    - "太宰ちゃん"
+    - "ひより"
+    - "オカエリ"
+    - "ぬる"
 - id: event-20260228-timetree-91082109
   slug: 20260228-timetree-91082109
   date: 2026-02-28 12:00:00 +0900

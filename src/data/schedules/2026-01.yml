@@ -17,6 +17,10 @@
     会場: 東京都大田区蒲田5-7-6 2F
   images:
     - /events/20260130-ottanta.jpg
+  acts:
+    - "chuppie chappar's"
+    - "工藤ちゃん"
+    - "香栄"
 - id: event-20260129-aoharu-birthday
   slug: 20260129-aoharu-birthday
   date: 2026-01-29 18:30:00 +0900
@@ -38,6 +42,10 @@
   images:
     - /events/20260129-aoharu-birthday-1.jpeg
     - /events/20260129-aoharu-birthday-2.jpeg
+  acts:
+    - "komori + yusa（from 壊れかけのテープレコーダーズ）"
+    - "しずくだうみ"
+    - "sommeil sommeil"
 - id: event-20260128-otona-bunkasai
   slug: 20260128-otona-bunkasai
   date: 2026-01-28 18:00:00 +0900
@@ -53,6 +61,13 @@
     配信チケット ¥2,000
   images:
     - /events/20260128-otona-bunkasai.jpeg
+  acts:
+    - "S.B.Q.アイドル部"
+    - "かわさきしずか"
+    - "ケミカルシンドローム"
+    - "土萌まりな"
+    - "Momoka Kagamiya"
+    - "Tokyoかけひき倶楽部"
 - id: event-20260127-12th-anniversary
   slug: 20260127-12th-anniversary
   date: 2026-01-27 18:30:00 +0900
@@ -70,6 +85,10 @@
     https://premier.twitcasting.tv/c:shibuya_lamama/shopcart/413447
   images:
     - /events/20260127-12th-anniversary-1.jpeg
+  acts:
+    - "MCあんにゅ"
+    - "POPPY"
+    - "小日向由衣"
 - id: event-20260124-hpro-kamata
   slug: 20260124-hpro-kamata
   date: 2026-01-24 13:00:00 +0900
@@ -125,3 +144,8 @@
   images:
     - /events/20260121-tomoeipu-1.jpeg
     - /events/20260121-tomoeipu-2.jpeg
+  acts:
+    - "うえりん（中出し少年）"
+    - "丸橋ミク"
+    - "Ape (Very Ape)"
+    - "土萌まりな"

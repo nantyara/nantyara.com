@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import ShareButtons from '../../components/ShareButtons.astro';
 import { loadAllSchedules } from '../../utils/schedules';
+import { resolveVenue } from '../../utils/venues';
 
 export async function getStaticPaths() {
   const schedules = loadAllSchedules();
@@ -23,12 +24,17 @@ interface ScheduleType {
   images?: string[];
   slug: string;
   labels?: string[];
+  /** 対バン相手（共演アーティスト） */
+  acts?: string[];
   /** 開催時刻が未確定（TimeTreeの仮時刻など）の場合 true */
   time_tbd?: boolean;
 }
 
 const { schedule } = Astro.props as { schedule: ScheduleType };
-const { date, end, title, site, content, images, labels, time_tbd } = schedule;
+const { date, end, title, site, content, images, labels, acts, time_tbd } = schedule;
+
+// site を会場マスタに解決（解決できたら正式表記＋会場ページへのリンクを出す）
+const venue = resolveVenue(site);
 
 // ラベルの色を決定する関数
 const getLabelClass = (label: string) => {
@@ -177,8 +183,23 @@ const contentHtml = displayContent ? autoLinkUrls(displayContent) : '';
     <div class="event-info">
       <div class="venue-section">
         <h2 class="section-title">会場</h2>
-        <p class="venue-name"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> {site}</p>
+        <p class="venue-name">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          {venue ? <a href={`/venues/${venue.id}`} class="venue-link">{venue.name}</a> : site}
+        </p>
+        {venue?.address && <p class="venue-address">{venue.address}</p>}
       </div>
+
+      {acts && acts.length > 0 && (
+        <div class="acts-section">
+          <h2 class="section-title">共演</h2>
+          <div class="acts-chips">
+            {acts.map((act) => (
+              <a href={`/acts/${encodeURIComponent(act)}`} class="act-chip">{act}</a>
+            ))}
+          </div>
+        </div>
+      )}
 
       <div class="actions-section">
         <div class="calendar-buttons">
@@ -323,6 +344,57 @@ const contentHtml = displayContent ? autoLinkUrls(displayContent) : '';
     font-weight: 600;
     color: var(--pastel-pink);
     margin: 0;
+  }
+
+  .venue-link {
+    color: var(--pastel-pink);
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 110, 199, 0.6);
+    text-underline-offset: 4px;
+  }
+
+  .venue-link:hover {
+    color: var(--retro-cyan);
+  }
+
+  .venue-address {
+    margin: 8px 0 0 0;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    opacity: 0.75;
+  }
+
+  .acts-section {
+    margin-bottom: 30px;
+    padding: 25px;
+    background: rgba(0, 255, 255, 0.06);
+    border: 2px solid var(--retro-cyan);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.25);
+  }
+
+  .acts-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .act-chip {
+    display: inline-block;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, var(--bg-medium) 0%, var(--bg-dark) 100%);
+    color: var(--text-light);
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .act-chip:hover {
+    border-color: var(--retro-cyan);
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
   }
 
   .labels-container {

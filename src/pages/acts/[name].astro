@@ -1,0 +1,177 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { formatDateJa } from '../../utils/schedules';
+import { collectActs, type ActEntry } from '../../utils/acts';
+
+export async function getStaticPaths() {
+  return [...collectActs().values()].map(act => ({
+    params: { name: act.name },
+    props: { act },
+  }));
+}
+
+const { act } = Astro.props as { act: ActEntry };
+
+// events は日付降順。初共演は末尾
+const firstEvent = act.events[act.events.length - 1];
+---
+
+<Layout title={`${act.name} | 対バン | なんちゃらアイドル`} description={`${act.name} との共演履歴（通算${act.events.length}回）`}>
+  <div class="act-page">
+    <h1 class="act-title">{act.name}</h1>
+    <p class="act-stats">
+      共演 <strong>{act.events.length}</strong> 回
+      <span class="act-first">初共演: {formatDateJa(firstEvent.date)} @ {firstEvent.site}</span>
+    </p>
+
+    <section class="events-section">
+      <h2 class="section-title">共演したライブ</h2>
+      <ul class="event-list">
+        {act.events.map((event: any) => (
+          <li>
+            <a href={`/events/${event.slug}`} class="event-item">
+              <span class="event-date">{formatDateJa(event.date)}</span>
+              <span class="event-name">{event.title}</span>
+              <span class="event-site">@ {event.site}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <div class="back-link-wrapper">
+      <a href="/acts" class="back-link">← 対バン一覧に戻る</a>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .act-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  .act-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--text-light);
+    text-shadow:
+      2px 2px 0 var(--retro-pink),
+      4px 4px 0 var(--retro-cyan);
+    margin: 0 0 8px 0;
+  }
+
+  .act-stats {
+    text-align: center;
+    color: var(--retro-yellow);
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+    margin: 0 0 24px 0;
+  }
+
+  .act-stats strong {
+    font-size: 1.5rem;
+  }
+
+  .act-first {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    opacity: 0.8;
+    font-weight: 400;
+  }
+
+  .events-section {
+    margin-bottom: 32px;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--retro-pink);
+    margin: 0 0 16px 0;
+    padding-bottom: 8px;
+    border-bottom: 3px solid var(--retro-pink);
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .event-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .event-item {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding: 12px 16px;
+    background: linear-gradient(135deg, var(--bg-medium) 0%, var(--bg-dark) 100%);
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    color: var(--text-light);
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .event-item:hover {
+    border-color: var(--retro-cyan);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.35);
+  }
+
+  .event-date {
+    flex-shrink: 0;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--retro-yellow);
+  }
+
+  .event-name {
+    font-size: 0.95rem;
+  }
+
+  .event-site {
+    font-size: 0.85rem;
+    opacity: 0.7;
+  }
+
+  .back-link-wrapper {
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .back-link {
+    display: inline-flex;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, var(--retro-purple) 0%, var(--retro-pink) 100%);
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 110, 199, 0.4);
+  }
+
+  @media (max-width: 768px) {
+    .act-title {
+      font-size: 1.7rem;
+    }
+    .event-item {
+      flex-direction: column;
+      gap: 4px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .event-item {
+      transition: none !important;
+    }
+  }
+</style>

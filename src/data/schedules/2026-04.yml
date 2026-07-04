@@ -28,6 +28,12 @@
     TICKET　¥2,500＋1Drink¥600
   images:
     - /events/20260402-timetree-58638586.jpg
+  acts:
+    - "有坂愛海"
+    - "さおり凛ね"
+    - "あちゃむ"
+    - "江織杏"
+    - "工藤ちゃん"
 - id: event-20260403-timetree-08482961
   slug: 20260403-timetree-08482961
   date: 2026-04-03 18:30:00 +0900
@@ -57,6 +63,9 @@
   images:
     - /events/20260403-timetree-08482961.jpg
     - /events/20260403-timetree-08482961-2.jpeg
+  acts:
+    - "The Grateful a MogAAAz"
+    - "エレクトリックリボン"
 - id: event-20260404-timetree-36279089
   slug: 20260404-timetree-36279089
   date: 2026-04-04 11:30:00 +0900
@@ -87,6 +96,8 @@
     TICKET　¥2,500（別途2drink ¥1,000）
   images:
     - /events/20260408-timetree-77775746.jpg
+  acts:
+    - "加藤格"
 - id: event-20260411-km-music-nakano
   slug: 20260411-km-music-nakano
   date: 2026-04-11 16:00:00 +0900
@@ -106,6 +117,10 @@
     前売 ¥3,500 +1ドリンク
   images:
     - /events/20260411-km-music-nakano.jpeg
+  acts:
+    - "yumenouragawa"
+    - "ぴっぴちゃん"
+    - "森口しゅな"
 - id: event-20260412-jimbocho-waiwaihall
   slug: 20260412-jimbocho-waiwaihall
   date: 2026-04-12 18:00:00 +0900
@@ -132,6 +147,12 @@
   images:
     - /events/20260412-jimbocho-waiwaihall-1.jpeg
     - /events/20260412-jimbocho-waiwaihall-2.jpeg
+  acts:
+    - "S.B.Q.アイドル部"
+    - "POPPY"
+    - "Beyond That World"
+    - "すぺ〜ど"
+    - "Arisis"
 - id: event-20260418-timetree-77163527
   slug: 20260418-timetree-77163527
   date: 2026-04-18 12:00:00 +0900
@@ -152,6 +173,8 @@
     大阪府大阪市西区新町3-9-7 2F
   images:
     - /events/20260418-timetree-77163527.jpg
+  acts:
+    - "sommeil sommeil"
 - id: event-20260418-timetree-83678436
   slug: 20260418-timetree-83678436
   date: 2026-04-18 15:00:00 +0900
@@ -181,6 +204,16 @@
     主催者（X:@DADAFES or punkyshgz@gmail.com）
   images:
     - /events/20260418-timetree-83678436.jpg
+  acts:
+    - "円盤少女"
+    - "みずすまし"
+    - "千年メモリーズ"
+    - "ムステインズ"
+    - "PPPR!!-ピポパロ-"
+    - "福"
+    - "S.B.Q.アイドル部"
+    - "オータムス"
+    - "パジャマラマ"
 - id: event-20260419-timetree-74454111
   slug: 20260419-timetree-74454111
   date: 2026-04-19 11:00:00 +0900
@@ -245,6 +278,11 @@
     八王子市別所1-1-4ライブリーB1
   images:
     - /events/20260426-timetree-59513706.jpg
+  acts:
+    - "石井まどか"
+    - "爆音八幡宮"
+    - "S.B.Q.アイドル部"
+    - "Beyond That World"
 - id: event-20260428-timetree-77529387
   slug: 20260428-timetree-77529387
   date: 2026-04-28 09:00:00 +0900
@@ -276,6 +314,9 @@
     TEL 03-3738-0080
   images:
     - /events/ottanta-dj.jpeg
+  acts:
+    - "Q太郎"
+    - "FUKO"
 - id: event-20260430-timetree-65989253
   slug: 20260430-timetree-65989253
   date: 2026-04-30 18:00:00 +0900
@@ -303,3 +344,8 @@
     ADV ¥2,500＋1D / 配信 ¥2,000
   images:
     - /events/20260430-lamama.jpeg
+  acts:
+    - "こもゆさとん（from 壊れかけのテープレコーダーズ）"
+    - "大塚久生（from ニーネ）"
+    - "PHONOPHONE loves なんちゃらアイドル"
+    - "ズボンズ"
