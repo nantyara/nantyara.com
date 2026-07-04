@@ -254,6 +254,26 @@
 - id: sumakano-bustour
   name: スマカノ バスツアー
   note: バスツアーイベント
+- id: jam
+  name: 新宿JAM
+  note: なんちゃらアイドル結成の地とされるホームのライブハウス（閉店済み）
+- id: goldenegg
+  name: 新宿GOLDENEGG
+- id: urawa-narciss
+  name: 浦和ナルシス
+- id: mikasa-park
+  name: 横須賀三笠公園
+  note: 野外イベント会場（ヨコカル祭）
+- id: club-family
+  name: 渋谷club family
+- id: dt-bld
+  name: 名古屋Dt.BLD
+- id: thanks-project-yokohama
+  name: サンクプロジェクト（横浜）
+  note: コスプレイベント
+- id: nagoya-satsueikai
+  name: 名古屋撮影会
+  note: 遠征撮影会イベント
 - id: yu-city-kamata
   name: ゆ〜シティ蒲田 YCKホール
   aliases:

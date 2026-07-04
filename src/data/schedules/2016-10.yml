@@ -1,0 +1,97 @@
+# 2016年10月（/mine-x による X 告知アーカイブからの発掘。ソース: mining/x-archive/2016-10.json）
+- id: event-20161001-goldenegg
+  slug: 20161001-goldenegg
+  date: 2016-10-01 12:00:00 +0900
+  time_tbd: true
+  title: QuinQ音楽祭 in ゴールデンエッグ vol.1
+  site: 新宿GOLDENEGG
+  content: |
+    QuinQ音楽祭 in ゴールデンエッグ vol.1（昼公演）
+
+    ※Xの告知アーカイブから復元。開催時刻の記録なし
+- id: event-20161020-narciss
+  slug: 20161020-narciss
+  date: 2016-10-20 18:35:00 +0900
+  title: 浦和ナルシス ライブ
+  site: 浦和ナルシス
+  content: |
+    出番 18:35〜19:05
+
+    メンバーの大半が埼玉出身のため事実上の凱旋ライブ。
+    山田孝之の誕生日を記念して、白い皿にどら焼きを乗せて配布（先着10名）
+
+    ※Xの告知アーカイブから復元
+- id: event-20161022-yokokaru
+  slug: 20161022-yokokaru
+  date: 2016-10-22 12:00:00 +0900
+  time_tbd: true
+  title: ヨコカル祭 アイドルステージ
+  site: 横須賀三笠公園
+  content: |
+    野外ライブ（アイドルステージ）。同日夕方の渋谷フェスボルタへはしご
+
+    ※Xの告知アーカイブから復元。出演時刻の記録なし
+- id: event-20161022-fesvolta
+  slug: 20161022-fesvolta
+  date: 2016-10-22 15:40:00 +0900
+  title: フェスボルタアフリカ in 渋谷club family
+  site: 渋谷club family
+  content: |
+    なんちゃらアイドル出演 15:40〜
+    横須賀ヨコカル祭からの同日2現場
+
+    ※Xの告知アーカイブから復元
+- id: event-20161023-thanksproject
+  slug: 20161023-thanksproject
+  date: 2016-10-23 12:00:00 +0900
+  time_tbd: true
+  title: サンクプロジェクト（横浜）
+  site: サンクプロジェクト（横浜）
+  content: |
+    横浜でのコスプレイベント内ライブ出演
+
+    ※Xの告知アーカイブから復元。会場・時刻の詳細記録なし
+- id: event-20161025-jam
+  slug: 20161025-jam
+  date: 2016-10-25 19:00:00 +0900
+  title: 新宿JAM ライブ
+  site: 新宿JAM
+  content: |
+    OPEN 18:30 / START 19:00
+    前売 ¥2,000 / 当日 ¥2,300
+    なんちゃらアイドル出番 20:10〜（10/22時点の告知では21:10〜21:35）
+
+    「我らがホーム新宿ＪＡＭ」。白い皿配布あり
+
+    ※Xの告知アーカイブから復元
+- id: event-20161029-nagoya-satsueikai
+  slug: 20161029-nagoya-satsueikai
+  date: 2016-10-29 12:00:00 +0900
+  time_tbd: true
+  title: 名古屋撮影会
+  site: 名古屋撮影会
+  content: |
+    ナゴコス前日の名古屋遠征撮影会（予約: メールにて）
+
+    ※Xの告知アーカイブから復元。会場・時刻の詳細記録なし
+- id: event-20161030-dtbld
+  slug: 20161030-dtbld
+  date: 2016-10-30 19:00:00 +0900
+  title: 緊急無銭ライブ開催してしまったよ。
+  site: 名古屋Dt.BLD
+  acts:
+    - ういるず。
+    - Flash bug
+    - りゅあ
+    - コレガスベテ
+  content: |
+    1部 14:00 / 2部 19:00
+    無料（入場時1D600円のみ必要）
+
+    【出演】
+    ういるず。/ Flash bug / りゅあ / なんちゃらアイドル / コレガスベテ(2部)
+
+    なんちゃらアイドルは2部 19:30〜。
+    昼はナゴコス（名古屋のコスプレイベント）に出没してからのライブ
+
+    ※Xの告知アーカイブから復元
