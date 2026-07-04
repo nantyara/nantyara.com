@@ -169,32 +169,73 @@
   note: 正式名称「Studio80（スタジオ・オッタンタ）」。DJバー/企画空間バー
 - id: chop
   name: 池袋手刀
+  address: 東京都豊島区池袋2-46-3 シーマ100-B1F
+  url: http://www.chop-tokyo.info/
+  x: ikebukuro_chop
+  note: 正式名称「音処 手刀」（チョップ）
 - id: tokyo-club
   name: 東京倶楽部 水道橋店
   aliases:
     - 東京倶楽部
+  address: 東京都千代田区神田駿河台2-11-16 さいかち坂ビルB1
+  url: https://tokyo-club.com/
+  x: tokyo_club
+  note: ジャズクラブ。Xアカウントは4店舗共通
 - id: diskunion-ochanomizu
   name: ディスクユニオンお茶の水駅前店
+  address: 東京都千代田区神田駿河台4-3 新お茶の水ビル2F
+  url: https://diskunion.net/shop/ct/ocha_ekimae
+  x: diskunion_do1
 - id: esorabako
   name: 絵空箱
   aliases:
     - 絵空箱（江戸川橋・神楽坂）
+  address: 東京都新宿区山吹町361 誠志堂ビル1〜2F
+  url: https://esorabako.com
+  x: esorabako
+  note: 正式名称「Performing Gallery & Cafe 絵空箱」。江戸川橋駅徒歩2分
 - id: kazenifukarete
   name: 大森風に吹かれて
+  address: 東京都大田区大森北1-34-16 六然堂ビル2F
+  url: https://oomorikazefuka.weebly.com
+  x: Omori_kazefuka
+  note: 正式名称「大森フォークタウン 風に吹かれて」
 - id: hikarinouma
   name: 大久保ひかりのうま
+  address: 東京都新宿区百人町1-23-17 大久保南口共同ビルB1
+  url: https://hikarinouma2.blogspot.com
+  x: hikari_no_uma
+  note: 正式名称「音楽と珈琲 ひかりのうま」
 - id: mele
   name: 難波メレ
+  address: 大阪府大阪市浪速区元町1-2-2 井上難波ビルB1F
+  url: https://namba-mele.com
+  x: namba_mele
+  note: 公式表記「難波Mele」
 - id: chobihige
   name: 下北沢ちょ美ひげ
+  address: 東京都世田谷区北沢3-25-1 MTビルB1
+  note: 公式サイト・公式X未確認（住所は外部イベント情報より）
 - id: hit-parade
   name: 町田ヒットパレード
+  address: 東京都町田市原町田6-18-2 アークビルB1F
+  url: https://hit-parade.sakura.ne.jp
+  x: pukupuku913
+  note: 昭和歌謡曲バー
 - id: younger-than-yesterday
   name: 横須賀ヤンガーザンイエスタデイ
+  address: 神奈川県横須賀市大滝町2-17 エルスビル4F
+  url: https://www.yty-jp.com
+  x: yokosukayty
+  note: 正式名称「Younger Than Yesterday（YTY）」。元映画館のライブレストランバー
 - id: vita-seiseki
   name: 聖蹟桜ヶ丘ヴィータモールせいせき
+  address: 東京都多摩市関戸4-72
+  url: https://vitamallseiseki.jp
+  note: 商業施設「VITA MALL SEISEKI」（ヴィータ聖蹟桜ヶ丘）
 - id: metamorphose
   name: めたもるふぉーぜ
+  note: 対バン企画名の可能性が高い（固定会場としての実体は未確認）
 - id: ion-kasama
   name: イオン笠間
   aliases:
