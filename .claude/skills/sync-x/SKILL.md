@@ -82,6 +82,12 @@ git commit -m "Xの告知からイベント情報を取り込み"   # Co-Authore
 git push
 ```
 
+反映が完了したら（dry-run 以外）、SessionStart hook の鮮度チェック用に最終実行を記録する:
+
+```bash
+touch .claude/sync-x-last-run   # mtime が最終実行日時。7日超で hook がリマインドを注入する
+```
+
 **push まで自動で行ってよい**（ユーザー合意済み 2026-07-04）。ただし例外:
 
 - 日付・会場が読み取れない／自信がない情報は**反映せずレポートに回す**（推測で足さない）
