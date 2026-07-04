@@ -58,16 +58,28 @@
     TBD
 - id: event-20260808-timetree-01793792
   slug: 20260808-timetree-01793792
-  date: 2026-08-08 10:00:00 +0900
-  title: 新宿Antiknock
+  date: 2026-08-08 09:30:00 +0900
+  title: ANTIKNOCK presents「SPICE GIRLS vol.58」-DAYTIME-
   site: 新宿Antiknock
   timetree_id: "2966938928801793792"
   content: |
-    TBD
+    【出演】
+    なんちゃらアイドル（10:10-10:30 / 物販 10:45-11:35）
+    AKIARIM
+    AIMIA
+    AdFicTioN
+    終末のステラ
+    Village in Maier
+    ゼンゼロランカー
+
+    OPEN/START/CLOSE　9:15/9:30/13:00
+    ADV/DOOR　¥2,500/¥3,000（+1DRINK ¥600）
+  images:
+    - /events/20260808-timetree-01793792.jpg
 - id: event-20260809-timetree-94823857
   slug: 20260809-timetree-94823857
-  date: 2026-08-09 18:00:00 +0900
-  title: 大塚Welcome Back
+  date: 2026-08-09 18:45:00 +0900
+  title: Welcome back presents「Let's Party！」
   site: 大塚Welcome Back
   timetree_id: "2966939065594823857"
   content: |-
