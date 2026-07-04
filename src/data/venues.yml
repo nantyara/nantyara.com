@@ -61,7 +61,7 @@
     - 新宿dranken shrimp
     - 新宿 歌舞伎町 Drunken Shrimp
   address: 東京都新宿区歌舞伎町2-39-2 三幸ビルB館5F-E
-  note: 2026年5月末をもって無期限休止
+  note: 2026年5月末で休止後、同年6月に同じ場所で「BARめたもるふぉーぜ」として新装開店
 - id: antiknock
   name: 新宿ANTIKNOCK
   address: 東京都新宿区新宿4-3-15 レイフラットビルB1F
@@ -235,7 +235,9 @@
   note: 商業施設「VITA MALL SEISEKI」（ヴィータ聖蹟桜ヶ丘）
 - id: metamorphose
   name: めたもるふぉーぜ
-  note: 対バン企画名の可能性が高い（固定会場としての実体は未確認）
+  address: 東京都新宿区歌舞伎町2-39-2 三幸ビルB館5F-E
+  x: barmetamorphose
+  note: 正式名称「BARめたもるふぉーぜ」。旧・新宿Drunken Shrimpが2026年6月に新装開店した店
 - id: ion-kasama
   name: イオン笠間
   aliases:
