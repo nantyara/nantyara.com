@@ -160,11 +160,25 @@
 - id: event-20260728-timetree-55895027
   slug: 20260728-timetree-55895027
   date: 2026-07-28 19:00:00 +0900
-  title: 渋谷La.mama
+  title: なんちゃらアイドル主催 大人の文化祭〜初夏〜
   site: 渋谷La.mama
-  timetree_id: "2966937334655895027"
+  acts:
+    - S.B.Q.アイドル部
+    - 流星楽団
+    - ヒエポポン シスターズン
+    - Digital Meat
   content: |
-    TBD
+    【出演】
+    なんちゃらアイドル
+    S.B.Q.アイドル部
+    流星楽団
+    ヒエポポン シスターズン
+    Digital Meat
+
+    開場/開演　18:30/19:00
+    charge　¥2,500 / 配信 ¥2,000
+  images:
+    - /events/20260728-timetree-55895027.png
 - id: event-20260731-timetree-81114432
   slug: 20260731-timetree-81114432
   date: 2026-07-31 19:00:00 +0900
