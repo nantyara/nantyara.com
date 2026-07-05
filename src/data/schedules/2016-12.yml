@@ -1,0 +1,59 @@
+# 2016年12月（/mine-x による X 告知アーカイブからの発掘。ソース: mining/x-archive/2016-12.json）
+- id: event-20161208-trashup
+  slug: 20161208-trashup
+  date: 2016-12-08 19:00:00 +0900
+  title: 遅れてゴメンネ！Vol.20
+  site: 神楽坂TRASH-UP!!
+  content: |
+    開場18:30 / 開演19:00
+    前売 ¥1,600 / 当日 ¥1,800
+    白いお皿の配布あり（当日CDを忘れるハプニングも）
+
+    ※Xの告知アーカイブから復元
+- id: event-20161217-loft-bar-lounge
+  slug: 20161217-loft-bar-lounge
+  date: 2016-12-17 11:30:00 +0900
+  title: SEC Vol.4
+  site: 新宿LOFT BAR LOUNGE
+  content: |
+    新宿LOFT【BAR LOUNGE】での昼公演。なんちゃらアイドルの出番は11:30〜。
+
+    ※Xの告知アーカイブから復元
+- id: event-20161222-shibuya-glad
+  slug: 20161222-shibuya-glad
+  date: 2016-12-22 12:00:00 +0900
+  time_tbd: true
+  title: DJ出演「yururi.」
+  site: 渋谷Glad
+  content: |
+    DJ出演（「アノ子のDJ予定」として告知）。時刻の記録なし。
+
+    ※Xの告知アーカイブから復元
+- id: event-20161224-goldenegg
+  slug: 20161224-goldenegg
+  date: 2016-12-24 12:00:00 +0900
+  time_tbd: true
+  title: クリスマスイベント（リーダー活動休止前ラストライブ）
+  site: 新宿GOLDENEGG
+  content: |
+    リーダー・はるかの活動休止前ラストライブ（「リーダーは12/24で来春まで一旦お休み」
+    と当時アナウンス）。
+
+    TO決定戦（白いお皿争奪戦）の最終日で、各賞の授与も実施。
+    この日しか歌わない新曲も披露。集めたお皿を数えたり、お皿で焼きそばを
+    食べたりする企画も。
+
+    ※Xの告知アーカイブから復元。開催時刻の記録なし
+- id: event-20161228-jam
+  slug: 20161228-jam
+  date: 2016-12-28 20:20:00 +0900
+  title: 年内最後のライブ（新体制お披露目・忘年会ライブ）
+  site: 新宿JAM
+  content: |
+    我らがホーム新宿JAMでの年内最後のライブ。総勢12組出演、
+    なんちゃらアイドルの出番は20:20〜。
+
+    新体制では初のライブで、この日「新メンバー発表」があった。
+    次回ライブは2017年1月6日 初台Doors と告知。
+
+    ※Xの告知アーカイブから復元

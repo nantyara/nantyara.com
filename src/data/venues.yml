@@ -294,3 +294,17 @@
   address: 東京都杉並区阿佐谷南1-36-16 B1F
   url: https://www.loft-prj.co.jp/schedule/lofta/
   note: トークライブ中心のライブハウス＆バー（LOFT PROJECT系列）
+- id: trash-up
+  name: 神楽坂TRASH-UP!!
+  aliases:
+    - 神楽坂TRUSH-UP
+  note: 神楽坂のライブスペース（詳細未調査）
+- id: loft-bar-lounge
+  name: 新宿LOFT BAR LOUNGE
+  aliases:
+    - 新宿LOFT【BAR LOUNGE】
+    - 新宿ロフトBAR
+  note: 新宿LOFT内のバーステージ
+- id: shibuya-glad
+  name: 渋谷Glad
+  note: DJイベント会場（詳細未調査）
