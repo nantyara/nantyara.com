@@ -241,7 +241,11 @@ git commit -m "TimeTreeからイベントをインポート"
 
 1. 画像を `public/events/` に配置
 2. ファイル名は `YYYYMMDD-{slug}.jpeg` 形式を推奨
-3. YAMLファイルの `images` フィールドに追加:
+3. ⚠️ **2MiB 以上の画像を置くと `astro build` が PWA precache 上限エラーで失敗し、
+   Cloudflare Pages のデプロイが止まる**（2026-07-06 に 2.5MB の PNG で実害）。
+   でかい画像は `sips -s format jpeg -s formatOptions 85 in.png --out out.jpeg` 等で
+   JPEG 圧縮してから置くこと。コミット前に `npm run build` が通るか確認すると確実
+4. YAMLファイルの `images` フィールドに追加:
    ```yaml
    images:
      - /events/20260212-lamama.jpeg
