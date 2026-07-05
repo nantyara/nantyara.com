@@ -324,3 +324,11 @@
 - id: bar-yokohama
   name: BAR横浜
   note: 詳細未調査
+- id: technobreak
+  name: テクノブレイク
+  note: 会場か企画名か未確認（2017年当時のマミソロ出演イベント）
+- id: naked-loft
+  name: 新宿ネイキッドロフト
+  aliases:
+    - ネイキッドロフト
+  note: LOFT PROJECT系列のトークライブスペース（詳細未調査）
