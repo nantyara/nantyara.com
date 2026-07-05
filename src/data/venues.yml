@@ -235,6 +235,8 @@
   note: 商業施設「VITA MALL SEISEKI」（ヴィータ聖蹟桜ヶ丘）
 - id: metamorphose
   name: めたもるふぉーぜ
+  aliases:
+    - めたもるふぉ～ぜ
   address: 東京都新宿区歌舞伎町2-39-2 三幸ビルB館5F-E
   x: barmetamorphose
   note: 正式名称「BARめたもるふぉーぜ」。旧・新宿Drunken Shrimpが2026年6月に新装開店した店

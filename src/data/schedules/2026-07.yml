@@ -49,6 +49,23 @@
   timetree_id: "2966935897410521025"
   content: |
     TBD
+- id: event-20260707-metamorphose
+  slug: 20260707-metamorphose
+  date: 2026-07-07 12:00:00 +0900
+  time_tbd: true
+  title: 御茶海マミ バーイベント（ニューシングル発売記念）
+  site: めたもるふぉーぜ
+  labels:
+    - マミソロ
+  content: |
+    7月7日のニューシングル発売日を記念して（か知りませんが）、
+    御茶海マミが歌舞伎町のBARめたもるふぉーぜでバーイベント。
+
+    遠隔drinkでの応援も可能:
+    https://fantia.jp/products/1031643
+    https://fantia.jp/products/1031644
+
+    （出典: https://x.com/nantyaraidol/status/2073853148830327255）
 - id: event-20260710-timetree-67648713
   slug: 20260710-timetree-67648713
   date: 2026-07-10 19:00:00 +0900

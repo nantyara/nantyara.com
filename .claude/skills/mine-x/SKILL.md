@@ -36,13 +36,19 @@ window.__collect = () => {
     const link = a.querySelector('a[href*="/status/"] time')?.closest('a');
     if (!link) return;
     const url = link.getAttribute('href');
-    if (window.__harvest.has(url)) return;
+    const getImgs = () => [...a.querySelectorAll('div[data-testid="tweetPhoto"] img')].map(i => i.src.split('?')[0]);
+    if (window.__harvest.has(url)) {
+      // 画像は lazy-load されるため、既収穫エントリでも imgs が空なら埋め直す
+      // （これが無いと高速スクロール時に画像を系統的に取りこぼす。2016-12 で実害）
+      const e = window.__harvest.get(url);
+      if (!e.imgs || !e.imgs.length) { const im = getImgs(); if (im.length) e.imgs = im; }
+      return;
+    }
     const time = a.querySelector('time')?.getAttribute('datetime') || '';
     const handle = (a.querySelector('div[data-testid="User-Name"]')?.innerText.match(/@[\w_]+/) || [''])[0];
     const text = a.querySelector('div[data-testid="tweetText"]')?.innerText || '';
-    const imgs = [...a.querySelectorAll('div[data-testid="tweetPhoto"] img')].map(i => i.src.split('?')[0]);
     const isReply = !!a.innerText.match(/^.*返信先/m);
-    window.__harvest.set(url, { url, time, handle, text, imgs, isReply });
+    window.__harvest.set(url, { url, time, handle, text, imgs: getImgs(), isReply });
   });
   return window.__harvest.size;
 };
