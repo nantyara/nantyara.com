@@ -65,25 +65,34 @@ window.__harvest.size;
 - size が増えなくなるまで繰り返す。最後に `oldest`（`[...__harvest.values()].map(p=>p.time).sort()[0]`）が
   ウィンドウ先頭に届いたか確認
 - ⚠️ `scrollTo(0, document.body.scrollHeight)` の一気ジャンプは禁止。仮想リストが白抜けして
-  ロードが死ぬ（2026-07-05 実測）。死んだら: 収穫済み分を先に clipboard 退避 →
-  `until:` を「収穫済み最古の日付」に差し替えた URL で仕切り直して続きから
+  ロードが死ぬ（2026-07-05 実測）。白抜けしたらまず `window.scrollBy(0,1)` +1秒待ちで復旧を試す。
+  ダメなら: 収穫済み分を先に手順4でダンプ保存 → `until:` を「収穫済み最古の日付」に差し替えた
+  URL で仕切り直して続きから（2016-11実測: 2日分ごとに1回程度この仕切り直しが必要だった）
 - ⚠️ X 検索にはレート制限がある。1セッションで数ウィンドウ程度にとどめ、詰まったら休む
 
-### 4. clipboard 経由でダンプ
+### 4. get_page_text 経由でダンプ
 
 javascript_exec の出力は 1.5KB 程度で切れる＋クエリ文字列入り URL は DLP にブロックされる。
-**clipboard 転送が正解**（画像URLの `?` 以降は必ず落とす）:
+さらに ⚠️ **`navigator.clipboard.writeText` / `document.execCommand('copy')` は自動化コンテキスト
+では静かに失敗する**（2026-07-05 実測。旧 clipboard 方式は使用禁止）。
+**`<pre>` ノード注入 → get_page_text が正解**（画像URLの `?` 以降は必ず落とす）:
 
-1. **検索ボックスをクリック**してフォーカスを得る（⚠️ タイムライン上をクリックすると
-   ツイートに遷移して window が消し飛ぶ）
-2. ```js
+1. javascript_tool で JSON を DOM に注入:
+   ```js
    const all = [...window.__harvest.values()];
-   await navigator.clipboard.writeText(JSON.stringify({
+   const data = JSON.stringify({
      announces: all.filter(p => !p.isReply),
      replies: all.filter(p => p.isReply).map(p => ({url: p.url, time: p.time, handle: p.handle, text: p.text}))
-   }));
+   });
+   let pre = document.getElementById('__dump');
+   if (!pre) { pre = document.createElement('pre'); pre.id = '__dump'; document.body.appendChild(pre); }
+   pre.textContent = '###DUMP_START###' + data + '###DUMP_END###';
+   'ok:' + data.length;
    ```
-3. Bash で `pbpaste > <scratchpad>/x-YYYY-MM-raw.json`
+2. `get_page_text` でページテキストを取得し、マーカー間の JSON を抜き出して
+   Write で `<scratchpad>/x-YYYY-MM-raw-N.json` に保存（仕切り直しごとに続き番号）
+3. `jq '.announces | length' <ファイル>` で JSON 妥当性を確認
+4. `document.getElementById('__dump').remove()` で掃除してから収穫続行
 
 ### 5. アーカイブ保存 → 転記
 
@@ -119,3 +128,13 @@ javascript_exec の出力は 1.5KB 程度で切れる＋クエリ文字列入り
 
 - 2016-10 実施済み（2026-07-05）: 299告知 → 8イベント転記。初主催「なんちゃらフェス」
   （2016-11-11 新宿JAM）の告知も発見 → 11月ウィンドウで本体を掘ること
+- 2016-11 実施済み（2026-07-05）: 224告知 → 2イベント転記（11/11 なんちゃらフェス vol.1
+  ＠新宿JAM 本体、11/21 逆噴射婚活＠阿佐ヶ谷ロフトA）。白抜けが頻発し dump-and-renavigate
+  を計19回実施（clipboard 死亡 → get_page_text 方式を確立したのもこの回）。
+  御茶海マミは当時「ローズヒップss」という別ユニットと掛け持ちしており、samami27 の
+  ライブ告知はグループをよく確認すること（11/2, 11/13, 11/14 はローズヒップss側で除外）。
+  未解決: 4thシングル「Ivory song」（2016-11-11 会場限定・完売）は releases.yml 未登録、
+  サイゾー×ホチキス撮影会（11/6, 11/19）・ミサミソニック（11/26-27）は会場不明で未転記
+- 次: 2016-12 ウィンドウ。拾うべき予告 → 12/8 遅れてゴメンネ！Vol.20＠神楽坂TRASH-UP!!
+  （開場18:30/開演19:00、前売¥1,600）、12/24 新宿ゴールデンエッグ、12/28 ライブ
+  （はるか脱退後・せいら出演回、history.yml 記載の重要回）、DJ出演多数（12/4, 12/6, 12/9 等）
