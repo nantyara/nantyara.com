@@ -332,3 +332,22 @@
   aliases:
     - ネイキッドロフト
   note: LOFT PROJECT系列のトークライブスペース（詳細未調査）
+- id: shelter
+  name: 下北沢SHELTER
+  address: 東京都世田谷区北沢2-6-10 仙田ビルB1F
+  url: https://www.loft-prj.co.jp/SHELTER/
+  note: LOFT PROJECT系列のライブハウス
+- id: shinjuku-motion
+  name: 新宿Motion
+  aliases:
+    - 新宿motion
+  note: ライブハウス（詳細未調査）
+- id: gramstein
+  name: 新宿グラムシュタイン
+  note: ライブハウス（詳細未調査）
+- id: mismatch
+  name: 池袋mismatch
+  note: ライブハウス（詳細未調査）
+- id: kanda-mifa
+  name: 神田MIFA
+  note: 詳細未調査
