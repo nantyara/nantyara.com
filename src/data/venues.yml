@@ -365,3 +365,16 @@
 - id: star-lounge
   name: 渋谷スターラウンジ
   note: ライブハウス（詳細未調査）
+- id: nine-spices
+  name: ナインスパイス
+  aliases:
+    - NINE SPICES
+  note: 新宿のライブハウス。JAM FES 2017の会場のひとつ（詳細未調査）
+- id: links-holl
+  name: 浅草橋 Tokyo Link's Holl
+  aliases:
+    - 浅草橋リンクホール
+  note: ライブハウス（詳細未調査）
+- id: chelsea-hotel
+  name: 渋谷チェルシーホテル
+  note: ライブハウス（詳細未調査）
