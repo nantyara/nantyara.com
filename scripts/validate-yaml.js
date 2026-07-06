@@ -245,6 +245,26 @@ if (existsSync(schedulesDir)) {
     logWarn(schedule._file, `site "${schedule.site}" が venues.yml に見つかりません（name か aliases に追記してください）`);
   }
 
+  // acts の表記ゆれを警告（正規化すると同一なのに生の表記が違うと、/acts/{名前} の
+  // ページは正規名の1つしか生成されず、他表記からのリンクが 404 になるため）
+  // 正規化ロジックは src/utils/acts.ts の normalizeAct と揃えること
+  const actSpellings = new Map();
+  allSchedules.forEach(schedule => {
+    if (!Array.isArray(schedule.acts)) return;
+    for (const raw of schedule.acts) {
+      const key = String(raw).replace(/\s/g, '').toLowerCase();
+      if (!key) continue;
+      if (!actSpellings.has(key)) actSpellings.set(key, new Map());
+      if (!actSpellings.get(key).has(raw)) actSpellings.get(key).set(raw, schedule._file);
+    }
+  });
+  for (const [, spellings] of actSpellings) {
+    if (spellings.size > 1) {
+      const list = [...spellings.entries()].map(([raw, file]) => `"${raw}"(${file})`).join(' / ');
+      logWarn('acts表記ゆれ', `同一アーティストと思われる表記が混在しています: ${list}。データ側を統一してください`);
+    }
+  }
+
   if (!hasError) {
     console.log('\x1b[32m✓ 重複なし\x1b[0m');
   }

@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import ShareButtons from '../../components/ShareButtons.astro';
 import { loadAllSchedules } from '../../utils/schedules';
 import { resolveVenue } from '../../utils/venues';
+import { collectActs, normalizeAct } from '../../utils/acts';
 
 export async function getStaticPaths() {
   const schedules = loadAllSchedules();
@@ -35,6 +36,11 @@ const { date, end, title, site, content, images, labels, acts, time_tbd } = sche
 
 // site を会場マスタに解決（解決できたら正式表記＋会場ページへのリンクを出す）
 const venue = resolveVenue(site);
+
+// act チップのリンク先は集計後の正規名（/acts/{名前} のページは正規名でしか生成されない
+// ため、生の表記のままリンクすると表記ゆれ分が 404 になる）
+const actIndex = collectActs();
+const canonicalActName = (raw: string) => actIndex.get(normalizeAct(raw))?.name ?? raw;
 
 // ラベルの色を決定する関数
 const getLabelClass = (label: string) => {
@@ -195,7 +201,7 @@ const contentHtml = displayContent ? autoLinkUrls(displayContent) : '';
           <h2 class="section-title">共演</h2>
           <div class="acts-chips">
             {acts.map((act) => (
-              <a href={`/acts/${encodeURIComponent(act)}`} class="act-chip">{act}</a>
+              <a href={`/acts/${encodeURIComponent(canonicalActName(act))}`} class="act-chip">{act}</a>
             ))}
           </div>
         </div>
