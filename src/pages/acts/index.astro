@@ -4,6 +4,9 @@ import { collectActs } from '../../utils/acts';
 
 const acts = [...collectActs().values()]
   .sort((a, b) => b.events.length - a.events.length || a.name.localeCompare(b.name, 'ja'));
+
+// カードの href の末尾スラッシュは必須: 省略すると CDN の 308 リダイレクトの Location
+// ヘッダに生のマルチバイトが入り、ブラウザによっては URL が化けて遷移に失敗する
 ---
 
 <Layout title="対バン | なんちゃらアイドル" description="なんちゃらアイドルがこれまでに共演したアーティストの一覧">
@@ -13,7 +16,7 @@ const acts = [...collectActs().values()]
 
     <div class="act-grid">
       {acts.map(act => (
-        <a href={`/acts/${encodeURIComponent(act.name)}`} class="act-card">
+        <a href={`/acts/${encodeURIComponent(act.name)}/`} class="act-card">
           <span class="act-name">{act.name}</span>
           <span class="act-count">{act.events.length}回</span>
         </a>

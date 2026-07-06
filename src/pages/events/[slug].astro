@@ -38,7 +38,9 @@ const { date, end, title, site, content, images, labels, acts, time_tbd } = sche
 const venue = resolveVenue(site);
 
 // act チップのリンク先は集計後の正規名（/acts/{名前} のページは正規名でしか生成されない
-// ため、生の表記のままリンクすると表記ゆれ分が 404 になる）
+// ため、生の表記のままリンクすると表記ゆれ分が 404 になる）。
+// また href の末尾スラッシュは必須: 省略すると CDN の 308 リダイレクトの Location ヘッダに
+// 生のマルチバイトが入り、ブラウザによっては URL が化けて遷移に失敗する
 const actIndex = collectActs();
 const canonicalActName = (raw: string) => actIndex.get(normalizeAct(raw))?.name ?? raw;
 
@@ -201,7 +203,7 @@ const contentHtml = displayContent ? autoLinkUrls(displayContent) : '';
           <h2 class="section-title">共演</h2>
           <div class="acts-chips">
             {acts.map((act) => (
-              <a href={`/acts/${encodeURIComponent(canonicalActName(act))}`} class="act-chip">{act}</a>
+              <a href={`/acts/${encodeURIComponent(canonicalActName(act))}/`} class="act-chip">{act}</a>
             ))}
           </div>
         </div>
