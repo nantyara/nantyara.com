@@ -351,3 +351,17 @@
 - id: kanda-mifa
   name: 神田MIFA
   note: 詳細未調査
+- id: ruido-k2
+  name: 渋谷ルイードK2
+  note: RUIDO系列のライブハウス（詳細未調査）
+- id: deseo
+  name: 渋谷DESEO
+  note: ライブハウス（詳細未調査）
+- id: waseda-akane
+  name: 早稲田あかね
+  aliases:
+    - 西早稲田あかね
+  note: イベントスペース（詳細未調査）
+- id: star-lounge
+  name: 渋谷スターラウンジ
+  note: ライブハウス（詳細未調査）
