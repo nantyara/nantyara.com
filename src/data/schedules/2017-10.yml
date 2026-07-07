@@ -1,0 +1,117 @@
+# 2017年10月（/mine-x による X 告知アーカイブからの発掘。ソース: mining/x-archive/2017-10.json）
+- id: event-20171002-jam
+  slug: 20171002-jam
+  date: 2017-10-02 12:00:00 +0900
+  time_tbd: true
+  title: ザ・アイドルズ ワンマンライブ「マミージャム」（なんちゃらアイドルOA出演）
+  site: 新宿JAM
+  acts:
+    - ザ・アイドルズ
+  content: |
+    新宿JAMにて開催されたザ・アイドルズのワンマンライブ「マミージャム」に、
+    なんちゃらアイドルがオープニングアクトとして出演。
+
+    ※Xの告知アーカイブから復元。開催時刻の記録なし
+  sources:
+    - https://x.com/yokuwakan_nai/status/914571053443121152
+    - https://x.com/yokuwakan_nai/status/914862817395728384
+    - https://x.com/samami27/status/914875624560377856
+- id: event-20171006-goldenegg
+  slug: 20171006-goldenegg
+  date: 2017-10-06 18:30:00 +0900
+  title: QuinQ feata vol.04
+  site: 新宿GOLDENEGG
+  acts:
+    - Queen of Rose
+    - ドクガエル
+    - ぱぴこ
+    - エママウス
+  content: |
+    なんちゃらアイドル主催「QuinQ feata vol.04」。18時半開場、チケット2,500円＋1drink。
+    「なんちゃら旅講座」以来久しぶりとなる、外部作家に依頼せず製作した「なんちゃら純度100パーセント」の
+    完全内製オリジナル新曲をこの日初披露（音源化・販売予定なし）。
+
+    ※Xの告知アーカイブから復元。開演時刻の記録なし（開場18:30のみ判明）
+  sources:
+    - https://x.com/nantyaraidol/status/914877872229163008
+    - https://x.com/nantyaraidol/status/914892027086594048
+    - https://x.com/yokuwakan_nai/status/917474258258989056
+- id: event-20171009-vespa
+  slug: 20171009-vespa
+  date: 2017-10-09 12:00:00 +0900
+  time_tbd: true
+  title: なんちゃらカラオケ
+  site: ベスパ
+  content: |
+    なんちゃらアイドル主催のファンカラオケイベント「なんちゃらカラオケ」。会場は「ベスパ」という
+    屋根看板が特徴的な店舗（詳細未確認）。
+
+    ※Xの告知アーカイブから復元。開催時刻の記録なし。会場名は投稿内の言及「ベスパ」のみで、
+    正式名称・住所は未確認
+  sources:
+    - https://x.com/samami27/status/917077362499637248
+    - https://x.com/yokuwakan_nai/status/917104655896858624
+    - https://x.com/nantyaraidol/status/917446439046754305
+- id: event-20171013-heavensdoor
+  slug: 20171013-heavensdoor
+  date: 2017-10-13 19:00:00 +0900
+  title: 鮭オーケストラを励ます会
+  site: 三軒茶屋HEAVEN'S DOOR
+  acts:
+    - 鮭オーケストラ
+    - 工藤ちゃん
+  content: |
+    三軒茶屋HEAVEN'S DOORにて「鮭オーケストラを励ます会」。なんちゃらの「姉貴分」工藤ちゃんもバンドで出演、
+    出番は19時から。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/nantyaraidol/status/918858549152792577
+    - https://x.com/samami27/status/918866859390152704
+    - https://x.com/yokuwakan_nai/status/918866942491901952
+- id: event-20171020-studiodom
+  slug: 20171020-studiodom
+  date: 2017-10-20 20:25:00 +0900
+  title: 高円寺Studio DOM 無銭ライブ
+  site: 高円寺Studio DOM
+  content: |
+    高円寺Studio DOMにて無銭ライブ（入場無料）。20:25〜出演。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/samami27/status/921153692752941056
+- id: event-20171020-jam
+  slug: 20171020-jam
+  date: 2017-10-20 12:00:00 +0900
+  time_tbd: true
+  title: 新宿JAM 最後のライブ（ミナミちゃん生誕）
+  site: 新宿JAM
+  acts:
+    - ミナミトモユキ
+  content: |
+    ミナミトモユキ（ミナミちゃん）の生誕祭対バンに出演。なんちゃらアイドルにとって
+    結成の地・ホームであった新宿JAMでの、（同店閉店に伴う）最後のライブとなった。
+
+    ライブ後、なんちゃらアイドルは「なんちゃらアイドルは最初はただのJAMの客だったんだけど、
+    だけど、ふわっとデビューして、いつの間にか3年たって、多分最後のJAMのライブをついさっき終えて、
+    これからはどこのライブハウスでも胸を張って言えます。私たちは、東京、新宿、JAMからきた
+    なんちゃらアイドルです！」とツイート。最後の1曲はZIGGY「I'm getting blue」のカバーで締めくくった。
+
+    ※Xの告知アーカイブから復元。同日夜の惜別ツイート（19:34）・ZIGGYカバー報告（20:04）から
+    10月20日夜の公演と確定（事前告知の「26時〜」表記は実際の開催時刻とはずれた模様）
+  sources:
+    - https://x.com/nantyaraidol/status/921459550603042816
+    - https://x.com/nantyaraidol/status/921467257699557376
+- id: event-20171021-kanademia
+  slug: 20171021-kanademia
+  date: 2017-10-21 15:30:00 +0900
+  title: 地方アイドル応援！リーサル＆ロコドル vol.2
+  site: 新高円寺カナデミア
+  content: |
+    「地方アイドル応援！リーサル＆ロコドル vol.2」。新高円寺カナデミアにて、open 15:00/start 15:30、
+    入場料 予約3,000円／当日3,500円（+1ドリンク）。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/yokuwakan_nai/status/921457726701559808
+    - https://x.com/yokuwakan_nai/status/921690241550901249

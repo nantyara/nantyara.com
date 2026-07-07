@@ -748,3 +748,12 @@
   address: 東京都世田谷区北沢2-8-8 タートルビルB2F
   url: https://www.gar-den.in
   x: shimokita_GARDEN
+- id: studio-dom
+  name: 高円寺Studio DOM
+  note: ライブ/スタジオ（詳細未調査）
+- id: shinkoenji-kanademia
+  name: 新高円寺カナデミア
+  note: ライブハウス（詳細未調査）
+- id: vespa
+  name: ベスパ
+  note: カラオケ会場として言及（正式名称・住所未確認）
