@@ -61,12 +61,14 @@ window.__collect();
 
 ### 3. スクロール収穫ループ
 
-**1回の javascript_exec につき8ラウンドまで**（CDP が45秒でタイムアウトするため）:
+**1回の javascript_exec につき20ラウンドまで**（CDP の45秒枠に対し 20×(scroll+0.9s待ち)≈20秒で安全。
+2026-07-07 に 8→20 へ倍化。収穫の所要時間は「ツール呼び出し回数×10〜15秒/回」が支配的なので、
+1呼び出しで進む距離を増やすと往復回数が半減し体感3〜4割速くなる）:
 
 ```js
-for (let i = 0; i < 8; i++) {
-  window.scrollBy(0, 1500);
-  await new Promise(r => setTimeout(r, 1100));
+for (let i = 0; i < 20; i++) {
+  window.scrollBy(0, 1800);
+  await new Promise(r => setTimeout(r, 900));
   window.__collect();
 }
 window.__harvest.size;
@@ -74,6 +76,8 @@ window.__harvest.size;
 
 - size が増えなくなるまで繰り返す。最後に `oldest`（`[...__harvest.values()].map(p=>p.time).sort()[0]`）が
   ウィンドウ先頭に届いたか確認
+- ⚠️ CDP は45秒でタイムアウトするので**1呼び出し20ラウンドを上限**とする（待ちを詰めても増やさない）。
+  タイムアウトが頻発するようなら 15 に戻す
 - ⚠️ `scrollTo(0, document.body.scrollHeight)` の一気ジャンプは禁止。仮想リストが白抜けして
   ロードが死ぬ（2026-07-05 実測）。白抜けしたらまず `window.scrollBy(0,1)` +1秒待ちで復旧を試す。
   ダメなら: 収穫済み分を先に手順4でダンプ保存 → `until:` を「収穫済み最古の日付」に差し替えた
