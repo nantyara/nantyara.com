@@ -1,0 +1,76 @@
+# 2017年8月（/mine-x による X 告知アーカイブからの発掘。ソース: mining/x-archive/2017-08.json）
+- id: event-20170812-cosholic
+  slug: 20170812-cosholic
+  date: 2017-08-12 12:00:00 +0900
+  time_tbd: true
+  title: なんちゃらアイドル物販（コスホリック44）
+  site: コスホリック44
+  content: |
+    コスホリック44、QuinQブース（K24-25）にて、なんちゃらアイドル初の公式写真集ROM
+    （Photo by COLORFUL×CAMERA）を頒布。写真集に加え動画も各2本、当日使用可能な撮影チケット付き。
+
+    ※Xの告知アーカイブから復元。開催時刻の記録なし
+  sources:
+    - https://x.com/samami27/status/896083460590260224
+    - https://x.com/yokuwakan_nai/status/896391166626635776
+    - https://x.com/nantyaraidol/status/896428632272273408
+- id: event-20170814-jam
+  slug: 20170814-jam
+  date: 2017-08-14 12:00:00 +0900
+  time_tbd: true
+  title: なんちゃらアイドル初のワンマンライブ
+  site: 新宿JAM
+  acts:
+    - ザ・アイドルズ
+  content: |
+    新宿JAMにて、なんちゃらアイドル初のワンマンライブを開催。ザ・アイドルズがオープニングアクトとして出演。
+    「持ち時間の長いライブのお誘いがあるまで温めていた」という6分超の新曲をこの日初披露。
+    限定5個の「なんちゃらボランチア福袋」（3000円）や、なんちゃらオリジナルTシャツ・CD・DVDなどの
+    物販も展開。ライブ映像はDVD化され、来場者には無料配布された。
+
+    ※Xの告知アーカイブから復元。開催時刻の記録なし
+  sources:
+    - https://x.com/samami27/status/896811680482549760
+    - https://x.com/yokuwakan_nai/status/897119590517358598
+    - https://x.com/samami27/status/897119793819418624
+- id: event-20170825-kawashima-shotengai
+  slug: 20170825-kawashima-shotengai
+  date: 2017-08-25 18:00:00 +0900
+  title: 川島商店街夜店市「なんちゃらアイドルは夜しか泳げない」
+  site: 中野川島商店街
+  content: |
+    中野区川島商店街の夜店市（弥生町3-20-11、川辺洋品店隣）を2日間ジャック。18時から120分、
+    アンプとマイクを持ち込んでの路上ライブ・お祭り限定グッズ配布・無料撮影会を実施。入場無料。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/nantyaraidol/status/899707563435991041
+    - https://x.com/samami27/status/900867199191007234
+    - https://x.com/nantyaraidol/status/901119511998353412
+- id: event-20170826-kawashima-shotengai
+  slug: 20170826-kawashima-shotengai
+  date: 2017-08-26 18:00:00 +0900
+  title: 川島商店街夜店市「なんちゃらアイドルは夜しか泳げない」2日目
+  site: 中野川島商店街
+  content: |
+    中野区川島商店街の夜店市2日目。前日に続き路上ライブ・お祭り限定グッズ配布・無料撮影会を実施。
+
+    ※Xの告知アーカイブから復元。この日単独の開催報告ポストは確認できず、25日と合わせた告知に基づく
+  sources:
+    - https://x.com/nantyaraidol/status/899707563435991041
+    - https://x.com/samami27/status/900867199191007234
+- id: event-20170827-goldenegg
+  slug: 20170827-goldenegg
+  date: 2017-08-27 19:00:00 +0900
+  title: QuinQフェスタ vol.4
+  site: 新宿GOLDENEGG
+  content: |
+    なんちゃらアイドル主催「QuinQフェスタ vol.4」。18時半オープン、19時スタート、
+    チケット2,500円+drink。セクシー女優の斎藤みゆやメンヘラアイドル（仮）などを迎えた対バン。
+    ライブ前には撮影会も実施。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/nantyaraidol/status/898156483061309440
+    - https://x.com/samami27/status/901503528149041153
+    - https://x.com/samami27/status/901819246937702400
