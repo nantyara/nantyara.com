@@ -31,13 +31,15 @@ TimeTree公開カレンダーからイベントをインポートして、src/da
 
 Options:
     --months N      取得する月数（デフォルト: 12ヶ月）
+    --from DATE     取得開始日（YYYY-MM-DD、デフォルト: 今日）。過去のバックフィルに使う
     --dry-run       実際には保存せず、追加されるイベントを表示するのみ
     -h, --help      このヘルプを表示
 
 Examples:
-    $(basename "$0")                # 12ヶ月分のイベントをインポート
-    $(basename "$0") --months 6     # 6ヶ月分のイベントをインポート
-    $(basename "$0") --dry-run      # ドライラン（実際には保存しない）
+    $(basename "$0")                          # 12ヶ月分のイベントをインポート
+    $(basename "$0") --months 6               # 6ヶ月分のイベントをインポート
+    $(basename "$0") --from 2025-01-01 --months 12   # 2025年分をバックフィル
+    $(basename "$0") --dry-run                # ドライラン（実際には保存しない）
 
 EOF
 }
@@ -92,12 +94,17 @@ event_exists() {
 main() {
     local months=12
     local dry_run=false
+    local from_date=""
 
     # 引数解析
     while [[ $# -gt 0 ]]; do
         case $1 in
             --months)
                 months="$2"
+                shift 2
+                ;;
+            --from)
+                from_date="$2"
                 shift 2
                 ;;
             --dry-run)
@@ -116,13 +123,22 @@ main() {
         esac
     done
 
-    # 期間を計算
-    local now=$(date "+%Y-%m-%d 00:00:00")
+    # 期間を計算（--from 指定時はその日から、無指定なら今日から months ヶ月分）
+    local now
+    if [[ -n "$from_date" ]]; then
+        now="${from_date} 00:00:00"
+    else
+        now=$(date "+%Y-%m-%d 00:00:00")
+    fi
     local from_timestamp=$(get_timestamp_ms "$now")
     if date --version >/dev/null 2>&1; then
-        local to_date=$(date -d "+${months} months" "+%Y-%m-%d 00:00:00")
+        local to_date=$(date -d "${from_date:-today} +${months} months" "+%Y-%m-%d 00:00:00")
     else
-        local to_date=$(date -v+${months}m "+%Y-%m-%d 00:00:00")
+        if [[ -n "$from_date" ]]; then
+            local to_date=$(date -j -f "%Y-%m-%d" -v+${months}m "$from_date" "+%Y-%m-%d 00:00:00")
+        else
+            local to_date=$(date -v+${months}m "+%Y-%m-%d 00:00:00")
+        fi
     fi
     local to_timestamp=$(get_timestamp_ms "$to_date")
 
