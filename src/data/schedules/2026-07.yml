@@ -50,8 +50,8 @@
   content: |
     OPEN 18:00 / START 19:00
     チケット ¥1,500
-
-    （出典: https://x.com/samami27/status/2073805002179846306）
+  sources:
+    - https://x.com/samami27/status/2073805002179846306
 - id: event-20260707-metamorphose
   slug: 20260707-metamorphose
   date: 2026-07-07 12:00:00 +0900
@@ -67,8 +67,8 @@
     遠隔drinkでの応援も可能:
     https://fantia.jp/products/1031643
     https://fantia.jp/products/1031644
-
-    （出典: https://x.com/nantyaraidol/status/2073853148830327255）
+  sources:
+    - https://x.com/nantyaraidol/status/2073853148830327255
 - id: event-20260710-timetree-67648713
   slug: 20260710-timetree-67648713
   date: 2026-07-10 19:00:00 +0900
@@ -96,8 +96,6 @@
   content: |
     ULTRA SHIBUYAでの「短冊CDの日2026」インストアイベント。
     sommeil sommeilとなんちゃらアイドルの短冊CDも対象。
-
-    （出典: https://x.com/yokuwakan_nai/status/2074490992838037889）
   sources:
     - https://x.com/yokuwakan_nai/status/2074490992838037889
 - id: event-20260713-timetree-68637822
