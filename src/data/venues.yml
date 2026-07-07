@@ -45,6 +45,9 @@
   x: Welcomebackwb
 - id: outbreak
   name: 四谷OUTBREAK
+  aliases:
+    - 四ツ谷アウトブレイク
+    - 四谷アウトブレイク
   address: 東京都新宿区四谷2-10 第2太郎ビルB1
   url: https://www.hor-outbreak.com
   x: 428outbreak
@@ -378,3 +381,15 @@
 - id: chelsea-hotel
   name: 渋谷チェルシーホテル
   note: ライブハウス（詳細未調査）
+- id: koenji-thunder
+  name: 高円寺サンダー
+  note: ライブハウス（詳細未調査）
+- id: aoyama-fai
+  name: 青山fai
+  note: ライブハウス（詳細未調査）
+- id: ikebukuro-mono
+  name: 池袋mono
+  note: ライブハウス（詳細未調査）。池袋mismatch・池袋手刀とは別会場
+- id: bar-quinq
+  name: Barクインク
+  note: 神宮寺ナナ主催のバー企画（会場実体は要精査）
