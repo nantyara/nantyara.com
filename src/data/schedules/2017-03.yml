@@ -9,6 +9,8 @@
     新宿JAMで「白い皿」企画を再開してのライブ。オリジナルボイス入り目覚まし企画も実施。
 
     ※Xの告知アーカイブから復元。開催時刻の記録なし
+  sources:
+    - https://x.com/nantyaraidol/status/836927437048946688
 - id: event-20170303-motion
   slug: 20170303-motion
   date: 2017-03-03 12:00:00 +0900
@@ -21,6 +23,9 @@
     新宿Motionで開催の「やばいアイドル」に御茶海マミがソロで出演。衣装を一新しての出演。
 
     ※Xの告知アーカイブから復元。開催時刻の記録なし
+  sources:
+    - https://x.com/samami27/status/837370045013479424
+    - https://x.com/samami27/status/837612151866957824
 - id: event-20170308-jam
   slug: 20170308-jam
   date: 2017-03-08 12:00:00 +0900
@@ -33,6 +38,9 @@
     新宿JAMで開催された「砂漠のバレリーナ」ワンマンライブのオープニングアクトとして出演。
 
     ※Xの告知アーカイブから復元。開催時刻の記録なし
+  sources:
+    - https://x.com/samami27/status/839109523163865090
+    - https://x.com/samami27/status/839478620741500930
 - id: event-20170311-shelter
   slug: 20170311-shelter
   date: 2017-03-11 12:00:00 +0900
@@ -55,6 +63,9 @@
     ほか
 
     ※Xの告知アーカイブから復元。開演時刻の記録がないため開場時刻を記載
+  sources:
+    - https://x.com/nantyaraidol/status/839896323251855360
+    - https://x.com/samami27/status/840457992185106432
 - id: event-20170316-gramstein
   slug: 20170316-gramstein
   date: 2017-03-16 18:30:00 +0900
@@ -64,6 +75,9 @@
     新宿グラムシュタインでのライブに出演。開演18:30。
 
     ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/samami27/status/841927792073822208
+    - https://x.com/samami27/status/842336330239500292
 - id: event-20170319-mismatch
   slug: 20170319-mismatch
   date: 2017-03-19 19:45:00 +0900
@@ -73,6 +87,8 @@
     池袋mismatchでのライブに出演。開演19:45。
 
     ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/samami27/status/843066662924439552
 - id: event-20170322-motion
   slug: 20170322-motion
   date: 2017-03-22 12:00:00 +0900
@@ -83,6 +99,8 @@
     新宿Motionでのライブに出演。
 
     ※Xの告知アーカイブから復元。開催時刻の記録なし
+  sources:
+    - https://x.com/samami27/status/844549972016050176
 - id: event-20170324-jam
   slug: 20170324-jam
   date: 2017-03-24 20:40:00 +0900
@@ -92,6 +110,10 @@
     新宿JAMでのライブに出演。開演は当初20:30頃予定とアナウンスされ、20:40〜に確定。
 
     ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/yokuwakan_nai/status/845205090315075585
+    - https://x.com/samami27/status/845206263487094784
+    - https://x.com/samami27/status/845306385940135936
 - id: event-20170327-mifa
   slug: 20170327-mifa
   date: 2017-03-27 12:00:00 +0900
@@ -104,3 +126,6 @@
     神田MIFAでのライブに出演。あみ乃と共演。
 
     ※Xの告知アーカイブから復元。開催時刻の記録なし
+  sources:
+    - https://x.com/samami27/status/845626085949652997
+    - https://x.com/samami27/status/846349103688704000
