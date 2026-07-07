@@ -1,0 +1,135 @@
+# 2017年12月（/mine-x による X 告知アーカイブからの発掘。ソース: mining/x-archive/2017-12.json）
+- id: event-20171201-jam
+  slug: 20171201-jam
+  date: 2017-12-01 12:00:00 +0900
+  time_tbd: true
+  title: 新宿JAMライブ（ジャムスタライブ）
+  site: 新宿JAM
+  content: |
+    新宿JAMでのライブ。ツイート中では「ジャムスタライブ」と呼ばれている。実況ツイートは
+    21:03（「JAM、着いた瞬間エモい」）、22:13（「ジャムスタライブなう！」）、23:10
+    （「JAMスタライブありがとうございました！！ほんっとにたのしかった！！だださんありがとうー！！」）
+    と続いており、当日夜（21時台〜23時台）のライブだったと判明するが、公式な開演時刻の告知は
+    見つからず。
+
+    ※Xの告知アーカイブから復元。開催時刻は実況ツイートのタイムスタンプからの推定
+    （21時台開始〜23時台終演）で、事前の開演告知は確認できないため time_tbd 扱い
+  sources:
+    - https://x.com/yokuwakan_nai/status/936566352822771712
+    - https://x.com/samami27/status/936569925249875968
+    - https://x.com/nantyaraidol/status/936583948385189890
+    - https://x.com/samami27/status/936598478582456321
+- id: event-20171212-heavensdoor
+  slug: 20171212-heavensdoor
+  date: 2017-12-12 20:20:00 +0900
+  title: 三軒茶屋HEAVEN'S DOORライブ
+  site: 三軒茶屋HEAVEN'S DOOR
+  content: |
+    三軒茶屋HEAVEN'S DOORでのライブ。事前告知では、なんちゃらの出番は20時20分くらいから
+    30分間みっちりの予定。終演後のツイートでは対バンとの共演も好評だったことが伺える。
+    次回12月19日への言及あり。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/nantyaraidol/status/939923619739680768
+    - https://x.com/nantyaraidol/status/940597720401809409
+    - https://x.com/nantyaraidol/status/940598691164856320
+    - https://x.com/samami27/status/940612462142877697
+    - https://x.com/yokuwakan_nai/status/940613484726722560
+- id: event-20171214-crossbunny
+  slug: 20171214-crossbunny
+  date: 2017-12-14 20:30:00 +0900
+  end: 2017-12-15 03:00:00 +0900
+  title: 中野クロスバニー出演
+  site: 中野クロスバニー
+  content: |
+    中野クロスバニーに20:30〜27:00（翌3:00）滞在するとの告知。「いるよ」という表現のみで、
+    ステージでのライブ出演かバー営業的な滞在（DJ・物販等）かは告知文だけでは判別できない。
+
+    ※Xの告知アーカイブから復元。ライブ出演の明言なし、時間帯のみ確認できた
+  sources:
+    - https://x.com/yokuwakan_nai/status/941219074557669376
+- id: event-20171219-shinjukumotion
+  slug: 20171219-shinjukumotion
+  date: 2017-12-19 18:30:00 +0900
+  title: Sweet Motion Vol.68
+  site: 新宿Motion
+  content: |
+    『Sweet Motion Vol.68』。会場：新宿Motion。開場18:00／開演18:30。
+    料金：前売2,000円＋D代／当日2,400円＋D代。終演後のツイートでは「久々の人に会えたりも
+    して嬉しくてテンション爆上げ」だったとのこと。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/samami27/status/942719337852321794
+    - https://x.com/yokuwakan_nai/status/943133502760816645
+- id: event-20171222-barbara
+  slug: 20171222-barbara
+  date: 2017-12-22 12:00:00 +0900
+  time_tbd: true
+  title: 代々木バーバラ クリスマスパーティー
+  site: 代々木バーバラ
+  content: |
+    代々木バーバラでのクリスマスパーティーライブ。クリスマスソング縛りのセットだったとの
+    ツイートあり。事前告知に具体的な開演時刻の記載は見当たらない。
+
+    ※Xの告知アーカイブから復元。開催時刻の記録なし
+  sources:
+    - https://x.com/yokuwakan_nai/status/943133502760816645
+    - https://x.com/yokuwakan_nai/status/944255649331867649
+- id: event-20171225-firebird
+  slug: 20171225-firebird
+  date: 2017-12-25 12:00:00 +0900
+  time_tbd: true
+  title: 新松戸FIREBIRD クリスマスライブ
+  site: 新松戸FIREBIRD
+  content: |
+    新松戸FIREBIRDでのクリスマスライブ。「うかれぽんちなんちゃらアイドル」として賑やかに
+    開催された模様。工藤ちゃん・岬たんとの共演で、2017年の共演は本イベントで10回目
+    （事前ツイートで予告）。開演時刻の明記は見当たらない。
+
+    ※Xの告知アーカイブから復元。開催時刻の記録なし
+  sources:
+    - https://x.com/nantyaraidol/status/941232053072289793
+    - https://x.com/samami27/status/945293186460561409
+    - https://x.com/yokuwakan_nai/status/945314049209724930
+    - https://x.com/nantyaraidol/status/945305122019598337
+- id: event-20171229-ufoclub
+  slug: 20171229-ufoclub
+  date: 2017-12-29 18:00:00 +0900
+  title: なんちゃらハプニング！（Beat Happening！×なんちゃらアイドル共催）
+  site: 東高円寺U.F.O CLUB
+  acts:
+    - 工藤ちゃん
+    - ザ・アイドルズ
+    - tasotokyoガールズバンド
+  content: |
+    『Beat Happening！×なんちゃらアイドルpre. なんちゃらハプニング！』。会場は
+    東高円寺U.F.O CLUB（告知当初「高円寺」とだけ案内されていたが、当日「東高円寺U.F.O
+    CLUB、最寄りは東高円寺」と訂正あり）。OPEN 18:00。出演：工藤ちゃん、ザ・アイドルズ、
+    なんちゃらアイドル、tasotokyoガールズバンド。フード出店として「なんちゃらFOOD！」も実施。
+
+    ※Xの告知アーカイブから復元。開場（OPEN）時刻のみ確認でき、なんちゃらの出番時刻の
+    記載は見当たらない
+  sources:
+    - https://x.com/nantyaraidol/status/945680875680817152
+    - https://x.com/samami27/status/946662880195198976
+    - https://x.com/samami27/status/946755216375816192
+    - https://x.com/yokuwakan_nai/status/946780826955538432
+- id: event-20171231-heavensdoor
+  slug: 20171231-heavensdoor
+  date: 2017-12-31 21:55:00 +0900
+  title: 年越しカウントダウンライブ（1本目・三軒茶屋HEAVEN'S DOOR）
+  site: 三軒茶屋HEAVEN'S DOOR
+  content: |
+    大晦日恒例のはしごライブの1本目。三軒茶屋HEAVEN'S DOORにて21:55より出演。この後
+    「新宿JAM 24:20〜」（日付は年明け1月1日 0:20頃）、「早稲田あかねで朝くらいまで初詣」
+    （1月1日）と続く年越し3連戦の告知があったが、この2本は日付が1月1日になるため
+    2017-12のこのファイルには含めていない。1月ウィンドウ（/mine-x 2018年1月分）で
+    扱うべき候補として別途申し送りする。
+
+    ※Xの告知アーカイブから復元。時刻はsamami27の告知ツイートより
+  sources:
+    - https://x.com/yokuwakan_nai/status/946097325864230917
+    - https://x.com/samami27/status/946491286554472448
+    - https://x.com/samami27/status/947151339682852864
