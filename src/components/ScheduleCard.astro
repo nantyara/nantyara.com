@@ -105,7 +105,11 @@ const Wrapper = slug ? 'a' : 'div';
   </article>
 </Wrapper>
 
-<style>
+<style is:global>
+  /* is:global の理由: トップページの「過去/すべて」表示はクライアントJSがこのコンポーネントと
+     同じクラス名でカードDOMを直接組み立てる（src/pages/index.astro 参照）。Astroの自動スコープ
+     （data-astro-cid-*属性）はJSで作ったDOMには付かないため、CSSをグローバルにして両者で共有する。
+     ScheduleCard はこのページでのみ使われているのでクラス名の衝突リスクは低い。 */
   .schedule-card-link {
     text-decoration: none;
     color: inherit;

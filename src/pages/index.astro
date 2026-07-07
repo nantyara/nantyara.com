@@ -17,7 +17,15 @@ const expireTime = Date.now() - 12 * 60 * 60 * 1000;
 // NEXT LIVE（直近の今後イベント）
 const nextLive = schedules.find(s => new Date(s.date).getTime() >= expireTime) ?? null;
 
-// 月ごとにグルーピング（JST基準）
+// パフォーマンス方針（2026-07-07）: 「今後の予定」は件数が少なく増え続けないので
+// 従来どおりサーバーで全件HTML描画する（初回表示が速く、JS無効でも見える・SEOにも強い）。
+// 一方「過去の予定」はXアーカイブ発掘で今後も増え続け、全件HTMLで送ると肥大化する一方なので、
+// 軽量JSONだけをページに埋め込み、実際のカード描画とページング（無限スクロール）はクライアント側で行う。
+// これによりネットワーク転送量・DOM要素数のどちらも「今後の予定」の件数だけに比例するようになり、
+// 過去イベントが何千件に増えてもトップページの初回表示コストは増えない。
+const upcomingSchedules = schedules.filter(s => new Date(s.date).getTime() >= expireTime);
+
+// 月ごとにグルーピング（JST基準・「今後の予定」のみ。過去分はクライアント側で同様にグルーピングする）
 const monthPartsFmt = new Intl.DateTimeFormat('ja-JP', {
   timeZone: 'Asia/Tokyo',
   year: 'numeric',
@@ -25,7 +33,7 @@ const monthPartsFmt = new Intl.DateTimeFormat('ja-JP', {
 });
 
 const monthGroups: { key: string; label: string; items: typeof schedules }[] = [];
-for (const schedule of schedules) {
+for (const schedule of upcomingSchedules) {
   const parts = monthPartsFmt.formatToParts(new Date(schedule.date));
   const year = parts.find(p => p.type === 'year')?.value ?? '';
   const month = parts.find(p => p.type === 'month')?.value ?? '';
@@ -37,6 +45,12 @@ for (const schedule of schedules) {
   }
   group.items.push(schedule);
 }
+
+// クライアント側の「過去/すべて」描画・検索用の軽量データは、ページに埋め込まず
+// /events.json（src/pages/events.json.ts で静的生成）としてビルドし、
+// ユーザーが実際に「過去」「すべて」を選んだ瞬間だけクライアントが fetch する（lazy load）。
+// これにより「今後の予定」だけを見に来た大多数の訪問では、過去イベント分のデータを
+// 一切ダウンロードしない。
 
 // NEXT LIVE 用の日時表示
 const nextLiveDateFmt = (d: Date, timeTbd: boolean) => {
@@ -115,8 +129,8 @@ const nextLiveDateFmt = (d: Date, timeTbd: boolean) => {
     </div>
   </div>
 
-  <div id="schedule-list" class="schedule-list">
-    {schedules.length === 0 ? (
+  <div id="schedule-list" class="schedule-list" data-mode="upcoming">
+    {upcomingSchedules.length === 0 ? (
       <div class="empty-state">
         <div class="title">予定はありません</div>
         <p>現在、予定されているイベントはありません。</p>
@@ -151,6 +165,8 @@ const nextLiveDateFmt = (d: Date, timeTbd: boolean) => {
     )}
   </div>
 
+  <div id="scroll-sentinel"></div>
+
   <div id="no-results" class="empty-state" style="display: none;">
     <div class="title">該当するイベントがありません</div>
     <p>検索条件を変更してください。</p>
@@ -162,12 +178,240 @@ const nextLiveDateFmt = (d: Date, timeTbd: boolean) => {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const searchInput = document.getElementById('search-input');
     const scheduleList = document.getElementById('schedule-list');
-    const scheduleItems = Array.from(document.querySelectorAll('.schedule-item'));
-    const monthGroups = Array.from(document.querySelectorAll('.month-group'));
     const noResults = document.getElementById('no-results');
+    const sentinel = document.getElementById('scroll-sentinel');
 
     // 12時間ルール: クライアント側で現在時刻から再計算（ビルド時の値だと古くなるため）
     const clientExpireTime = Date.now() - 12 * 60 * 60 * 1000;
+
+    // サーバーが描画した「今後の予定」のDOMを保持しておき、'upcoming' に戻ったときに再利用する
+    // （件数が少なく増え続けないので毎回JSで作り直す必要がない）
+    const originalUpcomingHTML = scheduleList ? scheduleList.innerHTML : '';
+
+    // 「過去/すべて」用の軽量イベントデータは /events.json から遅延取得する（lazy load）。
+    // 過去イベントはXアーカイブ発掘で今後も増え続けるため、ユーザーが実際に「過去」「すべて」を
+    // 選ぶまではダウンロードしない。一度取得したら使い回す（キャッシュ）。
+    let allEvents = null;
+    let allEventsPromise = null;
+    const ensureAllEventsLoaded = () => {
+      if (allEvents) return Promise.resolve(allEvents);
+      if (!allEventsPromise) {
+        allEventsPromise = fetch('/events.json')
+          .then((r) => r.json())
+          .then((data) => {
+            allEvents = Array.isArray(data) ? data : [];
+            return allEvents;
+          })
+          .catch(() => {
+            allEvents = [];
+            return allEvents;
+          });
+      }
+      return allEventsPromise;
+    };
+
+    const monthPartsFmt = new Intl.DateTimeFormat('ja-JP', {
+      timeZone: 'Asia/Tokyo',
+      year: 'numeric',
+      month: '2-digit',
+    });
+    const monthKeyLabel = (epochMs) => {
+      const parts = monthPartsFmt.formatToParts(new Date(epochMs));
+      const year = parts.find(p => p.type === 'year')?.value ?? '';
+      const month = parts.find(p => p.type === 'month')?.value ?? '';
+      return { key: `${year}-${month}`, label: `${year}年${Number(month)}月` };
+    };
+    const dateFmt = new Intl.DateTimeFormat('ja-JP', {
+      timeZone: 'Asia/Tokyo',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      weekday: 'short',
+    });
+    const dateParts = (epochMs) => {
+      const parts = dateFmt.formatToParts(new Date(epochMs));
+      const pick = (t) => parts.find(p => p.type === t)?.value || '';
+      return { year: Number(pick('year')), month: pick('month'), day: pick('day'), weekday: pick('weekday') };
+    };
+
+    // ScheduleCard.astro と同じマークアップ・クラス名でカードDOMを組み立てる
+    // （CSSは ScheduleCard.astro 側で is:global 化して共有している）。
+    // すべて DOM API / textContent 経由で構築し、innerHTML への文字列埋め込みはしない（XSS対策）。
+    const buildCard = (ev) => {
+      const d = dateParts(ev.t);
+      const accentClass = ev.l?.includes('マミソロ') ? 'accent-red' : ev.l?.includes('あおはるソロ') ? 'accent-blue' : '';
+
+      const a = document.createElement('a');
+      a.className = 'schedule-card-link';
+      a.href = `/events/${ev.sl}`;
+
+      const article = document.createElement('article');
+      article.className = accentClass ? `schedule-card ${accentClass}` : 'schedule-card';
+
+      const header = document.createElement('div');
+      header.className = ev.im ? 'card-header has-image' : 'card-header stripe-pattern';
+      if (ev.im) header.style.backgroundImage = 'url(' + JSON.stringify(ev.im) + ')';
+
+      const headerTop = document.createElement('div');
+      headerTop.className = 'header-top';
+
+      const dateBadge = document.createElement('div');
+      dateBadge.className = 'date-badge';
+      const yearSpan = document.createElement('span');
+      yearSpan.className = 'date-year';
+      yearSpan.textContent = String(d.year);
+      const mainSpan = document.createElement('span');
+      mainSpan.className = 'date-main';
+      mainSpan.textContent = `${d.month}/${d.day}`;
+      const weekdaySpan = document.createElement('span');
+      weekdaySpan.className = 'date-weekday';
+      weekdaySpan.textContent = `(${d.weekday})`;
+      dateBadge.append(yearSpan, mainSpan, weekdaySpan);
+      headerTop.appendChild(dateBadge);
+
+      if (ev.l && ev.l.length > 0) {
+        const labelsContainer = document.createElement('div');
+        labelsContainer.className = 'labels-container';
+        ev.l.forEach((label) => {
+          const tag = document.createElement('span');
+          const labelClass = label === 'マミソロ' ? 'label-red' : label === 'あおはるソロ' ? 'label-blue' : '';
+          tag.className = labelClass ? `label-tag ${labelClass}` : 'label-tag';
+          tag.textContent = label;
+          labelsContainer.appendChild(tag);
+        });
+        headerTop.appendChild(labelsContainer);
+      }
+      header.appendChild(headerTop);
+
+      const titleEl = document.createElement('h3');
+      titleEl.className = 'card-title';
+      titleEl.textContent = ev.ti;
+      header.appendChild(titleEl);
+
+      const body = document.createElement('div');
+      body.className = 'card-body';
+
+      const venueInfo = document.createElement('div');
+      venueInfo.className = 'venue-info';
+      const venueIcon = document.createElement('i');
+      venueIcon.className = 'venue-icon fa-solid fa-location-dot';
+      venueIcon.setAttribute('aria-hidden', 'true');
+      const venueName = document.createElement('span');
+      venueName.className = 'venue-name';
+      venueName.textContent = ev.s;
+      venueInfo.append(venueIcon, venueName);
+      body.appendChild(venueInfo);
+
+      const trimmed = (ev.c || '').trim();
+      const isTBD = trimmed === 'TBD' || trimmed.startsWith('TBD\n');
+      const displayContent = isTBD ? trimmed.replace(/^TBD\s*/, '') : trimmed;
+
+      if (isTBD) {
+        const notice = document.createElement('div');
+        notice.className = 'tbd-notice';
+        const icon = document.createElement('i');
+        icon.className = 'fa-solid fa-bullhorn';
+        icon.setAttribute('aria-hidden', 'true');
+        const span = document.createElement('span');
+        span.textContent = '詳細は後日発表';
+        notice.append(icon, span);
+        body.appendChild(notice);
+      }
+
+      if (displayContent) {
+        const isLong = displayContent.split('\n').length > 12;
+        const details = document.createElement('div');
+        details.className = isLong ? 'event-details clamped' : 'event-details';
+        details.textContent = displayContent;
+        body.appendChild(details);
+
+        if (isLong) {
+          const readMore = document.createElement('div');
+          readMore.className = 'read-more';
+          readMore.append('続きは詳細ページで ');
+          const icon = document.createElement('i');
+          icon.className = 'fa-solid fa-angles-right';
+          icon.setAttribute('aria-hidden', 'true');
+          readMore.appendChild(icon);
+          body.appendChild(readMore);
+        }
+      }
+
+      article.append(header, body);
+      a.appendChild(article);
+      return a;
+    };
+
+    // ---- 「過去/すべて」用のフィルタ・並び替え・無限スクロール描画 ----
+    const BATCH_SIZE = 30;
+    let filteredSorted = [];
+    let renderedCount = 0;
+    const sectionsByKey = new Map();
+
+    const computeFiltered = (searchTerm) => {
+      const desc = currentFilter === 'past';
+      const arr = (allEvents || []).filter((ev) => {
+        let matchesFilter = true;
+        if (currentFilter === 'upcoming') matchesFilter = ev.t >= clientExpireTime;
+        else if (currentFilter === 'past') matchesFilter = ev.t < clientExpireTime;
+        const haystack = `${ev.ti} ${ev.s} ${(ev.l || []).join(' ')}`.toLowerCase();
+        const matchesSearch = !searchTerm || haystack.includes(searchTerm);
+        return matchesFilter && matchesSearch;
+      });
+      arr.sort((a, b) => (desc ? b.t - a.t : a.t - b.t));
+      return arr;
+    };
+
+    const renderNextBatch = () => {
+      if (!scheduleList) return;
+      const end = Math.min(renderedCount + BATCH_SIZE, filteredSorted.length);
+      for (let i = renderedCount; i < end; i++) {
+        const ev = filteredSorted[i];
+        const { key, label } = monthKeyLabel(ev.t);
+        let section = sectionsByKey.get(key);
+        if (!section) {
+          section = document.createElement('section');
+          section.className = 'month-group';
+          section.dataset.month = key;
+          const heading = document.createElement('h2');
+          heading.className = 'month-heading';
+          const span = document.createElement('span');
+          span.textContent = label;
+          heading.appendChild(span);
+          const itemsWrap = document.createElement('div');
+          itemsWrap.className = 'month-items';
+          section.append(heading, itemsWrap);
+          scheduleList.appendChild(section);
+          sectionsByKey.set(key, section);
+        }
+        const wrap = section.querySelector('.month-items');
+        const item = document.createElement('div');
+        item.className = 'schedule-item';
+        item.appendChild(buildCard(ev));
+        wrap.appendChild(item);
+      }
+      renderedCount = end;
+    };
+
+    // ---- 「今後の予定」用のフィルタ（サーバー描画済みDOMをそのまま検索対象にする） ----
+    const filterUpcomingDom = (searchTerm) => {
+      if (!scheduleList) return 0;
+      const items = Array.from(scheduleList.querySelectorAll('.schedule-item'));
+      const groups = Array.from(scheduleList.querySelectorAll('.month-group'));
+      let visibleCount = 0;
+      items.forEach((item) => {
+        const haystack = [item.dataset.title, item.dataset.site, item.dataset.labels].join(' ');
+        const visible = !searchTerm || haystack.includes(searchTerm);
+        item.style.display = visible ? 'block' : 'none';
+        if (visible) visibleCount++;
+      });
+      groups.forEach((group) => {
+        const hasVisible = Array.from(group.querySelectorAll('.schedule-item'))
+          .some((item) => item.style.display !== 'none');
+        group.style.display = hasVisible ? 'block' : 'none';
+      });
+      return visibleCount;
+    };
 
     // URLクエリから初期状態を復元（?filter=past&q=渋谷 みたいに共有できる）
     const params = new URLSearchParams(location.search);
@@ -184,69 +428,82 @@ const nextLiveDateFmt = (d: Date, timeTbd: boolean) => {
       history.replaceState(null, '', location.pathname + (qs ? '?' + qs : ''));
     };
 
-    // 並び順: 今後・すべて=昇順（直近が上）、過去=降順（新しい過去が上）
-    const applyOrder = (desc) => {
+    const render = () => {
       if (!scheduleList) return;
-      const groups = [...monthGroups].sort((a, b) => {
-        const ka = a.dataset.month || '';
-        const kb = b.dataset.month || '';
-        return desc ? kb.localeCompare(ka) : ka.localeCompare(kb);
-      });
-      groups.forEach(g => scheduleList.appendChild(g));
-      groups.forEach(g => {
-        const wrap = g.querySelector('.month-items');
-        if (!wrap) return;
-        const items = Array.from(wrap.children).sort((x, y) => {
-          const dx = parseInt(x.dataset.date || '0');
-          const dy = parseInt(y.dataset.date || '0');
-          return desc ? dy - dx : dx - dy;
-        });
-        items.forEach(i => wrap.appendChild(i));
-      });
-    };
-
-    const filterSchedules = () => {
       const searchTerm = searchInput ? searchInput.value.toLowerCase().trim() : '';
-      let visibleCount = 0;
 
-      scheduleItems.forEach(item => {
-        const date = parseInt(item.dataset.date || '0');
-        const haystack = [item.dataset.title, item.dataset.site, item.dataset.labels].join(' ');
-
-        let matchesFilter = true;
-        if (currentFilter === 'upcoming') {
-          matchesFilter = date >= clientExpireTime;
-        } else if (currentFilter === 'past') {
-          matchesFilter = date < clientExpireTime;
+      if (currentFilter === 'upcoming') {
+        if (scheduleList.dataset.mode !== 'upcoming') {
+          scheduleList.innerHTML = originalUpcomingHTML;
+          scheduleList.dataset.mode = 'upcoming';
         }
+        const visibleCount = filterUpcomingDom(searchTerm);
+        scheduleList.style.display = visibleCount > 0 ? 'block' : 'none';
+        if (noResults) noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        return;
+      }
 
-        const matchesSearch = !searchTerm || haystack.includes(searchTerm);
-        const visible = matchesFilter && matchesSearch;
-        item.style.display = visible ? 'block' : 'none';
-        if (visible) visibleCount++;
+      // 「過去/すべて」: 初回だけ /events.json を取得する（取得中は簡単なローディング表示）
+      scheduleList.dataset.mode = currentFilter;
+      if (noResults) noResults.style.display = 'none';
+      scheduleList.style.display = 'block';
+      scheduleList.innerHTML = '<div class="empty-state"><div class="title">読み込み中...</div></div>';
+
+      const requestFilter = currentFilter;
+      const requestSearch = searchTerm;
+      ensureAllEventsLoaded().then(() => {
+        // 取得中にユーザーがフィルタや検索語を変えていたら、この結果は捨てて最新の render() に任せる
+        const stillCurrentSearch = searchInput ? searchInput.value.toLowerCase().trim() : '';
+        if (currentFilter !== requestFilter || stillCurrentSearch !== requestSearch) return;
+
+        scheduleList.innerHTML = '';
+        sectionsByKey.clear();
+        filteredSorted = computeFiltered(requestSearch);
+        renderedCount = 0;
+        renderNextBatch();
+        const visibleCount = filteredSorted.length;
+        scheduleList.style.display = visibleCount > 0 ? 'block' : 'none';
+        if (noResults) noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        // 初回バッチが画面に収まりきってしまう場合に備えて、描画直後にも一度チェックする
+        checkScrollForMore();
       });
-
-      // イベントが1件も見えない月は月見出しごと隠す
-      monthGroups.forEach(group => {
-        const hasVisible = Array.from(group.querySelectorAll('.schedule-item'))
-          .some(item => item.style.display !== 'none');
-        group.style.display = hasVisible ? 'block' : 'none';
-      });
-
-      if (scheduleList) scheduleList.style.display = visibleCount > 0 ? 'block' : 'none';
-      if (noResults) noResults.style.display = visibleCount === 0 ? 'block' : 'none';
     };
 
     const applyFilter = () => {
-      filterButtons.forEach(btn => {
+      filterButtons.forEach((btn) => {
         btn.classList.toggle('active', btn.dataset.filter === currentFilter);
       });
-      applyOrder(currentFilter === 'past');
-      filterSchedules();
+      render();
       syncURL();
     };
 
-    filterButtons.forEach(button => {
+    // スクロールが下端に近づいたら「過去/すべて」の続きを少しずつ描画する（無限スクロール）。
+    // IntersectionObserver ではなく scroll/resize イベント＋setTimeoutの軽いスロットルで実装する
+    // （IntersectionObserver はブラウザのコンポジタのタイミングに依存し、環境によっては
+    // レンダリングループが回っていないと発火が遅れる/しないことがあるため、より確実なこちらを採用）。
+    let scrollCheckPending = false;
+    const checkScrollForMore = () => {
+      if (scrollCheckPending) return;
+      scrollCheckPending = true;
+      setTimeout(() => {
+        scrollCheckPending = false;
+        if (!scheduleList || !sentinel || scheduleList.dataset.mode === 'upcoming') return;
+        if (renderedCount >= filteredSorted.length) return;
+        const rect = sentinel.getBoundingClientRect();
+        if (rect.top <= window.innerHeight + 1000) {
+          renderNextBatch();
+          // 1バッチ描画してもまだ画面近くにsentinelが残っていれば続けて描画する
+          // （ジャンプスクロールや縦長ビューポートで1バッチでは足りないケースに対応）
+          checkScrollForMore();
+        }
+      }, 100);
+    };
+    if (sentinel) {
+      window.addEventListener('scroll', checkScrollForMore, { passive: true });
+      window.addEventListener('resize', checkScrollForMore, { passive: true });
+    }
+
+    filterButtons.forEach((button) => {
       button.addEventListener('click', () => {
         currentFilter = button.dataset.filter || 'all';
         applyFilter();
@@ -254,9 +511,14 @@ const nextLiveDateFmt = (d: Date, timeTbd: boolean) => {
     });
 
     if (searchInput) {
+      // 検索は軽い処理だが連打時のちらつきを抑えるため軽くデバウンスする
+      let searchDebounce;
       searchInput.addEventListener('input', () => {
-        filterSchedules();
-        syncURL();
+        clearTimeout(searchDebounce);
+        searchDebounce = setTimeout(() => {
+          render();
+          syncURL();
+        }, 120);
       });
     }
 
