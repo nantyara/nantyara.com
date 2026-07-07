@@ -101,6 +101,11 @@ function validateSchedule(schedule, file, index) {
   if (schedule.acts && !Array.isArray(schedule.acts)) {
     logError(file, `イベント[${index}]: actsは配列である必要があります`);
   }
+
+  // sources配列チェック（出典URL）
+  if (schedule.sources && !Array.isArray(schedule.sources)) {
+    logError(file, `イベント[${index}]: sourcesは配列である必要があります`);
+  }
 }
 
 // リリースのバリデーション

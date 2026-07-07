@@ -29,10 +29,12 @@ interface ScheduleType {
   acts?: string[];
   /** 開催時刻が未確定（TimeTreeの仮時刻など）の場合 true */
   time_tbd?: boolean;
+  /** 情報源（Xの告知ポスト等の出典URL）。/mine-x でバックフィルした過去イベントに付く */
+  sources?: string[];
 }
 
 const { schedule } = Astro.props as { schedule: ScheduleType };
-const { date, end, title, site, content, images, labels, acts, time_tbd } = schedule;
+const { date, end, title, site, content, images, labels, acts, time_tbd, sources } = schedule;
 
 // site を会場マスタに解決（解決できたら正式表記＋会場ページへのリンクを出す）
 const venue = resolveVenue(site);
@@ -252,6 +254,23 @@ const contentHtml = displayContent ? autoLinkUrls(displayContent) : '';
       </div>
     )}
 
+    {sources && sources.length > 0 && (
+      <div class="event-sources">
+        <h2 class="section-title">情報源</h2>
+        <p class="sources-note">当時のXの告知ポストから復元したイベントです。</p>
+        <ul class="sources-list">
+          {sources.map((url: string) => (
+            <li>
+              <a href={url} target="_blank" rel="noopener noreferrer" class="source-link">
+                <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                {url.replace(/^https?:\/\/(x|twitter)\.com\//, '@').replace(/\/status\/\d+.*$/, ' のポスト')}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+
     <div class="back-link-wrapper">
       <a href="/#schedule" class="back-link">
         ← スケジュール一覧に戻る
@@ -265,6 +284,38 @@ const contentHtml = displayContent ? autoLinkUrls(displayContent) : '';
     max-width: 900px;
     margin: 0 auto;
     padding: 40px 20px;
+  }
+
+  .event-sources {
+    margin-top: 32px;
+  }
+
+  .sources-note {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    margin: 0 0 10px 0;
+  }
+
+  .sources-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--retro-cyan);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  .source-link:hover {
+    text-decoration: underline;
   }
 
   .event-header {
