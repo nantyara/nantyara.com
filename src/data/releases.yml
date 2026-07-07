@@ -273,3 +273,18 @@
       url: https://music.youtube.com/playlist?list=OLAK5uy_noJDRqaGiTJbncQuU874by5It6QHcks0E
     - platform: LINE MUSIC
       url: https://music.line.me/webapp/album/mb0000000005572191
+
+- id: release-017
+  title: 9月の海はクラゲの海
+  artist: sommeil sommeil と なんちゃらアイドル
+  release_date: 2026-07-07
+  type: single
+  format: 8cm CD
+  description: |
+    sommeil sommeilとなんちゃらアイドルのコラボシングル（短冊CD）。「短冊CDの日2026」対象作品で、
+    全国のCDショップにて発売。
+
+    収録曲:
+    1. 9月の海はクラゲの海 (sommeil sommeil と なんちゃらアイドル)
+    2. PansyとDaisy (sommeil sommeil)
+    3. 夕立クロニクル (なんちゃらアイドル)
