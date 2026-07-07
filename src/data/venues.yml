@@ -18,6 +18,7 @@
   aliases:
     - 渋谷La.mama(昼)
     - 渋谷ラママ
+    - 渋谷La.mama(頭bar)
   address: 東京都渋谷区道玄坂1-15-3 プリメーラ道玄坂B1F
   url: https://www.lamama.net
   x: shibuya_lamama
@@ -30,6 +31,12 @@
   note: 夏季限定の海の家出演シリーズ
 - id: sbq-photokai
   name: SBQ個人撮影会
+  aliases:
+    - S.B.Q 個人撮影会
+    - S.B.Q.個人撮影会
+    - S.B.Q.個撮
+    - S.B.Q.撮影会
+    - 市ヶ谷S.B.Q.個人撮影会
   note: S.B.Q.アイドル部の個人撮影会
 - id: studio-sbq
   name: Studio S.B.Q
@@ -37,6 +44,8 @@
     - Studio S.B.Q（市ヶ谷）
 - id: sarusho
   name: 栃木さる小
+  aliases:
+    - 群馬 さる小
   note: 廃校を活用した貸切イベント施設。群馬県みなかみ町の「泊まれる学校 さる小」（旧猿ヶ京小学校）と思われる
 - id: welcome-back
   name: 大塚Welcome Back
@@ -55,6 +64,8 @@
   name: K&Mミュージック中野店
   aliases:
     - K＆Mミュージック中野店
+    - K＆M music 中野
+    - K＆M music 中野店
   address: 東京都中野区上鷺宮1-4-3 地下1階
   x: kmmusic2
   note: 2026年6月28日のイベントをもって閉店
@@ -122,11 +133,15 @@
   x: loft_heaven
 - id: leaf-room
   name: Leaf room 豪徳寺
+  aliases:
+    - 豪徳寺Leaf room
   address: 東京都世田谷区豪徳寺1-23-12 コンフォート豪徳寺3F
   url: https://leafroomgoutokuji.jimdofree.com
   x: KAKU_leaf_room
 - id: heavens-door
   name: 三軒茶屋HEAVEN'S DOOR
+  aliases:
+    - 三軒茶屋heven's door
   address: 東京都世田谷区三軒茶屋1-33-19 ケイオーハロービルB1
   url: https://heavens-door-music.com
   x: sanchaxheavens
@@ -152,6 +167,8 @@
   x: earthdom
 - id: club-malcolm
   name: 渋谷Club Malcolm
+  aliases:
+    - 渋谷Malcolm
   address: 東京都渋谷区宇田川町30-5 JOWビルB1F
   url: https://club-malcolm.com
   x: clubmalcolm
@@ -167,6 +184,7 @@
   name: 蒲田オッタンタ
   aliases:
     - スタジオ・オッタンタ
+    - 蒲田オッタンタ DJ
   address: 東京都大田区蒲田5-7-6 CCM蒲田ビル2F
   url: https://studio80.org
   note: 正式名称「Studio80（スタジオ・オッタンタ）」。DJバー/企画空間バー
@@ -211,6 +229,8 @@
   note: 正式名称「音楽と珈琲 ひかりのうま」
 - id: mele
   name: 難波メレ
+  aliases:
+    - 大阪 難波メレ
   address: 大阪府大阪市浪速区元町1-2-2 井上難波ビルB1F
   url: https://namba-mele.com
   x: namba_mele
@@ -255,9 +275,13 @@
   note: オフ会イベント
 - id: mogafes
   name: モガフェス
+  aliases:
+    - モガフェス 栃木県自然休養村センター
   note: イベント名（会場情報なし）
 - id: sumakano-bustour
   name: スマカノ バスツアー
+  aliases:
+    - スマカノ ミステリーバスツアー
   note: バスツアーイベント
 - id: jam
   name: 新宿JAM
@@ -285,6 +309,9 @@
     - 黒湯の温泉ゆ〜シティー蒲田 YCKホール
     - ゆ〜シティ蒲田 3F YCKホール
     - ゆ〜シティー蒲田
+    - ゆ~シティー蒲田
+    - 蒲田ゆ〜シティー
+    - 蒲田ゆ～シティ
   address: 東京都大田区蒲田1-26-16 3F
   url: https://youcity26.com
   x: youcity26
@@ -393,3 +420,313 @@
 - id: bar-quinq
   name: Barクインク
   note: 神宮寺ナナ主催のバー企画（会場実体は要精査）
+- id: shimokitazawa-arena
+  name: 下北沢ARENA
+  address: 東京都世田谷区北沢2-2-14 モアイ茶沢4F
+  x: arena_1111
+  note: DJバー/レンタルスペース系。詳細未確認
+- id: barrack-block-cafe
+  name: Barrack Block Cafe
+  aliases:
+    - 下北沢Barrack block cafe
+  address: 東京都世田谷区北沢2-19-15 平和ビル4F
+  url: http://www.barrackblock.com
+  x: BarrackBlock
+- id: shimokitazawa-mosaic
+  name: 下北沢MOSAiC
+  aliases:
+    - 下北沢mosaic
+  address: 東京都世田谷区北沢2-2-14 モアイ茶沢1F・B1F
+  url: https://mu-seum.co.jp
+  x: LiveHouseMOSAiC
+- id: voice-factory
+  name: 下北沢VOICE FACTORY
+  aliases:
+    - 下北沢voice factory
+  address: 東京都世田谷区代田5-19-4 下北沢VOICE Bldg.
+  url: http://www.voicefactorylive.com
+  x: livehouse_voice
+- id: rokudemonai-yoru
+  name: 下北沢ろくでもない夜
+  address: 東京都世田谷区北沢2-6-5 ルイビル3F
+  url: https://www.69demonai46.com
+  note: 下北沢屋根裏跡地にオープンしたライブハウス＆バー
+- id: mona-records
+  name: mona records
+  aliases:
+    - 下北沢モナレコード
+  address: 東京都世田谷区北沢2-13-5 伊奈ビル2F・3F
+  url: http://www.mona-records.com
+  x: monarecords
+  note: カフェ/レコードショップ併設のライブスペース
+- id: shindaita-fever
+  name: 新代田FEVER
+  address: 東京都世田谷区羽根木1-1-14 新代田ビル1F
+  url: https://www.fever-popo.com/
+  x: livehouse_fever
+- id: shinjuku-redcloth
+  name: 新宿red cloth（紅布）
+  aliases:
+    - 新宿Red cloth
+  address: 東京都新宿区西新宿7-6-6 DS新宿ビルB1F
+  url: https://redcloth.sputniklab.com
+  x: shinjuku_redcloth
+- id: shinjuku-bee
+  name: 新宿bee
+  note: 詳細未調査・要手動確認
+- id: shinjuku-science
+  name: 新宿club SCIENCE
+  aliases:
+    - 新宿science
+  address: 東京都新宿区歌舞伎町2-25-6 永和第6ビル B1F
+  url: https://club-science.com
+  x: S_club_SCIENCE
+- id: shinjuku-potore-satsueikai
+  name: 新宿ポトレ撮影会
+  note: 固定会場のないポートレート撮影イベント企画
+- id: shibuya-lush
+  name: 渋谷LUSH
+  address: 東京都渋谷区渋谷1-10-7 グローリア宮益坂III B1F
+  url: http://www.toos.co.jp/lush/
+  x: shibuyaLush
+- id: kanda-shojimaru
+  name: THE SHOJIMARU
+  aliases:
+    - 神田shojimaru
+  address: 東京都千代田区神田須田町1-4-6 B1F
+  url: https://shojimaru.omatsuri.tech
+  x: TShojimaru
+- id: nakano-moonstep
+  name: 中野MOONSTEP
+  aliases:
+    - 中野MOON STEP
+  address: 東京都中野区中央5-39-16
+  url: https://nakano-dynamite.com/moonstep
+  x: livepubMOONSTEP
+- id: ikebukuro-adm
+  name: 池袋ライブガレージAdm
+  aliases:
+    - 池袋Adm
+  url: https://adm-rock.com
+  x: adm1000pai
+  note: 住所番地は未確認
+- id: ikebukuro-gekipa
+  name: 池袋東口ゲキパ
+  aliases:
+    - 池袋ゲキパ
+  address: 東京都豊島区南池袋1-25-12 プライムスクエア南池袋B1
+  url: https://gekipa.gekiba.com
+  x: gekipa
+- id: club-dorothy
+  name: club Dorothy
+  aliases:
+    - 江古田クラブドロシー
+  address: 東京都練馬区小竹町1-55-7 日神パレスB1
+  url: https://clubdorothy.shopinfo.jp
+  x: club_dorothy
+- id: shibasaki-mod
+  name: 柴崎mod
+  address: 東京都調布市菊野台1-20-2 AVANT柴崎 B1
+  url: https://shibasakimod.com
+  x: shibasakimod
+- id: takashimadaira-kuminkan-hall
+  name: 高島平区民館ホール
+  address: 東京都板橋区高島平3-12-28
+  note: 板橋区立高島平区民館。区立貸館施設
+- id: koenji-muzenji
+  name: 高円寺無力無善寺
+  address: 東京都杉並区高円寺南3-67-1
+  url: https://muzenji.web.fc2.com
+- id: asagaya-lonesome
+  name: Live Bar ロンサム
+  aliases:
+    - 阿佐ヶ谷ロンサム
+  address: 東京都杉並区阿佐谷南2-17-2 第66オーナーズビル2F
+  url: https://livebarlonesome.com
+  x: Lonesome_Live
+- id: aoyama-moonromantic
+  name: 青山 月見ル君想フ
+  aliases:
+    - 青山月見ル君想フ
+  address: 東京都港区南青山4-9-1 B1F
+  url: https://www.moonromantic.com
+  x: moonromantic
+- id: kawasaki-attic
+  name: クラブチッタ アティック
+  aliases:
+    - 川崎ATTIC
+  address: 神奈川県川崎市川崎区小川町5-7 クラブチッタ2F
+  url: http://clubcitta-attic.com/
+  x: ATTICMARU
+- id: ario-soga
+  name: アリオ蘇我
+  aliases:
+    - 千葉 アリオ蘇我
+  address: 千葉県千葉市中央区川崎町52-7
+  url: https://soga.ario.jp
+  x: ario_soga
+  note: 商業施設（インストアイベント会場）
+- id: hinodecho-shichoshitsu-sono3
+  name: 日ノ出町 試聴室その3
+  aliases:
+    - 日の出町試聴室
+  address: 神奈川県横浜市中区長者町9-159 第1田浦ビル2階
+  url: http://shicho.org/s3about
+  x: yokohamasicho3
+- id: motoyawata-route14
+  name: 本八幡 Route Fourteen
+  aliases:
+    - 本八幡route14
+    - 本八幡ルートフォーティーン
+  address: 千葉県市川市八幡3-27-22 東興業ビル3F
+  url: https://route14.jp
+  x: Route14_live
+- id: nishiyokohama-el-puente
+  name: 西横浜 EL PUENTE
+  address: 神奈川県横浜市西区西平沼町8-8 和幸ビルB1F
+  x: elpuente_real
+  note: 公式サイトの現存未確認
+- id: kamata-starwoods-space
+  name: 牛かつ スターウッズスペース
+  aliases:
+    - 蒲田スターウッズスペース(牛カツ屋さん)
+  address: 東京都大田区蒲田5-25-5 深井ビル地下1階
+  url: https://starwoodsspace.jimdofree.com/
+  note: 牛カツ専門店内のライブスペース
+- id: enseishien-kamata-potore
+  name: 遠征支援蒲田ポトレ
+  note: 固定会場のないポートレート撮影会企画
+- id: nogata-shochubar-kunchan
+  name: 焼酎場ぁ～ くんちゃん
+  aliases:
+    - 野方焼酎場ぁ~くんちゃん
+  address: 東京都中野区野方5-16-6 第66東京ビルB1F
+  x: yoidorekunchan
+- id: ashikaga-live-taishikan
+  name: 足利ライブハウス大使館
+  address: 栃木県足利市借宿町318-7
+  url: https://live-taishikan.com
+  x: taishikan1
+- id: yamanashi-shimin-kaikan-daihall
+  name: 山梨市民会館大ホール
+  address: 山梨県山梨市万力1830
+  url: https://www.yamanashi-kaikan.jp/
+- id: sendai-ripple
+  name: 仙台LIVE STUDIO RIPPLE
+  aliases:
+    - 仙台RIPPLE(宮城県)
+  address: 宮城県仙台市太白区長町1-2-12 チビッコスクエアB1F
+  url: https://www.ripple.tv
+  x: Send_Ai_RIPPLE
+- id: akita-loud-affection
+  name: 秋田LOUD AFFECTION
+  address: 秋田県秋田市南通亀の町3-44 川原田ビル2F
+  url: http://loudaffection.jimdo.com/
+  x: LoudAffection
+- id: akihabara-club-goodman
+  name: 秋葉原CLUB GOODMAN
+  aliases:
+    - 秋葉原GOODMAN
+  address: 東京都千代田区神田佐久間河岸55 ASビルB1F
+  url: http://clubgoodman.com/
+  x: clubgoodman
+- id: akihabara-hundred2
+  name: 秋葉原ハンドレッド2
+  address: 東京都台東区浅草橋5-3-2 秋葉原スクエアビル2F
+  url: https://100square.jp/map
+- id: fukuoka-daigakuyu
+  name: 大學湯
+  aliases:
+    - 福岡 大學湯
+  address: 福岡県福岡市東区箱崎3-17-24
+  x: daigakuyu07
+  note: 旧銭湯を改装したレンタルスペース（国登録有形文化財）
+- id: fukuoka-himitsu
+  name: 福岡大名ライブハウス秘密
+  aliases:
+    - 福岡Livehouse秘密
+    - ライブハウス秘密
+  address: 福岡県福岡市中央区大名1-3-29 DAIMYO582ビル1F
+  url: https://live-himitsu.com
+  x: LivehouseH
+- id: iwashita-shinshoga-museum
+  name: 岩下の新生姜ミュージアム
+  aliases:
+    - 栃木 岩下の新生姜ミュージアム
+  address: 栃木県栃木市本町1-25
+  url: https://shinshoga-museum.com
+- id: saitama-super-arena
+  name: さいたまスーパーアリーナ
+  aliases:
+    - 埼玉スーパーアリーナ コスホリ
+  address: 埼玉県さいたま市中央区新都心8番地
+  url: https://www.saitama-arena.co.jp/
+  note: コスホリック等の大型イベント会場
+- id: hmv-record-shop-shibuya
+  name: HMV record shop 渋谷
+  address: 東京都渋谷区宇田川町36-2 ノア渋谷 1F/2F
+  url: https://www.hmv.co.jp/store/SHU
+  note: 中古レコード・CD専門店（インストアイベント会場）
+- id: yokohama-bb-street
+  name: 横浜B.B.STREET
+  aliases:
+    - Yokohama B.B.street
+  url: https://www.bbstreet.com
+  x: BBSTREET
+  note: 2026年8月に伊勢佐木町へ移転予定。住所は要再確認
+- id: basement-monstar-oji
+  name: BASEMENT MONSTAR
+  aliases:
+    - basement monster王子
+  address: 東京都北区王子1-18-5 地下2階
+  url: https://bmonstar.com
+  x: BasementMONSTAR
+- id: tsukuba-parkdiner
+  name: TSUKUBA PARKDINER
+  aliases:
+    - つくばPARK DINER
+    - TSUKUBA  PARKDINER
+  address: 茨城県つくば市竹園1-9-2 DAYZTOWN B1
+  url: https://parkdiner.jp
+  x: parkdinertwit
+- id: wrestle-butokan
+  name: レッスル武闘館
+  address: 埼玉県蕨市南町2-4-4
+  url: http://butoukan.ne07.jp
+  note: プロレス・格闘技会場（旧イサミアリーナ）
+- id: time-time-time-sancha
+  name: TIME,TIME,TIME.
+  aliases:
+    - 三軒茶屋Time Time Time
+  address: 東京都世田谷区代沢4-4-3
+  url: https://timetimetime.ems.omatsuri.tech/
+  x: T_T_T_tokyo
+- id: tama-river-portrait
+  name: 昼 多摩川周辺ポトレ
+  note: 固定会場のない多摩川周辺でのポートレート撮影企画
+- id: pure-j-kame-arena
+  name: PURE-J道場「亀アリーナ」
+  aliases:
+    - ＰＵＲＥ－Ｊ道場「亀アリーナ」
+  address: 東京都足立区中川3-14-9
+  url: https://pure-j.jp/contact
+  x: purejpro
+  note: 女子プロレス団体PURE-Jの道場兼アリーナ
+- id: shinjuku44-fantasy-hall
+  name: 新宿44ファンタジーホール
+  aliases:
+    - 四谷ファンタジーホール
+  address: 東京都新宿区四谷4-9-11 8F
+  url: https://shinjuku44.com/test/
+  note: 新宿44ステーション内のホール
+- id: kichijoji-black-and-blue
+  name: 吉祥寺BLACK&BLUE
+  address: 東京都武蔵野市吉祥寺本町1-24-5 ライトビル3F
+  url: http://blackand.blue.coocan.jp/
+  x: black_bluelive
+- id: hoteyes
+  name: 池袋Hoteyes
+  note: ライブハウス（詳細未調査）
+- id: basement-bar
+  name: 下北沢ベースメントバー
+  note: ライブハウス（詳細未調査）
