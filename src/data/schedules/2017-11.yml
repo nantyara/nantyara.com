@@ -1,0 +1,153 @@
+# 2017年11月（/mine-x による X 告知アーカイブからの発掘。ソース: mining/x-archive/2017-11.json）
+- id: event-20171103-akibashoten-anjo
+  slug: 20171103-akibashoten-anjo
+  date: 2017-11-03 12:00:00 +0900
+  time_tbd: true
+  duplicate_ok: true
+  title: あきば書店安城1号店イベント（昼公演）
+  site: あきば書店安城1号店
+  content: |
+    愛知・安城市の「あきば書店安城1号店」での遠征イベント。当日チケット購入者全員にオリジナルCD、
+    個別撮影会参加者にはイメージDVDをプレゼント。名古屋来訪記念として、11月頭のワンマンライブの
+    DVDも希望者に配布。同日2公演（本エントリは1公演目）。
+
+    ※Xの告知アーカイブから復元。開催時刻の記録なし。2公演あったことは会場スタッフのポスト等から
+    推定だが、個別の開演時刻は未確認
+  sources:
+    - https://x.com/nantyaraidol/status/926148640728498176
+    - https://x.com/nantyaraidol/status/926149683302371330
+    - https://x.com/yokuwakan_nai/status/926202594610921472
+- id: event-20171103-akibashoten-anjo-2
+  slug: 20171103-akibashoten-anjo-2
+  date: 2017-11-03 12:00:00 +0900
+  time_tbd: true
+  duplicate_ok: true
+  title: あきば書店安城1号店イベント（夜公演）
+  site: あきば書店安城1号店
+  content: |
+    愛知・安城市の「あきば書店安城1号店」での遠征イベント2公演目。詳細は昼公演エントリを参照。
+
+    ※Xの告知アーカイブから復元。開催時刻の記録なし
+  sources:
+    - https://x.com/samami27/status/926501233057087488
+    - https://x.com/yokuwakan_nai/status/926501534946402305
+- id: event-20171106-showboat
+  slug: 20171106-showboat
+  date: 2017-11-06 19:00:00 +0900
+  title: Beat Happening！＠高円寺PANIC！
+  site: 高円寺SHOW BOAT
+  content: |
+    「Beat Happening！＠高円寺PANIC！」。オープン18:30、スタート19:00、なんちゃら出演19:55から。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/samami27/status/927435761263063041
+    - https://x.com/yokuwakan_nai/status/927462876670914560
+    - https://x.com/samami27/status/927572317680496640
+- id: event-20171115-sunash
+  slug: 20171115-sunash
+  date: 2017-11-15 19:00:00 +0900
+  title: ななみん学園 静岡定期公演～かれんミッション達成記念！～
+  site: 静岡Sunash
+  acts:
+    - かれん.
+    - のうさぎゆん.
+    - ネル
+    - 星野百花
+  content: |
+    「ななみん学園 静岡定期公演～かれんミッション達成記念！～」。Open 18:30/Start 19:00、
+    チケット3,000円+1D。なんちゃらは19時半から。出演：かれん．のうさぎゆん．ネル．星野百花．なんちゃらアイドル。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/nantyaraidol/status/930204402987679744
+    - https://x.com/samami27/status/930786867930324992
+    - https://x.com/yokuwakan_nai/status/930820202433937409
+- id: event-20171117-firebird
+  slug: 20171117-firebird
+  date: 2017-11-17 12:00:00 +0900
+  time_tbd: true
+  title: 新曲発表ライブ（女の子だらけのパーティー）
+  site: 新松戸FIREBIRD
+  content: |
+    新松戸FIREBIRDにて新曲発表ライブ。この日発表の新曲をもって、なんちゃらカバーシリーズを
+    いったん終了し、年末には完全オリジナル新作を発表することを告知（カバー曲中心の活動から
+    完全オリジナル曲へ移行する節目のライブ）。
+
+    ※Xの告知アーカイブから復元。開催時刻の記録なし。11月16日の予告ポスト（「明日は新松戸ファイア
+    バードにて新曲発表ライブ！」等）はいずれも当日昼〜夕方の投稿で「明日」の指す日を素直に11月17日と
+    確定。11月18日未明のポスト（「今日めちゃくちゃ気持ちよくやれた」）も17日の公演を指すと解釈できる
+  sources:
+    - https://x.com/nantyaraidol/status/931029284684120064
+    - https://x.com/samami27/status/931095839807750144
+    - https://x.com/nantyaraidol/status/931557589413806081
+- id: event-20171118-lush
+  slug: 20171118-lush
+  date: 2017-11-18 16:00:00 +0900
+  title: Beat Happening！渋谷ガールズPANIC！
+  site: 渋谷LUSH
+  content: |
+    「Beat Happening！渋谷ガールズPANIC！」。なんちゃらの出番は16時から。
+
+    ※Xの告知アーカイブから復元。開催時刻は「16時から引っ掻き回します」という前日投稿の表現に基づく
+    （なんちゃらの出番開始時刻の可能性が高く、開場時刻は未確認）
+  sources:
+    - https://x.com/nantyaraidol/status/931557589413806081
+    - https://x.com/yokuwakan_nai/status/931863710653493248
+    - https://x.com/samami27/status/931835337625583616
+- id: event-20171122-club251
+  slug: 20171122-club251
+  date: 2017-11-22 19:40:00 +0900
+  title: 下北沢Club251 出演
+  site: 下北沢Club251
+  content: |
+    下北沢Club251にて19時40分から30分間出演。運営のQ太郎はこの日欠席し、物販は無しでチェキのみの対応となった。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/nantyaraidol/status/932778085644083200
+    - https://x.com/nantyaraidol/status/932972085466382336
+    - https://x.com/samami27/status/933348296864677888
+- id: event-20171124-rrr
+  slug: 20171124-rrr
+  date: 2017-11-24 20:00:00 +0900
+  title: 月刊 地下しか泳げない通信 vol.027
+  site: 両国楽園部屋
+  acts:
+    - 姫乃たま
+  content: |
+    姫乃たま「月刊 地下しか泳げない通信 vol.027」。会場は両国楽園部屋（RRR）、
+    東京都墨田区両国1-3-9。Open 19:00/Start 20:00、1,000円+投げ銭。姫乃たまがゲスト出演し、
+    なんちゃらアイドルも歌唱。運営のQ太郎もこの日はトーク・歌唱で参加。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/nantyaraidol/status/933715632427712513
+    - https://x.com/yokuwakan_nai/status/934081798245572609
+    - https://x.com/samami27/status/934087066480033792
+- id: event-20171127-kandamifa
+  slug: 20171127-kandamifa
+  date: 2017-11-27 20:30:00 +0900
+  title: ななみん学園 生きる雨夢愛炎祭！！
+  site: 神田MIFA
+  content: |
+    「ななみん学園 生きる雨夢愛炎祭！！」。会場はSound Stage MIFA（神田MIFA）。
+    なんちゃらアイドルは20時半から。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/nantyaraidol/status/934142450758688768
+    - https://x.com/yokuwakan_nai/status/935088564424937472
+    - https://x.com/samami27/status/935161315517009920
+- id: event-20171128-lush
+  slug: 20171128-lush
+  date: 2017-11-28 19:55:00 +0900
+  title: ズンタウンハプニング
+  site: 渋谷LUSH
+  content: |
+    「ズンタウンハプニング」。なんちゃらは19時55分から出演。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/samami27/status/935161315517009920
+    - https://x.com/samami27/status/935514834287730689

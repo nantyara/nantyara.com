@@ -757,3 +757,21 @@
 - id: vespa
   name: ベスパ
   note: カラオケ会場として言及（正式名称・住所未確認）
+- id: akibashoten-anjo
+  name: あきば書店安城1号店
+  note: 愛知県安城市の店舗（詳細未調査）
+- id: showboat
+  name: 高円寺SHOW BOAT
+  note: ライブハウス（詳細未調査）
+- id: sunash
+  name: 静岡Sunash
+  note: ライブハウス（詳細未調査）
+- id: club251
+  name: 下北沢Club251
+  note: ライブハウス（詳細未調査）
+- id: rrr-ryogoku
+  name: 両国楽園部屋
+  aliases:
+    - RRR
+  address: 東京都墨田区両国1-3-9
+  note: 通称「RRR」
