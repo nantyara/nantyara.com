@@ -734,3 +734,17 @@
   name: 中野川島商店街
   address: 東京都中野区弥生町3-20-11
   note: 商店街の夜店市（川辺洋品店隣）。路上ライブ会場
+- id: shinjukugyoen-merrygoround
+  name: 新宿御苑merry-go-round
+  aliases:
+    - 新宿御苑メリーゴーランド
+    - 新宿メリーゴーランド
+  note: ライブハウス/バー（詳細未調査）
+- id: shimokitazawa-garden
+  name: 下北沢GARDEN
+  aliases:
+    - 下北沢Garden
+    - 下北沢ガーデン
+  address: 東京都世田谷区北沢2-8-8 タートルビルB2F
+  url: https://www.gar-den.in
+  x: shimokita_GARDEN

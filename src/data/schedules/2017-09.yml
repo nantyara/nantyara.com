@@ -1,0 +1,126 @@
+# 2017年9月（/mine-x による X 告知アーカイブからの発掘。ソース: mining/x-archive/2017-09.json）
+- id: event-20170904-basementbar
+  slug: 20170904-basementbar
+  date: 2017-09-04 21:10:00 +0900
+  title: Beat Happening！下北沢POP感覚！
+  site: 下北沢ベースメントバー
+  acts:
+    - 美広まりな
+    - 吉田Q
+    - SEINA
+    - 爆音少女症候群
+  content: |
+    下北沢ベースメントバーにて「Beat Happening！下北沢POP感覚！」。開演19:00、
+    前売¥2,300／当日¥2,800。なんちゃらアイドルは21:10〜。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/samami27/status/904309870668668928
+    - https://x.com/samami27/status/904605828220559360
+    - https://x.com/yokuwakan_nai/status/904737041878966272
+- id: event-20170905-shinjukugyoen-merrygoround
+  slug: 20170905-shinjukugyoen-merrygoround
+  date: 2017-09-05 21:00:00 +0900
+  title: なんちゃらアイドルライブ
+  site: 新宿御苑merry-go-round
+  content: |
+    新宿御苑merry-go-roundにてなんちゃらアイドルライブ。なんちゃらの出番は21:00〜。
+    初めての会場で、あおはるは「とても良い箱」と評した。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/samami27/status/904979872761577472
+    - https://x.com/yokuwakan_nai/status/904992937536249857
+    - https://x.com/yokuwakan_nai/status/905190005680750593
+- id: event-20170910-jam
+  slug: 20170910-jam
+  date: 2017-09-10 12:20:00 +0900
+  title: 工藤ちゃんアイドルフェスティバル2
+  site: 新宿JAM
+  acts:
+    - おかありな
+    - おでん屋てん
+    - taso関西ガールズ
+    - くらむず
+    - 雷都少女
+    - 工藤ちゃん
+  content: |
+    新宿JAMにて「工藤ちゃんアイドルフェスティバル2」（通称KIF）。開場10:30、開演11:00、
+    前売¥2,000／当日¥2,500（各D別）。なんちゃらアイドルは12:20〜。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/nantyaraidol/status/906460000670773249
+    - https://x.com/samami27/status/906523426730344448
+    - https://x.com/yokuwakan_nai/status/906773124758216704
+- id: event-20170913-garden
+  slug: 20170913-garden
+  date: 2017-09-13 19:00:00 +0900
+  title: UPSTART GIRLS FES
+  site: 下北沢GARDEN
+  acts:
+    - 七瀬美菜
+    - 病ンドル
+    - fine
+    - KUNO1
+  content: |
+    下北沢GARDENにて「UPSTART GIRLS FES」。OPEN18:30/START19:00、
+    前売¥2,000／当日¥2,500（D別）。なんちゃらアイドルは19:00〜。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/nantyaraidol/status/907119440793178112
+    - https://x.com/samami27/status/907624761781403649
+    - https://x.com/samami27/status/907979310954250245
+- id: event-20170922-jam
+  slug: 20170922-jam
+  date: 2017-09-22 22:00:00 +0900
+  end: 2017-09-23 03:10:00 +0900
+  title: アンダーグラウンドフェス
+  site: 新宿JAM
+  acts:
+    - ヘンタイカメラ
+  content: |
+    新宿JAMにて終夜開催の「アンダーグラウンドフェス」（JUF）。あおはるは22:00までの
+    underground floor司会、22:50〜の企画、25:10〜のなんちゃらライブ本編、26:55〜の
+    企画と、一晩で複数の出番を担当。御茶海マミソロは2:45頃、あおはる企画は2:55頃の
+    出演だった。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/samami27/status/910738527943458816
+    - https://x.com/yokuwakan_nai/status/910747428571115520
+    - https://x.com/yokuwakan_nai/status/911329450553335808
+- id: event-20170924-heavensdoor
+  slug: 20170924-heavensdoor
+  date: 2017-09-24 19:15:00 +0900
+  title: 解離 活動10周年記念公演
+  site: 三軒茶屋HEAVEN'S DOOR
+  acts:
+    - 解離
+    - ぬる
+  content: |
+    三軒茶屋HEAVEN'S DOORにて、解離（かいり）の活動10周年記念ライブ。
+    ぬる（玉木春奈）もゲスト出演。なんちゃらアイドルの出番は19:15〜。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/samami27/status/910739012846886913
+    - https://x.com/nantyaraidol/status/911884890613747712
+    - https://x.com/yokuwakan_nai/status/911975433960275968
+- id: event-20170926-basementbar
+  slug: 20170926-basementbar
+  date: 2017-09-26 20:35:00 +0900
+  title: Beat Happening！
+  site: 下北沢ベースメントバー
+  acts:
+    - フェッティーズ
+  content: |
+    下北沢ベースメントバーにて「Beat Happening！」。19時オープン、
+    なんちゃらアイドルは20:35〜。フェッティーズと対バン。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/nantyaraidol/status/912002221264445440
+    - https://x.com/samami27/status/912539578971578368
+    - https://x.com/yokuwakan_nai/status/912951322197901312
