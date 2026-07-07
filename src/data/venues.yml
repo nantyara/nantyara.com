@@ -784,3 +784,15 @@
 - id: ufo-club
   name: 東高円寺U.F.O CLUB
   note: 最寄り駅は東高円寺
+- id: roppongi-varit
+  name: 六本木VARIT
+  note: ライブハウス（詳細未調査）
+- id: otsuka-meets
+  name: 大塚MEETS
+  note: ライブハウス（詳細未調査）
+- id: tokyo-sabaku
+  name: 東京砂漠
+  note: ライブハウス（詳細未調査）
+- id: nishishinjuku-togi-bar
+  name: 西新宿TOGI Bar
+  note: ライブハウス（詳細未調査）

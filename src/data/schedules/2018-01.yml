@@ -1,0 +1,200 @@
+# 2018年1月（/mine-x による X 告知アーカイブからの発掘。ソース: mining/x-archive/2018-01.json, mining/x-archive/2017-12.json）
+- id: event-20180101-jam
+  slug: 20180101-jam
+  date: 2018-01-01 00:20:00 +0900
+  title: 新宿JAM 2018年トップバッター（新宿JAM最後のライブ）
+  site: 新宿JAM
+  content: |
+    大晦日はしごライブの2本目（1本目は三軒茶屋HEAVEN'S DOORで2017-12-31 21:55〜、
+    そちらは2017-12として既に転記済み）。年越しをまたいで新宿JAMに移動し、
+    「2018年のトップバッター」として出演。事前告知では開演時刻が「24時30分から」
+    （12/28のnantyaraidol告知）→「24:20〜」（12/30のsamami27告知、直近の更新）と
+    ゆれており、本エントリの開始時刻は後者（より当日に近い更新）を採用した。
+    西暦をまたいだ深夜0時台なので、実質的には2018年1月1日 00:20頃の開演。
+
+    終演直後（12/31 21:12 UTC=1/1 6:12 JST頃）のツイートで
+    「なんちゃらアイドルが産まれるきっかけとなった新宿JAM。2018年トップバッターを
+    務めさせて頂きました。そして、これがなんちゃらアイドルにとって最後のJAMライブ
+    となりました。」と明言されており、これが文字通り新宿JAMという箱で演奏した
+    最後の日となる。history.yml には既に「2017-10-20 ホーム・新宿JAMでの最後のライブ」
+    という記述があるが、それとは別に本イベントが存在する。同店の閉店に伴い、
+    「ホームとしての最後」「実際に箱で演奏した最後」など複数回の"最後"イベントが
+    あった可能性が高く、矛盾ではなく別イベントとして扱う。
+
+    このあと、大晦日〜元日はしごの3本目として「早稲田あかねで朝くらいまで初詣」との
+    告知もあったが、これはライブ出演ではなく「滞在後に初詣に行った」という趣旨に
+    読め、2018-01.json内にもライブ出演を裏付ける実況・お礼ツイートが見当たらないため
+    転記しない（未転記候補として別途申し送り）。
+
+    ※Xの告知アーカイブから復元。開演時刻は直前更新のツイート（24:20〜）を採用
+  sources:
+    - https://x.com/yokuwakan_nai/status/946097325864230917
+    - https://x.com/nantyaraidol/status/946474383714926592
+    - https://x.com/samami27/status/947152063783256064
+    - https://x.com/nantyaraidol/status/947576296590139392
+- id: event-20180105-heavensdoor
+  slug: 20180105-heavensdoor
+  date: 2018-01-05 19:30:00 +0900
+  title: 三軒茶屋HEAVEN'S DOORライブ
+  site: 三軒茶屋HEAVEN'S DOOR
+  acts:
+    - バイドク
+  content: |
+    三軒茶屋HEAVEN'S DOORでのライブ。「大好きすぎるバイドクさんとの対バン」との
+    事前告知あり。なんちゃらの出番は19:30くらいからと案内。終演後のツイートでは
+    「ヌカイダーさんと撮っていただきました」とあり、2018年最初のライブとして
+    「大吉だなー！」との感想も。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/nantyaraidol/status/948892843640111106
+    - https://x.com/yokuwakan_nai/status/948902118802378756
+    - https://x.com/samami27/status/949298115072335872
+- id: event-20180106-barbara
+  slug: 20180106-barbara
+  date: 2018-01-06 20:00:00 +0900
+  title: 代々木バーバラライブ
+  site: 代々木バーバラ
+  content: |
+    代々木バーバラでのライブ。前日の告知で「なんちゃらは20:00〜 45分の長尺いただき
+    ました！」とあり、当日朝にも「ほんじつ！45分みっちり歌います！」と再告知。
+    終演後は「いつもあまりやらない曲を中心にやりましたが、知らない人も声出して
+    くれて嬉しかったです」との感想。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/samami27/status/949298115072335872
+    - https://x.com/yokuwakan_nai/status/949535441316847618
+    - https://x.com/samami27/status/949663201708290048
+- id: event-20180108-varit
+  slug: 20180108-varit
+  date: 2018-01-08 16:15:00 +0900
+  title: Beat Happening！六本木新春POP PANIC！
+  site: 六本木VARIT
+  acts:
+    - エレボン
+    - こどもちゃん
+    - ネムレス
+  content: |
+    『Beat Happening！六本木新春POP PANIC！』。会場：六本木VARIT。
+    OPEN 14:30／START 15:00。前売￥2,500／当日￥3,000（+1Drink）。
+    なんちゃらの出番は16時15分。前日の告知文で「エレボン→こどもちゃん→ネムレスの
+    コンボを満喫したい」との言及があり、同日出演の他アクトと思われる。
+    終演後は「ハプニング！！」との感想ツイートあり。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/nantyaraidol/status/949620433870974976
+    - https://x.com/yokuwakan_nai/status/949997693832593408
+    - https://x.com/nantyaraidol/status/950103961347940352
+    - https://x.com/samami27/status/950349545086468096
+- id: event-20180111-otsukameets
+  slug: 20180111-otsukameets
+  date: 2018-01-11 20:00:00 +0900
+  title: さすらいの立直一発南南南！～大塚MEETSの場合～
+  site: 大塚MEETS
+  content: |
+    『さすらいの立直一発南南南！～大塚MEETSの場合～』。会場：大塚MEETS。
+    OPEN 18:30／ADV￥2,000。なんちゃらの出番は20時から。「JAMの企画をミーツが
+    引き継いだ感じ」との言及あり。御茶海マミはライブ後すぐHAPPY（バー）へ向かう
+    との告知も。終演後は「大塚ミーツありがとうございました！ミナミちゃんで
+    胸焼けした〜！！」との感想（ミナミちゃんは新宿JAM時代からの知人と思われるが
+    出演者かどうか本文からは断定できないため acts には含めていない）。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/nantyaraidol/status/950468628687740928
+    - https://x.com/samami27/status/951094458770075648
+    - https://x.com/nantyaraidol/status/951356697959743490
+    - https://x.com/yokuwakan_nai/status/951478844514484225
+- id: event-20180117-lamama
+  slug: 20180117-lamama
+  date: 2018-01-17 20:20:00 +0900
+  title: さすらいの立直一発南南南！～渋谷La.mamaの場合～
+  site: 渋谷La.mama
+  acts:
+    - 工藤ちゃん
+    - ザ・アイドルズ
+    - ∞処女
+  content: |
+    『さすらいの立直一発南南南！～渋谷La.mamaの場合～』。会場：渋谷La.mama。
+    OPEN 17:45／START 18:00。木戸銭￥2,500（4ドリンク付き）。なんちゃらの出番は
+    20時20分から。新宿JAM元店長・石塚さんがLa.mamaでブッキングを始める企画の
+    第一弾と位置づけられており、出演には工藤ちゃん、ザ・アイドルズ、
+    （初めてライブした時に対バンだったという）∞処女が名前が挙がっている。
+    終演後、yokuwakan_naiは「初めての箱だったけどすごくいいところだったな」と
+    ツイート（渋谷La.mama初出演）。ノルマも達成できたとのこと。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/nantyaraidol/status/951873812097744896
+    - https://x.com/yokuwakan_nai/status/951858254098780161
+    - https://x.com/nantyaraidol/status/953228501385035776
+    - https://x.com/yokuwakan_nai/status/953244546875273216
+    - https://x.com/samami27/status/953262386089140224
+    - https://x.com/samami27/status/953644773990006786
+    - https://x.com/nantyaraidol/status/953645611890298880
+    - https://x.com/yokuwakan_nai/status/953646430706581504
+- id: event-20180123-heavensdoor
+  slug: 20180123-heavensdoor
+  date: 2018-01-23 21:20:00 +0900
+  title: 三軒茶屋HEAVEN'S DOORライブ（雪合戦企画）
+  site: 三軒茶屋HEAVEN'S DOOR
+  content: |
+    三軒茶屋HEAVEN'S DOORでのライブ。「雪合戦」を絡めた企画で、なんちゃらはトリ。
+    前日の告知では「21:20〜！！（21:40という情報もあるけれど、21:20にくれば
+    確実です！！）」とあったが、日付が変わって当日（1/23未明）の告知では
+    「21:40からがっつり30分間、トリぴよ」、当日朝の告知でも「出番はトリなので
+    遅めの21:40からなり」と、直近の情報では21:40に更新されている模様。
+    本エントリでは前売り時点の告知（21:20〜）を date に採用しつつ、直前の
+    更新（21:40）もこの通り併記する。終演後は「腰が痛すぎて」と苦笑いしつつ
+    盛り上がった様子。次回のHEAVEN'S DOORは2月19日と予告。雪合戦企画は
+    1月27日、西新宿TOGI Barに続く。
+
+    ※Xの告知アーカイブから復元。開演時刻は21:20（前売り告知）〜21:40（直前更新）で
+    ぶれがあるため両方を記載
+  sources:
+    - https://x.com/samami27/status/955375484891676672
+    - https://x.com/yokuwakan_nai/status/955463744217235456
+    - https://x.com/nantyaraidol/status/955727037511090177
+    - https://x.com/yokuwakan_nai/status/955731998517092353
+    - https://x.com/samami27/status/955811515038236673
+    - https://x.com/yokuwakan_nai/status/955811569627099136
+- id: event-20180127-tokyosabaku
+  slug: 20180127-tokyosabaku
+  date: 2018-01-27 12:15:00 +0900
+  duplicate_ok: true
+  title: 東京砂漠ライブ（1本目）
+  site: 東京砂漠
+  content: |
+    1月27日は東京砂漠と西新宿TOGI Barのはしご2本立て（セットリストかぶりなし）。
+    前日の告知で「なんちゃらアイドルは12:15～と18:30～です！」とあるが、
+    どちらの時刻がどちらの会場に対応するかは本文からは断定できない。当日朝
+    「二部はじまたデス」というツイート（16:40頃JST）があり、これが後述の
+    西新宿TOGI Bar（1月23日から続く「雪合戦」企画の第2弾、夜の開催と推測）を
+    指すと仮定すると、消去法で本イベント（東京砂漠）は先の12:15〜と推定される。
+    終演後（1/28未明）に「久しぶりの東京砂漠さんでした！」との感想ツイートあり。
+
+    ※Xの告知アーカイブから復元。会場と時刻の対応は確度が高くない推定（詳細は
+    content参照）ため、裏取りが取れ次第見直すこと
+  sources:
+    - https://x.com/nantyaraidol/status/954564487675129857
+    - https://x.com/samami27/status/956937546507759616
+    - https://x.com/samami27/status/957288683316461568
+- id: event-20180127-togibar
+  slug: 20180127-togibar
+  date: 2018-01-27 18:30:00 +0900
+  duplicate_ok: true
+  title: 西新宿TOGI Barライブ（雪合戦企画・2本目）
+  site: 西新宿TOGI Bar
+  content: |
+    1月27日は東京砂漠と西新宿TOGI Barのはしご2本立て（セットリストかぶりなし）。
+    西新宿TOGI Barは1月23日の三軒茶屋HEAVEN'S DOORでの「雪合戦大会」の続き
+    （NEXT YukiGassen）として1月23日時点で予告されていたもの。時刻の対応は
+    event-20180127-tokyosabaku の content 参照（本イベントを18:30〜と推定）。
+
+    ※Xの告知アーカイブから復元。会場と時刻の対応は確度が高くない推定
+  sources:
+    - https://x.com/yokuwakan_nai/status/955811569627099136
+    - https://x.com/nantyaraidol/status/954564487675129857
+    - https://x.com/samami27/status/956937546507759616
