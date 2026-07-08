@@ -89,15 +89,26 @@
     - /events/20260710-timetree-67648713.jpg
 - id: event-20260711-ultrashibuya
   slug: 20260711-ultrashibuya
-  date: 2026-07-11 12:00:00 +0900
-  time_tbd: true
-  title: 短冊CDの日2026 インストアイベント
+  date: 2026-07-11 13:00:00 +0900
+  title: 短冊CDの日2026 インストアイベント（昼の部）
   site: ULTRA SHIBUYA
+  acts:
+    - 平野友里(ゆり丸)
   content: |
-    ULTRA SHIBUYAでの「短冊CDの日2026」インストアイベント。
-    sommeil sommeilとなんちゃらアイドルの短冊CDも対象。
+    「短冊CDの日2026」インストアイベント。ULTRA SHIBUYAにて開催。
+
+    昼の部　OPEN 12:30 / START 13:00
+    出演：平野友里(ゆり丸) / なんちゃらアイドル
+
+    内容：ミニライブ＋特典会
+    観覧フリー（入場時1D ¥700）
+    CD購入は当日受付にて（現金またはPayPayのみ）
+
+    ULTRA SHIBUYA　東京都渋谷区東1-28-9
+    （JR渋谷駅新南改札から徒歩10分/JR恵比寿駅西口から徒歩9分）
   sources:
     - https://x.com/yokuwakan_nai/status/2074490992838037889
+    - https://ultra-shibuya.com/shop/e/e10000409/
   images:
     - /events/20260711-ultrashibuya.jpg
 - id: event-20260713-timetree-68637822
