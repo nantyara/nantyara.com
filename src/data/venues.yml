@@ -861,3 +861,20 @@
 - id: higashinakano-music-shed-yes
   name: 東中野music shed YES
   note: ライブハウス（詳細未調査）
+- id: asakusa-goldentiger
+  name: 浅草ゴールデンタイガー
+  address: 東京都台東区西浅草2-14-13 BF1
+  note: 「浅草アイドル療法（Asakusa Idol Therapy）」等のイベント会場
+- id: hmv-esola-ikebukuro
+  name: HMVエソラ池袋店
+  note: 商業施設「エソラ池袋」内のHMV record shop。渋谷店（hmv-record-shop-shibuya）とは別会場
+- id: kamata-snack-tonton
+  name: 蒲田スナックトントン
+  note: 大田区蒲田復興協会（OKFK）シリーズのディナーショー会場。住所未確認
+- id: shinjuku-headpower
+  name: 新宿ヘッドパワー
+  url: http://headpower.tokyo
+  note: なんちゃらアイドル主催「なんちゃら100人組手」シリーズの会場
+- id: quinq-bbq-satsueikai
+  name: QuinQバーベキュー撮影会
+  note: QuinQ主催のバーベキュー撮影会企画。会場は非公開のため固定住所なし
