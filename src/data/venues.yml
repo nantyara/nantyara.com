@@ -855,3 +855,9 @@
 - id: nishinagafuku-jam
   name: 西永福JAM
   note: ライブハウス（詳細未調査）。新宿JAM（閉店済み・id:jam）とは別会場
+- id: lounge-neo
+  name: 渋谷lounge neo
+  note: 360度囲み型のライブイベント会場。渋谷グラッド（shibuya-glad）とは別会場（詳細未調査）
+- id: higashinakano-music-shed-yes
+  name: 東中野music shed YES
+  note: ライブハウス（詳細未調査）
