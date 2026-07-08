@@ -806,3 +806,9 @@
 - id: shinjuku-rednose
   name: 新宿レッドノーズ
   note: 新宿ルイードK4の入り口から入場する形態のスペース（詳細未調査）
+- id: sapporo-spiritual-lounge
+  name: 札幌SPIRITUAL LOUNGE
+  note: ライブハウス（詳細未調査）
+- id: sapporo-xenon
+  name: 札幌XENON
+  note: ライブハウス（詳細未調査）

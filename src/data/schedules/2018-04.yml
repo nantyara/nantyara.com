@@ -1,0 +1,217 @@
+# 2018年4月（/mine-x による X 告知アーカイブからの発掘。ソース: mining/x-archive/2018-04.json）
+- id: event-20180402-muzenji
+  slug: 20180402-muzenji
+  date: 2018-04-02 19:00:00 +0900
+  title: なんちゃらアイドルthirdワンマンライブ！in高円寺無力無善寺
+  site: 高円寺無力無善寺
+  acts:
+    - ゆめ
+    - あみーびっく
+    - 夏
+    - ドクガエル
+    - 猫屋敷ぽち＆菫
+    - 星野百花
+    - おりかされい子
+    - 岬たん
+  content: |
+    高円寺無力無善寺での結成後3回目のワンマンライブ。事前告知「4月2日『なんちゃらアイドル
+    thirdワンマンライブ！in高円寺無力無善寺』18時30分開場 19時00分開始 1000円（drink別）
+    前座のみなさま（出演順）ゆめ、あみーびっく、夏、ドクガエル、猫屋敷ぽち＆菫、星野百花、
+    おりかされい子、岬たん＆なんちゃらアイドル」。前座には元メンバーのあみーびっくも含まれる。
+    終演後は「本日のなんちゃらアイドルサードワンマン無力無善寺ありがとうございました！」
+    「4月2日 なんちゃらアイドルthirdワンマン 満員御礼、ありがとうございました。」と感想。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/samami27/status/980401300679540736
+    - https://x.com/samami27/status/980892382731186176
+    - https://x.com/nantyaraidol/status/981603734198222848
+- id: event-20180406-lush
+  slug: 20180406-lush
+  date: 2018-04-06 20:40:00 +0900
+  title: 渋谷LUSH「Beat Happning！春IDLEと金曜PANIC！」（北海道直前ライブ・さよならオデッセイ無料配布）
+  site: 渋谷LUSH
+  acts:
+    - nuance
+  content: |
+    渋谷LUSHでの「Beat Happning！春IDLEと金曜PANIC！」。翌日からの北海道ツアー直前公演。
+    事前告知「4/6(金)『Beat Happning！春IDLEと金曜PANIC！』渋谷LUSH 開場18:30
+    2,500／3,000(+1D」に続き、「この日は、『さよならオデッセイ』完売記念として、同CDを
+    無料配布いたします！歌詞カードはありませんが、完全版です！なんちゃら目当てじゃない人も
+    オッケー！」とシングル無料配布を告知。当日は「北海道直前ライブ！北海道行く人も
+    行かない人もいらっしゃってね！なんちゃらは20:40から！」と出番時刻を案内。終演後は
+    「今日対バンしてる nuance のほうが凄いかもしれない！めちゃくちゃ尊敬した！絶対にまた
+    対バンしたい！」と共演のnuanceに言及。
+
+    ※Xの告知アーカイブから復元。フルの対バンラインナップの言及は見当たらず、nuanceのみ
+    acts に採用
+  sources:
+    - https://x.com/nantyaraidol/status/981063657093152769
+    - https://x.com/samami27/status/982192294152384512
+    - https://x.com/nantyaraidol/status/982236200915251200
+- id: event-20180408-sapporo-spiritual-lounge
+  slug: 20180408-spiritual-lounge
+  date: 2018-04-08 17:45:00 +0900
+  title: 北海道ツアー1本目 札幌SPIRITUAL LOUNGEライブ
+  site: 札幌SPIRITUAL LOUNGE
+  content: |
+    北海道ツアー（札幌2公演）の1本目。事前告知「明日はいよいよなんちゃらアイドル札幌
+    ライブです！1発目はspiritual loungeで17:45から、2発目はXENONで20:55からです！」。
+    当日は「美味しい味噌ラーメンたべた。spiritual lounge到着です！なんちゃらは17:45
+    から！」と再告知。終演後は「スピリチュアルラウンジライブありがとうございました！
+    かっこいいバンドさんばかりでどちゃ楽しかった！！」と感想（対バン名の個別言及は
+    見当たらない）。
+
+    ※Xの告知アーカイブから復元。「札幌SPIRITUAL LOUNGE」は venues.yml 未登録会場のため
+    新規追加が必要（住所・公式URL未確認）
+  sources:
+    - https://x.com/yokuwakan_nai/status/982620502182121473
+    - https://x.com/yokuwakan_nai/status/982876353308475393
+    - https://x.com/samami27/status/982937566969085953
+- id: event-20180408-sapporo-xenon
+  slug: 20180408-xenon
+  date: 2018-04-08 20:55:00 +0900
+  title: 北海道ツアー2本目 札幌XENONライブ
+  site: 札幌XENON
+  content: |
+    北海道ツアー（札幌2公演）の2本目、同日1本目のSPIRITUAL LOUNGEからの掛け持ち出演。
+    「spiritual lounge楽しすぎて後ろ髪を引かれながら離脱！XENONに向かいます！2度目の
+    ライブも最高にするからな。ッシャーイクゾ！20:55から！」「本日2本目はXENONさんで
+    ライブです！なんちゃらは20:55〜！！」と出番時刻を案内。終演後は「XENONライブ
+    ありがとうございました！！！たくさんたくさん楽しくて、たくさん悔しくて…愛が
+    たくさんの北海道！！！」と感想（対バン名の個別言及は見当たらない）。
+
+    ※Xの告知アーカイブから復元。「札幌XENON」は venues.yml 未登録会場のため新規追加が
+    必要（住所・公式URL未確認）
+  sources:
+    - https://x.com/yokuwakan_nai/status/982620502182121473
+    - https://x.com/yokuwakan_nai/status/982932444809641985
+    - https://x.com/samami27/status/983007536285544448
+- id: event-20180414-heavensdoor
+  slug: 20180414-heavensdoor
+  date: 2018-04-14 21:00:00 +0900
+  title: 三軒茶屋HEAVEN'S DOORライブ「涙のBlack day」（生誕前日）
+  site: 三軒茶屋HEAVEN'S DOOR
+  acts:
+    - ヒゲと味噌汁
+    - 扇愛奈とkanna
+    - ZARIGANI$
+    - 妖精達
+  content: |
+    三軒茶屋HEAVEN'S DOORでの対バンイベント『涙のBlack day』。マミの生誕祭（4/15）
+    前日公演。事前告知「4月14日（土）三軒茶屋HEAVEN'S DOOR『涙のBlack day』ヒゲと
+    味噌汁/扇愛奈とkanna/なんちゃらアイドル/ZARIGANI$/妖精達 ＜FOOD＞きしぱん
+    (唐揚げ＆ジャジャ麺) open/start 18:30/19:00 前売¥2,000 当日¥2,500 なんたらは
+    21時からたっぷり30分！」。前日再告知でも同内容・同出番時刻を確認。終演後は
+    「涙のブラックデー@ヘブンスドア ありがとうございました！んもーちょー楽しくて
+    こういうイベントに呼んでもらえるのってめっちゃ嬉しい」と感想。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/nantyaraidol/status/982991033456779264
+    - https://x.com/samami27/status/985028279865229312
+    - https://x.com/yokuwakan_nai/status/985170853607321601
+- id: event-20180415-ufoclub
+  slug: 20180415-ufoclub
+  date: 2018-04-15 19:00:00 +0900
+  title: 東高円寺U.F.O CLUB 御茶海マミ生誕祭「ミサミノキセキ」
+  site: 東高円寺U.F.O CLUB
+  labels:
+    - マミ生誕祭
+  acts:
+    - 姫乃たま
+    - 工藤ちゃん
+    - じどうぽるの砲
+    - レイモミンパルメザン
+  content: |
+    御茶海マミ（当時は活動4年目）の誕生日を記念した本人主催の生誕祭ライブ「ミサミノ
+    キセキ」。event.tiget.net（tiget.net/events/24932）の告知ページによれば、開催
+    2018年4月15日(日) 開場18:30／開演19:00、会場は東高円寺U.F.O CLUB、チケット
+    2,500円（当日ドリンク料金別途）、出演：なんちゃらアイドル・姫乃たま・工藤ちゃん・
+    じどうぽるの砲・レイモミンパルメザン、主催：御茶海マミ（ミサミマミ）。
+    X告知「あの今週日曜日、15日なんですが、2ヶ月遅れの生誕祭します！（略）物販は
+    開場開演までの30分と終演後1時間です！」でチケットリンクを案内。終演後は
+    「0415『ミサミノキセキ』無事終わりました！悔しいスタートでしたが、レイモミン
+    パルメザン、工藤ちゃん、じどうぽるの砲さん、姫乃たまちゃん、なんちゃらアイドル、
+    そして、来てくれたみんなのおかげで、最高の生誕祭ができました！」と感想。
+
+    ※Xの告知アーカイブから復元。開場・開演時刻は告知ポスト本文になく、tiget.netの
+    イベントページ（リンク先）から裏取り
+  sources:
+    - https://x.com/samami27/status/983631394361376768
+    - https://x.com/samami27/status/984827913101963264
+    - https://x.com/samami27/status/985169864456159233
+    - https://tiget.net/events/24932
+- id: event-20180418-firebird
+  slug: 20180418-firebird
+  date: 2018-04-18 12:00:00 +0900
+  time_tbd: true
+  title: 新松戸FIREBIRDライブ（「美女と野獣」企画）
+  site: 新松戸FIREBIRD
+  content: |
+    新松戸FIREBIRDでの「美女と野獣」をテーマにした対バン企画ライブ。事前の日時告知は
+    見当たらず、当日（4/18）の終演御礼ツイートから開催日を確定：「新松戸FIREBIRD
+    ありがとうございました！！美女と野獣って企画だったけど美女で野獣になっちゃった
+    や、なんかごめんなさい」「ティロリティロリ新松戸FIRE BIRDライブありがとう
+    ございました今日は静かな曲からのアンセムセトリでした野獣ちゃんのなんちゃらは
+    いかがでしたか」。対バン相手の具体名（「野獣ちゃん」というあだ名のみ言及）が
+    特定できないため acts は未記載。
+
+    ※Xの告知アーカイブから復元。事前告知・出番時刻の言及が見当たらないため time_tbd
+    とした
+  sources:
+    - https://x.com/yokuwakan_nai/status/986626901862051841
+    - https://x.com/samami27/status/986641829402558464
+- id: event-20180424-lush
+  slug: 20180424-lush
+  date: 2018-04-24 19:28:00 +0900
+  title: 渋谷LUSHライブ「Babe」
+  site: 渋谷LUSH
+  acts:
+    - SAKA-SAMA
+    - KISADORI
+    - WestSidePrintClub
+    - NaNoMoRaL
+  content: |
+    渋谷LUSHでの対バンイベント『Babe』。事前告知「2018.04.24(tue)『Babe』@SHIBUYA
+    LUSH open 18:30 / start 19:00 adv 2000円(+1D) / door 2500円(+1D) 出演
+    SAKA-SAMA/なんちゃらアイドル/KISADORI/WestSidePrintClub/NaNoMoRaL」。当日朝には
+    「本日！渋谷LUSHさんにて19:28〜 ライブです！」と出番時刻を再告知。終演後は
+    「渋谷LUSH『Babe』ありがとうございました！なんちゃらのSEは『眠るなBabe』という
+    曲です」と感想。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/nantyaraidol/status/986639917584273408
+    - https://x.com/samami27/status/988686666276659201
+    - https://x.com/samami27/status/988780989005496320
+- id: event-20180425-heavensdoor
+  slug: 20180425-heavensdoor
+  date: 2018-04-25 18:30:00 +0900
+  title: なんちゃらアイドル主催「なんちゃらなヘブン vol.01」〜なんちゃら100人組手〜
+  site: 三軒茶屋HEAVEN'S DOOR
+  acts:
+    - フェッティーズ
+    - メロン畑 a go go
+    - 鮭オーケストラ
+    - ザ・アイドルズ
+  content: |
+    三軒茶屋HEAVEN'S DOORでのなんちゃらアイドル初主催シリーズ「なんちゃらなヘブン」
+    第1回。事前告知「来た方が良い！理由はリプで！4/25（水）三軒茶屋heaven's door
+    なんちゃらアイドル主催『なんちゃらなヘブン vol.01』～なんちゃら100人組手～
+    open18:30 charge￥2000 なんちゃらアイドル/フェッティーズ/メロン畑 a go go/
+    鮭オーケストラ/ザ・アイドルズ」。「150分がっつり楽しいのに2000円なんじゃー！」と
+    ボリュームを強調。新聞配達・シール配り・スーパーボールくじなど企画も予告
+    （yokuwakan_nai談）。北海道ツアー支援撮影会＆鍋会の特典ROM配布もこの日以降開始と
+    案内。終演後は「誰もMCでTOKIOの話しなかったね。それくらい音楽がおもろかったの
+    やも。」「昨日はスーパボールくじも大好評でした！」と感想。なんちゃら自身の
+    出番時刻の個別告知は見当たらないため、開場時刻(18:30)を date に採用。
+
+    ※Xの告知アーカイブから復元。「なんちゃらなヘブン」は本アーカイブで確認できる
+    範囲では初開催（vol.01）。なんちゃらアイドル初の主催イベントは2016-11-11
+    「なんちゃらフェス vol.1」（新宿JAM、history.yml登録済み）であり、本イベントは
+    それとは別の新規主催シリーズの開始と位置づけられる
+  sources:
+    - https://x.com/nantyaraidol/status/988806303802834944
+    - https://x.com/yokuwakan_nai/status/988809095418269696
+    - https://x.com/nantyaraidol/status/988813351286272000
