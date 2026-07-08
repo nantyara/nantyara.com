@@ -546,7 +546,10 @@ const nextLiveDateFmt = (d: Date, timeTbd: boolean) => {
   });
 </script>
 
-<style>
+<style is:global>
+  /* is:global: 「過去」「すべて」フィルターはクライアントJSがDOMを組み立てるため、
+     Astroのスコープ付きCSS（data-astro-cid-*）が付与されず month-items 等の
+     グリッドレイアウトが適用されない問題への対応（2026-07-09） */
   /* ==========================================
      NEXT LIVE ヒーロー
      ========================================== */
