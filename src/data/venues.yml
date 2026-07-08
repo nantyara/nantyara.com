@@ -846,3 +846,12 @@
 - id: osaka-satsueikai
   name: 大阪遠征支援撮影会
   note: 遠征支援を目的とした個人撮影会イベント。会場名不明・企画名のみ確認
+- id: misono-benikaku
+  name: 味園紅鶴
+  note: 大阪ミナミ・味園ビル2階のライブスペース。なんちゃらアイドル大阪初出演(2018-08-05)の会場
+- id: takadanobaba-bigbox
+  name: 高田馬場BIGBOX前
+  note: 集合場所（実際の飲食店会場名は不明）
+- id: nishinagafuku-jam
+  name: 西永福JAM
+  note: ライブハウス（詳細未調査）。新宿JAM（閉店済み・id:jam）とは別会場
