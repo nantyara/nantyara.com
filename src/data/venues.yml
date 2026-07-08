@@ -380,6 +380,8 @@
   note: ライブハウス（詳細未調査）
 - id: kanda-mifa
   name: 神田MIFA
+  aliases:
+    - 神田サウンドステージミーファ
   note: 詳細未調査
 - id: ruido-k2
   name: 渋谷ルイードK2
@@ -768,6 +770,8 @@
   note: ライブハウス（詳細未調査）
 - id: club251
   name: 下北沢Club251
+  aliases:
+    - 下北沢251
   note: ライブハウス（詳細未調査）
 - id: rrr-ryogoku
   name: 両国楽園部屋
@@ -796,3 +800,9 @@
 - id: nishishinjuku-togi-bar
   name: 西新宿TOGI Bar
   note: ライブハウス（詳細未調査）
+- id: koenji-ryugu
+  name: 高円寺龍宮
+  note: ライブハウス（詳細未調査）
+- id: shinjuku-rednose
+  name: 新宿レッドノーズ
+  note: 新宿ルイードK4の入り口から入場する形態のスペース（詳細未調査）
