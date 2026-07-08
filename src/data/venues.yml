@@ -812,3 +812,25 @@
 - id: sapporo-xenon
   name: 札幌XENON
   note: ライブハウス（詳細未調査）
+- id: nishiogikubo-flat
+  name: 西荻窪flat
+  note: ライブハウス（詳細未調査）
+- id: akihabara-plum
+  name: 秋葉原PLUM
+  note: ライブハウス（詳細未調査）
+- id: kamata-nihonkai
+  name: 寿司屋日本海
+  aliases:
+    - 蒲田日本海
+  note: 大田区蒲田の寿司屋を会場にしたライブ企画（#大田区蒲田復興協会）。住所未確認
+- id: tachikawa-hearts-gekijo
+  name: HeaRTS劇場ドン・キホーテ立川店
+  aliases:
+    - 立川HeaRTS劇場
+  address: 東京都立川市曙町2-18-18 5F
+  url: http://hearts-gekijo.jp
+  x: HeaRTS_gekijo
+  note: ドン・キホーテ立川店内のメイド喫茶ライブスペース。JR立川駅北口徒歩3分
+- id: shibuya-7th-floor
+  name: 渋谷7th floor
+  note: ライブ／トークライブ会場（詳細未調査）

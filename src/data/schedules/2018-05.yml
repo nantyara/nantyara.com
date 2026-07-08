@@ -1,0 +1,258 @@
+# 2018年5月（/mine-x による X 告知アーカイブからの発掘。ソース: mining/x-archive/2018-05.json）
+# ドラフト（未コミット・レビュー用）。venues.yml への新規会場追加案は末尾コメント参照。
+- id: event-20180503-heavensdoor
+  slug: 20180503-heavensdoor
+  date: 2018-05-03 16:50:00 +0900
+  end: 2018-05-03 17:20:00 +0900
+  title: 三軒茶屋HEAVEN'S DOOR「爆音サミット」
+  site: 三軒茶屋HEAVEN'S DOOR
+  acts:
+    - かみつきマッド・ドッグ
+  content: |
+    三軒茶屋HEAVEN'S DOORでの対バンイベント『爆音サミット』（5/3・木・祝）。事前告知
+    「５月３日(木祝)【爆音サミット】OPEN/START 14:30 adv./door 共￥2000(+2drink￥1000)
+    16:50-17:20 なんちゃらアイドル みんな大好ききしぱんフードあるよ！かみつきマッド・
+    ドッグとも初共演！」。当日朝にも「本日のライブはこちら！きしぱんさんがいるとのことで、
+    みんなそわそわしてると思う。なんちゃらは16:50から歌うよ〜！」と再告知。終演後は
+    「ヘブンスドアの爆音サミット、まだ続いておりますがとりあえず、なんちゃらライブは
+    終了しました！ありがとうございました！」と感想。
+
+    ※Xの告知アーカイブから復元。フルの対バンラインナップの言及は見当たらず、かみつき
+    マッド・ドッグとの初共演のみ acts に採用
+  sources:
+    - https://x.com/nantyaraidol/status/991333290962374661
+    - https://x.com/yokuwakan_nai/status/991851896376770560
+    - https://x.com/yokuwakan_nai/status/991980828279230465
+- id: event-20180504-flat
+  slug: 20180504-flat
+  date: 2018-05-04 14:40:00 +0900
+  title: 西荻窪flat「JAM FES 2018」
+  site: 西荻窪flat
+  content: |
+    西荻窪flatでの「JAM FES 2018」（GW企画イベント）。事前告知「明日は西荻窪flatにて
+    JAMfes2018、今年も騒ぎ倒すぞ。」（yokuwakan_nai）「明日は西荻窪flatです！！」
+    （samami27）に続き、当日「やはりする！14時40分から！jamのなんちゃらははんぱないぞ。」
+    と出番時刻を告知。イベント名は「JAM FES」だが会場は西荻窪flatであり、なんちゃらアイドル
+    結成の地とされる新宿JAM（閉店済み・venues.yml id: jam）とは無関係と思われる。対バン
+    ラインナップの言及は見当たらない。
+
+    ※Xの告知アーカイブから復元。イベント名と会場名（JAM／西荻窪flat）が一致しないため、
+    誤読を避けるため content に明記した
+  sources:
+    - https://x.com/yokuwakan_nai/status/991236019784634368
+    - https://x.com/samami27/status/991334877592145921
+    - https://x.com/nantyaraidol/status/992032476825509888
+- id: event-20180507-firebird
+  slug: 20180507-firebird
+  date: 2018-05-07 21:10:00 +0900
+  title: 新松戸FIREBIRD「食べ放題スペシャル」（新曲初披露）
+  site: 新松戸FIREBIRD
+  content: |
+    新松戸FIREBIRDでの食べ放題企画ライブ。事前告知「2018ねん5がつ7にち 新松戸FIREBIRD
+    にて食べ放題スペシャル！！ひゅー！お腹すかせてきてね！なんちゃらは21:10〜！」。
+    この日はハタケショクニン作曲の新曲を初披露する予定であることも予告（「7日は
+    新曲もやりますけんねー！」）。ご来場者全員にスーパーボールくじをプレゼントする
+    企画や新聞の無料配布も告知。対バン相手の具体的な言及は見当たらない。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/samami27/status/992392615088697346
+    - https://x.com/nantyaraidol/status/992631736210149377
+    - https://x.com/nantyaraidol/status/993175161959428096
+- id: event-20180508-7thfloor
+  slug: 20180508-7thfloor
+  date: 2018-05-08 19:15:00 +0900
+  time_tbd: true
+  title: 渋谷7th floor トークライブ「Beat Happening！緊急tasoミーティング！りのたそブレイク計画！」
+  site: 渋谷7th floor
+  content: |
+    渋谷7th floorでのトークイベント「Beat Happening！『緊急tasoミーティング！りのたそ
+    ブレイク計画！』」。事前告知「2018年5月8日（木）渋谷7th floor公演概要☆Beat
+    Happening！『緊急tasoミーティング！りのたそブレイク計画！』なんちゃらは19時過ぎの
+    トークショーにで出ます！」。楽曲パフォーマンスではなくトークショーへの出演。
+    終演後は「本日は渋谷7th Floorにてトークしてきました！闇とか知らんし、病んでない
+    ので、健やかなトークした！」（samami27）「渋谷7th floorありがとうございました！
+    資本主義という病について5時間論じたりして楽しかったです。」（yokuwakan_nai）と感想。
+
+    ※Xの告知アーカイブから復元。ライブ（楽曲披露）ではなくトークショー出演。出番時刻は
+    「19時過ぎ」という曖昧な表現のみのため time_tbd とし、date は19:15を仮置き
+  sources:
+    - https://x.com/nantyaraidol/status/993537646352728066
+    - https://x.com/samami27/status/993872120030511104
+    - https://x.com/yokuwakan_nai/status/993879982647590912
+- id: event-20180511-plum
+  slug: 20180511-plum
+  date: 2018-05-11 19:40:00 +0900
+  end: 2018-05-11 20:00:00 +0900
+  title: 秋葉原PLUM「KIF3～工藤ちゃん24th生誕前々夜～」
+  site: 秋葉原PLUM
+  acts:
+    - 工藤ちゃん
+    - ポエムアパート
+    - KULUPULU
+    - tasotokyoガールズ
+  content: |
+    秋葉原PLUMでの対バンイベント『KIF3～工藤ちゃん24th生誕前々夜～』。事前告知「お次は
+    これ！5/11(金)秋葉原PLUM KIF3～工藤ちゃん24th生誕前々夜～ 開場17:30 開演18:00
+    終演21:00 入場¥2400(D別) 工藤ちゃん/ポエムアパート/KULUPULU(IRIS MONDE)/
+    tasotokyoガールズ 他 19:40-20:00 なんちゃらアイドル」。工藤ちゃんの生誕を祝う
+    イベントとして企画。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/nantyaraidol/status/993857773036175360
+    - https://x.com/yokuwakan_nai/status/994579647516966913
+    - https://x.com/samami27/status/994612143084355584
+- id: event-20180512-nihonkai
+  slug: 20180512-nihonkai
+  date: 2018-05-12 12:00:00 +0900
+  time_tbd: true
+  title: 蒲田 寿司屋日本海「寿司ライブ」（毎日寿司チャレンジ50食達成）
+  site: 寿司屋日本海
+  content: |
+    蒲田の寿司屋「日本海」を会場にした「寿司ライブ」（大田区蒲田復興協会関連企画）。
+    前日告知「3月末から始まった、なんちゃらアイドル毎日寿司チャレンジ！寿司ライブ前日、
+    つい先ほど、49食目を終えました。50食達成は明日みんなとしたい！」。当日は
+    「蒲田日本海でのお寿司ライブありがとうございました！ピアノ弾いたよ！」
+    （yokuwakan_nai）「OKFK寿司ライブありがとうございました！今日まで寿司づくし！
+    初めてのピアノ伴奏ライブでした！ #大田区蒲田復興協会」（samami27）「0512 50食目！
+    ライブ、ほんと大成功でした。満席！」（nantyaraidol）と事後報告。ピアノ伴奏形式の
+    ライブで、3月末から続いた「毎日寿司チャレンジ」（連日寿司を食べる企画）が本イベントで
+    50食に到達し、ひと区切りとなった。
+
+    ※Xの告知アーカイブから復元。開演時刻の明示的な告知が見当たらないため time_tbd とした
+  sources:
+    - https://x.com/nantyaraidol/status/994956372990050306
+    - https://x.com/yokuwakan_nai/status/995299650755153920
+    - https://x.com/nantyaraidol/status/995316896823066624
+- id: event-20180516-heavensdoor
+  slug: 20180516-heavensdoor
+  date: 2018-05-16 20:20:00 +0900
+  end: 2018-05-16 20:50:00 +0900
+  title: 三軒茶屋HEAVEN'S DOOR対バンライブ
+  site: 三軒茶屋HEAVEN'S DOOR
+  acts:
+    - ファイヤートマト-絆-
+    - 毎日サプリメント
+    - バイドク
+    - カミソリ☆彡レター
+  content: |
+    三軒茶屋HEAVEN'S DOORでの対バンイベント。事前告知「お次はこれ！5月16日、三茶
+    ヘブンスドア！2000円！1 19:00-19:30 ファイヤートマト-絆- / 2 19:40-20:10
+    毎日サプリメント / 3 20:20-20:50 なんちゃらアイドル / 4 21:00-21:30 バイドク /
+    5 21:40-22:10 カミソリ☆彡レター」。終演後は「三軒茶屋ヘブンスドアありがとう
+    ございました！」（yokuwakan_nai）「三軒茶屋ヘヴンスドアありがとうございました！」
+    （samami27）と感想。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/nantyaraidol/status/995463881475567616
+    - https://x.com/samami27/status/996437776101818368
+    - https://x.com/yokuwakan_nai/status/996771177396715520
+- id: event-20180520-hearts
+  slug: 20180520-hearts
+  date: 2018-05-20 13:55:00 +0900
+  title: 立川HeaRTS劇場「IDOLIVE！」
+  site: HeaRTS劇場ドン・キホーテ立川店
+  acts:
+    - COLOR'z
+    - ボンバー☆チャマタソ
+  content: |
+    ドン・キホーテ立川店内のメイド喫茶「HeaRTS劇場」でのライブイベント。事前告知
+    「お次はこれ！メイド喫茶でライブ！05/20（日）『HeaRTS劇場 IDOLIVE！』開場：12：00
+    開演：12：30開演 会場： HeaRTS劇場ドン・キホーテ立川店 http://hearts-gekijo.jp
+    料金： 前売・当日 2000円（別途+1D） 出演: COLOR'ｚ / なんちゃらアイドル /
+    ボンバー☆チャマタソ。他」。リンク先（hearts-gekijo.jp、2026-07裏取り時点で存続確認）
+    によれば会場住所は東京都立川市曙町2-18-18 5F、JR立川駅北口から徒歩3分。なんちゃら
+    自身の出番は「メイド喫茶でライブ！（略）出番は13時55分からとのことです！」と後日
+    告知。
+
+    ※Xの告知アーカイブから復元。開場・開演時刻はポスト本文どおり、出演者本人の出番
+    時刻（13:55）を date に採用
+  sources:
+    - https://x.com/nantyaraidol/status/996738599545655296
+    - https://x.com/nantyaraidol/status/996812075103010816
+    - http://hearts-gekijo.jp
+- id: event-20180523-basementbar
+  slug: 20180523-basementbar
+  date: 2018-05-23 19:00:00 +0900
+  title: 下北沢ベースメントバー「Beat Happening！下北極POP PANIC！」
+  site: 下北沢ベースメントバー
+  acts:
+    - The Mash
+    - リンダ＆マーヤ
+    - おやすみホログラム
+    - 大石理乃BAND
+  content: |
+    下北沢ベースメントバーでの対バンイベント『Beat Happening！下北極POP PANIC！』。
+    事前告知「23日は下北沢BASEMENTBAR！『Beat Happening！下北極POP PANIC！』開場18:30
+    開演19:00 前￥2,500(+1d) The Mash / リンダ＆マーヤ / おやすみホログラム /
+    なんちゃらアイドル / 大石理乃BAND / きしぱん」。終演後は「昨日のベースメントバー
+    ありがとうございました、ビートハプニングはめちゃヤバ、です。」（yokuwakan_nai）
+    「今日は高校のときの友達が来てくれた。リンダ&マーヤのおふたりとの写真撮って
+    もらった。」（samami27）と感想。なんちゃら自身の出番時刻の個別告知は見当たら
+    ないため、開演時刻(19:00)を date に採用。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/nantyaraidol/status/998475376639725568
+    - https://x.com/samami27/status/998865690365906944
+    - https://x.com/yokuwakan_nai/status/999451764305805312
+- id: event-20180526-heavensdoor
+  slug: 20180526-heavensdoor
+  date: 2018-05-26 12:00:00 +0900
+  time_tbd: true
+  title: 三軒茶屋HEAVEN'S DOOR「カンナさん誕生日パーティー」
+  site: 三軒茶屋HEAVEN'S DOOR
+  acts:
+    - 扇愛奈とkanna
+  content: |
+    三軒茶屋HEAVEN'S DOORでの対バンイベント。「扇愛奈とkanna」のカンナさんの誕生日を
+    祝う企画（4/14「涙のBlack day」で共演済みのユニット）。事前告知「おらー！超めでてー
+    日だぞ！（略）今週2度目のきしぱんさん！」（samami27、5/23 下北沢ベースメントバー
+    に続き今週2度目のきしぱんフードとの言及）。終演後は「三軒茶屋ヘブンスドアでの
+    カンナさん誕生日パーティーお疲れ様でした！」（yokuwakan_nai）「カンナさんの
+    おたおめライブでした！めでて〜なぁ〜超超超アツかった！」（samami27）と感想。
+
+    ※Xの告知アーカイブから復元。開演・出番時刻の明示的な告知が見当たらないため
+    time_tbd とした。対バンの詳細ラインナップ（カンナさん以外）も本文からは特定
+    できず
+  sources:
+    - https://x.com/samami27/status/1000238548405043200
+    - https://x.com/yokuwakan_nai/status/1000394495811186688
+    - https://x.com/samami27/status/1000408249332465664
+- id: event-20180529-flat
+  slug: 20180529-flat
+  date: 2018-05-29 21:30:00 +0900
+  title: なんちゃらアイドル主催「Ｑ太郎さん生誕祭」（西荻窪flat）
+  site: 西荻窪flat
+  labels:
+    - 主催ライブ
+  acts:
+    - ドミンゴの塔
+    - スキップカウズ
+    - オセロケッツ
+    - ザ・アイドルズ
+  content: |
+    西荻窪flatでのなんちゃらアイドル主催ライブ。運営Q太郎の誕生日を祝う企画。事前告知
+    「5月29日の主催ライブ、井垣宏章&石塚明彦（太陽の塔）にミツゴロー（ドミンゴス）
+    さんが加わり、ドミンゴの塔として出演していただけることに！加えて、スキップ
+    カウズから遠藤さん、オセロケッツから森山さん！」。当日は「なんちゃらアイドル
+    さんの運営のＱ太郎は今日が誕生日か〜。（略）なんちゃらアイドルさんはトリなので
+    21:30から歌います」（yokuwakan_nai）と出番時刻を告知。イベント限定Tシャツ
+    （中国製、S/M/L/XL）も販売。終演後は「打ち上げなうですがひとまずＱ太郎さん
+    生誕祭@西荻窪flatありがとうございました！」（yokuwakan_nai）「本日の動員は
+    91人！なんちゃら主催史上最多！」（nantyaraidol）と報告。
+
+    ※Xの告知アーカイブから復元。事前情報にあった「5/29 西荻窪flat『Ｑ太郎さん生誕祭』」
+    に該当。告知ポスト本文・事後報告から会場（西荻窪flat）・出番時刻（21:30・トリ）
+    ・出演者（ドミンゴの塔＝井垣宏章&石塚明彦&ミツゴロー、スキップカウズ遠藤さん、
+    オセロケッツ森山さん、ザ・アイドルズ）を裏取り。主催イベントシリーズとしての
+    history.yml 追記は今回は見送り（判断のみ記録・全期間発掘完了後にまとめて棚卸し
+    する方針のため）
+  sources:
+    - https://x.com/nantyaraidol/status/993548309066231808
+    - https://x.com/nantyaraidol/status/1000418168991436800
+    - https://x.com/yokuwakan_nai/status/1001195961442451456
+    - https://x.com/nantyaraidol/status/1001587415260119040
+
