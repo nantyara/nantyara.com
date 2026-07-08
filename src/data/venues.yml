@@ -834,3 +834,15 @@
 - id: shibuya-7th-floor
   name: 渋谷7th floor
   note: ライブ／トークライブ会場（詳細未調査）
+- id: milkyway
+  name: 渋谷Milkyway
+  note: ライブハウス（詳細未調査）
+- id: kashiwa04
+  name: 柏04
+  note: ライブハウス（詳細未調査）
+- id: marble
+  name: 新宿Marble
+  note: ライブハウス（詳細未調査）
+- id: osaka-satsueikai
+  name: 大阪遠征支援撮影会
+  note: 遠征支援を目的とした個人撮影会イベント。会場名不明・企画名のみ確認
