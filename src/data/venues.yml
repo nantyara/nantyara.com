@@ -290,6 +290,8 @@
   note: なんちゃらアイドル結成の地とされるホームのライブハウス（閉店済み）
 - id: goldenegg
   name: 新宿GOLDENEGG
+  aliases:
+    - 新宿ゴールデンエッグ
 - id: urawa-narciss
   name: 浦和ナルシス
 - id: mikasa-park
@@ -929,3 +931,14 @@
 - id: hamamatsu-peta
   name: 浜松スタジオPETA
   note: 静岡県浜松市のライブ/撮影スタジオ（詳細未調査）
+- id: shimokitazawa-breath
+  name: 下北沢Breath
+  note: ライブハウス（詳細未調査）
+- id: higashinakano-alt-speaker
+  name: 東中野ALT_SPEAKER
+  aliases:
+    - 東中野ALT-SPEAKER
+  note: グランドピアノのある箱（詳細未調査）
+- id: roppongi-shinsekai
+  name: 六本木新世界
+  note: ライブハウス（詳細未調査）。なんちゃらアイドル初出演は2019-03-28
