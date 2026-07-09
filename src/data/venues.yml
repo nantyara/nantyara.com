@@ -914,3 +914,12 @@
 - id: nantyara-jitaku
   name: なんちゃら運営自宅
   note: 運営自宅で開催された私的イベント（撮影会・オフ会等）の会場。住所非公開
+- id: ryogoku-sunrise
+  name: 両国サンライズ
+  note: 「DADAフェス」シリーズの会場（詳細未調査）
+- id: jimbocho-shichoshitsu
+  name: 神保町試聴室
+  note: ライブスペース（詳細未調査）。日ノ出町 試聴室その3（hinodecho-shichoshitsu-sono3）とは別会場
+- id: koenji-high
+  name: 高円寺HIGH
+  note: ライブハウス（詳細未調査）。高円寺SHOW BOAT・高円寺無力無善寺・高円寺CLUB LINERとは別会場
