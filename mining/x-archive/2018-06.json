@@ -1,6 +1,122 @@
 {
   "announces": [
     {
+      "url": "/nantyaraidol/status/1002369126487257090",
+      "time": "2018-06-01T01:59:57.000Z",
+      "handle": "@nantyaraidol",
+      "text": "やるぞ！",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1002467910609059841",
+      "time": "2018-06-01T08:32:29.000Z",
+      "handle": "@nantyaraidol",
+      "text": "よいなー！\nQuoted media: https://pbs.twimg.com/media/DelrZStUYAAnUwA.jpg\nMedia: (none)",
+      "imgs": [
+        "https://pbs.twimg.com/media/DelrZStUYAAnUwA.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1002508009652666369",
+      "time": "2018-06-01T11:11:49.000Z",
+      "handle": "@samami27",
+      "text": "行くぜ秋田〜〜〜\n画像: https://pbs.twimg.com/media/Demft6TVMAI5_7X.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/Demft6TVMAI5_7X.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1002568745410150401",
+      "time": "2018-06-01T15:13:10.000Z",
+      "handle": "@nantyaraidol",
+      "text": "盛岡！\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1002592591383105536",
+      "time": "2018-06-01T16:47:55.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "これがめかぶうどんか〜(6ヶ月ぶり2回目)",
+      "imgs": [
+        "https://pbs.twimg.com/media/Denso6fVMAAu3Et.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1002595516817932288",
+      "time": "2018-06-01T16:59:33.000Z",
+      "handle": "@samami27",
+      "text": "メカブうどん食べた◎\n動画: https://video.twimg.com/ext_tw_video/1002595443409240064/pu/vid/720x1280/Wax7pxBMKNyWVeTY.mp4?tag=3",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1002628808652910592",
+      "time": "2018-06-01T19:11:50.000Z",
+      "handle": "@nantyaraidol",
+      "text": "めっちゃ大きなQ太郎とめっちゃ小さな工藤ちゃんです。\nMedia: https://pbs.twimg.com/media/DeoNk4PUwAEuqcZ.jpg | https://pbs.twimg.com/media/DeoNk4OU0AIZCi0.jpg | https://pbs.twimg.com/media/DeoNk4PUwAAUXWC.jpg | https://pbs.twimg.com/media/DeoNk4PVMAA2JnM.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DeoNk4PUwAEuqcZ.jpg",
+        "https://pbs.twimg.com/media/DeoNk4OU0AIZCi0.jpg",
+        "https://pbs.twimg.com/media/DeoNk4PUwAAUXWC.jpg",
+        "https://pbs.twimg.com/media/DeoNk4PVMAA2JnM.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1002631355052638208",
+      "time": "2018-06-01T19:21:57.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "ヘヴン！",
+      "imgs": [
+        "https://pbs.twimg.com/media/DeoP1TxUcAAb3YG.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1002640135677095936",
+      "time": "2018-06-01T19:56:51.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "秋田寒い",
+      "imgs": [
+        "https://pbs.twimg.com/media/DeoX4KoU8AAMW4a.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1002641309541138432",
+      "time": "2018-06-01T20:01:31.000Z",
+      "handle": "@nantyaraidol",
+      "text": "武家屋敷\nMedia: https://pbs.twimg.com/media/DeoY8j_VAAAUbVE.jpg | https://pbs.twimg.com/media/DeoY8j9U0AAcu0t.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DeoY8j_VAAAUbVE.jpg",
+        "https://pbs.twimg.com/media/DeoY8j9U0AAcu0t.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1002675118022090753",
+      "time": "2018-06-01T22:15:51.000Z",
+      "handle": "@nantyaraidol",
+      "text": "生きてたんかいワレ〜！！\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1002675922728771584",
+      "time": "2018-06-01T22:19:03.000Z",
+      "handle": "@samami27",
+      "text": "('ω'≡'ω'≡'ω'≡'ω')\n画像: https://pbs.twimg.com/media/Deo4by_UwAAAsbp.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/Deo4by_UwAAAsbp.jpg"
+      ],
+      "isReply": false
+    },
+    {
       "url": "/yokuwakan_nai/status/1002682625973051392",
       "time": "2018-06-01T22:45:41.000Z",
       "handle": "@yokuwakan_nai",
@@ -41,6 +157,133 @@
       "isReply": false
     },
     {
+      "url": "/nantyaraidol/status/1002700580333150208",
+      "time": "2018-06-01T23:57:02.000Z",
+      "handle": "@nantyaraidol",
+      "text": "はぇー\nMedia: https://pbs.twimg.com/media/DepO2OAUEAApB-x.jpg | https://pbs.twimg.com/media/DepO2OKUEAAEarp.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DepO2OAUEAApB-x.jpg",
+        "https://pbs.twimg.com/media/DepO2OKUEAAEarp.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1002729164284162048",
+      "time": "2018-06-02T01:50:37.000Z",
+      "handle": "@nantyaraidol",
+      "text": "カレー！\nMedia: https://pbs.twimg.com/media/Depo2uQVQAAUNN4.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/Depo2uQVQAAUNN4.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1002729364868325377",
+      "time": "2018-06-02T01:51:25.000Z",
+      "handle": "@nantyaraidol",
+      "text": "はぇーやっすい\nMedia: https://pbs.twimg.com/media/DeppCW2VQAEk1CF.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DeppCW2VQAEk1CF.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1002739948779286528",
+      "time": "2018-06-02T02:33:28.000Z",
+      "handle": "@nantyaraidol",
+      "text": "ありがたビームヾ( ˃̶᷇ ‧̫ ˂̶᷆ )ノ\nQuoted media: https://pbs.twimg.com/media/DepvbIKVAAAfMxW.jpg\nMedia: (none)",
+      "imgs": [
+        "https://pbs.twimg.com/media/DepvbIKVAAAfMxW.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1002765171939467264",
+      "time": "2018-06-02T04:13:42.000Z",
+      "handle": "@samami27",
+      "text": "顔面できた◎\n画像: https://pbs.twimg.com/media/DeqJmyCUEAAQ-pU.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DeqJmyCUEAAQ-pU.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1002780513583521792",
+      "time": "2018-06-02T05:14:39.000Z",
+      "handle": "@nantyaraidol",
+      "text": "https://t.co/qDeFc08no5\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1002789710861721601",
+      "time": "2018-06-02T05:51:12.000Z",
+      "handle": "@nantyaraidol",
+      "text": "カボチャのポテサラ、めかぶ、グリーンサラダ、味噌汁、缶ジュース（赤まむしドリンクも選べる）、丼、これでオールタイム550円！間違いなく優勝だよここ！\nMedia: https://pbs.twimg.com/media/Deqf6nWUYAAdjnl.jpg | https://pbs.twimg.com/media/Deqf6nWVMAAvYtO.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/Deqf6nWUYAAdjnl.jpg",
+        "https://pbs.twimg.com/media/Deqf6nWVMAAvYtO.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1002836637179523072",
+      "time": "2018-06-02T08:57:40.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "1部終わって2部が始まっております頑張るぞ！秋田激アツです！！！半年ぶりにあった人がみんな褒めてくれて自己肯定感が満たされまくってます！！！！",
+      "imgs": [
+        "https://pbs.twimg.com/media/DerKmBrUEAA3GSl.jpg",
+        "https://pbs.twimg.com/media/DerKmdcV4AABrFq.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1002837803951054848",
+      "time": "2018-06-02T09:02:18.000Z",
+      "handle": "@samami27",
+      "text": "なんか基本的にブレるな？\n画像: https://pbs.twimg.com/media/DerLqd8VAAA109Z.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DerLqd8VAAA109Z.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1002849252836454401",
+      "time": "2018-06-02T09:47:48.000Z",
+      "handle": "@nantyaraidol",
+      "text": "https://t.co/lLMY7Vewej\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1002857065767825408",
+      "time": "2018-06-02T10:18:51.000Z",
+      "handle": "@nantyaraidol",
+      "text": "また来るぜ！\nと言って、ほんとにまた来る。\nそういうとこだよ！\nMedia: https://pbs.twimg.com/media/DerdLUwUEAAxDTH.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DerdLUwUEAAxDTH.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1002858496964956160",
+      "time": "2018-06-02T10:24:32.000Z",
+      "handle": "@nantyaraidol",
+      "text": "地方遠征、わりと癖になりますよ。観光も兼ねるとよきです。\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1002909479854198785",
+      "time": "2018-06-02T13:47:07.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "2部も楽しく終わりまして秋田飯も食べました！はぇ〜名残惜しい〜めちゃくちゃ楽しかった〜楽屋散らかってるな〜",
+      "imgs": [
+        "https://pbs.twimg.com/media/DesM2nFUwAEKU8f.jpg"
+      ],
+      "isReply": false
+    },
+    {
       "url": "/yokuwakan_nai/status/1002958688972255234",
       "time": "2018-06-02T17:02:40.000Z",
       "handle": "@yokuwakan_nai",
@@ -70,6 +313,106 @@
       "handle": "@nantyaraidol",
       "text": "パクパク、もぐもぐ…",
       "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1003067776892788736",
+      "time": "2018-06-03T00:16:08.000Z",
+      "handle": "@nantyaraidol",
+      "text": "お次はこれ！",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1003078088039645184",
+      "time": "2018-06-03T00:57:07.000Z",
+      "handle": "@samami27",
+      "text": "ただいまアンバサダーに就任！からの就寝！の前に洗濯じゃー！\n画像: https://pbs.twimg.com/media/DeumMoiUcAAFKpZ.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DeumMoiUcAAFKpZ.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1003081727919644673",
+      "time": "2018-06-03T01:11:34.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "ド帰宅！いい旅夢気分でした。写真はちっちゃい工藤ちゃんです",
+      "imgs": [
+        "https://pbs.twimg.com/media/DeupgHjVMAAeOQo.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1003179150385876992",
+      "time": "2018-06-03T07:38:42.000Z",
+      "handle": "@samami27",
+      "text": "がぶりつく！明日無力無善寺にて噛みつきMAD-DOGさんとツーマン！ひゅう！打ち上がりまで楽しみすぎる〜！\n画像: (なし / QTあり)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1003180458757087233",
+      "time": "2018-06-03T07:43:54.000Z",
+      "handle": "@samami27",
+      "text": "夏になりかけてるから、夏のこと褒めると洗濯物がすぐ乾くってところですね。それ以外はちょっとしんどい。あ、ビアガーデンはいい感じと思う。\n画像: (なし)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1003180728572526592",
+      "time": "2018-06-03T07:44:58.000Z",
+      "handle": "@samami27",
+      "text": "この間の撮影会でもらったチョコでおやつした\n画像: https://pbs.twimg.com/media/DewDi5XUwAEhDg6.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DewDi5XUwAEhDg6.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1003234008702971904",
+      "time": "2018-06-03T11:16:41.000Z",
+      "handle": "@nantyaraidol",
+      "text": "おかげさまで満枠ありがたビームヾ( ˃̶᷇ ‧̫ ˂̶᷆ )ノ\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1003250778138505217",
+      "time": "2018-06-03T12:23:19.000Z",
+      "handle": "@nantyaraidol",
+      "text": "かみつきのこと、色々噂したり想像したりしてるみなさん、\nとりあえず明日！明日くればわかるよ！\nQuoted media: https://pbs.twimg.com/media/Deucz-aUcAgkI8z.jpg | https://pbs.twimg.com/media/Deucz-aU0AAdOqC.jpg | https://pbs.twimg.com/media/Deucz-bVQAAmSd6.jpg | https://pbs.twimg.com/media/Deucz-aUcAkfE3-.jpg\nMedia: (none)",
+      "imgs": [
+        "https://pbs.twimg.com/media/Deucz-aUcAgkI8z.jpg",
+        "https://pbs.twimg.com/media/Deucz-aU0AAdOqC.jpg",
+        "https://pbs.twimg.com/media/Deucz-bVQAAmSd6.jpg",
+        "https://pbs.twimg.com/media/Deucz-aUcAkfE3-.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1003256437433294849",
+      "time": "2018-06-03T12:45:48.000Z",
+      "handle": "@nantyaraidol",
+      "text": "またきてさんかくまたきてしかく！\nQuoted media: https://pbs.twimg.com/media/DexHrzhVAAUEv1K.jpg | https://pbs.twimg.com/media/DexHs-dU8AAe04L.jpg | https://pbs.twimg.com/media/DexHvVnVQAAXSvN.jpg | https://pbs.twimg.com/media/DexHwxJUcAICT_6.jpg\nMedia: (none)",
+      "imgs": [
+        "https://pbs.twimg.com/media/DexHrzhVAAUEv1K.jpg",
+        "https://pbs.twimg.com/media/DexHs-dU8AAe04L.jpg",
+        "https://pbs.twimg.com/media/DexHvVnVQAAXSvN.jpg",
+        "https://pbs.twimg.com/media/DexHwxJUcAICT_6.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1003279715619049473",
+      "time": "2018-06-03T14:18:18.000Z",
+      "handle": "@nantyaraidol",
+      "text": "友達夫婦が揃って国家権力による拘束中なので、飢え死に13面オープンリーチだったウサ公きたりて。むしゃむしゃ食べやがりまして可愛いんじゃ〜！\nMedia: https://pbs.twimg.com/media/DexdkuaVAAA6S5O.jpg | https://pbs.twimg.com/media/DexdkuaU8AAoyrl.jpg | https://pbs.twimg.com/media/DexdkuaUcAYBNZp.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DexdkuaVAAA6S5O.jpg",
+        "https://pbs.twimg.com/media/DexdkuaU8AAoyrl.jpg",
+        "https://pbs.twimg.com/media/DexdkuaUcAYBNZp.jpg"
+      ],
       "isReply": false
     },
     {
@@ -153,6 +496,14 @@
       "isReply": false
     },
     {
+      "url": "/nantyaraidol/status/1003327525349519360",
+      "time": "2018-06-03T17:28:17.000Z",
+      "handle": "@nantyaraidol",
+      "text": "その通りです！エリアちゃんやりよるな！\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
       "url": "/samami27/status/1003402389343297536",
       "time": "2018-06-03T22:25:46.000Z",
       "handle": "@samami27",
@@ -165,6 +516,111 @@
       "time": "2018-06-03T22:27:29.000Z",
       "handle": "@samami27",
       "text": "しかもこれ写真わたしじゃないんですよ笑",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1003448721944690689",
+      "time": "2018-06-04T01:29:53.000Z",
+      "handle": "@nantyaraidol",
+      "text": "ありがたビームヾ( ˃̶᷇ ‧̫ ˂̶᷆ )ノ\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1003482468987461634",
+      "time": "2018-06-04T03:43:59.000Z",
+      "handle": "@nantyaraidol",
+      "text": "行きまする！\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1003504463053668352",
+      "time": "2018-06-04T05:11:22.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "フォロワーが馬鹿多い海外のアカウントにばっかフォローされている グローバル(怖い) 髪ボサボサ過ぎるので整えに来た",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1003517362010591232",
+      "time": "2018-06-04T06:02:38.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "本日はこちら！みんな大好き高円寺無力無善寺で、かみつき！MAD－DOGさんとタイマンバトルをしでかすよ。なんかめちゃくちゃ時間あるみたいだしたくさん歌うね。終わったらみんなでご飯食べいきましょねー。",
+      "imgs": [
+        "https://pbs.twimg.com/media/De01ty-VMAEsz48.jpg",
+        "https://pbs.twimg.com/media/De01t_SUwAA3VCA.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1003555125183385602",
+      "time": "2018-06-04T08:32:41.000Z",
+      "handle": "@nantyaraidol",
+      "text": "アイス食べながらリハるね\nMedia: https://pbs.twimg.com/media/De1YDKUVAAA6DxE.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/De1YDKUVAAA6DxE.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1003564625063960576",
+      "time": "2018-06-04T09:10:26.000Z",
+      "handle": "@samami27",
+      "text": "じゃれつきKit-Cat\n三日月Mid-Night\n病み付きHot-Dog\n個人的に考えた #かみつき!MAD-DOG の対義語、類義語です。\n画像: https://pbs.twimg.com/media/De1gs3gUwAA3o-r.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/De1gs3gUwAA3o-r.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1003565426368921601",
+      "time": "2018-06-04T09:13:37.000Z",
+      "handle": "@samami27",
+      "text": "バトル！バトル！バトル！\n噛み付いてくぞ！！！\nなんちゃら夢のツーマン！vol.001\n2018/06/04\n高円寺無力無善寺\n1830open1900battle\n1500price（without drink ）\n1900 噛みつきMAD−DOG\n2015 なんちゃらアイドル\n打ち上げまで楽しみだ〜〜〜\n画像: https://pbs.twimg.com/media/De1hbRiUwAAOVpP.jpg\n画像: https://pbs.twimg.com/media/De1hbRiUwAE-tKw.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/De1hbRiUwAAOVpP.jpg",
+        "https://pbs.twimg.com/media/De1hbRiUwAE-tKw.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1003575346099204096",
+      "time": "2018-06-04T09:53:02.000Z",
+      "handle": "@nantyaraidol",
+      "text": "うさぎ、\n出所してきた旦那が引き取りたいと言う。\nうさぎ、\n旦那にだけは渡さないでと旦那の義母が言う。\nMedia: https://pbs.twimg.com/media/De1qchVU8AA3vpv.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/De1qchVU8AA3vpv.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1003583341302550528",
+      "time": "2018-06-04T10:24:48.000Z",
+      "handle": "@nantyaraidol",
+      "text": "最近、アンセムオンリーなセトリが多かったのですが、今日は時間もあるでいろいろやりんすよー！恋のバックドロップ！聖母主義！星くず兄弟の伝説！\nQuoted media: https://pbs.twimg.com/media/Deucz-aUcAgkI8z.jpg | https://pbs.twimg.com/media/Deucz-aU0AAdOqC.jpg | https://pbs.twimg.com/media/Deucz-bVQAAmSd6.jpg | https://pbs.twimg.com/media/Deucz-aUcAkfE3-.jpg\nMedia: (none)",
+      "imgs": [
+        "https://pbs.twimg.com/media/Deucz-aUcAgkI8z.jpg",
+        "https://pbs.twimg.com/media/Deucz-aU0AAdOqC.jpg",
+        "https://pbs.twimg.com/media/Deucz-bVQAAmSd6.jpg",
+        "https://pbs.twimg.com/media/Deucz-aUcAkfE3-.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1003609159206604800",
+      "time": "2018-06-04T12:07:24.000Z",
+      "handle": "@nantyaraidol",
+      "text": "https://t.co/jntqCXWBSh\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1003612666252836866",
+      "time": "2018-06-04T12:21:20.000Z",
+      "handle": "@nantyaraidol",
+      "text": "https://t.co/9beLoMw6RH\nMedia: (none)",
       "imgs": [],
       "isReply": false
     },
@@ -217,6 +673,14 @@
       "isReply": false
     },
     {
+      "url": "/samami27/status/1003666615362248709",
+      "time": "2018-06-04T15:55:42.000Z",
+      "handle": "@samami27",
+      "text": "モイ！iPhoneからキャス配信中 -\n画像: (なし)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
       "url": "/nantyaraidol/status/1003668342454931456",
       "time": "2018-06-04T16:02:34.000Z",
       "handle": "@nantyaraidol",
@@ -230,6 +694,34 @@
       "handle": "@samami27",
       "text": "#かみつきライブ",
       "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1003866715678052352",
+      "time": "2018-06-05T05:10:50.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "あおはるレシピ見ないクッキング オムライスです",
+      "imgs": [
+        "https://pbs.twimg.com/media/De5zc9wUYAAC3sd.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1003898955929776128",
+      "time": "2018-06-05T07:18:57.000Z",
+      "handle": "@nantyaraidol",
+      "text": "ここにもイキり運営がいますねえ（感謝してます！）。\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1003901737948741633",
+      "time": "2018-06-05T07:30:00.000Z",
+      "handle": "@nantyaraidol",
+      "text": "なんちゃらなSpotify 3曲目\n「本当は哀しい関係」鈴木祥子\nhttps://t.co/i3aXqFvZDt…\n作品としての完成度は川村真澄作詞時代のほうが高いと思うけど、2000年以降の鈴木祥子セルフプロデュース作品のその純度たるや！\nMedia: https://pbs.twimg.com/media/De6TTmyVAAACsCR.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/De6TTmyVAAACsCR.jpg"
+      ],
       "isReply": false
     },
     {
@@ -307,6 +799,14 @@
       "isReply": false
     },
     {
+      "url": "/yokuwakan_nai/status/1004077311270907904",
+      "time": "2018-06-05T19:07:40.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "外国の人のフォロワー増えまくってオモロとか言ってたけどさすがに怖すぎ、律儀にいちいちフォロー返ししている場合じゃないのでは。むしろアラビア語勉強しようかな سعيد",
+      "imgs": [],
+      "isReply": false
+    },
+    {
       "url": "/samami27/status/1004099126898798592",
       "time": "2018-06-05T20:34:21.000Z",
       "handle": "@samami27",
@@ -344,6 +844,45 @@
       "handle": "@nantyaraidol",
       "text": "豆乳ピリ辛ソーメンなう！\nうまいゾ〜！",
       "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1004559565617152001",
+      "time": "2018-06-07T03:03:58.000Z",
+      "handle": "@samami27",
+      "text": "6月9日12:00〜20:00\n高田馬場 BABA会議室にて\n#ななたま会議室 参加します！\n今回のテーマはたこ焼きパーティー！焼きまくる〜！\n料金はこちら💁‍♀️\n男性 2,500円/1時間\n女性1,000円/1時間\n食べ放題 1,000円/時間無制限\n（マミソロ出演、ライブなどはなし）\nオフ会イベントです〜！\n画像: https://pbs.twimg.com/media/DfDpmGfU0AAZ0zr.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DfDpmGfU0AAZ0zr.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1004623606700113920",
+      "time": "2018-06-07T07:18:27.000Z",
+      "handle": "@nantyaraidol",
+      "text": "生まれて初めてインターネットのモデムを導入したら快適すぎて引きこもりそうです！\nMedia: https://pbs.twimg.com/media/DfEj1vBVAAENIdP.jpg | https://pbs.twimg.com/media/DfEj1u5UYAEM6r7.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DfEj1vBVAAENIdP.jpg",
+        "https://pbs.twimg.com/media/DfEj1u5UYAEM6r7.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1004624691221299200",
+      "time": "2018-06-07T07:22:46.000Z",
+      "handle": "@nantyaraidol",
+      "text": "そのへんはようわからんですがニューロなんとかの本体。\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1004698331535175680",
+      "time": "2018-06-07T12:15:23.000Z",
+      "handle": "@samami27",
+      "text": "本日もHAPPYよろしくお願いします💋\n画像: https://pbs.twimg.com/media/DfFnzYxUEAAVwYm.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DfFnzYxUEAAVwYm.jpg"
+      ],
       "isReply": false
     },
     {
@@ -400,6 +939,27 @@
       "handle": "@samami27",
       "text": "本日もHAPPYありがとうございました！愛を朝までささやき合ったぜ〜ちゅんちゅん\n今日は最後まで気を抜かないっていう教訓を得た日でした！\nおやすみ！",
       "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1004912779147370496",
+      "time": "2018-06-08T02:27:31.000Z",
+      "handle": "@nantyaraidol",
+      "text": "ドミンの塔、最高でしたよね！\nQuoted media: https://pbs.twimg.com/media/DfImH6rVMAAFgYp.jpg | https://pbs.twimg.com/media/DfImIZrV4AAVYjL.jpg\nMedia: (none)",
+      "imgs": [
+        "https://pbs.twimg.com/media/DfImH6rVMAAFgYp.jpg",
+        "https://pbs.twimg.com/media/DfImIZrV4AAVYjL.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1004958115987505152",
+      "time": "2018-06-08T05:27:40.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "今日と明日、中野クロスバニーに20:30-27:00でいまくります！久々の週末。初めての方などは是非、あおちゃんtwitterを見た！とか言ってください、すぐに近くに行きます。おまいつは言わなくてもいいです。写真は犬をさわるあおちゃんです。犬の名前は平八です。♀なのに",
+      "imgs": [
+        "https://pbs.twimg.com/media/DfJUExqUcAIKonQ.jpg"
+      ],
       "isReply": false
     },
     {
@@ -463,6 +1023,89 @@
       "time": "2018-06-08T18:47:05.000Z",
       "handle": "@nantyaraidol",
       "text": "お次はこれ！\n\n6月13日（水）\n三軒茶屋ヘブンスドア\n開場18:30\n2000円くらい\nオニオンシュテン\nなんちゃらアイドル\nバイドク佐藤\n堕天使Project\nBAD TASTE CABARET\n\nなんちゃらは21時から！",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1005253771209789440",
+      "time": "2018-06-09T01:02:30.000Z",
+      "handle": "@samami27",
+      "text": "本日！タコがいなくなるまで焼きまくります！！\n画像: (なし / QTあり)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1005274105057239042",
+      "time": "2018-06-09T02:23:18.000Z",
+      "handle": "@samami27",
+      "text": "撮った記憶がないので、不意に撮れちゃった自撮りです。虚無。\n画像: https://pbs.twimg.com/media/DfNzd5CU0AERA15.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DfNzd5CU0AERA15.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1005301575290576896",
+      "time": "2018-06-09T04:12:27.000Z",
+      "handle": "@samami27",
+      "text": "焼きまくってるよ！！早くおいで〜！！\n画像: https://pbs.twimg.com/media/DfOMccOVMAAGKXE.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DfOMccOVMAAGKXE.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1005321739746738176",
+      "time": "2018-06-09T05:32:35.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "今日も一日",
+      "imgs": [
+        "https://pbs.twimg.com/media/DfOeymrU0AAd_rl.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1005322379155759105",
+      "time": "2018-06-09T05:35:07.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "可哀想じゃないと愛されないかもしれない！と思うのに身体も精神も超健康で労られる隙がない。ダメだこりゃ。健康だし部屋の片付けでもする寝",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1005356485105221632",
+      "time": "2018-06-09T07:50:39.000Z",
+      "handle": "@samami27",
+      "text": "#御茶海けん玉部活動報告\n動画: https://video.twimg.com/ext_tw_video/1005356350417690626/pu/vid/720x1280/RhtNv7ssTV8d287F.mp4?tag=3",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1005370301532631040",
+      "time": "2018-06-09T08:45:33.000Z",
+      "handle": "@nantyaraidol",
+      "text": "なんちゃらバンドのベーシスト、中出し少年のうえりんに決定！\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1005446437969072128",
+      "time": "2018-06-09T13:48:05.000Z",
+      "handle": "@samami27",
+      "text": "本日は#ななたま会議室 vol.19に呼んでいただきました！マミ推し来てくれてありがとう…！嬉しい楽しい大好き…！たこ焼きまくって最終的にはタコじゃなくなったりしたし、美味しいし、お酒たくさん飲んだな〜！！\n昨日楽しみすぎて寝れなかったので、今日は即寝る店長です〜\n画像: https://pbs.twimg.com/media/DfQQL0gUYAAteL-.jpg\n画像: https://pbs.twimg.com/media/DfQQL0eUEAAq8Mw.jpg\n画像: https://pbs.twimg.com/media/DfQQL0eU0AAypgS.jpg\n画像: https://pbs.twimg.com/media/DfQQL0hUYAAQTpu.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DfQQL0gUYAAteL-.jpg",
+        "https://pbs.twimg.com/media/DfQQL0eUEAAq8Mw.jpg",
+        "https://pbs.twimg.com/media/DfQQL0eU0AAypgS.jpg",
+        "https://pbs.twimg.com/media/DfQQL0hUYAAQTpu.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1005454588827222016",
+      "time": "2018-06-09T14:20:29.000Z",
+      "handle": "@samami27",
+      "text": "なんか今日ごめんねってたくさんいっちゃったけど、ありがとうが大前提なの…！なんちゃらのライブとか撮影会とかハッピーとかきてもらった上で、プラスアルファきてもらって、なんかあのその、うまく甘えられないくてごめんね。ありがとうってたくさん思ってるけど、ごめんねのほうが伝わってたらやだ\n画像: (なし)",
       "imgs": [],
       "isReply": false
     },
@@ -531,6 +1174,101 @@
       "isReply": false
     },
     {
+      "url": "/samami27/status/1005979742732894209",
+      "time": "2018-06-11T01:07:15.000Z",
+      "handle": "@samami27",
+      "text": "昨日は高円寺パンディットへ。ひつじちゃんのトークイベントを観に行きました！いおりさんプロデュースのワンピース買ったから、次の撮影会で着ようかなって思うよ〜\n画像: https://pbs.twimg.com/media/DfX1PWjUwAA8wO_.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DfX1PWjUwAA8wO_.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1005980274209927168",
+      "time": "2018-06-11T01:09:22.000Z",
+      "handle": "@samami27",
+      "text": "お腹へったよ〜4時間くらい目を開けてるのに起きてない感じでびっくりした〜起きてるって夢だったのかな？マジ？\n画像: (なし)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1006080104127029248",
+      "time": "2018-06-11T07:46:03.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "今日中野クロスバニーでまーす！20:30-27:00でーす！",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1006113826939367424",
+      "time": "2018-06-11T10:00:03.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "天気が悪いとそこはかとなく体調が悪いな！おさけのみたい〜アッ、バニー出勤じゃんお酒飲めるじゃんⓗⓐⓟⓟⓨ ♡◍*⃝̥◌ᎻᎯᏢᏢᎩ◌*⃝̥◍♡ꀿªᵖᵖᵞ",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1006194408054665217",
+      "time": "2018-06-11T15:20:15.000Z",
+      "handle": "@samami27",
+      "text": "髪切りたいし暗くしたい。\n画像: https://pbs.twimg.com/media/Dfa4edUUcAE-WFN.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/Dfa4edUUcAE-WFN.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1006194967046336513",
+      "time": "2018-06-11T15:22:28.000Z",
+      "handle": "@samami27",
+      "text": "鼻かみすぎて赤くなってるウケル\n画像: (なし / QTあり)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1006195212480180226",
+      "time": "2018-06-11T15:23:27.000Z",
+      "handle": "@samami27",
+      "text": "昼からビール飲みたかったから、洗濯終わったら飲むか〜\n画像: (なし)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1006201193838751744",
+      "time": "2018-06-11T15:47:13.000Z",
+      "handle": "@samami27",
+      "text": "わたしの中のしかるねこが「ちゃんと自炊しなさーい！！」って言ってて、わたしの中のこうぺんちゃんが「疲れてるのに栄養とっててえらい！」って言ってて、トラックがばーんってなって死〜ん。って感じ！自炊しなくては…！！とは思ってるんだが！！\n画像: (なし)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1006202831026524160",
+      "time": "2018-06-11T15:53:43.000Z",
+      "handle": "@nantyaraidol",
+      "text": "品川駅JRホームにある、その名も「そば処」。なのに7割のお客さんがカレーを頼むという。ウマいゾ〜。\nMedia: https://pbs.twimg.com/media/DfbAIy5VMAEQvQk.jpg | https://pbs.twimg.com/media/DfbAIzRVAAAwf2b.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DfbAIy5VMAEQvQk.jpg",
+        "https://pbs.twimg.com/media/DfbAIzRVAAAwf2b.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1006204132561072129",
+      "time": "2018-06-11T15:58:54.000Z",
+      "handle": "@nantyaraidol",
+      "text": "このカレー屋、京浜東北線のホームにあるのですが、京浜東北線のホームて0617で移動するんですね。なので利用が面倒になるんですよね…。でも行くけど。\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1006204794602598400",
+      "time": "2018-06-11T16:01:32.000Z",
+      "handle": "@samami27",
+      "text": "わたしの中のしかるねこ「自炊できてない罪悪感をめかぶとかもずく食べて誤魔化すのやめなさ〜い！」\n画像: (なし)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
       "url": "/yokuwakan_nai/status/1006267473119739904",
       "time": "2018-06-11T20:10:35.000Z",
       "handle": "@yokuwakan_nai",
@@ -576,6 +1314,103 @@
       "handle": "@yokuwakan_nai",
       "text": "AM4:51、もし今日が冬だったら真夜中みたいなのに今日は冬ではないから明るくて朝だねおはよう！今日のライブは三茶ヘブンス、なんたらは21時から歌いまーす。楽しみメンツ。",
       "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1006754118432706566",
+      "time": "2018-06-13T04:24:21.000Z",
+      "handle": "@samami27",
+      "text": "朝起きたから眠い！！こんにちは！\n画像: (なし)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1006777960827891714",
+      "time": "2018-06-13T05:59:05.000Z",
+      "handle": "@samami27",
+      "text": "これがこうじゃ！\n画像: https://pbs.twimg.com/media/DfjLNBBW4AAbalY.jpg\n画像: https://pbs.twimg.com/media/DfjLNBDWAAECeXf.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DfjLNBBW4AAbalY.jpg",
+        "https://pbs.twimg.com/media/DfjLNBDWAAECeXf.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1006814305826811905",
+      "time": "2018-06-13T08:23:30.000Z",
+      "handle": "@samami27",
+      "text": "全然募集期間過ぎてたけど、撮ったので！\nハッシュタグT恋に応募しようとしてたのにな〜！\n画像: https://pbs.twimg.com/media/DfjsRNZW4AIcsTc.jpg\n画像: https://pbs.twimg.com/media/DfjsRNPW4AATkYl.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DfjsRNZW4AIcsTc.jpg",
+        "https://pbs.twimg.com/media/DfjsRNPW4AATkYl.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1006827493079171072",
+      "time": "2018-06-13T09:15:54.000Z",
+      "handle": "@samami27",
+      "text": "https://t.co/8i5ZCjGXRa\n画像: https://pbs.twimg.com/media/Dfj4Q8cUcAAiAIp.jpg\n画像: https://pbs.twimg.com/media/Dfj4Q8bUYAAtWxo.jpg\n画像: https://pbs.twimg.com/media/Dfj4Q8eVQAAnJuS.jpg\n画像: https://pbs.twimg.com/media/Dfj4Q8aVAAEGdru.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/Dfj4Q8cUcAAiAIp.jpg",
+        "https://pbs.twimg.com/media/Dfj4Q8bUYAAtWxo.jpg",
+        "https://pbs.twimg.com/media/Dfj4Q8eVQAAnJuS.jpg",
+        "https://pbs.twimg.com/media/Dfj4Q8aVAAEGdru.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1006830329871519745",
+      "time": "2018-06-13T09:27:11.000Z",
+      "handle": "@nantyaraidol",
+      "text": "こいついっつもライブの日に予約開始してんな。\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1006833841741258752",
+      "time": "2018-06-13T09:41:08.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "外ではしゃいだ",
+      "imgs": [
+        "https://pbs.twimg.com/media/Dfj-A9qUwAAzx3O.jpg",
+        "https://pbs.twimg.com/media/Dfj-B44VAAAQt8D.jpg",
+        "https://pbs.twimg.com/media/Dfj-ChqVMAAKn1u.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1006855099405094913",
+      "time": "2018-06-13T11:05:36.000Z",
+      "handle": "@samami27",
+      "text": "はじまったよー！いおり気高いさんプロデュースワンピースでいきます！\n画像: (なし / QTあり)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1006855776579682304",
+      "time": "2018-06-13T11:08:18.000Z",
+      "handle": "@nantyaraidol",
+      "text": "もう半分売れてしまっただ！\nもう始発を待つしかないだ！へいへい！\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1006861013189193729",
+      "time": "2018-06-13T11:29:06.000Z",
+      "handle": "@nantyaraidol",
+      "text": "あとにわく！\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1006862170422837248",
+      "time": "2018-06-13T11:33:42.000Z",
+      "handle": "@nantyaraidol",
+      "text": "なんちゃらなSpotify 006\n「そして甘いキッス」市井由理\nhttps://t.co/dWS5eOr9RT\nこの曲が入ってるアルバムは、ほんとに全曲素晴らしく、こまやかな工夫がなされているのですが、この曲だけ凄くつまらない。でもこればかり聴いてます。あとこのパケ最高。\nMedia: https://pbs.twimg.com/media/DfkXzPhU8AAaLYJ.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DfkXzPhU8AAaLYJ.jpg"
+      ],
       "isReply": false
     },
     {
@@ -651,6 +1486,91 @@
       "isReply": false
     },
     {
+      "url": "/samami27/status/1007190465160966144",
+      "time": "2018-06-14T09:18:14.000Z",
+      "handle": "@samami27",
+      "text": "かわいいサンダル買って届いたんだけど、今日ってサンダル履いてても大丈夫な気候？まだ外出てないからわからないんだが…\n画像: (なし)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1007199058388119553",
+      "time": "2018-06-14T09:52:23.000Z",
+      "handle": "@samami27",
+      "text": "オムライスにうさぎ描いたら、あおはるがいつも描くやつみたいになった\n画像: https://pbs.twimg.com/media/DfpKMx1U0AAFq4U.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DfpKMx1U0AAFq4U.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1007231515917352961",
+      "time": "2018-06-14T12:01:21.000Z",
+      "handle": "@samami27",
+      "text": "本日もHAPPYよろしくお願いします💋\n画像: (なし)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1007235269362266112",
+      "time": "2018-06-14T12:16:16.000Z",
+      "handle": "@samami27",
+      "text": "今日なんだか体調優れないので、ハッピー早じめしちゃうかもしれぬです…_:(´ཀ`」∠):_\n画像: (なし)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1007262342218858496",
+      "time": "2018-06-14T14:03:51.000Z",
+      "handle": "@nantyaraidol",
+      "text": "なんちゃらなSpotify 007\n「いきなりサンシャイン」ティアドロップス\nhttps://t.co/BxizVmkW6J\n指が動かなくなっても、声が出なくなっても、客席に舐めた奴がいたら瞬間飛びかかる、そんな、やっぱロックはラブでもピースでもなくて、抵抗の拠点なんだと思わせてくれたのがフジオ！\nMedia: https://pbs.twimg.com/media/DfqDwNsU0AEFsF2.jpg | https://pbs.twimg.com/media/DfqDwNsVQAATUO7.jpg | https://pbs.twimg.com/media/DfqDwNtUcAAP7rD.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DfqDwNsU0AEFsF2.jpg",
+        "https://pbs.twimg.com/media/DfqDwNsVQAATUO7.jpg",
+        "https://pbs.twimg.com/media/DfqDwNtUcAAP7rD.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1007268887711264770",
+      "time": "2018-06-14T14:29:51.000Z",
+      "handle": "@nantyaraidol",
+      "text": "次はこれ！",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1007269777935482880",
+      "time": "2018-06-14T14:33:23.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "びしょびしょの洗濯物を抱えながら使用中の乾燥機を見つめ何もすることが出来ずとりあえずアイスを食べているよ！",
+      "imgs": [
+        "https://pbs.twimg.com/media/DfqKhPnV4AEwPMh.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1007271465538879488",
+      "time": "2018-06-14T14:40:06.000Z",
+      "handle": "@nantyaraidol",
+      "text": "いったれいったれ！\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1007273480226631682",
+      "time": "2018-06-14T14:48:06.000Z",
+      "handle": "@nantyaraidol",
+      "text": "普段はやや遠慮しとりますが、\n17日はいやらしいオンナがたくさん出るので（ぽよ除く）なんちゃらも脱ぎ散らかしますけんねー！撮りに恋！聴かなくてもノらなくてもシャッターに思いを乗せたらよいよ！\nMedia: https://pbs.twimg.com/media/DfqN4l8UwAAjnYZ.jpg | https://pbs.twimg.com/media/DfqN4l9U8AAjzf8.jpg | https://pbs.twimg.com/media/DfqN4mLVAAA-PbH.jpg | https://pbs.twimg.com/media/DfqN4l9UYAAs5O8.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DfqN4l8UwAAjnYZ.jpg",
+        "https://pbs.twimg.com/media/DfqN4l9U8AAjzf8.jpg",
+        "https://pbs.twimg.com/media/DfqN4mLVAAA-PbH.jpg",
+        "https://pbs.twimg.com/media/DfqN4l9UYAAs5O8.jpg"
+      ],
+      "isReply": false
+    },
+    {
       "url": "/nantyaraidol/status/1007282167410450433",
       "time": "2018-06-14T15:22:37.000Z",
       "handle": "@nantyaraidol",
@@ -663,6 +1583,14 @@
       "time": "2018-06-14T15:23:28.000Z",
       "handle": "@nantyaraidol",
       "text": "ゴールデンエッグは日本有数の治安悪い地域にあるが",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1007290259309146112",
+      "time": "2018-06-14T15:54:47.000Z",
+      "handle": "@nantyaraidol",
+      "text": "やりよるな。\nMedia: (none)",
       "imgs": [],
       "isReply": false
     },
@@ -695,6 +1623,52 @@
       "time": "2018-06-14T20:18:49.000Z",
       "handle": "@yokuwakan_nai",
       "text": "最近朝来るのほんとはやくない？どうしたの？鎖国の時代が長すぎた？",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1007414337428787201",
+      "time": "2018-06-15T00:07:49.000Z",
+      "handle": "@nantyaraidol",
+      "text": "素で忘れてた。16日沼津よろぽこ！\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1007431340575186944",
+      "time": "2018-06-15T01:15:23.000Z",
+      "handle": "@nantyaraidol",
+      "text": "なんちゃらなSpotify 008\n「東京バレエ」 土屋昌巳\nhttps://t.co/eVzDP6H6lx\n 東京バレエ みんな演じてる\n それぞれの 夜と朝 踊りながら",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1007432426958741506",
+      "time": "2018-06-15T01:19:42.000Z",
+      "handle": "@nantyaraidol",
+      "text": "初出しのカバー3曲もやりますけんねー。\nQuoted media: https://pbs.twimg.com/media/DfrZaAkUwAAYdsv.jpg | https://pbs.twimg.com/media/DfrZaZ6VMAASI4T.jpg\nMedia: (none)",
+      "imgs": [
+        "https://pbs.twimg.com/media/DfrZaAkUwAAYdsv.jpg",
+        "https://pbs.twimg.com/media/DfrZaZ6VMAASI4T.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1007524898175049728",
+      "time": "2018-06-15T07:27:09.000Z",
+      "handle": "@samami27",
+      "text": "明日は沼津でベストテン！世代じゃないけど、知ってる曲ばかりだな〜懐かしいな〜と思いました！受精すらしてないのにね！ぽよと会えるので楽しみうれしい。チケットはチケットぴあにて！\n画像: https://pbs.twimg.com/media/DftyjOAV4AA6f62.jpg\n画像: https://pbs.twimg.com/media/DftyjN_UcAAyx_G.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DftyjOAV4AA6f62.jpg",
+        "https://pbs.twimg.com/media/DftyjN_UcAAyx_G.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1007525185786793984",
+      "time": "2018-06-15T07:28:17.000Z",
+      "handle": "@samami27",
+      "text": "最初で最後のカバーですけんねー。\n画像: (なし / QTあり)",
       "imgs": [],
       "isReply": false
     },
@@ -763,6 +1737,77 @@
       "isReply": false
     },
     {
+      "url": "/samami27/status/1007776221470396416",
+      "time": "2018-06-16T00:05:49.000Z",
+      "handle": "@samami27",
+      "text": "おはようございます！\n頭痛くて全然眠れなくて焦ったけど、起きたら頭痛くなくなっててとてもよい朝！！\n画像: https://pbs.twimg.com/media/DfxXIFzV4AAzDen.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DfxXIFzV4AAzDen.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1007804899990487040",
+      "time": "2018-06-16T01:59:46.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "これは旅行だ。ってかこの距離を毎週のように来てるぽよマジやべえな",
+      "imgs": [
+        "https://pbs.twimg.com/media/DfxxNFEUYAAHGcn.jpg",
+        "https://pbs.twimg.com/media/DfxxNdtV4AAo_CB.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1007806136370647040",
+      "time": "2018-06-16T02:04:41.000Z",
+      "handle": "@samami27",
+      "text": "なんちゃらのライブは16時からでおじゃる！\n画像: https://pbs.twimg.com/media/DfxyVaqUwAAcHJa.jpg\n画像: https://pbs.twimg.com/media/DfxyVauVMAE1IKe.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DfxyVaqUwAAcHJa.jpg",
+        "https://pbs.twimg.com/media/DfxyVauVMAE1IKe.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1007830538114101248",
+      "time": "2018-06-16T03:41:39.000Z",
+      "handle": "@samami27",
+      "text": "ノリさんのかき氷屋さんの隣の階段登ったところです◎駐車場は目の前らへんにあったよ！\n画像: https://pbs.twimg.com/media/DfyIhhgV4AAt-kp.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DfyIhhgV4AAt-kp.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1007836077510443008",
+      "time": "2018-06-16T04:03:40.000Z",
+      "handle": "@nantyaraidol",
+      "text": "フライング気味に言いますが年内また秋田行くぞ！\nMedia: https://pbs.twimg.com/media/DfyNi5LUwAEizqM.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DfyNi5LUwAEizqM.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1007842958605877249",
+      "time": "2018-06-16T04:31:00.000Z",
+      "handle": "@samami27",
+      "text": "写真を加工しまくってみた。\n画像: https://pbs.twimg.com/media/DfyTyaXV4AA5bb8.jpg\n画像: https://pbs.twimg.com/media/DfyTyaPUEAA0lzI.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DfyTyaXV4AA5bb8.jpg",
+        "https://pbs.twimg.com/media/DfyTyaPUEAA0lzI.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1007843166244892672",
+      "time": "2018-06-16T04:31:50.000Z",
+      "handle": "@nantyaraidol",
+      "text": "ババヘラアイスは、婆アによるのかもしれんがウマくはなかったな。\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
       "url": "/nantyaraidol/status/1007844344055730176",
       "time": "2018-06-16T04:36:31.000Z",
       "handle": "@nantyaraidol",
@@ -803,6 +1848,14 @@
       "isReply": false
     },
     {
+      "url": "/nantyaraidol/status/1008007946662318080",
+      "time": "2018-06-16T15:26:37.000Z",
+      "handle": "@nantyaraidol",
+      "text": "ヘリウムでエンドレスレインするしか\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
       "url": "/samami27/status/1008015409365204993",
       "time": "2018-06-16T15:56:16.000Z",
       "handle": "@samami27",
@@ -835,11 +1888,182 @@
       "isReply": false
     },
     {
+      "url": "/nantyaraidol/status/1008225821725638656",
+      "time": "2018-06-17T05:52:22.000Z",
+      "handle": "@nantyaraidol",
+      "text": "なんちゃらなSpotify 010\n「メンフィスブルースアゲイン」 和久井光司\nhttps://t.co/o2LvO4mPjw",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1008226786327425024",
+      "time": "2018-06-17T05:56:12.000Z",
+      "handle": "@nantyaraidol",
+      "text": "検索しても聴くことができない名曲。\nというのは一体どれくらいあるのか。\nでも少なくとも、その中のひとつが、\n和久井光司が在籍していたスクリーンというバンドの、「ライフゴーズオン」。\nなんちゃらが活動最後に歌うのはこの曲と、ずっと前から決めてる。\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1008234168264810497",
+      "time": "2018-06-17T06:25:32.000Z",
+      "handle": "@samami27",
+      "text": "My sleep analysis on 2018/06/17\n#SleepMeister https://t.co/M4dB6BSZN7\nすごーく睡眠効率がよくて最高〜\n画像: https://pbs.twimg.com/media/Df33odfV4AE_PAp.png",
+      "imgs": [
+        "https://pbs.twimg.com/media/Df33odfV4AE_PAp.png"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1008244688921358336",
+      "time": "2018-06-17T07:07:20.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "イメクラっぽいって騒いでたせいで服きた自撮りが無かった。腹筋割れてね？撮影会ありがとう！次はゴールデンエッグに向かうぞ〜今日は楽しい日だなあ",
+      "imgs": [
+        "https://pbs.twimg.com/media/Df4BMUKU0AAlSA7.jpg",
+        "https://pbs.twimg.com/media/Df4BMozVAAAD-xY.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1008262384253714432",
+      "time": "2018-06-17T08:17:39.000Z",
+      "handle": "@nantyaraidol",
+      "text": "https://t.co/zyqywoQE2i\nMedia: video https://video.twimg.com/ext_tw_video/1008262341350191104/pu/vid/720x1280/XUCcpnb4FepWikea.mp4?tag=3",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1008269365802774529",
+      "time": "2018-06-17T08:45:24.000Z",
+      "handle": "@samami27",
+      "text": "本日、新宿ゴールデンエッグ！なんと分煙になったらしい〜\n18:00オープン、チケット2000円+ドリンク代で入れますゆえ〜何卒〜\n画像: https://pbs.twimg.com/media/Df4Xo99UYAAmNBy.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/Df4Xo99UYAAmNBy.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1008287334238834688",
+      "time": "2018-06-17T09:56:48.000Z",
+      "handle": "@nantyaraidol",
+      "text": "はじまりました！\n今日も今日とて怒涛のフルハウス！\nMedia: https://pbs.twimg.com/media/Df4n-5YVMAAHQMl.jpg | https://pbs.twimg.com/media/Df4n-5YV4AAvyuO.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/Df4n-5YVMAAHQMl.jpg",
+        "https://pbs.twimg.com/media/Df4n-5YV4AAvyuO.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1008288281488846848",
+      "time": "2018-06-17T10:00:34.000Z",
+      "handle": "@nantyaraidol",
+      "text": "双葉舞ちゃん！\nMedia: https://pbs.twimg.com/media/Df4o19mVAAAtQsl.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/Df4o19mVAAAtQsl.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1008292620831842304",
+      "time": "2018-06-17T10:17:48.000Z",
+      "handle": "@nantyaraidol",
+      "text": "雑に露出度あげてくヘラドル\nMedia: https://pbs.twimg.com/media/Df4syWmU8AEVrUL.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/Df4syWmU8AEVrUL.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1008294286519988225",
+      "time": "2018-06-17T10:24:25.000Z",
+      "handle": "@nantyaraidol",
+      "text": "ドクガエラップ！\nMedia: https://pbs.twimg.com/media/Df4uTXnVMAE9h6l.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/Df4uTXnVMAE9h6l.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1008296137399267328",
+      "time": "2018-06-17T10:31:47.000Z",
+      "handle": "@nantyaraidol",
+      "text": "ヘラドルとAV女優に出番挟まれてもいつもどおりキラキラおどるぽよ！\nMedia: https://pbs.twimg.com/media/Df4v_KZUEAEzdfy.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/Df4v_KZUEAEzdfy.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1008320413951094784",
+      "time": "2018-06-17T12:08:15.000Z",
+      "handle": "@nantyaraidol",
+      "text": "なんちゃらアイドル、脱がされて鞭うたれとる。\nMedia: https://pbs.twimg.com/media/Df5F_VuUEAAI8Eo.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/Df5F_VuUEAAI8Eo.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1008324734444949505",
+      "time": "2018-06-17T12:25:25.000Z",
+      "handle": "@nantyaraidol",
+      "text": "https://t.co/E2j6DYVyn3\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1008329148056522753",
+      "time": "2018-06-17T12:42:57.000Z",
+      "handle": "@nantyaraidol",
+      "text": "今日はステキなライブをありがたビームヾ( ˃̶᷇ ‧̫ ˂̶᷆ )ノ\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1008363697763303426",
+      "time": "2018-06-17T15:00:14.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "新宿歌舞伎町なんちゃら主催のゴールデンエッグありがとうございました！カオスな空間でしたね....たくさん笑った.....！みんなと楽しい気持ちを共有して、仲良くなれたと思います。はっぴー！",
+      "imgs": [
+        "https://pbs.twimg.com/media/Df5tbwyUcAAz-4K.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1008368638833782784",
+      "time": "2018-06-17T15:19:52.000Z",
+      "handle": "@samami27",
+      "text": "本日、なんちゃら主催QuinQフェスでした！お仕事帰りの人もお休みの人も、現場回してくれた人も来てくれてみてくれてありがとうございました！今日超楽しくてえもくなっちゃってるよ！ほにゃにゃ写真は歌舞伎町だからバニラTシャツきたなんちゃらと、よくわからない予測変換のスクショです！\n画像: https://pbs.twimg.com/media/Df5x7YRUwAA_r52.jpg\n画像: https://pbs.twimg.com/media/Df5x7YPU8AMuhv1.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/Df5x7YRUwAA_r52.jpg",
+        "https://pbs.twimg.com/media/Df5x7YPU8AMuhv1.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1008388557839335424",
+      "time": "2018-06-17T16:39:01.000Z",
+      "handle": "@nantyaraidol",
+      "text": "なんちゃらアイドルの妹分がぽよだとして、\nQ太郎の弟分はやまだだなの？\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
       "url": "/nantyaraidol/status/1008396124590260224",
       "time": "2018-06-17T17:09:05.000Z",
       "handle": "@nantyaraidol",
       "text": "金卵ライブ、ほんと毎回しょうもないんだけど、いつだって笑いすぎて寝る前アゴが痛いんよ。\nありがとうございました！",
       "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1008398465494237184",
+      "time": "2018-06-17T17:18:23.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "女王様が手首に蝋燭垂らしてくれたけど、思ってたより熱くてほえ〜となりました。",
+      "imgs": [
+        "https://pbs.twimg.com/media/Df6MN8zUYAAf-8S.jpg"
+      ],
       "isReply": false
     },
     {
@@ -880,6 +2104,107 @@
       "handle": "@nantyaraidol",
       "text": "ありがたビームヾ( ˃̶᷇ ‧̫ ˂̶᷆ )ノ",
       "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1008565880110764032",
+      "time": "2018-06-18T04:23:38.000Z",
+      "handle": "@nantyaraidol",
+      "text": "うっちのおかげでなんちゃらも楽しく過ごせたよ。写真、ありがたビームヾ( ˃̶᷇ ‧̫ ˂̶᷆ )ノ\nQuoted media: https://pbs.twimg.com/media/Df8ketUUYAAa8D8.jpg | https://pbs.twimg.com/media/Df8kfOlVQAAJN_P.jpg | https://pbs.twimg.com/media/Df8kfquU8AAd_2C.jpg | https://pbs.twimg.com/media/Df8kgDtVAAA3xVB.jpg\nMedia: (none)",
+      "imgs": [
+        "https://pbs.twimg.com/media/Df8ketUUYAAa8D8.jpg",
+        "https://pbs.twimg.com/media/Df8kfOlVQAAJN_P.jpg",
+        "https://pbs.twimg.com/media/Df8kfquU8AAd_2C.jpg",
+        "https://pbs.twimg.com/media/Df8kgDtVAAA3xVB.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1008575198591741952",
+      "time": "2018-06-18T05:00:40.000Z",
+      "handle": "@nantyaraidol",
+      "text": "お次はこれ！",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1008576324607172608",
+      "time": "2018-06-18T05:05:08.000Z",
+      "handle": "@nantyaraidol",
+      "text": "0813ワンマンチケット、\n明日も販売いたします。あと７枚！\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1008611877432115200",
+      "time": "2018-06-18T07:26:25.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "明日の頭おかしいイベントの告知です。2500円で最大5時間45分飲み放題できるので、ただ安く飲みたい人もなんちゃらアイドルを言い訳に、そして肴に飲むために来たらいいと思います！飲めない人もこんなに楽しいメンツを一気に見れてお得だよ！私も飲み放題付いてるようなので飲みまくりますね。",
+      "imgs": [
+        "https://pbs.twimg.com/media/Df9PJNkV4AA09zl.jpg",
+        "https://pbs.twimg.com/media/Df9PJjuVMAAwCLT.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1008619106013143040",
+      "time": "2018-06-18T07:55:08.000Z",
+      "handle": "@samami27",
+      "text": "なんか鬱々としてきたから辛いつけ麺食べにきた。食べきれるのだろうか。\n画像: (なし)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1008659146047012865",
+      "time": "2018-06-18T10:34:15.000Z",
+      "handle": "@nantyaraidol",
+      "text": "きもくないよ🤔\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1008659443922321408",
+      "time": "2018-06-18T10:35:26.000Z",
+      "handle": "@nantyaraidol",
+      "text": "やるぞおれはやるぞおまえおれは！\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1008661326292348928",
+      "time": "2018-06-18T10:42:54.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "生まれて初めて愛玉子食べた 美味い",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1008685000076562432",
+      "time": "2018-06-18T12:16:59.000Z",
+      "handle": "@samami27",
+      "text": "なんかちゃんとリプ見れないな〜不便〜\n画像: (なし)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1008685315186294784",
+      "time": "2018-06-18T12:18:14.000Z",
+      "handle": "@samami27",
+      "text": "休みなのでひたすら漫画読む日にしました。\n画像: https://pbs.twimg.com/media/Df-R8ZQUcAA5PZA.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/Df-R8ZQUcAA5PZA.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1008685834680143874",
+      "time": "2018-06-18T12:20:18.000Z",
+      "handle": "@samami27",
+      "text": "明日はめちゃくちゃ飲める日なので、めちゃくちゃ飲んだり飲まなかったりしながらライブ観たりしてくれ〜わ〜見覚えありまくり〜！ってな対バンであげ⤴︎⤴︎\n画像: https://pbs.twimg.com/media/Df-SagwUYAA-Ma5.jpg\n画像: https://pbs.twimg.com/media/Df-SaguUwAEwevy.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/Df-SagwUYAA-Ma5.jpg",
+        "https://pbs.twimg.com/media/Df-SaguUwAEwevy.jpg"
+      ],
       "isReply": false
     },
     {
@@ -963,10 +2288,137 @@
       "isReply": false
     },
     {
+      "url": "/samami27/status/1008912548140183552",
+      "time": "2018-06-19T03:21:10.000Z",
+      "handle": "@samami27",
+      "text": "昨日寝る前に思ったんですが、飲み放題だろうがなかろうが、わたしは心の海賊を飼ってるから「ガハハハ！飲み尽くすぞ！野郎ども！！！」って気持ちになるなぁ。本日イカれた（褒め言葉）飲み放題ライブ！\n画像: https://pbs.twimg.com/media/DgBgnNGVAAEDfcq.jpg\n画像: https://pbs.twimg.com/media/DgBgnNFV4AEBWgC.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DgBgnNGVAAEDfcq.jpg",
+        "https://pbs.twimg.com/media/DgBgnNFV4AEBWgC.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1008953131240079360",
+      "time": "2018-06-19T06:02:26.000Z",
+      "handle": "@samami27",
+      "text": "今日まじビール日和じゃん。鬼畜室内ビアガーデンしようぜ！新宿ヘッドパワーにて！\n画像: https://pbs.twimg.com/media/DgCFhWnUYAEAZ3M.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DgCFhWnUYAEAZ3M.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1008968687825457152",
+      "time": "2018-06-19T07:04:15.000Z",
+      "handle": "@samami27",
+      "text": "なんちゃらは19:35から宴るよ！\n画像: (なし / QTあり)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1008979951809323008",
+      "time": "2018-06-19T07:49:01.000Z",
+      "handle": "@samami27",
+      "text": "オープンしましたー！みんな飲め踊れ〜〜〜！！\n動画: https://video.twimg.com/ext_tw_video/1008979893508378626/pu/vid/1280x720/l3IAfEbWa7jzeCmK.mp4?tag=3",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1008980302734082048",
+      "time": "2018-06-19T07:50:24.000Z",
+      "handle": "@samami27",
+      "text": "#御茶海けん玉部活動報告\n動画: https://video.twimg.com/ext_tw_video/1008980252654108672/pu/vid/720x1280/lzhzJUJWzj7q4IE_.mp4?tag=3",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1008982210685222912",
+      "time": "2018-06-19T07:57:59.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "もう飲んでるよ！本日は新宿ヘッドパワー、19:35からなんたらアイドルです！東新宿駅が近いけど、頑張れば新宿からも大久保からも高田馬場からも歩けるよ！美味しいフードもあるとのこと！",
+      "imgs": [
+        "https://pbs.twimg.com/media/DgCf9cmU0AAG2Hf.jpg",
+        "https://pbs.twimg.com/media/DgCf93RUYAAhjQk.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1009058411105808385",
+      "time": "2018-06-19T13:00:47.000Z",
+      "handle": "@nantyaraidol",
+      "text": "お次はこれ！",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1009059630293454848",
+      "time": "2018-06-19T13:05:37.000Z",
+      "handle": "@nantyaraidol",
+      "text": "熱帯魚飼えない男のblues\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1009060672477409280",
+      "time": "2018-06-19T13:09:46.000Z",
+      "handle": "@nantyaraidol",
+      "text": "飲み放題、あと20分！ラストスパート、みんな踊れー！\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1009061770642665472",
+      "time": "2018-06-19T13:14:08.000Z",
+      "handle": "@nantyaraidol",
+      "text": "めっちゃ楽しみ。\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1009062176928067585",
+      "time": "2018-06-19T13:15:45.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "まだ飲んでるよ！人多いな",
+      "imgs": [
+        "https://pbs.twimg.com/media/DgDosknUwAI_Kk5.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1009082929975255041",
+      "time": "2018-06-19T14:38:13.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "新宿鬼畜大宴会ありがとうございました！！！次は新松戸FIREBIRDですよろしくね！！！",
+      "imgs": [
+        "https://pbs.twimg.com/media/DgD7khHVQAEYu2l.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1009089539007135744",
+      "time": "2018-06-19T15:04:28.000Z",
+      "handle": "@samami27",
+      "text": "初めてのヘッドパワー！ダンスダンスダンスに酒と愛執と旅立ちって感じで共有しちゃったね色々。酔っ払って前々からの謎と因縁（個人的すぎる）が解消されて最高でした。許してくれるバンドマンかっこよすぎて足向けて寝れない。今日は寝れない楽しい夜だったから。\n画像: https://pbs.twimg.com/media/DgEBlBRUwAAq5_a.jpg\n画像: https://pbs.twimg.com/media/DgEBlBRUYAAOeU3.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DgEBlBRUwAAq5_a.jpg",
+        "https://pbs.twimg.com/media/DgEBlBRUYAAOeU3.jpg"
+      ],
+      "isReply": false
+    },
+    {
       "url": "/nantyaraidol/status/1009095207969701888",
       "time": "2018-06-19T15:27:00.000Z",
       "handle": "@nantyaraidol",
       "text": "今日、イベント自体は最高だったのだけれど、押して物販無くすてのは最低だと思う。特に今回は参加費徴収してるブッキングなんだから、ちゃんとそのぶん回収する機会つくらないと。時間ないなら平行物販を仕切るとかも出来たはず。アイドルは、ステージだけで輝いてりゃいいそんな稼業じゃないんよ。",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1009104794558984197",
+      "time": "2018-06-19T16:05:05.000Z",
+      "handle": "@samami27",
+      "text": "ごちした！次のライブは22日の新松戸ファイアーバード！その次は23日のアキバ書店安城店！なんちゃらと修学旅行じゃん！じゃん！！わたしは明日あおはるとディズニーです！！\n動画: https://video.twimg.com/ext_tw_video/1009104694646456320/pu/vid/720x1280/WAdcJPG0zT2bvOAv.mp4?tag=3",
       "imgs": [],
       "isReply": false
     },
@@ -1010,11 +2462,138 @@
       "isReply": false
     },
     {
+      "url": "/nantyaraidol/status/1009136779432095744",
+      "time": "2018-06-19T18:12:11.000Z",
+      "handle": "@nantyaraidol",
+      "text": "マミに比べてこの完成度の低さよ。\nQuoted media: https://pbs.twimg.com/media/DgEbrP4UcAExF9Y.jpg\nMedia: (none)",
+      "imgs": [
+        "https://pbs.twimg.com/media/DgEbrP4UcAExF9Y.jpg"
+      ],
+      "isReply": false
+    },
+    {
       "url": "/nantyaraidol/status/1009137024761192448",
       "time": "2018-06-19T18:13:10.000Z",
       "handle": "@nantyaraidol",
       "text": "嫌々やるならもう辞めとる。",
       "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1009245889838235648",
+      "time": "2018-06-20T01:25:45.000Z",
+      "handle": "@nantyaraidol",
+      "text": "ディズニー行くたびに雨降らせるスタイル\nQuoted media video: https://video.twimg.com/ext_tw_video/1009104694646456320/pu/vid/720x1280/WAdcJPG0zT2bvOAv.mp4?tag=3\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1009267663699304448",
+      "time": "2018-06-20T02:52:16.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "おはよ！ディズニー行ってくるね。雨ウケるw",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1009312390444249088",
+      "time": "2018-06-20T05:50:00.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "イエーイディズニー楽し",
+      "imgs": [
+        "https://pbs.twimg.com/media/DgHMQ8NUEAALERZ.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1009323388555255808",
+      "time": "2018-06-20T06:33:42.000Z",
+      "handle": "@samami27",
+      "text": "浮かれてきました！\n画像: https://pbs.twimg.com/media/DgHWQ6-UcAA18Y1.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DgHWQ6-UcAA18Y1.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1009323783738482688",
+      "time": "2018-06-20T06:35:17.000Z",
+      "handle": "@samami27",
+      "text": "読めない\n画像: https://pbs.twimg.com/media/DgHWoDcU8Aci0Nk.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DgHWoDcU8Aci0Nk.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1009325039387197440",
+      "time": "2018-06-20T06:40:16.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "今日の目的9割達成した",
+      "imgs": [
+        "https://pbs.twimg.com/media/DgHXw-aUwAEqI_8.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1009325605437915137",
+      "time": "2018-06-20T06:42:31.000Z",
+      "handle": "@samami27",
+      "text": "うめえ！\n画像: https://pbs.twimg.com/media/DgHYSEgUcAEweKA.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DgHYSEgUcAEweKA.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1009361618747121664",
+      "time": "2018-06-20T09:05:37.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "びっしょびしょ",
+      "imgs": [
+        "https://pbs.twimg.com/media/DgH5BgIVAAAYUsB.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1009383803112980480",
+      "time": "2018-06-20T10:33:46.000Z",
+      "handle": "@samami27",
+      "text": "犬なので肉を食べた！お腹いっぱい！\n画像: https://pbs.twimg.com/media/DgINNzTV4AAQdKh.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DgINNzTV4AAQdKh.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1009392983962054656",
+      "time": "2018-06-20T11:10:15.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "肉食べたので満足度が高いです",
+      "imgs": [
+        "https://pbs.twimg.com/media/DgIVkNsV4AEm6c8.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1009442163703177218",
+      "time": "2018-06-20T14:25:41.000Z",
+      "handle": "@nantyaraidol",
+      "text": "ライブで使おっと。かなりドキドキするフォルムだがや〜！\nMedia: https://pbs.twimg.com/media/DgJCScyWsAA2KUW.jpg | https://pbs.twimg.com/media/DgJCSc1XUAE2hLa.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DgJCScyWsAA2KUW.jpg",
+        "https://pbs.twimg.com/media/DgJCSc1XUAE2hLa.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1009449475729850369",
+      "time": "2018-06-20T14:54:44.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "寿司食べちゃった",
+      "imgs": [
+        "https://pbs.twimg.com/media/DgJI7wVVAAExZhs.jpg"
+      ],
       "isReply": false
     },
     {
@@ -1064,6 +2643,14 @@
       "time": "2018-06-20T17:18:36.000Z",
       "handle": "@samami27",
       "text": "戸塚にヨットスクールあるのだと思っていた…",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1009487645435518976",
+      "time": "2018-06-20T17:26:24.000Z",
+      "handle": "@nantyaraidol",
+      "text": "天才がいた。\nMedia: (none)",
       "imgs": [],
       "isReply": false
     },
@@ -1174,6 +2761,14 @@
       "isReply": false
     },
     {
+      "url": "/nantyaraidol/status/1010055672950448129",
+      "time": "2018-06-22T07:03:33.000Z",
+      "handle": "@nantyaraidol",
+      "text": "こちらこそです！\n売れるかどうか！\nもう絶対無理そうなら言ってくださればその場で引退します！\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
       "url": "/samami27/status/1010057778176483328",
       "time": "2018-06-22T07:11:54.000Z",
       "handle": "@samami27",
@@ -1221,6 +2816,28 @@
       "handle": "@nantyaraidol",
       "text": "【なんちゃら通販部】\n0621までに入金済のかた、全て発送いたしました。\nワンマンチケット、ROMその他、お安くなってますので通販ページ是非見てください！",
       "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1010164079174905857",
+      "time": "2018-06-22T14:14:19.000Z",
+      "handle": "@samami27",
+      "text": "受験勉強\n画像: https://pbs.twimg.com/media/DgTS3XCU0AAvZ2q.jpg\n画像: https://pbs.twimg.com/media/DgTS3XBU8AA6SHQ.jpg\n画像: https://pbs.twimg.com/media/DgTS3XEUEAAcGXR.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DgTS3XCU0AAvZ2q.jpg",
+        "https://pbs.twimg.com/media/DgTS3XBU8AA6SHQ.jpg",
+        "https://pbs.twimg.com/media/DgTS3XEUEAAcGXR.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1010164420197011458",
+      "time": "2018-06-22T14:15:40.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "新松戸FIREBIRDありがとうございました！！！なんかMCでも占いの時も下ネタばかり言ってしまったけど許してね⌒_⌒占いによると私は何度も結婚するらしいです。ガチ恋全員と結婚する夢に1歩近づいた。よかったね！",
+      "imgs": [
+        "https://pbs.twimg.com/media/DgTTLebUcAAnvWc.jpg"
+      ],
       "isReply": false
     },
     {
@@ -1291,6 +2908,43 @@
       "imgs": [
         "https://pbs.twimg.com/media/DgVOSqvVQAA4uBf"
       ],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1010325519064227841",
+      "time": "2018-06-23T00:55:49.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "おはようございます！朝からたくさん食べる子ちゃんです。待ってろ愛知〜〜",
+      "imgs": [
+        "https://pbs.twimg.com/media/DgVlq8uUYAAoSWy.jpg",
+        "https://pbs.twimg.com/media/DgVlszgUcAA3apy.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1010375531118804992",
+      "time": "2018-06-23T04:14:33.000Z",
+      "handle": "@nantyaraidol",
+      "text": "https://t.co/mpobFH5KdD\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1010385920338456576",
+      "time": "2018-06-23T04:55:50.000Z",
+      "handle": "@nantyaraidol",
+      "text": "サイン会なう。たくさん来てくれて嬉しい！\nMedia: https://pbs.twimg.com/media/DgWcklhU8AAA13_.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DgWcklhU8AAA13_.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1010422209335050240",
+      "time": "2018-06-23T07:20:02.000Z",
+      "handle": "@nantyaraidol",
+      "text": "https://t.co/9gFIagwEps\nMedia: (none)",
+      "imgs": [],
       "isReply": false
     },
     {
@@ -1450,6 +3104,181 @@
       "isReply": false
     },
     {
+      "url": "/yokuwakan_nai/status/1010700792360103936",
+      "time": "2018-06-24T01:47:01.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "これが名古屋名物あんかけスパか〜",
+      "imgs": [
+        "https://pbs.twimg.com/media/Dga7AnZVAAA3l56.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1010738772311326720",
+      "time": "2018-06-24T04:17:56.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "天気いい〜！！",
+      "imgs": [
+        "https://pbs.twimg.com/media/Dgbdh-VUYAAwaYn.jpg",
+        "https://pbs.twimg.com/media/DgbdixFVAAIKAGF.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1010739938248101888",
+      "time": "2018-06-24T04:22:34.000Z",
+      "handle": "@nantyaraidol",
+      "text": "（なんちゃらアイドル名古屋徘徊中…）\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1010741069951090688",
+      "time": "2018-06-24T04:27:04.000Z",
+      "handle": "@nantyaraidol",
+      "text": "なんちゃらを名古屋でみかけたら、ボマーみーつけ。って後ろからあたまをはたいてください。もれなく3000ガバスだよ！\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1010744676863782912",
+      "time": "2018-06-24T04:41:24.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "ヒャー！ウミャー！",
+      "imgs": [
+        "https://pbs.twimg.com/media/Dgbi69mUcAAPRcu.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1010745075008077825",
+      "time": "2018-06-24T04:42:59.000Z",
+      "handle": "@samami27",
+      "text": "これがうみゃ〜です！🐡\n画像: https://pbs.twimg.com/media/DgbjSOtUEAAmFEF.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DgbjSOtUEAAmFEF.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1010747566709829633",
+      "time": "2018-06-24T04:52:53.000Z",
+      "handle": "@samami27",
+      "text": "シャチホコに浮かれた人です丸本殿\n画像: https://pbs.twimg.com/media/Dgblii8UEAAvXrK.jpg\n画像: https://pbs.twimg.com/media/Dgblii4UwAYpMaJ.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/Dgblii8UEAAvXrK.jpg",
+        "https://pbs.twimg.com/media/Dgblii4UwAYpMaJ.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1010749232410603520",
+      "time": "2018-06-24T04:59:30.000Z",
+      "handle": "@samami27",
+      "text": "頭はたき代5000ガバスだよ！\n画像: (なし / QTあり)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1010750489875529729",
+      "time": "2018-06-24T05:04:30.000Z",
+      "handle": "@samami27",
+      "text": "天守閣の石垣がポリゴン化してた。\n画像: https://pbs.twimg.com/media/DgboNPuVMAAxPst.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DgboNPuVMAAxPst.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1010751628884860928",
+      "time": "2018-06-24T05:09:01.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "名古屋城を後にしたなんちゃらアイドルですが次はどこに行くでしょーうか！当たった人にはお土産あげます！",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1010772908606566400",
+      "time": "2018-06-24T06:33:35.000Z",
+      "handle": "@samami27",
+      "text": "めっ外\n画像: https://pbs.twimg.com/media/Dgb8mQZUEAAwh45.jpg\n画像: https://pbs.twimg.com/media/Dgb8mQdU8AIm85s.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/Dgb8mQZUEAAwh45.jpg",
+        "https://pbs.twimg.com/media/Dgb8mQdU8AIm85s.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1010800292835684352",
+      "time": "2018-06-24T08:22:24.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "ドドン",
+      "imgs": [
+        "https://pbs.twimg.com/media/DgcVgDzVMAElTja.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1010811352779087872",
+      "time": "2018-06-24T09:06:21.000Z",
+      "handle": "@samami27",
+      "text": "帰るぞな〜ありがとう愛知県〜\n画像: https://pbs.twimg.com/media/Dgcfj4BVQAAVEb3.jpg\n画像: https://pbs.twimg.com/media/Dgcfj32UcAAeENW.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/Dgcfj4BVQAAVEb3.jpg",
+        "https://pbs.twimg.com/media/Dgcfj32UcAAeENW.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1010904952875520001",
+      "time": "2018-06-24T15:18:17.000Z",
+      "handle": "@samami27",
+      "text": "悲しい。無理。ってなったけど、結局人は死んだら骨になるんだし余裕じゃね？となった。前向き〜\n画像: https://pbs.twimg.com/media/Dgd0sXTVMAEWmYO.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/Dgd0sXTVMAEWmYO.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1010905210250657792",
+      "time": "2018-06-24T15:19:18.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "名古屋観光楽しかったなあ〜！無事帰宅いたしました。荷物の片付けしてたら鞄から“オトナのおもちゃ”がゴロゴロ出てきて笑っちゃいました。(あきば書店さんに頂いた) またそう遠くないうちに行けるといいな...名古屋、今日行けなかったけど行きたいとこまだあるし.....",
+      "imgs": [
+        "https://pbs.twimg.com/media/Dgd07QlUcAE1sL8.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1010909012961841152",
+      "time": "2018-06-24T15:34:25.000Z",
+      "handle": "@samami27",
+      "text": "写真は本文とはなんら関係のない、きれいに撮ってもらえた写真です◎\n画像: (なし / QTあり)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1010909254507610112",
+      "time": "2018-06-24T15:35:22.000Z",
+      "handle": "@samami27",
+      "text": "これもね、好き。\n3次元で楽しんでる感じある。z軸\n画像: https://pbs.twimg.com/media/Dgd4mtqVMAAAtaa.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/Dgd4mtqVMAAAtaa.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1010911654932987904",
+      "time": "2018-06-24T15:44:55.000Z",
+      "handle": "@samami27",
+      "text": "帰って寝っ転がって病んだけど、昨日の楽しい写真と動画みて復活〜🙏\nおとなのおもちゃ、略しておとちゃがおしゃれなデザインですごいなーとなってる！一緒に頑張ってくれたマミサポーターさんきゅう。また愛知行きたいな〜\n次は矢場とん行ってみたい！\n画像: https://pbs.twimg.com/media/Dgd6yVtUYAArS-W.jpg\n画像: https://pbs.twimg.com/media/Dgd6yVfUwAAnjMV.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/Dgd6yVtUYAArS-W.jpg",
+        "https://pbs.twimg.com/media/Dgd6yVfUwAAnjMV.jpg"
+      ],
+      "isReply": false
+    },
+    {
       "url": "/nantyaraidol/status/1010916943279185920",
       "time": "2018-06-24T16:05:55.000Z",
       "handle": "@nantyaraidol",
@@ -1606,6 +3435,17 @@
       "isReply": false
     },
     {
+      "url": "/nantyaraidol/status/1011286071592640512",
+      "time": "2018-06-25T16:32:42.000Z",
+      "handle": "@nantyaraidol",
+      "text": "29日のOKFKライブ、\n来場者先着30名様になんちゃら未発売カバーシングルをプレゼント！\n今回は、\n近田春夫のカバー、\n「星くず兄弟の伝説」です！\nトラックから作り直し、今年レコーディングしたバージョンです！\nここ以外では手に入りません！ゲットしに恋！\nMedia: https://pbs.twimg.com/media/DgjPNKNUcAEMnPh.jpg | https://pbs.twimg.com/media/DgjPNKOU0AAE7x9.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DgjPNKNUcAEMnPh.jpg",
+        "https://pbs.twimg.com/media/DgjPNKOU0AAE7x9.jpg"
+      ],
+      "isReply": false
+    },
+    {
       "url": "/samami27/status/1011305407858425858",
       "time": "2018-06-25T17:49:33.000Z",
       "handle": "@samami27",
@@ -1658,6 +3498,110 @@
       "time": "2018-06-26T18:22:40.000Z",
       "handle": "@samami27",
       "text": "明日は三茶ヘヴンスドア！\n危ない女と危ない男感ある（バンド名をみて勝手に想像）毎サプ、ひつじちゃん、なんちゃらは野良犬だから！わんわんお！これも勝手に言ってるけど！なんちゃらは20:20から！オリンピック時刻！",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1011829042301960192",
+      "time": "2018-06-27T04:30:17.000Z",
+      "handle": "@nantyaraidol",
+      "text": "ライブに向けてうしにくパワーを注入〜\nMedia: https://pbs.twimg.com/media/Dgq9IxzVMAADNHI.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/Dgq9IxzVMAADNHI.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1011829702724542471",
+      "time": "2018-06-27T04:32:54.000Z",
+      "handle": "@nantyaraidol",
+      "text": "フォロワー3000人突破！\n記念すべき3000人目は、\n芸人の塩見フリーダムさん！\nなんなんそれパーティ(੭ु ˃̶͈̀ ω ˂̶͈́)੭ु\nMedia: https://pbs.twimg.com/media/Dgq9vV_UYAE3XF8.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/Dgq9vV_UYAE3XF8.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1011860337006559232",
+      "time": "2018-06-27T06:34:38.000Z",
+      "handle": "@samami27",
+      "text": "本日！三軒茶屋ヘヴンスドアだよ！19時スタート！こんにちは東京〜\n画像: (なし / QTあり)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1011928534925766656",
+      "time": "2018-06-27T11:05:38.000Z",
+      "handle": "@nantyaraidol",
+      "text": "ほんとテレビ屋はクソみたいな要求を平気でしてくる。\n金か、\n熱意か、\n愛想か、\n一つでいいからぶら下げて恋な？\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1011952627326701568",
+      "time": "2018-06-27T12:41:22.000Z",
+      "handle": "@nantyaraidol",
+      "text": "おつぎはこれ！",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1011952857786929152",
+      "time": "2018-06-27T12:42:17.000Z",
+      "handle": "@nantyaraidol",
+      "text": "プレゼントもありますけんねー。\nQuoted media: https://pbs.twimg.com/media/DgjPNKNUcAEMnPh.jpg | https://pbs.twimg.com/media/DgjPNKOU0AAE7x9.jpg\nMedia: (none)",
+      "imgs": [
+        "https://pbs.twimg.com/media/DgjPNKNUcAEMnPh.jpg",
+        "https://pbs.twimg.com/media/DgjPNKOU0AAE7x9.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1011976402059444224",
+      "time": "2018-06-27T14:15:50.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "三茶ヘブンスせんきゅうでした！私たちなんちゃらアイドルです！って言ったら、ワンチャンアイドル？って聞き返されたよ！ワンチャンなんかで終わらせねえぜ！毎日毎日ビールがうまい！ひつじちゃんが白かったり赤かったりして凄かった！",
+      "imgs": [
+        "https://pbs.twimg.com/media/DgtDKHYVMAAvoRl.jpg",
+        "https://pbs.twimg.com/media/DgtDKr5VAAA738x.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1011985842556923910",
+      "time": "2018-06-27T14:53:21.000Z",
+      "handle": "@samami27",
+      "text": "毎日が本番！なんちゃらアイドルです！暑くてビールうまいし、ライブハウスはやたら飲めちゃうからライブハウスは夏なのかも！ひつじちゃんがインスタ映えてた！\n画像: https://pbs.twimg.com/media/DgtLwI9UwAIV9U2.jpg\n画像: https://pbs.twimg.com/media/DgtLwJDVMAAs8qm.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DgtLwI9UwAIV9U2.jpg",
+        "https://pbs.twimg.com/media/DgtLwJDVMAAs8qm.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1012037749946249216",
+      "time": "2018-06-27T18:19:36.000Z",
+      "handle": "@nantyaraidol",
+      "text": "ファミマのりんごジュース、上から見たら可愛いかよー！\nMedia: https://pbs.twimg.com/media/Dgt6902UwAATGcJ.jpg | https://pbs.twimg.com/media/Dgt6902VAAE8Bcc.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/Dgt6902UwAATGcJ.jpg",
+        "https://pbs.twimg.com/media/Dgt6902VAAE8Bcc.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1012037961364324352",
+      "time": "2018-06-27T18:20:27.000Z",
+      "handle": "@samami27",
+      "text": "内臓の調子悪くて寝れなかったら、かわいいのきたからかわいくなって大丈夫になってきた。おやすぴ\n画像: (なし / QTあり)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1012055171017334784",
+      "time": "2018-06-27T19:28:50.000Z",
+      "handle": "@nantyaraidol",
+      "text": "なんちゃらなSpotify 016\n「マーラーズパーラー」 PANTA\nhttps://t.co/1OtkMXJJnw",
       "imgs": [],
       "isReply": false
     },
@@ -1720,6 +3664,14 @@
       "isReply": false
     },
     {
+      "url": "/nantyaraidol/status/1012126406879244288",
+      "time": "2018-06-28T00:11:54.000Z",
+      "handle": "@nantyaraidol",
+      "text": "サンクチュアリの新装版は、元虹コンPがコメントを寄せていて胸が熱いです！\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
       "url": "/yokuwakan_nai/status/1012205251540029440",
       "time": "2018-06-28T05:25:12.000Z",
       "handle": "@yokuwakan_nai",
@@ -1751,6 +3703,24 @@
       "handle": "@samami27",
       "text": "https://instagram.com/tokyopancakeradio/_hl_ja\nインスタライブもやってます！",
       "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1012221251962617857",
+      "time": "2018-06-28T06:28:47.000Z",
+      "handle": "@nantyaraidol",
+      "text": "クレイジーダイヤモンド！\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1012238121549746177",
+      "time": "2018-06-28T07:35:49.000Z",
+      "handle": "@nantyaraidol",
+      "text": "さくらんぼ酒、ウマそうな気配してる。\nMedia: https://pbs.twimg.com/media/DgwxNH6UcAAG1Nd.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/DgwxNH6UcAAG1Nd.jpg"
+      ],
       "isReply": false
     },
     {
@@ -1886,6 +3856,42 @@
       "isReply": false
     },
     {
+      "url": "/nantyaraidol/status/1012494538290524162",
+      "time": "2018-06-29T00:34:43.000Z",
+      "handle": "@nantyaraidol",
+      "text": "よろしくおねさす！\nQuoted media: https://pbs.twimg.com/media/Dg0OBToUcAIXmlo.jpg\nMedia: (none)",
+      "imgs": [
+        "https://pbs.twimg.com/media/Dg0OBToUcAIXmlo.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1012539119199666176",
+      "time": "2018-06-29T03:31:52.000Z",
+      "handle": "@nantyaraidol",
+      "text": "こいついっつも埋まり直してんな\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1012539580505964546",
+      "time": "2018-06-29T03:33:42.000Z",
+      "handle": "@nantyaraidol",
+      "text": "（なんちゃらアイドル起床中）\nMedia: (none)",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/yokuwakan_nai/status/1012542352882143234",
+      "time": "2018-06-29T03:44:43.000Z",
+      "handle": "@yokuwakan_nai",
+      "text": "本日はOKFKこと大田区蒲田復興協会のライブです！今日も今日とて蒲田を復興させまくるぞ。来てくれ〜、終わったあとはみんなで餃子食べよね。",
+      "imgs": [
+        "https://pbs.twimg.com/media/Dg1F5iLVQAAbL23.jpg"
+      ],
+      "isReply": false
+    },
+    {
       "url": "/yokuwakan_nai/status/1012544658184916992",
       "time": "2018-06-29T03:53:53.000Z",
       "handle": "@yokuwakan_nai",
@@ -1917,6 +3923,14 @@
       "time": "2018-06-29T08:16:02.000Z",
       "handle": "@nantyaraidol",
       "text": "思い出になりたい。",
+      "imgs": [],
+      "isReply": false
+    },
+    {
+      "url": "/nantyaraidol/status/1012610875511803905",
+      "time": "2018-06-29T08:17:00.000Z",
+      "handle": "@nantyaraidol",
+      "text": "七転び七起き（普通）\nMedia: (none)",
       "imgs": [],
       "isReply": false
     },
@@ -2197,6 +4211,24 @@
       "imgs": [
         "https://pbs.twimg.com/media/Dg66ze7UEAAXt3Q"
       ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1012953243343679489",
+      "time": "2018-06-30T06:57:27.000Z",
+      "handle": "@samami27",
+      "text": "気高いワンピースさらっと着れて、胸大きく見える〜すげえぞ〜\n画像: https://pbs.twimg.com/media/Dg67mmNUwAUVm4U.jpg",
+      "imgs": [
+        "https://pbs.twimg.com/media/Dg67mmNUwAUVm4U.jpg"
+      ],
+      "isReply": false
+    },
+    {
+      "url": "/samami27/status/1013012135679414272",
+      "time": "2018-06-30T10:51:28.000Z",
+      "handle": "@samami27",
+      "text": "わーい！！タカアシガニだ！！\n画像: (なし / QTあり)",
+      "imgs": [],
       "isReply": false
     },
     {
