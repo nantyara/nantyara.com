@@ -1033,3 +1033,22 @@
 - id: kamata-newate
   name: 蒲田ニューエイト
   note: ライブスペース（詳細未調査）
+- id: tsuruhashi-section3
+  name: 鶴橋SECTION3
+  url: http://section3.jp/access.html
+  note: 大阪のライブハウス
+- id: sakai-fandango
+  name: 堺ファンダンゴ
+  note: 大阪府堺市のライブハウス（詳細未調査）
+- id: ikebukuro-liveinnrosa
+  name: 池袋LIVE INN ROSA
+  note: ライブハウス（詳細未調査）
+- id: bonobo
+  name: ボノボ
+  note: ライブハウス（所在地未確認）
+- id: hanyu-suikoen
+  name: 羽生水郷公園
+  note: 埼玉県羽生市の公園。「世界キャラクターさみっとin羽生」開催会場
+- id: shinkemigawa-hanazonoza
+  name: 新検見川はなぞの座
+  note: 千葉市花見川区・新検見川のライブスペース。既存登録の「新検見川Swingy」とは別会場
