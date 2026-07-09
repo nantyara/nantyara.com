@@ -999,3 +999,17 @@
   name: OKFK新会場（蒲田・ピアノのある空間）
   note: 会場の正式名称は未確認。大田区蒲田復興協会(OKFK)シリーズの新会場（初出演2019-07-26）。
     正式名称が判明次第、idとnameを差し替えること
+- id: rocinante
+  name: ロシナンテ
+  url: http://shinjuku2rocinante.web.fc2.com
+  note: 新宿二丁目のバー（詳細住所未確認）
+- id: ginza-gin8710
+  name: 銀座GIN8710
+  address: 東京都中央区銀座8-7-10 GIN8710 地下2F
+  note: QuinQモデルによるバー営業企画「QuinQ cafe」の会場。新宿のBarクインク（bar-quinq）とは別会場
+- id: kichijoji-silver-elephant
+  name: 吉祥寺シルバーエレファント
+  note: ライブハウス（詳細未調査）
+- id: chika-tokijo
+  name: 地下闘技場
+  note: 新宿区役所通り付近の地下プロレス会場（詳細未調査、通称「Hプロ」主催）。正式名称・住所は未確認
