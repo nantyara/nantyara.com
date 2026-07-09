@@ -1024,3 +1024,12 @@
 - id: kanda-space-cube
   name: 神田Space CUBE
   note: ライブハウス（詳細未調査）
+- id: studioact-machida
+  name: スタジオアクト町田店
+  note: 町田のレンタルスタジオ（詳細未調査）
+- id: asukayama-park
+  name: 王子飛鳥山公園
+  note: 北区の野外特設舞台。無銭ライブ企画「オレノオゴリ」開催会場
+- id: kamata-newate
+  name: 蒲田ニューエイト
+  note: ライブスペース（詳細未調査）
