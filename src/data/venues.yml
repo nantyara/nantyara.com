@@ -986,3 +986,16 @@
 - id: gallery-hashimoto
   name: ギャラリー橋本
   note: 大田区蒲田復興協会（OKFK）シリーズの会場のひとつ。住所未確認
+- id: jimbocho-gakuya
+  name: 神保町楽屋
+  address: 東京都千代田区神田神保町1-42-7
+  note: 電話03-3518-9496。「LiLee＋phallus定期公演」シリーズの会場
+- id: shinjuku-livefreak
+  name: 新宿Livefreak
+  aliases:
+    - 新宿フリーク
+  note: ライブハウス（詳細未調査）
+- id: okfk-piano-space
+  name: OKFK新会場（蒲田・ピアノのある空間）
+  note: 会場の正式名称は未確認。大田区蒲田復興協会(OKFK)シリーズの新会場（初出演2019-07-26）。
+    正式名称が判明次第、idとnameを差し替えること
