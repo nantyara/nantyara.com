@@ -137,6 +137,33 @@ javascript_exec の出力は 1.5KB 程度で切れる＋クエリ文字列入り
     そのリンク先も開いて開演時刻・出演者・住所等の詳細を裏取りする**（2026-07-08〜）。
     ポスト本文だけでは分からない詳細（時間帯の分割、共演者の正確な表記等）がリンク先に
     載っていることが多い。取得したら `sources:` にそのURLも追加する
+  - **画像添付ツイートのタイトル・タイムテーブル等、テキスト本文に無い情報を
+    「前回セッションで裏取り済み」等の伝聞で転記しない**（2026-07-09〜、実際に
+    「Show Must 轟音vol.001」というタイトルとタイムテーブルが本文に存在しないのに
+    転記されかけた事例あり）。画像内容は本セッションで直接確認できない限り、
+    テキスト本文で確認できる事実のみ記載し、確認できない詳細は明示的に「本文には
+    見当たらない」と書いて除外する
+  - **`sources:` のURL（投稿者ハンドル＋status ID）は、必ずアーカイブJSON中の実際の
+    `url`/`handle`フィールドから機械的に組み立てる（`/handle/status/id` →
+    `https://x.com/handle/status/id` の文字列置換のみ）。手動での書き起こし・記憶に
+    よる補完は誤帰属の温床になる**（2026-07-09、2018-09/2018-10で他アカウントの
+    投稿を誤ったハンドルで引用していた実例が発覚。転記後は下記の検証コマンドで
+    全件チェックすること）:
+    ```bash
+    python3 -c "
+    import json, re, glob
+    id_to_handle = {}
+    for f in glob.glob('mining/x-archive/*.json'):
+        for a in json.load(open(f))['announces']:
+            m = re.search(r'/status/(\d+)\$', a['url'])
+            if m: id_to_handle[m.group(1)] = a['handle'].lstrip('@')
+    text = open('src/data/schedules/YYYY-MM.yml').read()
+    for handle, sid in re.findall(r'https://x\.com/([\w_]+)/status/(\d+)', text):
+        real = id_to_handle.get(sid)
+        if real is None: print('NOT_FOUND', handle, sid)
+        elif real != handle: print('MISMATCH', handle, sid, 'real=', real)
+    "
+    ```
 - `npm run validate-yaml` → commit → push
 
 ### 5.5. 画像サルベージ（消える前に全部確保）
