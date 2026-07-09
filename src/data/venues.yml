@@ -179,6 +179,8 @@
   x: brightmoon2020
 - id: cosholic
   name: コスホリック44
+  aliases:
+    - コスホリック
   note: コスプレイベント
 - id: ottanta
   name: 蒲田オッタンタ
@@ -903,3 +905,12 @@
 - id: shimomaruko-photo-venue
   name: 下丸子写真展会場
   note: 「なんちゃらアイドル写真展」（2018-11-21〜23）開催会場。店舗名不明
+- id: rips-hachioji
+  name: 八王子RIPS
+  note: ライブハウス（詳細未調査）。八王子Time Tokyo（time-tokyo）とは別会場
+- id: mujinto
+  name: BAR無人島
+  note: 新宿のバー。なんちゃらアイドル忘年会企画の会場（詳細未調査）
+- id: nantyara-jitaku
+  name: なんちゃら運営自宅
+  note: 運営自宅で開催された私的イベント（撮影会・オフ会等）の会場。住所非公開
