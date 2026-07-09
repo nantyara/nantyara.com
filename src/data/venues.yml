@@ -942,3 +942,18 @@
 - id: roppongi-shinsekai
   name: 六本木新世界
   note: ライブハウス（詳細未調査）。なんちゃらアイドル初出演は2019-03-28
+- id: sugamo-shishio
+  name: 巣鴨獅子王
+  url: http://sugamo-cco.com
+  note: 対バンイベント「SCREW UP」シリーズの会場
+- id: kamata-redhotclub
+  name: 蒲田RED HOT CLUB
+  note: 隣接飲食店「RED HOT CRAB」併設のライブスペース。大田区蒲田復興協会(OKFK)シリーズ会場のひとつ
+- id: km-music-shinjuku
+  name: K&Mミュージック新宿店
+  aliases:
+    - K＆Mミュージック新宿店
+  note: 対バンイベント「詩音の奏」シリーズの会場。K&Mミュージック中野店（km-music-nakano）とは別店舗
+- id: yumenoshima-bumb
+  name: 夢の島BumB
+  note: プロレスイベント会場（東京海洋ユース・ビレッジ）
