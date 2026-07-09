@@ -1052,3 +1052,13 @@
 - id: shinkemigawa-hanazonoza
   name: 新検見川はなぞの座
   note: 千葉市花見川区・新検見川のライブスペース。既存登録の「新検見川Swingy」とは別会場
+- id: shimokitazawa-three
+  name: 下北沢THREE
+  note: ライブハウス。既存登録の下北沢ARENA・Que・Laguna・Breath・ろくでもない夜とは別会場
+- id: studio-quinq
+  name: スタジオQuinQ
+  url: https://studio.quinq.net
+  note: 写真スタジオ。既存登録の「Barクインク」（bar-quinq、神宮寺ナナ主催のバー企画）とは別会場
+- id: yukarigaoka-sobacafe
+  name: ユーカリが丘 蕎麦カフェ「3〇1」
+  note: 千葉県佐倉市ユーカリが丘の蕎麦カフェ。店名表記は原文ママ、正式表記未確認
