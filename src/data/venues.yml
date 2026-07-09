@@ -854,6 +854,8 @@
   note: ライブハウス（詳細未調査）
 - id: osaka-satsueikai
   name: 大阪遠征支援撮影会
+  aliases:
+    - 大阪ツアー支援撮影会
   note: 遠征支援を目的とした個人撮影会イベント。会場名不明・企画名のみ確認
 - id: misono-benikaku
   name: 味園紅鶴
