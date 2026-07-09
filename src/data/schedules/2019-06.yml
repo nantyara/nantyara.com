@@ -1,0 +1,354 @@
+# 2019年6月（/mine-x による X 告知アーカイブからの発掘。ソース: mining/x-archive/2019-06.json）
+# ドラフト（未コミット・レビュー用）。新規会場候補3件、既存会場のalias追加候補4件あり（末尾コメント参照）。
+# 今回の転記対象は314告知のうち日付・会場・（可能なら）時刻が本文から確認できる14件。
+# 6/1付「6月の予定です！」（samami27、2件・いずれも訂正版含む）は画像のみでテキスト本文が
+# 空のため、記載内容の裏取りには使用していない（2026-07-09ルール準拠）。
+# 6/30予定だったLa.mama主催ライブは、6/12付告知（nantyaraidol、
+# https://x.com/nantyaraidol/status/1138814538415919105）により9月16日へ延期されたことが
+# 本文から確認できる。6月分としては転記不要のため対象外とした（延期先の9月分は別月のドラフトで扱う）。
+# releases.yml裏取り候補（編集は今回しない）: 6/16「大田区蒲田復興協会」で初披露された新曲
+#   「さくらももこが生きていたなんて！」（なんちゃら運営作詞、香栄のコンポーザー源田作編曲）
+- id: event-20190601-hirosaki-shake
+  slug: 20190601-hirosaki-shake
+  date: 2019-06-01 15:00:00 +0900
+  title: 「青森アイドルパーク」（弘前SHAKE）
+  site: 弘前SHAKE
+  content: |
+    弘前SHAKEで開催された対バンイベント「青森アイドルパーク」（1部15:00〜／2部18:00〜の
+    2部制、なんちゃらアイドル東北遠征1本目）。事前告知「青森SHAKE、なんちゃらは1部15:00〜、
+    2部18:00〜歌います！」（samami27、当日朝）。到着報告「弘前SHAKE着きましたー！広くて
+    綺麗でおしゃれー！！」（yokuwakan_nai）。終演後は「青森アイドルパークありがとうございました！
+    超楽しかったー！盛り上がってくれてありがとうございました！明日は秋田アイドルパーク！」
+    （samami27）「アオモリアイドルパーク2部ともありがとうございました！めちゃくちゃ楽しかった！
+    明日はアキタアイドルパーク！やったるでー！！！」（yokuwakan_nai）と感想。対バン相手の
+    具体名の言及は本文には見当たらない。
+
+    ※Xの告知アーカイブから復元。1部の開始時刻(15:00)をdateに採用。弘前SHAKEはvenues.yml
+    未登録のため新規候補として提示（下記コメント参照）
+  sources:
+    - https://x.com/samami27/status/1134683001328025600
+    - https://x.com/yokuwakan_nai/status/1134666183746117632
+    - https://x.com/samami27/status/1134789631268933632
+    - https://x.com/yokuwakan_nai/status/1134798303214706688
+- id: event-20190602-akita-loud-affection
+  slug: 20190602-akita-loud-affection
+  date: 2019-06-02 15:00:00 +0900
+  title: 「AKITA IDOL PARK」（秋田LOUD AFFECTION）
+  site: 秋田LOUD AFFECTION
+  content: |
+    秋田LOUD AFFECTION（告知本文中の表記は「秋田LOUD」）で開催された対バンイベント
+    「AKITA IDOL PARK」（1部15:00〜／2部17:40〜の2部制、前日の弘前SHAKEに続く東北遠征
+    2本目）。事前告知「本日は秋田LOUDさんにて、AKITA IDOL PARK！1部15:00〜 2部17:40〜
+    なんちゃら歌います！」（samami27、当日朝）。当日は「アキタアイドルパーク1部ありがとう！
+    もうすぐ2部が始まるよん！」（yokuwakan_nai）。終演後は「秋田LOUDライブ、両部ありがとう
+    ございました！東北2デイズめっちゃ楽しかったです！」（samami27）「秋田青森遠征やりきったぞー。
+    2日間4回のライブありがとうございました！みんなに暖かく迎えて頂けて本当に嬉しかったです。
+    また来ます！」（yokuwakan_nai）と感想。対バン相手の具体名の言及は本文には見当たらない。
+
+    ※Xの告知アーカイブから復元。1部の開始時刻(15:00)をdateに採用。会場は2018年12月申し送りの
+    「LOUD AFFECTION」（venues.yml登録済みの秋田LOUD AFFECTION／id: akita-loud-affection）
+    と同一と判断し、siteはvenues.yml側の正式表記に合わせた。告知本文中の略記「秋田LOUD」を
+    aliasesへの追加候補として提示（下記コメント参照）
+  sources:
+    - https://x.com/samami27/status/1135050780090572800
+    - https://x.com/yokuwakan_nai/status/1135098283330658305
+    - https://x.com/samami27/status/1135185220657864705
+    - https://x.com/yokuwakan_nai/status/1135187573637206017
+- id: event-20190604-antiknock
+  slug: 20190604-antiknock
+  date: 2019-06-04 21:45:00 +0900
+  title: 「Variant Survivors Ⅹ」（新宿ANTIKNOCK）
+  site: 新宿ANTIKNOCK
+  acts:
+    - メトロンブーツ
+    - AM.STAFF.
+    - KYR
+    - C.I.R.C.U.S.
+    - 15GERM
+  content: |
+    新宿ANTIKNOCKへの初出演となる対バンイベント「Variant Survivors Ⅹ」。事前告知
+    「2019.6/4(火) shinjuku ANTIKNOCK presents【Variant Survivors Ⅹ】●ACT：なんちゃら
+    アイドル／メトロンブーツ／AM.STAFF./KYR/C.I.R.C.U.S./15GERM ●START18:30 ●ADV￥2,000
+    21:45~22:10 なんちゃらアイドル」（nantyaraidol、6/3）。当日は「今日は新宿AntiKnockにて
+    ライブです！やるぞー！...なんちゃらは21:45から歌います！」（samami27）「ほんじつ！
+    なんたらは21:45から歌います！初antiknock、楽しみ！」（yokuwakan_nai）。終演後は
+    「新宿ANTI KNOCKありがとうございました！...対バンも最高で最高！」（samami27）
+    「antiknockありがとー！！！！！！久々の方や秋田の方(マジか)にも会えて超幸せハッピーでした。
+    次は6日にヘブンスにてヒゲみそのみこちゃんBIRTHDAYです！」（yokuwakan_nai）と感想。
+
+    ※Xの告知アーカイブから復元。フライヤー記載のなんちゃらアイドルの出番時刻(21:45)を
+    dateに採用
+  sources:
+    - https://x.com/nantyaraidol/status/1135463907118571520
+    - https://x.com/samami27/status/1135770243328909312
+    - https://x.com/yokuwakan_nai/status/1135781379021500417
+    - https://x.com/samami27/status/1135918613435625473
+- id: event-20190606-heavensdoor
+  slug: 20190606-heavensdoor
+  date: 2019-06-06 19:40:00 +0900
+  title: ヒゲと味噌汁 みこ生誕祭（三軒茶屋HEAVEN'S DOOR）
+  site: 三軒茶屋HEAVEN'S DOOR
+  acts:
+    - ヒゲと味噌汁
+  content: |
+    三軒茶屋HEAVEN'S DOORで開催された、ヒゲと味噌汁のみこ氏の生誕記念ライブへのゲスト出演。
+    事前告知「明日はミコさんの生誕！！ヒゲ味噌メンバーからお酒飲もうね！って言われたけど、
+    お酒以外飲んでることあるの？なんちゃらは2番手の19:40〜歌います！」（samami27、6/5）
+    「明日は三軒茶屋にてミコちゃんの生誕祭です！」（yokuwakan_nai）。終演後は「ミコさんお誕生日
+    おめでとうございます！お誕生日なのにマシュマロくれてありがとうございます！」（samami27）
+    「ヒゲと味噌汁みこちゃん誕生日おめでとうございました！人間がダメになっていく瞬間のような
+    ものをたくさん目撃できました。」（yokuwakan_nai）「今日はヒゲと味噌汁、みこちゃん生誕
+    ギグでした。なんちゃらからはヒゲ味噌刻印入りゴルフボール12個セットをプレゼントしました。」
+    （nantyaraidol）と感想。他の対バン相手の具体名の言及は本文には見当たらない。
+
+    ※Xの告知アーカイブから復元。なんちゃらアイドルの出番時刻(2番手・19:40)をdateに採用
+  sources:
+    - https://x.com/samami27/status/1136269152459509761
+    - https://x.com/yokuwakan_nai/status/1136279967178690564
+    - https://x.com/samami27/status/1136657318102179840
+    - https://x.com/yokuwakan_nai/status/1136662327699230720
+    - https://x.com/nantyaraidol/status/1136669187005304832
+- id: event-20190607-akihabara-colors
+  slug: 20190607-akihabara-colors
+  date: 2019-06-07 20:00:00 +0900
+  title: 「星屑アイドルの伝説〜STARDUST IDOLS〜 vol.1」（秋葉原カラーズ）
+  site: 秋葉原カラーズ
+  acts:
+    - めろん畑a go go
+  content: |
+    秋葉原カラーズ（こけら落とし公演）で開催された、めろん畑a go goとのツーマンイベント
+    「星屑アイドルの伝説〜STARDUST IDOLS〜 vol.1」。事前告知「安い！ツーマンなので時間も
+    めちゃあるので普段やってない曲もやりますけんね〜。【星屑アイドルの伝説〜STARDUST
+    IDOLS〜 vol.1】日時：2019年6月7日 会場：AKIBA COLORS ADV/DOOR：1000円(+1D)
+    OP/ST：19:30/20:00(終演21:30) ［出演］なんちゃらアイドル めろん畑a go go」
+    （nantyaraidol、6/3）。終演後は「星屑アイドルの伝説vol.1！めろんさんとツーマン
+    楽しかった…！こけら落としに呼んでいただきました！」（samami27）「秋葉原COLORSにて、
+    めろん畑a go goさんとのツーマンライブありがとうございました！...そんなめろん畑a go go、
+    2019年10月17日にZepp Diver City Tokyoでワンマンライブを開催するとのことです。」
+    （yokuwakan_nai）と感想。
+
+    ※Xの告知アーカイブから復元。フライヤー記載の開演時刻(20:00)をdateに採用。会場表記は
+    フライヤー中「AKIBA COLORS」、終演後ポストでは「秋葉原COLORS」「秋葉原カラーズ」と
+    揺れており、venues.yml登録済みの秋葉原カラーズ（id: akihabara-colors）と同一と判断して
+    siteはvenues.yml側の正式表記に合わせた。フライヤー表記「AKIBA COLORS」・終演後表記
+    「秋葉原COLORS」をaliasesへの追加候補として提示（下記コメント参照）
+  sources:
+    - https://x.com/nantyaraidol/status/1135440670531788800
+    - https://x.com/samami27/status/1137009802024931329
+    - https://x.com/yokuwakan_nai/status/1137011677658898432
+- id: event-20190609-meguro-rokumeikan
+  slug: 20190609-meguro-rokumeikan
+  date: 2019-06-09 12:00:00 +0900
+  time_tbd: true
+  title: 対バンライブ（目黒鹿鳴館）
+  site: 目黒鹿鳴館
+  content: |
+    目黒鹿鳴館への初出演となる対バンイベント（6/9=「ロックの日」の語呂にかけた告知あり）。
+    事前告知「アイドルぽいイベント続きます！次はなんと鹿鳴館！アンチノック、ヘブンス、
+    そしてアキバカラーズから鹿鳴館！なんちゃらは節操なくがんばる！」（nantyaraidol、6/7）
+    「明日は目黒鹿鳴館！鹿鳴館ってことはみんなドレスなの？文明開化なの？（よくわかってない）
+    兎にも角にも待ってます。」（samami27、6/8）。終演後は「ロックの日には鹿鳴館！ってこと
+    ですか？？？そうですよ！！！！聞いてくれてありがとうございました！！！！めちゃ楽しかった！」
+    （yokuwakan_nai）「登竜門！というイメージの鹿鳴館！出たかったライブハウスに出れるように
+    なってきて本当に嬉しい。」（samami27）と感想。開演の具体的な時刻・対バン相手の具体名の
+    言及は本文には見当たらない。
+
+    ※Xの告知アーカイブから復元。開演の具体的な時刻の言及が本文に見当たらないため time_tbd
+    とした。目黒鹿鳴館はvenues.yml未登録のため新規候補として提示（下記コメント参照）
+  sources:
+    - https://x.com/nantyaraidol/status/1137013378591801345
+    - https://x.com/samami27/status/1137330797680054273
+    - https://x.com/yokuwakan_nai/status/1137648057367982081
+    - https://x.com/samami27/status/1137649917524996097
+- id: event-20190610-koenji-high
+  slug: 20190610-koenji-high
+  date: 2019-06-10 19:55:00 +0900
+  title: 対バンライブ（高円寺HIGH）
+  site: 高円寺HIGH
+  content: |
+    高円寺HIGHでの対バンイベント。事前告知「本日、高円寺Highにてライブです！！がんばりま
+    すかー？！ハーイ なんちゃらは19:55〜歌います！ぴ！」（samami27）「ほんじつ高円寺HIGH
+    でーす！なんたらは19:55からうたいます！」（yokuwakan_nai）。終演後は「高円寺Highライブ
+    ありがとうございました！今日、雨ですごく眠くて...ステージに上がった瞬間目が覚めて、どんな
+    エナジードリンクよりも、みんなの顔を見ることが元気の素だなって思いました！」（samami27）
+    と感想。対バン相手の具体名の言及は本文には見当たらない。
+
+    ※Xの告知アーカイブから復元。なんちゃらアイドルの出番時刻(19:55)をdateに採用
+  sources:
+    - https://x.com/samami27/status/1138007467147718656
+    - https://x.com/yokuwakan_nai/status/1138012464191172608
+    - https://x.com/samami27/status/1138082426880548864
+- id: event-20190613-vespa
+  slug: 20190613-vespa
+  date: 2019-06-13 19:00:00 +0900
+  title: 「Beat Happening！BESPAカラオケPANIC！」（中野BESPA）
+  site: 中野BESPA
+  content: |
+    中野BESPAで開催された、あおはる・マミによる闇バザー＆カラオケ大会企画
+    「Beat Happening！BESPAカラオケPANIC！」。事前告知「あおはる、マミによる闇バザーも
+    あるよ！２０１９年６月１３日（木）Music bar BESPA（中野）Beat Happening！BESPAカラオケ
+    PANIC！なんちゃらアイドル 19時00分〜 ￥1,500（ドリンクはキャッシュオンです！）」
+    （nantyaraidol、6/12）「今日は中野にあるベスパにて闇バザーとカラオケ大会だす！不用品は
+    捨てる派なので、またも過去の物販持ってきました！チェキもあるでよー！」（samami27）。
+    終演後は「カラオケ&闇バザーありがとうございました！今回はそんなに酔っ払ってないでし！」
+    （samami27）と感想。通常のライブ対バンではなく、なんちゃらメンバー主導のカラオケ・フリマ
+    企画である点に留意。
+
+    ※Xの告知アーカイブから復元。フライヤー記載の開始時刻(19:00)をdateに採用。フライヤー中
+    「Music bar BESPA（中野）」、終演後ポストでは「中野にあるベスパ」と表記されており、
+    venues.yml登録済みのベスパ（id: vespa）と同一と判断したが、venues.yml側は「ベスパ」の
+    カタカナ表記のみでaliasesが無いため正規化比較で一致しない。「中野BESPA」をaliasesへの
+    追加候補として提示（下記コメント参照）
+  sources:
+    - https://x.com/nantyaraidol/status/1138802942775971841
+    - https://x.com/samami27/status/1139103218372268032
+    - https://x.com/samami27/status/1139185943175241729
+- id: event-20190616-gallery-hashimoto
+  slug: 20190616-gallery-hashimoto
+  date: 2019-06-16 15:30:00 +0900
+  title: 大田区蒲田復興協会（OKFK）episode13・新曲初披露（ギャラリー橋本）
+  site: ギャラリー橋本
+  labels:
+    - 主催ライブ
+  content: |
+    ギャラリー橋本で開催された「大田区蒲田復興協会（OKFK）」episode13。この日はなんちゃら
+    運営作詞、香栄のコンポーザー・源田作編曲による新曲「さくらももこが生きていたなんて！」
+    を初披露。事前告知「6月16日（日）は、大田区蒲田復興協会！この日はなんと、なんちゃら
+    運営作詞、香栄のコンポーザー、源田作編曲による完全新曲、「さくらももこが生きていたなんて！」
+    を初披露！もう今後やるかわからんし恋！ギャラリー橋本にて！」（nantyaraidol、6/15）。
+    当日は「今日のOKFKは15時開場、15時30分開演なのでご注意を！」（samami27、当日朝）。
+    終演後は「OKFKありがとうございました！今日は演者がすごく多くて祭りだった。観にきて
+    くれてありがとう！超緊張した。」（samami27）「大田区蒲田復興協会episode13ありがとう
+    ございました！今回は出演者最多の30名、そして出演者最年少が2歳というレア会でした！」
+    （yokuwakan_nai）と感想。イベント全体の対バン相手の具体名（30名分）の言及は本文には
+    見当たらないため acts には含めていない。
+
+    ※Xの告知アーカイブから復元。イベント全体の開演時刻(15:30)をdateに採用。ギャラリー橋本は
+    venues.yml未登録のため新規候補として提示（下記コメント参照）。過去のOKFK開催会場「蒲田
+    オッタンタ」「蒲田RED HOT CLUB」等とは別会場。運営主催シリーズのためlabelsに
+    「主催ライブ」を付した。新曲「さくらももこが生きていたなんて！」はreleases.yml裏取り
+    候補（今回は編集しない）
+  sources:
+    - https://x.com/nantyaraidol/status/1139696243049766913
+    - https://x.com/samami27/status/1140092377022861312
+    - https://x.com/samami27/status/1140197283302002689
+    - https://x.com/yokuwakan_nai/status/1140198036598956032
+- id: event-20190617-firebird
+  slug: 20190617-firebird
+  date: 2019-06-17 12:00:00 +0900
+  time_tbd: true
+  title: 対バンライブ・手相占い企画（新松戸FIREBIRD）
+  site: 新松戸FIREBIRD
+  content: |
+    新松戸FIREBIRDでの対バンイベント（手相占い企画あり、なんちゃらアイドルはトリ）。
+    事前告知「17日はこれ！手相を占うのだ！で頑張るので応援きてけれ！」（nantyaraidol、6/16）
+    「本日FIREBIRDで手相見てもらいまーす！トリやで！」（yokuwakan_nai）「久しぶりのFIREBIRD！
+    手相みてもらうぞ！前回手相ランキング最下位だったけど挽回できるのか？！」（samami27）。
+    終演後は「新松戸FIREBIRDライブありがとうございました！手相の順位がちょびっとあがってました！」
+    （samami27）と感想。開演の具体的な時刻・対バン相手の具体名の言及は本文には見当たらない。
+
+    ※Xの告知アーカイブから復元。開演の具体的な時刻の言及が本文に見当たらないため time_tbd
+    とした
+  sources:
+    - https://x.com/nantyaraidol/status/1140266347542093829
+    - https://x.com/yokuwakan_nai/status/1140521554867965954
+    - https://x.com/samami27/status/1140521764876763136
+    - https://x.com/samami27/status/1140637805594329088
+- id: event-20190619-heavensdoor
+  slug: 20190619-heavensdoor
+  date: 2019-06-19 21:40:00 +0900
+  title: 対バンライブ（三軒茶屋HEAVEN'S DOOR）
+  site: 三軒茶屋HEAVEN'S DOOR
+  content: |
+    三軒茶屋HEAVEN'S DOORでの対バンイベント（6/6出演分とは別日程。あいちゃんとの再対バン）。
+    事前告知「6月19日はヘブンスドア！21時40分からすなわち！あいちゃんとまた対バンできる
+    嬉しい！」（nantyaraidol、6/18）「本日、三軒茶屋ヘブンズドアにてライブです！21:40から
+    30分歌います！待ってるだす！」（samami27）。終演後は「ヘブンスドアありがとう！おしゃれ
+    デイで楽しかったしなんたらも落ち着いた感じのセトリでした！」（yokuwakan_nai）
+    「三軒茶屋ヘブンズドアライブありがとうござました！今日はしっとり静かにやりました！1 蛇酢と
+    木綿と 2 海の家 3 聖母主義 4 夜明け宛の便箋 5 ivory song 6 なんちゃらアイドル旅講座
+    来てくれて観てくれてありがとうございました！」（samami27）と感想。「あいちゃん」は
+    フルネーム・所属バンド名の明記が本文に見当たらないため acts には含めていない。
+
+    ※Xの告知アーカイブから復元。フライヤー記載のなんちゃらアイドルの出番時刻(21:40)を
+    dateに採用
+  sources:
+    - https://x.com/nantyaraidol/status/1140912822173388800
+    - https://x.com/samami27/status/1141238084442308608
+    - https://x.com/yokuwakan_nai/status/1141349781412835328
+    - https://x.com/samami27/status/1141360234281050113
+- id: event-20190623-goldenegg
+  slug: 20190623-goldenegg
+  date: 2019-06-23 12:30:00 +0900
+  time_tbd: true
+  title: 「QuinQ festa vol.14〜ぱぴこ引退記念興行〜」（新宿ゴールデンエッグ）
+  site: 新宿ゴールデンエッグ
+  acts:
+    - 性処女領域
+    - ぱぴこ
+    - はなことば
+    - 早乙女らぶ
+    - 古河きらの
+  content: |
+    新宿ゴールデンエッグで開催されたQuinQ主催の対バンイベント「QuinQ festa vol.14〜ぱぴこ
+    引退記念興行〜」（同日夜開催の「barQuinQ vol.3」（新宿bar無人島）とは別イベント。両方に
+    なんちゃらアイドルが出演）。事前告知「6月23日（日）QuinQ festa vol.14～ぱぴこ引退記念
+    興行～ 新宿ゴールデンエッグ 12時半Open 2500円 なんちゃらアイドル、性処女領域、ぱぴこ、
+    はなことば、早乙女らぶ、古河きらの」（nantyaraidol、6/20）。終演後は「ゴールデンエッグ
+    ありがとうございました！！！今はBAR無人島でカレーを食べています！」（yokuwakan_nai）と
+    感想。
+
+    ※Xの告知アーカイブから復元。フライヤー記載のOpen時刻(12:30)をdateに採用したが、
+    なんちゃらアイドル自身の出番時刻の言及は本文に見当たらないため time_tbd とした
+  sources:
+    - https://x.com/nantyaraidol/status/1141700936655495168
+    - https://x.com/yokuwakan_nai/status/1142715149758808065
+- id: event-20190623-mujinto
+  slug: 20190623-mujinto
+  date: 2019-06-23 17:00:00 +0900
+  time_tbd: true
+  title: 「barQuinQ vol.3」（新宿bar無人島）
+  site: 新宿bar無人島
+  content: |
+    新宿bar無人島で開催されたQuinQ主催のバーイベント「barQuinQ vol.3」（同日昼開催の
+    「QuinQ festa vol.14」（新宿ゴールデンエッグ）とは別イベント。両方になんちゃらアイドルが
+    出演）。事前告知「barQuinQ vol.3 新宿bar無人島 17時open Charge2300円（昼のライブ参加者
+    は1500円）なんちゃらアイドル、その他」（nantyaraidol、6/20）。終演後は「ゴールデンエッグ
+    ありがとうございました！！！今はBAR無人島でカレーを食べています！まだ入れるので暇な方が
+    いたらぜひ！」（yokuwakan_nai）と感想。対バン相手の具体名（「その他」以外）・なんちゃら
+    アイドル自身の出番時刻の言及は本文には見当たらない。
+
+    ※Xの告知アーカイブから復元。フライヤー記載のOpen時刻(17:00)をdateに採用したが、
+    なんちゃらアイドル自身の出番時刻の言及は本文に見当たらないため time_tbd とした。
+    新宿bar無人島はvenues.yml登録済みのBAR無人島（id: mujinto）と同一と判断したが、
+    venues.yml側に「新宿bar無人島」のaliasesが無いため正規化比較で一致しない。
+    aliasesへの追加候補として提示（下記コメント参照）
+  sources:
+    - https://x.com/nantyaraidol/status/1141700936655495168
+    - https://x.com/yokuwakan_nai/status/1142715149758808065
+- id: event-20190625-outbreak
+  slug: 20190625-outbreak
+  date: 2019-06-25 12:00:00 +0900
+  time_tbd: true
+  title: 対バンライブ（四谷アウトブレイク・ザ・スリーと対バン）
+  site: 四谷アウトブレイク
+  acts:
+    - ザ・スリー
+  content: |
+    四谷アウトブレイクでの対バンイベント。事前告知「明日のライブはこちら！四谷アウトブレイク！」
+    （samami27、6/24）「ザ・スリーと対バン嬉しい。なぜか値段も安いのできて！」
+    （nantyaraidol、6/24）。当日は「四谷アウトブレイクに集合で！猫いるかな〜猫ちゃんいるかな〜
+    わくわく」（samami27）「ほんじつ！！！！！みんな大好き四谷アウトブレイク！！やすい！！！！！」
+    （yokuwakan_nai）。終演後は「四谷アウトブレイクライブありがとうございました！おかしな夜は
+    楽しい夜だね。」（samami27）と感想。開演の具体的な時刻・ザ・スリー以外の対バン相手の
+    具体名の言及は本文には見当たらない。
+
+    ※Xの告知アーカイブから復元。開演の具体的な時刻の言及が本文に見当たらないため time_tbd
+    とした
+  sources:
+    - https://x.com/samami27/status/1143196899475767296
+    - https://x.com/nantyaraidol/status/1143229071062495236
+    - https://x.com/samami27/status/1143423927215017984
+    - https://x.com/yokuwakan_nai/status/1143438803383668737
+    - https://x.com/samami27/status/1143535469965090816
+

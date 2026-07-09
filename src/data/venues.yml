@@ -627,6 +627,8 @@
   x: Send_Ai_RIPPLE
 - id: akita-loud-affection
   name: 秋田LOUD AFFECTION
+  aliases:
+    - 秋田LOUD
   address: 秋田県秋田市南通亀の町3-44 川原田ビル2F
   url: http://loudaffection.jimdo.com/
   x: LoudAffection
@@ -763,6 +765,8 @@
   note: ライブハウス（詳細未調査）
 - id: vespa
   name: ベスパ
+  aliases:
+    - 中野BESPA
   note: カラオケ会場として言及（正式名称・住所未確認）
 - id: akibashoten-anjo
   name: あきば書店安城1号店
@@ -912,6 +916,8 @@
   note: ライブハウス（詳細未調査）。八王子Time Tokyo（time-tokyo）とは別会場
 - id: mujinto
   name: BAR無人島
+  aliases:
+    - 新宿bar無人島
   note: 新宿のバー。なんちゃらアイドル忘年会企画の会場（詳細未調査）
 - id: nantyara-jitaku
   name: なんちゃら運営自宅
@@ -967,4 +973,16 @@
   note: ライブバー。「Legend of Music」シリーズの会場（詳細未調査）
 - id: akihabara-colors
   name: 秋葉原カラーズ
+  aliases:
+    - AKIBA COLORS
+    - 秋葉原COLORS
   note: 「だいたい20代さん」主催ライブの会場（詳細未調査）
+- id: hirosaki-shake
+  name: 弘前SHAKE
+  note: 青森県弘前市のライブハウス（詳細未調査）
+- id: meguro-rokumeikan
+  name: 目黒鹿鳴館
+  note: ライブハウス（詳細未調査）
+- id: gallery-hashimoto
+  name: ギャラリー橋本
+  note: 大田区蒲田復興協会（OKFK）シリーズの会場のひとつ。住所未確認
