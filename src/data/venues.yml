@@ -1088,3 +1088,18 @@
 - id: kamata-studio-kapura
   name: スタジオ・カプラ（蒲田）
   note: 蒲田の写真スタジオ。正式名称・住所は未確認
+- id: higashiyamato-cafebar-coo
+  name: 東大和CafeBAR COO
+  url: https://cafebar-coo.com
+  note: 東大和市のカフェバー（住所未調査）
+- id: sprocket-cafebar
+  name: カフェバーすぷろけっと
+  note: カフェバー（住所未調査）。「一日店長」イベント開催実績あり
+- id: nishioi-mikahanten
+  name: 美華飯店
+  note: 東京都品川区西大井の中華料理店。「西大井美華飯店」表記もあり
+- id: tsuchiura-leos-livebar
+  name: 土浦LEO'S LIVE BAR
+  aliases:
+    - レオズライブバー
+  note: 茨城県土浦市のライブバー（住所未調査）
