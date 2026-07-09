@@ -557,6 +557,7 @@
   name: クラブチッタ アティック
   aliases:
     - 川崎ATTIC
+    - 川崎LIVE BAR A'TTIC
   address: 神奈川県川崎市川崎区小川町5-7 クラブチッタ2F
   url: http://clubcitta-attic.com/
   x: ATTICMARU
@@ -878,3 +879,27 @@
 - id: quinq-bbq-satsueikai
   name: QuinQバーベキュー撮影会
   note: QuinQ主催のバーベキュー撮影会企画。会場は非公開のため固定住所なし
+- id: shimokitazawa-que
+  name: 下北沢Que
+  note: ライブハウス（詳細未調査）
+- id: mami-satsueikai
+  name: マミ個人撮影会
+  note: 御茶海マミの個人撮影会企画。固定会場なし
+- id: shinjuku-loft
+  name: 新宿LOFT
+  note: 新宿LOFT本館。新宿LOFT BAR LOUNGE（loft-bar-lounge）・ネイキッドロフト（naked-loft）とは別会場
+- id: akihabara-moulin
+  name: 秋葉原ムーラン
+  note: アキバ本店。屋外フリーライブ会場
+- id: shinmatsudo-packs-s
+  name: 新松戸 sound studio PACKS S
+  note: スタジオライブ会場（詳細未調査）
+- id: koenji-club-liner
+  name: 高円寺CLUB LINER
+  note: ライブハウス（詳細未調査）
+- id: shimokitazawa-laguna
+  name: 下北沢Laguna
+  note: 下北沢サーキットフェス参加会場（詳細未調査）
+- id: shimomaruko-photo-venue
+  name: 下丸子写真展会場
+  note: 「なんちゃらアイドル写真展」（2018-11-21〜23）開催会場。店舗名不明
