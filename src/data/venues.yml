@@ -927,6 +927,8 @@
   note: ライブハウス（詳細未調査）。高円寺SHOW BOAT・高円寺無力無善寺・高円寺CLUB LINERとは別会場
 - id: kashiwa-thumbup
   name: 柏ThumbUp
+  aliases:
+    - 柏サンブアップ
   note: 千葉県柏市のライブハウス（詳細未調査）
 - id: hamamatsu-peta
   name: 浜松スタジオPETA
@@ -957,3 +959,12 @@
 - id: yumenoshima-bumb
   name: 夢の島BumB
   note: プロレスイベント会場（東京海洋ユース・ビレッジ）
+- id: ueno-otoyokocho
+  name: 上野音横丁
+  note: 対バンイベントの会場（詳細未調査）
+- id: ogikubo-bunga
+  name: 荻窪LIVE BAR BUNGA
+  note: ライブバー。「Legend of Music」シリーズの会場（詳細未調査）
+- id: akihabara-colors
+  name: 秋葉原カラーズ
+  note: 「だいたい20代さん」主催ライブの会場（詳細未調査）
