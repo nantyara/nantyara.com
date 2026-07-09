@@ -129,6 +129,20 @@ const nextLiveDateFmt = (d: Date, timeTbd: boolean) => {
     </div>
   </div>
 
+  <div
+    id="month-jump-overlay"
+    class="month-jump-overlay"
+    hidden
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="month-jump-label"
+  >
+    <div class="month-jump-box">
+      <label id="month-jump-label" for="month-jump-select">年月を選択してジャンプ</label>
+      <select id="month-jump-select"></select>
+    </div>
+  </div>
+
   <div id="schedule-list" class="schedule-list" data-mode="upcoming">
     {upcomingSchedules.length === 0 ? (
       <div class="empty-state">
@@ -138,7 +152,9 @@ const nextLiveDateFmt = (d: Date, timeTbd: boolean) => {
     ) : (
       monthGroups.map(group => (
         <section class="month-group" data-month={group.key}>
-          <h2 class="month-heading"><span>{group.label}</span></h2>
+          <h2 class="month-heading">
+            <button type="button" class="month-heading-btn"><span>{group.label}</span></button>
+          </h2>
           <div class="month-items">
             {group.items.map(schedule => (
               <div
@@ -375,9 +391,13 @@ const nextLiveDateFmt = (d: Date, timeTbd: boolean) => {
           section.dataset.month = key;
           const heading = document.createElement('h2');
           heading.className = 'month-heading';
+          const headingBtn = document.createElement('button');
+          headingBtn.type = 'button';
+          headingBtn.className = 'month-heading-btn';
           const span = document.createElement('span');
           span.textContent = label;
-          heading.appendChild(span);
+          headingBtn.appendChild(span);
+          heading.appendChild(headingBtn);
           const itemsWrap = document.createElement('div');
           itemsWrap.className = 'month-items';
           section.append(heading, itemsWrap);
@@ -428,8 +448,10 @@ const nextLiveDateFmt = (d: Date, timeTbd: boolean) => {
       history.replaceState(null, '', location.pathname + (qs ? '?' + qs : ''));
     };
 
+    // 戻り値のPromiseは「描画が完全に終わった後」にだけ処理したい呼び出し元
+    // （年月ジャンプ機能）のためのもの。フィルタボタン等の通常呼び出しは戻り値を無視してよい。
     const render = () => {
-      if (!scheduleList) return;
+      if (!scheduleList) return Promise.resolve();
       const searchTerm = searchInput ? searchInput.value.toLowerCase().trim() : '';
 
       if (currentFilter === 'upcoming') {
@@ -440,7 +462,7 @@ const nextLiveDateFmt = (d: Date, timeTbd: boolean) => {
         const visibleCount = filterUpcomingDom(searchTerm);
         scheduleList.style.display = visibleCount > 0 ? 'block' : 'none';
         if (noResults) noResults.style.display = visibleCount === 0 ? 'block' : 'none';
-        return;
+        return Promise.resolve();
       }
 
       // 「過去/すべて」: 初回だけ /events.json を取得する（取得中は簡単なローディング表示）
@@ -451,7 +473,7 @@ const nextLiveDateFmt = (d: Date, timeTbd: boolean) => {
 
       const requestFilter = currentFilter;
       const requestSearch = searchTerm;
-      ensureAllEventsLoaded().then(() => {
+      return ensureAllEventsLoaded().then(() => {
         // 取得中にユーザーがフィルタや検索語を変えていたら、この結果は捨てて最新の render() に任せる
         const stillCurrentSearch = searchInput ? searchInput.value.toLowerCase().trim() : '';
         if (currentFilter !== requestFilter || stillCurrentSearch !== requestSearch) return;
@@ -473,8 +495,9 @@ const nextLiveDateFmt = (d: Date, timeTbd: boolean) => {
       filterButtons.forEach((btn) => {
         btn.classList.toggle('active', btn.dataset.filter === currentFilter);
       });
-      render();
+      const pending = render();
       syncURL();
+      return pending;
     };
 
     // スクロールが下端に近づいたら「過去/すべて」の続きを少しずつ描画する（無限スクロール）。
@@ -508,6 +531,105 @@ const nextLiveDateFmt = (d: Date, timeTbd: boolean) => {
         currentFilter = button.dataset.filter || 'all';
         applyFilter();
       });
+    });
+
+    // ---- 月見出しクリックで年月ピッカーを開き、任意の月にジャンプする ----
+    const monthJumpOverlay = document.getElementById('month-jump-overlay');
+    const monthJumpSelect = document.getElementById('month-jump-select');
+    let monthJumpLastFocused = null;
+    // 全期間の年月一覧はイベント数が増えても変わらないので一度作ったらキャッシュする
+    let monthJumpKeysCache = null;
+
+    const closeMonthJump = () => {
+      if (monthJumpOverlay) monthJumpOverlay.hidden = true;
+      // モーダルを開く前にフォーカスしていた要素（＝クリックした見出しボタン）に戻す
+      if (monthJumpLastFocused && typeof monthJumpLastFocused.focus === 'function') {
+        monthJumpLastFocused.focus();
+      }
+      monthJumpLastFocused = null;
+    };
+
+    const openMonthJump = (preferredKey) => {
+      if (!monthJumpOverlay || !monthJumpSelect) return;
+      monthJumpLastFocused = document.activeElement;
+      ensureAllEventsLoaded().then((events) => {
+        if (!monthJumpKeysCache) {
+          const labelByKey = new Map();
+          events.forEach((ev) => {
+            const { key, label } = monthKeyLabel(ev.t);
+            if (!labelByKey.has(key)) labelByKey.set(key, label);
+          });
+          monthJumpKeysCache = Array.from(labelByKey.entries()).sort((a, b) => (a[0] < b[0] ? -1 : 1));
+        }
+        const keys = monthJumpKeysCache;
+        if (keys.length === 0) return;
+        monthJumpSelect.innerHTML = '';
+        keys.forEach(([key, label]) => {
+          const opt = document.createElement('option');
+          opt.value = key;
+          opt.textContent = label;
+          monthJumpSelect.appendChild(opt);
+        });
+        // クリックした見出しの月があればそれを初期選択にする。無ければ現在表示中の
+        // フィルターに近い月（今後→末尾、過去/すべて→先頭寄り）にフォールバックする
+        const hasPreferred = preferredKey && keys.some(([key]) => key === preferredKey);
+        monthJumpSelect.value = hasPreferred
+          ? preferredKey
+          : currentFilter === 'upcoming' ? keys[keys.length - 1][0] : keys[0][0];
+        monthJumpOverlay.hidden = false;
+        monthJumpSelect.focus();
+      });
+    };
+
+    // 対象の月セクションが見つかるまでバッチ描画を進めてからスクロールする。
+    // renderNextBatchをwhileで同期的に回すとイベント数が多いときメインスレッドを長時間
+    // ブロックしうるため、rAFで1バッチずつブラウザに制御を返しながら進める
+    const jumpToMonth = (key) => {
+      closeMonthJump();
+      currentFilter = 'all';
+      // 検索語が残っていると、ジャンプ先の月に検索条件に一致するイベントが1件もない場合、
+      // 全件描画してもセクションが見つからず「クリックしたのに何も起きない」ように見えるバグに
+      // なるため、月ジャンプ時は検索語をクリアする
+      if (searchInput) searchInput.value = '';
+      Promise.resolve(applyFilter()).then(() => {
+        // requestAnimationFrame はブラウザのコンポジタ/描画フレームに依存しており、
+        // headless/自動化されたレンダリングコンテキストでは発火しないことがある
+        // （2026-07-05 IntersectionObserverで確認済みの既知の制約と同根、2026-07-10
+        // 本機能でも実測で確認）。より確実な setTimeout ベースで1バッチずつ制御を返す
+        const step = () => {
+          const section = sectionsByKey.get(key);
+          if (section) {
+            // behavior: 'smooth' も同じ理由で信頼できないため、確実性を優先して即時ジャンプにする
+            section.scrollIntoView({ behavior: 'auto', block: 'start' });
+            return;
+          }
+          if (renderedCount >= filteredSorted.length) return; // データ不整合等で見つからない
+          renderNextBatch();
+          setTimeout(step, 0);
+        };
+        step();
+      });
+    };
+
+    // サーバー描画済み・クライアント生成済みどちらの月見出しにも効くようイベント委任にする
+    if (scheduleList) {
+      scheduleList.addEventListener('click', (e) => {
+        const btn = e.target.closest('.month-heading-btn');
+        if (!btn) return;
+        const section = btn.closest('.month-group');
+        openMonthJump(section ? section.dataset.month : undefined);
+      });
+    }
+    if (monthJumpSelect) {
+      monthJumpSelect.addEventListener('change', () => jumpToMonth(monthJumpSelect.value));
+    }
+    if (monthJumpOverlay) {
+      monthJumpOverlay.addEventListener('click', (e) => {
+        if (e.target === monthJumpOverlay) closeMonthJump();
+      });
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && monthJumpOverlay && !monthJumpOverlay.hidden) closeMonthJump();
     });
 
     if (searchInput) {
@@ -783,22 +905,101 @@ const nextLiveDateFmt = (d: Date, timeTbd: boolean) => {
     top: 0;
     z-index: 10;
     margin: 0 0 20px;
-    padding: 12px 0;
     text-align: center;
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  .month-heading-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 0;
+    background: none;
+    border: none;
+    font: inherit;
     font-family: var(--font-digital);
     font-size: 1.3rem;
     letter-spacing: 2px;
     color: var(--retro-cyan);
-    background: rgba(10, 10, 10, 0.85);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
     text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    cursor: pointer;
   }
 
-  .month-heading span {
+  .month-heading-btn:focus-visible {
+    outline: 2px solid var(--retro-cyan);
+    outline-offset: -2px;
+  }
+
+  .month-heading-btn span {
     display: inline-block;
     padding: 0 24px;
     border-bottom: 2px solid var(--retro-cyan);
+    transition: text-shadow 0.2s;
+  }
+
+  .month-heading-btn span::after {
+    content: ' \25BE';
+    opacity: 0.7;
+  }
+
+  .month-heading-btn:hover span {
+    text-shadow: 0 0 14px rgba(0, 255, 255, 0.9);
+  }
+
+  .month-jump-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+
+  /* [hidden]属性は本来display:noneになるはずだが、上の.month-jump-overlay { display: flex }
+     ルールと詳細度が同じ（クラスセレクタ vs 属性セレクタ、共に0,0,1,0）ため、後勝ちで
+     display: flexに上書きされてしまう。明示的に!importantで[hidden]を優先させる
+     （2026-07-10 実機検証で発覚した実害。閉じたはずのモーダルがCSS上は表示され続けていた） */
+  .month-jump-overlay[hidden] {
+    display: none !important;
+  }
+
+  .month-jump-box {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 28px 32px;
+    background: linear-gradient(135deg, var(--bg-medium) 0%, var(--bg-dark) 100%);
+    border: 2px solid var(--retro-cyan);
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+    min-width: 260px;
+  }
+
+  .month-jump-box label {
+    font-family: var(--font-digital);
+    color: var(--retro-cyan);
+    letter-spacing: 1px;
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .month-jump-box select {
+    background: #1a1a2ecc;
+    color: var(--text-light);
+    border: 2px solid var(--retro-pink);
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 1rem;
+    outline: none;
+  }
+
+  .month-jump-box select:focus {
+    border-color: var(--retro-cyan);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
   }
 
   .month-items {
