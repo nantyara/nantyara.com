@@ -1068,3 +1068,23 @@
 - id: omori-saizeriya
   name: 大森のサイゼリヤ
   note: 大森のサイゼリヤ店舗。具体的な店舗名は未確認
+- id: hmv-copis-kichijoji
+  name: HMV record shop コピス吉祥寺
+  note: 既存登録の「HMV record shop 渋谷」「HMVエソラ池袋店」とは別店舗
+- id: hmv-shinjuku-alta
+  name: HMV record shop 新宿アルタ
+  note: HMVレコードショップ。既存登録の渋谷・池袋店とは別店舗
+- id: diskunion-jimbocho
+  name: ディスクユニオン神保町店
+  note: 既存登録の「ディスクユニオンお茶の水駅前店」とは別店舗
+- id: b5-idol-cafe
+  name: B5 IDOL CAFE
+  note: カフェ・バー（住所・詳細未調査）
+- id: kannai-7th-avenue
+  name: 関内7th Avenue
+  aliases:
+    - セブンスアベニュー
+  note: 横浜市中区のライブハウス（住所未調査）。表記ゆれ「セブンスアベニュー」も本文に登場
+- id: kamata-studio-kapura
+  name: スタジオ・カプラ（蒲田）
+  note: 蒲田の写真スタジオ。正式名称・住所は未確認
