@@ -89,6 +89,8 @@
   note: 2026年5月末で休止後、同年6月に同じ場所で「BARめたもるふぉーぜ」として新装開店。公式X・公式サイトは未確認（Instagram @bar_drunkenshrimp のみ確認）
 - id: antiknock
   name: 新宿ANTIKNOCK
+  aliases:
+    - 新宿アンチノック
   address: 東京都新宿区新宿4-3-15 レイフラットビルB1F
   url: https://www.antiknock.net
   x: antiknock1985
@@ -1269,6 +1271,9 @@
   note: 正式表記「柏616&04」。柏駅徒歩6分、2009年オープン。上野音横丁と同運営。公式Xは調査済み・特定できず
 - id: shibuya-nostyle
   name: 渋谷NOSTYLE
+  aliases:
+    - 渋谷ノンスタイル
+    - 渋谷ノースタイル
   address: 東京都渋谷区道玄坂1-13-2 宝ビルB1
   x: nostylelive
   note: 2022年9月末で営業終了
@@ -1532,3 +1537,6 @@
 - id: shimokitazawa-dycube
   name: DY CUBE
   note: 下北沢のライブスペース。前日言及の「TwinBoxGarage」と同一施設の可能性あり（詳細未調査）
+- id: kameido-injie-air
+  name: 亀戸インジエア
+  note: ライブハウス（詳細未調査）
