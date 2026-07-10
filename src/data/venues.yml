@@ -179,6 +179,8 @@
   x: firebird_jp
 - id: earthdom
   name: 新大久保EARTHDOM
+  aliases:
+    - 新大久保アースダム
   address: 東京都新宿区大久保2-32-3 リスボンビルB1
   url: http://earthdom05.webnode.jp
   x: earthdom
@@ -590,6 +592,7 @@
   name: THE SHOJIMARU
   aliases:
     - 神田shojimaru
+    - 神田THE SHOJIMARU
   address: 東京都千代田区神田須田町1-4-6 B1F
   url: https://shojimaru.omatsuri.tech
   x: TShojimaru
@@ -1543,3 +1546,12 @@
 - id: harajuku-kawaiiya
   name: 原宿カワイーヤ
   note: カフェ（詳細未調査）
+- id: yoyogi-lodge
+  name: 代々木LODGE
+  note: ライブハウス（詳細未調査）
+- id: pandora-hako
+  name: パンドラの匣
+  note: ライブハウス（詳細未調査）
+- id: akasaka-cantina
+  name: 赤坂カンティーナ
+  note: ライブハウス（詳細未調査）
