@@ -26,6 +26,7 @@
   name: 東新宿LOVE TKO
   address: 東京都新宿区大久保1-3-22 ヴァンヴェール新宿B1F
   x: LOVETKO2008
+  note: 公式サイト（lovetko.net）はドメイン失効の可能性が高く未掲載。主な公式導線はInstagram（@musicbarlovetko）
 - id: uminoie
   name: 海の家
   note: 夏季限定の海の家出演シリーズ
@@ -43,6 +44,7 @@
   name: Studio S.B.Q
   aliases:
     - Studio S.B.Q（市ヶ谷）
+  note: 調査済み・情報なし（市ヶ谷の個人撮影会向けスタジオと思われるが公式サイト・住所とも未確認）
 - id: sarusho
   name: 栃木さる小
   aliases:
@@ -76,7 +78,7 @@
     - 新宿dranken shrimp
     - 新宿 歌舞伎町 Drunken Shrimp
   address: 東京都新宿区歌舞伎町2-39-2 三幸ビルB館5F-E
-  note: 2026年5月末で休止後、同年6月に同じ場所で「BARめたもるふぉーぜ」として新装開店
+  note: 2026年5月末で休止後、同年6月に同じ場所で「BARめたもるふぉーぜ」として新装開店。公式X・公式サイトは未確認（Instagram @bar_drunkenshrimp のみ確認）
 - id: antiknock
   name: 新宿ANTIKNOCK
   address: 東京都新宿区新宿4-3-15 レイフラットビルB1F
@@ -107,6 +109,7 @@
   url: https://shimokitaretro.jp
 - id: sassen
   name: SASSEN
+  note: 調査済み・情報なし（「サッセン」は次世代デジタルチャンバラ競技のイベントブランド名で固定会場ではない模様。なんちゃらアイドル杯は2022年6月26日秋葉原で開催）
 - id: spoonful-of-sugar
   name: SALON a Spoonful Of Sugar
   address: 大阪府大阪市西区新町3-9-7 2F
@@ -241,7 +244,7 @@
 - id: chobihige
   name: 下北沢ちょ美ひげ
   address: 東京都世田谷区北沢3-25-1 MTビルB1
-  note: 公式サイト・公式X未確認（住所は外部イベント情報より）
+  note: 公式サイト・公式X未確認（予約はメールchobihige_info@yahoo.co.jpのみで、独自の公式サイト・SNSを持たない運営スタイルの模様）
 - id: hit-parade
   name: 町田ヒットパレード
   address: 東京都町田市原町田6-18-2 アークビルB1F
@@ -265,7 +268,7 @@
     - めたもるふぉ～ぜ
   address: 東京都新宿区歌舞伎町2-39-2 三幸ビルB館5F-E
   x: barmetamorphose
-  note: 正式名称「BARめたもるふぉーぜ」。旧・新宿Drunken Shrimpが2026年6月に新装開店した店
+  note: 正式名称「BARめたもるふぉーぜ」。旧・新宿Drunken Shrimpが2026年6月に新装開店した店。公式サイトは未確認（2026年6月新規開店のため情報が少ない）
 - id: ion-kasama
   name: イオン笠間
   aliases:
@@ -288,11 +291,16 @@
   note: バスツアーイベント
 - id: jam
   name: 新宿JAM
-  note: なんちゃらアイドル結成の地とされるホームのライブハウス（閉店済み）
+  address: 東京都新宿区歌舞伎町2-3-23 セントラルビル1F・B1（営業当時）
+  note: "なんちゃらアイドル結成の地とされるホームのライブハウス。1980年10月オープン、ビル建て替えのため2017年12月31日閉店（37年の歴史）。2018年6月に「西永福JAM」（id: nishinagafuku-jam）として移転オープン"
 - id: goldenegg
   name: 新宿GOLDENEGG
   aliases:
     - 新宿ゴールデンエッグ
+  address: 東京都新宿区歌舞伎町1-16-10 第27東京ビルB2F
+  url: https://g-egg.info
+  x: K_GoldenEgg
+  note: 正式名称「Live & Bar GoldenEgg」。ジャムセッション・ライブを連日開催する歌舞伎町の老舗ライブバー
 - id: urawa-narciss
   name: 浦和ナルシス
 - id: mikasa-park
@@ -376,7 +384,10 @@
   name: 新宿Motion
   aliases:
     - 新宿motion
-  note: ライブハウス（詳細未調査）
+  address: 東京都新宿区歌舞伎町2-45-2 ジャストビル5F
+  url: https://www.shinjyuku-motion.jp
+  x: Motion2452
+  note: 正式表記「新宿motion」（小文字m）。西武新宿駅徒歩1分、歌舞伎町タワー横
 - id: gramstein
   name: 新宿グラムシュタイン
   note: ライブハウス（詳細未調査）
@@ -774,7 +785,10 @@
   note: 愛知県安城市の店舗（詳細未調査）
 - id: showboat
   name: 高円寺SHOW BOAT
-  note: ライブハウス（詳細未調査）
+  address: 東京都杉並区高円寺北3-17-2 オークヒル高円寺B1
+  url: https://www.showboat1993.com
+  x: ShowBoat_1993
+  note: 正式名称「ShowBoat」（1993年オープン）
 - id: sunash
   name: 静岡Sunash
   note: ライブハウス（詳細未調査）
@@ -794,7 +808,10 @@
   note: ライブハウス（詳細未調査）
 - id: barbara
   name: 代々木バーバラ
-  note: ライブハウス（詳細未調査）
+  address: 東京都渋谷区代々木1-42-4 代々木P1ビルB1
+  url: https://barbara.omatsuri.tech
+  x: Yoyogi_Barbara
+  note: 正式名称「ライブハウス代々木Barbara」。JR代々木駅徒歩5分・小田急南新宿駅徒歩3分
 - id: ufo-club
   name: 東高円寺U.F.O CLUB
   note: 最寄り駅は東高円寺
@@ -852,7 +869,10 @@
   note: ライブハウス（詳細未調査）
 - id: marble
   name: 新宿Marble
-  note: ライブハウス（詳細未調査）
+  address: 東京都新宿区歌舞伎町2-45-2 GEST32 B1F
+  url: https://shinjuku-marble.com
+  x: shinjuku_marble
+  note: 正式名称「Shinjuku Live House Marble」。2004年5月開業
 - id: osaka-satsueikai
   name: 大阪遠征支援撮影会
   aliases:
@@ -866,13 +886,18 @@
   note: 集合場所（実際の飲食店会場名は不明）
 - id: nishinagafuku-jam
   name: 西永福JAM
-  note: ライブハウス（詳細未調査）。新宿JAM（閉店済み・id:jam）とは別会場
+  address: 東京都杉並区永福3-34-14 檜垣ビル（ヒガキビル）B1F
+  x: nishieifukuJAM
+  note: 新宿JAM（閉店済み・id:jam）が2018年6月に移転オープンした会場。公式サイトURLは二次情報経由のみで生存未確認のため未掲載
 - id: lounge-neo
   name: 渋谷lounge neo
   note: 360度囲み型のライブイベント会場。渋谷グラッド（shibuya-glad）とは別会場（詳細未調査）
 - id: higashinakano-music-shed-yes
   name: 東中野music shed YES
-  note: ライブハウス（詳細未調査）
+  address: 東京都中野区東中野1-56-8 日生ビル2F
+  url: https://shedyes.com
+  x: musicshed_yes
+  note: 正式名称「music shed YES!」。BAR型ライブスペースで音響・配信設備・カラオケ完備。JR東中野駅西口徒歩1分
 - id: asakusa-goldentiger
   name: 浅草ゴールデンタイガー
   address: 東京都台東区西浅草2-14-13 BF1
@@ -921,30 +946,44 @@
   name: BAR無人島
   aliases:
     - 新宿bar無人島
-  note: 新宿のバー。なんちゃらアイドル忘年会企画の会場（詳細未調査）
+  address: 東京都新宿区歌舞伎町1-28-2（第2鈴鹿ビル／J・レックス新宿）3F
+  url: https://mujinto.tokyo
+  note: 正式名称「芝生とカウンターのカフェ&バー無人島」。一日店長制のイベントスペースでアイドルイベント開催実績多数。なんちゃらアイドル忘年会（2018年12月）の会場
 - id: nantyara-jitaku
   name: なんちゃら運営自宅
   note: 運営自宅で開催された私的イベント（撮影会・オフ会等）の会場。住所非公開
 - id: ryogoku-sunrise
   name: 両国サンライズ
-  note: 「DADAフェス」シリーズの会場（詳細未調査）
+  address: 東京都墨田区両国4-36-6 ガラス会館B1F
+  url: https://livehousesunrize.jp
+  x: ryougokusunrize
+  note: 正式名称「両国SUNRIZE」。2009年、両国フォーバレー跡地に開業。「DADAフェス」シリーズの会場
 - id: jimbocho-shichoshitsu
   name: 神保町試聴室
   note: ライブスペース（詳細未調査）。日ノ出町 試聴室その3（hinodecho-shichoshitsu-sono3）とは別会場
 - id: koenji-high
   name: 高円寺HIGH
-  note: ライブハウス（詳細未調査）。高円寺SHOW BOAT・高円寺無力無善寺・高円寺CLUB LINERとは別会場
+  address: 東京都杉並区高円寺南4-30-1
+  url: http://koenji-high.com
+  x: KOENJIHIGH
+  note: 高円寺SHOW BOAT・高円寺無力無善寺・高円寺CLUB LINERとは別会場
 - id: kashiwa-thumbup
   name: 柏ThumbUp
   aliases:
     - 柏サンブアップ
-  note: 千葉県柏市のライブハウス（詳細未調査）
+  address: 千葉県柏市泉町17-25 イシドビル1F
+  url: http://www.kashiwa-thumbup.com/
+  x: KASHIWATHUMBUP
+  note: JR柏駅南口徒歩12〜14分
 - id: hamamatsu-peta
   name: 浜松スタジオPETA
   note: 静岡県浜松市のライブ/撮影スタジオ（詳細未調査）
 - id: shimokitazawa-breath
   name: 下北沢Breath
-  note: ライブハウス（詳細未調査）
+  address: 東京都世田谷区北沢2-14-7 下北沢セントラルビル3F
+  url: https://breath335.com
+  x: breath335
+  note: 正式名称「下北沢BREATH（ブレス）ビートルズ専門Live & BAR」。小田急線下北沢駅南西口徒歩1分/京王井の頭線下北沢駅徒歩3分
 - id: higashinakano-alt-speaker
   name: 東中野ALT_SPEAKER
   aliases:
@@ -1137,7 +1176,9 @@
   note: 秋葉原オノデン地下のインストアイベントスペース（詳細未調査）
 - id: yokohama-1000club
   name: 横浜1000 CLUB
-  note: ライブハウス（詳細未調査）
+  address: 神奈川県横浜市西区南幸2-1-5
+  url: https://1000club.jp
+  note: 正式表記「1000 CLUB（サウザンドクラブ）」。LD&Kが横浜駅前に開業したライブホール。公式X運用は未確認
 - id: fudomae-trio
   name: 不動前TRIO
   note: ライブハウス（詳細未調査）
