@@ -1595,3 +1595,16 @@
 - id: shimokitazawa-flowersloft
   name: 下北沢フラワーズロフト
   note: ライブハウス（詳細未調査）
+- id: kabukicho-dreamstore
+  name: 歌舞伎町DREAM STORE
+  x: shinjukuDS
+  note: ライブハウス（詳細未調査）
+- id: nagoya-musicfarm
+  name: 名古屋ミュージックファーム
+  note: ライブハウス（詳細未調査）
+- id: shinjuku-heist
+  name: 新宿HEIST
+  note: ライブハウス（詳細未調査）
+- id: shinjuku-some-hotel
+  name: 新宿某ホテル
+  note: 御茶海マミの支援撮影会等で使用された会場。本人が「新宿の某ホテル」と伏せているため具体名不明のプレースホルダ
