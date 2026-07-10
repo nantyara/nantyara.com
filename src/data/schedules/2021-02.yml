@@ -1,0 +1,315 @@
+# 2021年2月（/mine-x による X 告知アーカイブからの発掘。ソース: mining/x-archive/2021-02.json、314告知）
+# ドラフト（未コミット・レビュー用）。issue #17（/mine-x 2021）の 2021-02 分。
+#
+# ⚠️ 2021年2月も緊急事態宣言（2021-01-08〜、東京は継続中）下。**配信のみ（無観客）のイベントは
+#   転記対象外**、実会場・有観客の開催が本文から確認できたもののみ転記
+#   （配信「併用」で有観客実績が確認できるものは対象）。画像内容からの推測は一切行わず、
+#   本文テキストで検証できる事実のみ記載した。
+#
+# 日時はすべて post の time フィールド（UTC）を JST（+9h）に変換した上で「本日/今日/明日/明後日」等の
+#   指し示す日付を確定している（境界越えを個別に検算済み。詳細は下記コメント外の作業ログ参照）。
+#
+# 転記した14件（日付順）:
+#   - 2/2昼 東新宿LOVE TKO「なんちゃランチ」1日目（節分・マミ恵方巻き、12:00open/13:30 minilive/15:00close）
+#   - 2/2夜 渋谷La.mama（18:20〜、配信併用）
+#   - 2/3昼 東新宿LOVE TKO「なんちゃランチ」2日目（あおはる料理長）
+#   - 2/5 渋谷Malcolm 無銭ライブ（開演時刻不明のためtime_tbd）
+#   - 2/7 四谷アウトブレイク 生誕祭2日目（なんちゃらバンド編成で出演。開演時刻不明のためtime_tbd）
+#   - 2/11 南浦和クニハウス（予約完売。開演時刻不明のためtime_tbd）★venues.yml alias候補
+#   - 2/13 蒲田オッタンタ「OKFK」29回目（開演時刻不明のためtime_tbd）
+#   - 2/16 渋谷La.mama「大人の文化祭vol.2～NEKO solodebut GIG！～」（start16:45、配信併用）
+#   - 2/22 渋谷La.mama「真黒毛ぼっくすvsなんちゃらアイドル2マンライブ」（open18:15/start18:30）
+#   - 2/23 蒲田オッタンタ DJイベント（開演時刻不明のためtime_tbd）
+#   - 2/24 渋谷duo MUSIC EXCHANGE「SICK×IDOLS×SICK -Shibuya War-」（開場17:00/開演17:50）
+#     ★venues.yml新規候補
+#   - 2/25 新検見川かとり〜ぬ バンドセットライブ（open17:15/start17:45）★venues.yml alias候補
+#   - 2/26 新宿Live freak「BATTLE WITHOUT HONOR OR HUMANITY vol.001」vs 9999.99-countstop-（カンスト99）
+#     （start17:00、当初2/10予定から延期）
+#   - 2/27 三軒茶屋Heaven's Door（開演時刻不明のためtime_tbd）
+#
+# 転記を見送ったもの（会場不明・証拠不足・イベント形式でない等）:
+#   - 2/1 「YouTubeライブやります！」＋「20210201ラママ　なんちゃらアイドル」というYouTube動画の
+#     連続投稿（同一リンクの再送4回）: 有観客の記述がなく、収録/配信のみの可能性が拭えないため除外
+#   - 2/6 御茶海マミ生誕祭1日目（劇場ルール適用・着席案内・整理番号なし・踊り子3名出演を確認できるが、
+#     会場名が本文中に見当たらない。samami27の過去回想「初めての生誕はゴールデン街HAPPYで、その次は
+#     ネイキッドロフト」は今回の会場ではなく過去の生誕会場の話と読める。画像内容からの推測はしない
+#     方針のため会場不明として除外）
+#   - 2/9 「なないろスマイルブギ」: 「観覧希望のかたはメールください」と物理観覧枠の存在は読めるが、
+#     会場名が本文に見当たらないため除外
+#   - 2/12 「なんちゃらあんにゅもぐもぐオフ会」: ライブ/公演ではなく食事会形式のオフ会のため対象外
+#   - 2/14 バレンタイン撮影会: 開催自体は確認できるが会場名が本文に見当たらないため除外
+#   - 2/20 サッセン関東大会: 競技会形式のイベントで、会場名・開催形式（通常ライブと異なる）が
+#     本文から確認できないため除外
+#   - 2/21 東京ドイツ村: 観光の遠足であり、ライブ/イベント告知ではないため対象外
+#
+# venues.yml 新規候補・alias候補（venues.yml自体は未編集。次回整備時に追記):
+#   - ★新規: 渋谷duo MUSIC EXCHANGE（2/24 SICK×IDOLS×SICK -Shibuya War-）venues.ymlに未登録
+#   - ★alias候補: 「南浦和クニハウス」→ 既存 minamiurawa-kunihouse（name: 南浦和KUNIHOUSE）に
+#     カタカナ表記のaliasを追加すると解決可能
+#   - ★alias候補: 「新検見川かとり〜ぬ」→ 既存 studio-katorinu（name: すたじおかとり〜ぬ）に
+#     本文表記のaliasを追加すると解決可能（もう一方の表記「スタジオかとり〜ぬ」も併記候補）
+#
+# releases.yml 裏取り候補（本タスクでは未確認・releases.yml未編集）:
+#   - 2/28 post「「グラムロック・シングル」こちらの都合でめちゃ遅れてしまっていて超申し訳ないのですが
+#     必ず出します。」: 2021年時点で未リリースの新曲候補。今後のアーカイブで発売告知を探す
+#
+# 3月への申し送り（2月アーカイブ中に見つかった3月イベントの先出し予告。3月ウィンドウで本告知を突合すること）:
+#   - 3/4 渋谷La.mama「Giant Killing!!! special～7、8年分の感謝と23、4年ぶんの愛を込めて～」
+#     open17:00/start17:30、対バン: ふたりスキップカウズ、adv.¥3000/day.¥3300、配信￥2000
+#     （告知 nantyaraidol/status/1359912469976682499）
+#   - 3/7 クロコダイル（当初2/10予定から延期。バンド編成、昼間開催予定）
+#     （告知 nantyaraidol/status/1357321051898748930）
+#   - 3/14 なんちゃらアイドル撮影会（2/16 20時予約開始、SBQstudio）
+#   - 3/16 渋谷La.mama「Giant Killing!!! vol.006」guest: 鼠先輩
+#     （告知 nantyaraidol/status/1359507931142660096）
+#   - 3/17 撮影会（会場不明。2/26時点で受付継続中との言及のみ）
+#   - 3/21 大阪遠征を検討中（会場募集中の言及。確定情報は3月ウィンドウで要確認）
+#   - 2/27 post「3月の予定です」（samami27、画像添付のまとめ）が3月分裏取りの一次資料になる
+#     （samami27/status/1365685066001567746）
+
+- id: event-20210202-lovetko-lunch
+  slug: 20210202-lovetko-lunch
+  date: 2021-02-02 13:30:00 +0900
+  title: 東新宿LOVE TKO「ウキドキなんちゃランチ疑獄！～ライブもする悪魔の2DAYS～」1日目
+  site: 東新宿LOVE TKO
+  duplicate_ok: true
+  content: |
+    平日開催の2日連続ランチ営業＋ミニライブ企画の1日目。告知本文「平日開催！ウキドキなんちゃランチ疑獄！
+    ～ライブもする悪魔の2DAYS～ 2月2日、2月3日 場所 東新宿loveTKO 時間 12時open 13時30分 minilive
+    start 15時close charge 1000円 ※foodは別料金（500円～）」（nantyaraidol）。この日は御茶海マミが
+    恵方巻きを調理（「火曜日は、御茶海による恵方巻！」）。終演後「なんちゃランチありがとうございました！」
+    「ソールドアウトありがたビーム」等の事後報告で開催・完売を確認。
+
+    ※Xの告知アーカイブから復元。dateは告知記載のminilive開始時刻（13:30）。
+  sources:
+    - https://x.com/nantyaraidol/status/1356257315721101314
+    - https://x.com/nantyaraidol/status/1356277145241206786
+    - https://x.com/yokuwakan_nai/status/1356631409616539648
+
+- id: event-20210202-lamama
+  slug: 20210202-lamama
+  date: 2021-02-02 18:20:00 +0900
+  title: 渋谷La.mamaライブ（配信あり）
+  site: 渋谷La.mama
+  content: |
+    当日告知「本日2月2日18:20〜渋谷ラママにて歌います！配信もございます〜！」（samami27）。同日昼の
+    東新宿LOVE TKOランチ企画のあと、夜に渋谷La.mamaで出演したことをyokuwakan_naiの「日付変わっちゃった
+    けど節分昼の東新宿TKOから渋谷ラママありがとでした！」で確認。詳細な対バン・料金は本文に見当たらない。
+
+    ※Xの告知アーカイブから復元。dateは告知記載の開始時刻（18:20）。
+  sources:
+    - https://x.com/samami27/status/1356488509532512257
+    - https://x.com/yokuwakan_nai/status/1356631409616539648
+
+- id: event-20210203-lovetko-lunch
+  slug: 20210203-lovetko-lunch
+  date: 2021-02-03 13:30:00 +0900
+  title: 東新宿LOVE TKO「ウキドキなんちゃランチ疑獄！～ライブもする悪魔の2DAYS～」2日目
+  site: 東新宿LOVE TKO
+  duplicate_ok: true
+  content: |
+    2/2告知（open12:00/minilive start13:30/close15:00・charge1000円）で予告された2日連続ランチ＋
+    ミニライブ企画の2日目。この日はあおはるが料理長を担当（「2月3日はあおはるが料理長！マミは、お茶とかを
+    コンビニに買いにいく係」）。事後報告「なんちゃランチ2日目ありがとうございました！あおはる煮込み
+    おいしかったね〜！」（samami27）で開催を確認。
+
+    ※Xの告知アーカイブから復元。dateは前日告知に準拠したminilive開始時刻（13:30）。
+  sources:
+    - https://x.com/nantyaraidol/status/1356589461031636994
+    - https://x.com/samami27/status/1356856577873960967
+
+- id: event-20210205-malcolm
+  slug: 20210205-malcolm
+  date: 2021-02-05 12:00:00 +0900
+  time_tbd: true
+  title: 渋谷Malcolm 無銭ライブ
+  site: 渋谷Malcolm
+  content: |
+    前日告知「明日は渋谷マルコムで無銭！ドリンク代のみでライブ見ることが出来るのでぜひぜひぜひぜひです！」
+    （yokuwakan_nai）。当日「今日のライブは渋谷Malcolm！」（samami27）、終演後「渋谷Malcolm無銭ライブ
+    ありがとうございました！」（samami27）で開催を確認。開演時刻・対バンは本文に見当たらない。
+
+    ※Xの告知アーカイブから復元。時刻不明のためtime_tbd。
+  sources:
+    - https://x.com/yokuwakan_nai/status/1357234248931889152
+    - https://x.com/samami27/status/1357650294209802244
+
+- id: event-20210207-outbreak
+  slug: 20210207-outbreak
+  date: 2021-02-07 12:00:00 +0900
+  time_tbd: true
+  title: 四谷アウトブレイク 生誕祭（なんちゃらバンド編成）
+  site: 四谷アウトブレイク
+  content: |
+    前日告知「明日、7日も四谷アウトブレイクにて生誕祭です！明日はなんちゃらバンドで出演いたします！」
+    （samami27）。当日「本日よろしくお願いいたします！東京でこういうふうに生誕ライブやるのはこれが
+    最後なので、みんな是非来ていただきたいです！」（nantyaraidol）、終演後「生誕ライブ2日間ありがとう
+    ございました！」（samami27）で開催を確認。開演時刻・対バンは本文に見当たらない。
+
+    ※Xの告知アーカイブから復元。時刻不明のためtime_tbd。
+  sources:
+    - https://x.com/samami27/status/1358040419322372099
+    - https://x.com/nantyaraidol/status/1358274139232948224
+
+- id: event-20210211-kunihouse
+  slug: 20210211-kunihouse
+  date: 2021-02-11 12:00:00 +0900
+  time_tbd: true
+  title: 南浦和クニハウス（予約完売）
+  site: 南浦和クニハウス
+  content: |
+    当日告知「本日は南浦和クニハウス！予約完売です。予約してくださった皆さまよろしくお願いいたします
+    ー！」（samami27）。開演時刻・対バンは本文に見当たらない。
+
+    ※Xの告知アーカイブから復元。時刻不明のためtime_tbd。
+  sources:
+    - https://x.com/samami27/status/1359770608033095682
+
+- id: event-20210213-okfk-29
+  slug: 20210213-okfk-29
+  date: 2021-02-13 12:00:00 +0900
+  time_tbd: true
+  title: 蒲田オッタンタ「OKFK」29回目
+  site: 蒲田オッタンタ
+  content: |
+    当日告知「本日はこちら！少し早めのお時間です。蒲田オッタンタで待ってます！」（samami27）。終演後
+    「OKFK29回目ありがとうございました！29回もやってるんだな〜ホームな気持ちになるわけだな〜」で
+    シリーズ29回目の開催を確認。正確な開演時刻は本文に見当たらない。
+
+    ※Xの告知アーカイブから復元。時刻不明のためtime_tbd。
+  sources:
+    - https://x.com/samami27/status/1360432042492661762
+    - https://x.com/samami27/status/1360538025705439233
+
+- id: event-20210216-lamama-otonanobunkasai2
+  slug: 20210216-lamama-otonanobunkasai2
+  date: 2021-02-16 16:45:00 +0900
+  title: 渋谷La.mama「大人の文化祭vol.2～NEKO solodebut GIG！～」
+  site: 渋谷La.mama
+  acts:
+    - NEKO
+    - ルカタマ
+    - 玉手初美
+    - Momoka Kagamiya
+  content: |
+    告知本文「2/16 at 渋谷La.mama タイトル: 大人の文化祭vol.2～NEKO solodebut GIG！～ start16:45
+    adv.¥2500 配信￥2000 ・なんちゃらアイドル ・NEKO ・ルカタマ ・玉手初美 ・Momoka Kagamiya
+    チケットの申し込みは各アーティストにお申し込みになるか、lamama0123456789@gmail.comにお申し込み
+    下さい。」（nantyaraidol）。NEKOのソロデビューガチ企画で、当日は「究極のたこ焼き」等のフード出店も
+    実施。終演後「大人の文化祭ありがとうございました！大人になってもはしゃげるの嬉しいなぁ」
+    （samami27）等で開催を確認。
+
+    ※Xの告知アーカイブから復元。dateは告知記載の開始時刻（16:45）。
+  sources:
+    - https://x.com/nantyaraidol/status/1357664130514051072
+    - https://x.com/samami27/status/1361663692291469320
+
+- id: event-20210222-lamama-makkurokebokkusu
+  slug: 20210222-lamama-makkurokebokkusu
+  date: 2021-02-22 18:30:00 +0900
+  title: 渋谷La.mama「真黒毛ぼっくすvsなんちゃらアイドル2マンライブ」
+  site: 渋谷La.mama
+  acts:
+    - 真黒毛ぼっくす
+  content: |
+    告知本文「急遽きまりました！なんたらは19時から！2/22(月) at 渋谷La.mama title:真黒毛ぼっくすvs
+    なんちゃらアイドル2マンライブ open18:15/start18:30 chage¥2500プラスdrink代 出演： 真黒毛ぼっくす
+    なんちゃらアイドル」（nantyaraidol）。終演後「ラママ、真黒毛ぼっくすさんとのツーマンありがとう
+    ございました！めちゃめちゃ楽しかった…！」（samami27）、「真黒毛ぼっくすさんとのツーマンありがとう
+    ございました！」（yokuwakan_nai）で開催を確認。
+
+    ※Xの告知アーカイブから復元。dateは告知記載のopen/start時刻のうちstart（18:30）。
+  sources:
+    - https://x.com/nantyaraidol/status/1362319055735033856
+    - https://x.com/samami27/status/1363813423297880073
+
+- id: event-20210223-okfk-dj
+  slug: 20210223-okfk-dj
+  date: 2021-02-23 12:00:00 +0900
+  time_tbd: true
+  title: 蒲田オッタンタ DJイベント
+  site: 蒲田オッタンタ
+  duplicate_ok: true
+  content: |
+    事後報告「オッタンタDJありがとうございました！明日は渋谷DUO！」（samami27）、「蒲田オッタンタ
+    DJでしたありが」（yokuwakan_nai）でDJイベントとしての出演・開催を確認。開演時刻は本文に見当たらない。
+
+    ※Xの告知アーカイブから復元。時刻不明のためtime_tbd。
+  sources:
+    - https://x.com/samami27/status/1364140852918902792
+    - https://x.com/yokuwakan_nai/status/1364232199654973445
+
+- id: event-20210224-duo-music-exchange
+  slug: 20210224-duo-music-exchange
+  date: 2021-02-24 17:50:00 +0900
+  title: 渋谷duo MUSIC EXCHANGE「SICK×IDOLS×SICK -Shibuya War-」
+  site: 渋谷duo MUSIC EXCHANGE
+  acts:
+    - おやすみホログラム
+    - 疾風LITTLE GORILLA
+    - めろん畑a go go
+  content: |
+    告知本文「2021年2月24日 渋谷duo MUSIC EXCHANGEにて【SICK×IDOLS×SICK -Shibuya War-】！ 開場17:00
+    開演17:50 おやすみホログラム なんちゃらアイドル 疾風LITTLE GORILLA(O.A) めろん畑a go go
+    チケット3500円(+1D)」（samami27）。終演後「『SICK×IDOLS×SICK -Shibuya War-』渋谷duoありがとう
+    ございました！」（samami27）、「渋谷DUOありがとうございました！めろん大好き！」（yokuwakan_nai）で
+    開催を確認。
+
+    ※Xの告知アーカイブから復元。dateは告知記載の開演時刻（17:50）。
+  sources:
+    - https://x.com/samami27/status/1364140916596875267
+    - https://x.com/samami27/status/1364581948266483714
+
+- id: event-20210225-katorinu
+  slug: 20210225-katorinu
+  date: 2021-02-25 17:45:00 +0900
+  title: 新検見川かとり〜ぬ バンドセットライブ
+  site: 新検見川かとり〜ぬ
+  content: |
+    前日告知「2月25日は新検見川かとり〜ぬさんでライブです！オープン17:15 スタート17:45 20:00完全閉店
+    バンドセットでやりますので〜何卒〜」（samami27）。終演後「新検見川かとり〜ぬでバンドセットライブ
+    サンキュでした！レア回だった！」（yokuwakan_nai）、「スタジオかとり〜ぬライブありがとうございました！
+    ぽにぽに帝国セカンド解散ライブ！」（samami27）で開催を確認。
+
+    ※Xの告知アーカイブから復元。dateは告知記載の開始時刻（17:45）。
+  sources:
+    - https://x.com/samami27/status/1364619368861114370
+    - https://x.com/yokuwakan_nai/status/1364900987014582278
+
+- id: event-20210226-livefreak
+  slug: 20210226-livefreak
+  date: 2021-02-26 17:00:00 +0900
+  title: 新宿Live freak「BATTLE WITHOUT HONOR OR HUMANITY vol.001」なんちゃらアイドルVS9999.99-countstop-
+  site: 新宿Live freak
+  acts:
+    - 9999.99-countstop-
+  content: |
+    初出告知「BATTLE WITHOUT HONOR OR HUMANITY vol.001 なんちゃらアイドルVS9999．99－countstop－
+    新宿livefreak start17:00 price2500円」（nantyaraidol、2/5、当初2/10予定から延期・時間帯変更後の
+    もの）。当日の対バン相手は「カンストさん」「カンスト99」とも表記される（「本日はカンストさんと
+    新宿Live freakでツーマン！」）。桑田佳祐の誕生日にちなみ「25分セット×2！しかも来場者全員にサイン
+    入りブロマイドをプレゼント」との追加情報あり。終演後「Live freakライブありがとうございました！
+    カンストさんとツーマン楽しかった〜！」（samami27）で開催を確認。
+
+    ※Xの告知アーカイブから復元。dateは告知記載の開演時刻（17:00）。
+  sources:
+    - https://x.com/nantyaraidol/status/1357561428081713154
+    - https://x.com/samami27/status/1365157486806753283
+    - https://x.com/samami27/status/1365265977881989121
+
+- id: event-20210227-heavens-door
+  slug: 20210227-heavens-door
+  date: 2021-02-27 12:00:00 +0900
+  time_tbd: true
+  title: 三軒茶屋Heaven's Doorライブ
+  site: 三軒茶屋Heaven's Door
+  content: |
+    前日告知「明日Heaven's Door！久しぶりに天国に帰るよ。」（yokuwakan_nai）。終演後「三軒茶屋
+    Heaven's Doorありがとうございました！ライブハウスに帰ってきた感じがありました。燃えてたね」
+    （yokuwakan_nai）、「ヘブンスありがとうございました！」（samami27）で開催を確認。開演時刻・
+    対バンは本文に見当たらない。
+
+    ※Xの告知アーカイブから復元。時刻不明のためtime_tbd。
+  sources:
+    - https://x.com/yokuwakan_nai/status/1365314509103984644
+    - https://x.com/yokuwakan_nai/status/1365644056571699201
