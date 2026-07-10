@@ -54,11 +54,44 @@
 - id: event-20260801-timetree-82861467
   slug: 20260801-timetree-82861467
   date: 2026-08-01 12:00:00 +0900
-  title: 横須賀ヤンガーザンイエスタデイ
+  title: TANZAKU CD FESTIVAL 2026 supported by 短冊CDの日
   site: 横須賀ヤンガーザンイエスタデイ
   timetree_id: "2988700077582861467"
   content: |
-    TBD
+    【出演】
+    any joy?
+    イエスハッピー！
+    吉田哲人
+    MCあんにゅ
+    小日向由衣
+    sommeil sommeil
+    なんちゃらアイドル
+    Tnaka
+    Tokyoかけひき倶楽部
+    The Bachelors
+    HONDALADY
+    松永天馬
+    リリー＆マリー
+    and more…
+
+    短冊CD発売38周年勝手に応援委員会主催、短冊CDの日運営事務局協賛。
+
+    開場/開演　11:30/12:00
+    ADV　¥4,000＋1DRINK
+    DOOR　¥4,200＋1DRINK
+  acts:
+    - "any joy?"
+    - "イエスハッピー！"
+    - "吉田哲人"
+    - "MCあんにゅ"
+    - "小日向由衣"
+    - "sommeil sommeil"
+    - "Tnaka"
+    - "Tokyoかけひき倶楽部"
+    - "The Bachelors"
+    - "HONDALADY"
+    - "松永天馬"
+    - "リリー＆マリー"
 - id: event-20260803-timetree-18571225
   slug: 20260803-timetree-18571225
   date: 2026-08-03 18:00:00 +0900
@@ -188,11 +221,18 @@
 - id: event-20260817-timetree-93663853
   slug: 20260817-timetree-93663853
   date: 2026-08-17 18:00:00 +0900
-  title: 東新宿LOVE TKO
+  title: sommeil sommeil＆なんちゃらアイドル マンスリー2マンライブ（第2回）
   site: 東新宿LOVE TKO
   timetree_id: "2966940613393663853"
-  content: |
-    TBD
+  content: |-
+    sommeil sommeil＆なんちゃらアイドル マンスリー2マンライブ！（第2回）
+
+    open/start　18:00/19:00
+    CHARGE　¥1,500
+
+    第1回（7/13）のタイムテーブルを踏襲予定（要確認）。第3回は9月14日（月）開催予定。
+  acts:
+    - "sommeil sommeil"
 - id: event-20260818-timetree-56983263
   slug: 20260818-timetree-56983263
   date: 2026-08-18 12:00:00 +0900
