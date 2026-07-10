@@ -1631,3 +1631,12 @@
 - id: naminori-colors
   name: なみのりカラーズ
   note: ライブハウス（詳細未調査）。既存登録の「秋葉原カラーズ」（AKIBA COLORS）とは表記が異なり、同一施設かは未確認
+- id: asagaya-yagekijo
+  name: 阿佐ヶ谷家劇場
+  note: ライブハウス（詳細未調査）
+- id: fukuoka-sound-bar-brick
+  name: sound bar brick
+  note: 福岡市内と推定されるライブハウス（詳細未調査）
+- id: shimomaruko-studio
+  name: 下丸子スタジオ
+  note: 撮影会会場（詳細未調査）。既存登録の「下丸子写真展会場」（shimomaruko-photo-venue）と同一施設の可能性があるが一次情報での紐づけができないため別エントリとした
