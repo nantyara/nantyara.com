@@ -1245,6 +1245,7 @@
   aliases:
     - 新宿フリーク
     - ライブフリーク
+    - 新宿ライブフリーク
   note: ライブハウス。正式表記「新宿Live Freak」（新宿区新宿2-12-4 アコードビルB1と見られるが一次情報での裏取りができず要再確認）。公式サイト・Xは調査済み・特定できず
 - id: okfk-piano-space
   name: OKFK新会場（蒲田・ピアノのある空間）
@@ -1587,4 +1588,10 @@
   note: ライブハウス（詳細未調査）
 - id: futakotamagawa-gemini-theater
   name: 二子玉川ジェミニシアター
+  note: ライブハウス（詳細未調査）
+- id: shinkoenji-nimandenatsu
+  name: 新高円寺二万電圧
+  note: ライブハウス（詳細未調査）
+- id: shimokitazawa-flowersloft
+  name: 下北沢フラワーズロフト
   note: ライブハウス（詳細未調査）
