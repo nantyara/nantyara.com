@@ -831,17 +831,22 @@
   x: hoteyeslive
 - id: basement-bar
   name: 下北沢ベースメントバー
-  note: ライブハウス（詳細未調査）
+  address: 東京都世田谷区代沢5-18-1 カラバッシュビルB1F
+  url: https://toos.co.jp/basementbar/
+  x: BASEMENTxBAR
+  note: ライブハウス。下北沢THREE（shimokitazawa-three）と同ビル同フロア
 - id: kawashima-shotengai
   name: 中野川島商店街
   address: 東京都中野区弥生町3-20-11
-  note: 商店街の夜店市（川辺洋品店隣）。路上ライブ会場
+  note: 商店街の夜店市（川辺洋品店隣）。路上ライブ会場。振興組合TEL 03-3372-7939（平日昼のみ）。公式サイト・Xは調査済み・特定できず
 - id: shinjukugyoen-merrygoround
   name: 新宿御苑merry-go-round
   aliases:
     - 新宿御苑メリーゴーランド
     - 新宿メリーゴーランド
-  note: ライブハウス/バー（詳細未調査）
+  address: 東京都新宿区新宿1-31-3 ダイアパレス新宿1丁目B-107号
+  url: https://merry-g-r.com
+  note: ライブハウス/バー。公式Xは調査済み・特定できず
 - id: shimokitazawa-garden
   name: 下北沢GARDEN
   aliases:
@@ -852,18 +857,26 @@
   x: shimokita_GARDEN
 - id: studio-dom
   name: 高円寺Studio DOM
-  note: ライブ/スタジオ（詳細未調査）
+  address: 東京都杉並区高円寺南4-25-7 五明堂駅前ビル3F
+  url: https://soundstudiodom.com
+  x: soundstudiodom
+  note: 正式名称「Sound Studio DOM」。1994年創業
 - id: shinkoenji-kanademia
   name: 新高円寺カナデミア
-  note: ライブハウス（詳細未調査）
+  address: 東京都杉並区梅里1-7-21 15ビルB1階
+  url: https://www.kanademia.com
+  x: koenjikanademia
+  note: 2013年9月オープン
 - id: vespa
   name: ベスパ
   aliases:
     - 中野BESPA
-  note: カラオケ会場として言及（正式名称・住所未確認）
+  note: カラオケ会場として言及（正式名称・住所未確認）。同名店（Bar Vespa）が銀座・京都・福岡等複数都市に存在するが手がかりがなく特定できず
 - id: akibashoten-anjo
   name: あきば書店安城1号店
-  note: 愛知県安城市の店舗（詳細未調査）
+  address: 愛知県安城市尾崎町追池52-9
+  url: https://www.akibashoten.com
+  note: 愛知県安城市の店舗（アダルトショップ系チェーン）。TEL 0566-95-0331。店舗専用の公式Xは調査済み・特定できず
 - id: showboat
   name: 高円寺SHOW BOAT
   address: 東京都杉並区高円寺北3-17-2 オークヒル高円寺B1
@@ -872,21 +885,29 @@
   note: 正式名称「ShowBoat」（1993年オープン）
 - id: sunash
   name: 静岡Sunash
-  note: ライブハウス（詳細未調査）
+  address: 静岡県静岡市駿河区稲川1-1-32
+  url: http://sunash.info
+  x: sunash69
+  note: 1998年オープン、キャパ230人。静岡駅南口徒歩5分
 - id: club251
   name: 下北沢Club251
   aliases:
     - 下北沢251
-  note: ライブハウス（詳細未調査）
+  address: 東京都世田谷区代沢5-29-15 SYビルB1F
+  url: https://club251.com
+  x: CLUB251official
+  note: 1993年11月オープン
 - id: rrr-ryogoku
   name: 両国楽園部屋
   aliases:
     - RRR
-  address: 東京都墨田区両国1-3-9
-  note: 通称「RRR」
+  address: 東京都墨田区両国1-3-9 ムラサワビル1 3F
+  note: 通称RRR（Ryogoku Rakuen Room）。閉店し、後継として東京キララ社内「神保町RRR」に引き継がれた（別法人・別会場）。閉店時期・当時の公式サイト/Xは調査済み・特定できず
 - id: cross-bunny
   name: 中野クロスバニー
-  note: ライブハウス（詳細未調査）
+  address: 東京都中野区中野5-55-13 シカトル中野ビル3F
+  x: xBUNNY_Nakano
+  note: 正式名称「xBUNNY」。バニーガールコスプレバー（ライブハウスではない）。営業状況は要再確認
 - id: barbara
   name: 代々木バーバラ
   address: 東京都渋谷区代々木1-42-4 代々木P1ビルB1
@@ -895,25 +916,42 @@
   note: 正式名称「ライブハウス代々木Barbara」。JR代々木駅徒歩5分・小田急南新宿駅徒歩3分
 - id: ufo-club
   name: 東高円寺U.F.O CLUB
-  note: 最寄り駅は東高円寺
+  address: 東京都杉並区高円寺南1-11-6 ハーモニーヒルズB1F
+  url: https://ufoclub.jp
+  x: UFO_CLUB_TOKYO
+  note: 最寄り駅は東高円寺。1996年開業のアンダーグラウンド・ロック系ライブハウス
 - id: roppongi-varit
   name: 六本木VARIT
-  note: ライブハウス（詳細未調査）
+  address: 東京都港区六本木5丁目18-2 大昌第二ビルB1
+  x: InfoVarit
+  note: ライブハウス。渋谷7th FLOOR系列・神戸VARIT.姉妹店として2016年3月18日オープン、2021年3月31日閉店。跡地は同年5月より「六本木BIGHOUSE」。当時の公式サイトは消滅
 - id: otsuka-meets
   name: 大塚MEETS
-  note: ライブハウス（詳細未調査）
+  address: 東京都豊島区南大塚3-50-1 ウィンド大塚ビルB1
+  url: http://meets.rinky.info
+  x: otsukaMEETS
+  note: リンキィディンク系列。JR大塚駅南口徒歩3分
 - id: tokyo-sabaku
   name: 東京砂漠
-  note: ライブハウス（詳細未調査）
+  x: tokyo_sabaku330
+  note: ライブハウスではなくアイドルイベント制作・プロデュース団体/イベントシリーズ名（「東京砂漠イベント制作」）。固定会場を持たないため住所は不要
 - id: nishishinjuku-togi-bar
   name: 西新宿TOGI Bar
-  note: ライブハウス（詳細未調査）
+  address: 東京都渋谷区本町4-19-1 B1
+  url: https://togibar.com
+  x: TogiBar
+  note: ライブハウス。正式名称「LIVE HOUSE TOGI BAR」（旧I LOVE TOKYO）。都営大江戸線西新宿五丁目駅近くのため通称「西新宿」（住所自体は渋谷区本町）
 - id: koenji-ryugu
   name: 高円寺龍宮
-  note: ライブハウス（詳細未調査）
+  address: 東京都杉並区高円寺南2-21-6 B1F
+  url: https://ryuguw.com
+  x: RyuGuw
+  note: 正式名称「和楽器BAR 龍宮～Ryu Guw～」。高円寺南口ルック商店街
 - id: shinjuku-rednose
   name: 新宿レッドノーズ
-  note: 新宿ルイードK4の入り口から入場する形態のスペース（詳細未調査）
+  address: 東京都新宿区歌舞伎町1丁目2-13 新光ビルB2F（閉店当時）
+  x: ShinjukuREDNOSE
+  note: 新宿ルイードK4の入り口から入場する形態のスペース。ルイードグループ運営、2013年オープン、2020年8月31日閉店・移転。同運営者は同年9月に「池袋リヴォイス」として池袋RUIDO K3跡地でリスタート
 - id: sapporo-spiritual-lounge
   name: 札幌SPIRITUAL LOUNGE
   note: ライブハウス（詳細未調査）
@@ -1396,3 +1434,27 @@
 - id: akihabara-symphonia
   name: 秋葉原シンフォニア
   note: ライブハウス（正式名称・住所は未調査。いすゞビル裏手・日高屋が目印との言及あり）
+- id: harajuku-crocodile
+  name: 原宿クロコダイル
+  note: ライブハウス（詳細未調査）
+- id: higashinakano-rukachi
+  name: 東中野るかち
+  note: ライブスペース/バー（詳細未調査）
+- id: tsukiji-gensui
+  name: 築地元帥
+  note: 新富町駅1番出口近くの居酒屋。アコースティックライブ開催実績あり
+- id: colorful-candy-kamakura
+  name: Colorful×Candy鎌倉撮影会
+  note: 鎌倉での撮影会企画。固定会場のないプレースホルダ
+- id: egota-marquee
+  name: 江古田マーキー
+  note: ライブハウス（詳細未調査）
+- id: omori-sports-center
+  name: 大森スポーツセンター
+  note: 大田区蒲田復興協会(OKFK)シリーズ30回記念回（2021-04-18）で使用された特別会場
+- id: tokyo-ryutsu-center
+  name: 東京流通センター
+  note: M3（音楽同人即売会）の会場
+- id: koenji-wooha
+  name: 高円寺ウーハ
+  note: ライブハウス（詳細未調査）
