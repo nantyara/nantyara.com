@@ -1693,3 +1693,9 @@
 - id: aeonmall-ageo
   name: イオンモール上尾
   note: 商業施設内イベントスペース（詳細未調査）
+- id: ebisu-batica
+  name: 恵比寿BATICA
+  note: ライブハウス（詳細未調査）
+- id: kawasaki-serbiannight
+  name: 川崎セルビアンナイト
+  note: ライブハウス（詳細未調査）
