@@ -36,6 +36,7 @@
     - S.B.Q.個人撮影会
     - S.B.Q.個撮
     - S.B.Q.撮影会
+    - S.B.Q撮影会
     - 市ヶ谷S.B.Q.個人撮影会
   note: S.B.Q.アイドル部の個人撮影会
 - id: studio-sbq
@@ -1121,3 +1122,13 @@
 - id: yokohama-chukagai
   name: 横浜中華街
   note: エリア名エントリ（善隣門前集合のオフ会等、店舗名不明時に使用）
+- id: club-citta-kawasaki
+  name: CLUB CITTA'川崎
+  address: 神奈川県川崎市川崎区小川町4-1
+  note: 大箱ライブハウス。同ビル2Fの「クラブチッタ アティック」（kawasaki-attic）とは別会場
+- id: kichijoji-mandala2
+  name: 吉祥寺MANDA-LA2
+  note: ライブハウス（詳細未調査）
+- id: livebus-shibuya
+  name: ライブバス（渋谷周遊）
+  note: バスで渋谷中を走りながら歌うライブ企画。固定会場なしのプレースホルダ
