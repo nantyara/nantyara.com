@@ -44,7 +44,10 @@
   name: Studio S.B.Q
   aliases:
     - Studio S.B.Q（市ヶ谷）
-  note: 調査済み・情報なし（市ヶ谷の個人撮影会向けスタジオと思われるが公式サイト・住所とも未確認）
+  address: 東京都新宿区市谷1丁目16
+  url: https://studio.quinq.net
+  x: studioquinq
+  note: 旧「Studio QuinQ」（studio-quinq）が2023年7月1日に現住所へ移転・改称した後継。市ヶ谷駅から徒歩4分
 - id: sarusho
   name: 栃木さる小
   aliases:
@@ -1082,83 +1085,119 @@
   note: ライブハウス（詳細未調査）
 - id: studioact-machida
   name: スタジオアクト町田店
-  note: 町田のレンタルスタジオ（詳細未調査）
+  address: 東京都町田市原町田6-29-10
+  url: https://studioact.co.jp/
+  note: 町田駅東口徒歩約3分、ライブホール（150名収容）併設の音楽スタジオ
 - id: asukayama-park
   name: 王子飛鳥山公園
-  note: 北区の野外特設舞台。無銭ライブ企画「オレノオゴリ」開催会場
+  address: 東京都北区王子1-1-3
+  note: 北区立公園。無銭ライブ企画「オレノオゴリ」開催会場。単一の公式X等はなし
 - id: kamata-newate
   name: 蒲田ニューエイト
-  note: ライブスペース（詳細未調査）
+  url: http://neweight.tokyo/
+  note: ライブスペース。現在は「スタジオニューエイト」としてリブランドし https://studio-neweight.tokyo/ も運用中（2015年リニューアル）
 - id: tsuruhashi-section3
   name: 鶴橋SECTION3
+  address: 大阪府大阪市東成区東小橋3-14-29 ラッキープラザビル2F
   url: http://section3.jp/access.html
-  note: 大阪のライブハウス
+  note: 大阪のライブハウス。閉店とみられる（食べログに【閉店】表記、クラウドファンディングでの存続模索の形跡もあり）
 - id: sakai-fandango
   name: 堺ファンダンゴ
-  note: 大阪府堺市のライブハウス（詳細未調査）
+  address: 大阪府堺市堺区戎島町5-3
+  url: https://www.fandango-japan.com/
+  x: fandango_sakai
+  note: 元々大阪十三で1987年創業、2019年に堺の現住所へ移転リニューアル
 - id: ikebukuro-liveinnrosa
   name: 池袋LIVE INN ROSA
-  note: ライブハウス（詳細未調査）
+  address: 東京都豊島区西池袋1-37-12 ロサ会館B2F
+  url: http://www.live-inn-rosa.com/
 - id: bonobo
   name: ボノボ
-  note: ライブハウス（所在地未確認）
+  address: 東京都渋谷区神宮前2-23-4
+  url: https://www.bonobo.jp/
+  note: 正式名称「bar bonobo」。同名の別施設「bonobos」と混同注意、これは神宮前のバー。X未特定（Instagramは@jingumaebonobo）
 - id: hanyu-suikoen
   name: 羽生水郷公園
-  note: 埼玉県羽生市の公園。「世界キャラクターさみっとin羽生」開催会場
+  address: 埼玉県羽生市三田ヶ谷751-1
+  url: https://www.parks.or.jp/suizokukan/
+  note: 埼玉県立公園。「世界キャラクターさみっとin羽生」開催会場。単一イベント会場としての公式X等はなし
 - id: shinkemigawa-hanazonoza
   name: 新検見川はなぞの座
-  note: 千葉市花見川区・新検見川のライブスペース。既存登録の「新検見川Swingy」とは別会場
+  note: 調査済み・情報なし。千葉市花見川区・新検見川のライブスペースとみられるが一致する一次情報は見つからず。既存登録の「新検見川Swingy」とは別会場（近隣の「Clubはな灯」との同一性も確証なし）
 - id: shimokitazawa-three
   name: 下北沢THREE
-  note: ライブハウス。既存登録の下北沢ARENA・Que・Laguna・Breath・ろくでもない夜とは別会場
+  address: 東京都世田谷区代沢5-18-1 カラバッシュビルB1F
+  url: https://www.toos.co.jp/3/
+  note: ライブハウス。既存登録の下北沢ARENA・Que・Laguna・Breath・ろくでもない夜とは別会場。下北沢ベースメントバー（basement-bar）と同ビル同フロア
 - id: studio-quinq
   name: スタジオQuinQ
   url: https://studio.quinq.net
-  note: 写真スタジオ。既存登録の「Barクインク」（bar-quinq、神宮寺ナナ主催のバー企画）とは別会場
+  note: 写真スタジオ。2023年7月1日に市ヶ谷へ移転・改称し「Studio S.B.Q」（studio-sbq）として現存。既存登録の「Barクインク」（bar-quinq、神宮寺ナナ主催のバー企画）とは別会場
 - id: yukarigaoka-sobacafe
   name: ユーカリが丘 蕎麦カフェ「3〇1」
+  address: 千葉県佐倉市ユーカリが丘6-4-1 山万6丁目ビル1階
+  url: https://www.sobacafe301.rocks/
   note: 千葉県佐倉市ユーカリが丘の蕎麦カフェ。店名表記は原文ママ、正式表記未確認
 - id: ogikubo-club-doctor
   name: 荻窪club Doctor
-  note: ライブハウス（詳細未調査）
+  address: 東京都杉並区上荻1-16-10 ローレルビル荻窪B1F
+  url: http://www.clubdoctor.co.jp/
 - id: omori-saizeriya
   name: 大森のサイゼリヤ
-  note: 大森のサイゼリヤ店舗。具体的な店舗名は未確認
+  note: チェーン飲食店（サイゼリヤ大森店）で固定イベント会場ではないため、会場マスタとしての住所特定は対象外と判断
 - id: hmv-copis-kichijoji
   name: HMV record shop コピス吉祥寺
-  note: 既存登録の「HMV record shop 渋谷」「HMVエソラ池袋店」とは別店舗
+  address: 東京都武蔵野市吉祥寺本町1-11-5 コピス吉祥寺A館2F
+  url: https://recordshop.hmv.co.jp/9489
+  note: 2017年3月30日オープン。既存登録の「HMV record shop 渋谷」「HMVエソラ池袋店」とは別店舗
 - id: hmv-shinjuku-alta
   name: HMV record shop 新宿アルタ
-  note: HMVレコードショップ。既存登録の渋谷・池袋店とは別店舗
+  address: 東京都新宿区新宿3-24-3 新宿ALTA 6F
+  url: https://www.hmv.co.jp/store/ALT/
+  note: 新宿ALTA自体の閉館に伴い、2025年3月14日に新宿マルイ本館（東京都新宿区新宿3-30-13）8階へ移転（店名変更の可能性あり）。既存登録の渋谷・池袋店とは別店舗
 - id: diskunion-jimbocho
   name: ディスクユニオン神保町店
-  note: 既存登録の「ディスクユニオンお茶の水駅前店」とは別店舗
+  address: 東京都千代田区神田神保町1-4 クロサワビル2F
+  note: 既存登録の「ディスクユニオンお茶の水駅前店」とは別店舗。公式サイトは店舗個別ページ要確認のため未掲載
 - id: b5-idol-cafe
   name: B5 IDOL CAFE
-  note: カフェ・バー（住所・詳細未調査）
+  address: 東京都台東区根岸1-1-34 平野ビル1F奥
+  url: https://uguisudani.wixsite.com/b5idolcafe
+  x: b5idolcafe
+  note: 鶯谷のライブカフェ&バー
 - id: kannai-7th-avenue
   name: 関内7th Avenue
   aliases:
     - セブンスアベニュー
-  note: 横浜市中区のライブハウス（住所未調査）。表記ゆれ「セブンスアベニュー」も本文に登場
+  address: 神奈川県横浜市中区山下町252 グランベル横浜ビルB1
+  url: http://www2.big.or.jp/~7th/
+  x: YOKOHAMA_7th
+  note: 正式名称「横浜 7th AVENUE」（関内駅近く）。表記ゆれ「セブンスアベニュー」も本文に登場
 - id: kamata-studio-kapura
   name: スタジオ・カプラ（蒲田）
-  note: 蒲田の写真スタジオ。正式名称・住所は未確認
+  address: 東京都大田区西蒲田7-48-14 蒲田センタービル504
+  url: https://www.studio-qapla.com
+  note: レンタル撮影スタジオ「スタジオ・カプラ」、蒲田駅西口から徒歩約5分
 - id: higashiyamato-cafebar-coo
   name: 東大和CafeBAR COO
+  address: 東京都東大和市向原6-1404-7
   url: https://cafebar-coo.com
-  note: 東大和市のカフェバー（住所未調査）
+  note: 演奏可能なカフェバー
 - id: sprocket-cafebar
   name: カフェバーすぷろけっと
-  note: カフェバー（住所未調査）。「一日店長」イベント開催実績あり
+  x: cafebarsprocket
+  note: 自転車カフェ＆スポーツバーの移動型店舗（固定住所ではなく各地を巡回）。2020年5月31日閉店とみられる（要再確認）。「一日店長」イベント開催実績あり
 - id: nishioi-mikahanten
   name: 美華飯店
-  note: 東京都品川区西大井の中華料理店。「西大井美華飯店」表記もあり
+  address: 東京都品川区西大井1-1-1 Jタワー西大井ウエストコートA-103
+  note: 西大井駅徒歩1〜2分の町中華店。「西大井美華飯店」表記もあり。公式サイト・X未発見
 - id: tsuchiura-leos-livebar
   name: 土浦LEO'S LIVE BAR
   aliases:
     - レオズライブバー
-  note: 茨城県土浦市のライブバー（住所未調査）
+  address: 茨城県土浦市桜町1丁目5-2 桜Iビル1F
+  x: LeosLivebar
+  note: JR土浦駅西口から徒歩5分
 - id: shinjuku-fate
   name: 新宿FATE
   address: 東京都新宿区歌舞伎町2-28-16 ウィザードセブンB1F
@@ -1169,42 +1208,58 @@
   note: 固定会場のない全体撮影会企画。会場名不明時のプレースホルダとして使用
 - id: minamiurawa-kunihouse
   name: 南浦和KUNIHOUSE
+  aliases:
+    - 南浦和クニハウス
   address: 埼玉県さいたま市南区南浦和2-33-2
   note: DJ BAR KUNI HOUSE。2022年に浦和駅西口/北口そばへ移転し「KUNI HOUSE」として営業継続
 - id: studio-katorinu
   name: すたじおかとり〜ぬ
-  note: 千葉市・JR新検見川駅エリアの音楽スタジオ（正確な住所・公式サイト未特定）
+  aliases:
+    - 新検見川かとり〜ぬ
+  note: "千葉市・JR新検見川駅エリアの音楽スタジオ。近隣のSwingy（studio: swingy）と同ビルの可能性があるが一次情報での裏取りができず、正確な住所・公式サイトは調査済み・特定できず"
 - id: yokohama-chukagai
   name: 横浜中華街
   note: エリア名エントリ（善隣門前集合のオフ会等、店舗名不明時に使用）
 - id: club-citta-kawasaki
   name: CLUB CITTA'川崎
   address: 神奈川県川崎市川崎区小川町4-1
+  x: CLUBCITTA_1988
   note: 大箱ライブハウス。同ビル2Fの「クラブチッタ アティック」（kawasaki-attic）とは別会場
 - id: kichijoji-mandala2
   name: 吉祥寺MANDA-LA2
-  note: ライブハウス（詳細未調査）
+  address: 東京都武蔵野市吉祥寺南町2-8-6 第18通南ビル地下
+  url: https://www.manda-la2.com
+  note: 公式Xアカウントは調査済み・特定できず
 - id: livebus-shibuya
   name: ライブバス（渋谷周遊）
   note: バスで渋谷中を走りながら歌うライブ企画。固定会場なしのプレースホルダ
 - id: shinseido-entaba-akiba
   name: 新星堂エンタバアキバ
-  note: 秋葉原オノデン地下のインストアイベントスペース（詳細未調査）
+  address: 東京都千代田区外神田1丁目2-7 オノデン秋葉原本館 B1階
+  x: Entaba_akiba
+  note: 秋葉原駅電気街口から徒歩1〜2分。オノデン地下のインストアイベントスペース
 - id: yokohama-1000club
   name: 横浜1000 CLUB
   address: 神奈川県横浜市西区南幸2-1-5
   url: https://1000club.jp
-  note: 正式表記「1000 CLUB（サウザンドクラブ）」。LD&Kが横浜駅前に開業したライブホール。公式X運用は未確認
+  note: 正式表記「1000 CLUB（サウザンドクラブ）」。LD&Kが横浜駅前に開業したライブホール。公式X運用は未確認。2027年9月閉館予定というX情報あり（一次情報での裏取り未了）
 - id: fudomae-trio
   name: 不動前TRIO
-  note: ライブハウス（詳細未調査）
+  url: https://trio.aikotoba.jp
+  note: 正式には「不動前Bar TRIO」。目黒線不動前駅徒歩2〜3分。2010年オープン。詳細番地・公式Xは調査済み・特定できず
 - id: sapporo-firste
   name: 札幌ふぁーすて会場
   note: 「ふぁーすて idol scramble」開催会場。正式名称は本文からは確認できず（「来週なくなる
     ライブハウス」との言及あり）。プレースホルダ
 - id: shibuya-cyclone
   name: 渋谷サイクロン
-  note: 映画館・イベントスペース（詳細未調査）
+  url: http://www.cyclone1997.com
+  x: SHIBUYACYCLONE_
+  note: 映画館・イベントスペース。詳細番地は調査済み・特定できず
 - id: ueno-onshi-koen-outdoor
   name: 上野恩賜公園野外ステージ
-  note: 上野恩賜公園の野外特設ステージ。既存登録の「上野音横丁」とは別会場
+  url: https://www.culture.city.taito.lg.jp/ja/facilities/00001c00000000000002000000540081
+  note: 上野恩賜公園の野外特設ステージ（通称「水上音楽堂」）。既存登録の「上野音横丁」とは別会場。台東区立の公共施設のため公式Xはなし
+- id: duo-music-exchange
+  name: 渋谷duo MUSIC EXCHANGE
+  note: ライブハウス（詳細未調査）
