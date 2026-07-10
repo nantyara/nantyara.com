@@ -1664,3 +1664,12 @@
 - id: otsuka-heartsnext
   name: 大塚Hearts Next
   note: ライブハウス（詳細未調査）。既存登録の「大塚Welcome Back」「大塚MEETS」とは別表記
+- id: tower-records-shibuya
+  name: タワーレコード渋谷
+  note: イベントの会場詳細（開催フロア・開演時刻）は告知リンク先ページ未確認のため要注意扱い
+- id: kameido-clock
+  name: カメイドクロック
+  note: 亀戸駅前の商業施設内イベントスペースの可能性があるが未確認
+- id: diskunion-rockintokyo-shibuya
+  name: ディスクユニオンROCK in TOKYO（渋谷）
+  note: 既存登録の御茶ノ水店（diskunion-ochanomizu）・神保町店（diskunion-jimbocho）とは別店舗
