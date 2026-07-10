@@ -1519,3 +1519,10 @@
 - id: chofu-cross
   name: 調布クロス
   note: ライブハウス（詳細未調査）
+- id: tsukiji-ariyen
+  name: 有り縁
+  address: 東京都中央区築地2-1-17 陽光築地ビルB1
+  note: 弾き語りライブ企画「有り縁」の会場
+- id: akihabara-alabo
+  name: 秋葉原A-LABO
+  note: イベントスペース（詳細未調査）
