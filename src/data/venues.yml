@@ -1132,3 +1132,6 @@
 - id: livebus-shibuya
   name: ライブバス（渋谷周遊）
   note: バスで渋谷中を走りながら歌うライブ企画。固定会場なしのプレースホルダ
+- id: shinseido-entaba-akiba
+  name: 新星堂エンタバアキバ
+  note: 秋葉原オノデン地下のインストアイベントスペース（詳細未調査）
