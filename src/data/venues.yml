@@ -755,6 +755,15 @@
   url: https://www.instagram.com/daigakuyu07/
   x: daigakuyu07
   note: 旧銭湯を改装したレンタルスペース（国登録有形文化財）。専用ドメインの公式サイトはなくInstagramが実質公式窓口
+- id: suidobashi-words
+  name: 水道橋Words
+  note: ライブハウス（詳細未調査）。既存登録の東京倶楽部（tokyo-club、水道橋店）とは別施設
+- id: meguro-live-station
+  name: 目黒THE LIVE STATION
+  note: ライブハウス（詳細未調査）。既存登録の目黒鹿鳴館（meguro-rokumeikan）とは別施設
+- id: shinjuku-loftplusone
+  name: 新宿ロフトプラスワン
+  note: トークライブの老舗として知られるイベントスペース（詳細未調査）
 - id: fukuoka-himitsu
   name: 福岡大名ライブハウス秘密
   aliases:
@@ -1640,3 +1649,18 @@
 - id: shimomaruko-studio
   name: 下丸子スタジオ
   note: 撮影会会場（詳細未調査）。既存登録の「下丸子写真展会場」（shimomaruko-photo-venue）と同一施設の可能性があるが一次情報での紐づけができないため別エントリとした
+- id: shinjuku-samurai
+  name: 新宿SAMURAI
+  note: ライブハウス（詳細未調査）
+- id: akita-asile
+  name: 秋田アジール
+  note: ライブハウス（詳細未調査）。既存登録の秋田LOUD AFFECTION（akita-loud-affection）とは表記が異なり別会場の可能性が高い
+- id: ikebukuro-redzone
+  name: 池袋RED-Zone
+  note: ライブハウス（詳細未調査）
+- id: liveidolcafe
+  name: ライブアイドルカフェ
+  note: ラジオ番組ブランド名の可能性もあるが本文で固有名詞として使われているため会場名として採用。実店舗かどうか要確認
+- id: otsuka-heartsnext
+  name: 大塚Hearts Next
+  note: ライブハウス（詳細未調査）。既存登録の「大塚Welcome Back」「大塚MEETS」とは別表記
