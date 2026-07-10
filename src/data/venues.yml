@@ -73,6 +73,7 @@
     - K＆M music 中野
     - K＆M music 中野店
   address: 東京都中野区上鷺宮1-4-3 地下1階
+  url: https://www.km-music.jp/
   x: kmmusic2
   note: 2026年6月28日のイベントをもって閉店
 - id: drunken-shrimp
@@ -936,37 +937,57 @@
   note: QuinQ主催のバーベキュー撮影会企画。会場は非公開のため固定住所なし
 - id: shimokitazawa-que
   name: 下北沢Que
-  note: ライブハウス（詳細未調査）
+  address: 東京都世田谷区北沢2-5-2 ビッグベンビル B2F
+  url: https://clubque.net/
+  x: CLUBQue
+  note: 正式名称は「下北沢CLUB Que」。老舗ライブハウス（2024年時点で30周年）
 - id: mami-satsueikai
   name: マミ個人撮影会
   note: 御茶海マミの個人撮影会企画。固定会場なし
 - id: shinjuku-loft
   name: 新宿LOFT
-  note: 新宿LOFT本館。新宿LOFT BAR LOUNGE（loft-bar-lounge）・ネイキッドロフト（naked-loft）とは別会場
+  address: 東京都新宿区歌舞伎町1-12-9
+  url: https://www.loft-prj.co.jp/schedule/loft
+  x: SHINJUKULOFT
+  note: 新宿LOFT本館。1976年新宿でオープン、1999年に歌舞伎町へ移転。新宿LOFT BAR LOUNGE（loft-bar-lounge）・ネイキッドロフト（naked-loft）とは別会場
 - id: akihabara-moulin
   name: 秋葉原ムーラン
-  note: アキバ本店。屋外フリーライブ会場
+  address: 東京都千代田区外神田1-4-21
+  url: https://e-mulan.com/top/
+  x: mulanakiba
+  note: アキバ本店。屋外フリーライブ会場。正式名称「買取販売市場ムーランAKIBA本店」。X（@mulanakiba）は1F・全年齢向け公式アカウント（2F/3Fは別アカウント）
 - id: shinmatsudo-packs-s
   name: 新松戸 sound studio PACKS S
-  note: スタジオライブ会場（詳細未調査）
+  address: 千葉県松戸市新松戸4-14-2 KARAFUビル（カラフビル）2F
+  url: https://www.studio-packs.jp/shinmatsudo
+  x: studio_packs_sm
+  note: スタジオライブ会場。正式名称「sound studio PACKS 新松戸店」。2018年OPEN
 - id: koenji-club-liner
   name: 高円寺CLUB LINER
-  note: ライブハウス（詳細未調査）
+  address: 東京都杉並区梅里2-9-11 小池ビルB1F
+  note: ライブハウス。2005年オープン、2019年9月閉店。跡地は同年10月より「LOFTX（Loft X Koenji）」として営業。公式サイト・Xは調査済み・特定できず（当時のclub-liner.netは現存確認できず）
 - id: shimokitazawa-laguna
   name: 下北沢Laguna
-  note: 下北沢サーキットフェス参加会場（詳細未調査）
+  address: 東京都世田谷区北沢2-2-3 エルサント北沢1F
+  url: https://s-laguna.jp/
+  x: Lagunashimokita
+  note: 下北沢サーキットフェス参加会場。アコースティック中心の小規模ライブハウス
 - id: shimomaruko-photo-venue
   name: 下丸子写真展会場
   note: 「なんちゃらアイドル写真展」（2018-11-21〜23）開催会場。店舗名不明
 - id: rips-hachioji
   name: 八王子RIPS
-  note: ライブハウス（詳細未調査）。八王子Time Tokyo（time-tokyo）とは別会場
+  address: 東京都八王子市三崎町2-7 ヨーロービル5F
+  url: http://rips.rinkydink.info/rips
+  x: hachiojiRIPS
+  note: 「全方位型アミューズメントライブハウス」。八王子駅北口から徒歩4分。八王子Time Tokyo（time-tokyo）とは別会場
 - id: mujinto
   name: BAR無人島
   aliases:
     - 新宿bar無人島
   address: 東京都新宿区歌舞伎町1-28-2（第2鈴鹿ビル／J・レックス新宿）3F
   url: https://mujinto.tokyo
+  x: MUJINTO_TOKYO
   note: 正式名称「芝生とカウンターのカフェ&バー無人島」。一日店長制のイベントスペースでアイドルイベント開催実績多数。なんちゃらアイドル忘年会（2018年12月）の会場
 - id: nantyara-jitaku
   name: なんちゃら運営自宅
@@ -979,7 +1000,9 @@
   note: 正式名称「両国SUNRIZE」。2009年、両国フォーバレー跡地に開業。「DADAフェス」シリーズの会場
 - id: jimbocho-shichoshitsu
   name: 神保町試聴室
-  note: ライブスペース（詳細未調査）。日ノ出町 試聴室その3（hinodecho-shichoshitsu-sono3）とは別会場
+  url: http://shicho.org/
+  x: Shichoshitsu2
+  note: ライブスペース。X（@Shichoshitsu2）は「試聴室（日ノ出町＆神保町）」の共通アカウント。2026年で開店10年目。日ノ出町 試聴室その3（hinodecho-shichoshitsu-sono3）とは別会場
 - id: koenji-high
   name: 高円寺HIGH
   address: 東京都杉並区高円寺南4-30-1
@@ -996,7 +1019,9 @@
   note: JR柏駅南口徒歩12〜14分
 - id: hamamatsu-peta
   name: 浜松スタジオPETA
-  note: 静岡県浜松市のライブ/撮影スタジオ（詳細未調査）
+  address: 静岡県浜松市中区板屋町102-7
+  x: st_peta
+  note: 静岡県浜松市のライブ/撮影スタジオ。「主催していました」という過去形の自己紹介があり、ライブ主催活動は既に終了している可能性が高い（正式な閉鎖告知は未確認）。公式サイトは確認できず
 - id: shimokitazawa-breath
   name: 下北沢Breath
   address: 東京都世田谷区北沢2-14-7 下北沢セントラルビル3F
@@ -1007,22 +1032,31 @@
   name: 東中野ALT_SPEAKER
   aliases:
     - 東中野ALT-SPEAKER
-  note: グランドピアノのある箱（詳細未調査）
+  address: 東京都中野区東中野1-25-10 大和ビル第一1F
+  url: http://www.altspeaker.com/
+  x: ALTSPEAKER
+  note: グランドピアノのある箱。2014年11月29日オープン、2024年12月31日閉店。同運営とみられる「Bar & Music Spot ALT_SPEAKER」が中野区野方（西武新宿線野方駅徒歩3分）に新装移転（alt-speaker.com）
 - id: roppongi-shinsekai
   name: 六本木新世界
-  note: ライブハウス（詳細未調査）。なんちゃらアイドル初出演は2019-03-28
+  address: 東京都港区西麻布1-8-4 三保硝子ビルB1F
+  x: shinsekai9
+  note: ライブハウス。なんちゃらアイドル初出演は2019-03-28。正式名称「音楽実験室 新世界」、六本木駅近く西麻布。2010年10月オープン、2016年6月リニューアル。近年閉館を示唆する情報があるが確定できず（要再確認）。公式サイトは調査済み・特定できず
 - id: sugamo-shishio
   name: 巣鴨獅子王
   url: http://sugamo-cco.com
-  note: 対バンイベント「SCREW UP」シリーズの会場
+  x: sugamo_cco
+  note: 対バンイベント「SCREW UP」シリーズの会場。通称CCO。巣鴨駅北口徒歩1分
 - id: kamata-redhotclub
   name: 蒲田RED HOT CLUB
-  note: 隣接飲食店「RED HOT CRAB」併設のライブスペース。大田区蒲田復興協会(OKFK)シリーズ会場のひとつ
+  address: 東京都大田区蒲田5-20-2 一番街ビルB1（D棟B1Fとも表記あり）
+  url: https://livebarredhotclub.wixsite.com/red-hot-club
+  x: RedHotClub
+  note: 隣接飲食店「RED HOT CRAB」併設のライブスペース。大田区蒲田復興協会(OKFK)シリーズ会場のひとつ。正式名称「Live&Bar RED HOT CLUB」。蒲田東口徒歩3分
 - id: km-music-shinjuku
   name: K&Mミュージック新宿店
   aliases:
     - K＆Mミュージック新宿店
-  note: 対バンイベント「詩音の奏」シリーズの会場。K&Mミュージック中野店（km-music-nakano）とは別店舗
+  note: 対バンイベント「詩音の奏」シリーズの会場。K&Mミュージック中野店（km-music-nakano）とは別店舗。訪問者の回顧談から既に閉店・移転済みと推測されるが、住所・閉店時期の一次情報は調査済み・特定できず
 - id: yumenoshima-bumb
   name: 夢の島BumB
   address: 東京都江東区夢の島2-1-3
@@ -1291,3 +1325,13 @@
 - id: duo-music-exchange
   name: 渋谷duo MUSIC EXCHANGE
   note: ライブハウス（詳細未調査）
+- id: okfk-otaku-fukkokyokai
+  name: 大田区蒲田復興協会(OKFK)
+  note: OKFKシリーズの通し企画名。既存登録の複数OKFK会場（蒲田日本海・蒲田スナックトントン等）とは別に、
+    具体的な会場名が本文から特定できない回のプレースホルダとして使用
+- id: gotanda-g5
+  name: 五反田G5
+  note: ライブハウス（正式名称・住所は未調査）
+- id: akihabara-symphonia
+  name: 秋葉原シンフォニア
+  note: ライブハウス（正式名称・住所は未調査。いすゞビル裏手・日高屋が目印との言及あり）
