@@ -1632,6 +1632,8 @@
   note: なんちゃらアイドル運営の自宅。撮影会企画の会場として使用。プライベート施設のため住所非公開のプレースホルダ
 - id: ikebukuro-onlyyou
   name: Live House Only you
+  aliases:
+    - 池袋Only you
   address: 東京都豊島区池袋2-64-11 平和ビル2F
   note: ライブハウス（詳細未調査）
 - id: shiodome-bluemood
@@ -1676,3 +1678,7 @@
 - id: suiyoubi-no-numa
   name: 水曜日のヌマ
   note: 「周年お祝い」との記載から定期イベント・特定バーの可能性があるが未確認
+- id: daikanyama-nomad
+  name: 代官山NOMAD
+  url: http://daikanyama-nomad.com
+  note: ライブハウス（住所未確認）
