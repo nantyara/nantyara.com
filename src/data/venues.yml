@@ -1111,3 +1111,7 @@
 - id: nantyara-satsueikai
   name: なんちゃらアイドル撮影会
   note: 固定会場のない全体撮影会企画。会場名不明時のプレースホルダとして使用
+- id: minamiurawa-kunihouse
+  name: 南浦和KUNIHOUSE
+  address: 埼玉県さいたま市南区南浦和2-33-2
+  note: DJ BAR KUNI HOUSE。2022年に浦和駅西口/北口そばへ移転し「KUNI HOUSE」として営業継続
