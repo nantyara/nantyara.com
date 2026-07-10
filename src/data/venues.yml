@@ -966,21 +966,28 @@
   note: 新宿ルイードK4の入り口から入場する形態のスペース。ルイードグループ運営、2013年オープン、2020年8月31日閉店・移転。同運営者は同年9月に「池袋リヴォイス」として池袋RUIDO K3跡地でリスタート
 - id: sapporo-spiritual-lounge
   name: 札幌SPIRITUAL LOUNGE
-  note: ライブハウス（詳細未調査）
+  address: 北海道札幌市中央区南2条西4丁目10 ラージカントリービルBF
+  url: http://www.spirituallounge.jp/
+  note: ライブハウス。2003年オープン、札幌市電「狸小路」駅から徒歩2分。公式Xは調査済み・特定できず
 - id: sapporo-xenon
   name: 札幌XENON
-  note: ライブハウス（詳細未調査）
+  address: 北海道札幌市中央区南7条西4丁目2-5 LC7番館3F
+  url: https://xenon.bar/
+  note: ライブハウス＆ライブバー。札幌市電「東本願寺前」駅から徒歩4分。公式Xは調査済み・特定できず
 - id: nishiogikubo-flat
   name: 西荻窪flat
-  note: ライブハウス（詳細未調査）
+  address: 東京都杉並区西荻南3丁目17-2 リンキーディンクスタジオ 1F
+  url: https://www.flat.rinky.info/
+  note: ライブハウス。JR西荻窪駅南口徒歩2分、キャパ80名。公式Xは調査済み・特定できず
 - id: akihabara-plum
   name: 秋葉原PLUM
-  note: ライブハウス（詳細未調査）
+  address: 東京都千代田区外神田3-2-12 Box'R AKIBAビル B1F
+  note: ライブハウス。正式名称「PLUM LIVE SHOP」。既に閉業（閉業時期未確認）
 - id: kamata-nihonkai
   name: 寿司屋日本海
   aliases:
     - 蒲田日本海
-  note: 大田区蒲田の寿司屋を会場にしたライブ企画（#大田区蒲田復興協会）。住所未確認
+  note: 大田区蒲田の寿司屋を会場にしたライブ企画（#大田区蒲田復興協会）。「寿司居酒屋 日本海 雑色店」等の候補はあるが一次情報での紐づけができず、住所は調査済み・特定できず
 - id: tachikawa-hearts-gekijo
   name: HeaRTS劇場ドン・キホーテ立川店
   aliases:
@@ -991,13 +998,19 @@
   note: ドン・キホーテ立川店内のメイド喫茶ライブスペース。JR立川駅北口徒歩3分
 - id: shibuya-7th-floor
   name: 渋谷7th floor
-  note: ライブ／トークライブ会場（詳細未調査）
+  address: 東京都渋谷区円山町2-3 O-WESTビル7F
+  url: http://7th-floor.net/
+  note: ライブ／トークライブ会場。渋谷駅ハチ公口徒歩7分、グランドピアノ常設。公式Xは調査済み・特定できず
 - id: milkyway
   name: 渋谷Milkyway
-  note: ライブハウス（詳細未調査）
+  address: 東京都渋谷区宇田川町4-7 トウセン宇田川ビル3F
+  url: http://www.shibuyamilkyway.com/
+  note: ライブハウス。2010年7月7日オープン、キャパ約250名。チェルシーホテル・スターラウンジと同ビル。公式Xは調査済み・特定できず
 - id: kashiwa04
   name: 柏04
-  note: ライブハウス（詳細未調査）
+  address: 千葉県柏市中央町7-26 栄ビルB1F
+  url: http://athers-music.com/livehouse/
+  note: ライブハウス。柏駅徒歩約6分、キャパ150人。柏616&04（kashiwa-616）と同運営・同建物
 - id: marble
   name: 新宿Marble
   address: 東京都新宿区歌舞伎町2-45-2 GEST32 B1F
@@ -1011,7 +1024,10 @@
   note: 遠征支援を目的とした個人撮影会イベント。会場名不明・企画名のみ確認
 - id: misono-benikaku
   name: 味園紅鶴
-  note: 大阪ミナミ・味園ビル2階のライブスペース。なんちゃらアイドル大阪初出演(2018-08-05)の会場
+  address: 大阪府大阪市中央区千日前2丁目3-9 味園ビル2F
+  url: http://benitsuru.net/
+  x: namba_benitsuru
+  note: 正式名称「なんば紅鶴」（ライブシアター）。大阪ミナミ・味園ビル2階。なんちゃらアイドル大阪初出演(2018-08-05)の会場。味園ビルでの営業は2024年12月31日で終了、2025年3月より日宝河原町会館4Fでリニューアルオープン（現住所は旧住所）
 - id: takadanobaba-bigbox
   name: 高田馬場BIGBOX前
   note: 集合場所（実際の飲食店会場名は不明）
@@ -1022,7 +1038,8 @@
   note: 新宿JAM（閉店済み・id:jam）が2018年6月に移転オープンした会場。公式サイトURLは二次情報経由のみで生存未確認のため未掲載
 - id: lounge-neo
   name: 渋谷lounge neo
-  note: 360度囲み型のライブイベント会場。渋谷グラッド（shibuya-glad）とは別会場（詳細未調査）
+  address: 東京都渋谷区道玄坂2-21-7 第八矢澤ビル5F・6F
+  note: 360度囲み型のライブイベント会場。渋谷グラッド（shibuya-glad）とは別会場。2002年11月オープン、clubasia系列。2020年5月31日閉店（コロナ影響でGlad・VUENOSと同時閉店）
 - id: higashinakano-music-shed-yes
   name: 東中野music shed YES
   address: 東京都中野区東中野1-56-8 日生ビル2F
@@ -1035,14 +1052,17 @@
   note: 「浅草アイドル療法（Asakusa Idol Therapy）」等のイベント会場
 - id: hmv-esola-ikebukuro
   name: HMVエソラ池袋店
-  note: 商業施設「エソラ池袋」内のHMV record shop。渋谷店（hmv-record-shop-shibuya）とは別会場
+  address: 東京都豊島区西池袋1-12-1 エソラ池袋 3F
+  note: 商業施設「エソラ池袋」内のHMV record shop。渋谷店（hmv-record-shop-shibuya）とは別会場。JR池袋駅直結
 - id: kamata-snack-tonton
   name: 蒲田スナックトントン
-  note: 大田区蒲田復興協会（OKFK）シリーズのディナーショー会場。住所未確認
+  note: 大田区蒲田復興協会（OKFK）シリーズのディナーショー会場。住所は調査済み・特定できず
 - id: shinjuku-headpower
   name: 新宿ヘッドパワー
+  address: 東京都新宿区大久保2-5-19 シティプラザ大久保B1
   url: http://headpower.tokyo
-  note: なんちゃらアイドル主催「なんちゃら100人組手」シリーズの会場
+  x: HEADPOWER_
+  note: なんちゃらアイドル主催「なんちゃら100人組手」シリーズの会場。1968年から営業
 - id: quinq-bbq-satsueikai
   name: QuinQバーベキュー撮影会
   note: QuinQ主催のバーベキュー撮影会企画。会場は非公開のため固定住所なし
@@ -1473,6 +1493,8 @@
   note: ライブハウス（詳細未調査）
 - id: colorful-candy-studio
   name: colorful×candy撮影会
+  aliases:
+    - colorful×candy
   note: 撮影会スタジオ（詳細未調査）
 - id: yokohama-sensation
   name: 横浜センセーション
