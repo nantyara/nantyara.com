@@ -929,6 +929,8 @@
   note: 正式名称「xBUNNY」。バニーガールコスプレバー（ライブハウスではない）。営業状況は要再確認
 - id: barbara
   name: 代々木バーバラ
+  aliases:
+    - 代々木Barbara
   address: 東京都渋谷区代々木1-42-4 代々木P1ビルB1
   url: https://barbara.omatsuri.tech
   x: Yoyogi_Barbara
@@ -1242,6 +1244,7 @@
   name: 新宿Livefreak
   aliases:
     - 新宿フリーク
+    - ライブフリーク
   note: ライブハウス。正式表記「新宿Live Freak」（新宿区新宿2-12-4 アコードビルB1と見られるが一次情報での裏取りができず要再確認）。公式サイト・Xは調査済み・特定できず
 - id: okfk-piano-space
   name: OKFK新会場（蒲田・ピアノのある空間）
@@ -1532,6 +1535,8 @@
   note: ライブハウス（詳細未調査）
 - id: tsukiji-ariyen
   name: 有り縁
+  aliases:
+    - 築地有り縁
   address: 東京都中央区築地2-1-17 陽光築地ビルB1
   note: 弾き語りライブ企画「有り縁」の会場
 - id: akihabara-alabo
@@ -1574,3 +1579,12 @@
   aliases:
     - Bar黒月
   note: バー（詳細未調査）
+- id: koshigaya-easygoings
+  name: 越谷EASYGOINGS
+  note: ライブハウス（詳細未調査）
+- id: shibuya-home
+  name: 渋谷HOME
+  note: ライブハウス（詳細未調査）
+- id: futakotamagawa-gemini-theater
+  name: 二子玉川ジェミニシアター
+  note: ライブハウス（詳細未調査）
