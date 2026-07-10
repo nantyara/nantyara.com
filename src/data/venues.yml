@@ -797,6 +797,7 @@
   name: BASEMENT MONSTAR
   aliases:
     - basement monster王子
+    - 王子ベースメント
   address: 東京都北区王子1-18-5 地下2階
   url: https://bmonstar.com
   x: BasementMONSTAR
@@ -1608,3 +1609,25 @@
 - id: shinjuku-some-hotel
   name: 新宿某ホテル
   note: 御茶海マミの支援撮影会等で使用された会場。本人が「新宿の某ホテル」と伏せているため具体名不明のプレースホルダ
+- id: sapporo-space-art-studio
+  name: スペースアートスタジオ
+  note: 札幌すすきののライブハウス（詳細未調査）
+- id: shinjuku-rockcafe-loft
+  name: 新宿ロックカフェロフト
+  note: ライブハウス（詳細未調査）
+- id: tochigi-shizenkyuyoson
+  name: 栃木県自然休養村センター
+  note: 屋外バーベキュー併設のライブ会場。既存`mogafes`（モガフェス）と同一施設の可能性があるが本文に「モガフェス」の語が登場せず断定できないため別エントリとした（2022-05-22分の申し送り）
+- id: unei-jitaku
+  name: 御茶海マミ運営自宅（住所非公開）
+  note: なんちゃらアイドル運営の自宅。撮影会企画の会場として使用。プライベート施設のため住所非公開のプレースホルダ
+- id: ikebukuro-onlyyou
+  name: Live House Only you
+  address: 東京都豊島区池袋2-64-11 平和ビル2F
+  note: ライブハウス（詳細未調査）
+- id: shiodome-bluemood
+  name: 汐留ブルームード
+  note: イベント名「AMLANサマークルーズコンサート」から推測されるがクルーズ船形式か確証はなく、住所・詳細URLとも未調査
+- id: naminori-colors
+  name: なみのりカラーズ
+  note: ライブハウス（詳細未調査）。既存登録の「秋葉原カラーズ」（AKIBA COLORS）とは表記が異なり、同一施設かは未確認
