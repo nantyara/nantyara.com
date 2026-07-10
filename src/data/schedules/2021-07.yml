@@ -1,0 +1,462 @@
+# 2021年7月（/mine-x による X 告知アーカイブからの発掘。ソース: mining/x-archive/2021-07.json、321告知）
+# ドラフト（未コミット・レビュー用）。issue #17（/mine-x 2021）の 2021-07 分。
+#
+# 日時はすべて post の time フィールド（UTC）を JST（+9h）に変換した上で「本日/今日/明日」等の
+#   指し示す日付を確定している（変換はPythonのdatetime/timezoneで機械的に実施、目視の暗算はしていない）。
+#
+# 【重要な背景】2021年7〜9月は緊急事態宣言の再発令期（東京五輪と重複）。方針として
+#   「配信のみ（無観客）」のイベントは転記せず、実会場・有観客のみ転記する（配信併用で
+#   有観客実績が本文から確認できるものは転記対象）。本ウィンドウで実際に除外したのは
+#   7/28「えりラジ」FMラジオ収録＆ツイキャス生放送（下記「転記対象外」参照）。
+#
+# 転記した18件（日付順）:
+#   - 7/1 高円寺ウーハ: 時刻不明（time_tbd）
+#   - 7/2 渋谷La.mama: 事後お礼ポストのみが根拠（告知ポスト自体は見当たらず）。時刻不明（time_tbd）
+#   - 7/3 代々木バーバラ（還暦祝いイベント）: 時刻不明（time_tbd）
+#   - 7/4 江古田マーキー: なんちゃら16:20〜（トリ）
+#   - 7/8 神田shojimaru（初箱）: open18:00/start18:30、なんちゃら20:40〜。対バン: さくら、秋山カラスウリ
+#   - 7/9 東中野music shed YES: 時刻不明（time_tbd）
+#   - 7/10 渋谷Club Malcolm（「お昼ま」との言及あり）: 正確な時刻は本文に見当たらずtime_tbd
+#   - 7/11 DY CUBE（下北沢、新規オープン記念ライブ／bash the limitデビューライブ、SASSENから移動）:
+#     時刻不明（time_tbd）。本文では前日予告時点で「TwinBoxGarage」表記、開催後は「DY CUBE」表記
+#     （同一会場の別名・改称の可能性が高いと判断し content 内に両方明記した）
+#   - 7/14 下北沢モナレコード（有観客＋配信併用）: 「早い時間から」としか記載なくtime_tbd
+#   - 7/17 盛岡GLOBE: 新曲「PansyとDaisy」発売日、2本ライブ。時刻不明（time_tbd）
+#   - 7/18 秋田LOUD AFFECTION「AKITA IDOL PARK」: なんちゃら1部/2部参加。時刻不明（time_tbd）
+#   - 7/22 代々木バーバラ16周年: なんちゃら17:50〜
+#   - 7/23 スープカレーカムイ（秋葉原）: ライブ13:00/19:00の2回
+#   - 7/24 新検見川かとり〜ぬ（バンド編成）: 当初フライヤーでは18:40〜だったが、当日「オープンが
+#     14:00、スタートが14:30になっています」と時刻変更の訂正あり。なんちゃらの出番時刻が変更後
+#     どうなったかは本文に明記なくtime_tbd
+#   - 7/25 渋谷La.mama「酒相撲東京場所」（ノンアルコール）: 「朝っぱらから」としか記載なくtime_tbd
+#   - 7/25 HMV record shop 新宿アルタ（「PansyとDaisy」発売記念特典会）: 18:00〜
+#   - 7/26 渋谷La.mama「アイドル文化祭！～food天国～」: open16:30/start17:00。出演: MCあんにゅ、
+#     わがままマーメイ、美広まりな、S.B.Qアイドル部。当初予定の「盛りたかった千里」は体調不良で
+#     出演見合わせ（欠場）。代わりに「盛れなかった千里a.k.aヒゲ味噌床」がフード枠として参加した旨の
+#     言及があるが、ステージ出演者としての明記ではないため acts には追加していない
+#   - 7/30 大田区蒲田復興協会(OKFK) ep31: 一色進さん・松田信男さんがスペシャルゲスト出演。時刻は
+#     7/15付で「時間変更」の連絡があった旨の言及があるが、変更後の正確な時刻は本文に見当たらず
+#     time_tbd
+#
+# 転記対象外にしたもの（証拠不足・配信のみ・会場不明など）:
+#   - 7/11 SASSEN団体戦: 「全力SASSENやってきた。個人戦4位でした」で開催・なんちゃら参加は確認
+#     できるが、今回のウィンドウ内の本文からは開催会場名が読めなかったため未転記（同日のDY CUBE
+#     とは別枠として扱った）
+#   - 7/28 「えりラジ」FMラジオ収録＆ツイキャス生放送（19:30〜・20:15〜出演）: 「FMラジオ収録＆
+#     ツイキャス生放送」であり、本文からは一般有観客の来場を示す記述が見当たらない（配信・収録
+#     イベントと判断）。方針により配信のみのイベントとして転記対象外とした
+#   - 7/31 個人撮影会: 「あしたはなんちゃら撮影会です」「specialな衣装」等の告知・お礼ポストは
+#     あるが、会場名が本文から特定できないため未転記
+#   - その他、日常ポスト・雑談・グッズ通販／再入荷告知・ラジオ出演告知等（イベント性なし）は割愛
+#
+# venues.yml新規候補（編集は今回しない）:
+#   - 盛岡GLOBE: 本文表記「盛岡GLOBE」（7/17、samami27/yokuwakan_nai）。推奨: id: morioka-globe /
+#     name: 盛岡GLOBE / note: 詳細未調査（新曲「PansyとDaisy」発売日の東北遠征先）
+#   - DY CUBE: 本文表記「DY CUBE」（7/11、samami27、下北沢の新規オープン店舗）。前日予告時点では
+#     「TwinBoxGarage」という表記もあり、同一会場を指している可能性が高い。推奨: id: dy-cube /
+#     name: DY CUBE / aliases: [TwinBoxGarage] / note: 下北沢の新規オープン会場（2021年7月開店）。
+#     詳細住所未調査
+#
+# 既存venues.ymlで解決可（追加不要・確認済み）: 高円寺ウーハ（koenji-wooha）、渋谷La.mama（lamama）、
+#   代々木バーバラ（barbara）、江古田マーキー（egota-marquee）、神田shojimaru（kanda-shojimaru、
+#   本文表記「神田THE SHOJIMARU」はaliasで解決）、東中野music shed YES（higashinakano-music-shed-yes）、
+#   渋谷Club Malcolm（club-malcolm）、下北沢モナレコード（mona-records、alias）、
+#   秋田LOUD AFFECTION（akita-loud-affection、本文表記「秋田LOUD」はaliasで解決。2018年12月申し送りの
+#   「LOUD AFFECTION」正体判明の裏取りに使える）、スープカレーカムイ（soup-curry-kamui）、
+#   新検見川かとり〜ぬ（studio-katorinu、alias）、HMV record shop 新宿アルタ（hmv-shinjuku-alta）、
+#   大田区蒲田復興協会(OKFK)（okfk-otaku-fukkokyokai、プレースホルダとして解決）
+#
+# releases.yml裏取り候補（編集は今回しない）:
+#   - 新曲「PansyとDaisy」/「今夜、全てのBarで」7インチシングル、2021年7月17日発売（本ウィンドウで
+#     発売実績を確認。カップリング曲「今夜、全てのbarで」は緊急事態宣言・まんぼう期間限定の無料
+#     配信あり。7/17盛岡先行手売り→7/18秋田→7/17 13:00通販開始（disc union/タワレコ/Amazon）→
+#     7/25 HMV新宿アルタ店特典会、の順で展開）
+#   - MCあんにゅとのコラボシングル「Ennuい DISCOTHEQUE」: 7/15付でレコーディング完パケ報告
+#     （nantyaraidol/status/1415656219587473413「なんちゃら、新曲完パケ！3曲！（1曲はリテイク＋α）
+#     遠藤さんすごい！...コラボしてくれたあんにゅちゃんにも大感謝！」）。6月ドラフトの続報として
+#     制作完了段階まで進んだことを確認。リリース日は本ウィンドウ内では未確認
+#
+# history.yml棚卸し候補（今回は追記しない・発掘完了後にまとめて見直す方針）:
+#   - 新ユニット「M.A.M.I」（6月ドラフトでは「M.A.M.I（仮）」）: 7/19付でカッコ仮が外れた表記を確認
+#     （nantyaraidol/status/1417121867823947779「なんちゃらが参加する新ユニット、「M.A.M.I」。
+#     新曲が週1くらいで送られてくるのですが...今日きたのはなんとタンゴ！」）。楽曲提供ペースが
+#     速い（週1）という言及あり
+#
+# 8月への申し送り:
+#   - 8/16「なんちゃらが全力を出す手料理オフ会」予告（nantyaraidol/status/1416809257094156289、7/18）:
+#     「平均カロリー1500以上をマニフェストにやる」。会場・詳細未確定
+#   - 下北沢「月見ル君想フ」への初出演が「近日解禁」と予告（7/19、7/31に「いよいよ解禁！」と再言及）:
+#     具体的な日程は本ウィンドウ内では確認できず、8月ウィンドウで個別告知を要確認
+#   - 8/21 なんちゃら撮影会（「夏らしい特典」予定、7/26予約開始予告）: 8月ウィンドウで詳細確認
+#   - samami27投稿の「8月の予定」画像（7/31、samami27/status/1421511816908136452）: 8月分の
+#     予定表画像。8月ウィンドウで個別告知と突合すること
+#   - releases.yml/history.yml候補（上記参照）
+#
+# 未解決の宿題:
+#   - 7/11 SASSEN団体戦の開催会場（本ウィンドウの本文からは特定できず）
+#   - 7/11 DY CUBE / TwinBoxGarage が同一会場か別会場かの確定（表記揺れの可能性が高いが未確定）
+#   - 7/24 新検見川かとり〜ぬの時刻変更後、なんちゃらの正確な出番時刻
+#   - 7/30 OKFK ep31の「時間変更」後の正確な開演・出番時刻
+#
+# sources: URL検証（機械チェック）: mining/x-archive/2021-07.json 中の実際の (handle, status_id) ペアと
+#   全件突合済み。48件中48件一致（MISMATCH/NOT_FOUND 0件）。
+
+- id: event-20210701-koenji-wooha
+  slug: 20210701-koenji-wooha
+  date: 2021-07-01 12:00:00 +0900
+  time_tbd: true
+  title: 高円寺ウーハ ライブ
+  site: 高円寺ウーハ
+  content: |
+    高円寺ウーハでのライブ。告知「ほんじつです！高円寺ウーハ！」（yokuwakan_nai）、
+    「本日、U-hAにてライブです！」（samami27）。終演後「高円寺U-hAライブありがとうございました！
+    梅雨だね！」（samami27）で有観客開催を確認。開演時刻・共演者は本文に見当たらない。
+
+    ※Xの告知アーカイブから復元。開始時刻が本文から確認できないため time_tbd とした。
+  sources:
+    - https://x.com/yokuwakan_nai/status/1410470770984341506
+    - https://x.com/samami27/status/1410527057495281669
+    - https://x.com/samami27/status/1410566486528200708
+
+- id: event-20210702-lamama
+  slug: 20210702-lamama
+  date: 2021-07-02 12:00:00 +0900
+  time_tbd: true
+  title: 渋谷La.mama ライブ
+  site: 渋谷La.mama
+  content: |
+    渋谷La.mamaでのライブ。本ウィンドウの本文からは告知ポスト自体が見当たらず、終演後「ラママ
+    ライブありがとうございました！」（samami27）のみが根拠。開演時刻・共演者・イベント名は
+    本文に見当たらない。
+
+    ※Xの告知アーカイブから復元。事後報告のみで告知ポストは未発見のため time_tbd とした。
+  sources:
+    - https://x.com/samami27/status/1410919429756493827
+
+- id: event-20210703-barbara
+  slug: 20210703-barbara
+  date: 2021-07-03 12:00:00 +0900
+  time_tbd: true
+  title: 代々木バーバラ ライブ（還暦祝い）
+  site: 代々木バーバラ
+  content: |
+    代々木バーバラでのライブ。告知「明日は代々木バーバラ！還暦を祝います！」（samami27）。
+    終演後「代々木バーバラライブありがとうございました！明日は江古田マーキー！」（samami27）で
+    有観客開催を確認。誰の還暦祝いかは本文に見当たらない。開演時刻・共演者も本文に見当たらない。
+
+    ※Xの告知アーカイブから復元。開始時刻が本文から確認できないため time_tbd とした。
+  sources:
+    - https://x.com/samami27/status/1410942485963018240
+    - https://x.com/samami27/status/1411310658226778115
+
+- id: event-20210704-egota-marquee
+  slug: 20210704-egota-marquee
+  date: 2021-07-04 16:20:00 +0900
+  title: 江古田マーキー ライブ
+  site: 江古田マーキー
+  content: |
+    江古田マーキーでのライブ。告知「なんちゃらは16時20分より！トリ！」（nantyaraidol）、
+    「本日の江古田マーキーの公演は！」（samami27）。終演後「江古田マーキーライブありがとう
+    ございました！たくさんの方が観に来てくれてうれしかったです！」（samami27）で有観客開催を
+    確認。共演者は本文に見当たらない。
+
+    ※Xの告知アーカイブから復元。dateは告知記載のなんちゃらアイドルの出番時刻（16:20、トリ）。
+  sources:
+    - https://x.com/nantyaraidol/status/1411312898593280001
+    - https://x.com/samami27/status/1411547649241538565
+    - https://x.com/samami27/status/1411629197781475333
+
+- id: event-20210708-kanda-shojimaru
+  slug: 20210708-kanda-shojimaru
+  date: 2021-07-08 20:40:00 +0900
+  title: 神田shojimaru ライブ（初箱）
+  site: 神田shojimaru
+  acts:
+    - さくら
+    - 秋山カラスウリ
+  content: |
+    神田THE SHOJIMARUでの初出演ライブ。告知「７月８日(木)神田THE SHOJIMARU open18時00分/
+    start18時30分 チケット前売り2500円＋1ドリンク さくら / 秋山カラスウリ / なんちゃらアイドル
+    なんちゃらは20時40分から！40分もやる！物販時間もたくさん！」（nantyaraidol）。前日には
+    「次のライブは8日に神田shojimaru！初箱です！」（yokuwakan_nai）と初出演である旨の言及も
+    あった。終演後「THE SHOJIMARUライブありがとうございました！お酒もご飯もあって最高だな〜！！」
+    （samami27）で有観客開催を確認。
+
+    ※Xの告知アーカイブから復元。dateは告知記載のなんちゃらアイドルの出番時刻（20:40）。
+  sources:
+    - https://x.com/nantyaraidol/status/1412787556006072333
+    - https://x.com/samami27/status/1413132943917158406
+    - https://x.com/yokuwakan_nai/status/1411692335532969990
+
+- id: event-20210709-higashinakano-music-shed-yes
+  slug: 20210709-higashinakano-music-shed-yes
+  date: 2021-07-09 12:00:00 +0900
+  time_tbd: true
+  title: 東中野music shed YES ライブ
+  site: 東中野music shed YES
+  content: |
+    東中野music shed YESでのライブ。告知「本日、東中野music shed YES！にてライブです！会いに
+    きてけれ〜」（samami27）。終演後「東中野music shed YES！ライブありがとうございました！
+    久しぶりにYES！だったなぁ」（samami27）で有観客開催を確認。開演時刻・共演者は本文に
+    見当たらない。
+
+    ※Xの告知アーカイブから復元。開始時刻が本文から確認できないため time_tbd とした。
+  sources:
+    - https://x.com/samami27/status/1413310737716371459
+    - https://x.com/samami27/status/1413479318735396867
+
+- id: event-20210710-club-malcolm
+  slug: 20210710-club-malcolm
+  date: 2021-07-10 12:00:00 +0900
+  time_tbd: true
+  title: 渋谷Club Malcolm ライブ（お昼ま）
+  site: 渋谷Club Malcolm
+  content: |
+    渋谷Club Malcolmでの昼公演。告知「今日渋谷に来てくれる人も、来れない人も、まじで熱中症
+    気をつけてね…！」（samami27）。終演後「お昼まライブありがとうございました！Malcolmでの
+    ライブは元気を感じるなぁ」（samami27）で「お昼ま」（昼公演）としての有観客開催を確認。
+    正確な開演時刻・共演者は本文に見当たらない。
+
+    ※Xの告知アーカイブから復元。開始時刻が本文から確認できないため time_tbd とした。
+  sources:
+    - https://x.com/samami27/status/1413699718408859648
+    - https://x.com/samami27/status/1413753197898829825
+
+- id: event-20210711-dy-cube
+  slug: 20210711-dy-cube
+  date: 2021-07-11 12:00:00 +0900
+  time_tbd: true
+  title: DY CUBE 開店お祝いライブ（bash the limit デビューライブ）
+  site: DY CUBE
+  acts:
+    - bash the limit
+  content: |
+    下北沢の新規オープン会場「DY CUBE」の開店お祝いライブ。前日告知の時点では「今日はサッセン
+    からのTwinBoxGarageでライブ！だ！」（samami27）と「TwinBoxGarage」という会場名で言及されて
+    いたが、終演後の報告は「ずっと明日はろく夜だと思っていたけど､DY CUBEの開店お祝いライブ
+    でした！配信↓」（samami27）「bash the limitさんデビューのライブでしたありがとうございました！
+    めでたいねえ！お祝いできて嬉しかったです。」（yokuwakan_nai）と「DY CUBE」表記になっており、
+    同一会場を指している可能性が高いと判断した（会場の改称、または呼称の揺れと思われる）。
+    バンド「bash the limit」のデビューライブに、なんちゃらがゲスト的に参加した形と読める。
+    配信も併用されていたが、上記の通り現地でのお祝い・ゲスト参加が確認できるため有観客開催と
+    判断した。開演時刻は本文に見当たらない。なお同日昼は「SASSEN」団体戦にも参加しているが
+    （個人戦4位）、開催会場が本文から特定できないため別途未転記とした。
+
+    ※Xの告知アーカイブから復元。開始時刻が本文から確認できないため time_tbd とした。
+    ★venues.yml新規候補（site名は「DY CUBE」、alias候補「TwinBoxGarage」）。
+  sources:
+    - https://x.com/samami27/status/1414001512997474307
+    - https://x.com/samami27/status/1414204861969670150
+    - https://x.com/yokuwakan_nai/status/1414217819965644800
+
+- id: event-20210714-mona-records
+  slug: 20210714-mona-records
+  date: 2021-07-14 12:00:00 +0900
+  time_tbd: true
+  title: 下北沢モナレコード ライブ
+  site: 下北沢モナレコード
+  content: |
+    下北沢モナレコードでのライブ（有観客＋配信併用）。告知「本日はモナレコードでライブです！
+    下北沢でお待ちしております〜！配信はこちら↓」（samami27）。終演後「モナレコードライブ
+    ありがとうございました！早い時間からたくさん来てくれて嬉しかったです！次のライブは盛岡！」
+    （samami27）、「下北沢モナレコードありがとう！可愛くていいとこ。」（yokuwakan_nai）で
+    有観客開催を確認。「早い時間から」以外の正確な開演時刻・共演者は本文に見当たらない。
+
+    ※Xの告知アーカイブから復元。開始時刻が本文から確認できないため time_tbd とした。
+  sources:
+    - https://x.com/samami27/status/1415089850051485701
+    - https://x.com/samami27/status/1415283285123428356
+    - https://x.com/yokuwakan_nai/status/1415294650546487297
+
+- id: event-20210717-morioka-globe
+  slug: 20210717-morioka-globe
+  date: 2021-07-17 12:00:00 +0900
+  time_tbd: true
+  title: 盛岡GLOBE ライブ（新曲「PansyとDaisy」発売日）
+  site: 盛岡GLOBE
+  content: |
+    盛岡GLOBEでのライブ（東北遠征の初日、なんちゃら新曲「PansyとDaisy」発売日）。「今日は盛岡
+    GLOBEで2本ライブしました。めちゃくちゃ楽しかった！みてくれた人ありがとうございました。
+    よかったー！7インチの新譜｢PansyとDaisy｣も本日リリース致しました！東京で手に入れてくれた
+    人の声も届いてます！ありがとう。」（yokuwakan_nai）、「盛岡冷麺美味しいし、レコードも
+    手に取ってもらえたし…今日は『PansyとDaisy』発売日！」（samami27）で有観客開催・2回公演を
+    確認。正確な開演時刻・共演者は本文に見当たらない。
+
+    ※Xの告知アーカイブから復元。開始時刻が本文から確認できないため time_tbd とした。
+    ★venues.yml新規候補。
+  sources:
+    - https://x.com/samami27/status/1416344152497819652
+    - https://x.com/yokuwakan_nai/status/1416345724652965889
+
+- id: event-20210718-akita-loud-affection
+  slug: 20210718-akita-loud-affection
+  date: 2021-07-18 12:00:00 +0900
+  time_tbd: true
+  title: 秋田LOUD AFFECTION「AKITA IDOL PARK」
+  site: 秋田LOUD AFFECTION
+  content: |
+    秋田LOUD AFFECTIONでのイベント「AKITA IDOL PARK」（東北遠征2日目）。告知「今日は秋田LOUDに
+    てAKITA IDOL PARKです！なんちゃらは1部2部で参加しますよー！」（samami27）。終演後「秋田
+    LOUD AFFECTIONありがとうございました。嬉しくて楽しくて最高でした。」（yokuwakan_nai）、
+    「秋田LOUDライブでした！やっと秋田これた〜！」（samami27）で有観客開催・1部/2部参加を
+    確認。正確な各部の開演時刻は本文に見当たらない。
+
+    ※Xの告知アーカイブから復元。開始時刻が本文から確認できないため time_tbd とした。
+  sources:
+    - https://x.com/samami27/status/1416598207421845506
+    - https://x.com/yokuwakan_nai/status/1416752268506927104
+    - https://x.com/samami27/status/1416752867424161797
+
+- id: event-20210722-barbara
+  slug: 20210722-barbara
+  duplicate_ok: true
+  date: 2021-07-22 17:50:00 +0900
+  title: 代々木バーバラ16周年
+  site: 代々木バーバラ
+  content: |
+    代々木バーバラ16周年イベントでのライブ（7/3の代々木バーバラライブとは別開催のためduplicate_ok）。
+    告知「次のライブは22日、代々木バーバラ16周年！前日にボイトレがあるので、とっても歌が
+    うまくなってるんだろうな〜！」（samami27）、「ほんじつ久々東京ライブ！なんちゃら17:50から
+    うたいます！」（yokuwakan_nai）。終演後「バーバラライブありがとうございました！女の子
+    だらけでしたな！」（samami27）で有観客開催を確認。共演者は本文に見当たらない。
+
+    ※Xの告知アーカイブから復元。dateは告知記載のなんちゃらアイドルの出番時刻（17:50）。
+  sources:
+    - https://x.com/samami27/status/1417455727791198208
+    - https://x.com/yokuwakan_nai/status/1418060582008152067
+    - https://x.com/samami27/status/1418177706181611524
+
+- id: event-20210723-soup-curry-kamui
+  slug: 20210723-soup-curry-kamui
+  date: 2021-07-23 13:00:00 +0900
+  title: スープカレーカムイ ライブ（コラボカレー企画）
+  site: スープカレーカムイ
+  content: |
+    秋葉原スープカレーカムイでのイベント（コラボカレー「カンガルーカレー」販売併催）。告知
+    「明日はカムイでカレーだよ！カレー！アキバの！カムイ！カレー！新生姜ラッシー！ライブは
+    13時と19時！カレー食べたらライブ見れる！」（yokuwakan_nai）、「明日はスープカレーカムイ！！
+    今回はボリュームマックスなカンガルーカレー！」（samami27）。終演後「スープカレーカムイ
+    さんイベントありがとうございました！とってもカンガルー！」（samami27）、「カムイでカレー
+    食べたり歌ったりしてきました！ありがとう！」（yokuwakan_nai）で有観客開催・13時/19時の
+    2回公演を確認。
+
+    ※Xの告知アーカイブから復元。dateは告知記載の1回目の開演時刻（13:00）。19:00にも2回目あり。
+  sources:
+    - https://x.com/yokuwakan_nai/status/1418214877546520577
+    - https://x.com/samami27/status/1418547991808339972
+    - https://x.com/yokuwakan_nai/status/1418554992328208391
+
+- id: event-20210724-studio-katorinu
+  slug: 20210724-studio-katorinu
+  date: 2021-07-24 12:00:00 +0900
+  time_tbd: true
+  title: 新検見川かとり〜ぬ ライブ（バンド編成）
+  site: 新検見川かとり〜ぬ
+  content: |
+    新検見川かとり〜ぬでのバンド編成ライブ。告知「本日のライブは新検見川かとりーぬさんです！」
+    （samami27）、「きょうは新検見川のかとり〜ぬ🐕 なんちゃらはバンド編成で18:40からです！」
+    （yokuwakan_nai）だったが、直後に「すみませんこれ時間変更以前のフライヤーでした！オープンが
+    14:00、スタートが14:30になっています！」（yokuwakan_nai）と時刻変更の訂正が入り、変更後の
+    なんちゃらの正確な出番時刻は本文から確認できなかった。終演後「かとり〜ぬライブありがとう
+    ございました！7月生まれ多かった！おめでとうございます！！」（samami27）で有観客開催を確認。
+
+    ※Xの告知アーカイブから復元。時刻変更の訂正後の正確な出番時刻が確認できないため time_tbd とした。
+  sources:
+    - https://x.com/samami27/status/1418755018270728194
+    - https://x.com/yokuwakan_nai/status/1418762548225069058
+    - https://x.com/yokuwakan_nai/status/1418767833865981954
+    - https://x.com/samami27/status/1418896288184258560
+
+- id: event-20210725-lamama
+  slug: 20210725-lamama
+  date: 2021-07-25 12:00:00 +0900
+  time_tbd: true
+  title: 渋谷La.mama「酒相撲東京場所」（ノンアルコール）
+  site: 渋谷La.mama
+  content: |
+    渋谷La.mamaでのイベント「酒相撲東京場所」（ノンアルコール）。告知「明日は酒相撲東京場所
+    ノンアルコール！！そのあとは新宿アルタHMVにて特典会です！」（samami27）、「明日は朝っぱら
+    からノンアルラママで酒相撲しようや。」（yokuwakan_nai）。終演後「ラママライブありがとう
+    ございました！このあと18時からHMVにあちまれ〜〜〜」（samami27）、「ラママで相撲を見て
+    きた」（yokuwakan_nai）で有観客開催を確認。「朝っぱらから」以外の正確な開演時刻・共演者は
+    本文に見当たらない。
+
+    ※Xの告知アーカイブから復元。開始時刻が本文から確認できないため time_tbd とした。
+  sources:
+    - https://x.com/samami27/status/1418901219007991808
+    - https://x.com/yokuwakan_nai/status/1418912799716163593
+    - https://x.com/samami27/status/1419191656822153217
+    - https://x.com/yokuwakan_nai/status/1419198237907382274
+
+- id: event-20210725-hmv-shinjuku-alta
+  slug: 20210725-hmv-shinjuku-alta
+  date: 2021-07-25 18:00:00 +0900
+  title: HMV record shop 新宿アルタ「PansyとDaisy」発売記念特典会
+  site: HMV record shop 新宿アルタ
+  content: |
+    HMV record shop 新宿アルタ店での新曲「PansyとDaisy」発売記念特典会。告知「そのあとは新宿
+    アルタHMVにて特典会です！」（samami27）、「夜は新宿アルタHMVで新譜発売記念特定会！」
+    （yokuwakan_nai、「特定会」は「特典会」の誤字と思われる）。終演後「HMVレコードショップ
+    新宿アルタ店特典会ありがとうございました！シングルでたよ〜！やった〜！」（samami27）、
+    「新宿アルタのエレベーター乗ってHMVの階でドア開いたとこに自分達のレコードあんのすごい
+    なー。特典会ありがとうございました！」（yokuwakan_nai）で開催を確認。
+
+    ※Xの告知アーカイブから復元。dateは告知記載の開始時刻（18:00）。
+  sources:
+    - https://x.com/samami27/status/1418901219007991808
+    - https://x.com/samami27/status/1419237019595595779
+    - https://x.com/yokuwakan_nai/status/1419252056355872774
+
+- id: event-20210726-lamama
+  slug: 20210726-lamama
+  duplicate_ok: true
+  date: 2021-07-26 17:00:00 +0900
+  title: 渋谷La.mama主催「アイドル文化祭！～food天国～」
+  site: 渋谷La.mama
+  acts:
+    - MCあんにゅ
+    - わがままマーメイ
+    - 美広まりな
+    - S.B.Qアイドル部
+  content: |
+    渋谷La.mama主催「アイドル文化祭！～food天国～」（7/25の酒相撲東京場所とは別開催のため
+    duplicate_ok）。告知「明日、2021年7月26日（月）も渋谷ラママ！酒相撲とうってかわって
+    アイドル祭り！アイドル文化祭！～food天国～ （出演）なんちゃらアイドル、MCあんにゅ、
+    わがままマーメイ、美広まりな、S.B.Qアイドル部 at渋谷ラママ 16:30open17:00start 2500円
+    （drink代別） ⚠︎アルコール提供はございません」（samami27）。当日、「残念ながら盛りたかった
+    千里さんは体調不良のため参加見合わせとなりました。代わりに、盛れなかった千里a.k.aヒゲ味噌床
+    さんが大量のお○○○をかかえてフード参戦いたします！」（nantyaraidol）との追加告知があり、
+    フード枠での代打参加があった旨の言及があるが、ステージ出演者としての明記ではないため
+    acts には追加していない。終演後「アイドル文化祭ありがとうございました！」（samami27）で
+    有観客開催を確認。
+
+    ※Xの告知アーカイブから復元。dateは告知記載の開演時刻（17:00）。
+  sources:
+    - https://x.com/samami27/status/1419308559917936649
+    - https://x.com/nantyaraidol/status/1419515061471637507
+    - https://x.com/samami27/status/1419636469166084099
+
+- id: event-20210730-okfk-otaku-fukkokyokai
+  slug: 20210730-okfk-otaku-fukkokyokai
+  date: 2021-07-30 12:00:00 +0900
+  time_tbd: true
+  title: 大田区蒲田復興協会(OKFK) ep31
+  site: 大田区蒲田復興協会(OKFK)
+  acts:
+    - 一色進
+    - 松田信男
+  content: |
+    大田区蒲田復興協会（OKFK）シリーズ第31回。告知「7月30日、OKFKにレジェンド降臨！というわけ
+    で、一色進さん、松田信男さんが出演決定！」（nantyaraidol、7/6付）。7/15付で「7月30日の
+    OKFK、時間変更の連絡をご予約のお客様全員に送らせていただいた」との言及があり開演時刻に
+    変更があったと思われるが、変更後の正確な時刻は本文に見当たらない。終演後「OKFKありがとう
+    ございました！一色さんの作る曲は凄い！」（nantyaraidol）、「OKFK ep31ありがとうございました！
+    もう31回目なのね。」（samami27）、「大田区蒲田復興協会本日もありがとうございました！」
+    （yokuwakan_nai）で有観客開催を確認。
+
+    ※Xの告知アーカイブから復元。開始時刻が本文から確認できないため time_tbd とした。
+  sources:
+    - https://x.com/nantyaraidol/status/1411358013848375300
+    - https://x.com/nantyaraidol/status/1421089089630081024
+    - https://x.com/samami27/status/1421099450257207296
+    - https://x.com/yokuwakan_nai/status/1421101453507141641
