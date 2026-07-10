@@ -394,59 +394,89 @@
   note: 正式表記「新宿motion」（小文字m）。西武新宿駅徒歩1分、歌舞伎町タワー横
 - id: gramstein
   name: 新宿グラムシュタイン
-  note: ライブハウス（詳細未調査）
+  address: 東京都新宿区大久保2-6-10 新宿第二アルプスマンションB1
+  url: https://pladox.com
+  x: glamstein
+  note: ライブハウス。新大久保エリア、収容200名
 - id: mismatch
   name: 池袋mismatch
-  note: ライブハウス（詳細未調査）
+  address: 東京都豊島区東池袋1-44-10 タイガースビル1F
+  url: http://mismatchikebukuro.com/
+  x: mismatch_live
+  note: ライブハウス
 - id: kanda-mifa
   name: 神田MIFA
   aliases:
     - 神田サウンドステージミーファ
-  note: 詳細未調査
+  address: 東京都千代田区鍛冶町1丁目4-3 竹内ビルB1F
+  note: 正式名称「神田SOUND STAGE MIFA」。2023年8月31日閉店。同ビルB1で2023年末〜2024年頭に別運営のアイドル専門ライブハウス「神田CLUB F#」（別会場）が開業
 - id: ruido-k2
   name: 渋谷ルイードK2
-  note: RUIDO系列のライブハウス（詳細未調査）
+  address: 東京都渋谷区桜丘町16-12 MUSIC LAND KEY B1F
+  note: RUIDO系列のライブハウス。渋谷駅桜丘口再開発等の影響で閉店（閉店時期未確認）
 - id: deseo
   name: 渋谷DESEO
-  note: ライブハウス（詳細未調査）
+  address: 東京都渋谷区道玄坂2-13-5 ハーベストビルディングB1F
+  url: http://www.deseo.co.jp
+  x: SHIBUYADESEO
+  note: 2018年に桜丘町から道玄坂の現住所へ移転。運営がアイドルプロデュース（harvest）も手掛ける
 - id: waseda-akane
   name: 早稲田あかね
   aliases:
     - 西早稲田あかね
-  note: イベントスペース（詳細未調査）
+  address: 東京都新宿区西早稲田2-1-17 酒井ビル1F
+  url: https://waseda-akane.jimdosite.com
+  x: waseda_akane
+  note: 正式には「交流Bar あかね」。早大生中心の交流バー・トークイベント会場
 - id: star-lounge
   name: 渋谷スターラウンジ
-  note: ライブハウス（詳細未調査）
+  address: 東京都渋谷区宇田川町4-7 トウセン宇田川ビル1F
+  url: http://starlounge.jp
+  x: _StarLounge_
+  note: チェルシーホテルと同ビル（1F）、2010年9月オープン
 - id: nine-spices
   name: ナインスパイス
   aliases:
     - NINE SPICES
-  note: 新宿のライブハウス。JAM FES 2017の会場のひとつ（詳細未調査）
+  address: 東京都新宿区歌舞伎町2-1-2 HANROKUビルB1
+  x: 9spices
+  note: 新宿のライブハウス。JAM FES 2017の会場のひとつ。収容200名。公式サイトは調査済み・特定できず（Instagram@nine_spices）
 - id: links-holl
   name: 浅草橋 Tokyo Link's Holl
   aliases:
     - 浅草橋リンクホール
-  note: ライブハウス（詳細未調査）
+  address: 東京都台東区浅草橋1-22-8 コーワウエストビル1F
+  url: http://cradle.link/linkshall/
+  note: ライブハウス。正式表記は「Tokyo-Link's HALL」（Hollではなく HALL）。2015年9月5日オープン。公式Xは調査済み・特定できず
 - id: chelsea-hotel
   name: 渋谷チェルシーホテル
-  note: ライブハウス（詳細未調査）
+  address: 東京都渋谷区宇田川町4-7 トウセン宇田川ビルB1F
+  url: http://www.chelseahotel.jp
+  note: ライブハウス。スターラウンジと同ビル（B1F、スターラウンジは1F）。2003年〜運営、収容約300名。公式Xは調査済み・特定できず
 - id: koenji-thunder
   name: 高円寺サンダー
-  note: ライブハウス（詳細未調査）
+  note: ライブハウス。調査済み・情報なし（該当会場を特定できず）
 - id: aoyama-fai
   name: 青山fai
-  note: ライブハウス（詳細未調査）
+  address: 東京都港区南青山5-10-1 H2 AOYAMA BLDG B1F・B2F
+  url: http://www.fai-aoyama.com
+  x: faiaoyama
+  note: 表参道駅から徒歩3分
 - id: ikebukuro-mono
   name: 池袋mono
-  note: ライブハウス（詳細未調査）。池袋mismatch・池袋手刀とは別会場
+  address: 東京都豊島区南池袋3-13-17 MASHITA5ビルB1F
+  url: https://live-mono.com/ikebukuro
+  x: livetopmono
+  note: 正式名称「池袋LiveHouse mono」。池袋mismatch・池袋手刀とは別会場
 - id: bar-quinq
   name: Barクインク
-  note: 神宮寺ナナ主催のバー企画（会場実体は要精査）
+  note: 神宮寺ナナ主催のバー企画（会場実体は要精査）。調査済み・情報なし
 - id: shimokitazawa-arena
   name: 下北沢ARENA
   address: 東京都世田谷区北沢2-2-14 モアイ茶沢4F
+  url: http://arena.nomouze.jp/
   x: arena_1111
-  note: DJバー/レンタルスペース系。詳細未確認
+  note: 業態はカレー・バー＋DJ/パーティー/プロレス/BBQ会場（純粋なライブハウスではない）
 - id: barrack-block-cafe
   name: Barrack Block Cafe
   aliases:
@@ -472,7 +502,8 @@
   name: 下北沢ろくでもない夜
   address: 東京都世田谷区北沢2-6-5 ルイビル3F
   url: https://www.69demonai46.com
-  note: 下北沢屋根裏跡地にオープンしたライブハウス＆バー
+  x: 69demonai46
+  note: 下北沢屋根裏跡地に2015年5月1日オープンしたライブハウス＆バー
 - id: mona-records
   name: mona records
   aliases:
@@ -495,7 +526,7 @@
   x: shinjuku_redcloth
 - id: shinjuku-bee
   name: 新宿bee
-  note: 詳細未調査・要手動確認
+  note: 調査済み・情報なし。「ダイニングダーツバーBee 新宿店」（新宿区新宿3-18-4）はヒットするがダーツバーチェーンで一次情報での紐づけ確認できず、同名の別業態の可能性が高く特定できず
 - id: shinjuku-science
   name: 新宿club SCIENCE
   aliases:
