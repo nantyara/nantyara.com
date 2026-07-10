@@ -1025,64 +1025,92 @@
   note: 対バンイベント「詩音の奏」シリーズの会場。K&Mミュージック中野店（km-music-nakano）とは別店舗
 - id: yumenoshima-bumb
   name: 夢の島BumB
-  note: プロレスイベント会場（東京海洋ユース・ビレッジ）
+  address: 東京都江東区夢の島2-1-3
+  url: https://www.ys-tokyobay.co.jp/
+  note: プロレスイベント会場（東京海洋ユース・ビレッジ）。正式名称「BumB(ぶんぶ)東京スポーツ文化館」。公式Xは調査済み・特定できず
 - id: ueno-otoyokocho
   name: 上野音横丁
-  note: 対バンイベントの会場（詳細未調査）
+  address: 東京都台東区東上野3-16-3 東宝ビルB1F
+  url: http://otoyoko.com
+  x: ueno_otoyoko
+  note: 2014年11月オープン（旧「上野BRASH」リニューアル）。柏ThumbUp・柏616&04と同系列
 - id: ogikubo-bunga
   name: 荻窪LIVE BAR BUNGA
-  note: ライブバー。「Legend of Music」シリーズの会場（詳細未調査）
+  address: 東京都杉並区天沼3-1-5 サン建設ビルB1
+  url: http://www.livebar-bunga.com/
+  note: ライブバー。「Legend of Music」シリーズの会場。2005年11月開店、2022年4月末閉店（コロナ禍で2度のクラウドファンディングも継続断念）
 - id: akihabara-colors
   name: 秋葉原カラーズ
   aliases:
     - AKIBA COLORS
     - 秋葉原COLORS
-  note: 「だいたい20代さん」主催ライブの会場（詳細未調査）
+  address: 東京都台東区台東1-27-1 K3ビル B1F
+  url: https://www.akiba-colors.com/
+  note: 「だいたい20代さん」主催ライブの会場。正式表記「AKIBA-COLORS」。公式Xは調査済み・特定できず
 - id: hirosaki-shake
   name: 弘前SHAKE
-  note: 青森県弘前市のライブハウス（詳細未調査）
+  note: 青森県弘前市のライブハウス。調査済み・情報なし（該当施設を特定できず）
 - id: meguro-rokumeikan
   name: 目黒鹿鳴館
-  note: ライブハウス（詳細未調査）
+  address: 東京都目黒区目黒1-5-17 B1F
+  url: https://www.rockmaykan.com/
+  note: 2025年12月11日閉館（公式サイト告知）。公式Xは調査済み・特定できず
 - id: gallery-hashimoto
   name: ギャラリー橋本
-  note: 大田区蒲田復興協会（OKFK）シリーズの会場のひとつ。住所未確認
+  address: 東京都中央区東日本橋3-5-5 矢部ビル2F
+  url: http://galleryhashimoto.jp/
+  x: gh_hashimoto
+  note: 大田区蒲田復興協会（OKFK）シリーズの会場のひとつ。正式名称「ギャラリー・ハシモト（HASHIMOTO ART OFFICE）」。閉館とみられる（Tokyo Art Beatに閉館表示、要再確認）
 - id: jimbocho-gakuya
   name: 神保町楽屋
   address: 東京都千代田区神田神保町1-42-7
-  note: 電話03-3518-9496。「LiLee＋phallus定期公演」シリーズの会場
+  note: 電話03-3518-9496。「LiLee＋phallus定期公演」シリーズの会場。2016年秋開店のライブレストランで、現況（営業継続の有無）は要再確認。公式サイト・Xは調査済み・特定できず
 - id: shinjuku-livefreak
   name: 新宿Livefreak
   aliases:
     - 新宿フリーク
-  note: ライブハウス（詳細未調査）
+  note: ライブハウス。正式表記「新宿Live Freak」（新宿区新宿2-12-4 アコードビルB1と見られるが一次情報での裏取りができず要再確認）。公式サイト・Xは調査済み・特定できず
 - id: okfk-piano-space
   name: OKFK新会場（蒲田・ピアノのある空間）
   note: 会場の正式名称は未確認。大田区蒲田復興協会(OKFK)シリーズの新会場（初出演2019-07-26）。
-    正式名称が判明次第、idとnameを差し替えること
+    正式名称が判明次第、idとnameを差し替えること。調査済み・追加情報なし（固定店舗ではなく私設スペースの可能性）
 - id: rocinante
   name: ロシナンテ
+  address: 東京都新宿区新宿2-12-2 SS第一ビル3F
   url: http://shinjuku2rocinante.web.fc2.com
-  note: 新宿二丁目のバー（詳細住所未確認）
+  x: rocinate__
+  note: 正式名称「Bar Rocinante」。新宿二丁目のセッションライブバー
 - id: ginza-gin8710
   name: 銀座GIN8710
   address: 東京都中央区銀座8-7-10 GIN8710 地下2F
-  note: QuinQモデルによるバー営業企画「QuinQ cafe」の会場。新宿のBarクインク（bar-quinq）とは別会場
+  note: QuinQモデルによるバー営業企画「QuinQ cafe」の会場。新宿のBarクインク（bar-quinq）とは別会場。公式サイト・Xは調査済み・特定できず
 - id: kichijoji-silver-elephant
   name: 吉祥寺シルバーエレファント
-  note: ライブハウス（詳細未調査）
+  address: 東京都武蔵野市吉祥寺本町2-10-6 B1
+  url: https://www.silver-elephant.com/
+  x: silver_elephant
+  note: 1978年開店の老舗ライブハウス
 - id: chika-tokijo
   name: 地下闘技場
-  note: 新宿区役所通り付近の地下プロレス会場（詳細未調査、通称「Hプロ」主催）。正式名称・住所は未確認
+  address: 東京都新宿区歌舞伎町2-14-12 光凛ビルB1F
+  url: http://chikatougijou.com/
+  x: chikatougijou_2
+  note: 新宿区役所通り付近の地下プロレス会場（通称「Hプロ」主催）。正式名称「BAR&FIGHT 地下闘技場」。閉店告知情報があるが年次未確認のため要再確認
 - id: kashiwa-616
   name: 柏616
-  note: ライブハウス（詳細未調査）
+  address: 千葉県柏市中央町7-26 栄ビルB1F
+  url: http://athers-music.com/livehouse/
+  note: 正式表記「柏616&04」。柏駅徒歩6分、2009年オープン。上野音横丁と同運営。公式Xは調査済み・特定できず
 - id: shibuya-nostyle
   name: 渋谷NOSTYLE
-  note: ライブハウス（詳細未調査）
+  address: 東京都渋谷区道玄坂1-13-2 宝ビルB1
+  x: nostylelive
+  note: 2022年9月末で営業終了
 - id: kanda-space-cube
   name: 神田Space CUBE
-  note: ライブハウス（詳細未調査）
+  address: 東京都千代田区鍛冶町2-8-1 平野ビルB1F
+  x: KANDASPACECUBE
+  note: X表記は「KANDASPACECUBE（神田すぺきゅー公式・避難垢）」との記載あり、退避用アカウントの可能性がある点に留意
 - id: studioact-machida
   name: スタジオアクト町田店
   address: 東京都町田市原町田6-29-10
