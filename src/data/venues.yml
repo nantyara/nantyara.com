@@ -525,9 +525,9 @@
   name: 池袋ライブガレージAdm
   aliases:
     - 池袋Adm
+  address: 東京都豊島区東池袋1-22-1 GSハイムB1F
   url: https://adm-rock.com
   x: adm1000pai
-  note: 住所番地は未確認
 - id: ikebukuro-gekipa
   name: 池袋東口ゲキパ
   aliases:
@@ -550,11 +550,14 @@
 - id: takashimadaira-kuminkan-hall
   name: 高島平区民館ホール
   address: 東京都板橋区高島平3-12-28
-  note: 板橋区立高島平区民館。区立貸館施設
+  url: https://www.city.itabashi.tokyo.jp/bunka/shisetsu/chiiki/1004798.html
+  note: 板橋区立高島平区民館。区立貸館施設。専用の公式X等はなし
 - id: koenji-muzenji
   name: 高円寺無力無善寺
   address: 東京都杉並区高円寺南3-67-1
   url: https://muzenji.web.fc2.com
+  x: muzenji
+  note: 2026年6月末をもってガード下から退去・閉店予定（音楽ナタリー報道）
 - id: asagaya-lonesome
   name: Live Bar ロンサム
   aliases:
@@ -603,8 +606,9 @@
 - id: nishiyokohama-el-puente
   name: 西横浜 EL PUENTE
   address: 神奈川県横浜市西区西平沼町8-8 和幸ビルB1F
+  url: http://bar-el-puente.blogspot.com/
   x: elpuente_real
-  note: 公式サイトの現存未確認
+  note: 専用ドメインの公式サイトは確認できず、ブログが実質公式（confidence medium）
 - id: kamata-starwoods-space
   name: 牛かつ スターウッズスペース
   aliases:
@@ -630,6 +634,8 @@
   name: 山梨市民会館大ホール
   address: 山梨県山梨市万力1830
   url: https://www.yamanashi-kaikan.jp/
+  x: yamanashi_sk_hh
+  note: 正式名称「山梨市民会館・山梨市花かげホール」の公式X。県立YCC県民文化ホール（@yamanashi_kbh）と混同注意
 - id: sendai-ripple
   name: 仙台LIVE STUDIO RIPPLE
   aliases:
@@ -655,13 +661,16 @@
   name: 秋葉原ハンドレッド2
   address: 東京都台東区浅草橋5-3-2 秋葉原スクエアビル2F
   url: https://100square.jp/map
+  x: 100square_staff
+  note: 運営元「秋葉原ハンドレッドスクエア倶楽部」の共通アカウント（ハンドレッド2/7両方カバー）
 - id: fukuoka-daigakuyu
   name: 大學湯
   aliases:
     - 福岡 大學湯
   address: 福岡県福岡市東区箱崎3-17-24
+  url: https://www.instagram.com/daigakuyu07/
   x: daigakuyu07
-  note: 旧銭湯を改装したレンタルスペース（国登録有形文化財）
+  note: 旧銭湯を改装したレンタルスペース（国登録有形文化財）。専用ドメインの公式サイトはなくInstagramが実質公式窓口
 - id: fukuoka-himitsu
   name: 福岡大名ライブハウス秘密
   aliases:
@@ -676,25 +685,30 @@
     - 栃木 岩下の新生姜ミュージアム
   address: 栃木県栃木市本町1-25
   url: https://shinshoga-museum.com
+  x: shinshoga
+  note: X（@shinshoga）は岩下食品社長（ミュージアム館長）個人名義だが、実質的にミュージアムの公式発信アカウント
 - id: saitama-super-arena
   name: さいたまスーパーアリーナ
   aliases:
     - 埼玉スーパーアリーナ コスホリ
   address: 埼玉県さいたま市中央区新都心8番地
   url: https://www.saitama-arena.co.jp/
-  note: コスホリック等の大型イベント会場
+  x: S_S_Arena
+  note: コスホリック等の大型イベント会場。2026年4月より愛称「GMOアリーナさいたま」に変更（Xハンドルは@S_S_Arenaのまま）
 - id: hmv-record-shop-shibuya
   name: HMV record shop 渋谷
   address: 東京都渋谷区宇田川町36-2 ノア渋谷 1F/2F
   url: https://www.hmv.co.jp/store/SHU
+  x: HMVrs_shibuya
   note: 中古レコード・CD専門店（インストアイベント会場）
 - id: yokohama-bb-street
   name: 横浜B.B.STREET
   aliases:
     - Yokohama B.B.street
+  address: 神奈川県横浜市中区真砂町3-33 CERTE(セルテ)ビル 12F
   url: https://www.bbstreet.com
   x: BBSTREET
-  note: 2026年8月に伊勢佐木町へ移転予定。住所は要再確認
+  note: 2026年8月に伊勢佐木町へ移転予定。住所は移転前（JR関内駅北口）のもの。移転後に要再確認
 - id: basement-monstar-oji
   name: BASEMENT MONSTAR
   aliases:
@@ -747,7 +761,9 @@
   x: black_bluelive
 - id: hoteyes
   name: 池袋Hoteyes
-  note: ライブハウス（詳細未調査）
+  address: 東京都豊島区西池袋2-39-9 B1
+  url: http://www.hoteyes.jp/index.html
+  x: hoteyeslive
 - id: basement-bar
   name: 下北沢ベースメントバー
   note: ライブハウス（詳細未調査）
