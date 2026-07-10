@@ -1562,7 +1562,14 @@
   note: ライブハウス（詳細未調査）
 - id: shibuya-game
   name: 渋谷GAME
+  aliases:
+    - 渋谷the GAME
   note: ライブハウス（詳細未調査）
 - id: iogi-china-square
   name: 井荻チャイナスクエア
   note: ライブハウス（詳細未調査）
+- id: kannai-kokugetsu
+  name: Bar黒月（関内）
+  aliases:
+    - Bar黒月
+  note: バー（詳細未調査）
