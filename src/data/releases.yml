@@ -1,3 +1,37 @@
+- id: release-018
+  title: 東京星へ、行こう。
+  artist: なんちゃらアイドル
+  release_date: 2019-08-30
+  type: single
+  format: CD
+  label: 自主制作
+  description: |
+    なんちゃらアイドル7thシングル。価格0円の無料配布シングルとして蒲田オッタンタOKFKでレコ発。
+    アルバムやサブスク配信には収録予定のない単独リリース。
+
+- id: release-019
+  title: チョコ麦畑で捕まえて！
+  artist: なんちゃらアイドル loves ちょこ太郎
+  release_date: 2019-10-18
+  type: single
+  format: CD
+  label: 自主制作
+  description: |
+    なんちゃらアイドル8thシングル。ちょこ太郎とのコラボシングルで、下北沢ちょ美ひげでレコ発ワンマン。
+    作曲はスキップカウズの遠藤肇、イラストは漫画家がぁさんが担当。
+
+- id: release-020
+  title: 蛇酢と木綿と
+  artist: なんちゃらアイドル
+  release_date: 2020-01-29
+  type: single
+  format: CD
+  label: なりすレコード
+  description: |
+    なんちゃらアイドル9thシングル。100枚限定生産で、Spotify等でも無料で先行配信。
+    作曲・演奏・アレンジ・録音はスキップカウズの遠藤肇。カップリングにアコースティックバージョンとインストを収録。
+    アナログシングル「夜の煙突」と同日発売。
+
 - id: release-001
   title: 夜の煙突
   artist: なんちゃらアイドル / カーネーション
@@ -9,6 +43,28 @@
   description: |
     カーネーションのポップ・アンセム「夜の煙突」を、御茶海マミとあおはるによる2人組ユニット"なんちゃらアイドル"が、チップチューンテイストでカバー。
     初の全国流通盤として7インチでリリース。
+
+- id: release-021
+  title: 黒い森
+  artist: なんちゃらアイドル loves 佐久間学
+  release_date: 2020-08-22
+  type: single
+  format: CD
+  label: なりすレコード
+  description: |
+    ブルースマンの佐久間学による作詞作曲のシングル。なんちゃらversionのアレンジはスキップカウズの遠藤肇。
+    カップリングに佐久間本人による演奏・歌唱versionを収録。9月3日に製品版発売、9月8日から通販開始。
+
+- id: release-022
+  title: baby a gogo / 平穏世代のホーリーキャッツ
+  artist: なんちゃらアイドル
+  release_date: 2020-09-08
+  type: single
+  format: CD
+  label: なりすレコード
+  description: |
+    「黒い森」と同時発売の2曲入りシングル。「baby a gogo」は遠藤肇（スキップカウズ）作曲、
+    「平穏世代のホーリーキャッツ」はMIYO-C作・編曲。新星堂エンタバアキバでの発売記念インストアイベントを開催。
 
 - id: release-002
   title: さよならOdyssey
@@ -46,6 +102,17 @@
     - A1. PansyとDaisy
     - B1. 今夜、全てのBarで
 
+- id: release-023
+  title: EnnuいDISCOTHEQUE
+  artist: なんちゃらアイドル loves MCあんにゅ
+  release_date: 2021-09-29
+  type: single
+  format: CD
+  label: なりすレコード
+  description: |
+    MCあんにゅとのコラボシングル。カップリングになんちゃら初のラテン曲「salad familiar」や
+    リミックス、トークを含む全9曲入りで1000円。下北沢ちょ美ひげでレコ発ライブを開催。
+
 - id: release-004
   title: M.A.M.I.
   artist: なんちゃらアイドル loves 一色進&松田信男
@@ -64,6 +131,59 @@
       url: https://music.apple.com/us/album/m-a-m-i/1598097854
     - platform: YouTube Music
       url: https://music.youtube.com/playlist?list=OLAK5uy_kiohbgNK50IZ-YYSVR7OaYCcubcSn6Aio
+
+- id: release-024
+  title: 羣青
+  artist: 御茶海マミ
+  release_date: 2022-01-13
+  type: single
+  format: CD
+  label: なりすレコード
+  description: |
+    御茶海マミのソロデビューシングル。MV入りDVD-ROM付き。下北沢ちょ美ひげで発売記念GIGを開催。
+
+- id: release-025
+  title: ラブラブベイビー
+  artist: なんちゃらアイドル loves 大高ジャッキー
+  release_date: 2022-02-06
+  type: single
+  format: CD
+  label: なりすレコード
+  description: |
+    大高ジャッキーとのコラボシングル。渋谷La.mama「大人の文化祭」でレコ発。
+
+- id: release-026
+  title: Teens Blues
+  artist: なんちゃらアイドル loves 大高ジャッキー
+  release_date: 2022-06-13
+  type: single
+  format: CD
+  label: なりすレコード
+  description: |
+    大高ジャッキーとのコラボセカンドシングル。CD版に続き、サブスク版はミックスを変えて配信。
+
+- id: release-027
+  title: 大人の文化祭vol.1
+  artist: V.A. (なんちゃらアイドル 他)
+  release_date: 2022-08-22
+  type: album
+  format: CD
+  label: なりすレコード
+  description: |
+    なんちゃらアイドル主催イベント「大人の文化祭～オムニバスアルバムレコ発記念～」（渋谷La.mama）発の
+    オムニバスアルバム。なんちゃらアイドル、ヒゲと味噌汁、土萌まりなwithスマイルアカデミー、桑原達也、
+    ラブホテルが参加。レコ発記念ライブを同日開催。
+
+- id: release-028
+  title: From Hawaii To Hell
+  artist: なんちゃらアイドル loves MCあんにゅ
+  release_date: 2022-10-19
+  type: single
+  format: CD
+  label: なりすレコード
+  description: |
+    MCあんにゅとのコラボセカンドシングル。作編曲はスキップカウズの遠藤肇で、なんちゃらの2人が
+    作詞に初挑戦。下北沢ちょ美ひげでレコ発ライブを開催。
 
 - id: release-005
   title: 嘲笑
