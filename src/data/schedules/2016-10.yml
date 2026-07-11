@@ -9,6 +9,8 @@
     QuinQ音楽祭 in ゴールデンエッグ vol.1（昼公演）
 
     ※Xの告知アーカイブから復元。開催時刻の記録なし
+  images:
+    - /events/20161001-goldenegg.jpeg
   sources:
     - https://x.com/yokuwakan_nai/status/781737847694856192
     - https://x.com/yokuwakan_nai/status/782168589885280256
@@ -34,10 +36,16 @@
   time_tbd: true
   title: ヨコカル祭 アイドルステージ
   site: 横須賀三笠公園
+  acts:
+    - 恋合艦隊
+    - URTRA GIRL
+    - 山名純
   content: |
     野外ライブ（アイドルステージ）。同日夕方の渋谷フェスボルタへはしご
 
-    ※Xの告知アーカイブから復元。出演時刻の記録なし
+    ※Xの告知アーカイブから復元。出演時刻の記録なし（※フライヤー画像より出演時刻は11:45-12:00と判明）
+  images:
+    - /events/20161022-yokokaru.jpeg
   sources:
     - https://x.com/yokuwakan_nai/status/787260513457610753
     - https://x.com/yokuwakan_nai/status/789687839243939840
@@ -47,10 +55,12 @@
   title: フェスボルタアフリカ in 渋谷club family
   site: 渋谷club family
   content: |
-    なんちゃらアイドル出演 15:40〜
+    なんちゃらアイドル出演 15:40〜（※フライヤー画像では15:50-16:20となっている）
     横須賀ヨコカル祭からの同日2現場
 
     ※Xの告知アーカイブから復元
+  images:
+    - /events/20161022-fesvolta.jpeg
   sources:
     - https://x.com/samami27/status/789692945272147970
     - https://x.com/yokuwakan_nai/status/789765644761698304
@@ -92,7 +102,9 @@
   content: |
     ナゴコス前日の名古屋遠征撮影会（予約: メールにて）
 
-    ※Xの告知アーカイブから復元。会場・時刻の詳細記録なし
+    ※Xの告知アーカイブから復元。会場・時刻の詳細記録なし（※フライヤー画像より、12:30〜16:30にかけて複数部開催されたことが判明）
+  images:
+    - /events/20161029-nagoya-satsueikai.jpeg
   sources:
     - https://x.com/yokuwakan_nai/status/786153496462577665
     - https://x.com/samami27/status/786198655602610176
