@@ -30,8 +30,23 @@
   time_tbd: true
   title: DJ出演「yururi.」
   site: 渋谷Glad
+  acts:
+    - ローズヒップss
+    - ARATA NAKAMURA
+    - DJ-ADAPTER。
+    - Daisuke
+    - NO+CHIN
+    - NAOKI
+    - Uki
+    - Dice-K
+    - 彩雅
+    - Atsushi Ishii
+    - DJタマキ
+  images:
+    - /events/20161222-shibuya-glad.jpeg
   content: |
-    DJ出演（「アノ子のDJ予定」として告知）。時刻の記録なし。
+    DJ出演（「アノ子のDJ予定」として告知）。
+    開演23:00。
 
     ※Xの告知アーカイブから復元
   sources:
@@ -42,7 +57,15 @@
   time_tbd: true
   title: クリスマスイベント（リーダー活動休止前ラストライブ）
   site: 新宿GOLDENEGG
+  acts:
+    - ロッキンMエノッキング
+    - 香栄
+  images:
+    - /events/20161224-goldenegg.jpeg
   content: |
+    開場17:30 / 開演18:00
+    料金 2,500円（ドリンク別）
+
     リーダー・はるかの活動休止前ラストライブ（「リーダーは12/24で来春まで一旦お休み」
     と当時アナウンス）。
 
@@ -50,7 +73,7 @@
     この日しか歌わない新曲も披露。集めたお皿を数えたり、お皿で焼きそばを
     食べたりする企画も。
 
-    ※Xの告知アーカイブから復元。開催時刻の記録なし
+    ※Xの告知アーカイブから復元。
   sources:
     - https://x.com/nantyaraidol/status/811883031816376320
     - https://x.com/nantyaraidol/status/812675574766313473
