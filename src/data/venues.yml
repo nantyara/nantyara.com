@@ -1702,3 +1702,9 @@
 - id: saitama-kaikan-kohall
   name: 埼玉会館小ホール
   note: 浦和駅から徒歩6分の会場（本文からの裏取りでは住所未確認）
+- id: club-sharp
+  name: Club SHARP
+  note: 韓国ソウル・マンウォンドン（望遠洞）のライブハウス。なんちゃらアイドル初の海外公演会場（詳細未調査）
+- id: tokyotower-foottown-rooftop
+  name: 東京タワー フットタウン屋上
+  note: 単発企画「東京のうたライブ」で使用された野外ステージ（詳細未調査）
