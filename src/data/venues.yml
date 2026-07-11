@@ -1765,3 +1765,15 @@
   name: HMV&BOOKS SHIBUYA
   note: 渋谷モディ内5Fイベントスペース。既存登録の「HMV record shop 渋谷」（ノア渋谷）とは
     所在地が異なる別店舗（詳細未調査）
+- id: okachimachi-panda
+  name: 御徒町パンダ広場
+  aliases:
+    - おかちまちパンダ広場
+  note: 特設ステージ・クリスマスマーケット併設の屋外広場とみられる（詳細未調査）
+- id: misono-universe
+  name: 味園ユニバース
+  note: 既存登録の味園紅鶴（misono-benikaku）とは同じ大阪ミナミ・味園ビル内の別テナント。
+    味園ビルでの営業は2024年12月31日で終了（詳細未調査）
+- id: nakano-meikyokudo
+  name: 中野名曲堂
+  note: 中野ブロードウェイ2階（詳細未調査）
