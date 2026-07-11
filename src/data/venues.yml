@@ -1723,3 +1723,9 @@
 - id: villagevanguard-lumine-est-shinjuku
   name: ヴィレッジヴァンガード ルミネエスト新宿店
   note: 単発企画（あおはる一日店長）で使用（詳細未調査）
+- id: nagaoka-hood
+  name: 長岡HOOD
+  note: 正式表記「ライブハウス&バー HOOD」（新潟県長岡市）。なんちゃらアイドル初の北陸遠征先（詳細未調査）
+- id: akihabara-galaxy
+  name: 秋葉原ギャラクシー
+  note: ライブハウス。既存登録の西川口GALAXY（galaxy）とは別会場（詳細未調査）
