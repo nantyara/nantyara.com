@@ -1753,3 +1753,15 @@
 - id: okinawa-cyberbox
   name: Cyber-Box
   note: 沖縄。詳細未調査
+- id: nakameguro-sparkjoy
+  name: 中目黒スパークジョイ
+  aliases:
+    - SPARK JOY NAKAMEGURO
+  note: 詳細未調査
+- id: shinjuku-redcross
+  name: 新宿レッドクロス
+  note: 詳細未調査
+- id: hmvbooks-shibuya
+  name: HMV&BOOKS SHIBUYA
+  note: 渋谷モディ内5Fイベントスペース。既存登録の「HMV record shop 渋谷」（ノア渋谷）とは
+    所在地が異なる別店舗（詳細未調査）
