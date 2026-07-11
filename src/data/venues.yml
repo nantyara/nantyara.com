@@ -1708,3 +1708,12 @@
 - id: tokyotower-foottown-rooftop
   name: 東京タワー フットタウン屋上
   note: 単発企画「東京のうたライブ」で使用された野外ステージ（詳細未調査）
+- id: shimokitazawa-livehaus
+  name: 下北沢LIVEHAUS
+  note: ライブハウス（詳細未調査）
+- id: tenjin-thedarkroom
+  name: 天神The Dark room
+  note: 福岡のライブハウス（詳細未調査）
+- id: wildside-tokyo
+  name: Wild Side Tokyo
+  note: ライブハウス（詳細未調査）
