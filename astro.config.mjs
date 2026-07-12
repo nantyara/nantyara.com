@@ -1,4 +1,5 @@
 import { defineConfig, fontProviders } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 import AstroPWA from './integrations/pwa';
 
 // https://astro.build/config
@@ -32,6 +33,9 @@ export default defineConfig({
     },
   ],
   integrations: [
+    sitemap({
+      filter: (page) => !page.endsWith('/font-test/'),
+    }),
     AstroPWA({
       registerType: 'autoUpdate',
       injectRegister: 'auto',
