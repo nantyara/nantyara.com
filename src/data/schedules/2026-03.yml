@@ -317,13 +317,18 @@
 - id: event-20260324-timetree-77566658
   slug: 20260324-timetree-77566658
   date: 2026-03-24 18:00:00 +0900
-  title: 新宿drunken shrimp
+  title: 御茶海マミ バーイベ in 新宿drunken shrimp
   site: 新宿drunken shrimp
   timetree_id: "2907118056377566658"
   labels:
     - マミソロ
   content: |
-    TBD
+    新宿drunken shrimpでの御茶海マミのバーイベント。遠隔drink（来店できないファン向けの
+    ドリンク差し入れ）受付あり。
+
+    ※Xの告知ツイートから復元
+  sources:
+    - https://x.com/nantyaraidol/status/2035756956997312736
 - id: event-20260327-timetree-48174975
   slug: 20260327-timetree-48174975
   date: 2026-03-27 18:00:00 +0900
