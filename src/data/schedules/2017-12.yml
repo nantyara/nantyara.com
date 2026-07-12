@@ -1,7 +1,7 @@
 # 2017年12月（/mine-x による X 告知アーカイブからの発掘。ソース: mining/x-archive/2017-12.json）
 - id: event-20171201-jam
   slug: 20171201-jam
-  date: 2017-12-01 18:20:00 +0900
+  date: 2017-12-01 22:00:00 +0900
   title: DADAフェス 新宿JAMスタジオライブ
   site: 新宿JAM
   acts:
@@ -40,7 +40,7 @@
     - https://x.com/samami27/status/936598478582456321
 - id: event-20171212-heavensdoor
   slug: 20171212-heavensdoor
-  date: 2017-12-12 19:00:00 +0900
+  date: 2017-12-12 20:20:00 +0900
   title: Chemical reaction
   site: 三軒茶屋HEAVEN'S DOOR
   acts:
@@ -136,7 +136,7 @@
     - https://x.com/yokuwakan_nai/status/944255649331867649
 - id: event-20171225-firebird
   slug: 20171225-firebird
-  date: 2017-12-25 18:00:00 +0900
+  date: 2017-12-25 21:00:00 +0900
   title: HYSTERIC GIRLS PANIC クリスマスだよ。篇
   site: 新松戸FIREBIRD
   acts:
