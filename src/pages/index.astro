@@ -651,15 +651,43 @@ const nextLiveDateFmt = (d: Date, timeTbd: boolean) => {
       const eventTime = parseInt(hero.dataset.date || '0');
       const now = Date.now();
       const jstDay = (t) => new Date(t).toLocaleDateString('ja-JP', { timeZone: 'Asia/Tokyo' });
+      const THREE_DAYS_MS = 3 * 24 * 60 * 60 * 1000;
       if (eventTime < clientExpireTime) {
         // ビルドが古くてイベントが終わっている場合は隠す
         hero.style.display = 'none';
       } else if (jstDay(eventTime) === jstDay(now)) {
         countdown.textContent = '🎤 本日開催!';
         countdown.classList.add('today');
+      } else if (eventTime - now < THREE_DAYS_MS) {
+        // 残り3日を切ったら日・時・分・秒まで毎秒カウントダウン表示
+        let timer;
+        const tick = () => {
+          const remaining = eventTime - Date.now();
+          if (remaining <= 0) {
+            countdown.textContent = '🎤 開演中!';
+            countdown.classList.add('today');
+            if (timer) clearInterval(timer);
+            return;
+          }
+          const d = Math.floor(remaining / (24 * 60 * 60 * 1000));
+          const h = Math.floor((remaining % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
+          const m = Math.floor((remaining % (60 * 60 * 1000)) / (60 * 1000));
+          const s = Math.floor((remaining % (60 * 1000)) / 1000);
+          if (d > 0) {
+            countdown.textContent = `あと ${d}日 ${h}時間 ${m}分 ${s}秒`;
+          } else if (h > 0) {
+            countdown.textContent = `あと ${h}時間 ${m}分 ${s}秒`;
+          } else if (m > 0) {
+            countdown.textContent = `あと ${m}分 ${s}秒`;
+          } else {
+            countdown.textContent = `あと ${s}秒`;
+          }
+        };
+        tick();
+        timer = setInterval(tick, 1000);
       } else {
         const days = Math.ceil((eventTime - now) / (24 * 60 * 60 * 1000));
-        countdown.textContent = `あと${days}日`;
+        countdown.textContent = `あと ${days}日`;
       }
     }
 
