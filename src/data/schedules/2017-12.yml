@@ -1,11 +1,27 @@
 # 2017年12月（/mine-x による X 告知アーカイブからの発掘。ソース: mining/x-archive/2017-12.json）
 - id: event-20171201-jam
   slug: 20171201-jam
-  date: 2017-12-01 12:00:00 +0900
-  time_tbd: true
-  title: 新宿JAMライブ（ジャムスタライブ）
+  date: 2017-12-01 22:00:00 +0900
+  title: DADAフェス 新宿JAMスタジオライブ
   site: 新宿JAM
+  acts:
+    - ニュータウン
+    - EGGEST
+    - つはる
+    - 眉村ちあき
+    - 魔ゼルな規犬
+    - 小島ふかせ
+    - ドクガエル
+    - 堀孝輔(みずすまし)
+    - はなたま
+    - analsticks
+    - サワダヒロアキ
+    - 式守ウノ
+    - かみやあいの
   content: |
+    フライヤーより：OPEN 18:00 / START 18:20。料金：ADV¥2000 / DOOR¥2500 + [D別]。なんちゃらアイドルの出番は22:00〜22:25。
+    
+    （以下旧記録）
     新宿JAMでのライブ。ツイート中では「ジャムスタライブ」と呼ばれている。実況ツイートは
     21:03（「JAM、着いた瞬間エモい」）、22:13（「ジャムスタライブなう！」）、23:10
     （「JAMスタライブありがとうございました！！ほんっとにたのしかった！！だださんありがとうー！！」）
@@ -14,6 +30,9 @@
 
     ※Xの告知アーカイブから復元。開催時刻は実況ツイートのタイムスタンプからの推定
     （21時台開始〜23時台終演）で、事前の開演告知は確認できないため time_tbd 扱い
+  images:
+    - /events/20171201-jam.jpeg
+    - /events/20171201-jam-tt.jpeg
   sources:
     - https://x.com/yokuwakan_nai/status/936566352822771712
     - https://x.com/samami27/status/936569925249875968
@@ -22,14 +41,24 @@
 - id: event-20171212-heavensdoor
   slug: 20171212-heavensdoor
   date: 2017-12-12 20:20:00 +0900
-  title: 三軒茶屋HEAVEN'S DOORライブ
+  title: Chemical reaction
   site: 三軒茶屋HEAVEN'S DOOR
+  acts:
+    - CHACO
+    - 毎日サプリメント
+    - アスカトタケシ
+    - ザ・東京デンジャラスベイベーズ
   content: |
+    フライヤーより：イベント名「Chemical reaction」。open/start 18:30/19:00。前売¥2000- 当日¥2500-。
+    
+    （以下旧記録）
     三軒茶屋HEAVEN'S DOORでのライブ。事前告知では、なんちゃらの出番は20時20分くらいから
     30分間みっちりの予定。終演後のツイートでは対バンとの共演も好評だったことが伺える。
     次回12月19日への言及あり。
 
     ※Xの告知アーカイブから復元
+  images:
+    - /events/20171212-heavensdoor.jpeg
   sources:
     - https://x.com/nantyaraidol/status/939923619739680768
     - https://x.com/nantyaraidol/status/940597720401809409
@@ -54,41 +83,82 @@
   date: 2017-12-19 18:30:00 +0900
   title: Sweet Motion Vol.68
   site: 新宿Motion
+  acts:
+    - TrAstメルヘン
+    - 吉野なお
+    - Re:LAYz
+    - 星野百花
+    - ボクらは今日もスマホ依存症。
+    - だって世界がハチャメチャなんだもん。
+    - AdFicTioN
+    - LOVE JAMMIN'
+    - アバンギャルド共和国
+    - 田中らいら
   content: |
     『Sweet Motion Vol.68』。会場：新宿Motion。開場18:00／開演18:30。
     料金：前売2,000円＋D代／当日2,400円＋D代。終演後のツイートでは「久々の人に会えたりも
     して嬉しくてテンション爆上げ」だったとのこと。
 
     ※Xの告知アーカイブから復元
+  images:
+    - /events/20171219-shinjukumotion.jpeg
   sources:
     - https://x.com/samami27/status/942719337852321794
     - https://x.com/yokuwakan_nai/status/943133502760816645
 - id: event-20171222-barbara
   slug: 20171222-barbara
-  date: 2017-12-22 12:00:00 +0900
-  time_tbd: true
-  title: 代々木バーバラ クリスマスパーティー
+  date: 2017-12-22 18:00:00 +0900
+  title: Hot Ratz presents street with a roof vol.4 Christmas Party Night (w 歌とクリスマスコーデファッションショー
   site: 代々木バーバラ
+  acts:
+    - 小泉千秋
+    - inmoralister
+    - miho × kokona
+    - 有栖沙
+    - 미미(みみ)
+    - はのんし＋
+    - Airish
+    - 優海
+    - SEINA
+    - kotone
   content: |
+    フライヤーより：Open 17:30 Start 18:00。料金：前売2500円 当日3000円 +1D。
+    
+    （以下旧記録）
     代々木バーバラでのクリスマスパーティーライブ。クリスマスソング縛りのセットだったとの
     ツイートあり。事前告知に具体的な開演時刻の記載は見当たらない。
 
     ※Xの告知アーカイブから復元。開催時刻の記録なし
+  images:
+    - /events/20171222-barbara.jpeg
   sources:
     - https://x.com/yokuwakan_nai/status/943133502760816645
     - https://x.com/yokuwakan_nai/status/944255649331867649
 - id: event-20171225-firebird
   slug: 20171225-firebird
-  date: 2017-12-25 12:00:00 +0900
-  time_tbd: true
-  title: 新松戸FIREBIRD クリスマスライブ
+  date: 2017-12-25 21:00:00 +0900
+  title: HYSTERIC GIRLS PANIC クリスマスだよ。篇
   site: 新松戸FIREBIRD
+  acts:
+    - SHIZAN
+    - 岬たん
+    - ロットン瑠唯
+    - のうじょうりえ
+    - ワカメケイナ
+    - モテギスミス
+    - 工藤ちゃん
+    - 加賀谷真秀
   content: |
+    フライヤーより：イベント名「HYSTERIC GIRLS PANIC クリスマスだよ。篇」。OPEN 17:30 START 18:00。前売2500円 当日3000円 + 1drink charge (600円)。なんちゃらアイドルの出番は21:00〜。
+    
+    （以下旧記録）
     新松戸FIREBIRDでのクリスマスライブ。「うかれぽんちなんちゃらアイドル」として賑やかに
     開催された模様。工藤ちゃん・岬たんとの共演で、2017年の共演は本イベントで10回目
     （事前ツイートで予告）。開演時刻の明記は見当たらない。
 
     ※Xの告知アーカイブから復元。開催時刻の記録なし
+  images:
+    - /events/20171225-firebird.jpeg
   sources:
     - https://x.com/nantyaraidol/status/941232053072289793
     - https://x.com/samami27/status/945293186460561409
@@ -119,9 +189,29 @@
 - id: event-20171231-heavensdoor
   slug: 20171231-heavensdoor
   date: 2017-12-31 21:55:00 +0900
-  title: 年越しカウントダウンライブ（1本目・三軒茶屋HEAVEN'S DOOR）
+  title: Smash your Brain! 2017→2018 kurukuru party?!
   site: 三軒茶屋HEAVEN'S DOOR
+  acts:
+    - 断絶交流
+    - GISIRI
+    - gimeiz
+    - 猪俣翔
+    - 鮭オーケストラas桂木ヤコブソン
+    - デッドバンビーズ
+    - クロメ
+    - ヒゲと味噌汁
+    - BBG48
+    - 赤いくらげ
+    - GOLGOBUTCH
+    - ナミダ色☆妄想癖
+    - くるぴの
+    - 殺し屋ベイビー
+    - 中村リド
+    - K・W・N
   content: |
+    フライヤーより：イベント名「Smash your Brain! 2017→2018 kurukuru party?!」。15:30〜 OPEN 転換 DJ。
+    
+    （以下旧記録）
     大晦日恒例のはしごライブの1本目。三軒茶屋HEAVEN'S DOORにて21:55より出演。この後
     「新宿JAM 24:20〜」（日付は年明け1月1日 0:20頃）、「早稲田あかねで朝くらいまで初詣」
     （1月1日）と続く年越し3連戦の告知があったが、この2本は日付が1月1日になるため
@@ -129,6 +219,8 @@
     扱うべき候補として別途申し送りする。
 
     ※Xの告知アーカイブから復元。時刻はsamami27の告知ツイートより
+  images:
+    - /events/20171231-heavensdoor.jpeg
   sources:
     - https://x.com/yokuwakan_nai/status/946097325864230917
     - https://x.com/samami27/status/946491286554472448
