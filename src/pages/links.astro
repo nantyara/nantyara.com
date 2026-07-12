@@ -74,7 +74,7 @@ const getServiceInfo = (name: string, category: string) => {
 };
 ---
 
-<Layout title="リンク | なんちゃらアイドル">
+<Layout title="リンク | なんちゃらアイドル" description="なんちゃらアイドルの公式SNS、音楽配信、動画、Podcast、グッズ販売サイトへのリンク集です。">
   {Object.entries(categories).map(([key, label]) => {
     const categoryLinks = links[key];
     if (!categoryLinks || categoryLinks.length === 0) return null;

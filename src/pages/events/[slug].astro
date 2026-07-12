@@ -1,9 +1,11 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import ShareButtons from '../../components/ShareButtons.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { loadAllSchedules } from '../../utils/schedules';
 import { resolveVenue } from '../../utils/venues';
 import { collectActs, normalizeAct } from '../../utils/acts';
+import { buildEventDescription, buildMusicEvent, stringifyStructuredData } from '../../utils/structured-data';
 
 export async function getStaticPaths() {
   const schedules = loadAllSchedules();
@@ -128,8 +130,19 @@ googleCalendarUrl.searchParams.set('ctz', 'Asia/Tokyo');
 
 // OGP用（基本タグは Layout に集約。イベント固有のタグだけ slot で追加）
 const ogTitle = `${title} | なんちゃらアイドル`;
-const ogDescription = `${formatDate(eventDate)} @ ${site}`;
+const ogDescription = buildEventDescription(`${formatDate(eventDate)} @ ${site}`, acts);
 const ogImage = images && images.length > 0 ? images[0] : '/img/ogp-default.png';
+const musicEventJsonLd = stringifyStructuredData(buildMusicEvent({
+  title,
+  date,
+  end,
+  site,
+  slug: schedule.slug,
+  time_tbd,
+  acts,
+  images,
+  description: ogDescription,
+}, venue));
 
 // TBD（詳細未定）は内部用語をそのまま出さず「詳細は後日発表」に変換
 const trimmedContent = (content ?? '').trim();
@@ -170,8 +183,14 @@ const contentHtml = displayContent ? autoLinkUrls(displayContent) : '';
     <meta property="event:start_time" content={eventDate.toISOString()} />
     <meta property="event:end_time" content={eventEndDate.toISOString()} />
     <meta property="event:location" content={site} />
-  </Fragment>
+    <script is:inline type="application/ld+json" set:html={musicEventJsonLd}></script>
+</Fragment>
 
+  <Breadcrumbs items={[
+    { label: 'ホーム', href: '/' },
+    { label: 'ライブ・イベント', href: '/events/' },
+    { label: title },
+  ]} />
   <article class="event-detail">
     <div
       class={`event-header ${images && images.length > 0 ? 'has-image' : ''}`}

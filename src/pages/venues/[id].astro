@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { loadAllSchedules, formatDateJa } from '../../utils/schedules';
 import { loadVenues, resolveVenue, type Venue } from '../../utils/venues';
 
@@ -27,7 +28,15 @@ const mapsUrl = venue.address
   : null;
 ---
 
-<Layout title={`${venue.name} | なんちゃらアイドル`} description={`${venue.name} での出演履歴（通算${events.length}回）`}>
+<Layout
+  title={`${venue.name} | なんちゃらアイドル`}
+  description={`${venue.name}${venue.address ? `（${venue.address}）` : ''}でのなんちゃらアイドル出演履歴・通算${events.length}回`}
+>
+  <Breadcrumbs items={[
+    { label: 'ホーム', href: '/' },
+    { label: '会場', href: '/venues/' },
+    { label: venue.name },
+  ]} />
   <div class="venue-page">
     <h1 class="venue-title">{venue.name}</h1>
     <p class="venue-stats">通算 <strong>{events.length}</strong> 回出演</p>

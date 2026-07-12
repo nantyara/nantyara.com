@@ -1,8 +1,10 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import ShareButtons from '../../components/ShareButtons.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { readFileSync } from 'node:fs';
 import { parse } from 'yaml';
+import { buildMusicAlbum, stringifyStructuredData } from '../../utils/structured-data';
 
 export async function getStaticPaths() {
   const releasesYaml = readFileSync('src/data/releases.yml', 'utf-8');
@@ -58,6 +60,13 @@ const ogDescription = artist
   ? `${artist} - ${formatDate(releaseDate)}リリース`
   : `${formatDate(releaseDate)}リリース`;
 const ogImage = jacket_image ?? '/img/ogp-default.png';
+const musicAlbumJsonLd = stringifyStructuredData(buildMusicAlbum({
+  id,
+  title,
+  releaseDate: String(release_date),
+  image: jacket_image,
+  tracks,
+}));
 ---
 
 <Layout title={ogTitle} description={ogDescription} ogImage={ogImage} ogType="music.album">
@@ -65,8 +74,14 @@ const ogImage = jacket_image ?? '/img/ogp-default.png';
     <!-- Music specific -->
     {artist && <meta property="music:musician" content={artist} />}
     <meta property="music:release_date" content={release_date} />
+    <script is:inline type="application/ld+json" set:html={musicAlbumJsonLd}></script>
   </Fragment>
 
+  <Breadcrumbs items={[
+    { label: 'ホーム', href: '/' },
+    { label: '音源', href: '/releases/' },
+    { label: title },
+  ]} />
   <article class="release-detail">
     <div class="release-header">
       {jacket_image && (

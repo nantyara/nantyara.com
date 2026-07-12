@@ -1,0 +1,33 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { loadAllSchedules } from '../../utils/schedules';
+
+const schedules = loadAllSchedules();
+const years = [...new Set(schedules.map((event: any) => new Date(event.date).getFullYear()))]
+  .sort((a, b) => b - a);
+const counts = new Map(years.map((year) => [
+  year,
+  schedules.filter((event: any) => new Date(event.date).getFullYear() === year).length,
+]));
+---
+
+<Layout title="ライブ・イベントアーカイブ | なんちゃらアイドル" description="なんちゃらアイドルのライブ・イベント出演履歴を年別に掲載しています。">
+  <section class="archive-page">
+    <h1>ライブ・イベントアーカイブ</h1>
+    <p>これまでのライブ・イベント出演履歴を年別にご覧いただけます。</p>
+    <ul>
+      {years.map((year) => (
+        <li><a href={`/events/archive/${year}/`}>{year}年 <span>（{counts.get(year)}件）</span></a></li>
+      ))}
+    </ul>
+  </section>
+</Layout>
+
+<style>
+  .archive-page { max-width: 900px; margin: 0 auto; padding: 20px; }
+  h1 { color: var(--retro-pink); }
+  ul { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; padding: 0; list-style: none; }
+  a { display: block; padding: 16px; border: 2px solid var(--retro-purple); border-radius: 8px; color: var(--retro-cyan); text-decoration: none; }
+  a:hover { border-color: var(--retro-pink); }
+  span { color: var(--text-light); opacity: 0.75; }
+</style>

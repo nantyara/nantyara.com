@@ -2,6 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 import ScheduleCard from '../components/ScheduleCard.astro';
 import { loadAllSchedules } from '../utils/schedules';
+import { readFileSync } from 'node:fs';
+import { parse } from 'yaml';
+import { snsLinks } from '../data/nav';
+import { buildMusicGroup, buildWebSite, stringifyStructuredData } from '../utils/structured-data';
 
 // YAMLファイル読み込み（全ての schedules/*.yml を統合）
 const allSchedules = loadAllSchedules();
@@ -16,6 +20,12 @@ const expireTime = Date.now() - 12 * 60 * 60 * 1000;
 
 // NEXT LIVE（直近の今後イベント）
 const nextLive = schedules.find(s => new Date(s.date).getTime() >= expireTime) ?? null;
+const members = parse(readFileSync('src/data/members.yml', 'utf-8')) as Array<{ name: string }>;
+const musicGroupJsonLd = stringifyStructuredData(buildMusicGroup(
+  snsLinks.map((link) => link.href),
+  members.map((member) => member.name),
+));
+const webSiteJsonLd = stringifyStructuredData(buildWebSite());
 
 // パフォーマンス方針（2026-07-07）: 「今後の予定」は件数が少なく増え続けないので
 // 従来どおりサーバーで全件HTML描画する（初回表示が速く、JS無効でも見える・SEOにも強い）。
@@ -71,9 +81,16 @@ const nextLiveDateFmt = (d: Date, timeTbd: boolean) => {
 ---
 
 <Layout
-  title="ライブ予定 | なんちゃらアイドル"
-  description="なんちゃらアイドルのライブ・イベントスケジュール"
+  title="なんちゃらアイドル公式サイト | ライブ予定・スケジュール"
+  description="なんちゃらアイドル公式サイト。東京を中心に活動するアイドルグループのライブ予定・スケジュール、出演履歴、音源情報を掲載しています。"
 >
+  <Fragment slot="head">
+    <script is:inline type="application/ld+json" set:html={musicGroupJsonLd}></script>
+    <script is:inline type="application/ld+json" set:html={webSiteJsonLd}></script>
+  </Fragment>
+  <p class="site-introduction">
+    なんちゃらアイドルは、東京を中心にライブハウスや各地のイベントで活動するアイドルグループです。最新のライブ予定や出演履歴、音源情報をご案内します。
+  </p>
   {nextLive && (
     <a
       class="next-live"
@@ -188,6 +205,17 @@ const nextLiveDateFmt = (d: Date, timeTbd: boolean) => {
     <p>検索条件を変更してください。</p>
   </div>
 </Layout>
+
+<style>
+  .site-introduction {
+    max-width: 760px;
+    margin: 0 auto 24px;
+    padding: 0 20px;
+    line-height: 1.8;
+    text-align: center;
+    color: var(--text-light);
+  }
+</style>
 
 <script is:inline>
   document.addEventListener('DOMContentLoaded', () => {

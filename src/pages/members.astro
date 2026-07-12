@@ -13,7 +13,7 @@ const sortedMembers = members.sort((a: any, b: any) =>
 );
 ---
 
-<Layout title="メンバー | なんちゃらアイドル">
+<Layout title="メンバー | なんちゃらアイドル" description="なんちゃらアイドルの現メンバーとプロフィールをご紹介します。">
   {sortedMembers.map((member: any) => (
     <MemberCard {...member} />
   ))}

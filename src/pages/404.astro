@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="ページが見つかりません | なんちゃらアイドル" description="お探しのページは見つかりませんでした。">
+  <section class="not-found">
+    <h1>404</h1>
+    <p>お探しのページは見つかりませんでした。</p>
+    <nav aria-label="主要ページ">
+      <a href="/">ライブ予定へ</a>
+      <a href="/events/">イベントアーカイブへ</a>
+      <a href="/releases">音源情報へ</a>
+    </nav>
+  </section>
+</Layout>
+
+<style>
+  .not-found { max-width: 700px; margin: 0 auto; padding: 40px 20px; text-align: center; }
+  h1 { margin: 0; color: var(--retro-pink); font-size: 5rem; }
+  nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 24px; }
+  a { padding: 10px 16px; color: var(--retro-cyan); border: 2px solid var(--retro-cyan); border-radius: 999px; text-decoration: none; }
+</style>

@@ -1,0 +1,53 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import { formatDateJa, loadAllSchedules } from '../../../utils/schedules';
+
+export function getStaticPaths() {
+  const schedules = loadAllSchedules();
+  const years = [...new Set(schedules.map((event: any) => String(new Date(event.date).getFullYear())))];
+  return years.map((year) => ({
+    params: { year },
+    props: {
+      events: schedules.filter((event: any) => String(new Date(event.date).getFullYear()) === year),
+    },
+  }));
+}
+
+const { year } = Astro.params;
+const { events } = Astro.props as { events: any[] };
+---
+
+<Layout title={`${year}年のライブ・イベント | なんちゃらアイドル`} description={`${year}年のなんちゃらアイドルのライブ・イベント出演履歴（${events.length}件）`}>
+  <Breadcrumbs items={[
+    { label: 'ホーム', href: '/' },
+    { label: 'ライブ・イベントアーカイブ', href: '/events/' },
+    { label: `${year}年` },
+  ]} />
+  <section class="year-page">
+    <h1>{year}年のライブ・イベント</h1>
+    <ul>
+      {events.map((event) => (
+        <li>
+          <a href={`/events/${event.slug}/`}>
+            <time datetime={event.date}>{formatDateJa(event.date)}</time>
+            <span class="title">{event.title}</span>
+            <span class="venue">@ {event.site}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</Layout>
+
+<style>
+  .year-page { max-width: 900px; margin: 0 auto; padding: 20px; }
+  h1 { color: var(--retro-pink); }
+  ul { margin: 0; padding: 0; list-style: none; }
+  li { border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
+  a { display: grid; grid-template-columns: 11rem 1fr; gap: 4px 16px; padding: 12px 4px; color: var(--text-light); text-decoration: none; }
+  a:hover .title { color: var(--retro-cyan); text-decoration: underline; }
+  time { color: var(--pastel-lavender); }
+  .venue { grid-column: 2; opacity: 0.75; font-size: 0.9rem; }
+  @media (max-width: 600px) { a { grid-template-columns: 1fr; } .venue { grid-column: 1; } }
+</style>

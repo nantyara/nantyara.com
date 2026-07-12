@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { formatDateJa } from '../../utils/schedules';
 import { collectActs, type ActEntry } from '../../utils/acts';
 
@@ -17,6 +18,11 @@ const firstEvent = act.events[act.events.length - 1];
 ---
 
 <Layout title={`${act.name} | 対バン | なんちゃらアイドル`} description={`${act.name} との共演履歴（通算${act.events.length}回）`}>
+  <Breadcrumbs items={[
+    { label: 'ホーム', href: '/' },
+    { label: '対バン', href: '/acts/' },
+    { label: act.name },
+  ]} />
   <div class="act-page">
     <h1 class="act-title">{act.name}</h1>
     <p class="act-stats">

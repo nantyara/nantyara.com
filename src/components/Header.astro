@@ -7,14 +7,15 @@ interface Props {
 }
 
 const { currentPath = '/' } = Astro.props;
+const TitleTag = currentPath === '/' ? 'h1' : 'p';
 ---
 
 <header class="header">
-  <h1 class="title-wrapper">
+  <TitleTag class="title-wrapper">
     <a href="/" class="title-link glitch neon-glow" data-text="なんちゃらアイドル">
       なんちゃらアイドル
     </a>
-  </h1>
+  </TitleTag>
   <nav class="desktop-nav" aria-label="メインナビゲーション">
     {navItems.map(item => (
       <a
