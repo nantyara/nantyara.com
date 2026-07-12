@@ -1,11 +1,21 @@
 - id: event-20260401-timetree-46736594
   slug: 20260401-timetree-46736594
-  date: 2026-04-01 19:00:00 +0900
-  title: 大久保ひかりのうま
+  date: 2026-04-01 19:30:00 +0900
+  title: ひかりのうまDADAフェス
   site: 大久保ひかりのうま
   timetree_id: "2924397651346736594"
+  acts:
+    - やまだだ
+    - 超処女カワアイドル あいちゃん
+    - 聖なる回文グルーヴ
   content: |
-    TBD
+    大久保ひかりのうまでの「ひかりのうまDADAフェス」。OPEN19:00／START19:30。
+    2000円+D。やまだだ手作りサンドイッチの投げ銭食べ放題あり。
+
+    ※主催DADAフェス公式アカウントの告知ツイートから復元。個別の出番時刻は不明のため
+    START時刻を採用
+  sources:
+    - https://x.com/DADAFES/status/2032694955425296675
 - id: event-20260402-timetree-58638586
   slug: 20260402-timetree-58638586
   date: 2026-04-02 19:00:00 +0900
@@ -286,8 +296,8 @@
 - id: event-20260428-timetree-77529387
   slug: 20260428-timetree-77529387
   date: 2026-04-28 09:00:00 +0900
-  title: 新宿dranken shrimp
-  site: 新宿dranken shrimp
+  title: 新宿drunken shrimp
+  site: 新宿drunken shrimp
   timetree_id: "2924400278977529387"
   labels:
     - あおはるソロ

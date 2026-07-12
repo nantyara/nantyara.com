@@ -307,12 +307,18 @@
     - "どん子ちゃん"
 - id: event-20260222-timetree-54888469
   slug: 20260222-timetree-54888469
-  date: 2026-02-22 18:00:00 +0900
-  title: インストアイベント
-  site: インストアイベント
+  date: 2026-02-22 18:30:00 +0900
+  title: HMV record shop 渋谷 インストアイベント
+  site: HMV record shop 渋谷
   timetree_id: "2901718895754888469"
   content: |
-    TBD
+    HMV record shop 渋谷での観覧フリーインストアイベント。18:30スタート、特典会は全組ライブ終了後。
+    同日昼の新検見川Swingyでのライブ（event-20260222-swingy）から移動しての出演。
+
+    ※Xの告知・お礼ツイートから復元
+  sources:
+    - https://x.com/samami27/status/2025185965149761821
+    - https://x.com/samami27/status/2025554056207647180
 - id: event-20260223-timetree-33624847
   slug: 20260223-timetree-33624847
   date: 2026-02-23 17:30:00 +0900
