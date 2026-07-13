@@ -1,0 +1,41 @@
+{
+  "window": "2014-04-01..2014-05-01",
+  "query": "(from:samami27 OR from:nantyaraidol)",
+  "harvested_at": "2026-07-13",
+  "announces": [
+    {
+      "url": "/nantyaraidol/status/451610026872819713",
+      "time": "2014-04-03T06:39:55.000Z",
+      "handle": "@nantyaraidol",
+      "text": "あおはる(\n@aoharuchan\n )です、どうぞよろしくおねがいします！",
+      "imgs": [
+        "https://pbs.twimg.com/media/BkRw7MPCMAEjzlr"
+      ]
+    },
+    {
+      "url": "/nantyaraidol/status/451664206765375489",
+      "time": "2014-04-03T10:15:13.000Z",
+      "handle": "@nantyaraidol",
+      "text": "なんちゃらアイドル:はるか\n@harunyan1005\n \n#なんちゃらアイドル #なんちゃらキカク\n#水戸の令嬢",
+      "imgs": [
+        "https://pbs.twimg.com/media/BkSiM8KCEAAGzM8"
+      ]
+    },
+    {
+      "url": "/nantyaraidol/status/455683897716506624",
+      "time": "2014-04-14T12:28:02.000Z",
+      "handle": "@nantyaraidol",
+      "text": "本日はなんちゃらアイドル初練習日でした！全員参加ではありませんでしたがツイキャスも御観覧くださりありがとうございました。ライブは4/28、なんちゃらキカクにて！\n#なんちゃらアイドル\n#なんちゃらキカク",
+      "imgs": [
+        "https://pbs.twimg.com/media/BlLqFynCYAA8v44"
+      ]
+    },
+    {
+      "url": "/samami27/status/456415584284975107",
+      "time": "2014-04-16T12:55:29.000Z",
+      "handle": "@samami27",
+      "text": "なんかトイレくせぇって思ったら、隣のおじさんがイカ食べてる。くせぇ",
+      "imgs": []
+    }
+  ]
+}
