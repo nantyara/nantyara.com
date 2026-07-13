@@ -1,0 +1,23 @@
+{
+  "window": "2014-05-01..2014-06-01",
+  "query": "(from:samami27 OR from:nantyaraidol)",
+  "harvested_at": "2026-07-13",
+  "announces": [
+    {
+      "url": "/nantyaraidol/status/468357884099575808",
+      "time": "2014-05-19T11:49:55.000Z",
+      "handle": "@nantyaraidol",
+      "text": "なんちゃらアイドル新メンバー マミ\n@samami27\n\n(デザフェスで知り合い、その日に加入！某有名モデルにそっくり！ギター経験有)",
+      "imgs": [
+        "https://pbs.twimg.com/media/Bn_xAiLIIAAv1PQ"
+      ]
+    },
+    {
+      "url": "/samami27/status/472241106483027968",
+      "time": "2014-05-30T05:00:28.000Z",
+      "handle": "@samami27",
+      "text": "例えば羅生門とか人間椅子とか、有名な短編をモチーフに歌を作ったとして、別にゴリゴリでもピカピカでもシャラシャラでもなんでもいいんだけど、とりあえずライブのコールアンドレスポンスの時、天上天下唯我独尊ってテンション的にちょうどいいってこと！",
+      "imgs": []
+    }
+  ]
+}
