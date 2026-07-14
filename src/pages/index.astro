@@ -18,7 +18,9 @@ const schedules = [...allSchedules].sort(
 // 12時間ルール: 現在時刻 - 12時間を基準に「今後」を判定（クライアント側でも再計算する）
 const expireTime = Date.now() - 12 * 60 * 60 * 1000;
 
-// NEXT LIVE（直近の今後イベント）
+// NEXT LIVE（直近の今後イベント）。ビルド時に1件だけ決め打ちで描画する（no-JS・SEO向けの
+// フォールバック）。日付を跨いで再ビルドなしに「次のイベント」が古くなる問題（issue #44）は、
+// 後述の nextLiveCandidates をクライアント側で再評価することで解消する。
 const nextLive = schedules.find(s => new Date(s.date).getTime() >= expireTime) ?? null;
 const members = parse(readFileSync('src/data/members.yml', 'utf-8')) as Array<{ name: string }>;
 const musicGroupJsonLd = stringifyStructuredData(buildMusicGroup(
@@ -34,6 +36,17 @@ const webSiteJsonLd = stringifyStructuredData(buildWebSite());
 // これによりネットワーク転送量・DOM要素数のどちらも「今後の予定」の件数だけに比例するようになり、
 // 過去イベントが何千件に増えてもトップページの初回表示コストは増えない。
 const upcomingSchedules = schedules.filter(s => new Date(s.date).getTime() >= expireTime);
+
+// クライアント側でNEXT LIVEを再判定するための軽量候補データ（直近5件で十分。
+// 「今後の予定」は件数が少ないという既存の設計判断を踏襲し、全件ではなく先頭数件のみ埋め込む）
+const nextLiveCandidates = upcomingSchedules.slice(0, 5).map(s => ({
+  sl: s.slug,
+  t: new Date(s.date).getTime(),
+  ti: s.title,
+  s: s.site,
+  im: s.images && s.images.length > 0 ? s.images[0] : null,
+  tbd: !!s.time_tbd,
+}));
 
 // 月ごとにグルーピング（JST基準・「今後の予定」のみ。過去分はクライアント側で同様にグルーピングする）
 const monthPartsFmt = new Intl.DateTimeFormat('ja-JP', {
@@ -114,13 +127,14 @@ const nextLiveDateFmt = (d: Date, timeTbd: boolean) => {
           <h2 class="next-live-title">{nextLive.title}</h2>
           <div class="next-live-site">
             <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-            {nextLive.site}
+            <span class="next-live-site-text">{nextLive.site}</span>
           </div>
           <div class="next-live-countdown" id="next-live-countdown"></div>
         </div>
       </div>
     </a>
   )}
+  <script type="application/json" id="next-live-data" set:html={stringifyStructuredData(nextLiveCandidates)}></script>
 
   <div class="schedule-controls">
     <div class="filter-buttons">
@@ -672,8 +686,64 @@ const nextLiveDateFmt = (d: Date, timeTbd: boolean) => {
       });
     }
 
-    // NEXT LIVE カウントダウン
+    // NEXT LIVE: サーバー描画は決め打ちのため、日付を跨いで再ビルドされないまま表示中の
+    // イベントが終了すると、次の予定に自動で切り替わらない問題があった（issue #44）。
+    // 候補データ（直近5件、next-live-data）をクライアントで再評価し、サーバー描画と
+    // 異なるイベントが選ばれた場合のみDOMを書き換えて解消する。
     const hero = document.querySelector('.next-live');
+    const nextLiveDataEl = document.getElementById('next-live-data');
+    if (hero && nextLiveDataEl) {
+      let candidates = [];
+      try {
+        candidates = JSON.parse(nextLiveDataEl.textContent || '[]');
+      } catch (e) {
+        candidates = [];
+      }
+      const pickExpire = Date.now() - 12 * 60 * 60 * 1000;
+      const picked = candidates.find((ev) => ev.t >= pickExpire) || null;
+
+      if (!picked) {
+        hero.style.display = 'none';
+      } else if (String(picked.t) !== hero.dataset.date) {
+        hero.href = `/events/${picked.sl}`;
+        hero.dataset.date = String(picked.t);
+
+        const dateEl = hero.querySelector('.next-live-date');
+        if (dateEl) {
+          const parts = new Intl.DateTimeFormat('ja-JP', {
+            timeZone: 'Asia/Tokyo',
+            year: 'numeric', month: 'numeric', day: 'numeric', weekday: 'short',
+            hour: '2-digit', minute: '2-digit', hour12: false,
+          }).formatToParts(new Date(picked.t));
+          const pickPart = (t) => parts.find((p) => p.type === t)?.value || '';
+          const base = `${pickPart('year')}年${pickPart('month')}月${pickPart('day')}日(${pickPart('weekday')})`;
+          dateEl.textContent = picked.tbd ? `${base} 時間未定` : `${base} ${pickPart('hour')}:${pickPart('minute')}`;
+        }
+
+        const titleEl = hero.querySelector('.next-live-title');
+        if (titleEl) titleEl.textContent = picked.ti;
+
+        const siteTextEl = hero.querySelector('.next-live-site-text');
+        if (siteTextEl) siteTextEl.textContent = picked.s;
+
+        let flyerEl = hero.querySelector('.next-live-flyer');
+        if (picked.im) {
+          if (!flyerEl) {
+            flyerEl = document.createElement('img');
+            flyerEl.className = 'next-live-flyer';
+            flyerEl.loading = 'eager';
+            const inner = hero.querySelector('.next-live-inner');
+            if (inner) inner.insertBefore(flyerEl, inner.firstChild);
+          }
+          flyerEl.src = picked.im;
+          flyerEl.alt = `${picked.ti} のフライヤー`;
+        } else if (flyerEl) {
+          flyerEl.remove();
+        }
+      }
+    }
+
+    // NEXT LIVE カウントダウン
     const countdown = document.getElementById('next-live-countdown');
     if (hero && countdown) {
       const eventTime = parseInt(hero.dataset.date || '0');
