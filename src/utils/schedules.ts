@@ -1,7 +1,15 @@
 import { readFileSync, readdirSync } from 'node:fs';
 import { parse } from 'yaml';
 
+// ビルド時、動的ルート（events/[slug].astro 等）はイベント数分（1000件超）ページを生成するため、
+// メモ化なしだと毎ページ生成のたびに全YAMLファイルを再読み込み・再パースしてしまい、
+// ビルド時間の急増を招く（issue #45）。ビルド1プロセス中はファイル内容が変わらない前提で、
+// モジュールレベルにキャッシュする（venues.ts の venueIndex() と同じパターン）。
+let cachedSchedules: any[] | null = null;
+
 export function loadAllSchedules() {
+  if (cachedSchedules) return cachedSchedules;
+
   const schedulesDir = 'src/data/schedules';
   const files = readdirSync(schedulesDir).filter(f => f.endsWith('.yml') || f.endsWith('.yaml'));
 
@@ -11,9 +19,10 @@ export function loadAllSchedules() {
   });
 
   // 日付でソート（新しい順）
-  return allSchedules.sort((a: any, b: any) =>
+  cachedSchedules = allSchedules.sort((a: any, b: any) =>
     new Date(b.date).getTime() - new Date(a.date).getTime()
   );
+  return cachedSchedules;
 }
 
 // 「2026年9月20日(日)」形式の日付表示（日本時間）
