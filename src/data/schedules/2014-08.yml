@@ -1,0 +1,17 @@
+# 2014年8月（/mine-x による X 告知アーカイブからの発掘。ソース: mining/x-archive/2014-08.json）
+- id: event-20140821-mito
+  slug: 20140821-mito
+  date: 2014-08-21 12:00:00 +0900
+  time_tbd: true
+  title: こどるパラダイスvol.2
+  site: 水戸
+  content: |
+    水戸での「こどるパラダイスvol.2」。はるかの故郷である水戸への遠征。
+    フロア・物販ともに盛況だった。「はこドル」関係者への言及あり。
+
+    ※Xの告知アーカイブから復元。具体的な会場名・開演時刻は本文からは
+    確認できず、地名（水戸）のみ確定
+  sources:
+    - https://x.com/nantyaraidol/status/503023951891533824
+    - https://x.com/samami27/status/502240988757106688
+    - https://x.com/samami27/status/502696403005493248
