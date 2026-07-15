@@ -174,3 +174,8 @@ fi
   assert.notEqual(reject.status, 0);
   assert.equal(existsSync(rejectTarget), false);
 });
+
+test('breadcrumbs reserve a full row inside the flex main layout', () => {
+  const source = readFileSync(join(repoRoot, 'src/components/Breadcrumbs.astro'), 'utf8');
+  assert.match(source, /\.breadcrumbs\s*\{[^}]*flex:\s*0\s+0\s+100%/s);
+});
