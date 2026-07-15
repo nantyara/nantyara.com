@@ -9,6 +9,10 @@ PROJECT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 SCHEDULES_DIR="$PROJECT_DIR/src/data/schedules"
 IMAGES_DIR="$PROJECT_DIR/public/events"
 
+# sync-timetree と同じページネーション・画像検証を利用する
+# shellcheck source=tools/sync-timetree
+source "$SCRIPT_DIR/sync-timetree"
+
 # TimeTree API設定
 API_BASE_URL="https://timetreeapp.com/api/v2"
 CALENDAR_ID="yokuwakan_nai"
@@ -32,13 +36,11 @@ to_date=$(date -v+12m "+%Y-%m-%d 00:00:00")
 to_timestamp=$(date -j -f "%Y-%m-%d %H:%M:%S" "$to_date" "+%s" 2>/dev/null | awk '{print $1 * 1000}')
 
 api_url="${API_BASE_URL}/public_calendars/${CALENDAR_ID}/public_events?from=${from_timestamp}&to=${to_timestamp}&utc_offset=${UTC_OFFSET}"
-response=$(curl -s -H "X-Timetreea: web/2.1.0/en" -H "Accept: application/json" "$api_url")
-
 # 一時ディレクトリ作成
 tmp_dir=$(mktemp -d)
-trap "rm -rf $tmp_dir" EXIT
+trap 'rm -rf "$tmp_dir"' EXIT
 
-echo "$response" | jq '.public_events' > "${tmp_dir}/events.json"
+fetch_all_events "$api_url" "${tmp_dir}/events.json"
 
 total_downloaded=0
 total_skipped=0
@@ -67,7 +69,7 @@ for ((i=0; i<events_length; i++)); do
         fi
 
         # timetree_idが一致するイベントを検索
-        event_data=$(yq eval ".[] | select(.timetree_id == \"$timetree_id\")" "$yaml_file" 2>/dev/null)
+        event_data=$(TID="$timetree_id" yq eval '.[] | select(.timetree_id == strenv(TID))' "$yaml_file" 2>/dev/null)
 
         if [[ -n "$event_data" ]]; then
             found_event="$event_data"
@@ -96,29 +98,29 @@ for ((i=0; i<events_length; i++)); do
     image_filename="${slug}.jpg"
     image_path="${IMAGES_DIR}/${image_filename}"
 
-    # 既に画像ファイルが存在する場合もスキップ
-    if [[ -f "$image_path" ]]; then
-        echo -e "${COLOR_DIM}  ⊘ Image file exists: $image_filename${COLOR_RESET}"
-        total_skipped=$((total_skipped + 1))
-        continue
-    fi
-
-    # 画像をダウンロード
     mkdir -p "$IMAGES_DIR"
-    if curl -s -o "$image_path" "$image_url"; then
-        echo -e "${COLOR_GREEN}  + Downloaded: $title${COLOR_RESET}"
-        echo -e "${COLOR_CYAN}    → ${image_filename}${COLOR_RESET}"
+    image_existed=false
+    [[ -f "$image_path" ]] && image_existed=true
+    if ensure_image "$image_url" "$image_path"; then
+        if [[ "$image_existed" == true ]]; then
+            echo -e "${COLOR_DIM}  ⊘ Valid image already exists: $image_filename${COLOR_RESET}"
+            total_skipped=$((total_skipped + 1))
+        else
+            echo -e "${COLOR_GREEN}  + Downloaded: $title${COLOR_RESET}"
+            echo -e "${COLOR_CYAN}    → ${image_filename}${COLOR_RESET}"
+            total_downloaded=$((total_downloaded + 1))
+        fi
 
         # YAMLファイルにimagesフィールドを追加
         # イベントのIDを取得
         event_id=$(echo "$found_event" | yq eval '.id' -)
 
         # yqを使ってimagesフィールドを追加
-        yq eval "(.[] | select(.id == \"$event_id\") | .images) = [\"/events/${image_filename}\"]" -i "$found_yaml"
+        EVENT_ID="$event_id" IMG="/events/${image_filename}" \
+            yq eval '(.[] | select(.id == strenv(EVENT_ID)) | .images) = [strenv(IMG)]' -i "$found_yaml"
 
-        total_downloaded=$((total_downloaded + 1))
     else
-        echo -e "${COLOR_YELLOW}  ⚠ Failed to download: $title${COLOR_RESET}"
+        echo -e "${COLOR_YELLOW}  ⚠ Rejected image: $title (HTTP error, invalid format, or over 2 MiB)${COLOR_RESET}"
         total_errors=$((total_errors + 1))
     fi
 done

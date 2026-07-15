@@ -13,6 +13,7 @@ SCHEDULES_DIR="$PROJECT_DIR/src/data/schedules"
 API_BASE_URL="https://timetreeapp.com/api/v2"
 CALENDAR_ID="yokuwakan_nai"
 UTC_OFFSET=32400  # +9時間（日本時間）
+MAX_IMAGE_BYTES=$((2 * 1024 * 1024))
 
 # カラー定義
 COLOR_RESET="\033[0m"
@@ -75,6 +76,82 @@ normalize_site() {
     echo "$1" | awk '{gsub(/ /, ""); gsub(/　/, ""); print tolower($0)}'
 }
 
+# paging.next が続く限り全ページを取得し、public_events の配列として保存する
+fetch_all_events() {
+    local api_url="$1"
+    local output_file="$2"
+    local pages_file="${output_file}.pages"
+    local page_url="$api_url"
+    local page_count=0
+    local response next cursor encoded_cursor
+
+    : > "$pages_file"
+    while true; do
+        page_count=$((page_count + 1))
+        if [[ "$page_count" -gt 100 ]]; then
+            echo "Error: TimeTree pagination exceeded 100 pages" >&2
+            rm -f "$pages_file"
+            return 1
+        fi
+
+        if ! response=$(curl -fsSL -H "X-Timetreea: web/2.1.0/en" -H "Accept: application/json" "$page_url"); then
+            echo "Error: Failed to fetch events from TimeTree API" >&2
+            rm -f "$pages_file"
+            return 1
+        fi
+        if ! echo "$response" | jq -e '.public_events | arrays' >/dev/null 2>&1; then
+            echo "Error: Invalid response from TimeTree API" >&2
+            rm -f "$pages_file"
+            return 1
+        fi
+
+        echo "$response" | jq -c '.public_events' >> "$pages_file"
+        next=$(echo "$response" | jq -r '.paging.next // false')
+        [[ "$next" == "true" ]] || break
+
+        cursor=$(echo "$response" | jq -r '.paging.next_cursor // empty')
+        if [[ -z "$cursor" ]]; then
+            echo "Error: TimeTree response requested another page without a cursor" >&2
+            rm -f "$pages_file"
+            return 1
+        fi
+        encoded_cursor=$(jq -rn --arg value "$cursor" '$value | @uri')
+        page_url="${api_url}&cursor=${encoded_cursor}"
+    done
+
+    jq -s 'add // []' "$pages_file" > "$output_file"
+    rm -f "$pages_file"
+}
+
+validate_image_file() {
+    local image_path="$1"
+    local size mime
+    size=$(wc -c < "$image_path" | tr -d ' ')
+    if [[ "$size" -gt "$MAX_IMAGE_BYTES" ]]; then
+        return 1
+    fi
+    mime=$(file -b --mime-type "$image_path" 2>/dev/null || true)
+    [[ "$mime" == "image/jpeg" ]]
+}
+
+# HTTPエラー・画像以外・PWA上限超過を保存前に拒否する
+ensure_image() {
+    local image_url="$1"
+    local image_path="$2"
+    local tmp_image
+
+    if [[ -f "$image_path" ]] && validate_image_file "$image_path"; then
+        return 0
+    fi
+
+    tmp_image=$(mktemp "${image_path}.tmp.XXXXXX")
+    if ! curl -fsSL -o "$tmp_image" "$image_url" || ! validate_image_file "$tmp_image"; then
+        rm -f "$tmp_image"
+        return 1
+    fi
+    mv "$tmp_image" "$image_path"
+}
+
 # イベントが既存のYAMLに存在するかチェック
 event_exists() {
     local yaml_file="$1"
@@ -85,7 +162,8 @@ event_exists() {
     fi
 
     # TimeTreeのイベントIDで既存のイベントをチェック
-    local count=$(yq eval ".[] | select(.timetree_id != null) | select(.timetree_id == \"$timetree_id\") | .id" "$yaml_file" 2>/dev/null | wc -l | tr -d ' ')
+    local count
+    count=$(TID="$timetree_id" yq eval '.[] | select(.timetree_id != null) | select(.timetree_id == strenv(TID)) | .id' "$yaml_file" 2>/dev/null | wc -l | tr -d ' ')
 
     [[ "$count" -gt 0 ]]
 }
@@ -123,6 +201,15 @@ main() {
         esac
     done
 
+    if [[ ! "$months" =~ ^[1-9][0-9]*$ ]]; then
+        echo "Error: --months must be a positive integer" >&2
+        exit 1
+    fi
+    if [[ -n "$from_date" && ! "$from_date" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+        echo "Error: --from must use YYYY-MM-DD format" >&2
+        exit 1
+    fi
+
     # 期間を計算（--from 指定時はその日から、無指定なら今日から months ヶ月分）
     local now
     if [[ -n "$from_date" ]]; then
@@ -135,9 +222,9 @@ main() {
         local to_date=$(date -d "${from_date:-today} +${months} months" "+%Y-%m-%d 00:00:00")
     else
         if [[ -n "$from_date" ]]; then
-            local to_date=$(date -j -f "%Y-%m-%d" -v+${months}m "$from_date" "+%Y-%m-%d 00:00:00")
+            local to_date=$(date -j -f "%Y-%m-%d" -v+"${months}"m "$from_date" "+%Y-%m-%d 00:00:00")
         else
-            local to_date=$(date -v+${months}m "+%Y-%m-%d 00:00:00")
+            local to_date=$(date -v+"${months}"m "+%Y-%m-%d 00:00:00")
         fi
     fi
     local to_timestamp=$(get_timestamp_ms "$to_date")
@@ -148,17 +235,19 @@ main() {
     echo -e "${COLOR_DIM}API: ${API_BASE_URL}/public_calendars/${CALENDAR_ID}/public_events${COLOR_RESET}"
     echo ""
 
-    # TimeTree APIからイベントを取得
-    local api_url="${API_BASE_URL}/public_calendars/${CALENDAR_ID}/public_events?from=${from_timestamp}&to=${to_timestamp}&utc_offset=${UTC_OFFSET}"
-    local response=$(curl -s -H "X-Timetreea: web/2.1.0/en" -H "Accept: application/json" "$api_url")
+    # 一時ディレクトリ作成
+    SYNC_TMP_DIR=$(mktemp -d)
+    local tmp_dir="$SYNC_TMP_DIR"
+    trap 'rm -rf -- "$SYNC_TMP_DIR"' EXIT
+    local events_file="${tmp_dir}/events.json"
 
-    if [[ -z "$response" ]]; then
-        echo "Error: Failed to fetch events from TimeTree API" >&2
-        exit 1
-    fi
+    # TimeTree APIから全ページを取得
+    local api_url="${API_BASE_URL}/public_calendars/${CALENDAR_ID}/public_events?from=${from_timestamp}&to=${to_timestamp}&utc_offset=${UTC_OFFSET}"
+    fetch_all_events "$api_url" "$events_file"
 
     # イベント数を取得
-    local event_count=$(echo "$response" | jq '.public_events | length')
+    local event_count
+    event_count=$(jq 'length' "$events_file")
 
     if [[ "$event_count" -eq 0 ]]; then
         echo "No events found."
@@ -167,14 +256,6 @@ main() {
 
     echo -e "${COLOR_GREEN}Found $event_count events from TimeTree${COLOR_RESET}"
     echo ""
-
-    # 一時ディレクトリ作成
-    local tmp_dir=$(mktemp -d)
-    trap "rm -rf $tmp_dir" EXIT
-
-    # イベントをJSON配列として一時ファイルに保存
-    local events_file="${tmp_dir}/events.json"
-    echo "$response" | jq '.public_events' > "$events_file"
 
     local total_added=0
     local total_updated=0
@@ -213,8 +294,9 @@ main() {
 
         # 重複チェック（TimeTreeのイベントIDで判定）
         if event_exists "$yaml_file" "$id"; then
-            local existing_content=$(yq eval ".[] | select(.timetree_id == \"$id\") | .content" "$yaml_file" 2>/dev/null)
-            local event_slug=$(yq eval ".[] | select(.timetree_id == \"$id\") | .slug" "$yaml_file" 2>/dev/null)
+            local existing_content event_slug
+            existing_content=$(TID="$id" yq eval '.[] | select(.timetree_id == strenv(TID)) | .content' "$yaml_file" 2>/dev/null)
+            event_slug=$(TID="$id" yq eval '.[] | select(.timetree_id == strenv(TID)) | .slug' "$yaml_file" 2>/dev/null)
             local updated=false
 
             # content が TBD のまま（＝インポート後に手を入れていない）イベントだけ、
@@ -223,8 +305,9 @@ main() {
                 # タイトルが TimeTree 側で変わっていたら反映
                 # ただし title と site が同値（＝インポート時のプレースホルダのまま）の
                 # 場合だけ。片方でも手動編集されていたら触らない。
-                local existing_title=$(yq eval ".[] | select(.timetree_id == \"$id\") | .title" "$yaml_file" 2>/dev/null)
-                local existing_site=$(yq eval ".[] | select(.timetree_id == \"$id\") | .site" "$yaml_file" 2>/dev/null)
+                local existing_title existing_site
+                existing_title=$(TID="$id" yq eval '.[] | select(.timetree_id == strenv(TID)) | .title' "$yaml_file" 2>/dev/null)
+                existing_site=$(TID="$id" yq eval '.[] | select(.timetree_id == strenv(TID)) | .site' "$yaml_file" 2>/dev/null)
                 if [[ -n "$title" && "$title" != "$existing_title" && "$existing_title" == "$existing_site" ]]; then
                     echo -e "${COLOR_YELLOW}  ↻ Updating title: $existing_title → $title on $date_only${COLOR_RESET}"
                     if [[ "$dry_run" == false ]]; then
@@ -254,27 +337,30 @@ main() {
                 fi
 
                 # 画像が未設定なら TimeTree の画像を取り込む
-                local has_images=$(yq eval ".[] | select(.timetree_id == \"$id\") | has(\"images\")" "$yaml_file" 2>/dev/null)
+                local has_images
+                has_images=$(TID="$id" yq eval '.[] | select(.timetree_id == strenv(TID)) | has("images")' "$yaml_file" 2>/dev/null)
                 if [[ -n "$image_url" && "$has_images" != "true" ]]; then
                     local image_filename="${event_slug}.jpg"
                     local image_path="${PROJECT_DIR}/public/events/${image_filename}"
                     echo -e "${COLOR_YELLOW}  ↻ Adding image: $title on $date_only${COLOR_RESET}"
                     if [[ "$dry_run" == false ]]; then
                         mkdir -p "${PROJECT_DIR}/public/events"
-                        if [[ -f "$image_path" ]] || curl -sf -o "$image_path" "$image_url"; then
+                        if ensure_image "$image_url" "$image_path"; then
                             SLUG="$event_slug" IMG="/events/${image_filename}" \
                                 yq eval '(.[] | select(.slug == strenv(SLUG)) | .images) = [strenv(IMG)]' -i "$yaml_file"
                             echo -e "${COLOR_CYAN}    → Downloaded image: ${image_filename}${COLOR_RESET}"
+                            updated=true
                         else
-                            rm -f "$image_path"
-                            echo -e "${COLOR_YELLOW}    ⚠ Failed to download image${COLOR_RESET}"
+                            echo -e "${COLOR_YELLOW}    ⚠ Rejected image (HTTP error, invalid format, or over 2 MiB)${COLOR_RESET}"
                         fi
+                    else
+                        updated=true
                     fi
-                    updated=true
                 fi
 
                 # ラベルが未設定なら TimeTree のラベルを反映
-                local has_labels=$(yq eval ".[] | select(.timetree_id == \"$id\") | has(\"labels\")" "$yaml_file" 2>/dev/null)
+                local has_labels
+                has_labels=$(TID="$id" yq eval '.[] | select(.timetree_id == strenv(TID)) | has("labels")' "$yaml_file" 2>/dev/null)
                 if [[ -n "$label_name" && "$has_labels" != "true" ]]; then
                     echo -e "${COLOR_YELLOW}  ↻ Adding label: $title on $date_only [${label_name}]${COLOR_RESET}"
                     if [[ "$dry_run" == false ]]; then
@@ -332,7 +418,7 @@ main() {
         fi
 
         if [[ -n "$link_url" ]]; then
-            content="${content}\n\n詳細: ${link_url}"
+            content="${content}"$'\n\n'"詳細: ${link_url}"
         fi
 
         # ラベルの表示
@@ -347,58 +433,34 @@ main() {
             # YAMLファイルに追加
             mkdir -p "$SCHEDULES_DIR"
 
-            # 新しいイベントを一時ファイルに書き込み
+            # 新しいイベントを一時ファイルに書き込み。外部文字列は必ずstrenv()経由で
+            # YAMLへ渡し、コロン・#・引用符・改行を含む値でも構文を壊さないようにする。
             local new_event_file="${tmp_dir}/event-${slug}.yml"
-            cat > "$new_event_file" <<EOF
-- id: event-${slug}
-  slug: ${slug}
-  date: ${date_formatted}
-  title: ${title}
-  site: ${title}
-  timetree_id: "${id}"
-EOF
+            EVENT_ID="event-${slug}" SLUG="$slug" DATE="$date_formatted" TITLE="$title" TID="$id" CONTENT="$content" \
+                yq eval -n '[{"id": strenv(EVENT_ID), "slug": strenv(SLUG), "date": strenv(DATE), "title": strenv(TITLE), "site": strenv(TITLE), "timetree_id": strenv(TID), "content": strenv(CONTENT)}]' > "$new_event_file"
 
             # ラベルがあれば追加（配列形式）
             if [[ -n "$label_name" ]]; then
-                cat >> "$new_event_file" <<EOF
-  labels:
-    - ${label_name}
-EOF
+                LABEL="$label_name" yq eval '.[0].labels = [strenv(LABEL)]' -i "$new_event_file"
             fi
-
-            # contentを追加
-            cat >> "$new_event_file" <<EOF
-  content: |
-$(echo -e "$content" | sed 's/^/    /')
-EOF
 
             # 画像があればダウンロードして追加
             if [[ -n "$image_url" ]]; then
                 local image_filename="${slug}.jpg"
                 local image_path="${PROJECT_DIR}/public/events/${image_filename}"
 
-                # 既存の画像ファイルが存在する場合はスキップ
-                if [[ -f "$image_path" ]]; then
-                    echo -e "${COLOR_DIM}    ⊘ Image already exists: ${image_filename}${COLOR_RESET}"
-                    # 既存の画像パスを追加
-                    cat >> "$new_event_file" <<EOF
-  images:
-    - /events/${image_filename}
-EOF
-                else
-                    # 画像をダウンロード
-                    mkdir -p "${PROJECT_DIR}/public/events"
-                    if curl -s -o "$image_path" "$image_url"; then
-                        echo -e "${COLOR_CYAN}    → Downloaded image: ${image_filename}${COLOR_RESET}"
-
-                        # imagesフィールドを追加
-                        cat >> "$new_event_file" <<EOF
-  images:
-    - /events/${image_filename}
-EOF
+                mkdir -p "${PROJECT_DIR}/public/events"
+                local image_existed=false
+                [[ -f "$image_path" ]] && image_existed=true
+                if ensure_image "$image_url" "$image_path"; then
+                    if [[ "$image_existed" == true ]]; then
+                        echo -e "${COLOR_DIM}    ⊘ Valid image already exists: ${image_filename}${COLOR_RESET}"
                     else
-                        echo -e "${COLOR_YELLOW}    ⚠ Failed to download image${COLOR_RESET}"
+                        echo -e "${COLOR_CYAN}    → Downloaded image: ${image_filename}${COLOR_RESET}"
                     fi
+                    IMG="/events/${image_filename}" yq eval '.[0].images = [strenv(IMG)]' -i "$new_event_file"
+                else
+                    echo -e "${COLOR_YELLOW}    ⚠ Rejected image (HTTP error, invalid format, or over 2 MiB)${COLOR_RESET}"
                 fi
             fi
 
@@ -435,4 +497,6 @@ EOF
     fi
 }
 
-main "$@"
+if [[ "${BASH_SOURCE[0]}" == "$0" ]]; then
+    main "$@"
+fi

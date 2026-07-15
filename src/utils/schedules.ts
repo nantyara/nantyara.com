@@ -38,3 +38,13 @@ export function formatDateJa(dateStr: string): string {
   const get = (type: string) => parts.find(p => p.type === type)?.value;
   return `${get('year')}年${get('month')}月${get('day')}日(${get('weekday')})`;
 }
+
+/** イベントの開催年を、ビルド環境ではなく日本時間を基準に返す。 */
+export function eventYearJa(dateStr: string): number {
+  const date = new Date(dateStr);
+  if (Number.isNaN(date.getTime())) throw new TypeError(`Invalid event date: ${dateStr}`);
+  return Number(new Intl.DateTimeFormat('en', {
+    timeZone: 'Asia/Tokyo',
+    year: 'numeric',
+  }).format(date));
+}
