@@ -31,24 +31,23 @@
 - id: uminoie
   name: 海の家
   note: 夏季限定の海の家出演シリーズ
-- id: sbq-photokai
-  name: SBQ個人撮影会
+- id: studio-sbq
+  name: Studio S.B.Q
   aliases:
+    - Studio S.B.Q（市ヶ谷）
+    - SBQ個人撮影会
     - S.B.Q 個人撮影会
     - S.B.Q.個人撮影会
     - S.B.Q.個撮
     - S.B.Q.撮影会
     - S.B.Q撮影会
     - 市ヶ谷S.B.Q.個人撮影会
-  note: S.B.Q.アイドル部の個人撮影会
-- id: studio-sbq
-  name: Studio S.B.Q
-  aliases:
-    - Studio S.B.Q（市ヶ谷）
-  address: 東京都新宿区市谷1丁目16
-  url: https://studio.quinq.net
+  address: 東京都新宿区市谷田町3-16
+  url: https://studio.quinq.net/?page_id=107
   x: studioquinq
-  note: 旧「Studio QuinQ」（studio-quinq）が2023年7月1日に現住所へ移転・改称した後継。市ヶ谷駅から徒歩4分
+  note: 旧「Studio QuinQ」（studio-quinq）が2023年7月1日に現住所へ移転・改称した後継。市ヶ谷駅から徒歩4分。
+    S.B.Q.アイドル部の個人撮影会もこのスタジオで開催される（旧「SBQ個人撮影会」エントリを統合、
+    2026-07-12）
 - id: sarusho
   name: 栃木さる小
   aliases:
@@ -1049,6 +1048,10 @@
   aliases:
     - 大阪ツアー支援撮影会
   note: 遠征支援を目的とした個人撮影会イベント。会場名不明・企画名のみ確認
+- id: asakusa-kimono-photoshoot
+  name: 浅草着物ポトレ撮影会
+  note: 浅草での着物ポートレート撮影会イベント。会場名不明・企画名のみ確認（2023-05-23、
+    以前は無関係な大阪遠征支援撮影会のプレースホルダを誤って流用していたが訂正）
 - id: misono-benikaku
   name: 味園紅鶴
   address: 大阪府大阪市中央区千日前2丁目3-9 味園ビル2F
