@@ -22,6 +22,67 @@
   timetree_id: "2966943163723433815"
   content: |
     TBD
+- id: event-20260905-junjun-birthday
+  slug: 20260905-junjun-birthday
+  date: 2026-09-05 11:40:00 +0900
+  title: じゅんじゅん生誕大宴会〜37歳だよ！全員集合☆〜
+  site: 四谷OUTBREAK
+  content: |
+    【出演】
+    ダムダム団
+    初咲里奈
+    ドラゴン岩村
+    ひよこ倶楽部
+    SoberBrown
+    にゃんにゃんブーメラン
+    Atama concrete
+    中村アリーとTIG-HUGS
+    PUNK SHIBUYA
+    なんちゃらアイドル
+    ケンカオイル
+    山村茜
+    教祖仮面
+    熱海雄一
+    ウクレレ高円寺
+    全部、運営のせいだ。
+    さとーさん
+    西山正規
+    じゅんじゅん
+    ヒゲと味噌汁
+    ほか
+
+    開場/開演 11:30/11:40
+    前売/当日 ¥3,500＋D
+    飲み放題プランあり
+    FOOD：きしぱん
+  images:
+    - /events/20260905-junjun-birthday-1.jpg
+    - /events/20260905-junjun-birthday-2.jpg
+    - /events/20260905-junjun-birthday-3.jpg
+    - /events/20260905-junjun-birthday-4.jpg
+  acts:
+    - ダムダム団
+    - 初咲里奈
+    - ドラゴン岩村
+    - ひよこ倶楽部
+    - SoberBrown
+    - にゃんにゃんブーメラン
+    - Atama concrete
+    - 中村アリーとTIG-HUGS
+    - PUNK SHIBUYA
+    - ケンカオイル
+    - 山村茜
+    - 教祖仮面
+    - 熱海雄一
+    - ウクレレ高円寺
+    - 全部、運営のせいだ。
+    - さとーさん
+    - 西山正規
+    - じゅんじゅん
+    - ヒゲと味噌汁
+  sources:
+    - https://x.com/junjunliveline/status/2076629877428748402
+    - https://x.com/higemisoshirumc/status/2077352126309867967
 - id: event-20260909-timetree-38990386
   slug: 20260909-timetree-38990386
   date: 2026-09-09 19:00:00 +0900
