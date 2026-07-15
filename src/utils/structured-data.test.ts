@@ -8,6 +8,7 @@ import {
   buildWebSite,
   stringifyStructuredData,
 } from './structured-data.ts';
+import { eventYearJa } from './schedules.ts';
 
 const baseEvent = {
   title: 'テストライブ',
@@ -80,4 +81,8 @@ test('MusicAlbum links the release to the canonical group', () => {
   assert.equal(album.image, 'https://nantyara.com/releases/test.webp');
   assert.equal(album.byArtist['@id'], 'https://nantyara.com/#musicgroup');
   assert.equal(album.track[0].name, '曲A');
+});
+
+test('event archive years are derived in Japan time', () => {
+  assert.equal(eventYearJa('2018-01-01 00:20:00 +0900'), 2018);
 });

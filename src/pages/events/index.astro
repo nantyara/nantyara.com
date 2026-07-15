@@ -1,13 +1,13 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { loadAllSchedules } from '../../utils/schedules';
+import { eventYearJa, loadAllSchedules } from '../../utils/schedules';
 
 const schedules = loadAllSchedules();
-const years = [...new Set(schedules.map((event: any) => new Date(event.date).getFullYear()))]
+const years = [...new Set(schedules.map((event: any) => eventYearJa(event.date)))]
   .sort((a, b) => b - a);
 const counts = new Map(years.map((year) => [
   year,
-  schedules.filter((event: any) => new Date(event.date).getFullYear() === year).length,
+  schedules.filter((event: any) => eventYearJa(event.date) === year).length,
 ]));
 ---
 

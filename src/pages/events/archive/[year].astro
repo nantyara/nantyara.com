@@ -1,15 +1,15 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
-import { formatDateJa, loadAllSchedules } from '../../../utils/schedules';
+import { eventYearJa, formatDateJa, loadAllSchedules } from '../../../utils/schedules';
 
 export function getStaticPaths() {
   const schedules = loadAllSchedules();
-  const years = [...new Set(schedules.map((event: any) => String(new Date(event.date).getFullYear())))];
+  const years = [...new Set(schedules.map((event: any) => String(eventYearJa(event.date))))];
   return years.map((year) => ({
     params: { year },
     props: {
-      events: schedules.filter((event: any) => String(new Date(event.date).getFullYear()) === year),
+      events: schedules.filter((event: any) => String(eventYearJa(event.date)) === year),
     },
   }));
 }

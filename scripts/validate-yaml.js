@@ -26,11 +26,43 @@ function logWarn(file, message) {
   console.warn(`\x1b[33m⚠ ${file}: ${message}\x1b[0m`);
 }
 
+function isValidCalendarDate(year, month, day) {
+  const date = new Date(Date.UTC(year, month - 1, day));
+  return date.getUTCFullYear() === year
+    && date.getUTCMonth() === month - 1
+    && date.getUTCDate() === day;
+}
+
 // 日付形式チェック（ISO 8601形式 with timezone）
 function isValidDate(dateStr) {
-  if (!dateStr) return false;
-  const date = new Date(dateStr);
-  return !isNaN(date.getTime());
+  if (typeof dateStr !== 'string') return false;
+  const match = dateStr.match(/^(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2}) ([+-])(\d{2})(\d{2})$/);
+  if (!match) return false;
+  const [, year, month, day, hour, minute, second, , offsetHour, offsetMinute] = match;
+  const values = [year, month, day, hour, minute, second, offsetHour, offsetMinute].map(Number);
+  const [y, m, d, h, min, sec, offsetH, offsetMin] = values;
+  return isValidCalendarDate(y, m, d)
+    && h <= 23 && min <= 59 && sec <= 59
+    && offsetH <= 14 && offsetMin <= 59
+    && (offsetH < 14 || offsetMin === 0);
+}
+
+function isValidReleaseDate(dateStr) {
+  if (typeof dateStr !== 'string') return false;
+  const match = dateStr.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  return Boolean(match) && isValidCalendarDate(Number(match[1]), Number(match[2]), Number(match[3]));
+}
+
+function validateStringArray(value, field, file, index) {
+  if (!Array.isArray(value)) {
+    logError(file, `イベント[${index}]: ${field}は配列である必要があります`);
+    return;
+  }
+  value.forEach((item, itemIndex) => {
+    if (typeof item !== 'string' || item.length === 0) {
+      logError(file, `イベント[${index}]: ${field}[${itemIndex}]は空でない文字列である必要があります`);
+    }
+  });
 }
 
 // 会場名の表記ゆれ（空白・大文字小文字）を正規化して比較する
@@ -70,11 +102,13 @@ function loadVenueIndex() {
 
 // スケジュールのバリデーション
 function validateSchedule(schedule, file, index) {
-  const required = ['id', 'slug', 'date', 'title', 'site'];
+  const required = ['id', 'slug', 'date', 'title', 'site', 'content'];
 
   for (const field of required) {
     if (!schedule[field]) {
       logError(file, `イベント[${index}]: 必須フィールド "${field}" がありません`);
+    } else if (typeof schedule[field] !== 'string') {
+      logError(file, `イベント[${index}]: ${field}は文字列である必要があります`);
     }
   }
 
@@ -87,24 +121,31 @@ function validateSchedule(schedule, file, index) {
     logError(file, `イベント[${index}]: 終了日時形式が不正です: ${schedule.end}`);
   }
 
+  if (schedule.date && schedule.end && isValidDate(schedule.date) && isValidDate(schedule.end)
+      && new Date(schedule.end).getTime() < new Date(schedule.date).getTime()) {
+    logError(file, `イベント[${index}]: 終了日時が開始日時より前です`);
+  }
+
   // slug形式チェック（YYYYMMDD-xxx）
   if (schedule.slug && !/^\d{8}-.+$/.test(schedule.slug)) {
     logError(file, `イベント[${index}]: slug形式が不正です（YYYYMMDD-xxx形式を推奨）: ${schedule.slug}`);
   }
 
   // images配列チェック
-  if (schedule.images && !Array.isArray(schedule.images)) {
-    logError(file, `イベント[${index}]: imagesは配列である必要があります`);
-  }
+  if (schedule.images !== undefined) validateStringArray(schedule.images, 'images', file, index);
+
+  if (schedule.labels !== undefined) validateStringArray(schedule.labels, 'labels', file, index);
 
   // acts配列チェック（対バン相手）
-  if (schedule.acts && !Array.isArray(schedule.acts)) {
-    logError(file, `イベント[${index}]: actsは配列である必要があります`);
-  }
+  if (schedule.acts !== undefined) validateStringArray(schedule.acts, 'acts', file, index);
 
   // sources配列チェック（出典URL）
-  if (schedule.sources && !Array.isArray(schedule.sources)) {
-    logError(file, `イベント[${index}]: sourcesは配列である必要があります`);
+  if (schedule.sources !== undefined) validateStringArray(schedule.sources, 'sources', file, index);
+
+  for (const field of ['time_tbd', 'duplicate_ok']) {
+    if (schedule[field] !== undefined && typeof schedule[field] !== 'boolean') {
+      logError(file, `イベント[${index}]: ${field}はbooleanである必要があります`);
+    }
   }
 }
 
@@ -115,11 +156,13 @@ function validateRelease(release, file, index) {
   for (const field of required) {
     if (!release[field]) {
       logError(file, `リリース[${index}]: 必須フィールド "${field}" がありません`);
+    } else if (typeof release[field] !== 'string') {
+      logError(file, `リリース[${index}]: ${field}は文字列である必要があります`);
     }
   }
 
   // 日付形式チェック
-  if (release.release_date && !isValidDate(release.release_date)) {
+  if (release.release_date && !isValidReleaseDate(release.release_date)) {
     logError(file, `リリース[${index}]: 日付形式が不正です: ${release.release_date}`);
   }
 
@@ -130,12 +173,13 @@ function validateRelease(release, file, index) {
   }
 
   // links配列チェック
-  if (release.links) {
+  if (release.links !== undefined) {
     if (!Array.isArray(release.links)) {
       logError(file, `リリース[${index}]: linksは配列である必要があります`);
     } else {
       release.links.forEach((link, linkIndex) => {
-        if (!link.platform || !link.url) {
+        if (!link || typeof link.platform !== 'string' || link.platform.length === 0
+            || typeof link.url !== 'string' || link.url.length === 0) {
           logError(file, `リリース[${index}]: links[${linkIndex}]にplatformとurlが必要です`);
         }
       });
@@ -143,8 +187,11 @@ function validateRelease(release, file, index) {
   }
 
   // tracks配列チェック
-  if (release.tracks && !Array.isArray(release.tracks)) {
-    logError(file, `リリース[${index}]: tracksは配列である必要があります`);
+  if (release.tracks !== undefined) {
+    if (!Array.isArray(release.tracks)
+        || release.tracks.some(track => typeof track !== 'string' || track.length === 0)) {
+      logError(file, `リリース[${index}]: tracksは文字列の配列である必要があります`);
+    }
   }
 }
 
