@@ -103,11 +103,18 @@
 - id: event-20260806-timetree-43099834
   slug: 20260806-timetree-43099834
   date: 2026-08-06 12:00:00 +0900
-  title: 海の家
+  title: 伊豆の海の家（なんちゃら × S.B.Q.アイドル部）
   site: 海の家
   timetree_id: "2994590271943099834"
   content: |
-    TBD
+    伊豆の海の家をなんちゃらアイドルとS.B.Q.アイドル部がジャック。
+    昼間はポートレート撮影（ポトレ）も予定。
+
+    場所の具体名・料金など詳細は決まり次第更新。
+  acts:
+    - S.B.Q.アイドル部
+  sources:
+    - https://x.com/nantyaraidol/status/2065061301131571633
 - id: event-20260808-timetree-01793792
   slug: 20260808-timetree-01793792
   date: 2026-08-08 09:30:00 +0900
@@ -165,13 +172,23 @@
 - id: event-20260810-timetree-54510826
   slug: 20260810-timetree-54510826
   date: 2026-08-10 18:00:00 +0900
-  title: 東新宿LOVE TKO
+  title: 隔月刊御茶マミ 8月号
   site: 東新宿LOVE TKO
   timetree_id: "2966940435454510826"
   labels:
     - マミソロ
   content: |
-    TBD
+    隔月刊御茶海マミ 8月号
+
+    会場　東新宿LOVE TKO
+    SPECIAL GUEST
+    オセロケッツ 森山公一
+
+    タイムテーブル・料金など詳細は決まり次第更新。
+  acts:
+    - 森山公一
+  sources:
+    - https://x.com/nantyaraidol/status/2049689081047924941
 - id: event-20260816-lamama
   slug: 20260816-lamama
   date: 2026-08-16 15:45:00 +0900
