@@ -167,13 +167,29 @@
 - id: event-20260720-timetree-50570383
   slug: 20260720-timetree-50570383
   date: 2026-07-20 18:00:00 +0900
-  title: 東新宿LOVE TKO
+  title: S.B.Q.J.Q — Sweet Baby Otaro Jazz Quintet Live Show —
   site: 東新宿LOVE TKO
   timetree_id: "2966936438450570383"
   labels:
     - マミソロ
   content: |
-    TBD
+    【出演】
+    御茶海マミ（Vo）
+    ぬる（Vo）
+    仲田晋也（Gt）
+    コーリー（Ba）
+    Q太郎（Per）
+
+    開場/開演 18:00/19:00
+    Charge ¥1,500＋1D
+    21:00〜05:00 bar time
+  images:
+    - /events/20260720-timetree-50570383.jpeg
+  acts:
+    - ぬる
+    - 仲田晋也
+    - コーリー
+    - Q太郎
 - id: event-20260721-timetree-23056444
   slug: 20260721-timetree-23056444
   date: 2026-07-21 18:00:00 +0900
