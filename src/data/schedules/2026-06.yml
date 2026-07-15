@@ -209,6 +209,7 @@
   acts:
     - "世界逆転宣言！"
     - "TIGHT"
+  timetree_id: "2982994774342125281"
 - id: event-20260614-timetree-42116751
   slug: 20260614-timetree-42116751
   date: 2026-06-14 13:00:00 +0900
@@ -297,8 +298,8 @@
   title: 東新宿LOVE TKO
   site: 東新宿LOVE TKO
   timetree_id: "2965559662331708797"
-  content: |
-    TBD
+  content: |-
+    ゆるワンマン！
 - id: event-20260624-timetree-48886650
   slug: 20260624-timetree-48886650
   date: 2026-06-24 19:00:00 +0900

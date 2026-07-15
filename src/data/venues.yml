@@ -83,6 +83,7 @@
 - id: drunken-shrimp
   name: 新宿Drunken Shrimp
   aliases:
+    - drunken shrimp
     - 新宿dranken shrimp
     - 新宿 歌舞伎町 Drunken Shrimp
   address: 東京都新宿区歌舞伎町2-39-2 三幸ビルB館5F-E
@@ -589,6 +590,9 @@
 - id: shinjuku-potore-satsueikai
   name: 新宿ポトレ撮影会
   note: 固定会場のないポートレート撮影イベント企画
+- id: ohanami-potore
+  name: お花見ポトレ
+  note: 固定会場のない花見ポートレート撮影企画。TimeTreeに会場情報なし
 - id: shibuya-lush
   name: 渋谷LUSH
   address: 東京都渋谷区渋谷1-10-7 グローリア宮益坂III B1F
