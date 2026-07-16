@@ -1,0 +1,97 @@
+#!/usr/bin/env bash
+#
+# build-history-corpus - 沿革発掘用の圧縮コーパスを生成する
+#
+# なんちゃラジオ文字起こし（461本・7MB）を LLM のコンテキストに全部載せるのは
+# 不可能なので、マイルストーン関連キーワードでヒットした行だけを前後文脈付きで
+# 機械抽出し、放送日メタデータ・ライブイベント一覧・リリース一覧と合わせて
+# 「沿革再生成に必要な材料一式」を数百KBに圧縮する（issue #8）。
+#
+# 使い方:
+#   tools/build-history-corpus [出力ディレクトリ]
+#
+# 出力（デフォルト: mining/history-corpus/）:
+#   episodes.tsv  - エピソードID・放送日・タイトル（_posts frontmatter 由来）
+#   excerpts.md   - キーワードヒット行の抜粋（エピソードごと、放送日ヘッダ付き）
+#   events.tsv    - 全スケジュールイベント（日付・タイトル・会場）
+#   stats.txt     - 圧縮率などの統計
+#
+# 依存: yq, grep, awk（このリポジトリの標準構成）
+set -euo pipefail
+
+REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+PODCAST_REPO="${PODCAST_REPO:-$HOME/.ghq/github.com/nantyara/podcast.nantyara.com}"
+OUT_DIR="${1:-$REPO_ROOT/mining/history-corpus}"
+CONTEXT_LINES="${CONTEXT_LINES:-1}"
+
+# マイルストーン関連キーワード（沿革カテゴリ: 初ワンマン/加入・卒業/遠征・フェス/周年/radio節目）
+# whisper 誤変換があるため表記ゆれをある程度含める。広すぎる語（例:「初めて」単体）は
+# サイズ爆発するので入れない。チューニングはこの変数だけ触れば良い。
+KEYWORDS='ワンマン|加入|卒業|脱退|解散|結成|周年|初出演|初主催|初ライブ|初披露|初単独|初の|レコ発|デビュー|遠征|ツアー|フェス|新体制|改名|活動休止|活動終了|復帰|新メンバー|メンバー募集|お披露目|生誕祭|記念すべき|ラストライブ|お別れ|結婚|入籍|お休みします|休止|再始動|再結成|1000回|[0-9]+回記念|節目'
+
+mkdir -p "$OUT_DIR"
+
+if [[ ! -d "$PODCAST_REPO/transcripts" ]]; then
+  echo "ERROR: transcripts が見つからない: $PODCAST_REPO/transcripts" >&2
+  exit 1
+fi
+
+# 1. episodes.tsv - _posts の frontmatter から id/放送日/タイトルを抽出
+#    ファイル名が YYYY-MM-DD-<id>.md 形式なので日付はファイル名から取る
+episodes_tsv="$OUT_DIR/episodes.tsv"
+: > "$episodes_tsv"
+for post in "$PODCAST_REPO"/_posts/*.md; do
+  base="$(basename "$post" .md)"
+  date="${base:0:10}"
+  id="${base:11}"
+  title="$(yq --front-matter=extract -r '.title // ""' "$post" 2>/dev/null | head -1)"
+  printf '%s\t%s\t%s\n' "$id" "$date" "$title" >> "$episodes_tsv"
+done
+sort -o "$episodes_tsv" "$episodes_tsv"
+
+# 2. excerpts.md - キーワードヒット行の抜粋
+excerpts_md="$OUT_DIR/excerpts.md"
+: > "$excerpts_md"
+total_hits=0
+episodes_with_hits=0
+for txt in "$PODCAST_REPO"/transcripts/*.txt; do
+  id="$(basename "$txt" .txt)"
+  hits="$(grep -E -C "$CONTEXT_LINES" "$KEYWORDS" "$txt" || true)"
+  [[ -z "$hits" ]] && continue
+  episodes_with_hits=$((episodes_with_hits + 1))
+  n="$(grep -E -c "$KEYWORDS" "$txt" || true)"
+  total_hits=$((total_hits + n))
+  meta="$(awk -F'\t' -v id="$id" '$1 == id { print $2 "放送「" $3 "」"; exit }' "$episodes_tsv")"
+  [[ -z "$meta" ]] && meta="放送日不明"
+  {
+    printf '## %s %s\n\n' "$id" "$meta"
+    printf '%s\n\n' "$hits"
+  } >> "$excerpts_md"
+done
+
+# 3. events.tsv - 全スケジュールイベントのコンパクト一覧
+events_tsv="$OUT_DIR/events.tsv"
+: > "$events_tsv"
+for f in "$REPO_ROOT"/src/data/schedules/*.yml; do
+  yq -r '.[] | (.date | sub(" .*"; "")) + "\t" + .title + "\t" + (.site // "")' "$f" 2>/dev/null >> "$events_tsv"
+done
+sort -o "$events_tsv" "$events_tsv"
+
+# 4. stats.txt
+stats="$OUT_DIR/stats.txt"
+src_bytes="$(cat "$PODCAST_REPO"/transcripts/*.txt | wc -c | tr -d ' ')"
+out_bytes="$(wc -c < "$excerpts_md" | tr -d ' ')"
+{
+  echo "generated_at: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+  echo "keywords: $KEYWORDS"
+  echo "context_lines: $CONTEXT_LINES"
+  echo "transcripts_total_bytes: $src_bytes"
+  echo "excerpts_bytes: $out_bytes"
+  echo "compression_ratio: $(awk -v a="$out_bytes" -v b="$src_bytes" 'BEGIN { printf "%.1f%%", a / b * 100 }')"
+  echo "episodes_with_hits: $episodes_with_hits / $(ls "$PODCAST_REPO"/transcripts/*.txt | wc -l | tr -d ' ')"
+  echo "keyword_hit_lines: $total_hits"
+  echo "events: $(wc -l < "$events_tsv" | tr -d ' ')"
+  echo "episodes_indexed: $(wc -l < "$episodes_tsv" | tr -d ' ')"
+} > "$stats"
+
+cat "$stats"
