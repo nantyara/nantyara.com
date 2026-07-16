@@ -1812,3 +1812,9 @@
 - id: nakano-heavysick
   name: 中野ヘビーシック
   note: 地下1階・地下2階のある会場（詳細未調査）
+- id: johnny-angel
+  name: 小岩JOHNNY ANGEL
+  aliases:
+    - 小岩ジョニーエンジェル
+    - 小岩JOHNNY ANGEL
+  note: 小岩のライブハウス。詳細未調査
