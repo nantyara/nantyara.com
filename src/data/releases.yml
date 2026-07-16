@@ -5,6 +5,7 @@
   type: single
   format: CD
   label: 自主制作
+  jacket_image: /releases/tokyo-boshi-e-ikou.webp
   description: |
     なんちゃらアイドル7thシングル。価格0円の無料配布シングルとして蒲田オッタンタOKFKでレコ発。
     アルバムやサブスク配信には収録予定のない単独リリース。
@@ -16,6 +17,7 @@
   type: single
   format: CD
   label: 自主制作
+  jacket_image: /releases/choco-mugibatake-de-tsukamaete.webp
   description: |
     なんちゃらアイドル8thシングル。ちょこ太郎とのコラボシングルで、下北沢ちょ美ひげでレコ発ワンマン。
     作曲はスキップカウズの遠藤肇、イラストは漫画家がぁさんが担当。
@@ -27,6 +29,7 @@
   type: single
   format: CD
   label: なりすレコード
+  jacket_image: /releases/jasu-to-momen-to.webp
   description: |
     なんちゃらアイドル9thシングル。100枚限定生産で、Spotify等でも無料で先行配信。
     作曲・演奏・アレンジ・録音はスキップカウズの遠藤肇。カップリングにアコースティックバージョンとインストを収録。
@@ -62,6 +65,7 @@
   type: single
   format: CD
   label: なりすレコード
+  jacket_image: /releases/baby-a-gogo.webp
   description: |
     「黒い森」と同時発売の2曲入りシングル。「baby a gogo」は遠藤肇（スキップカウズ）作曲、
     「平穏世代のホーリーキャッツ」はMIYO-C作・編曲。新星堂エンタバアキバでの発売記念インストアイベントを開催。
@@ -109,6 +113,7 @@
   type: single
   format: CD
   label: なりすレコード
+  jacket_image: /releases/ennui-discotheque.webp
   description: |
     MCあんにゅとのコラボシングル。カップリングになんちゃら初のラテン曲「salad familiar」や
     リミックス、トークを含む全9曲入りで1000円。下北沢ちょ美ひげでレコ発ライブを開催。
@@ -149,6 +154,7 @@
   type: single
   format: CD
   label: なりすレコード
+  jacket_image: /releases/love-love-baby.webp
   description: |
     大高ジャッキーとのコラボシングル。渋谷La.mama「大人の文化祭」でレコ発。
 
@@ -159,6 +165,7 @@
   type: single
   format: CD
   label: なりすレコード
+  jacket_image: /releases/teens-blues.webp
   description: |
     大高ジャッキーとのコラボセカンドシングル。CD版に続き、サブスク版はミックスを変えて配信。
 
@@ -181,6 +188,7 @@
   type: single
   format: CD
   label: なりすレコード
+  jacket_image: /releases/from-hawaii-to-hell.webp
   description: |
     MCあんにゅとのコラボセカンドシングル。作編曲はスキップカウズの遠藤肇で、なんちゃらの2人が
     作詞に初挑戦。下北沢ちょ美ひげでレコ発ライブを開催。
