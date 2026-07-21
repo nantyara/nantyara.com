@@ -1,14 +1,19 @@
 - id: event-20260801-timetree-96316177
   slug: 20260801-timetree-96316177
-  date: 2026-08-01 12:00:00 +0900
-  title: 渋谷la.mama
+  date: 2026-08-01 11:00:00 +0900
+  end: 2026-08-01 22:00:00 +0900
+  title: DADAフェス Vol76 この夏やれんのか？
   site: 渋谷la.mama
   timetree_id: "2834154847396316177"
   content: |-
     DADAフェスVol76 この夏やれんのか？
 
-    渋谷La.mama　OPEN 10:30
+    渋谷La.mama　OPEN/START/END　10:30/11:00/22:00
     なんちゃらアイドル出演　20:05〜20:30
+
+    チケット　前売¥3,000 / 当日¥3,500（＋D）
+    学割　¥2,000＋D（大学生以下）
+    前売り予約：各アーティストまたは主催者（X: @DADAFES）
 
     【タイムテーブル】
     11:00〜11:35 ハングオーバー
@@ -31,6 +36,7 @@
     20:05〜20:30 なんちゃらアイドル
     21:05〜 ザ・サイレンズ
   images:
+    - /events/20260801-timetree-96316177-main.jpg
     - /events/20260801-timetree-96316177.jpg
   acts:
     - "ハングオーバー"
@@ -173,22 +179,36 @@
     - "有坂愛海"
 - id: event-20260810-timetree-54510826
   slug: 20260810-timetree-54510826
-  date: 2026-08-10 18:00:00 +0900
-  title: 隔月刊御茶マミ 8月号
+  date: 2026-08-10 19:00:00 +0900
+  title: 隔月刊御茶海マミ 8月号（vol.010）
   site: 東新宿LOVE TKO
   timetree_id: "2966940435454510826"
   labels:
     - マミソロ
   content: |
-    隔月刊御茶海マミ 8月号
+    隔月刊御茶海マミ 8月号（vol.010）
+    10回記念は超豪華に！しかも新曲初披露！
 
-    会場　東新宿LOVE TKO
-    SPECIAL GUEST
-    オセロケッツ 森山公一
+    【タイムテーブル】
+    19:00　S.B.Q.と御茶海マミ
+    19:30　sommeil sommeil
+    20:10　御茶海マミとしずくだうみ
+    20:20　御茶海マミ
+    21:00　森山公一 with 3×3オールヒマナスターズ
 
-    タイムテーブル・料金など詳細は決まり次第更新。
+    【スペシャル・ライブ】
+    森山公一（オセロケッツ）sings 桑田佳祐
+    with 3×3オールヒマナスターズ（たくぞう＆Q太郎）
+
+    open/start　18:00/19:00
+    charge　¥1,500（1drink別）
   acts:
     - 森山公一
+    - sommeil sommeil
+    - しずくだうみ
+  images:
+    - /events/20260810-timetree-54510826.jpeg
+    - /events/20260810-timetree-54510826-2.jpeg
   sources:
     - https://x.com/nantyaraidol/status/2049689081047924941
 - id: event-20260816-lamama
