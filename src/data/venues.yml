@@ -12,6 +12,8 @@
 #   url:     公式サイト（任意）
 #   x:       公式Xアカウント（任意、@なし）
 #   note:    補足（任意。会場ページに表示される）
+#   default_event_image: この会場のイベントに images が無いときビルド時に補う
+#            デフォルト画像パス（任意）。YAML の images には書き込まれない
 
 - id: lamama
   name: 渋谷La.mama
@@ -289,6 +291,7 @@
     - めたもるふぉ～ぜ
   address: 東京都新宿区歌舞伎町2-39-2 三幸ビルB館5F-E
   x: barmetamorphose
+  default_event_image: /venues/metamorphose.jpeg
   note: 正式名称「BARめたもるふぉーぜ」。旧・新宿Drunken Shrimpが2026年6月に新装開店した店。公式サイトは未確認（2026年6月新規開店のため情報が少ない）
 - id: ion-kasama
   name: イオン笠間

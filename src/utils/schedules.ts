@@ -1,5 +1,6 @@
 import { readFileSync, readdirSync } from 'node:fs';
 import { parse } from 'yaml';
+import { resolveVenue } from './venues';
 
 // ビルド時、動的ルート（events/[slug].astro 等）はイベント数分（1000件超）ページを生成するため、
 // メモ化なしだと毎ページ生成のたびに全YAMLファイルを再読み込み・再パースしてしまい、
@@ -18,8 +19,16 @@ export function loadAllSchedules() {
     return parse(content) || [];
   });
 
+  // フライヤー未設定のイベントに会場のデフォルト画像を補う
+  // （YAML には書き込まないビルド時注入。後日フライヤーが images に入れば自然に上書きされる）
+  const withVenueDefaults = allSchedules.map((s: any) => {
+    if (s.images?.length || !s.site) return s;
+    const defaultImage = resolveVenue(s.site)?.default_event_image;
+    return defaultImage ? { ...s, images: [defaultImage] } : s;
+  });
+
   // 日付でソート（新しい順）
-  cachedSchedules = allSchedules.sort((a: any, b: any) =>
+  cachedSchedules = withVenueDefaults.sort((a: any, b: any) =>
     new Date(b.date).getTime() - new Date(a.date).getTime()
   );
   return cachedSchedules;

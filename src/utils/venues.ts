@@ -9,6 +9,8 @@ export interface Venue {
   url?: string;
   /** 公式Xアカウント（@なし） */
   x?: string;
+  /** この会場のイベントに images が無いときビルド時に補うデフォルト画像パス */
+  default_event_image?: string;
   note?: string;
 }
 
