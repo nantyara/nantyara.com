@@ -280,13 +280,13 @@
 - id: event-20250427-timetree-11732106
   slug: 20250427-timetree-11732106
   date: 2025-04-27 09:00:00 +0900
-  title: S.B.Q 個人撮影会
+  title: S.B.Q.個人撮影会
   site: Studio S.B.Q
   timetree_id: "2647797440211732106"
   content: |
     画像はイメージです
   images:
-    - /events/20250427-timetree-11732106.jpg
+    - /events/sbq-studio.jpg
 - id: event-20250429-timetree-07729196
   slug: 20250429-timetree-07729196
   date: 2025-04-29 02:30:00 +0900

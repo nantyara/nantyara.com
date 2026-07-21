@@ -160,6 +160,8 @@
   timetree_id: "2715594614403908705"
   content: |
     TBD
+  images:
+    - /events/sbq-studio.jpg
 - id: event-20250624-timetree-01457783
   slug: 20250624-timetree-01457783
   date: 2025-06-24 00:00:00 +0900

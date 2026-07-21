@@ -160,11 +160,13 @@
 - id: event-20251122-timetree-19268730
   slug: 20251122-timetree-19268730
   date: 2025-11-22 12:00:00 +0900
-  title: S.B.Q.個撮
+  title: S.B.Q.個人撮影会
   site: Studio S.B.Q
   timetree_id: "2792822844919268730"
   content: |
     TBD
+  images:
+    - /events/sbq-studio.jpg
 - id: event-20251123-timetree-12943193
   slug: 20251123-timetree-12943193
   date: 2025-11-23 11:00:00 +0900

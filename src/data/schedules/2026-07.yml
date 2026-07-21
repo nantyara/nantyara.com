@@ -208,11 +208,13 @@
 - id: event-20260726-timetree-26010162
   slug: 20260726-timetree-26010162
   date: 2026-07-26 12:00:00 +0900
-  title: SBQ個人撮影会
+  title: S.B.Q.個人撮影会
   site: Studio S.B.Q
   timetree_id: "2966936986126010162"
   content: |
     TBD
+  images:
+    - /events/sbq-studio.jpg
 - id: event-20260728-timetree-55895027
   slug: 20260728-timetree-55895027
   date: 2026-07-28 19:00:00 +0900

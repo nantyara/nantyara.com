@@ -239,13 +239,13 @@
 - id: event-20250224-timetree-79571731
   slug: 20250224-timetree-79571731
   date: 2025-02-24 12:00:00 +0900
-  title: 市ヶ谷S.B.Q.個人撮影会
+  title: S.B.Q.個人撮影会
   site: Studio S.B.Q
   timetree_id: "2621221769079571731"
   content: |
     画像はイメージです。
   images:
-    - /events/20250224-timetree-79571731.jpg
+    - /events/sbq-studio.jpg
 - id: event-20250225-timetree-20764866
   slug: 20250225-timetree-20764866
   date: 2025-02-25 18:00:00 +0900

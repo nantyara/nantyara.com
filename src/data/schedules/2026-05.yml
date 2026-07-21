@@ -30,11 +30,13 @@
 - id: event-20260503-timetree-72681568
   slug: 20260503-timetree-72681568
   date: 2026-05-03 12:00:00 +0900
-  title: SBQ個人撮影会
+  title: S.B.Q.個人撮影会
   site: Studio S.B.Q
   timetree_id: "2956677759872681568"
   content: |
     TBD
+  images:
+    - /events/sbq-studio.jpg
 - id: event-20260504-timetree-95683771
   slug: 20260504-timetree-95683771
   date: 2026-05-04 19:00:00 +0900
@@ -333,8 +335,10 @@
 - id: event-20260531-timetree-59353344
   slug: 20260531-timetree-59353344
   date: 2026-05-31 00:00:00 +0900
-  title: SBQ個人撮影会
+  title: S.B.Q.個人撮影会
   site: Studio S.B.Q
   timetree_id: "2956680815859353344"
   content: |
     TBD
+  images:
+    - /events/sbq-studio.jpg

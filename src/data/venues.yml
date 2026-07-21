@@ -35,6 +35,7 @@
   note: 夏季限定の海の家出演シリーズ
 - id: studio-sbq
   name: Studio S.B.Q
+  default_event_image: /events/sbq-studio.jpg
   aliases:
     - Studio S.B.Q（市ヶ谷）
     - SBQ個人撮影会

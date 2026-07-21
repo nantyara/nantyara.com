@@ -74,11 +74,13 @@
 - id: event-20250914-timetree-87395533
   slug: 20250914-timetree-87395533
   date: 2025-09-14 12:00:00 +0900
-  title: S.B.Q.撮影会
+  title: S.B.Q.個人撮影会
   site: Studio S.B.Q
   timetree_id: "2761778837787395533"
   content: |
     TBD
+  images:
+    - /events/sbq-studio.jpg
 - id: event-20250915-timetree-38228975
   slug: 20250915-timetree-38228975
   date: 2025-09-15 19:00:00 +0900

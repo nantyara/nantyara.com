@@ -230,13 +230,13 @@
 - id: event-20250524-timetree-09646696
   slug: 20250524-timetree-09646696
   date: 2025-05-24 09:00:00 +0900
-  title: SBQ個人撮影会
+  title: S.B.Q.個人撮影会
   site: Studio S.B.Q
   timetree_id: "2694521534709646696"
   content: |
     画像はイメージです
   images:
-    - /events/20250524-timetree-09646696.jpg
+    - /events/sbq-studio.jpg
 - id: event-20250525-timetree-74385056
   slug: 20250525-timetree-74385056
   date: 2025-05-25 11:00:00 +0900
