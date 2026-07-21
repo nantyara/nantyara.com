@@ -193,13 +193,18 @@
 - id: event-20260721-timetree-23056444
   slug: 20260721-timetree-23056444
   date: 2026-07-21 18:00:00 +0900
-  title: めたもるふぉーぜ
+  end: 2026-07-21 22:30:00 +0900
+  title: あおはる バーイベント
   site: めたもるふぉーぜ
   timetree_id: "3003986415123056444"
   labels:
     - あおはるソロ
   content: |
-    TBD
+    あおはるが歌舞伎町のBARめたもるふぉーぜ（旧drunken shrimp）でバーイベント。
+    18:00〜22:30。
+    フードはお弁当スタイルのおつまみ盛り合わせ。
+  sources:
+    - https://x.com/yokuwakan_nai/status/2079282665229017144
 - id: event-20260726-timetree-26010162
   slug: 20260726-timetree-26010162
   date: 2026-07-26 12:00:00 +0900
