@@ -242,8 +242,20 @@ const nextLiveDateFmt = (d: Date, timeTbd: boolean) => {
     // 12時間ルール: クライアント側で現在時刻から再計算（ビルド時の値だと古くなるため）
     const clientExpireTime = Date.now() - 12 * 60 * 60 * 1000;
 
+    // ビルドが古い場合、サーバー描画済みの「今後の予定」に終了済みイベントが残るので
+    // クライアント側で間引く（NEXT LIVE の再評価と同じ理由。issue #44 と同種の問題）
+    if (scheduleList) {
+      scheduleList.querySelectorAll('.schedule-item').forEach((item) => {
+        if (parseInt(item.dataset.date || '0', 10) < clientExpireTime) item.remove();
+      });
+      scheduleList.querySelectorAll('.month-group').forEach((group) => {
+        if (!group.querySelector('.schedule-item')) group.remove();
+      });
+    }
+
     // サーバーが描画した「今後の予定」のDOMを保持しておき、'upcoming' に戻ったときに再利用する
     // （件数が少なく増え続けないので毎回JSで作り直す必要がない）
+    // ※上の間引き後に取得するので、再利用時も終了済みイベントは復活しない
     const originalUpcomingHTML = scheduleList ? scheduleList.innerHTML : '';
 
     // 「過去/すべて」用の軽量イベントデータは /events.json から遅延取得する（lazy load）。
