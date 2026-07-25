@@ -339,11 +339,16 @@
 - id: event-20251028-timetree-52909731
   slug: 20251028-timetree-52909731
   date: 2025-10-28 19:00:00 +0900
-  title: 蒲田オッタンタ
+  title: 蒲田オッタンタ DJイベント
   site: 蒲田オッタンタ
   timetree_id: "2694525108952909731"
   content: |
-    DDDDJJJJJ
+    蒲田オッタンタでのDJイベント。事後報告「蒲田オッタンタDJありがとうございました！
+    牛タン食べました今日！」（samami27、10/28）。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/samami27/status/1983186246286618693
 - id: event-20251029-timetree-23341938
   slug: 20251029-timetree-23341938
   date: 2025-10-29 19:00:00 +0900

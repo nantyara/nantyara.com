@@ -187,11 +187,19 @@
 - id: event-20251223-timetree-33356767
   slug: 20251223-timetree-33356767
   date: 2025-12-23 19:00:00 +0900
-  title: 蒲田オッタンタ
+  title: 一緒に聴きたいアイドル曲ＤＪイベント なんたってアイドル
   site: 蒲田オッタンタ
   timetree_id: "2719703261933356767"
   content: |
-    DJ
+    一緒に聴きたいアイドル曲ということで、蒲田オッタンタでDJ。
+
+    オープン/スタート　19:00
+    ¥1,500＋ドリンク
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/samami27/status/2003132882005696832
+    - https://x.com/yokuwakan_nai/status/2003132442539175995
 - id: event-20251224-timetree-51642674
   slug: 20251224-timetree-51642674
   date: 2025-12-24 00:00:00 +0900

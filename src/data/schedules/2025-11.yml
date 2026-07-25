@@ -127,10 +127,12 @@
     - /events/20251114-timetree-96894519.jpg
 - id: event-20251116-timetree-65760954
   slug: 20251116-timetree-65760954
-  date: 2025-11-16 19:00:00 +0900
-  title: 蒲田オッタンタ
+  date: 2025-11-16 14:20:00 +0900
+  title: 蒲田元気大作戦
   site: 蒲田オッタンタ
   timetree_id: "2799398501765760954"
+  sources:
+    - https://x.com/samami27/status/1989691097719718283
   content: |
     14:00 OPEN
     14:20-14:40◆DJ:ダイジロウ♀
