@@ -244,9 +244,14 @@
 - id: event-20251129-timetree-10313985
   slug: 20251129-timetree-10313985
   date: 2025-11-29 18:00:00 +0900
-  title: 蒲田ゆ〜シティー
+  title: なりすレコードPresents キャンペーンライブ（S.B.Q.アイドル部とツーマン）
   site: 蒲田ゆ〜シティー
   timetree_id: "2834953203710313985"
+  acts:
+    - S.B.Q.アイドル部
+  sources:
+    - https://x.com/yokuwakan_nai/status/1994442439747363075
+    - https://x.com/samami27/status/1994754130334945473
   content: "\nなりすレコードPresents \nキャンペーンライブ\n11/29(土) \nゆ〜シティ蒲田 3F YCKホール \n18時開演 \n出演： \nS.B.Q.アイドル部\nなんちゃらアイドル\n観覧フリー（ただし入浴料550円必要）\n"
   images:
     - /events/20251129-timetree-10313985.jpg

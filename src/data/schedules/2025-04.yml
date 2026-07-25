@@ -270,11 +270,35 @@
 - id: event-20250422-timetree-68094104
   slug: 20250422-timetree-68094104
   date: 2025-04-22 19:00:00 +0900
-  title: 蒲田オッタンタ DJ
-  site: 蒲田オッタンタ DJ
+  title: Nantyara Night Party（DJイベント）
+  site: 蒲田オッタンタ
   timetree_id: "2627660617368094104"
+  acts:
+    - MCあんにゅ
+    - ルカタマ
+    - Q太郎
   content: |
-    TBD
+    Nantyara Night Party DJ FLOW
+
+    【DJローテーション】
+    19:00　Q太郎
+    19:20　あおはる
+    19:40　御茶海マミ
+    20:00　ルカタマ
+    20:20　MCあんにゅ
+    20:40　あお
+    21:00　マミ
+    21:20　タマ
+    21:40　にゅ
+    22:00　Q
+
+    19時start　¥1,000（drink別）※フライヤーの¥1,500から値下げ
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/yokuwakan_nai/status/1914536258044616809
+    - https://x.com/samami27/status/1914571296274276449
+    - https://x.com/samami27/status/1914690866272460842
   images:
     - /events/20250422-timetree-68094104.jpg
 - id: event-20250427-timetree-11732106

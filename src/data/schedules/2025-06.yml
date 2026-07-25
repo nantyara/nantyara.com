@@ -164,22 +164,35 @@
     - /events/sbq-studio.jpg
 - id: event-20250624-timetree-01457783
   slug: 20250624-timetree-01457783
-  date: 2025-06-24 00:00:00 +0900
-  title: 新宿drunken shrimp
+  date: 2025-06-25 00:00:00 +0900
+  title: 御茶海マミ 深夜バーイベント
   site: 新宿drunken shrimp
   timetree_id: "2715614336801457783"
   labels:
     - マミソロ
   content: |
-    TBD
+    歌舞伎町ドランクシュリンプでの深夜バーイベント。24:00オープン、朝まで。
+
+    告知「今日のバーイベは24:00から！！遅い時間だけど、眠れない人寝たくない人、待ってますね朝まで！」（samami27、6/24）。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/samami27/status/1937465527489954029
+    - https://x.com/samami27/status/1937628502502818008
 - id: event-20250624-timetree-06838348
   slug: 20250624-timetree-06838348
   date: 2025-06-24 19:00:00 +0900
-  title: 蒲田オッタンタ
+  title: 蒲田オッタンタ DJイベント
   site: 蒲田オッタンタ
   timetree_id: "2687885297206838348"
   content: |
     DJイベント！
+
+    前日告知「明日は蒲田オッタンタでDJから、歌舞伎町ドランクシュリンプでバーイベするよ〜〜〜」（samami27）。同日深夜24時からのバーイベとのはしご開催。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/samami27/status/1937154554623336903
 - id: event-20250627-timetree-91658355
   slug: 20250627-timetree-91658355
   date: 2025-06-27 19:00:00 +0900
