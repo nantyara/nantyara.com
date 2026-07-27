@@ -93,7 +93,7 @@
 - id: event-20191102-ottanta
   slug: 20191102-ottanta
   date: 2019-11-02 19:30:00 +0900
-  title: ハロウィンパーティー（大田区蒲田復興協会／蒲田オッタンタ）
+  title: 大田区蒲田復興協会（OKFK）ハロウィンパーティー
   site: 蒲田オッタンタ
   labels:
     - 主催ライブ
@@ -430,7 +430,7 @@
   slug: 20191129-ottanta
   date: 2019-11-29 12:00:00 +0900
   time_tbd: true
-  title: 大田区蒲田復興協会（OKFK）（蒲田オッタンタ）
+  title: 大田区蒲田復興協会（OKFK）
   site: 蒲田オッタンタ
   labels:
     - 主催ライブ
