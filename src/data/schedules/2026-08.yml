@@ -100,6 +100,15 @@
     - "リリー＆マリー"
   images:
     - /events/20260801-timetree-82861467.jpeg
+- id: event-20260802-timetree-96269814
+  slug: 20260802-timetree-96269814
+  date: 2026-08-02 00:00:00 +0900
+  title: 板橋シアター咲
+  site: 板橋シアター咲
+  timetree_id: "3019563400096269814"
+  content: TBD
+  images:
+    - /events/20260802-timetree-96269814.jpg
 - id: event-20260803-timetree-18571225
   slug: 20260803-timetree-18571225
   date: 2026-08-03 18:00:00 +0900
