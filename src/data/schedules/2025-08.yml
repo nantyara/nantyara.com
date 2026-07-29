@@ -318,29 +318,59 @@
 - id: event-20250826-timetree-14176873
   slug: 20250826-timetree-14176873
   date: 2025-08-26 19:00:00 +0900
-  title: 蒲田オッタンタ
+  title: 蒲田オッタンタ DJイベント
   site: 蒲田オッタンタ
   timetree_id: "2694524482114176873"
   content: |
-    D J
+    DJイベント。Open 19:00、¥1,500（1d付き）。
+
+    当日告知「今日は蒲田オッタンタでDJから、歌舞伎ドランクシュリンプで朝までバーイベ！DJは19:00オープン、ドランクシュリンプは24:00！わお！」（samami27）。同日深夜24時（暦上は翌8/27 0時）からのバーイベとのはしご開催。
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/samami27/status/1960069736420786242
+    - https://x.com/yokuwakan_nai/status/1960237361050140923
 - id: event-20250826-timetree-62662165
   slug: 20250826-timetree-62662165
   date: 2025-08-26 23:59:00 +0900
-  title: 新宿drunken shrimp
+  title: 御茶海マミ 深夜バーイベント
   site: 新宿drunken shrimp
   timetree_id: "2732931379162662165"
   labels:
     - マミソロ
   content: |
-    TBD
+    歌舞伎町ドランクシュリンプでの深夜バーイベント。24:00（暦上は翌8/27 0時）オープン、朝まで。
+    同日夜の蒲田オッタンタDJからのはしご開催。
+
+    ※Xの告知アーカイブから復元。24:00開始のイベントのため、dateは同日23:59方式。
+  sources:
+    - https://x.com/samami27/status/1960069736420786242
 - id: event-20250829-timetree-17404190
   slug: 20250829-timetree-17404190
-  date: 2025-08-29 19:00:00 +0900
-  title: 蒲田オッタンタ
+  date: 2025-08-29 19:30:00 +0900
+  title: OKFK 大田区蒲田復興協会 〜ゴジラに焼かれた町から〜 episode 49
   site: 蒲田オッタンタ
   timetree_id: "2623563093317404190"
+  acts:
+    - sommeil sommeil
+    - ザラザラフィルター
+    - 香栄
   content: |
-    TBD
+    【タイムテーブル】
+    19:30　sommeil sommeil
+    20:00　ザラザラフィルター
+    20:30　香栄
+    21:05　なんちゃらアイドル
+
+    開場/開演　19:00/19:30
+    チケット　¥2,500（ドリンク別）
+
+    会場：スタジオ・オッタンタ（東京都大田区蒲田5-7-6 2F）
+
+    ※Xの告知アーカイブから復元
+  sources:
+    - https://x.com/yokuwakan_nai/status/1961045895157596254
+    - https://x.com/samami27/status/1961351048913998135
   images:
     - /events/20250829-timetree-17404190.jpg
 - id: event-20250831-timetree-33994616
