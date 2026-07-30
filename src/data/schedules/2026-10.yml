@@ -1,3 +1,12 @@
+- id: event-20261009-timetree-06792819
+  slug: 20261009-timetree-06792819
+  date: 2026-10-09 19:00:00 +0900
+  title: 蒲田ニューエイト
+  site: 蒲田ニューエイト
+  timetree_id: "3021211155306792819"
+  content: TBD
+  images:
+    - /events/20261009-timetree-06792819.jpg
 - id: event-20261028-timetree-75262658
   slug: 20261028-timetree-75262658
   date: 2026-10-28 19:00:00 +0900
