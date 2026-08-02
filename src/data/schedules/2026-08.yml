@@ -175,11 +175,26 @@
     - https://studio.quinq.net/?p=19175
 - id: event-20260807-timetree-12195474
   slug: 20260807-timetree-12195474
-  date: 2026-08-07 19:00:00 +0900
-  title: 下北沢ろくでもない夜
+  date: 2026-08-07 19:30:00 +0900
+  title: 夏じゃんじゃーん VOL.04
   site: 下北沢ろくでもない夜
   timetree_id: "3019315153612195474"
-  content: TBD
+  acts:
+    - +tic color
+    - ゆいざらす
+    - 武井麻里子
+    - 2&
+  content: |
+    【タイムテーブル】
+    19:30〜19:50　なんちゃらアイドル（撮影: 静止画○/動画×）
+    19:50〜20:10　+tic color（×/×）
+    20:10〜20:30　ゆいざらす（○/○）
+    20:30〜20:50　武井麻里子（○/×）
+    20:50〜21:20　2&（○/○）
+    物販　21:30〜22:30
+
+    OPEN/START　19:00/19:30
+    ¥2,500＋1D
   images:
     - /events/20260807-timetree-12195474.jpg
 - id: event-20260808-timetree-01793792
@@ -273,10 +288,29 @@
 - id: event-20260811-timetree-44628055
   slug: 20260811-timetree-44628055
   date: 2026-08-11 12:00:00 +0900
-  title: 川崎 ラ チッタデッラ中央噴水広場
+  title: なりすレコード 短冊CDの日リリース記念インストアライブ
   site: 川崎 ラ チッタデッラ中央噴水広場
   timetree_id: "3018209870244628055"
-  content: TBD
+  acts:
+    - 松永天馬
+    - Tnaka
+    - Tokyoかけひき倶楽部
+    - MCあんにゅ
+    - リリー＆マリー
+    - ディスク百合おん
+    - DJ Chang-Mai
+    - イエスハッピー！
+    - 吉田哲人
+    - 平野友里(ゆり丸)
+    - sommeil sommeil
+  content: |
+    なりすレコード「短冊CDの日リリース記念インストアライブ」。
+    ヴィレッジヴァンガード川崎チッタ店×ラ チッタデッラ中央噴水広場。
+
+    【出演】
+    松永天馬 / Tnaka / Tokyoかけひき倶楽部 / MCあんにゅ / リリー＆マリー
+    ディスク百合おん・DJ Chang-Mai（THREE WILLの友達）
+    イエスハッピー！ / 吉田哲人 / 平野友里(ゆり丸) / sommeil sommeil / なんちゃらアイドル
   images:
     - /events/20260811-timetree-44628055.jpg
 - id: event-20260815-timetree-47122265

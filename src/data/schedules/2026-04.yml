@@ -243,12 +243,33 @@
     詳細: https://docs.google.com/forms/d/e/1FAIpQLSebWa0QYg8Bfn5iPLiUDL-kyWDtSl6-lElLgTeSp3ovAxEw6Q/viewform
 - id: event-20260419-timetree-63709656
   slug: 20260419-timetree-63709656
-  date: 2026-04-19 19:00:00 +0900
-  title: 東心斎橋bright moon
+  date: 2026-04-19 17:30:00 +0900
+  title: なんちゃらアイドル主催 西のほうで夜游び 〜Go to the west 君がいるから〜
   site: 東心斎橋bright moon
   timetree_id: "2719705059863709656"
+  acts:
+    - S.B.Q.アイドル部
+    - sommeil sommeil
+    - 森山公一
+    - 豊田道倫
+    - やまだだ
+    - 円盤少女
   content: |
-    TBD
+    なんちゃらアイドル主催の大阪公演。
+
+    【出演者】
+    なんちゃらアイドル
+    S.B.Q.アイドル部
+    sommeil sommeil
+    森山公一
+    豊田道倫
+    やまだだ
+    円盤少女
+
+    17時open / 17時半start
+    charge　¥2,500（drink別）
+
+    場所：Bright Moon（https://brightmoon.bar/）
   images:
     - /events/20260419-timetree-63709656.jpg
 - id: event-20260422-timetree-44512418

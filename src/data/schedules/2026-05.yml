@@ -51,12 +51,44 @@
     - https://x.com/samami27/status/2051193094650069061
 - id: event-20260505-timetree-71545425
   slug: 20260505-timetree-71545425
-  date: 2026-05-05 12:00:00 +0900
-  title: 渋谷La.mama
+  date: 2026-05-05 11:00:00 +0900
+  end: 2026-05-05 22:00:00 +0900
+  title: DADAフェス Vol73 やれんのか？GW
   site: 渋谷La.mama
   timetree_id: "2719705368371545425"
+  acts:
+    - クリトリック・リス
+    - PINROTA
+    - ハングオーバー
+    - アマノガワプリンセス
+    - M1LKYWAY
+    - 合点組
+    - 小日向由衣
+    - みずすまし
+    - 盛りたかった千里
+    - 寝込みかんぱにゅら
+    - 美広まりな
+    - PPPR!!-ピポパロ-
+    - taberusanバンド
+    - 綿部ハシコバンド
+    - 森口しゅな
+    - sowrite
+    - Tokimeki Fabulous
+    - にじじゃむ!候補生
   content: |
-    TBD
+    DADAフェス Vol73「やれんのか？GW」。なんちゃらアイドルはサブステージ出演。
+
+    【メインステージ】
+    クリトリック・リス / PINROTA / ハングオーバー / アマノガワプリンセス / M1LKYWAY
+    合点組 / 小日向由衣 / みずすまし / 盛りたかった千里 / 寝込みかんぱにゅら / 美広まりな
+    PPPR!!-ピポパロ- / taberusanバンド / 綿部ハシコバンド / 森口しゅな
+    【サブステージ】
+    なんちゃらアイドル / sowrite / Tokimeki Fabulous / にじじゃむ!候補生
+
+    OPEN/START/END　10:30/11:00/22:00
+    チケット　前売¥3,000 / 当日¥3,500（＋D）
+    学割　¥2,000＋D（大学生以下）
+    前売り予約：各アーティストまたは主催者（X: @DADAFES）
   images:
     - /events/20260505-timetree-71545425.jpg
 - id: event-20260506-timetree-52907048
@@ -142,12 +174,28 @@
     - マミソロ
 - id: event-20260516-timetree-05117798
   slug: 20260516-timetree-05117798
-  date: 2026-05-16 19:00:00 +0900
-  title: Shimokitazawa Retronym
+  date: 2026-05-16 18:00:00 +0900
+  title: OMATSURI presents IRIS KYMM from Seattle Japan Tour
   site: Shimokitazawa Retronym
   timetree_id: "2962042007805117798"
+  acts:
+    - IRIS KYMM
+    - たなかかかなた
+    - ロットン瑠唯
+    - ゆきゃり
   content: |
-    TBD
+    OMATSURI presents「IRIS KYMM from Seattle Japan Tour」。
+
+    【出演】
+    IRIS KYMM（KOREA）
+    なんちゃらアイドル
+    たなかかかなた
+    ロットン瑠唯
+    ゆきゃり
+
+    OPEN/START　17:30/18:00
+    ADV　¥3,000 / DOOR　¥3,500（＋1 DRINK CHARGE）
+    配信：https://stream.omatsuri.tech
   images:
     - /events/20260516-timetree-05117798.jpg
 - id: event-20260517-timetree-49456800
@@ -177,14 +225,29 @@
     - "クミコオオシマBAND"
 - id: event-20260518-timetree-33779851
   slug: 20260518-timetree-33779851
-  date: 2026-05-18 18:00:00 +0900
-  title: 東新宿LOVE TKO
+  date: 2026-05-18 18:30:00 +0900
+  title: 隔月刊御茶海マミ 5月号（vol.008）
   site: 東新宿LOVE TKO
   timetree_id: "2956679563733779851"
   labels:
     - マミソロ
+  acts:
+    - 工藤ちゃん
+    - 吉田仁郎
   content: |
-    TBD
+    隔月刊御茶海マミ 5月号（vol.008）
+    「先月お休みしたぶんがんばります！じろうゆさん連続出場ありがたビーム！」
+
+    special guest：工藤ちゃん / 吉田仁郎（じろうゆ） / S.B.Q.
+
+    【タイムテーブル】
+    18:30　S.B.Q.
+    19:00　じろうゆ
+    19:40　工藤ちゃん
+    20:20　御茶海マミ
+
+    18時open / 18時30分start
+    ¥1,500（drink別）
   images:
     - /events/20260518-timetree-33779851.jpg
 - id: event-20260519-timetree-94797036
@@ -275,12 +338,20 @@
     - "やわらぎめんま（POPPY）"
 - id: event-20260527-timetree-79606025
   slug: 20260527-timetree-79606025
-  date: 2026-05-27 19:00:00 +0900
-  title: 下北沢ちょ美ひげ
+  date: 2026-05-27 19:30:00 +0900
+  title: なんちゃらアイドル主催 4thアルバム「LastResort」レコ発ワンマンライブ！
   site: 下北沢ちょ美ひげ
   timetree_id: "2945301973479606025"
+  acts:
+    - 遠藤肇
   content: |
-    TBD
+    なんちゃらアイドル主催、4thアルバム「Last Resort」レコ発ワンマンライブ。
+    guitar guest：遠藤肇（スキップカウズ）
+
+    special特典「完全未発表曲収録DEMO-CDR」
+
+    19時open / 19時半start
+    ¥2,500（1drink別）
   images:
     - /events/20260527-timetree-79606025.jpg
 - id: event-20260528-timetree-77990955
