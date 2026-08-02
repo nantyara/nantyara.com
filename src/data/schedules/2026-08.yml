@@ -34,7 +34,10 @@
     19:15〜19:40 円盤少女
     サブステージ すがまろ a.k.a @I・P
     20:05〜20:30 なんちゃらアイドル
+    サブステージ 工藤ちゃん
     21:05〜 ザ・サイレンズ
+  sources:
+    - https://x.com/yokuwakan_nai/status/2083225428945494489
   images:
     - /events/20260801-timetree-96316177-main.jpg
     - /events/20260801-timetree-96316177.jpg
@@ -56,6 +59,7 @@
     - "土萌まりな"
     - "円盤少女"
     - "すがまろ a.k.a @I・P"
+    - "工藤ちゃん"
     - "ザ・サイレンズ"
 - id: event-20260801-timetree-82861467
   slug: 20260801-timetree-82861467
@@ -78,13 +82,30 @@
     HONDALADY
     松永天馬
     リリー＆マリー
-    and more…
+    Kendy Suen
+
+    【タイムテーブル】
+    12:00　any joy?
+    12:30　なんちゃらアイドル
+    12:50　sommeil sommeil
+    13:15　HONDALADY
+    13:40　MCあんにゅ
+    14:05　Tnaka
+    14:30　Kendy Suen
+    15:00　中物販
+    16:00　The Bachelors
+    16:30　Tokyoかけひき倶楽部
+    16:55　小日向由衣
+    17:20　イエスハッピー! / 吉田哲人
+    18:05　リリー＆マリー
+    18:30　松永天馬
 
     短冊CD発売38周年勝手に応援委員会主催、短冊CDの日運営事務局協賛。
 
     開場/開演　11:30/12:00
     ADV　¥4,000＋1DRINK
     DOOR　¥4,200＋1DRINK
+    当日はPocochaにて無料配信
   acts:
     - "any joy?"
     - "イエスハッピー！"
@@ -98,15 +119,24 @@
     - "HONDALADY"
     - "松永天馬"
     - "リリー＆マリー"
+    - "Kendy Suen"
+  sources:
+    - https://x.com/yokuwakan_nai/status/2083225428945494489
   images:
     - /events/20260801-timetree-82861467.jpeg
 - id: event-20260802-timetree-96269814
   slug: 20260802-timetree-96269814
-  date: 2026-08-02 00:00:00 +0900
-  title: 板橋シアター咲
+  date: 2026-08-02 12:00:00 +0900
+  title: Hプロダクション Wonderful days in 大山
   site: 板橋シアター咲
   timetree_id: "3019563400096269814"
-  content: TBD
+  content: |
+    H-PRODUCTION（Hプロ）のプロレス興行。試合後になんちゃらアイドルのライブも。
+
+    開場/開演　11:45/12:00
+    全席自由　¥2,000
+
+    会場：板橋シアター咲（東京都板橋区大山東町45-1 トレジャリィ遊座大山地下1階）
   images:
     - /events/20260802-timetree-96269814.jpg
 - id: event-20260803-timetree-18571225
@@ -392,7 +422,6 @@
     - /events/ottanta-dj-2026.jpeg
   acts:
     - "Q太郎"
-    - "FUKO"
 - id: event-20260829-timetree-44387595
   slug: 20260829-timetree-44387595
   date: 2026-08-29 12:00:00 +0900
