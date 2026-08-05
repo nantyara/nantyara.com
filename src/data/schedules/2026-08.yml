@@ -504,12 +504,40 @@
     田村ぬかりBAND キーボードサポート
 - id: event-20260825-timetree-52127896
   slug: 20260825-timetree-52127896
-  date: 2026-08-25 19:00:00 +0900
-  title: 渋谷La.mama
+  date: 2026-08-25 18:30:00 +0900
+  title: なんちゃらアイドル主催 石塚明彦還暦フェス！
   site: 渋谷La.mama
   timetree_id: "2966941503752127896"
+  acts:
+    - S.B.Q.アイドル部
+    - 円盤少女
+    - 小日向由衣
+    - the 部族
+    - 石塚還暦リスペクトバンド
+    - 鈴木祥子
   content: |
-    TBD
+    なんちゃらアイドル主催「石塚明彦還暦フェス！」
+    （週刊なんちゃらアイドル臨時増刊：還暦スペシャル特報・号外）
+
+    【出演アーティスト】
+    なんちゃらアイドル
+    S.B.Q.アイドル部
+    円盤少女
+    小日向由衣
+    the部族
+    石塚還暦リスペクトバンド
+    ★SPECIAL GUEST：鈴木祥子
+
+    FOOD：やまだだ
+
+    18時open / 18時半start
+    チケット　¥2,500（drink別）/ 配信 ¥2,000
+
+    石塚さんへの還暦おめでとうメッセージ動画も募集中
+    （なんちゃら運営LINEまたは nagaokatasuku@gmail.com へ。ライブで上映の可能性あり）。
+  sources:
+    - https://x.com/nantyaraidol/status/2084177468580069684
+    - https://x.com/nantyaraidol/status/2084177516592574748
   images:
     - /events/20260825-timetree-52127896.jpg
 - id: event-20260826-timetree-58844859
