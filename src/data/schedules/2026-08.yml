@@ -141,12 +141,25 @@
     - /events/20260802-timetree-96269814.jpg
 - id: event-20260803-timetree-18571225
   slug: 20260803-timetree-18571225
-  date: 2026-08-03 18:00:00 +0900
-  title: 東新宿LOVE TKO
+  date: 2026-08-03 19:00:00 +0900
+  title: なんちゃらアイドル主催 定期ゆるワンマン！〜夏の狂気！〜
   site: 東新宿LOVE TKO
   timetree_id: "2966938567118571225"
   content: |
-    TBD
+    なんちゃらアイドル主催 定期ゆるワンマン。テーマは「夏の狂気！」。
+
+    2部構成。転換時間にソロカラオケ企画も。ひんやりできるfoodあり。
+    バイトにS.B.Q.アイドル部のぬるさん（クラフトコーラを作ってくるかも）。
+
+    18時open / 19時start
+    charge　¥1,500（drink ¥600）
+    21時以降の来店はバータイム（チケット代なし・店は朝まで）
+  sources:
+    - https://x.com/nantyaraidol/status/2083917730932211830
+    - https://x.com/yokuwakan_nai/status/2083971283373703628
+    - https://x.com/samami27/status/2084207259740234021
+  images:
+    - /events/20260803-timetree-18571225.jpeg
 - id: event-20260806-timetree-43099834
   slug: 20260806-timetree-43099834
   date: 2026-08-06 12:00:00 +0900
@@ -162,6 +175,13 @@
     京急逗子線 逗子・葉山駅北口より徒歩約20分
     ※当初の告知では「伊豆の海の家」とされていたが、確定した会場は逗子海岸
 
+    【当日スケジュール】
+    12:00〜16:00　撮影会（予約満了）
+    17:00〜19:00　海の家Bombaに滞在（交流タイム）
+    ライブは無し。撮影会に参加しない場合のイベント参加料・chargeは無し
+    （Bombaでの飲食歓迎）。オリジナルカクテル（ソフドリあり）も提供。
+    https://zushi-beach.jp/houses/bomba/
+
     【海ポトレ】1枠（50分）¥10,000（水着）
     予約:
     御茶海マミ https://studio.quinq.net/?p=19170&ymd=1785974400
@@ -173,6 +193,9 @@
     - https://x.com/nantyaraidol/status/2065061301131571633
     - https://studio.quinq.net/?p=19170
     - https://studio.quinq.net/?p=19175
+    - https://x.com/yokuwakan_nai/status/2084839176973984231
+    - https://x.com/yokuwakan_nai/status/2084846133747327002
+    - https://x.com/nantyaraidol/status/2084880941877715016
 - id: event-20260807-timetree-12195474
   slug: 20260807-timetree-12195474
   date: 2026-08-07 19:30:00 +0900
@@ -362,11 +385,14 @@
 - id: event-20260817-timetree-58495452
   slug: 20260817-timetree-58495452
   date: 2026-08-17 12:00:00 +0900
-  title: 渋谷La.mama
+  title: なんちゃらアイドル主催 渋谷La.mama平日昼間5DAYS DAY1
   site: 渋谷La.mama
   timetree_id: "2966939755658495452"
   content: |
-    TBD
+    8月17日〜21日の5日間、なんちゃらアイドルが昼間の渋谷La.mamaをジャックする
+    主催シリーズ「渋谷La.mama平日昼間5DAYS」の1日目。詳細は決まり次第更新。
+  sources:
+    - https://x.com/samami27/status/2084209270078541884
 - id: event-20260817-timetree-93663853
   slug: 20260817-timetree-93663853
   date: 2026-08-17 18:00:00 +0900
@@ -385,39 +411,87 @@
 - id: event-20260818-timetree-56983263
   slug: 20260818-timetree-56983263
   date: 2026-08-18 12:00:00 +0900
-  title: 渋谷La.mama
+  title: あおはるproduce ツーマンライブ！（平日昼間5DAYS DAY2）
   site: 渋谷La.mama
   timetree_id: "2966939843956983263"
+  labels:
+    - あおはるソロ
+  acts:
+    - ロットン瑠唯
   content: |
-    TBD
+    なんちゃらアイドル主催「渋谷La.mama平日昼間5DAYS」2日目。
+    あおはるproduceによる、ロットン瑠唯とのツーマンライブ。
+
+    【出演】
+    ロットン瑠唯 / なんちゃらアイドル
+
+    OPEN/START　11:30/12:00
+    ¥2,500＋D
+  sources:
+    - https://x.com/yokuwakan_nai/status/2084638698029940751
   images:
     - /events/20260818-timetree-56983263.jpg
 - id: event-20260819-timetree-56484763
   slug: 20260819-timetree-56484763
   date: 2026-08-19 12:00:00 +0900
-  title: 渋谷La.mama
+  title: なんちゃらアイドル主催 渋谷La.mama平日昼間5DAYS DAY3
   site: 渋谷La.mama
   timetree_id: "2966939923556484763"
   content: |
-    TBD
+    8月17日〜21日の5日間、なんちゃらアイドルが昼間の渋谷La.mamaをジャックする
+    主催シリーズ「渋谷La.mama平日昼間5DAYS」の3日目。詳細は決まり次第更新。
+  sources:
+    - https://x.com/samami27/status/2084209270078541884
 - id: event-20260820-timetree-03782465
   slug: 20260820-timetree-03782465
-  date: 2026-08-20 12:00:00 +0900
-  title: 渋谷La.mama
+  date: 2026-08-20 11:30:00 +0900
+  title: らふ LAUGH（御茶海マミ主催・平日昼間5DAYS DAY4）
   site: 渋谷La.mama
   timetree_id: "2966940014203782465"
   labels:
     - マミソロ
+  acts:
+    - 鼻矢印永井
+    - フーテンパイン
+    - 万能ビニール
+    - 電動スミス
   content: |
-    TBD
+    なんちゃらアイドル主催「渋谷La.mama平日昼間5DAYS」4日目は御茶海マミ
+    ブッキングの日「らふ LAUGH」。マミ以外は全員芸人。あおはるはお休みで
+    マミのソロ出演。
+
+    【タイムテーブル】
+    11:30　御茶海マミ①（5分）
+    11:35　鼻矢印永井
+    11:40　フーテンパイン
+    11:45　万能ビニール
+    11:50　電動スミス
+    11:55　御茶海マミ②（5分）
+    12:00　鼻矢印永井
+    12:05　フーテンパイン
+    12:10　万能ビニール
+    12:15　電動スミス
+    12:20　休憩（10分）
+    12:30　御茶海マミ③（25分）
+    12:55　終演（物販 13:00〜14:00）
+
+    OPEN/START　11:00/11:30
+    料金　¥2,500＋ドリンク代
+  sources:
+    - https://x.com/samami27/status/2084209270078541884
+  images:
+    - /events/20260820-timetree-03782465.jpeg
 - id: event-20260821-timetree-58727310
   slug: 20260821-timetree-58727310
   date: 2026-08-21 12:00:00 +0900
-  title: 渋谷La.mama
+  title: なんちゃらアイドル主催 渋谷La.mama平日昼間5DAYS DAY5
   site: 渋谷La.mama
   timetree_id: "2966940097158727310"
   content: |
-    TBD
+    8月17日〜21日の5日間、なんちゃらアイドルが昼間の渋谷La.mamaをジャックする
+    主催シリーズ「渋谷La.mama平日昼間5DAYS」の最終日。詳細は決まり次第更新。
+  sources:
+    - https://x.com/samami27/status/2084209270078541884
 - id: event-20260822-timetree-79763485
   slug: 20260822-timetree-79763485
   date: 2026-08-22 18:00:00 +0900
@@ -436,6 +510,8 @@
   timetree_id: "2966941503752127896"
   content: |
     TBD
+  images:
+    - /events/20260825-timetree-52127896.jpg
 - id: event-20260826-timetree-58844859
   slug: 20260826-timetree-58844859
   date: 2026-08-26 19:00:00 +0900
