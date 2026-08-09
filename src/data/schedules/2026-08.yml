@@ -384,15 +384,29 @@
   timetree_id: "3022236173595723456"
 - id: event-20260817-timetree-58495452
   slug: 20260817-timetree-58495452
-  date: 2026-08-17 12:00:00 +0900
-  title: なんちゃらアイドル主催 渋谷La.mama平日昼間5DAYS DAY1
+  date: 2026-08-17 11:00:00 +0900
+  title: なんちゃらアイドル主催 ラママ５デイズ！〜1日目〜
   site: 渋谷La.mama
   timetree_id: "2966939755658495452"
+  acts:
+    - S.B.Q.アイドル部
   content: |
-    8月17日〜21日の5日間、なんちゃらアイドルが昼間の渋谷La.mamaをジャックする
-    主催シリーズ「渋谷La.mama平日昼間5DAYS」の1日目。詳細は決まり次第更新。
+    なんちゃらアイドル主催「渋谷La.mama平日昼間5DAYS」1日目。
+    なんちゃらアイドル×S.B.Q.アイドル部。
+
+    【タイムテーブル】
+    11:00　なんちゃらアイドル（25分）
+    11:30　S.B.Q.アイドル部（25分）
+    12:00　なんちゃらアイドル（25分）
+    12:30　S.B.Q.アイドル部（25分）
+
+    10時30分open / 11時start
+    2500円（drink別）/ 配信2000円
   sources:
     - https://x.com/samami27/status/2084209270078541884
+    - https://x.com/nantyaraidol/status/2085068618086371613
+  images:
+    - /events/20260817-timetree-58495452.jpeg
 - id: event-20260817-timetree-93663853
   slug: 20260817-timetree-93663853
   date: 2026-08-17 18:00:00 +0900
@@ -484,14 +498,25 @@
 - id: event-20260821-timetree-58727310
   slug: 20260821-timetree-58727310
   date: 2026-08-21 12:00:00 +0900
-  title: なんちゃらアイドル主催 渋谷La.mama平日昼間5DAYS DAY5
+  title: なんちゃらアイドル主催 ラママ５デイズ！〜5日目〜 なんちゃらアイドルVS白黒灰脂
   site: 渋谷La.mama
   timetree_id: "2966940097158727310"
+  acts:
+    - 白黒灰脂
   content: |
-    8月17日〜21日の5日間、なんちゃらアイドルが昼間の渋谷La.mamaをジャックする
-    主催シリーズ「渋谷La.mama平日昼間5DAYS」の最終日。詳細は決まり次第更新。
+    なんちゃらアイドル主催「渋谷La.mama平日昼間5DAYS」最終日。
+    セカンドアルバム『life goes on』再現ライブ。
+
+    なんちゃらアイドルのライブ中に、白黒灰脂が渾身のドローイング！
+    当日限定の描きおろしサイン入りイラストを来場者全員にプレゼント。
+
+    11時30分open / 12時start
+    2500円（drink別）/ 配信2000円
   sources:
     - https://x.com/samami27/status/2084209270078541884
+    - https://x.com/nantyaraidol/status/2085069043359416584
+  images:
+    - /events/20260821-timetree-58727310.jpeg
 - id: event-20260822-timetree-79763485
   slug: 20260822-timetree-79763485
   date: 2026-08-22 18:00:00 +0900
@@ -513,6 +538,7 @@
     - 円盤少女
     - 小日向由衣
     - the 部族
+    - NEKO
     - 石塚還暦リスペクトバンド
     - 鈴木祥子
   content: |
@@ -525,6 +551,7 @@
     円盤少女
     小日向由衣
     the部族
+    NEKO
     石塚還暦リスペクトバンド
     ★SPECIAL GUEST：鈴木祥子
 
@@ -538,6 +565,7 @@
   sources:
     - https://x.com/nantyaraidol/status/2084177468580069684
     - https://x.com/nantyaraidol/status/2084177516592574748
+    - https://x.com/nantyaraidol/status/2084895281959911802
   images:
     - /events/20260825-timetree-52127896.jpg
 - id: event-20260826-timetree-58844859
