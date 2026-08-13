@@ -342,7 +342,33 @@
   title: 蒲田オッタンタ
   site: 蒲田オッタンタ
   timetree_id: "3019315583847122265"
-  content: TBD
+  content: |-
+    2026
+    オッタンタ☀️サマースペシャルII
+
+    8/15 土曜
+    17:00-17:20 INOMATA(DJ)
+    17:20-17:40 ちかしんじゅん(LIVE)
+    17:40-17:55 mari(DJ)
+    17:55-18:25 北斗(LIVE)
+    18:25-18:40 KILLA(DJ)
+    18:40-19:10 くわはら(LIVE)
+    19:10-19:25 INOMATA(DJ)
+    19:25-19:55 なんちゃらアイドル(LIVE)
+    19:55-20:10 KILLA(DJ)
+    20:10-20:40 コナミカツオ(LIVE)
+    20:40-20:55 mari(DJ)
+    20:55-21:25 JUN(LIVE)
+    21:25-last 出演者紹介/集合写真撮影
+  acts:
+    - INOMATA
+    - ちかしんじゅん
+    - mari
+    - 北斗
+    - KILLA
+    - くわはら
+    - コナミカツオ
+    - JUN
 - id: event-20260816-lamama
   slug: 20260816-lamama
   date: 2026-08-16 15:45:00 +0900
@@ -605,3 +631,5 @@
   timetree_id: "2966942165948843637"
   content: |
     TBD
+  images:
+    - /events/20260830-timetree-48843637.jpg
