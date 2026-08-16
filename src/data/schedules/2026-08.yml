@@ -474,14 +474,26 @@
 - id: event-20260819-timetree-56484763
   slug: 20260819-timetree-56484763
   date: 2026-08-19 12:00:00 +0900
-  title: なんちゃらアイドル主催 渋谷La.mama平日昼間5DAYS DAY3
+  title: 仲良しツーマン！ なんちゃらアイドル＆sommeil sommeil
   site: 渋谷La.mama
   timetree_id: "2966939923556484763"
   content: |
-    8月17日〜21日の5日間、なんちゃらアイドルが昼間の渋谷La.mamaをジャックする
-    主催シリーズ「渋谷La.mama平日昼間5DAYS」の3日目。詳細は決まり次第更新。
+    なんちゃらアイドル主催「渋谷La.mama平日昼間5DAYS」3日目。
+    なんちゃらアイドル＆sommeil sommeilの仲良しツーマン！
+
+    【タイムテーブル】
+    11:00　なんちゃらアイドル（25分）
+    11:30　sommeil sommeil（25分）
+    12:00　なんちゃらアイドル（25分）
+    12:30　sommeil sommeil（25分）
+
+    10時30分open / 11時start
+    2500円（drink別）/ 配信2000円
+    来場者全員に限定缶バッジプレゼント！
   sources:
     - https://x.com/samami27/status/2084209270078541884
+  images:
+    - /events/20260819-timetree-56484763.jpg
 - id: event-20260820-timetree-03782465
   slug: 20260820-timetree-03782465
   date: 2026-08-20 11:30:00 +0900
