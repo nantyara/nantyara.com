@@ -87,11 +87,17 @@
 - id: event-20260909-timetree-38990386
   slug: 20260909-timetree-38990386
   date: 2026-09-09 19:00:00 +0900
-  title: 渋谷La.mama
+  title: なんちゃらアイドル主催 大人の文化祭〜秋の味覚〜
   site: 渋谷La.mama
   timetree_id: "2966943429138990386"
   content: |
-    TBD
+    なんちゃらアイドル主催「大人の文化祭〜秋の味覚〜」。
+
+    開場/開演　18:30/19:00
+
+    詳細は決まり次第更新。
+  sources:
+    - https://x.com/nantyaraidol/status/2091176215889781049
   images:
     - /events/20260909-timetree-38990386.jpg
 - id: event-20260911-timetree-85921089
