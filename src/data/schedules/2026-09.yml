@@ -176,9 +176,9 @@
   content: TBD
 - id: event-20260927-johnny-angel
   slug: 20260927-johnny-angel
-  date: 2026-09-27 19:30:00 +0900
+  date: 2026-09-27 11:30:00 +0900
   title: JOHNNYフォノフォンなんちゃらANGELな夜
-  site: 小岩JOHNNY ANGEL
+  site: 本八幡Route Fourteen
   timetree_id: "3011753690873874035"
   content: |
     【出演】
@@ -186,15 +186,18 @@
     なんちゃらアイドル
     special guest：シンヤ隊（Empty Black Box）
 
-    開場/開演　19:00/19:30
+    開場/開演　11:00/11:30
     前売　¥3,500（ドリンク代別）
     当日　¥4,000（ドリンク代別）
-    ツイキャスプレミア　¥2,500
 
-    ★予約（7/20 21:00〜）
-    件名「9/27小岩JOHNNY ANGEL予約」でお名前・人数（1メール2名まで）を明記し
+    ※当初は9/27(日)19:00/19:30・小岩JOHNNY ANGELでの夜公演として告知されていたが、
+    8/26に会場都合により本八幡Route Fourteenでの昼公演に変更となった。
+
+    ★予約
+    件名「9/27本八幡予約」でお名前・人数（1メール2名まで）を明記し
     phonophone2023@gmail.com へメール
     ※返信で整理番号発行。入場順は整理番号順
+    ※会場変更前に予約済みの場合はそのまま有効
   images:
     - /events/20260927-johnny-angel.jpeg
   acts:
@@ -202,6 +205,8 @@
     - シンヤ隊（Empty Black Box）
   sources:
     - https://x.com/phonophone2023/status/2076634303589744851
+    - https://x.com/phonophone2023/status/2092466017771643052
+    - https://x.com/phonophone2023/status/2093277279325753646
 - id: event-20260929-timetree-92309267
   slug: 20260929-timetree-92309267
   date: 2026-09-29 18:00:00 +0900
