@@ -106,7 +106,12 @@
   title: 青山月見ル君想フ
   site: 青山月見ル君想フ
   timetree_id: "3038752620085921089"
-  content: TBD
+  content: |-
+    TBD
+
+    詳細: https://tiget.net/events/517549
+  images:
+    - /events/20260911-timetree-85921089.jpg
 - id: event-20260912-timetree-85686051
   slug: 20260912-timetree-85686051
   date: 2026-09-12 10:00:00 +0900
