@@ -130,6 +130,34 @@
   acts:
     - sommeil sommeil
   content: sommeil sommeilツーマン
+- id: event-20260918-timetree-80603103
+  slug: 20260918-timetree-80603103
+  date: 2026-09-18 18:00:00 +0900
+  title: 渋谷La.mama
+  site: 渋谷La.mama
+  timetree_id: "3050103346980603103"
+  content: |-
+    9/18 渋谷La.mama
+
+    タイトル: 夢想花　飛んで飛んで
+
+    open18:00/start18:30
+
+    前売り/当日共に2500円(ドリンク別)
+
+    出演:
+    なんちゃらアイドル
+    taberusan
+    S.B.Q.アイドル部
+    小日向由衣
+    流星楽団
+    佐伯こむぎ
+    ジョニー大蔵大臣(水中、それは苦しい)
+
+    サブステージ:
+    MAUDIE
+  images:
+    - /events/20260918-timetree-80603103.jpg
 - id: event-20260919-timetree-64325349
   slug: 20260919-timetree-64325349
   date: 2026-09-19 10:00:00 +0900
