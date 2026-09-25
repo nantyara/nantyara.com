@@ -238,7 +238,17 @@
 - id: event-20260929-timetree-92309267
   slug: 20260929-timetree-92309267
   date: 2026-09-29 18:00:00 +0900
-  title: 新宿めたもるふぉーぜ
+  title: なんちゃらゆるカラオケ部 第一回
   site: 新宿めたもるふぉーぜ
   timetree_id: "3038758342492309267"
-  content: TBD
+  content: |
+    なんちゃらアイドル「なんちゃらゆるカラオケ部」第一回。
+    ゲスト：NEKO
+    お客さんも1曲まで歌える。
+
+    開場/開演などの詳細は決まり次第更新。
+  acts:
+    - NEKO
+  sources:
+    - https://x.com/nantyaraidol/status/2100230291550097540
+    - https://x.com/niko2nyan2/status/2100243294655828198
