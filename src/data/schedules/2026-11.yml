@@ -1,12 +1,27 @@
 - id: event-20261101-timetree-44647824
   slug: 20261101-timetree-44647824
   date: 2026-11-01 19:00:00 +0900
-  title: 大久保ひかりのうま
+  title: MOECHANZワンマン応援企画「きみはMOECHANZを知ってるか」
   site: 大久保ひかりのうま
   timetree_id: "3038763600144647824"
-  content: TBD
+  content: |
+    MOECHANZワンマンの応援企画。35分ずつ、アコースティック？バンド？編成スリーマン！
+
+    開場18:30 開演19:00
+    2,000円＋Drink
+
+    19:00　小日向由衣アコースティック
+    19:50　なんちゃらアイドル
+    20:40　MOECHANZ
+
+    予約: https://tiget.net/events/522835
   images:
     - /events/20261101-timetree-44647824.jpg
+  acts:
+    - 小日向由衣
+    - MOECHANZ
+  sources:
+    - https://x.com/kudo_chan_bot/status/2099499453476753832
 - id: event-20261102-timetree-93800959
   slug: 20261102-timetree-93800959
   date: 2026-11-02 18:00:00 +0900
@@ -16,11 +31,19 @@
   content: ゆるワンマン
 - id: event-20261103-timetree-79702692
   slug: 20261103-timetree-79702692
-  date: 2026-11-03 19:00:00 +0900
-  title: 渋谷La.mama
+  date: 2026-11-03 20:00:00 +0900
+  title: なんちゃらアイドルワンマンライブin渋谷ラママ2026
   site: 渋谷La.mama
   timetree_id: "3038764127779702692"
-  content: なんちゃらアイドルワンマンライブ
+  content: |
+    なんちゃらアイドルワンマンライブ。
+
+    OPEN/START　19:30/20:00
+    ADV/DOOR　￥3,000＋D
+
+    ツイキャスプレミア配信 ¥2,000（アーカイブ2週間）
+  sources:
+    - https://x.com/shibuya_lamama/status/2099057880188244435
 - id: event-20261105-timetree-73377147
   slug: 20261105-timetree-73377147
   date: 2026-11-05 19:00:00 +0900
