@@ -51,6 +51,31 @@
   site: 渋谷La.mama
   timetree_id: "3038764454373377147"
   content: 大人の文化祭
+- id: event-20261109-timetree-78959282
+  slug: 20261109-timetree-78959282
+  date: 2026-11-09 18:00:00 +0900
+  title: 東新宿LOVE TKO
+  site: 東新宿LOVE TKO
+  timetree_id: "3067496187578959282"
+  content: TBD
+  labels:
+    - マミソロ
+- id: event-20261110-timetree-29747612
+  slug: 20261110-timetree-29747612
+  date: 2026-11-10 18:00:00 +0900
+  title: 歌舞伎町めたもるふぉーぜ
+  site: 歌舞伎町めたもるふぉーぜ
+  timetree_id: "3067496444429747612"
+  content: TBD
+  labels:
+    - マミソロ
+- id: event-20261116-timetree-17636682
+  slug: 20261116-timetree-17636682
+  date: 2026-11-16 19:00:00 +0900
+  title: 下北沢ろくでもない夜
+  site: 下北沢ろくでもない夜
+  timetree_id: "3067496660117636682"
+  content: TBD
 - id: event-20261121-timetree-32674248
   slug: 20261121-timetree-32674248
   date: 2026-11-21 12:00:00 +0900
@@ -90,3 +115,35 @@
     - 美里ウィンチェスター
   sources:
     - https://x.com/koujichuankou8/status/2093540708254916809
+- id: event-20261122-timetree-11849290
+  slug: 20261122-timetree-11849290
+  date: 2026-11-22 18:00:00 +0900
+  title: 新宿紅布
+  site: 新宿紅布
+  timetree_id: "3067497272611849290"
+  content: TBD
+- id: event-20261124-timetree-23195225
+  slug: 20261124-timetree-23195225
+  date: 2026-11-24 18:00:00 +0900
+  title: 歌舞伎町めたもるふぉーぜ
+  site: 歌舞伎町めたもるふぉーぜ
+  timetree_id: "3067496834223195225"
+  content: TBD
+  labels:
+    - あおはるソロ
+- id: event-20261128-timetree-63192367
+  slug: 20261128-timetree-63192367
+  date: 2026-11-28 12:00:00 +0900
+  title: SBQ撮影会
+  site: SBQ撮影会
+  timetree_id: "3067497965863192367"
+  content: TBD
+- id: event-20261129-timetree-64492676
+  slug: 20261129-timetree-64492676
+  date: 2026-11-29 15:00:00 +0900
+  title: スマカノ感謝祭
+  site: スマカノ感謝祭
+  timetree_id: "3067498091264492676"
+  content: TBD
+  images:
+    - /events/20261129-timetree-64492676.jpg

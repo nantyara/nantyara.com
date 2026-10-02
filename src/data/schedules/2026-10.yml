@@ -67,6 +67,15 @@
     http://neweight.tokyo/
   images:
     - /events/20261009-timetree-06792819.jpg
+- id: event-20261011-timetree-32806326
+  slug: 20261011-timetree-32806326
+  date: 2026-10-11 13:00:00 +0900
+  title: SBQ撮影会
+  site: SBQ撮影会
+  timetree_id: "3067494036932806326"
+  content: TBD
+  labels:
+    - マミソロ
 - id: event-20261012-timetree-48759899
   slug: 20261012-timetree-48759899
   date: 2026-10-12 18:00:00 +0900
@@ -132,6 +141,15 @@
     - /events/ottanta-dj-2026.jpeg
   acts:
     - "Q太郎"
+- id: event-20261030-timetree-75072957
+  slug: 20261030-timetree-75072957
+  date: 2026-10-30 19:00:00 +0900
+  title: 蒲田オッタンタ
+  site: 蒲田オッタンタ
+  timetree_id: "3067495600175072957"
+  content: TBD
+  images:
+    - /events/20261030-timetree-75072957.jpg
 - id: event-20261031-timetree-47206336
   slug: 20261031-timetree-47206336
   date: 2026-10-31 12:00:00 +0900
