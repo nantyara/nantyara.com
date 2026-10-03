@@ -122,6 +122,13 @@
   site: 新宿紅布
   timetree_id: "3067497272611849290"
   content: TBD
+- id: event-20261123-timetree-53528757
+  slug: 20261123-timetree-53528757
+  date: 2026-11-23 18:00:00 +0900
+  title: 東新宿LOVE TKO
+  site: 東新宿LOVE TKO
+  timetree_id: "3068364620453528757"
+  content: ソメソメツーマン
 - id: event-20261124-timetree-23195225
   slug: 20261124-timetree-23195225
   date: 2026-11-24 18:00:00 +0900
