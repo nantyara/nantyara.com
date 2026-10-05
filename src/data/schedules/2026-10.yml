@@ -128,11 +128,32 @@
     - あおはるソロ
 - id: event-20261017-timetree-94069830
   slug: 20261017-timetree-94069830
-  date: 2026-10-17 10:00:00 +0900
-  title: 新宿ANTI KNOCK
+  date: 2026-10-17 09:30:00 +0900
+  title: ANTIKNOCK 41st Anniversary「SPICE GIRLS vol.62」
   site: 新宿ANTI KNOCK
   timetree_id: "3038760576194069830"
-  content: TBD
+  content: |
+    【出演】
+    09:30〜09:55　ブルベア
+    09:55〜10:20　Village in Maier
+    10:20〜10:45　なんちゃらアイドル（並行物販 A 11:00〜12:00）
+    10:45〜11:10　終末のステラ
+    11:10〜11:35　僕には通じない
+    11:35〜12:00　AKIARIM
+
+    OPEN 09:15 / START 09:30 / CLOSE 13:00
+    ADV ¥2,500 / DOOR ¥3,000（+1drink ¥600）
+    チケット: https://livepocket.jp/e/spice62
+  images:
+    - /events/20261017-timetree-94069830.jpg
+  acts:
+    - ブルベア
+    - Village in Maier
+    - 終末のステラ
+    - 僕には通じない
+    - AKIARIM
+  sources:
+    - https://x.com/antiknock1985/status/2105589023267791240
 - id: event-20261018-timetree-91390958
   slug: 20261018-timetree-91390958
   date: 2026-10-18 13:00:00 +0900
@@ -175,11 +196,26 @@
     - "Q太郎"
 - id: event-20261030-timetree-75072957
   slug: 20261030-timetree-75072957
-  date: 2026-10-30 19:00:00 +0900
-  title: 蒲田オッタンタ
+  date: 2026-10-30 19:30:00 +0900
+  title: OKFK 大田区蒲田復興協会 〜ゴジラに焼かれた町から〜 episode 53 HALLOWEEN SPECIAL
   site: 蒲田オッタンタ
   timetree_id: "3067495600175072957"
-  content: TBD
+  content: |
+    【出演】
+    19時30分　海乃みなみ
+    20時00分　MCあんにゅ
+    20時30分　香栄
+    21時05分　なんちゃらアイドル
+
+    開場 19時00分 / 開演 19時30分
+    チケット 3,000円（ドリンク込み）
+    会場 スタジオ・オッタンタ（東京都大田区蒲田5-7-6 2F）
+  acts:
+    - 海乃みなみ
+    - MCあんにゅ
+    - 香栄
+  sources:
+    - https://x.com/K_Genda/status/2105417406537691610
   images:
     - /events/20261030-timetree-75072957.jpg
 - id: event-20261031-timetree-47206336
