@@ -59,11 +59,22 @@
     - /events/20261004-timetree-26602127.jpg
 - id: event-20261005-timetree-75282967
   slug: 20261005-timetree-75282967
-  date: 2026-10-05 18:00:00 +0900
-  title: 東新宿LOVE TKO
+  date: 2026-10-05 19:00:00 +0900
+  title: なんちゃらアイドル マンスリーゆるワンマン！
   site: 東新宿LOVE TKO
   timetree_id: "3038759297275282967"
-  content: ゆるワンマン
+  content: |
+    なんちゃらアイドルのマンスリーゆるワンマン。
+    新曲「baby a go go partⅡ」をゆるプレ初公開！
+
+    18時open / 19時start
+    charge 1,500円
+
+    19時までに来場の方全員にTKOとのコラボライタープレゼント！
+  images:
+    - /events/20261005-timetree-75282967.jpg
+  sources:
+    - https://x.com/yokuwakan_nai/status/2107016232876806521
 - id: event-20261006-timetree-53804617
   slug: 20261006-timetree-53804617
   date: 2026-10-06 18:00:00 +0900
