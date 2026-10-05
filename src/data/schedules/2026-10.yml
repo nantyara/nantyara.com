@@ -1,21 +1,53 @@
 - id: event-20261001-timetree-32643641
   slug: 20261001-timetree-32643641
   date: 2026-10-01 19:00:00 +0900
-  title: 新宿wildside tokyo
+  title: OMATSURI presents MOBILE ORDER GIG
   site: 新宿wildside tokyo
   timetree_id: "3066570644532643641"
-  content: TBD
+  content: |
+    【出演】
+    ドン・マルティネス
+    TAPE&DRIVES
+    Paris Death Hilton
+    なんちゃらアイドル
+    フード：きしぱん
+
+    OPEN 19:00 START 19:40
+    前売 ¥2,500 当日 ¥3,000（+1 drink）
+    ドリンク100杯達成でプレゼント
   images:
     - /events/20261001-timetree-32643641.jpg
+  acts:
+    - ドン・マルティネス
+    - TAPE&DRIVES
+    - Paris Death Hilton
+  sources:
+    - https://x.com/rotten_rui/status/2105581261867852265
 - id: event-20261002-timetree-99127660
   slug: 20261002-timetree-99127660
   date: 2026-10-02 18:00:00 +0900
-  title: 大森風に吹かれて
+  title: 特盛音楽祭vol.12
   site: 大森風に吹かれて
   timetree_id: "3062345023099127660"
-  content: TBD
+  content: |
+    【出演】
+    藤岡藤巻without藤巻
+    なんちゃらアイドル
+    S.B.Q.アイドル部
+    ホタルイカ
+
+    OPEN 18:00 / START 18:30
+    前売 ¥3,000 / 当日 ¥3,500（+1オーダー）
+
+    予約: https://tiget.net/events/523852
   images:
     - /events/20261002-timetree-99127660.jpg
+  acts:
+    - 藤岡藤巻without藤巻
+    - S.B.Q.アイドル部
+    - ホタルイカ
+  sources:
+    - https://twitter.com/tokyo_sabaku330/status/2103341293523059193
 - id: event-20261004-timetree-26602127
   slug: 20261004-timetree-26602127
   date: 2026-10-04 12:00:00 +0900

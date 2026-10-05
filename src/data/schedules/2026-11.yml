@@ -53,13 +53,30 @@
   content: 大人の文化祭
 - id: event-20261109-timetree-78959282
   slug: 20261109-timetree-78959282
-  date: 2026-11-09 18:00:00 +0900
-  title: 東新宿LOVE TKO
+  date: 2026-11-09 19:00:00 +0900
+  title: 隔月刊御茶海マミ 11月号（vol.011）
   site: 東新宿LOVE TKO
   timetree_id: "3067496187578959282"
-  content: TBD
+  content: |
+    special guest：今村竜也 / じゅんじゅん / ウクレレ高円寺
+
+    18時open 19時00分start
+    1,500円（drink別）
+
+    19時00分　ウクレレ高円寺
+    19時40分　じゅんじゅん
+    20時20分　御茶海マミ
+    21時00分　今村竜也
   labels:
     - マミソロ
+  images:
+    - /events/20261109-timetree-78959282.jpg
+  acts:
+    - ウクレレ高円寺
+    - じゅんじゅん
+    - 今村竜也
+  sources:
+    - https://x.com/tatsuyaimamura/status/2105824050048364809
 - id: event-20261110-timetree-29747612
   slug: 20261110-timetree-29747612
   date: 2026-11-10 18:00:00 +0900
