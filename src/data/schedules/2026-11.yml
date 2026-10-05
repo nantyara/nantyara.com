@@ -117,8 +117,7 @@
     - /events/20261121-timetree-32674248.jpg
 - id: event-20261122-redcloth
   slug: 20261122-redcloth
-  date: 2026-11-22 00:00:00 +0900
-  time_tbd: true
+  date: 2026-11-22 18:00:00 +0900
   title: 美里ウィンチェスター わんまん屋さん ✕【Ｇ音】カワグチコウPresents
   site: 新宿RedCloth
   content: |
@@ -132,13 +131,7 @@
     - 美里ウィンチェスター
   sources:
     - https://x.com/koujichuankou8/status/2093540708254916809
-- id: event-20261122-timetree-11849290
-  slug: 20261122-timetree-11849290
-  date: 2026-11-22 18:00:00 +0900
-  title: 新宿紅布
-  site: 新宿紅布
   timetree_id: "3067497272611849290"
-  content: TBD
 - id: event-20261123-timetree-53528757
   slug: 20261123-timetree-53528757
   date: 2026-11-23 18:00:00 +0900

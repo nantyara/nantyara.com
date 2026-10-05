@@ -291,6 +291,7 @@
   name: めたもるふぉーぜ
   aliases:
     - めたもるふぉ～ぜ
+    - 歌舞伎町めたもるふぉーぜ
     - 新宿めたもるふぉーぜ
   address: 東京都新宿区歌舞伎町2-39-2 三幸ビルB館5F-E
   x: barmetamorphose
@@ -579,6 +580,7 @@
   name: 新宿red cloth（紅布）
   aliases:
     - 新宿Red cloth
+    - 新宿紅布
   address: 東京都新宿区西新宿7-6-6 DS新宿ビルB1F
   url: https://redcloth.sputniklab.com
   x: shinjuku_redcloth
