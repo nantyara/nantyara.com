@@ -51,7 +51,7 @@
 - id: event-20261004-timetree-26602127
   slug: 20261004-timetree-26602127
   date: 2026-10-04 12:00:00 +0900
-  title: 町田ヒットパレード
+  title: Hプロダクション Wonderful days in 町田
   site: 町田ヒットパレード
   timetree_id: "3066940255526602127"
   content: フライヤーの会場から町田ヒットパレードになりました！時間、料金、プログラム内容は変わらずです！
@@ -78,19 +78,44 @@
 - id: event-20261006-timetree-53804617
   slug: 20261006-timetree-53804617
   date: 2026-10-06 18:00:00 +0900
-  title: 新宿めたもるふぉーぜ
+  title: 御茶海マミのバーイベ
   site: 新宿めたもるふぉーぜ
   timetree_id: "3038759482453804617"
-  content: TBD
+  content: |
+    18時からめたもるふぉ～ぜにて、御茶海マミのバーイベ！
+    美味しいfoodも出る。遠隔ドリンクも受付。
   labels:
     - マミソロ
+  sources:
+    - https://x.com/nantyaraidol/status/2106817479624581204
 - id: event-20261008-timetree-39712495
   slug: 20261008-timetree-39712495
-  date: 2026-10-08 19:00:00 +0900
-  title: 渋谷La.mama
+  date: 2026-10-08 18:30:00 +0900
+  title: なんちゃらアイドル主催 大人の文化祭 in渋谷ラママ
   site: 渋谷La.mama
   timetree_id: "3038759783839712495"
-  content: 大人の文化祭
+  content: |
+    【出演】
+    18:30　ギャロウズ
+    19:00　音音愛音
+    19:30　S.B.Q.アイドル部
+    20:00　擬人化にゃんた
+    20:40　LYL
+    21:10　なんちゃらアイドル
+
+    18時open 18時半start
+    2,500円（drink別）
+    ツイキャスプレミア配信 ¥2,000（アーカイブ2週間）
+  images:
+    - /events/20261008-timetree-39712495.jpg
+  acts:
+    - ギャロウズ
+    - 音音愛音
+    - S.B.Q.アイドル部
+    - 擬人化にゃんた
+    - LYL
+  sources:
+    - https://x.com/shibuya_lamama/status/2098714136830169093
 - id: event-20261009-timetree-06792819
   slug: 20261009-timetree-06792819
   date: 2026-10-09 19:00:00 +0900
