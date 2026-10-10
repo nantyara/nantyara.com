@@ -181,6 +181,8 @@
   site: 渋谷LOFT HEAVEN
   timetree_id: "3071607280303752293"
   content: TBD
+  images:
+    - /events/20261020-timetree-03752293.jpg
 - id: event-20261024-timetree-07446197
   slug: 20261024-timetree-07446197
   date: 2026-10-24 12:00:00 +0900
@@ -190,6 +192,15 @@
   content: TBD
   images:
     - /events/20261024-timetree-07446197.jpg
+- id: event-20261025-timetree-77810332
+  slug: 20261025-timetree-77810332
+  date: 2026-10-25 07:00:00 +0900
+  title: 東新宿LOVE TKO
+  site: 東新宿LOVE TKO
+  timetree_id: "3072730892477810332"
+  content: TBD
+  images:
+    - /events/20261025-timetree-77810332.jpg
 - id: event-20261028-timetree-75262658
   slug: 20261028-timetree-75262658
   date: 2026-10-28 19:00:00 +0900

@@ -1,3 +1,10 @@
+- id: event-20261207-timetree-13010044
+  slug: 20261207-timetree-13010044
+  date: 2026-12-07 18:00:00 +0900
+  title: 東新宿LOVE TKO
+  site: 東新宿LOVE TKO
+  timetree_id: "3073656470513010044"
+  content: TBD
 - id: event-20261213-nantyara-fes-shinshoga
   slug: 20261213-nantyara-fes-shinshoga
   date: 2026-12-13 12:00:00 +0900
@@ -13,6 +20,13 @@
     開演時刻・出演者など詳細は決まり次第更新。
   sources:
     - https://x.com/nantyaraidol/status/2070891018833256719
+- id: event-20261214-timetree-67377512
+  slug: 20261214-timetree-67377512
+  date: 2026-12-14 18:00:00 +0900
+  title: 東新宿LOVE TKO
+  site: 東新宿LOVE TKO
+  timetree_id: "3073656625467377512"
+  content: TBD
 - id: event-20261216-timetree-36166912
   slug: 20261216-timetree-36166912
   date: 2026-12-16 19:00:00 +0900
@@ -35,3 +49,10 @@
     - /events/ottanta-dj-2026.jpeg
   acts:
     - "Q太郎"
+- id: event-20261221-timetree-23546035
+  slug: 20261221-timetree-23546035
+  date: 2026-12-21 18:00:00 +0900
+  title: 東新宿LOVE TKO
+  site: 東新宿LOVE TKO
+  timetree_id: "3073656847723546035"
+  content: TBD

@@ -489,6 +489,8 @@
   note: 正式には「交流Bar あかね」。早大生中心の交流バー・トークイベント会場
 - id: star-lounge
   name: 渋谷スターラウンジ
+  aliases:
+    - 渋谷STAR LOUNGE
   address: 東京都渋谷区宇田川町4-7 トウセン宇田川ビル1F
   url: http://starlounge.jp
   x: _StarLounge_
@@ -1843,3 +1845,6 @@
 - id: shinjuku-wildside-tokyo
   name: 新宿wildside tokyo
   note: 新宿の会場。詳細未調査
+- id: nishikawaguchi-lavis
+  name: 西川口Lavis
+  note: 西川口の会場。詳細未調査
