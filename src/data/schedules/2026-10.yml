@@ -202,21 +202,75 @@
 - id: event-20261020-timetree-03752293
   slug: 20261020-timetree-03752293
   date: 2026-10-20 19:00:00 +0900
-  title: 渋谷LOFT HEAVEN
+  title: まくら投げパーティー14投目！
   site: 渋谷LOFT HEAVEN
   timetree_id: "3071607280303752293"
-  content: TBD
+  content: |
+    【出演】
+    甲斐莉乃
+    sommeil sommeil
+    なんちゃらアイドル
+
+    OPEN 19:00 / START 19:30
+    前売 ¥2,000 / 当日 ¥2,500（+1D）
+    配信 ¥1,500
+
+    チケット: https://livepocket.jp/e/20261020
+    配信: https://premier.twitcasting.tv/loft_heaven/shopcart/458451
   images:
     - /events/20261020-timetree-03752293.jpg
+  acts:
+    - 甲斐莉乃
+    - sommeil sommeil
+  sources:
+    - https://x.com/norimaika_info/status/2108166484493234331
 - id: event-20261024-timetree-07446197
   slug: 20261024-timetree-07446197
   date: 2026-10-24 12:00:00 +0900
-  title: 足利ライブハウス大使館
+  title: HORROR BILLY NIGHTS 2026 DAY1
   site: 足利ライブハウス大使館
   timetree_id: "3038762695307446197"
-  content: TBD
+  content: |
+    めろん畑a go go 主催 HALLOWEEN LIVE SHOW（2DAYS の DAY1）
+
+    【DAY1 出演】
+    -GOLLIPOP RECORD-
+    めろん畑a go go
+    The Grateful a MogAAAz -BAND SET-
+    POPPY WHAT AM I?
+    さかさまJr.
+    -GUEST-
+    Ac!u Gromov -BAND SET-
+    始発待ちアンダーグラウンド
+    せのしすたぁ
+    Tariki Echo
+    なんちゃらアイドル
+    The Paint It Blue
+    The Peppermint Jam
+    -DJ-
+    DJ WOLF / おぺちん / KAZ(RUDE58) / TAMAE(PONYTAILS) / TOSSY / ブル新中野
+
+    OPEN 11:00 / START 12:00
+    通し券のみ ¥4,500 / 学生無料（各日入場時に1D代別）
+    仮装して来場で特製缶バッジプレゼント
+
+    予約: https://tiget.net/events/517984
+    特設: https://lit.link/HORRORBILLYNIGHTS
   images:
     - /events/20261024-timetree-07446197.jpg
+  acts:
+    - めろん畑a go go
+    - The Grateful a MogAAAz
+    - POPPY WHAT AM I?
+    - さかさまJr.
+    - Ac!u Gromov
+    - 始発待ちアンダーグラウンド
+    - せのしすたぁ
+    - Tariki Echo
+    - The Paint It Blue
+    - The Peppermint Jam
+  sources:
+    - https://x.com/MELONBATAKEAGO2/status/2111712714271961322
 - id: event-20261025-timetree-77810332
   slug: 20261025-timetree-77810332
   date: 2026-10-25 07:00:00 +0900

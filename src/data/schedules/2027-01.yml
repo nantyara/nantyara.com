@@ -1,9 +1,39 @@
 - id: event-20270110-timetree-92449568
   slug: 20270110-timetree-92449568
   date: 2027-01-10 11:00:00 +0900
-  title: 渋谷LOFT HEAVEN
+  title: 小林清美32周年記念ライブ『愛をありがとう』
   site: 渋谷LOFT HEAVEN
   timetree_id: "3073653573792449568"
-  content: TBD
+  content: |
+    小林清美32周年記念ライブ
+
+    【出演】
+    小林清美
+    石川彩楓
+    LILY&YU
+    小日向由衣
+    まちだガールズクワイア
+    なんちゃらアイドル
+    +tic color
+    雷都少女
+    るん
+    エレクトリックリボン
+
+    OPEN 10:45 / START 11:15
+    ¥4,000（+1D）全席自由
+
+    チケット: https://livepocket.jp/e/270110
   images:
     - /events/20270110-timetree-92449568.jpg
+  acts:
+    - 小林清美
+    - 石川彩楓
+    - LILY&YU
+    - 小日向由衣
+    - まちだガールズクワイア
+    - +tic color
+    - 雷都少女
+    - るん
+    - エレクトリックリボン
+  sources:
+    - https://x.com/eribon_official/status/2109787256139747470

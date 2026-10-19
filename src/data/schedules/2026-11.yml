@@ -158,10 +158,41 @@
 - id: event-20261125-timetree-27807982
   slug: 20261125-timetree-27807982
   date: 2026-11-25 19:00:00 +0900
-  title: 渋谷STAR LOUNGE
+  title: GIRLS! GIRLS! RELATION! Vol.78
   site: 渋谷STAR LOUNGE
   timetree_id: "3073654386027807982"
-  content: TBD
+  content: |
+    【出演】
+    かすみん
+    雨森セラ（from 純情のアフィリア）
+    咲良春花
+    Dorothy∞Drop
+    iLOUZ
+    水花
+    世界逆転宣言
+    なんちゃらアイドル
+    P!ZZA☆PARTi
+    MC：てぃーなか
+
+    OPEN 17:00 / START 17:30
+    前売 ¥3,500 / 当日 ¥4,000（+1ドリンク）
+    配信 ¥2,500（手数料別）／現地＋配信 ¥5,000（+1ドリンク）
+
+    チケット: https://livepocket.jp/e/lbx9z
+    配信: https://premier.twitcasting.tv/nakazimax0812/shopcart/459316
+  images:
+    - /events/20261125-timetree-27807982.jpg
+  acts:
+    - かすみん
+    - 雨森セラ
+    - 咲良春花
+    - Dorothy∞Drop
+    - iLOUZ
+    - 水花
+    - 世界逆転宣言
+    - P!ZZA☆PARTi
+  sources:
+    - https://x.com/pizzaparti_/status/2111789399138607426
 - id: event-20261128-timetree-63192367
   slug: 20261128-timetree-63192367
   date: 2026-11-28 12:00:00 +0900
