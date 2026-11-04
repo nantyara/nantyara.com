@@ -96,10 +96,30 @@
 - id: event-20261116-timetree-17636682
   slug: 20261116-timetree-17636682
   date: 2026-11-16 19:00:00 +0900
-  title: 下北沢ろくでもない夜
+  title: I'm alone now
   site: 下北沢ろくでもない夜
   timetree_id: "3067496660117636682"
-  content: TBD
+  content: |
+    CHICKEN BLOW THE IDOL＆下北沢ろくでもない夜企画
+
+    【出演】
+    CHICKEN BLOW THE IDOL
+    てのひらえる
+    なんちゃらアイドル
+    ソラ豆琴美
+
+    OPEN 18:30 / START 19:00
+    ¥2,800（ドリンク別）
+
+    予約: https://tiget.net/events/534218
+  images:
+    - /events/20261116-timetree-17636682.jpg
+  acts:
+    - CHICKEN BLOW THE IDOL
+    - てのひらえる
+    - ソラ豆琴美
+  sources:
+    - https://twitter.com/chicken__idol/status/2115021530015166607
 - id: event-20261121-timetree-32674248
   slug: 20261121-timetree-32674248
   date: 2026-11-21 12:00:00 +0900
@@ -122,6 +142,24 @@
     詳細: https://eplus.jp/sf/detail/4597290001-P0030001
   images:
     - /events/20261121-timetree-32674248.jpg
+  acts:
+    - クリトリック・リス
+    - アイアムアイ
+    - ハングオーバー
+    - 組織-kohinatayui band-
+    - 萠珈
+    - PINROTA
+    - 中出し少年
+    - taberusan
+    - 超処女カワアイドル あいちゃん
+    - 初咲里奈
+    - PPPR!!-ピポパロ-
+    - おじさん的SD
+    - はる陽。
+    - 寝込みかんぱにゅら
+    - 深夜徘徊
+  sources:
+    - https://x.com/DADAFES/status/2112588090242212226
 - id: event-20261122-redcloth
   slug: 20261122-redcloth
   date: 2026-11-22 18:00:00 +0900

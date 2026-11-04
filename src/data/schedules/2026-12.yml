@@ -49,6 +49,27 @@
     - /events/ottanta-dj-2026.jpeg
   acts:
     - "Q太郎"
+- id: event-20261220-wrestle-butokan
+  slug: 20261220-wrestle-butokan
+  date: 2026-12-20 12:00:00 +0900
+  title: Hプロ蕨レッスル武闘館大会
+  site: レッスル武闘館
+  time_tbd: true
+  content: |
+    Hプロダクションのプロレス大会。なんちゃらアイドルはリングライブ＆EDライブで出演。
+
+    ■オープニングアクト リングライブ
+    亜斗＆地雷系ウサギ めろる
+
+    ■リングライブ＆EDライブ
+    なんちゃらアイドル
+
+    開始時刻は未発表
+  acts:
+    - 亜斗
+    - めろる
+  sources:
+    - https://x.com/pesyumeruga/status/2115396284534423791
 - id: event-20261221-timetree-23546035
   slug: 20261221-timetree-23546035
   date: 2026-12-21 18:00:00 +0900
@@ -56,3 +77,45 @@
   site: 東新宿LOVE TKO
   timetree_id: "3073656847723546035"
   content: TBD
+- id: event-20261231-lamama
+  slug: 20261231-lamama
+  date: 2026-12-31 20:30:00 +0900
+  title: 2026年～2027年 年越しなんちゃらフェス！
+  site: 渋谷La.mama
+  content: |
+    なんちゃらアイドル主催の年越しフェス。
+
+    【出演】
+    なんちゃらアイドル
+    S.B.Q.アイドル部
+    人喰いチャウチャウズ
+    NEKO
+    sommeil sommeil
+    盛りたかった千里（21:30〜）
+    Momoka Kagamiya
+    元祖☆令嬢倶楽部
+    山村茜
+    小日向由衣
+    ぬる
+    御茶海マミ
+    ヒゲと味噌汁
+
+    OPEN 20:00 / START 20:30 / CLOSE 29:00
+    charge ¥3,000（drink別）
+    配信 ¥2,500
+  acts:
+    - S.B.Q.アイドル部
+    - 人喰いチャウチャウズ
+    - NEKO
+    - sommeil sommeil
+    - 盛りたかった千里
+    - Momoka Kagamiya
+    - 元祖☆令嬢倶楽部
+    - 山村茜
+    - 小日向由衣
+    - ぬる
+    - ヒゲと味噌汁
+  sources:
+    - https://x.com/higemisoshirumc/status/2111049046706274441
+    - https://x.com/sommeil_staff/status/2111036707940479105
+    - https://x.com/moritakkata/status/2116041322574270609
