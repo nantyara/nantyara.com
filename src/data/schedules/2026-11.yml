@@ -47,10 +47,34 @@
 - id: event-20261105-timetree-73377147
   slug: 20261105-timetree-73377147
   date: 2026-11-05 19:00:00 +0900
-  title: 渋谷La.mama
+  title: なんちゃらアイドル主催 大人の文化祭 in渋谷ラママ
   site: 渋谷La.mama
   timetree_id: "3038764454373377147"
-  content: 大人の文化祭
+  content: |
+    【出演】
+    なんちゃらアイドル
+    S.B.Q.アイドル部
+    御茶海マミ
+    ぬる
+    サヤカスター
+    ホネテクビ
+    羽賀玲音
+
+    open 18:30 / start 19:00
+    charge ¥2,500
+
+    新曲3曲初公開！
+    1. なんちゃらアイドル「baby a go go partⅡ」
+    2. 御茶海マミ「ワンダフルマイデイズ」
+    3. ぬる「適温地獄」
+  images:
+    - /events/20261105-timetree-73377147.jpg
+  acts:
+    - S.B.Q.アイドル部
+    - ぬる
+    - サヤカスター
+    - ホネテクビ
+    - 羽賀玲音
 - id: event-20261109-timetree-78959282
   slug: 20261109-timetree-78959282
   date: 2026-11-09 19:00:00 +0900
