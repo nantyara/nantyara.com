@@ -73,10 +73,17 @@
 - id: event-20261221-timetree-23546035
   slug: 20261221-timetree-23546035
   date: 2026-12-21 18:00:00 +0900
-  title: 東新宿LOVE TKO
+  title: sommeil sommeil＆なんちゃらアイドル マンスリー2マンライブ！
   site: 東新宿LOVE TKO
   timetree_id: "3073656847723546035"
-  content: TBD
+  content: |
+    sommeil sommeil＆なんちゃらアイドルのマンスリー2マンライブ（11/23 のフライヤーで次回として告知）。
+
+    詳細は追って発表
+  acts:
+    - sommeil sommeil
+  sources:
+    - https://x.com/sommeil_staff/status/2118958347928125746
 - id: event-20261231-lamama
   slug: 20261231-lamama
   date: 2026-12-31 20:30:00 +0900

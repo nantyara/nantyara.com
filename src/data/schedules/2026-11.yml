@@ -25,10 +25,15 @@
 - id: event-20261102-timetree-93800959
   slug: 20261102-timetree-93800959
   date: 2026-11-02 18:00:00 +0900
-  title: 東新宿LOVE TKO
+  title: なんちゃらアイドル ゆるワンマン
   site: 東新宿LOVE TKO
   timetree_id: "3038763890893800959"
-  content: ゆるワンマン
+  content: |
+    東新宿LOVE TKOでゆるワンマン。新曲のプレ発表あり！
+
+    18:00 open / 19:00 start
+  sources:
+    - https://x.com/nantyaraidol/status/2117372513290432735
 - id: event-20261103-timetree-79702692
   slug: 20261103-timetree-79702692
   date: 2026-11-03 20:00:00 +0900
@@ -204,10 +209,28 @@
 - id: event-20261123-timetree-53528757
   slug: 20261123-timetree-53528757
   date: 2026-11-23 18:00:00 +0900
-  title: 東新宿LOVE TKO
+  title: sommeil sommeil＆なんちゃらアイドル マンスリー2マンライブ！
   site: 東新宿LOVE TKO
   timetree_id: "3068364620453528757"
-  content: ソメソメツーマン
+  content: |
+    sommeil sommeil＆なんちゃらアイドルのマンスリー2マンライブ。コラボあり！
+
+    open 18:00 / start 19:00
+    charge ¥1,500（+1D）予約不要
+
+    19:00 なんちゃらアイドル（20分）
+    19:30 sommeil sommeil（20分）
+    20:00 なんちゃらアイドル（20分）
+    20:30 sommeil sommeil（20分）
+
+    次回は2026年12月21日（月）
+  images:
+    - /events/20261123-timetree-53528757.jpg
+  acts:
+    - sommeil sommeil
+  sources:
+    - https://x.com/sommeil_staff/status/2118903870374236385
+    - https://x.com/sommeil_staff/status/2118958347928125746
 - id: event-20261124-timetree-23195225
   slug: 20261124-timetree-23195225
   date: 2026-11-24 18:00:00 +0900
