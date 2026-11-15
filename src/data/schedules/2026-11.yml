@@ -122,6 +122,8 @@
   site: 西川口Lavis
   timetree_id: "3073655727676605874"
   content: TBD
+  images:
+    - /events/20261115-timetree-76605874.jpg
 - id: event-20261116-timetree-17636682
   slug: 20261116-timetree-17636682
   date: 2026-11-16 19:00:00 +0900
