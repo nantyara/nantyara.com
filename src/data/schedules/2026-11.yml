@@ -280,6 +280,13 @@
     - P!ZZA☆PARTi
   sources:
     - https://x.com/pizzaparti_/status/2111789399138607426
+- id: event-20261126-timetree-66294434
+  slug: 20261126-timetree-66294434
+  date: 2026-11-26 19:00:00 +0900
+  title: 池袋Lavis
+  site: 池袋Lavis
+  timetree_id: "3100915326666294434"
+  content: TBD
 - id: event-20261128-timetree-63192367
   slug: 20261128-timetree-63192367
   date: 2026-11-28 12:00:00 +0900
