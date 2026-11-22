@@ -11,6 +11,25 @@ const TitleTag = currentPath === '/' ? 'h1' : 'p';
 ---
 
 <header class="header">
+  <div class="header-rack-deco" aria-hidden="true">
+    <div class="rack-grill"></div>
+    <div class="rack-vignette"></div>
+    <div class="rack-ear rack-ear-left">
+      <span class="rack-slot"></span>
+      <span class="rack-slot"></span>
+    </div>
+    <div class="rack-ear rack-ear-right">
+      <span class="rack-slot"></span>
+      <span class="rack-slot"></span>
+    </div>
+    <div class="rack-label rack-label-left">
+      <span>NANTYARA // CH-01</span>
+    </div>
+    <div class="rack-label rack-label-right">
+      <span class="rack-indicator">PWR <i class="rack-led rack-led-cyan"></i></span>
+      <span class="rack-indicator">ON AIR <i class="rack-led rack-led-pink"></i></span>
+    </div>
+  </div>
   <TitleTag class="title-wrapper">
     <a href="/" class="title-link glitch neon-glow" data-text="なんちゃらアイドル">
       なんちゃらアイドル
@@ -32,15 +51,126 @@ const TitleTag = currentPath === '/' ? 'h1' : 'p';
 
 <style>
   .header {
+    position: relative;
+    overflow: hidden;
     text-align: center;
-    padding: calc(40px + env(safe-area-inset-top, 0px)) 20px 40px;
+    padding: calc(44px + env(safe-area-inset-top, 0px)) 28px 40px;
     margin: 0 0 30px 0;
-    background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+    background: linear-gradient(180deg, #0d0e17 0%, var(--bg-medium) 100%);
     border-bottom: 3px solid var(--retro-pink);
-    box-shadow: 0 4px 20px rgba(255, 110, 199, 0.3);
+    box-shadow:
+      0 4px 20px rgba(255, 110, 199, 0.3),
+      inset 0 -1px 0 rgba(0, 255, 255, 0.35);
+  }
+
+  /* PAラック／アンプ風パンチンググリル装飾 */
+  .header-rack-deco {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.85;
+  }
+
+  .rack-grill {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 2px 2px, rgba(0, 0, 0, 0.72) 1.4px, transparent 1.5px),
+      radial-gradient(circle at 6px 6px, rgba(0, 0, 0, 0.72) 1.4px, transparent 1.5px),
+      radial-gradient(circle at 2px 2.6px, rgba(180, 228, 255, 0.14) 1.1px, transparent 1.4px),
+      radial-gradient(circle at 6px 6.6px, rgba(180, 228, 255, 0.14) 1.1px, transparent 1.4px);
+    background-size: 8px 8px;
+  }
+
+  .rack-vignette {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse 52% 72% at 50% 48%,
+      rgba(12, 12, 22, 0.72) 0%,
+      transparent 100%
+    );
+  }
+
+  .rack-ear {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 18px;
+    background: rgba(10, 12, 22, 0.65);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: calc(14px + env(safe-area-inset-top, 0px)) 0 14px;
+  }
+
+  .rack-ear-left {
+    left: 0;
+    border-right: 1px solid rgba(180, 228, 255, 0.16);
+  }
+
+  .rack-ear-right {
+    right: 0;
+    border-left: 1px solid rgba(180, 228, 255, 0.16);
+  }
+
+  .rack-slot {
+    width: 8px;
+    height: 4px;
+    border-radius: 2px;
+    background: #06070d;
+    border: 1px solid rgba(180, 228, 255, 0.34);
+  }
+
+  .rack-label {
+    position: absolute;
+    top: calc(12px + env(safe-area-inset-top, 0px));
+    font-family: var(--font-digital);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    color: rgba(180, 228, 255, 0.55);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    line-height: 1;
+  }
+
+  .rack-label-left {
+    left: 30px;
+  }
+
+  .rack-label-right {
+    right: 30px;
+  }
+
+  .rack-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .rack-led {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+
+  .rack-led-cyan {
+    background: var(--retro-cyan);
+    box-shadow: 0 0 6px var(--retro-cyan);
+  }
+
+  .rack-led-pink {
+    background: var(--retro-pink);
+    box-shadow: 0 0 6px var(--retro-pink);
   }
 
   .title-wrapper {
+    position: relative;
+    z-index: 1;
     margin: 0;
   }
 
@@ -138,6 +268,8 @@ const TitleTag = currentPath === '/' ? 'h1' : 'p';
 
   /* デスクトップナビ（モバイルではハンバーガーメニューに任せる） */
   .desktop-nav {
+    position: relative;
+    z-index: 1;
     display: none;
     justify-content: center;
     flex-wrap: wrap;
@@ -188,7 +320,29 @@ const TitleTag = currentPath === '/' ? 'h1' : 'p';
   /* レスポンシブ対応 */
   @media (max-width: 768px) {
     .header {
-      padding: calc(30px + env(safe-area-inset-top, 0px)) 15px 30px;
+      padding: calc(36px + env(safe-area-inset-top, 0px)) 20px 30px;
+    }
+
+    .rack-ear {
+      width: 14px;
+    }
+
+    .rack-slot {
+      width: 6px;
+    }
+
+    .rack-label {
+      top: calc(10px + env(safe-area-inset-top, 0px));
+      font-size: 0.62rem;
+      gap: 8px;
+    }
+
+    .rack-label-left {
+      left: 22px;
+    }
+
+    .rack-label-right {
+      right: 22px;
     }
 
     .title-link {
@@ -210,7 +364,37 @@ const TitleTag = currentPath === '/' ? 'h1' : 'p';
 
   @media (max-width: 480px) {
     .header {
-      padding: calc(20px + env(safe-area-inset-top, 0px)) 10px 20px;
+      padding: calc(32px + env(safe-area-inset-top, 0px)) 16px 22px;
+    }
+
+    .rack-ear {
+      width: 10px;
+      padding: calc(10px + env(safe-area-inset-top, 0px)) 0 10px;
+    }
+
+    .rack-slot {
+      width: 5px;
+      height: 3px;
+    }
+
+    .rack-label {
+      top: calc(8px + env(safe-area-inset-top, 0px));
+      font-size: 0.56rem;
+      letter-spacing: 0.08em;
+      gap: 7px;
+    }
+
+    .rack-label-left {
+      left: 16px;
+    }
+
+    .rack-label-right {
+      right: 16px;
+    }
+
+    .rack-led {
+      width: 5px;
+      height: 5px;
     }
 
     .title-link {

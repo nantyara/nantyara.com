@@ -39,11 +39,14 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--font-base);
-  background: var(--bg-dark);
+  background-color: var(--bg-dark);
   background-image:
     radial-gradient(circle at 20% 50%, rgba(157, 78, 221, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 80% 80%, rgba(255, 110, 199, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 40% 20%, rgba(0, 255, 255, 0.05) 0%, transparent 50%);
+    radial-gradient(circle at 40% 20%, rgba(0, 255, 255, 0.05) 0%, transparent 50%),
+    url('/img/bg-pipes.svg');
+  background-size: auto, auto, auto, 280px 280px;
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat;
   color: var(--text-light);
   line-height: 1.6;
   min-height: 100vh;

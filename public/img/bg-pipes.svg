@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="280" viewBox="0 0 280 280">
+  <g opacity="0.48">
+    <!-- 背景の薄い壁面パネル目地 -->
+    <path d="M0 140 H280 M140 0 V280" stroke="#9D4EDD" stroke-opacity="0.10" stroke-width="1" stroke-dasharray="4 4"/>
+
+    <!-- 背面：横の中パイプ (y=68, 幅12) -->
+    <g>
+      <rect x="0" y="62" width="280" height="12" fill="#131728" fill-opacity="0.85"/>
+      <line x1="0" y1="62" x2="280" y2="62" stroke="#8CE8FF" stroke-opacity="0.34" stroke-width="1.2"/>
+      <line x1="0" y1="65" x2="280" y2="65" stroke="#00FFFF" stroke-opacity="0.16" stroke-width="1"/>
+      <line x1="0" y1="74" x2="280" y2="74" stroke="#000" stroke-opacity="0.85" stroke-width="1.5"/>
+      <!-- フランジ継ぎ手 -->
+      <rect x="116" y="59" width="6" height="18" rx="1" fill="#1D223B" stroke="#8CE8FF" stroke-opacity="0.38" stroke-width="1"/>
+      <rect x="122" y="59" width="6" height="18" rx="1" fill="#171B30" stroke="#8CE8FF" stroke-opacity="0.28" stroke-width="1"/>
+      <rect x="234" y="59" width="6" height="18" rx="1" fill="#1D223B" stroke="#8CE8FF" stroke-opacity="0.38" stroke-width="1"/>
+      <!-- 識別バンド（控えめなピンク） -->
+      <rect x="190" y="63" width="10" height="10" fill="#FF6EC7" fill-opacity="0.22"/>
+    </g>
+
+    <!-- 背面：クランクする細パイプ (y=212 左端↔右端一致) -->
+    <g fill="none" stroke-linecap="butt" stroke-linejoin="round">
+      <path d="M0 212 H96 Q110 212 110 198 V154 Q110 140 124 140 H206 Q220 140 220 154 V198 Q220 212 234 212 H280" stroke="#14182B" stroke-width="9"/>
+      <path d="M0 208 H94 Q106 208 106 196 V152 Q106 136 122 136 H208 Q224 136 224 152 V196 Q224 208 236 208 H280" stroke="#B4E4FF" stroke-opacity="0.28" stroke-width="1.1"/>
+      <path d="M0 216 H98 Q114 216 114 200 V156 Q114 144 126 144 H204 Q216 144 216 156 V200 Q216 216 232 216 H280" stroke="#9D4EDD" stroke-opacity="0.24" stroke-width="1.1"/>
+    </g>
+    <!-- クランプ留め具 -->
+    <rect x="158" y="133" width="5" height="14" rx="1" fill="#232842" stroke="#B4E4FF" stroke-opacity="0.35" stroke-width="0.9"/>
+
+    <!-- 中景：縦の細パイプ (x=176 貫通) + バルブ/圧力ゲージ -->
+    <g>
+      <rect x="172" y="0" width="8" height="280" fill="#131629" fill-opacity="0.9"/>
+      <line x1="172" y1="0" x2="172" y2="280" stroke="#B4E4FF" stroke-opacity="0.30" stroke-width="1.1"/>
+      <line x1="180" y1="0" x2="180" y2="280" stroke="#000" stroke-opacity="0.8" stroke-width="1.2"/>
+      <!-- 圧力ゲージ -->
+      <line x1="180" y1="242" x2="194" y2="242" stroke="#8CE8FF" stroke-opacity="0.35" stroke-width="2"/>
+      <circle cx="204" cy="242" r="10" fill="#101322" stroke="#8CE8FF" stroke-opacity="0.42" stroke-width="1.2"/>
+      <circle cx="204" cy="242" r="7" fill="none" stroke="#FF6EC7" stroke-opacity="0.28" stroke-width="0.8" stroke-dasharray="3 2"/>
+      <line x1="204" y1="242" x2="209" y2="237" stroke="#FF6EC7" stroke-opacity="0.65" stroke-width="1.2"/>
+      <circle cx="204" cy="242" r="1.5" fill="#00FFFF" fill-opacity="0.6"/>
+      <!-- バルブハンドル -->
+      <circle cx="176" cy="104" r="9" fill="#121526" stroke="#FF6EC7" stroke-opacity="0.36" stroke-width="1.3"/>
+      <path d="M170 98 L182 110 M182 98 L170 110" stroke="#FF6EC7" stroke-opacity="0.32" stroke-width="1.1"/>
+    </g>
+
+    <!-- 前面：縦の太パイプ (x=44, 幅16 貫通) -->
+    <g>
+      <rect x="36" y="0" width="16" height="280" fill="#15192E"/>
+      <rect x="39" y="0" width="3" height="280" fill="#00FFFF" fill-opacity="0.11"/>
+      <line x1="36" y1="0" x2="36" y2="280" stroke="#9CEBFF" stroke-opacity="0.40" stroke-width="1.3"/>
+      <line x1="52" y1="0" x2="52" y2="280" stroke="#000" stroke-opacity="0.9" stroke-width="1.8"/>
+      <!-- 太フランジ 2箇所 -->
+      <rect x="32" y="34" width="24" height="6" rx="1.2" fill="#202642" stroke="#9CEBFF" stroke-opacity="0.42" stroke-width="1"/>
+      <rect x="32" y="40" width="24" height="6" rx="1.2" fill="#181D34" stroke="#9CEBFF" stroke-opacity="0.30" stroke-width="1"/>
+      <circle cx="35" cy="37" r="1" fill="#00FFFF" fill-opacity="0.5"/>
+      <circle cx="53" cy="37" r="1" fill="#00FFFF" fill-opacity="0.5"/>
+
+      <rect x="32" y="176" width="24" height="6" rx="1.2" fill="#202642" stroke="#9CEBFF" stroke-opacity="0.42" stroke-width="1"/>
+      <rect x="32" y="182" width="24" height="6" rx="1.2" fill="#181D34" stroke="#9CEBFF" stroke-opacity="0.30" stroke-width="1"/>
+      <!-- 危険縞（極小ワンポイント） -->
+      <rect x="37" y="120" width="14" height="8" fill="#FFD60A" fill-opacity="0.13"/>
+      <path d="M37 128 L42 120 M42 128 L47 120 M47 128 L51 122" stroke="#0A0A0A" stroke-opacity="0.7" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>
