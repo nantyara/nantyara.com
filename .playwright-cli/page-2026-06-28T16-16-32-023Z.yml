@@ -1,0 +1,559 @@
+- generic [active] [ref=e1]:
+  - navigation:
+    - button "メニュー" [ref=e4] [cursor=pointer]
+    - generic [ref=e9]:
+      - heading "MENU" [level=2] [ref=e11]
+      - list [ref=e12]:
+        - listitem [ref=e13]:
+          - link "📅 ライブ予定" [ref=e14] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e15]: 📅
+            - generic [ref=e16]: ライブ予定
+        - listitem [ref=e17]:
+          - link "🎵 音源" [ref=e18] [cursor=pointer]:
+            - /url: /releases
+            - generic [ref=e19]: 🎵
+            - generic [ref=e20]: 音源
+        - listitem [ref=e21]:
+          - link "👥 メンバー" [ref=e22] [cursor=pointer]:
+            - /url: /members
+            - generic [ref=e23]: 👥
+            - generic [ref=e24]: メンバー
+        - listitem [ref=e25]:
+          - link "📖 沿革" [ref=e26] [cursor=pointer]:
+            - /url: /history
+            - generic [ref=e27]: 📖
+            - generic [ref=e28]: 沿革
+        - listitem [ref=e29]:
+          - link "📸 ギャラリー" [ref=e30] [cursor=pointer]:
+            - /url: /gallery
+            - generic [ref=e31]: 📸
+            - generic [ref=e32]: ギャラリー
+        - listitem [ref=e33]:
+          - link "🔗 リンク" [ref=e34] [cursor=pointer]:
+            - /url: /links
+            - generic [ref=e35]: 🔗
+            - generic [ref=e36]: リンク
+        - listitem [ref=e37]:
+          - link "✉️ お問い合わせ" [ref=e38] [cursor=pointer]:
+            - /url: /contact
+            - generic [ref=e39]: ✉️
+            - generic [ref=e40]: お問い合わせ
+      - generic [ref=e41]:
+        - generic [ref=e42]: "ボタン位置:"
+        - button "左" [ref=e43] [cursor=pointer]
+        - button "右" [ref=e44] [cursor=pointer]
+  - banner [ref=e45]:
+    - heading "なんちゃらアイドル なんちゃらアイドル なんちゃらアイドル" [level=1] [ref=e46]:
+      - link "なんちゃらアイドル なんちゃらアイドル なんちゃらアイドル" [ref=e47] [cursor=pointer]:
+        - /url: /
+  - main [ref=e49]:
+    - generic [ref=e50]:
+      - generic [ref=e51]:
+        - button "📅 今後の予定" [ref=e52] [cursor=pointer]
+        - button "📜 過去の予定" [ref=e53] [cursor=pointer]
+        - button "📋 すべて" [ref=e54] [cursor=pointer]
+      - textbox "🔍 イベント名や会場を検索..." [ref=e56]
+    - generic [ref=e57]:
+      - link [ref=e59] [cursor=pointer]:
+        - /url: /events/20260630-timetree-84944149
+        - article [ref=e60]:
+          - generic [ref=e61]:
+            - generic [ref=e62]:
+              - generic [ref=e63]:
+                - generic [ref=e64]: "2026"
+                - generic [ref=e65]: 06/30
+                - generic [ref=e66]: (火)
+              - generic [ref=e68]: あおはるソロ
+            - heading "めたもるふぉーぜ" [level=3] [ref=e69]
+          - generic [ref=e70]:
+            - generic [ref=e71]:
+              - generic [ref=e72]: 📍
+              - generic [ref=e73]: めたもるふぉーぜ
+            - generic [ref=e74]: バーイベント dranken shrimp跡地 タイムチャージ1時間1000円 ソフドリ500円 アルコールドリンク800円 フードは安めになにか出します
+      - link [ref=e76] [cursor=pointer]:
+        - /url: /events/20260701-timetree-97101336
+        - article [ref=e77]:
+          - generic [ref=e78]:
+            - generic [ref=e80]:
+              - generic [ref=e81]: "2026"
+              - generic [ref=e82]: 07/01
+              - generic [ref=e83]: (水)
+            - heading "大塚Welcome Back" [level=3] [ref=e84]
+          - generic [ref=e85]:
+            - generic [ref=e86]:
+              - generic [ref=e87]: 📍
+              - generic [ref=e88]: 大塚Welcome Back
+            - generic [ref=e89]: TBD
+      - link [ref=e91] [cursor=pointer]:
+        - /url: /events/20260704-timetree-01295027
+        - article [ref=e92]:
+          - generic [ref=e93]:
+            - generic [ref=e95]:
+              - generic [ref=e96]: "2026"
+              - generic [ref=e97]: 07/04
+              - generic [ref=e98]: (土)
+            - heading "イベント" [level=3] [ref=e99]
+          - generic [ref=e100]:
+            - generic [ref=e101]:
+              - generic [ref=e102]: 📍
+              - generic [ref=e103]: イベント
+            - generic [ref=e104]: TBD
+      - link [ref=e106] [cursor=pointer]:
+        - /url: /events/20260706-timetree-10521025
+        - article [ref=e107]:
+          - generic [ref=e108]:
+            - generic [ref=e110]:
+              - generic [ref=e111]: "2026"
+              - generic [ref=e112]: 07/06
+              - generic [ref=e113]: (月)
+            - heading "東新宿LOVE TKO" [level=3] [ref=e114]
+          - generic [ref=e115]:
+            - generic [ref=e116]:
+              - generic [ref=e117]: 📍
+              - generic [ref=e118]: 東新宿LOVE TKO
+            - generic [ref=e119]: TBD
+      - link [ref=e121] [cursor=pointer]:
+        - /url: /events/20260710-timetree-67648713
+        - article [ref=e122]:
+          - generic [ref=e123]:
+            - generic [ref=e125]:
+              - generic [ref=e126]: "2026"
+              - generic [ref=e127]: 07/10
+              - generic [ref=e128]: (金)
+            - heading "東京倶楽部" [level=3] [ref=e129]
+          - generic [ref=e130]:
+            - generic [ref=e131]:
+              - generic [ref=e132]: 📍
+              - generic [ref=e133]: 東京倶楽部
+            - generic [ref=e134]: TBD
+      - link [ref=e136] [cursor=pointer]:
+        - /url: /events/20260713-timetree-68637822
+        - article [ref=e137]:
+          - generic [ref=e138]:
+            - generic [ref=e140]:
+              - generic [ref=e141]: "2026"
+              - generic [ref=e142]: 07/13
+              - generic [ref=e143]: (月)
+            - heading "東新宿LOVE TKO" [level=3] [ref=e144]
+          - generic [ref=e145]:
+            - generic [ref=e146]:
+              - generic [ref=e147]: 📍
+              - generic [ref=e148]: 東新宿LOVE TKO
+            - generic [ref=e149]: TBD
+      - link [ref=e151] [cursor=pointer]:
+        - /url: /events/20260718-timetree-51040499
+        - article [ref=e152]:
+          - generic [ref=e153]:
+            - generic [ref=e155]:
+              - generic [ref=e156]: "2026"
+              - generic [ref=e157]: 07/18
+              - generic [ref=e158]: (土)
+            - heading "渋谷LOFT HEAVEN" [level=3] [ref=e159]
+          - generic [ref=e160]:
+            - generic [ref=e161]:
+              - generic [ref=e162]: 📍
+              - generic [ref=e163]: 渋谷LOFT HEAVEN
+            - generic [ref=e164]: "TBD 詳細: https://livepocket.jp/e/20260718_yumenonaco"
+      - link [ref=e166] [cursor=pointer]:
+        - /url: /events/20260720-timetree-50570383
+        - article [ref=e167]:
+          - generic [ref=e168]:
+            - generic [ref=e169]:
+              - generic [ref=e170]:
+                - generic [ref=e171]: "2026"
+                - generic [ref=e172]: 07/20
+                - generic [ref=e173]: (月)
+              - generic [ref=e175]: マミソロ
+            - heading "東新宿LOVE TKO" [level=3] [ref=e176]
+          - generic [ref=e177]:
+            - generic [ref=e178]:
+              - generic [ref=e179]: 📍
+              - generic [ref=e180]: 東新宿LOVE TKO
+            - generic [ref=e181]: TBD
+      - link [ref=e183] [cursor=pointer]:
+        - /url: /events/20260726-timetree-26010162
+        - article [ref=e184]:
+          - generic [ref=e185]:
+            - generic [ref=e187]:
+              - generic [ref=e188]: "2026"
+              - generic [ref=e189]: 07/26
+              - generic [ref=e190]: (日)
+            - heading "SBQ個人撮影会" [level=3] [ref=e191]
+          - generic [ref=e192]:
+            - generic [ref=e193]:
+              - generic [ref=e194]: 📍
+              - generic [ref=e195]: SBQ個人撮影会
+            - generic [ref=e196]: TBD
+      - link [ref=e198] [cursor=pointer]:
+        - /url: /events/20260728-timetree-55895027
+        - article [ref=e199]:
+          - generic [ref=e200]:
+            - generic [ref=e202]:
+              - generic [ref=e203]: "2026"
+              - generic [ref=e204]: 07/28
+              - generic [ref=e205]: (火)
+            - heading "渋谷La.mama" [level=3] [ref=e206]
+          - generic [ref=e207]:
+            - generic [ref=e208]:
+              - generic [ref=e209]: 📍
+              - generic [ref=e210]: 渋谷La.mama
+            - generic [ref=e211]: TBD
+      - link [ref=e213] [cursor=pointer]:
+        - /url: /events/20260731-timetree-81114432
+        - article [ref=e214]:
+          - generic [ref=e215]:
+            - generic [ref=e217]:
+              - generic [ref=e218]: "2026"
+              - generic [ref=e219]: 07/31
+              - generic [ref=e220]: (金)
+            - heading "蒲田オッタンタ" [level=3] [ref=e221]
+          - generic [ref=e222]:
+            - generic [ref=e223]:
+              - generic [ref=e224]: 📍
+              - generic [ref=e225]: 蒲田オッタンタ
+            - generic [ref=e226]: TBD
+      - link [ref=e228] [cursor=pointer]:
+        - /url: /events/20260801-timetree-96316177
+        - article [ref=e229]:
+          - generic [ref=e230]:
+            - generic [ref=e232]:
+              - generic [ref=e233]: "2026"
+              - generic [ref=e234]: 08/01
+              - generic [ref=e235]: (土)
+            - heading "渋谷la.mama" [level=3] [ref=e236]
+          - generic [ref=e237]:
+            - generic [ref=e238]:
+              - generic [ref=e239]: 📍
+              - generic [ref=e240]: 渋谷la.mama
+            - generic [ref=e241]: TBD
+      - link [ref=e243] [cursor=pointer]:
+        - /url: /events/20260801-timetree-82861467
+        - article [ref=e244]:
+          - generic [ref=e245]:
+            - generic [ref=e247]:
+              - generic [ref=e248]: "2026"
+              - generic [ref=e249]: 08/01
+              - generic [ref=e250]: (土)
+            - heading "横須賀ヤンガーザンイエスタデイ" [level=3] [ref=e251]
+          - generic [ref=e252]:
+            - generic [ref=e253]:
+              - generic [ref=e254]: 📍
+              - generic [ref=e255]: 横須賀ヤンガーザンイエスタデイ
+            - generic [ref=e256]: TBD
+      - link [ref=e258] [cursor=pointer]:
+        - /url: /events/20260803-timetree-18571225
+        - article [ref=e259]:
+          - generic [ref=e260]:
+            - generic [ref=e262]:
+              - generic [ref=e263]: "2026"
+              - generic [ref=e264]: 08/03
+              - generic [ref=e265]: (月)
+            - heading "東新宿LOVE TKO" [level=3] [ref=e266]
+          - generic [ref=e267]:
+            - generic [ref=e268]:
+              - generic [ref=e269]: 📍
+              - generic [ref=e270]: 東新宿LOVE TKO
+            - generic [ref=e271]: TBD
+      - link [ref=e273] [cursor=pointer]:
+        - /url: /events/20260806-timetree-43099834
+        - article [ref=e274]:
+          - generic [ref=e275]:
+            - generic [ref=e277]:
+              - generic [ref=e278]: "2026"
+              - generic [ref=e279]: 08/06
+              - generic [ref=e280]: (木)
+            - heading "海の家" [level=3] [ref=e281]
+          - generic [ref=e282]:
+            - generic [ref=e283]:
+              - generic [ref=e284]: 📍
+              - generic [ref=e285]: 海の家
+            - generic [ref=e286]: TBD
+      - link [ref=e288] [cursor=pointer]:
+        - /url: /events/20260808-timetree-01793792
+        - article [ref=e289]:
+          - generic [ref=e290]:
+            - generic [ref=e292]:
+              - generic [ref=e293]: "2026"
+              - generic [ref=e294]: 08/08
+              - generic [ref=e295]: (土)
+            - heading "新宿Antiknock" [level=3] [ref=e296]
+          - generic [ref=e297]:
+            - generic [ref=e298]:
+              - generic [ref=e299]: 📍
+              - generic [ref=e300]: 新宿Antiknock
+            - generic [ref=e301]: TBD
+      - link [ref=e303] [cursor=pointer]:
+        - /url: /events/20260809-timetree-94823857
+        - article [ref=e304]:
+          - generic [ref=e305]:
+            - generic [ref=e307]:
+              - generic [ref=e308]: "2026"
+              - generic [ref=e309]: 08/09
+              - generic [ref=e310]: (日)
+            - heading "大塚Welcome Back" [level=3] [ref=e311]
+          - generic [ref=e312]:
+            - generic [ref=e313]:
+              - generic [ref=e314]: 📍
+              - generic [ref=e315]: 大塚Welcome Back
+            - generic [ref=e316]: TBD
+      - link [ref=e318] [cursor=pointer]:
+        - /url: /events/20260810-timetree-54510826
+        - article [ref=e319]:
+          - generic [ref=e320]:
+            - generic [ref=e321]:
+              - generic [ref=e322]:
+                - generic [ref=e323]: "2026"
+                - generic [ref=e324]: 08/10
+                - generic [ref=e325]: (月)
+              - generic [ref=e327]: マミソロ
+            - heading "東新宿LOVE TKO" [level=3] [ref=e328]
+          - generic [ref=e329]:
+            - generic [ref=e330]:
+              - generic [ref=e331]: 📍
+              - generic [ref=e332]: 東新宿LOVE TKO
+            - generic [ref=e333]: TBD
+      - link [ref=e335] [cursor=pointer]:
+        - /url: /events/20260817-timetree-58495452
+        - article [ref=e336]:
+          - generic [ref=e337]:
+            - generic [ref=e339]:
+              - generic [ref=e340]: "2026"
+              - generic [ref=e341]: 08/17
+              - generic [ref=e342]: (月)
+            - heading "渋谷La.mama" [level=3] [ref=e343]
+          - generic [ref=e344]:
+            - generic [ref=e345]:
+              - generic [ref=e346]: 📍
+              - generic [ref=e347]: 渋谷La.mama
+            - generic [ref=e348]: TBD
+      - link [ref=e350] [cursor=pointer]:
+        - /url: /events/20260817-timetree-93663853
+        - article [ref=e351]:
+          - generic [ref=e352]:
+            - generic [ref=e354]:
+              - generic [ref=e355]: "2026"
+              - generic [ref=e356]: 08/17
+              - generic [ref=e357]: (月)
+            - heading "東新宿LOVE TKO" [level=3] [ref=e358]
+          - generic [ref=e359]:
+            - generic [ref=e360]:
+              - generic [ref=e361]: 📍
+              - generic [ref=e362]: 東新宿LOVE TKO
+            - generic [ref=e363]: TBD
+      - link [ref=e365] [cursor=pointer]:
+        - /url: /events/20260818-timetree-56983263
+        - article [ref=e366]:
+          - generic [ref=e367]:
+            - generic [ref=e369]:
+              - generic [ref=e370]: "2026"
+              - generic [ref=e371]: 08/18
+              - generic [ref=e372]: (火)
+            - heading "渋谷La.mama" [level=3] [ref=e373]
+          - generic [ref=e374]:
+            - generic [ref=e375]:
+              - generic [ref=e376]: 📍
+              - generic [ref=e377]: 渋谷La.mama
+            - generic [ref=e378]: TBD
+      - link [ref=e380] [cursor=pointer]:
+        - /url: /events/20260819-timetree-56484763
+        - article [ref=e381]:
+          - generic [ref=e382]:
+            - generic [ref=e384]:
+              - generic [ref=e385]: "2026"
+              - generic [ref=e386]: 08/19
+              - generic [ref=e387]: (水)
+            - heading "渋谷La.mama" [level=3] [ref=e388]
+          - generic [ref=e389]:
+            - generic [ref=e390]:
+              - generic [ref=e391]: 📍
+              - generic [ref=e392]: 渋谷La.mama
+            - generic [ref=e393]: TBD
+      - link [ref=e395] [cursor=pointer]:
+        - /url: /events/20260820-timetree-03782465
+        - article [ref=e396]:
+          - generic [ref=e397]:
+            - generic [ref=e398]:
+              - generic [ref=e399]:
+                - generic [ref=e400]: "2026"
+                - generic [ref=e401]: 08/20
+                - generic [ref=e402]: (木)
+              - generic [ref=e404]: マミソロ
+            - heading "渋谷La.mama" [level=3] [ref=e405]
+          - generic [ref=e406]:
+            - generic [ref=e407]:
+              - generic [ref=e408]: 📍
+              - generic [ref=e409]: 渋谷La.mama
+            - generic [ref=e410]: TBD
+      - link [ref=e412] [cursor=pointer]:
+        - /url: /events/20260821-timetree-58727310
+        - article [ref=e413]:
+          - generic [ref=e414]:
+            - generic [ref=e416]:
+              - generic [ref=e417]: "2026"
+              - generic [ref=e418]: 08/21
+              - generic [ref=e419]: (金)
+            - heading "渋谷La.mama" [level=3] [ref=e420]
+          - generic [ref=e421]:
+            - generic [ref=e422]:
+              - generic [ref=e423]: 📍
+              - generic [ref=e424]: 渋谷La.mama
+            - generic [ref=e425]: TBD
+      - link [ref=e427] [cursor=pointer]:
+        - /url: /events/20260822-timetree-79763485
+        - article [ref=e428]:
+          - generic [ref=e429]:
+            - generic [ref=e430]:
+              - generic [ref=e431]:
+                - generic [ref=e432]: "2026"
+                - generic [ref=e433]: 08/22
+                - generic [ref=e434]: (土)
+              - generic [ref=e436]: あおはるソロ
+            - heading "四谷OUTBREAK" [level=3] [ref=e437]
+          - generic [ref=e438]:
+            - generic [ref=e439]:
+              - generic [ref=e440]: 📍
+              - generic [ref=e441]: 四谷OUTBREAK
+            - generic [ref=e442]: TBD
+      - link [ref=e444] [cursor=pointer]:
+        - /url: /events/20260825-timetree-52127896
+        - article [ref=e445]:
+          - generic [ref=e446]:
+            - generic [ref=e448]:
+              - generic [ref=e449]: "2026"
+              - generic [ref=e450]: 08/25
+              - generic [ref=e451]: (火)
+            - heading "渋谷La.mama" [level=3] [ref=e452]
+          - generic [ref=e453]:
+            - generic [ref=e454]:
+              - generic [ref=e455]: 📍
+              - generic [ref=e456]: 渋谷La.mama
+            - generic [ref=e457]: TBD
+      - link [ref=e459] [cursor=pointer]:
+        - /url: /events/20260826-timetree-58844859
+        - article [ref=e460]:
+          - generic [ref=e461]:
+            - generic [ref=e463]:
+              - generic [ref=e464]: "2026"
+              - generic [ref=e465]: 08/26
+              - generic [ref=e466]: (水)
+            - heading "一緒に聴きたいアイドル曲ＤＪイベント なんたってアイドル" [level=3] [ref=e467]
+          - generic [ref=e468]:
+            - generic [ref=e469]:
+              - generic [ref=e470]: 📍
+              - generic [ref=e471]: 蒲田オッタンタ
+            - generic [ref=e472]: 一緒に聴きたいアイドル曲ＤＪイベント なんたってアイドル 偶数月第4水曜日 19:00〜22:00 ¥1,500（1d.付） DJ：なんちゃらアイドル / Q太郎 / FUKO ゲストDJも歓迎！ 会場 スタジオ・オッタンタ 大田区蒲田5-7-6 CCM蒲田ビル2F TEL 03-3738-0080
+      - link [ref=e474] [cursor=pointer]:
+        - /url: /events/20260830-timetree-48843637
+        - article [ref=e475]:
+          - generic [ref=e476]:
+            - generic [ref=e478]:
+              - generic [ref=e479]: "2026"
+              - generic [ref=e480]: 08/30
+              - generic [ref=e481]: (日)
+            - heading "イオン笠間" [level=3] [ref=e482]
+          - generic [ref=e483]:
+            - generic [ref=e484]:
+              - generic [ref=e485]: 📍
+              - generic [ref=e486]: イオン笠間
+            - generic [ref=e487]: TBD
+      - link [ref=e489] [cursor=pointer]:
+        - /url: /events/20260902-timetree-15794525
+        - article [ref=e490]:
+          - generic [ref=e491]:
+            - generic [ref=e493]:
+              - generic [ref=e494]: "2026"
+              - generic [ref=e495]: 09/02
+              - generic [ref=e496]: (水)
+            - heading "栃木 さる小" [level=3] [ref=e497]
+          - generic [ref=e498]:
+            - generic [ref=e499]:
+              - generic [ref=e500]: 📍
+              - generic [ref=e501]: 栃木 さる小
+            - generic [ref=e502]: TBD
+      - link [ref=e504] [cursor=pointer]:
+        - /url: /events/20260903-timetree-95289484
+        - article [ref=e505]:
+          - generic [ref=e506]:
+            - generic [ref=e508]:
+              - generic [ref=e509]: "2026"
+              - generic [ref=e510]: 09/03
+              - generic [ref=e511]: (木)
+            - heading "栃木さる小" [level=3] [ref=e512]
+          - generic [ref=e513]:
+            - generic [ref=e514]:
+              - generic [ref=e515]: 📍
+              - generic [ref=e516]: 栃木さる小
+            - generic [ref=e517]: TBD
+      - link [ref=e519] [cursor=pointer]:
+        - /url: /events/20260904-timetree-23433815
+        - article [ref=e520]:
+          - generic [ref=e521]:
+            - generic [ref=e523]:
+              - generic [ref=e524]: "2026"
+              - generic [ref=e525]: 09/04
+              - generic [ref=e526]: (金)
+            - heading "栃木さる小" [level=3] [ref=e527]
+          - generic [ref=e528]:
+            - generic [ref=e529]:
+              - generic [ref=e530]: 📍
+              - generic [ref=e531]: 栃木さる小
+            - generic [ref=e532]: TBD
+      - link [ref=e534] [cursor=pointer]:
+        - /url: /events/20260909-timetree-38990386
+        - article [ref=e535]:
+          - generic [ref=e536]:
+            - generic [ref=e538]:
+              - generic [ref=e539]: "2026"
+              - generic [ref=e540]: 09/09
+              - generic [ref=e541]: (水)
+            - heading "渋谷La.mama" [level=3] [ref=e542]
+          - generic [ref=e543]:
+            - generic [ref=e544]:
+              - generic [ref=e545]: 📍
+              - generic [ref=e546]: 渋谷La.mama
+            - generic [ref=e547]: TBD
+      - link [ref=e549] [cursor=pointer]:
+        - /url: /events/20261028-timetree-75262658
+        - article [ref=e550]:
+          - generic [ref=e551]:
+            - generic [ref=e553]:
+              - generic [ref=e554]: "2026"
+              - generic [ref=e555]: 10/28
+              - generic [ref=e556]: (水)
+            - heading "一緒に聴きたいアイドル曲ＤＪイベント なんたってアイドル" [level=3] [ref=e557]
+          - generic [ref=e558]:
+            - generic [ref=e559]:
+              - generic [ref=e560]: 📍
+              - generic [ref=e561]: 蒲田オッタンタ
+            - generic [ref=e562]: TBD
+      - link [ref=e564] [cursor=pointer]:
+        - /url: /events/20261121-timetree-32674248
+        - article [ref=e565]:
+          - generic [ref=e566]:
+            - generic [ref=e568]:
+              - generic [ref=e569]: "2026"
+              - generic [ref=e570]: 11/21
+              - generic [ref=e571]: (土)
+            - heading "渋谷la.mama" [level=3] [ref=e572]
+          - generic [ref=e573]:
+            - generic [ref=e574]:
+              - generic [ref=e575]: 📍
+              - generic [ref=e576]: 渋谷la.mama
+            - generic [ref=e577]: TBD
+      - link [ref=e579] [cursor=pointer]:
+        - /url: /events/20261216-timetree-36166912
+        - article [ref=e580]:
+          - generic [ref=e581]:
+            - generic [ref=e583]:
+              - generic [ref=e584]: "2026"
+              - generic [ref=e585]: 12/16
+              - generic [ref=e586]: (水)
+            - heading "一緒に聴きたいアイドル曲ＤＪイベント なんたってアイドル" [level=3] [ref=e587]
+          - generic [ref=e588]:
+            - generic [ref=e589]:
+              - generic [ref=e590]: 📍
+              - generic [ref=e591]: 蒲田オッタンタ
+            - generic [ref=e592]: TBD
+  - contentinfo [ref=e593]:
+    - paragraph [ref=e594]: © 2018-2026 なんちゃらアイドル

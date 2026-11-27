@@ -1,0 +1,706 @@
+- generic [active] [ref=e1]:
+  - navigation:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - heading "MENU" [level=2] [ref=e6]
+        - button "メニューを閉じる" [ref=e7] [cursor=pointer]:
+          - generic [ref=e8]: 
+      - list [ref=e9]:
+        - listitem [ref=e10]:
+          - link "ライブ予定" [ref=e11] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e12]: 
+            - generic [ref=e13]: ライブ予定
+        - listitem [ref=e14]:
+          - link "音源" [ref=e15] [cursor=pointer]:
+            - /url: /releases
+            - generic [ref=e16]: 
+            - generic [ref=e17]: 音源
+        - listitem [ref=e18]:
+          - link "メンバー" [ref=e19] [cursor=pointer]:
+            - /url: /members
+            - generic [ref=e20]: 
+            - generic [ref=e21]: メンバー
+        - listitem [ref=e22]:
+          - link "沿革" [ref=e23] [cursor=pointer]:
+            - /url: /history
+            - generic [ref=e24]: 
+            - generic [ref=e25]: 沿革
+        - listitem [ref=e26]:
+          - link "会場" [ref=e27] [cursor=pointer]:
+            - /url: /venues
+            - generic [ref=e28]: 
+            - generic [ref=e29]: 会場
+        - listitem [ref=e30]:
+          - link "対バン" [ref=e31] [cursor=pointer]:
+            - /url: /acts
+            - generic [ref=e32]: 
+            - generic [ref=e33]: 対バン
+        - listitem [ref=e34]:
+          - link "リンク" [ref=e35] [cursor=pointer]:
+            - /url: /links
+            - generic [ref=e36]: 
+            - generic [ref=e37]: リンク
+        - listitem [ref=e38]:
+          - link "お問い合わせ" [ref=e39] [cursor=pointer]:
+            - /url: /contact
+            - generic [ref=e40]: 
+            - generic [ref=e41]: お問い合わせ
+      - generic [ref=e42]:
+        - generic [ref=e43]: "ボタン位置:"
+        - button "左" [ref=e44] [cursor=pointer]
+        - button "右" [ref=e45] [cursor=pointer]
+  - banner [ref=e46]:
+    - heading "なんちゃらアイドル" [level=1] [ref=e47]:
+      - link "なんちゃらアイドル" [ref=e48] [cursor=pointer]:
+        - /url: /
+    - navigation "メインナビゲーション" [ref=e49]:
+      - link "ライブ予定" [ref=e50] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e51]: 
+        - generic [ref=e52]: ライブ予定
+      - link "音源" [ref=e53] [cursor=pointer]:
+        - /url: /releases
+        - generic [ref=e54]: 
+        - generic [ref=e55]: 音源
+      - link "メンバー" [ref=e56] [cursor=pointer]:
+        - /url: /members
+        - generic [ref=e57]: 
+        - generic [ref=e58]: メンバー
+      - link "沿革" [ref=e59] [cursor=pointer]:
+        - /url: /history
+        - generic [ref=e60]: 
+        - generic [ref=e61]: 沿革
+      - link "会場" [ref=e62] [cursor=pointer]:
+        - /url: /venues
+        - generic [ref=e63]: 
+        - generic [ref=e64]: 会場
+      - link "対バン" [ref=e65] [cursor=pointer]:
+        - /url: /acts
+        - generic [ref=e66]: 
+        - generic [ref=e67]: 対バン
+      - link "リンク" [ref=e68] [cursor=pointer]:
+        - /url: /links
+        - generic [ref=e69]: 
+        - generic [ref=e70]: リンク
+      - link "お問い合わせ" [ref=e71] [cursor=pointer]:
+        - /url: /contact
+        - generic [ref=e72]: 
+        - generic [ref=e73]: お問い合わせ
+  - main [ref=e75]:
+    - paragraph [ref=e76]: なんちゃらアイドルは、東京を中心にライブハウスや各地のイベントで活動するアイドルグループです。最新のライブ予定や出演履歴、音源情報をご案内します。
+    - link "NEXT LIVE 夢乃なこ Birthday Live!! ゆめのなこと ゆめのなか26 のフライヤー 2026年7月18日(土) 18:00 夢乃なこ Birthday Live!! ゆめのなこと ゆめのなか26 渋谷LOFT HEAVEN あと 2日 13時間 46分 53秒" [ref=e77] [cursor=pointer]:
+      - /url: /events/20260718-timetree-51040499
+      - generic [ref=e78]:
+        - generic [ref=e79]: 
+        - text: NEXT LIVE
+      - generic [ref=e80]:
+        - img "夢乃なこ Birthday Live!! ゆめのなこと ゆめのなか26 のフライヤー" [ref=e81]
+        - generic [ref=e82]:
+          - generic [ref=e83]: 2026年7月18日(土) 18:00
+          - heading "夢乃なこ Birthday Live!! ゆめのなこと ゆめのなか26" [level=2] [ref=e84]
+          - generic [ref=e85]:
+            - generic [ref=e86]: 
+            - generic [ref=e87]: 渋谷LOFT HEAVEN
+          - generic [ref=e88]: あと 2日 13時間 46分 53秒
+    - generic [ref=e89]:
+      - generic [ref=e90]:
+        - button "今後の予定" [ref=e91] [cursor=pointer]:
+          - generic [ref=e92]: 
+          - text: 今後の予定
+        - button "過去の予定" [ref=e93] [cursor=pointer]:
+          - generic [ref=e94]: 
+          - text: 過去の予定
+        - button "すべて" [ref=e95] [cursor=pointer]:
+          - generic [ref=e96]: 
+          - text: すべて
+      - generic [ref=e97]:
+        - generic: 
+        - textbox "イベント名や会場を検索..." [ref=e98]
+    - generic [ref=e99]:
+      - generic [ref=e100]:
+        - heading "2026年7月 ▾" [level=2] [ref=e101]:
+          - button "2026年7月 ▾" [ref=e102] [cursor=pointer]:
+            - generic [ref=e103]: 2026年7月 ▾
+        - generic [ref=e104]:
+          - link [ref=e106] [cursor=pointer]:
+            - /url: /events/20260718-timetree-51040499
+            - article [ref=e107]:
+              - generic [ref=e108]:
+                - generic [ref=e110]:
+                  - generic [ref=e111]: "2026"
+                  - generic [ref=e112]: 07/18
+                  - generic [ref=e113]: (土)
+                - heading "夢乃なこ Birthday Live!! ゆめのなこと ゆめのなか26" [level=3] [ref=e114]
+              - generic [ref=e115]:
+                - generic [ref=e116]:
+                  - generic [ref=e117]: 
+                  - generic [ref=e118]: 渋谷LOFT HEAVEN
+                - generic [ref=e119]: 夢乃なこ Birthday Live!! ゆめのなこと ゆめのなか26 【出演】 Sommeil Sommeil 夢乃なこ 夢乃なこ×カレンちゃん なんちゃらアイドル demipogune OPEN/START 17:30/18:00 ADV ¥3,000＋1D DOOR ¥3,500＋1D 配信 ¥2,000
+                - generic [ref=e120]:
+                  - text: 続きは詳細ページで
+                  - generic [ref=e121]: 
+          - link [ref=e123] [cursor=pointer]:
+            - /url: /events/20260720-timetree-50570383
+            - article [ref=e124]:
+              - generic [ref=e125]:
+                - generic [ref=e126]:
+                  - generic [ref=e127]:
+                    - generic [ref=e128]: "2026"
+                    - generic [ref=e129]: 07/20
+                    - generic [ref=e130]: (月)
+                  - generic [ref=e132]: マミソロ
+                - heading "S.B.Q.J.Q — Sweet Baby Otaro Jazz Quintet Live Show —" [level=3] [ref=e133]
+              - generic [ref=e134]:
+                - generic [ref=e135]:
+                  - generic [ref=e136]: 
+                  - generic [ref=e137]: 東新宿LOVE TKO
+                - generic [ref=e138]: 【出演】 御茶海マミ（Vo） ぬる（Vo） 仲田晋也（Gt） コーリー（Ba） Q太郎（Per） 開場/開演 18:00/19:00 Charge ¥1,500＋1D 21:00〜05:00 bar time
+          - link [ref=e140] [cursor=pointer]:
+            - /url: /events/20260721-timetree-23056444
+            - article [ref=e141]:
+              - generic [ref=e142]:
+                - generic [ref=e143]:
+                  - generic [ref=e144]:
+                    - generic [ref=e145]: "2026"
+                    - generic [ref=e146]: 07/21
+                    - generic [ref=e147]: (火)
+                  - generic [ref=e149]: あおはるソロ
+                - heading "めたもるふぉーぜ" [level=3] [ref=e150]
+              - generic [ref=e151]:
+                - generic [ref=e152]:
+                  - generic [ref=e153]: 
+                  - generic [ref=e154]: めたもるふぉーぜ
+                - generic [ref=e155]:
+                  - generic [ref=e156]: 
+                  - generic [ref=e157]: 詳細は後日発表
+          - link [ref=e159] [cursor=pointer]:
+            - /url: /events/20260726-timetree-26010162
+            - article [ref=e160]:
+              - generic [ref=e161]:
+                - generic [ref=e163]:
+                  - generic [ref=e164]: "2026"
+                  - generic [ref=e165]: 07/26
+                  - generic [ref=e166]: (日)
+                - heading "SBQ個人撮影会" [level=3] [ref=e167]
+              - generic [ref=e168]:
+                - generic [ref=e169]:
+                  - generic [ref=e170]: 
+                  - generic [ref=e171]: SBQ個人撮影会
+                - generic [ref=e172]:
+                  - generic [ref=e173]: 
+                  - generic [ref=e174]: 詳細は後日発表
+          - link [ref=e176] [cursor=pointer]:
+            - /url: /events/20260728-timetree-55895027
+            - article [ref=e177]:
+              - generic [ref=e178]:
+                - generic [ref=e180]:
+                  - generic [ref=e181]: "2026"
+                  - generic [ref=e182]: 07/28
+                  - generic [ref=e183]: (火)
+                - heading "なんちゃらアイドル主催 大人の文化祭〜初夏〜" [level=3] [ref=e184]
+              - generic [ref=e185]:
+                - generic [ref=e186]:
+                  - generic [ref=e187]: 
+                  - generic [ref=e188]: 渋谷La.mama
+                - generic [ref=e189]: 【出演】 なんちゃらアイドル S.B.Q.アイドル部 流星楽団 ヒエポポン シスターズン Digital Meat 開場/開演 18:30/19:00 charge ¥2,500 / 配信 ¥2,000
+          - link [ref=e191] [cursor=pointer]:
+            - /url: /events/20260731-timetree-81114432
+            - article [ref=e192]:
+              - generic [ref=e193]:
+                - generic [ref=e195]:
+                  - generic [ref=e196]: "2026"
+                  - generic [ref=e197]: 07/31
+                  - generic [ref=e198]: (金)
+                - heading "蒲田オッタンタ" [level=3] [ref=e199]
+              - generic [ref=e200]:
+                - generic [ref=e201]:
+                  - generic [ref=e202]: 
+                  - generic [ref=e203]: 蒲田オッタンタ
+                - generic [ref=e204]:
+                  - generic [ref=e205]: 
+                  - generic [ref=e206]: 詳細は後日発表
+      - generic [ref=e207]:
+        - heading "2026年8月 ▾" [level=2] [ref=e208]:
+          - button "2026年8月 ▾" [ref=e209] [cursor=pointer]:
+            - generic [ref=e210]: 2026年8月 ▾
+        - generic [ref=e211]:
+          - link [ref=e213] [cursor=pointer]:
+            - /url: /events/20260801-timetree-96316177
+            - article [ref=e214]:
+              - generic [ref=e215]:
+                - generic [ref=e217]:
+                  - generic [ref=e218]: "2026"
+                  - generic [ref=e219]: 08/01
+                  - generic [ref=e220]: (土)
+                - heading "渋谷la.mama" [level=3] [ref=e221]
+              - generic [ref=e222]:
+                - generic [ref=e223]:
+                  - generic [ref=e224]: 
+                  - generic [ref=e225]: 渋谷la.mama
+                - generic [ref=e226]: DADAフェスVol76 この夏やれんのか？ 渋谷La.mama OPEN 10:30 なんちゃらアイドル出演 20:05〜20:30 【タイムテーブル】 11:00〜11:35 ハングオーバー サブステージ あゆライナリーパー 12:10〜12:35 Very Ape サブステージ 森ヤスアキ 13:00〜13:25 深夜徘徊 13:40〜14:05 去勢 14:15〜14:40 平成墓嵐 14:45〜15:10 森口しゅな サブステージ Ling 15:45〜16:10 Sissylamp 16:25〜16:50 寝込みかんぱにゅら 17:00〜17:25 伊集院香織 17:35〜18:00 はる陽。 18:15〜18:40 みずすまし サブステージ 土萌まりな 19:15〜19:40 円盤少女 サブステージ すがまろ a.k.a @I・P 20:05〜20:30 なんちゃらアイドル 21:05〜 ザ・サイレンズ
+                - generic [ref=e227]:
+                  - text: 続きは詳細ページで
+                  - generic [ref=e228]: 
+          - link [ref=e230] [cursor=pointer]:
+            - /url: /events/20260801-timetree-82861467
+            - article [ref=e231]:
+              - generic [ref=e232]:
+                - generic [ref=e234]:
+                  - generic [ref=e235]: "2026"
+                  - generic [ref=e236]: 08/01
+                  - generic [ref=e237]: (土)
+                - heading "TANZAKU CD FESTIVAL 2026 supported by 短冊CDの日" [level=3] [ref=e238]
+              - generic [ref=e239]:
+                - generic [ref=e240]:
+                  - generic [ref=e241]: 
+                  - generic [ref=e242]: 横須賀ヤンガーザンイエスタデイ
+                - generic [ref=e243]: 【出演】 any joy? イエスハッピー！ 吉田哲人 MCあんにゅ 小日向由衣 sommeil sommeil なんちゃらアイドル Tnaka Tokyoかけひき倶楽部 The Bachelors HONDALADY 松永天馬 リリー＆マリー and more… 短冊CD発売38周年勝手に応援委員会主催、短冊CDの日運営事務局協賛。 開場/開演 11:30/12:00 ADV ¥4,000＋1DRINK DOOR ¥4,200＋1DRINK
+                - generic [ref=e244]:
+                  - text: 続きは詳細ページで
+                  - generic [ref=e245]: 
+          - link [ref=e247] [cursor=pointer]:
+            - /url: /events/20260803-timetree-18571225
+            - article [ref=e248]:
+              - generic [ref=e249]:
+                - generic [ref=e251]:
+                  - generic [ref=e252]: "2026"
+                  - generic [ref=e253]: 08/03
+                  - generic [ref=e254]: (月)
+                - heading "東新宿LOVE TKO" [level=3] [ref=e255]
+              - generic [ref=e256]:
+                - generic [ref=e257]:
+                  - generic [ref=e258]: 
+                  - generic [ref=e259]: 東新宿LOVE TKO
+                - generic [ref=e260]:
+                  - generic [ref=e261]: 
+                  - generic [ref=e262]: 詳細は後日発表
+          - link [ref=e264] [cursor=pointer]:
+            - /url: /events/20260806-timetree-43099834
+            - article [ref=e265]:
+              - generic [ref=e266]:
+                - generic [ref=e268]:
+                  - generic [ref=e269]: "2026"
+                  - generic [ref=e270]: 08/06
+                  - generic [ref=e271]: (木)
+                - heading "海の家" [level=3] [ref=e272]
+              - generic [ref=e273]:
+                - generic [ref=e274]:
+                  - generic [ref=e275]: 
+                  - generic [ref=e276]: 海の家
+                - generic [ref=e277]:
+                  - generic [ref=e278]: 
+                  - generic [ref=e279]: 詳細は後日発表
+          - link [ref=e281] [cursor=pointer]:
+            - /url: /events/20260808-timetree-01793792
+            - article [ref=e282]:
+              - generic [ref=e283]:
+                - generic [ref=e285]:
+                  - generic [ref=e286]: "2026"
+                  - generic [ref=e287]: 08/08
+                  - generic [ref=e288]: (土)
+                - heading "ANTIKNOCK presents「SPICE GIRLS vol.58」-DAYTIME-" [level=3] [ref=e289]
+              - generic [ref=e290]:
+                - generic [ref=e291]:
+                  - generic [ref=e292]: 
+                  - generic [ref=e293]: 新宿Antiknock
+                - generic [ref=e294]: 【出演】 なんちゃらアイドル（10:10-10:30 / 物販 10:45-11:35） AKIARIM AIMIA AdFicTioN 終末のステラ Village in Maier ゼンゼロランカー OPEN/START/CLOSE 9:15/9:30/13:00 ADV/DOOR ¥2,500/¥3,000（+1DRINK ¥600）
+          - link [ref=e296] [cursor=pointer]:
+            - /url: /events/20260809-timetree-94823857
+            - article [ref=e297]:
+              - generic [ref=e298]:
+                - generic [ref=e300]:
+                  - generic [ref=e301]: "2026"
+                  - generic [ref=e302]: 08/09
+                  - generic [ref=e303]: (日)
+                - heading "Welcome back presents「Let's Party！」" [level=3] [ref=e304]
+              - generic [ref=e305]:
+                - generic [ref=e306]:
+                  - generic [ref=e307]: 
+                  - generic [ref=e308]: 大塚Welcome Back
+                - generic [ref=e309]: Let's Party! 【出演】 なんちゃらアイドル 鈴木千絵 さおり凛ね 工藤ちゃん 武岡あや乃 有坂愛海 OPEN/START 18:15/18:45 TICKET ¥2,900＋1Drink¥600
+          - link [ref=e311] [cursor=pointer]:
+            - /url: /events/20260810-timetree-54510826
+            - article [ref=e312]:
+              - generic [ref=e313]:
+                - generic [ref=e314]:
+                  - generic [ref=e315]:
+                    - generic [ref=e316]: "2026"
+                    - generic [ref=e317]: 08/10
+                    - generic [ref=e318]: (月)
+                  - generic [ref=e320]: マミソロ
+                - heading "東新宿LOVE TKO" [level=3] [ref=e321]
+              - generic [ref=e322]:
+                - generic [ref=e323]:
+                  - generic [ref=e324]: 
+                  - generic [ref=e325]: 東新宿LOVE TKO
+                - generic [ref=e326]:
+                  - generic [ref=e327]: 
+                  - generic [ref=e328]: 詳細は後日発表
+          - link [ref=e330] [cursor=pointer]:
+            - /url: /events/20260816-lamama
+            - article [ref=e331]:
+              - generic [ref=e332]:
+                - generic [ref=e334]:
+                  - generic [ref=e335]: "2026"
+                  - generic [ref=e336]: 08/16
+                  - generic [ref=e337]: (日)
+                - heading "DOUGENZAKA MAUDIE PALACE 2026" [level=3] [ref=e338]
+              - generic [ref=e339]:
+                - generic [ref=e340]:
+                  - generic [ref=e341]: 
+                  - generic [ref=e342]: 渋谷La.mama
+                - generic [ref=e343]: 【第二弾発表アーティスト】 AD／CD なんちゃらアイドル 森ヤスアキ【BANDSET】 ★サブステージ★ C.B.Style SOSHI-G a.k.a.TOMOYO-C 【発表済み第一弾アーティスト】 スキップカウズ ザ☆ペラーズ 泥虎（DEIDORA） the 部族 MAUDIE ...and more!! special guest：褒めますおじさん 開場/開演 15:30/15:45（予定） Tickets 前売り¥3,000/当日¥3,500
+                - generic [ref=e344]:
+                  - text: 続きは詳細ページで
+                  - generic [ref=e345]: 
+          - link [ref=e347] [cursor=pointer]:
+            - /url: /events/20260817-timetree-58495452
+            - article [ref=e348]:
+              - generic [ref=e349]:
+                - generic [ref=e351]:
+                  - generic [ref=e352]: "2026"
+                  - generic [ref=e353]: 08/17
+                  - generic [ref=e354]: (月)
+                - heading "渋谷La.mama" [level=3] [ref=e355]
+              - generic [ref=e356]:
+                - generic [ref=e357]:
+                  - generic [ref=e358]: 
+                  - generic [ref=e359]: 渋谷La.mama
+                - generic [ref=e360]:
+                  - generic [ref=e361]: 
+                  - generic [ref=e362]: 詳細は後日発表
+          - link [ref=e364] [cursor=pointer]:
+            - /url: /events/20260817-timetree-93663853
+            - article [ref=e365]:
+              - generic [ref=e366]:
+                - generic [ref=e368]:
+                  - generic [ref=e369]: "2026"
+                  - generic [ref=e370]: 08/17
+                  - generic [ref=e371]: (月)
+                - heading "sommeil sommeil＆なんちゃらアイドル マンスリー2マンライブ（第2回）" [level=3] [ref=e372]
+              - generic [ref=e373]:
+                - generic [ref=e374]:
+                  - generic [ref=e375]: 
+                  - generic [ref=e376]: 東新宿LOVE TKO
+                - generic [ref=e377]: sommeil sommeil＆なんちゃらアイドル マンスリー2マンライブ！（第2回） open/start 18:00/19:00 CHARGE ¥1,500 第1回（7/13）のタイムテーブルを踏襲予定（要確認）。第3回は9月14日（月）開催予定。
+          - link [ref=e379] [cursor=pointer]:
+            - /url: /events/20260818-timetree-56983263
+            - article [ref=e380]:
+              - generic [ref=e381]:
+                - generic [ref=e383]:
+                  - generic [ref=e384]: "2026"
+                  - generic [ref=e385]: 08/18
+                  - generic [ref=e386]: (火)
+                - heading "渋谷La.mama" [level=3] [ref=e387]
+              - generic [ref=e388]:
+                - generic [ref=e389]:
+                  - generic [ref=e390]: 
+                  - generic [ref=e391]: 渋谷La.mama
+                - generic [ref=e392]:
+                  - generic [ref=e393]: 
+                  - generic [ref=e394]: 詳細は後日発表
+          - link [ref=e396] [cursor=pointer]:
+            - /url: /events/20260819-timetree-56484763
+            - article [ref=e397]:
+              - generic [ref=e398]:
+                - generic [ref=e400]:
+                  - generic [ref=e401]: "2026"
+                  - generic [ref=e402]: 08/19
+                  - generic [ref=e403]: (水)
+                - heading "渋谷La.mama" [level=3] [ref=e404]
+              - generic [ref=e405]:
+                - generic [ref=e406]:
+                  - generic [ref=e407]: 
+                  - generic [ref=e408]: 渋谷La.mama
+                - generic [ref=e409]:
+                  - generic [ref=e410]: 
+                  - generic [ref=e411]: 詳細は後日発表
+          - link [ref=e413] [cursor=pointer]:
+            - /url: /events/20260820-timetree-03782465
+            - article [ref=e414]:
+              - generic [ref=e415]:
+                - generic [ref=e416]:
+                  - generic [ref=e417]:
+                    - generic [ref=e418]: "2026"
+                    - generic [ref=e419]: 08/20
+                    - generic [ref=e420]: (木)
+                  - generic [ref=e422]: マミソロ
+                - heading "渋谷La.mama" [level=3] [ref=e423]
+              - generic [ref=e424]:
+                - generic [ref=e425]:
+                  - generic [ref=e426]: 
+                  - generic [ref=e427]: 渋谷La.mama
+                - generic [ref=e428]:
+                  - generic [ref=e429]: 
+                  - generic [ref=e430]: 詳細は後日発表
+          - link [ref=e432] [cursor=pointer]:
+            - /url: /events/20260821-timetree-58727310
+            - article [ref=e433]:
+              - generic [ref=e434]:
+                - generic [ref=e436]:
+                  - generic [ref=e437]: "2026"
+                  - generic [ref=e438]: 08/21
+                  - generic [ref=e439]: (金)
+                - heading "渋谷La.mama" [level=3] [ref=e440]
+              - generic [ref=e441]:
+                - generic [ref=e442]:
+                  - generic [ref=e443]: 
+                  - generic [ref=e444]: 渋谷La.mama
+                - generic [ref=e445]:
+                  - generic [ref=e446]: 
+                  - generic [ref=e447]: 詳細は後日発表
+          - link [ref=e449] [cursor=pointer]:
+            - /url: /events/20260822-timetree-79763485
+            - article [ref=e450]:
+              - generic [ref=e451]:
+                - generic [ref=e452]:
+                  - generic [ref=e453]:
+                    - generic [ref=e454]: "2026"
+                    - generic [ref=e455]: 08/22
+                    - generic [ref=e456]: (土)
+                  - generic [ref=e458]: あおはるソロ
+                - heading "四谷OUTBREAK" [level=3] [ref=e459]
+              - generic [ref=e460]:
+                - generic [ref=e461]:
+                  - generic [ref=e462]: 
+                  - generic [ref=e463]: 四谷OUTBREAK
+                - generic [ref=e464]:
+                  - generic [ref=e465]: 
+                  - generic [ref=e466]: 詳細は後日発表
+          - link [ref=e468] [cursor=pointer]:
+            - /url: /events/20260825-timetree-52127896
+            - article [ref=e469]:
+              - generic [ref=e470]:
+                - generic [ref=e472]:
+                  - generic [ref=e473]: "2026"
+                  - generic [ref=e474]: 08/25
+                  - generic [ref=e475]: (火)
+                - heading "渋谷La.mama" [level=3] [ref=e476]
+              - generic [ref=e477]:
+                - generic [ref=e478]:
+                  - generic [ref=e479]: 
+                  - generic [ref=e480]: 渋谷La.mama
+                - generic [ref=e481]:
+                  - generic [ref=e482]: 
+                  - generic [ref=e483]: 詳細は後日発表
+          - link [ref=e485] [cursor=pointer]:
+            - /url: /events/20260826-timetree-58844859
+            - article [ref=e486]:
+              - generic [ref=e487]:
+                - generic [ref=e489]:
+                  - generic [ref=e490]: "2026"
+                  - generic [ref=e491]: 08/26
+                  - generic [ref=e492]: (水)
+                - heading "一緒に聴きたいアイドル曲ＤＪイベント なんたってアイドル" [level=3] [ref=e493]
+              - generic [ref=e494]:
+                - generic [ref=e495]:
+                  - generic [ref=e496]: 
+                  - generic [ref=e497]: 蒲田オッタンタ
+                - generic [ref=e498]: 一緒に聴きたいアイドル曲ＤＪイベント なんたってアイドル 偶数月第4水曜日 19:00〜22:00 ¥1,500（1d.付） DJ：なんちゃらアイドル / Q太郎 / FUKO ゲストDJも歓迎！ 会場 スタジオ・オッタンタ 大田区蒲田5-7-6 CCM蒲田ビル2F TEL 03-3738-0080
+          - link [ref=e500] [cursor=pointer]:
+            - /url: /events/20260830-timetree-48843637
+            - article [ref=e501]:
+              - generic [ref=e502]:
+                - generic [ref=e504]:
+                  - generic [ref=e505]: "2026"
+                  - generic [ref=e506]: 08/30
+                  - generic [ref=e507]: (日)
+                - heading "イオン笠間" [level=3] [ref=e508]
+              - generic [ref=e509]:
+                - generic [ref=e510]:
+                  - generic [ref=e511]: 
+                  - generic [ref=e512]: イオン笠間
+                - generic [ref=e513]:
+                  - generic [ref=e514]: 
+                  - generic [ref=e515]: 詳細は後日発表
+      - generic [ref=e516]:
+        - heading "2026年9月 ▾" [level=2] [ref=e517]:
+          - button "2026年9月 ▾" [ref=e518] [cursor=pointer]:
+            - generic [ref=e519]: 2026年9月 ▾
+        - generic [ref=e520]:
+          - link [ref=e522] [cursor=pointer]:
+            - /url: /events/20260902-timetree-15794525
+            - article [ref=e523]:
+              - generic [ref=e524]:
+                - generic [ref=e526]:
+                  - generic [ref=e527]: "2026"
+                  - generic [ref=e528]: 09/02
+                  - generic [ref=e529]: (水)
+                - heading "栃木 さる小" [level=3] [ref=e530]
+              - generic [ref=e531]:
+                - generic [ref=e532]:
+                  - generic [ref=e533]: 
+                  - generic [ref=e534]: 栃木 さる小
+                - generic [ref=e535]:
+                  - generic [ref=e536]: 
+                  - generic [ref=e537]: 詳細は後日発表
+          - link [ref=e539] [cursor=pointer]:
+            - /url: /events/20260903-timetree-95289484
+            - article [ref=e540]:
+              - generic [ref=e541]:
+                - generic [ref=e543]:
+                  - generic [ref=e544]: "2026"
+                  - generic [ref=e545]: 09/03
+                  - generic [ref=e546]: (木)
+                - heading "栃木さる小" [level=3] [ref=e547]
+              - generic [ref=e548]:
+                - generic [ref=e549]:
+                  - generic [ref=e550]: 
+                  - generic [ref=e551]: 栃木さる小
+                - generic [ref=e552]:
+                  - generic [ref=e553]: 
+                  - generic [ref=e554]: 詳細は後日発表
+          - link [ref=e556] [cursor=pointer]:
+            - /url: /events/20260904-timetree-23433815
+            - article [ref=e557]:
+              - generic [ref=e558]:
+                - generic [ref=e560]:
+                  - generic [ref=e561]: "2026"
+                  - generic [ref=e562]: 09/04
+                  - generic [ref=e563]: (金)
+                - heading "栃木さる小" [level=3] [ref=e564]
+              - generic [ref=e565]:
+                - generic [ref=e566]:
+                  - generic [ref=e567]: 
+                  - generic [ref=e568]: 栃木さる小
+                - generic [ref=e569]:
+                  - generic [ref=e570]: 
+                  - generic [ref=e571]: 詳細は後日発表
+          - link [ref=e573] [cursor=pointer]:
+            - /url: /events/20260905-junjun-birthday
+            - article [ref=e574]:
+              - generic [ref=e575]:
+                - generic [ref=e577]:
+                  - generic [ref=e578]: "2026"
+                  - generic [ref=e579]: 09/05
+                  - generic [ref=e580]: (土)
+                - heading "じゅんじゅん生誕大宴会〜37歳だよ！全員集合☆〜" [level=3] [ref=e581]
+              - generic [ref=e582]:
+                - generic [ref=e583]:
+                  - generic [ref=e584]: 
+                  - generic [ref=e585]: 四谷OUTBREAK
+                - generic [ref=e586]: 【出演】 ダムダム団 初咲里奈 ドラゴン岩村 ひよこ倶楽部 SoberBrown にゃんにゃんブーメラン Atama concrete 中村アリーとTIG-HUGS PUNK SHIBUYA なんちゃらアイドル ケンカオイル 山村茜 教祖仮面 熱海雄一 ウクレレ高円寺 全部、運営のせいだ。 さとーさん 西山正規 じゅんじゅん ヒゲと味噌汁 ほか 開場/開演 11:30/11:40 前売/当日 ¥3,500＋D 飲み放題プランあり FOOD：きしぱん
+                - generic [ref=e587]:
+                  - text: 続きは詳細ページで
+                  - generic [ref=e588]: 
+          - link [ref=e590] [cursor=pointer]:
+            - /url: /events/20260909-timetree-38990386
+            - article [ref=e591]:
+              - generic [ref=e592]:
+                - generic [ref=e594]:
+                  - generic [ref=e595]: "2026"
+                  - generic [ref=e596]: 09/09
+                  - generic [ref=e597]: (水)
+                - heading "渋谷La.mama" [level=3] [ref=e598]
+              - generic [ref=e599]:
+                - generic [ref=e600]:
+                  - generic [ref=e601]: 
+                  - generic [ref=e602]: 渋谷La.mama
+                - generic [ref=e603]:
+                  - generic [ref=e604]: 
+                  - generic [ref=e605]: 詳細は後日発表
+          - link [ref=e607] [cursor=pointer]:
+            - /url: /events/20260920-firebird
+            - article [ref=e608]:
+              - generic [ref=e609]:
+                - generic [ref=e611]:
+                  - generic [ref=e612]: "2026"
+                  - generic [ref=e613]: 09/20
+                  - generic [ref=e614]: (日)
+                - heading "FIREBIRD presents “bloody bloody sunday～S.M.D week～”" [level=3] [ref=e615]
+              - generic [ref=e616]:
+                - generic [ref=e617]:
+                  - generic [ref=e618]: 
+                  - generic [ref=e619]: 新松戸FIREBIRD
+                - generic [ref=e620]: 【出演】 18:30〜19:15 イギリス人 19:30〜20:15 なんちゃらアイドル 20:30〜21:30 スキップカウズ 開場/開演 18:00/18:30 前売 ¥3,400＋1D 当日 ¥3,900＋1D ★TIGET予約先行入場 https://tiget.net/events/504270
+      - generic [ref=e621]:
+        - heading "2026年10月 ▾" [level=2] [ref=e622]:
+          - button "2026年10月 ▾" [ref=e623] [cursor=pointer]:
+            - generic [ref=e624]: 2026年10月 ▾
+        - link [ref=e627] [cursor=pointer]:
+          - /url: /events/20261028-timetree-75262658
+          - article [ref=e628]:
+            - generic [ref=e629]:
+              - generic [ref=e631]:
+                - generic [ref=e632]: "2026"
+                - generic [ref=e633]: 10/28
+                - generic [ref=e634]: (水)
+              - heading "一緒に聴きたいアイドル曲ＤＪイベント なんたってアイドル" [level=3] [ref=e635]
+            - generic [ref=e636]:
+              - generic [ref=e637]:
+                - generic [ref=e638]: 
+                - generic [ref=e639]: 蒲田オッタンタ
+              - generic [ref=e640]: 一緒に聴きたいアイドル曲ＤＪイベント なんたってアイドル 偶数月第4水曜日 19:00〜22:00 ¥1,500（1d.付） DJ：なんちゃらアイドル / Q太郎 / FUKO ゲストDJも歓迎！ 会場 スタジオ・オッタンタ 大田区蒲田5-7-6 CCM蒲田ビル2F TEL 03-3738-0080
+      - generic [ref=e641]:
+        - heading "2026年11月 ▾" [level=2] [ref=e642]:
+          - button "2026年11月 ▾" [ref=e643] [cursor=pointer]:
+            - generic [ref=e644]: 2026年11月 ▾
+        - link [ref=e647] [cursor=pointer]:
+          - /url: /events/20261121-timetree-32674248
+          - article [ref=e648]:
+            - generic [ref=e649]:
+              - generic [ref=e651]:
+                - generic [ref=e652]: "2026"
+                - generic [ref=e653]: 11/21
+                - generic [ref=e654]: (土)
+              - heading "渋谷la.mama" [level=3] [ref=e655]
+            - generic [ref=e656]:
+              - generic [ref=e657]:
+                - generic [ref=e658]: 
+                - generic [ref=e659]: 渋谷la.mama
+              - generic [ref=e660]:
+                - generic [ref=e661]: 
+                - generic [ref=e662]: 詳細は後日発表
+      - generic [ref=e663]:
+        - heading "2026年12月 ▾" [level=2] [ref=e664]:
+          - button "2026年12月 ▾" [ref=e665] [cursor=pointer]:
+            - generic [ref=e666]: 2026年12月 ▾
+        - link [ref=e669] [cursor=pointer]:
+          - /url: /events/20261216-timetree-36166912
+          - article [ref=e670]:
+            - generic [ref=e671]:
+              - generic [ref=e673]:
+                - generic [ref=e674]: "2026"
+                - generic [ref=e675]: 12/16
+                - generic [ref=e676]: (水)
+              - heading "一緒に聴きたいアイドル曲ＤＪイベント なんたってアイドル" [level=3] [ref=e677]
+            - generic [ref=e678]:
+              - generic [ref=e679]:
+                - generic [ref=e680]: 
+                - generic [ref=e681]: 蒲田オッタンタ
+              - generic [ref=e682]: 一緒に聴きたいアイドル曲ＤＪイベント なんたってアイドル 偶数月第4水曜日 19:00〜22:00 ¥1,500（1d.付） DJ：なんちゃらアイドル / Q太郎 / FUKO ゲストDJも歓迎！ 会場 スタジオ・オッタンタ 大田区蒲田5-7-6 CCM蒲田ビル2F TEL 03-3738-0080
+  - contentinfo [ref=e683]:
+    - navigation "フッターナビゲーション" [ref=e684]:
+      - link "ライブ予定" [ref=e685] [cursor=pointer]:
+        - /url: /
+      - link "音源" [ref=e686] [cursor=pointer]:
+        - /url: /releases
+      - link "メンバー" [ref=e687] [cursor=pointer]:
+        - /url: /members
+      - link "沿革" [ref=e688] [cursor=pointer]:
+        - /url: /history
+      - link "会場" [ref=e689] [cursor=pointer]:
+        - /url: /venues
+      - link "対バン" [ref=e690] [cursor=pointer]:
+        - /url: /acts
+      - link "リンク" [ref=e691] [cursor=pointer]:
+        - /url: /links
+      - link "お問い合わせ" [ref=e692] [cursor=pointer]:
+        - /url: /contact
+      - link "イベントアーカイブ" [ref=e693] [cursor=pointer]:
+        - /url: /events/
+    - generic [ref=e694]:
+      - link "X（公式）" [ref=e695] [cursor=pointer]:
+        - /url: https://x.com/nantyaraidol
+        - generic [ref=e696]: 
+      - link "YouTube" [ref=e697] [cursor=pointer]:
+        - /url: https://www.youtube.com/@nagaokatasuku
+        - generic [ref=e698]: 
+      - link "Podcast" [ref=e699] [cursor=pointer]:
+        - /url: https://podcast.nantyara.com
+        - generic [ref=e700]: 
+      - link "グッズ" [ref=e701] [cursor=pointer]:
+        - /url: https://nantyara.thebase.in/
+        - generic [ref=e702]: 
+    - paragraph [ref=e703]: © 2018-2026 なんちゃらアイドル

@@ -1,0 +1,294 @@
+- generic [active] [ref=e1]:
+  - navigation:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - heading "MENU" [level=2] [ref=e6]
+        - button "メニューを閉じる" [ref=e7] [cursor=pointer]:
+          - generic [ref=e8]: 
+      - list [ref=e9]:
+        - listitem [ref=e10]:
+          - link "ライブ予定" [ref=e11] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e12]: 
+            - generic [ref=e13]: ライブ予定
+        - listitem [ref=e14]:
+          - link "音源" [ref=e15] [cursor=pointer]:
+            - /url: /releases
+            - generic [ref=e16]: 
+            - generic [ref=e17]: 音源
+        - listitem [ref=e18]:
+          - link "メンバー" [ref=e19] [cursor=pointer]:
+            - /url: /members
+            - generic [ref=e20]: 
+            - generic [ref=e21]: メンバー
+        - listitem [ref=e22]:
+          - link "沿革" [ref=e23] [cursor=pointer]:
+            - /url: /history
+            - generic [ref=e24]: 
+            - generic [ref=e25]: 沿革
+        - listitem [ref=e26]:
+          - link "会場" [ref=e27] [cursor=pointer]:
+            - /url: /venues
+            - generic [ref=e28]: 
+            - generic [ref=e29]: 会場
+        - listitem [ref=e30]:
+          - link "対バン" [ref=e31] [cursor=pointer]:
+            - /url: /acts
+            - generic [ref=e32]: 
+            - generic [ref=e33]: 対バン
+        - listitem [ref=e34]:
+          - link "リンク" [ref=e35] [cursor=pointer]:
+            - /url: /links
+            - generic [ref=e36]: 
+            - generic [ref=e37]: リンク
+        - listitem [ref=e38]:
+          - link "お問い合わせ" [ref=e39] [cursor=pointer]:
+            - /url: /contact
+            - generic [ref=e40]: 
+            - generic [ref=e41]: お問い合わせ
+      - generic [ref=e42]:
+        - generic [ref=e43]: "ボタン位置:"
+        - button "左" [ref=e44] [cursor=pointer]
+        - button "右" [ref=e45] [cursor=pointer]
+  - banner [ref=e46]:
+    - heading "なんちゃらアイドル" [level=1] [ref=e47]:
+      - link "なんちゃらアイドル" [ref=e48] [cursor=pointer]:
+        - /url: /
+    - navigation "メインナビゲーション" [ref=e49]:
+      - link "ライブ予定" [ref=e50] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e51]: 
+        - generic [ref=e52]: ライブ予定
+      - link "音源" [ref=e53] [cursor=pointer]:
+        - /url: /releases
+        - generic [ref=e54]: 
+        - generic [ref=e55]: 音源
+      - link "メンバー" [ref=e56] [cursor=pointer]:
+        - /url: /members
+        - generic [ref=e57]: 
+        - generic [ref=e58]: メンバー
+      - link "沿革" [ref=e59] [cursor=pointer]:
+        - /url: /history
+        - generic [ref=e60]: 
+        - generic [ref=e61]: 沿革
+      - link "会場" [ref=e62] [cursor=pointer]:
+        - /url: /venues
+        - generic [ref=e63]: 
+        - generic [ref=e64]: 会場
+      - link "対バン" [ref=e65] [cursor=pointer]:
+        - /url: /acts
+        - generic [ref=e66]: 
+        - generic [ref=e67]: 対バン
+      - link "リンク" [ref=e68] [cursor=pointer]:
+        - /url: /links
+        - generic [ref=e69]: 
+        - generic [ref=e70]: リンク
+      - link "お問い合わせ" [ref=e71] [cursor=pointer]:
+        - /url: /contact
+        - generic [ref=e72]: 
+        - generic [ref=e73]: お問い合わせ
+  - main [ref=e75]:
+    - generic [ref=e76]:
+      - heading "渋谷La.mama" [level=1] [ref=e77]
+      - paragraph [ref=e78]:
+        - text: 通算
+        - strong [ref=e79]: "29"
+        - text: 回出演
+      - generic [ref=e80]:
+        - paragraph [ref=e81]:
+          - generic [ref=e82]: 
+          - link "東京都渋谷区道玄坂1-15-3 プリメーラ道玄坂B1F" [ref=e83] [cursor=pointer]:
+            - /url: https://www.google.com/maps/search/?api=1&query=%E6%B8%8B%E8%B0%B7La.mama%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%8B%E8%B0%B7%E5%8C%BA%E9%81%93%E7%8E%84%E5%9D%821-15-3%20%E3%83%97%E3%83%AA%E3%83%A1%E3%83%BC%E3%83%A9%E9%81%93%E7%8E%84%E5%9D%82B1F
+        - paragraph [ref=e84]:
+          - generic [ref=e85]: 
+          - link "公式サイト" [ref=e86] [cursor=pointer]:
+            - /url: https://www.lamama.net
+        - paragraph [ref=e87]:
+          - generic [ref=e88]: 
+          - link "@shibuya_lamama" [ref=e89] [cursor=pointer]:
+            - /url: https://x.com/shibuya_lamama
+      - generic [ref=e90]:
+        - heading "今後の出演" [level=2] [ref=e91]
+        - list [ref=e92]:
+          - listitem [ref=e93]:
+            - link "2026年7月28日(火) 渋谷La.mama" [ref=e94] [cursor=pointer]:
+              - /url: /events/20260728-timetree-55895027
+              - generic [ref=e95]: 2026年7月28日(火)
+              - generic [ref=e96]: 渋谷La.mama
+          - listitem [ref=e97]:
+            - link "2026年8月1日(土) 渋谷la.mama" [ref=e98] [cursor=pointer]:
+              - /url: /events/20260801-timetree-96316177
+              - generic [ref=e99]: 2026年8月1日(土)
+              - generic [ref=e100]: 渋谷la.mama
+          - listitem [ref=e101]:
+            - link "2026年8月16日(日) DOUGENZAKA MAUDIE PALACE 2026" [ref=e102] [cursor=pointer]:
+              - /url: /events/20260816-lamama
+              - generic [ref=e103]: 2026年8月16日(日)
+              - generic [ref=e104]: DOUGENZAKA MAUDIE PALACE 2026
+          - listitem [ref=e105]:
+            - link "2026年8月17日(月) 渋谷La.mama" [ref=e106] [cursor=pointer]:
+              - /url: /events/20260817-timetree-58495452
+              - generic [ref=e107]: 2026年8月17日(月)
+              - generic [ref=e108]: 渋谷La.mama
+          - listitem [ref=e109]:
+            - link "2026年8月18日(火) 渋谷La.mama" [ref=e110] [cursor=pointer]:
+              - /url: /events/20260818-timetree-56983263
+              - generic [ref=e111]: 2026年8月18日(火)
+              - generic [ref=e112]: 渋谷La.mama
+          - listitem [ref=e113]:
+            - link "2026年8月19日(水) 渋谷La.mama" [ref=e114] [cursor=pointer]:
+              - /url: /events/20260819-timetree-56484763
+              - generic [ref=e115]: 2026年8月19日(水)
+              - generic [ref=e116]: 渋谷La.mama
+          - listitem [ref=e117]:
+            - link "2026年8月20日(木) 渋谷La.mama" [ref=e118] [cursor=pointer]:
+              - /url: /events/20260820-timetree-03782465
+              - generic [ref=e119]: 2026年8月20日(木)
+              - generic [ref=e120]: 渋谷La.mama
+          - listitem [ref=e121]:
+            - link "2026年8月21日(金) 渋谷La.mama" [ref=e122] [cursor=pointer]:
+              - /url: /events/20260821-timetree-58727310
+              - generic [ref=e123]: 2026年8月21日(金)
+              - generic [ref=e124]: 渋谷La.mama
+          - listitem [ref=e125]:
+            - link "2026年8月25日(火) 渋谷La.mama" [ref=e126] [cursor=pointer]:
+              - /url: /events/20260825-timetree-52127896
+              - generic [ref=e127]: 2026年8月25日(火)
+              - generic [ref=e128]: 渋谷La.mama
+          - listitem [ref=e129]:
+            - link "2026年9月9日(水) 渋谷La.mama" [ref=e130] [cursor=pointer]:
+              - /url: /events/20260909-timetree-38990386
+              - generic [ref=e131]: 2026年9月9日(水)
+              - generic [ref=e132]: 渋谷La.mama
+          - listitem [ref=e133]:
+            - link "2026年11月21日(土) 渋谷la.mama" [ref=e134] [cursor=pointer]:
+              - /url: /events/20261121-timetree-32674248
+              - generic [ref=e135]: 2026年11月21日(土)
+              - generic [ref=e136]: 渋谷la.mama
+      - generic [ref=e137]:
+        - heading "過去の出演" [level=2] [ref=e138]
+        - list [ref=e139]:
+          - listitem [ref=e140]:
+            - link "2026年6月9日(火) 渋谷La.mama" [ref=e141] [cursor=pointer]:
+              - /url: /events/20260609-timetree-05529190
+              - generic [ref=e142]: 2026年6月9日(火)
+              - generic [ref=e143]: 渋谷La.mama
+          - listitem [ref=e144]:
+            - link "2026年6月4日(木) 渋谷La.mama" [ref=e145] [cursor=pointer]:
+              - /url: /events/20260604-timetree-76183143
+              - generic [ref=e146]: 2026年6月4日(木)
+              - generic [ref=e147]: 渋谷La.mama
+          - listitem [ref=e148]:
+            - link "2026年6月3日(水) 大人の文化祭 〜年に一度のsexy祭り！〜" [ref=e149] [cursor=pointer]:
+              - /url: /events/20260603-timetree-55151210
+              - generic [ref=e150]: 2026年6月3日(水)
+              - generic [ref=e151]: 大人の文化祭 〜年に一度のsexy祭り！〜
+          - listitem [ref=e152]:
+            - link "2026年5月30日(土) 大人の文化祭 〜Q太郎46歳の春だから〜" [ref=e153] [cursor=pointer]:
+              - /url: /events/20260530-timetree-26105091
+              - generic [ref=e154]: 2026年5月30日(土)
+              - generic [ref=e155]: 大人の文化祭 〜Q太郎46歳の春だから〜
+          - listitem [ref=e156]:
+            - link "2026年5月7日(木) 渋谷la.mama" [ref=e157] [cursor=pointer]:
+              - /url: /events/20260507-timetree-03926378
+              - generic [ref=e158]: 2026年5月7日(木)
+              - generic [ref=e159]: 渋谷la.mama
+          - listitem [ref=e160]:
+            - link "2026年5月6日(水) 渋谷La.mama" [ref=e161] [cursor=pointer]:
+              - /url: /events/20260506-timetree-52907048
+              - generic [ref=e162]: 2026年5月6日(水)
+              - generic [ref=e163]: 渋谷La.mama
+          - listitem [ref=e164]:
+            - link "2026年5月5日(火) 渋谷La.mama" [ref=e165] [cursor=pointer]:
+              - /url: /events/20260505-timetree-71545425
+              - generic [ref=e166]: 2026年5月5日(火)
+              - generic [ref=e167]: 渋谷La.mama
+          - listitem [ref=e168]:
+            - link "2026年5月2日(土) 渋谷la.Mama" [ref=e169] [cursor=pointer]:
+              - /url: /events/20260502-timetree-40771323
+              - generic [ref=e170]: 2026年5月2日(土)
+              - generic [ref=e171]: 渋谷la.Mama
+          - listitem [ref=e172]:
+            - link "2026年5月1日(金) 渋谷La.mama(昼)" [ref=e173] [cursor=pointer]:
+              - /url: /events/20260501-timetree-54228068
+              - generic [ref=e174]: 2026年5月1日(金)
+              - generic [ref=e175]: 渋谷La.mama(昼)
+          - listitem [ref=e176]:
+            - link "2026年4月30日(木) なんちゃらアイドル主催 なんちゃらロックフェス2026" [ref=e177] [cursor=pointer]:
+              - /url: /events/20260430-timetree-65989253
+              - generic [ref=e178]: 2026年4月30日(木)
+              - generic [ref=e179]: なんちゃらアイドル主催 なんちゃらロックフェス2026
+          - listitem [ref=e180]:
+            - link "2026年4月4日(土) 御茶海マミ 1stソロワンマンライブ「君じゃなきゃダメって言ってよ。」" [ref=e181] [cursor=pointer]:
+              - /url: /events/20260404-timetree-36279089
+              - generic [ref=e182]: 2026年4月4日(土)
+              - generic [ref=e183]: 御茶海マミ 1stソロワンマンライブ「君じゃなきゃダメって言ってよ。」
+          - listitem [ref=e184]:
+            - link "2026年3月9日(月) なんちゃらアイドル主催 大人の文化祭 in 渋谷ラママ～サンキューエブリバディ～" [ref=e185] [cursor=pointer]:
+              - /url: /events/20260309-timetree-18507403
+              - generic [ref=e186]: 2026年3月9日(月)
+              - generic [ref=e187]: なんちゃらアイドル主催 大人の文化祭 in 渋谷ラママ～サンキューエブリバディ～
+          - listitem [ref=e188]:
+            - link "2026年2月21日(土) ぬかふぇす'26" [ref=e189] [cursor=pointer]:
+              - /url: /events/20260221-nukafes
+              - generic [ref=e190]: 2026年2月21日(土)
+              - generic [ref=e191]: ぬかふぇす'26
+          - listitem [ref=e192]:
+            - link "2026年2月12日(木) なんちゃらアイドル主催 大人の文化祭～バラエティだよ人生はvol.003～" [ref=e193] [cursor=pointer]:
+              - /url: /events/20260212-lamama
+              - generic [ref=e194]: 2026年2月12日(木)
+              - generic [ref=e195]: なんちゃらアイドル主催 大人の文化祭～バラエティだよ人生はvol.003～
+          - listitem [ref=e196]:
+            - link "2026年2月7日(土) 「密室」御茶海マミ主催ライブ" [ref=e197] [cursor=pointer]:
+              - /url: /events/20260207-mitsushitsu
+              - generic [ref=e198]: 2026年2月7日(土)
+              - generic [ref=e199]: 「密室」御茶海マミ主催ライブ
+          - listitem [ref=e200]:
+            - link "2026年1月29日(木) あおはる主催 in 渋谷La.mama 今日の君は・・・！" [ref=e201] [cursor=pointer]:
+              - /url: /events/20260129-aoharu-birthday
+              - generic [ref=e202]: 2026年1月29日(木)
+              - generic [ref=e203]: あおはる主催 in 渋谷La.mama 今日の君は・・・！
+          - listitem [ref=e204]:
+            - link "2026年1月28日(水) S.B.Q.アイドル部主催大人の文化祭バラエティだよ人生はvol.003in 渋谷ラママ" [ref=e205] [cursor=pointer]:
+              - /url: /events/20260128-otona-bunkasai
+              - generic [ref=e206]: 2026年1月28日(水)
+              - generic [ref=e207]: S.B.Q.アイドル部主催大人の文化祭バラエティだよ人生はvol.003in 渋谷ラママ
+          - listitem [ref=e208]:
+            - link "2026年1月27日(火) S.B.Q.アイドル部主催なんちゃらアイドル12周年ソウルメイトフェス！in 渋谷ラママ" [ref=e209] [cursor=pointer]:
+              - /url: /events/20260127-12th-anniversary
+              - generic [ref=e210]: 2026年1月27日(火)
+              - generic [ref=e211]: S.B.Q.アイドル部主催なんちゃらアイドル12周年ソウルメイトフェス！in 渋谷ラママ
+      - link "← 会場一覧に戻る" [ref=e213] [cursor=pointer]:
+        - /url: /venues
+  - contentinfo [ref=e214]:
+    - navigation "フッターナビゲーション" [ref=e215]:
+      - link "ライブ予定" [ref=e216] [cursor=pointer]:
+        - /url: /
+      - link "音源" [ref=e217] [cursor=pointer]:
+        - /url: /releases
+      - link "メンバー" [ref=e218] [cursor=pointer]:
+        - /url: /members
+      - link "沿革" [ref=e219] [cursor=pointer]:
+        - /url: /history
+      - link "会場" [ref=e220] [cursor=pointer]:
+        - /url: /venues
+      - link "対バン" [ref=e221] [cursor=pointer]:
+        - /url: /acts
+      - link "リンク" [ref=e222] [cursor=pointer]:
+        - /url: /links
+      - link "お問い合わせ" [ref=e223] [cursor=pointer]:
+        - /url: /contact
+    - generic [ref=e224]:
+      - link "X（公式）" [ref=e225] [cursor=pointer]:
+        - /url: https://x.com/nantyaraidol
+        - generic [ref=e226]: 
+      - link "YouTube" [ref=e227] [cursor=pointer]:
+        - /url: https://www.youtube.com/@nagaokatasuku
+        - generic [ref=e228]: 
+      - link "Podcast" [ref=e229] [cursor=pointer]:
+        - /url: https://podcast.nantyara.com
+        - generic [ref=e230]: 
+      - link "グッズ" [ref=e231] [cursor=pointer]:
+        - /url: https://nantyara.thebase.in/
+        - generic [ref=e232]: 
+    - paragraph [ref=e233]: © 2018-2026 なんちゃらアイドル

@@ -1,0 +1,176 @@
+- generic [active] [ref=e1]:
+  - navigation:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - heading "MENU" [level=2] [ref=e6]
+        - button "メニューを閉じる" [ref=e7] [cursor=pointer]:
+          - generic [ref=e8]: 
+      - list [ref=e9]:
+        - listitem [ref=e10]:
+          - link "ライブ予定" [ref=e11] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e12]: 
+            - generic [ref=e13]: ライブ予定
+        - listitem [ref=e14]:
+          - link "音源" [ref=e15] [cursor=pointer]:
+            - /url: /releases
+            - generic [ref=e16]: 
+            - generic [ref=e17]: 音源
+        - listitem [ref=e18]:
+          - link "メンバー" [ref=e19] [cursor=pointer]:
+            - /url: /members
+            - generic [ref=e20]: 
+            - generic [ref=e21]: メンバー
+        - listitem [ref=e22]:
+          - link "リンク" [ref=e23] [cursor=pointer]:
+            - /url: /links
+            - generic [ref=e24]: 
+            - generic [ref=e25]: リンク
+        - listitem [ref=e26]:
+          - link "お問い合わせ" [ref=e27] [cursor=pointer]:
+            - /url: /contact
+            - generic [ref=e28]: 
+            - generic [ref=e29]: お問い合わせ
+      - generic [ref=e30]:
+        - generic [ref=e31]: "ボタン位置:"
+        - button "左" [ref=e32] [cursor=pointer]
+        - button "右" [ref=e33] [cursor=pointer]
+  - banner [ref=e34]:
+    - heading "なんちゃらアイドル" [level=1] [ref=e35]:
+      - link "なんちゃらアイドル" [ref=e36] [cursor=pointer]:
+        - /url: /
+    - navigation "メインナビゲーション" [ref=e37]:
+      - link "ライブ予定" [ref=e38] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e39]: 
+        - generic [ref=e40]: ライブ予定
+      - link "音源" [ref=e41] [cursor=pointer]:
+        - /url: /releases
+        - generic [ref=e42]: 
+        - generic [ref=e43]: 音源
+      - link "メンバー" [ref=e44] [cursor=pointer]:
+        - /url: /members
+        - generic [ref=e45]: 
+        - generic [ref=e46]: メンバー
+      - link "リンク" [ref=e47] [cursor=pointer]:
+        - /url: /links
+        - generic [ref=e48]: 
+        - generic [ref=e49]: リンク
+      - link "お問い合わせ" [ref=e50] [cursor=pointer]:
+        - /url: /contact
+        - generic [ref=e51]: 
+        - generic [ref=e52]: お問い合わせ
+  - main [ref=e54]:
+    - article [ref=e55]:
+      - generic [ref=e56]:
+        - img "last resort" [ref=e58]
+        - generic [ref=e59]:
+          - generic [ref=e60]: アルバム
+          - heading "last resort" [level=1] [ref=e61]
+          - paragraph [ref=e62]: なんちゃらアイドル
+          - paragraph [ref=e63]:
+            - generic [ref=e64]: 
+            - text: 2026年4月22日
+          - generic [ref=e65]:
+            - generic [ref=e66]: "Format: CD"
+            - generic [ref=e67]: "Label: なりすコンパクト・ディスク/Hayabusa Landings"
+          - generic [ref=e68]:
+            - link "Apple Musicで聴く" [ref=e69] [cursor=pointer]:
+              - /url: https://music.apple.com/us/album/last-resort/6773575978
+              - generic [ref=e70]: 
+              - generic [ref=e71]: Apple Music
+            - link "Spotifyで聴く" [ref=e72] [cursor=pointer]:
+              - /url: https://open.spotify.com/intl-ja/album/2c1k6GcsPugmL7vTAlTKkm
+              - generic [ref=e73]: 
+              - generic [ref=e74]: Spotify
+            - link "YouTube Musicで聴く" [ref=e75] [cursor=pointer]:
+              - /url: https://music.youtube.com/playlist?list=OLAK5uy_noJDRqaGiTJbncQuU874by5It6QHcks0E
+              - generic [ref=e76]: 
+              - generic [ref=e77]: YouTube Music
+            - link "LINE MUSICで聴く" [ref=e78] [cursor=pointer]:
+              - /url: https://music.line.me/webapp/album/mb0000000005572191
+              - generic [ref=e79]: 
+              - generic [ref=e80]: LINE MUSIC
+      - generic [ref=e81]:
+        - heading "説明" [level=2] [ref=e82]
+        - generic [ref=e83]: 全曲コラボレーションアルバム。 スキップカウズ、森山公一（オセロケッツ）、トモフスキー、ニーネ、佐久間学、豊田道倫など多数のゲストアーティストが参加。
+      - generic [ref=e84]:
+        - heading "収録曲" [level=2] [ref=e85]
+        - list [ref=e86]:
+          - listitem [ref=e87]: 1. Lust Resort～欲望のヴァカンス～ (ft. 遠藤肇)
+          - listitem [ref=e88]: 2. LOVEマシーン (ft. スキップカウズ)
+          - listitem [ref=e89]: 3. もしかして君だけが苦しいって思ってないかい? (ft. 森山公一(オセロケッツ))
+          - listitem [ref=e90]: 4. 凍える太陽 (ft. 佐久間学)
+          - listitem [ref=e91]: 5. let's get it PARTY～Last Resort version～ (ft. MCあんにゅ)
+          - listitem [ref=e92]: 6. キルミーソフトリー (ft. TOMOVSKY)
+          - listitem [ref=e93]: 7. Wait for me～ハチャメチャ!恋の逃走劇～ (ft. POPPY)
+          - listitem [ref=e94]: 8. グッバイ・マイガール (ft. 豊田道倫)
+          - listitem [ref=e95]: 9. 夏色の夢 (ft. 小日向由衣)
+          - listitem [ref=e96]: 10. ミーハー (ft. 盛りたかった千里)
+          - listitem [ref=e97]: 11. 恋愛大祓 (ft. ヒゲと味噌汁)
+          - listitem [ref=e98]: 12. 9月のプール～さる小のテーマ～ (ft. NEKO)
+          - listitem [ref=e99]: 13. おやりなさい (ft. プロハンバーガー)
+          - listitem [ref=e100]: 14. SARAVA愛しき無人島よ! (ft. 桑原達也)
+          - listitem [ref=e101]: 15. み～ちゅう? (ft. なんちゃらアイドルorigin)
+          - listitem [ref=e102]: 16. CICADA (ft. MCあんにゅ)
+          - listitem [ref=e103]: 17. 悪魔のKiss (ft. POPPY)
+          - listitem [ref=e104]: 18. ブラックコーヒー (ft. 豊田道倫)
+          - listitem [ref=e105]: 19. いつかサウナで～新録～ (ft. ニーネ)
+          - listitem [ref=e106]: 20. 海の家 (ft. なんちゃらアイドル)
+      - generic [ref=e107]:
+        - heading "シェア" [level=2] [ref=e108]
+        - generic [ref=e109]:
+          - link "X（旧Twitter）でシェア" [ref=e110] [cursor=pointer]:
+            - /url: https://twitter.com/intent/tweet?url=https%3A%2F%2Fnantyara.com%2Freleases%2Frelease-016&text=last%20resort%20%E3%81%AA%E3%82%93%E3%81%A1%E3%82%83%E3%82%89%E3%82%A2%E3%82%A4%E3%83%89%E3%83%AB%20-%202026%E5%B9%B44%E6%9C%8822%E6%97%A5%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9
+            - generic [ref=e111]: 
+          - link "Facebookでシェア" [ref=e112] [cursor=pointer]:
+            - /url: https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fnantyara.com%2Freleases%2Frelease-016
+            - generic [ref=e113]: 
+          - link "LINEでシェア" [ref=e114] [cursor=pointer]:
+            - /url: https://line.me/R/msg/text/?last%20resort%20%E3%81%AA%E3%82%93%E3%81%A1%E3%82%83%E3%82%89%E3%82%A2%E3%82%A4%E3%83%89%E3%83%AB%20-%202026%E5%B9%B44%E6%9C%8822%E6%97%A5%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%0Ahttps%3A%2F%2Fnantyara.com%2Freleases%2Frelease-016
+            - generic [ref=e115]: 
+          - button "URLをコピー" [ref=e116] [cursor=pointer]:
+            - generic [ref=e117]: 
+      - link "← リリース一覧に戻る" [ref=e119] [cursor=pointer]:
+        - /url: /releases
+  - contentinfo [ref=e120]:
+    - navigation "フッターナビゲーション" [ref=e121]:
+      - link "ライブ予定" [ref=e122] [cursor=pointer]:
+        - /url: /
+      - link "音源" [ref=e123] [cursor=pointer]:
+        - /url: /releases
+      - link "メンバー" [ref=e124] [cursor=pointer]:
+        - /url: /members
+      - link "リンク" [ref=e125] [cursor=pointer]:
+        - /url: /links
+      - link "お問い合わせ" [ref=e126] [cursor=pointer]:
+        - /url: /contact
+    - generic [ref=e127]:
+      - link "X（公式）" [ref=e128] [cursor=pointer]:
+        - /url: https://x.com/nantyaraidol
+        - generic [ref=e129]: 
+      - link "YouTube" [ref=e130] [cursor=pointer]:
+        - /url: https://www.youtube.com/@nagaokatasuku
+        - generic [ref=e131]: 
+      - link "Podcast" [ref=e132] [cursor=pointer]:
+        - /url: https://podcast.nantyara.com
+        - generic [ref=e133]: 
+      - link "グッズ" [ref=e134] [cursor=pointer]:
+        - /url: https://nantyara.thebase.in/
+        - generic [ref=e135]: 
+    - paragraph [ref=e136]: © 2018-2026 なんちゃらアイドル
+  - generic [ref=e139]:
+    - button "Menu" [ref=e140]:
+      - img [ref=e142]
+      - generic: Menu
+    - button "Inspect" [ref=e146]:
+      - img [ref=e148]
+      - generic: Inspect
+    - button "Audit" [ref=e150]:
+      - generic [ref=e151]:
+        - img [ref=e152]
+        - img [ref=e155]
+      - generic: Audit
+    - button "Settings" [ref=e158]:
+      - img [ref=e160]
+      - generic: Settings

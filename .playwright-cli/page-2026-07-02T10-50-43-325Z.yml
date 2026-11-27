@@ -1,0 +1,169 @@
+- generic [active] [ref=e1]:
+  - navigation:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - heading "MENU" [level=2] [ref=e6]
+        - button "メニューを閉じる" [ref=e7] [cursor=pointer]:
+          - generic [ref=e8]: 
+      - list [ref=e9]:
+        - listitem [ref=e10]:
+          - link "ライブ予定" [ref=e11] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e12]: 
+            - generic [ref=e13]: ライブ予定
+        - listitem [ref=e14]:
+          - link "音源" [ref=e15] [cursor=pointer]:
+            - /url: /releases
+            - generic [ref=e16]: 
+            - generic [ref=e17]: 音源
+        - listitem [ref=e18]:
+          - link "メンバー" [ref=e19] [cursor=pointer]:
+            - /url: /members
+            - generic [ref=e20]: 
+            - generic [ref=e21]: メンバー
+        - listitem [ref=e22]:
+          - link "リンク" [ref=e23] [cursor=pointer]:
+            - /url: /links
+            - generic [ref=e24]: 
+            - generic [ref=e25]: リンク
+        - listitem [ref=e26]:
+          - link "お問い合わせ" [ref=e27] [cursor=pointer]:
+            - /url: /contact
+            - generic [ref=e28]: 
+            - generic [ref=e29]: お問い合わせ
+      - generic [ref=e30]:
+        - generic [ref=e31]: "ボタン位置:"
+        - button "左" [ref=e32] [cursor=pointer]
+        - button "右" [ref=e33] [cursor=pointer]
+  - banner [ref=e34]:
+    - heading "なんちゃらアイドル" [level=1] [ref=e35]:
+      - link "なんちゃらアイドル" [ref=e36] [cursor=pointer]:
+        - /url: /
+    - navigation "メインナビゲーション" [ref=e37]:
+      - link "ライブ予定" [ref=e38] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e39]: 
+        - generic [ref=e40]: ライブ予定
+      - link "音源" [ref=e41] [cursor=pointer]:
+        - /url: /releases
+        - generic [ref=e42]: 
+        - generic [ref=e43]: 音源
+      - link "メンバー" [ref=e44] [cursor=pointer]:
+        - /url: /members
+        - generic [ref=e45]: 
+        - generic [ref=e46]: メンバー
+      - link "リンク" [ref=e47] [cursor=pointer]:
+        - /url: /links
+        - generic [ref=e48]: 
+        - generic [ref=e49]: リンク
+      - link "お問い合わせ" [ref=e50] [cursor=pointer]:
+        - /url: /contact
+        - generic [ref=e51]: 
+        - generic [ref=e52]: お問い合わせ
+  - main [ref=e54]:
+    - generic [ref=e55]:
+      - heading " SNS" [level=2] [ref=e56]:
+        - generic [ref=e57]: 
+        - text: SNS
+      - generic [ref=e58]:
+        - link " X（公式） " [ref=e59] [cursor=pointer]:
+          - /url: https://x.com/nantyaraidol
+          - generic [ref=e60]: 
+          - generic [ref=e61]: X（公式）
+          - generic [ref=e62]: 
+        - link " なりすレコード (X) " [ref=e63] [cursor=pointer]:
+          - /url: https://x.com/narisu_records
+          - generic [ref=e64]: 
+          - generic [ref=e65]: なりすレコード (X)
+          - generic [ref=e66]: 
+    - generic [ref=e67]:
+      - heading " 音楽配信" [level=2] [ref=e68]:
+        - generic [ref=e69]: 
+        - text: 音楽配信
+      - generic [ref=e70]:
+        - link " Apple Music " [ref=e71] [cursor=pointer]:
+          - /url: https://music.apple.com/us/artist/nantyara-idol/1438973839
+          - generic [ref=e72]: 
+          - generic [ref=e73]: Apple Music
+          - generic [ref=e74]: 
+        - link " Spotify " [ref=e75] [cursor=pointer]:
+          - /url: https://open.spotify.com/intl-ja/artist/0Tir7YkPE9wVla7Ci1Tiaz
+          - generic [ref=e76]: 
+          - generic [ref=e77]: Spotify
+          - generic [ref=e78]: 
+        - link " YouTube Music " [ref=e79] [cursor=pointer]:
+          - /url: https://music.youtube.com/channel/UC3I0TwX4iBOwOkPU07ypnpw
+          - generic [ref=e80]: 
+          - generic [ref=e81]: YouTube Music
+          - generic [ref=e82]: 
+        - link " LINE MUSIC " [ref=e83] [cursor=pointer]:
+          - /url: https://music.line.me/webapp/artist/mi00000000140e6f0a
+          - generic [ref=e84]: 
+          - generic [ref=e85]: LINE MUSIC
+          - generic [ref=e86]: 
+    - generic [ref=e87]:
+      - heading " 動画" [level=2] [ref=e88]:
+        - generic [ref=e89]: 
+        - text: 動画
+      - link " YouTube " [ref=e91] [cursor=pointer]:
+        - /url: https://www.youtube.com/@nagaokatasuku
+        - generic [ref=e92]: 
+        - generic [ref=e93]: YouTube
+        - generic [ref=e94]: 
+    - generic [ref=e95]:
+      - heading " Podcast" [level=2] [ref=e96]:
+        - generic [ref=e97]: 
+        - text: Podcast
+      - link " Podcast " [ref=e99] [cursor=pointer]:
+        - /url: https://podcast.nantyara.com
+        - generic [ref=e100]: 
+        - generic [ref=e101]: Podcast
+        - generic [ref=e102]: 
+    - generic [ref=e103]:
+      - heading " グッズ" [level=2] [ref=e104]:
+        - generic [ref=e105]: 
+        - text: グッズ
+      - link "BASE BASE Shop " [ref=e107] [cursor=pointer]:
+        - /url: https://nantyara.thebase.in/
+        - img "BASE" [ref=e108]
+        - generic [ref=e109]: BASE Shop
+        - generic [ref=e110]: 
+  - contentinfo [ref=e111]:
+    - navigation "フッターナビゲーション" [ref=e112]:
+      - link "ライブ予定" [ref=e113] [cursor=pointer]:
+        - /url: /
+      - link "音源" [ref=e114] [cursor=pointer]:
+        - /url: /releases
+      - link "メンバー" [ref=e115] [cursor=pointer]:
+        - /url: /members
+      - link "リンク" [ref=e116] [cursor=pointer]:
+        - /url: /links
+      - link "お問い合わせ" [ref=e117] [cursor=pointer]:
+        - /url: /contact
+    - generic [ref=e118]:
+      - link "X（公式）" [ref=e119] [cursor=pointer]:
+        - /url: https://x.com/nantyaraidol
+        - generic [ref=e120]: 
+      - link "YouTube" [ref=e121] [cursor=pointer]:
+        - /url: https://www.youtube.com/@nagaokatasuku
+        - generic [ref=e122]: 
+      - link "Podcast" [ref=e123] [cursor=pointer]:
+        - /url: https://podcast.nantyara.com
+        - generic [ref=e124]: 
+      - link "グッズ" [ref=e125] [cursor=pointer]:
+        - /url: https://nantyara.thebase.in/
+        - generic [ref=e126]: 
+    - paragraph [ref=e127]: © 2018-2026 なんちゃらアイドル
+  - generic [ref=e130]:
+    - button "Menu" [ref=e131]:
+      - img [ref=e133]
+      - generic: Menu
+    - button "Inspect" [ref=e137]:
+      - img [ref=e139]
+      - generic: Inspect
+    - button "Audit" [ref=e141]:
+      - img [ref=e143]
+      - generic: Audit
+    - button "Settings" [ref=e146]:
+      - img [ref=e148]
+      - generic: Settings

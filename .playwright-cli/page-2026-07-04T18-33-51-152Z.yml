@@ -1,0 +1,355 @@
+- generic [active] [ref=e1]:
+  - navigation:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - heading "MENU" [level=2] [ref=e6]
+        - button "メニューを閉じる" [ref=e7] [cursor=pointer]:
+          - generic [ref=e8]: 
+      - list [ref=e9]:
+        - listitem [ref=e10]:
+          - link "ライブ予定" [ref=e11] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e12]: 
+            - generic [ref=e13]: ライブ予定
+        - listitem [ref=e14]:
+          - link "音源" [ref=e15] [cursor=pointer]:
+            - /url: /releases
+            - generic [ref=e16]: 
+            - generic [ref=e17]: 音源
+        - listitem [ref=e18]:
+          - link "メンバー" [ref=e19] [cursor=pointer]:
+            - /url: /members
+            - generic [ref=e20]: 
+            - generic [ref=e21]: メンバー
+        - listitem [ref=e22]:
+          - link "沿革" [ref=e23] [cursor=pointer]:
+            - /url: /history
+            - generic [ref=e24]: 
+            - generic [ref=e25]: 沿革
+        - listitem [ref=e26]:
+          - link "会場" [ref=e27] [cursor=pointer]:
+            - /url: /venues
+            - generic [ref=e28]: 
+            - generic [ref=e29]: 会場
+        - listitem [ref=e30]:
+          - link "対バン" [ref=e31] [cursor=pointer]:
+            - /url: /acts
+            - generic [ref=e32]: 
+            - generic [ref=e33]: 対バン
+        - listitem [ref=e34]:
+          - link "リンク" [ref=e35] [cursor=pointer]:
+            - /url: /links
+            - generic [ref=e36]: 
+            - generic [ref=e37]: リンク
+        - listitem [ref=e38]:
+          - link "お問い合わせ" [ref=e39] [cursor=pointer]:
+            - /url: /contact
+            - generic [ref=e40]: 
+            - generic [ref=e41]: お問い合わせ
+      - generic [ref=e42]:
+        - generic [ref=e43]: "ボタン位置:"
+        - button "左" [ref=e44] [cursor=pointer]
+        - button "右" [ref=e45] [cursor=pointer]
+  - banner [ref=e46]:
+    - heading "なんちゃらアイドル" [level=1] [ref=e47]:
+      - link "なんちゃらアイドル" [ref=e48] [cursor=pointer]:
+        - /url: /
+    - navigation "メインナビゲーション" [ref=e49]:
+      - link "ライブ予定" [ref=e50] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e51]: 
+        - generic [ref=e52]: ライブ予定
+      - link "音源" [ref=e53] [cursor=pointer]:
+        - /url: /releases
+        - generic [ref=e54]: 
+        - generic [ref=e55]: 音源
+      - link "メンバー" [ref=e56] [cursor=pointer]:
+        - /url: /members
+        - generic [ref=e57]: 
+        - generic [ref=e58]: メンバー
+      - link "沿革" [ref=e59] [cursor=pointer]:
+        - /url: /history
+        - generic [ref=e60]: 
+        - generic [ref=e61]: 沿革
+      - link "会場" [ref=e62] [cursor=pointer]:
+        - /url: /venues
+        - generic [ref=e63]: 
+        - generic [ref=e64]: 会場
+      - link "対バン" [ref=e65] [cursor=pointer]:
+        - /url: /acts
+        - generic [ref=e66]: 
+        - generic [ref=e67]: 対バン
+      - link "リンク" [ref=e68] [cursor=pointer]:
+        - /url: /links
+        - generic [ref=e69]: 
+        - generic [ref=e70]: リンク
+      - link "お問い合わせ" [ref=e71] [cursor=pointer]:
+        - /url: /contact
+        - generic [ref=e72]: 
+        - generic [ref=e73]: お問い合わせ
+  - main [ref=e75]:
+    - generic [ref=e76]:
+      - heading "会場" [level=1] [ref=e77]:
+        - generic [ref=e78]: 
+        - text: 会場
+      - paragraph [ref=e79]: これまでに出演した会場と出演回数
+      - generic [ref=e80]:
+        - link "渋谷La.mama 東京都渋谷区道玄坂1-15-3 プリメーラ道玄坂B1F 29回" [ref=e81] [cursor=pointer]:
+          - /url: /venues/lamama
+          - generic [ref=e82]: 渋谷La.mama
+          - generic [ref=e83]: 東京都渋谷区道玄坂1-15-3 プリメーラ道玄坂B1F
+          - generic [ref=e84]: 29回
+        - link "東新宿LOVE TKO 東京都新宿区大久保1-3-22 ヴァンヴェール新宿B1F 14回" [ref=e85] [cursor=pointer]:
+          - /url: /venues/love-tko
+          - generic [ref=e86]: 東新宿LOVE TKO
+          - generic [ref=e87]: 東京都新宿区大久保1-3-22 ヴァンヴェール新宿B1F
+          - generic [ref=e88]: 14回
+        - link "蒲田オッタンタ 東京都大田区蒲田5-7-6 CCM蒲田ビル2F 8回" [ref=e89] [cursor=pointer]:
+          - /url: /venues/ottanta
+          - generic [ref=e90]: 蒲田オッタンタ
+          - generic [ref=e91]: 東京都大田区蒲田5-7-6 CCM蒲田ビル2F
+          - generic [ref=e92]: 8回
+        - link "新宿Drunken Shrimp 東京都新宿区歌舞伎町2-39-2 三幸ビルB館5F-E 5回" [ref=e93] [cursor=pointer]:
+          - /url: /venues/drunken-shrimp
+          - generic [ref=e94]: 新宿Drunken Shrimp
+          - generic [ref=e95]: 東京都新宿区歌舞伎町2-39-2 三幸ビルB館5F-E
+          - generic [ref=e96]: 5回
+        - link "新宿ANTIKNOCK 東京都新宿区新宿4-3-15 レイフラットビルB1F 4回" [ref=e97] [cursor=pointer]:
+          - /url: /venues/antiknock
+          - generic [ref=e98]: 新宿ANTIKNOCK
+          - generic [ref=e99]: 東京都新宿区新宿4-3-15 レイフラットビルB1F
+          - generic [ref=e100]: 4回
+        - link "K&Mミュージック中野店 東京都中野区上鷺宮1-4-3 地下1階 3回" [ref=e101] [cursor=pointer]:
+          - /url: /venues/km-music-nakano
+          - generic [ref=e102]: K&Mミュージック中野店
+          - generic [ref=e103]: 東京都中野区上鷺宮1-4-3 地下1階
+          - generic [ref=e104]: 3回
+        - link "SBQ個人撮影会 3回" [ref=e105] [cursor=pointer]:
+          - /url: /venues/sbq-photokai
+          - generic [ref=e106]: SBQ個人撮影会
+          - generic [ref=e107]: 3回
+        - link "ゆ〜シティ蒲田 YCKホール 東京都大田区蒲田1-26-16 3F 3回" [ref=e108] [cursor=pointer]:
+          - /url: /venues/yu-city-kamata
+          - generic [ref=e109]: ゆ〜シティ蒲田 YCKホール
+          - generic [ref=e110]: 東京都大田区蒲田1-26-16 3F
+          - generic [ref=e111]: 3回
+        - link "大塚Welcome Back 東京都豊島区南大塚3-44-11 フサカビルB1 3回" [ref=e112] [cursor=pointer]:
+          - /url: /venues/welcome-back
+          - generic [ref=e113]: 大塚Welcome Back
+          - generic [ref=e114]: 東京都豊島区南大塚3-44-11 フサカビルB1
+          - generic [ref=e115]: 3回
+        - link "栃木さる小 3回" [ref=e116] [cursor=pointer]:
+          - /url: /venues/sarusho
+          - generic [ref=e117]: 栃木さる小
+          - generic [ref=e118]: 3回
+        - link "Studio S.B.Q 2回" [ref=e119] [cursor=pointer]:
+          - /url: /venues/studio-sbq
+          - generic [ref=e120]: Studio S.B.Q
+          - generic [ref=e121]: 2回
+        - link "イオン笠間 2回" [ref=e122] [cursor=pointer]:
+          - /url: /venues/ion-kasama
+          - generic [ref=e123]: イオン笠間
+          - generic [ref=e124]: 2回
+        - link "下北沢ちょ美ひげ 2回" [ref=e125] [cursor=pointer]:
+          - /url: /venues/chobihige
+          - generic [ref=e126]: 下北沢ちょ美ひげ
+          - generic [ref=e127]: 2回
+        - link "四谷OUTBREAK 東京都新宿区四谷2-10 第2太郎ビルB1 2回" [ref=e128] [cursor=pointer]:
+          - /url: /venues/outbreak
+          - generic [ref=e129]: 四谷OUTBREAK
+          - generic [ref=e130]: 東京都新宿区四谷2-10 第2太郎ビルB1
+          - generic [ref=e131]: 2回
+        - link "新検見川Swingy 千葉県千葉市花見川区花園1-8-7 アステージビル弐番館1F 2回" [ref=e132] [cursor=pointer]:
+          - /url: /venues/swingy
+          - generic [ref=e133]: 新検見川Swingy
+          - generic [ref=e134]: 千葉県千葉市花見川区花園1-8-7 アステージビル弐番館1F
+          - generic [ref=e135]: 2回
+        - link "新松戸FIREBIRD 千葉県松戸市新松戸2-118 新松戸ビル5F 2回" [ref=e136] [cursor=pointer]:
+          - /url: /venues/firebird
+          - generic [ref=e137]: 新松戸FIREBIRD
+          - generic [ref=e138]: 千葉県松戸市新松戸2-118 新松戸ビル5F
+          - generic [ref=e139]: 2回
+        - link "東京倶楽部 水道橋店 2回" [ref=e140] [cursor=pointer]:
+          - /url: /venues/tokyo-club
+          - generic [ref=e141]: 東京倶楽部 水道橋店
+          - generic [ref=e142]: 2回
+        - link "Leaf room 豪徳寺 東京都世田谷区豪徳寺1-23-12 コンフォート豪徳寺3F 1回" [ref=e143] [cursor=pointer]:
+          - /url: /venues/leaf-room
+          - generic [ref=e144]: Leaf room 豪徳寺
+          - generic [ref=e145]: 東京都世田谷区豪徳寺1-23-12 コンフォート豪徳寺3F
+          - generic [ref=e146]: 1回
+        - link "MAHARAJA ANNEX（六本木） 東京都港区六本木6-1-3 六門ビル7F 1回" [ref=e147] [cursor=pointer]:
+          - /url: /venues/maharaja-annex
+          - generic [ref=e148]: MAHARAJA ANNEX（六本木）
+          - generic [ref=e149]: 東京都港区六本木6-1-3 六門ビル7F
+          - generic [ref=e150]: 1回
+        - link "SALON a Spoonful Of Sugar 大阪府大阪市西区新町3-9-7 2F 1回" [ref=e151] [cursor=pointer]:
+          - /url: /venues/spoonful-of-sugar
+          - generic [ref=e152]: SALON a Spoonful Of Sugar
+          - generic [ref=e153]: 大阪府大阪市西区新町3-9-7 2F
+          - generic [ref=e154]: 1回
+        - link "SASSEN 1回" [ref=e155] [cursor=pointer]:
+          - /url: /venues/sassen
+          - generic [ref=e156]: SASSEN
+          - generic [ref=e157]: 1回
+        - link "Shimokitazawa Retronym 東京都世田谷区北沢2-15-17 下北沢コマーシャルビル3F 1回" [ref=e158] [cursor=pointer]:
+          - /url: /venues/retronym
+          - generic [ref=e159]: Shimokitazawa Retronym
+          - generic [ref=e160]: 東京都世田谷区北沢2-15-17 下北沢コマーシャルビル3F
+          - generic [ref=e161]: 1回
+        - link "ULTRA SHIBUYA 東京都渋谷区東1-28-9 1回" [ref=e162] [cursor=pointer]:
+          - /url: /venues/ultra-shibuya
+          - generic [ref=e163]: ULTRA SHIBUYA
+          - generic [ref=e164]: 東京都渋谷区東1-28-9
+          - generic [ref=e165]: 1回
+        - link "インストアイベント 1回" [ref=e166] [cursor=pointer]:
+          - /url: /venues/instore-event
+          - generic [ref=e167]: インストアイベント
+          - generic [ref=e168]: 1回
+        - link "コスホリック44 1回" [ref=e169] [cursor=pointer]:
+          - /url: /venues/cosholic
+          - generic [ref=e170]: コスホリック44
+          - generic [ref=e171]: 1回
+        - link "スマカノ バスツアー 1回" [ref=e172] [cursor=pointer]:
+          - /url: /venues/sumakano-bustour
+          - generic [ref=e173]: スマカノ バスツアー
+          - generic [ref=e174]: 1回
+        - link "ディスクユニオンお茶の水駅前店 1回" [ref=e175] [cursor=pointer]:
+          - /url: /venues/diskunion-ochanomizu
+          - generic [ref=e176]: ディスクユニオンお茶の水駅前店
+          - generic [ref=e177]: 1回
+        - link "めたもるふぉーぜ 1回" [ref=e178] [cursor=pointer]:
+          - /url: /venues/metamorphose
+          - generic [ref=e179]: めたもるふぉーぜ
+          - generic [ref=e180]: 1回
+        - link "モガフェス 1回" [ref=e181] [cursor=pointer]:
+          - /url: /venues/mogafes
+          - generic [ref=e182]: モガフェス
+          - generic [ref=e183]: 1回
+        - link "横須賀ヤンガーザンイエスタデイ 1回" [ref=e184] [cursor=pointer]:
+          - /url: /venues/younger-than-yesterday
+          - generic [ref=e185]: 横須賀ヤンガーザンイエスタデイ
+          - generic [ref=e186]: 1回
+        - link "海の家 1回" [ref=e187] [cursor=pointer]:
+          - /url: /venues/uminoie
+          - generic [ref=e188]: 海の家
+          - generic [ref=e189]: 1回
+        - link "絵空箱 1回" [ref=e190] [cursor=pointer]:
+          - /url: /venues/esorabako
+          - generic [ref=e191]: 絵空箱
+          - generic [ref=e192]: 1回
+        - link "高円寺Muddy 東京都杉並区高円寺北3-22-7 プラザ高円寺2F 1回" [ref=e193] [cursor=pointer]:
+          - /url: /venues/muddy
+          - generic [ref=e194]: 高円寺Muddy
+          - generic [ref=e195]: 東京都杉並区高円寺北3-22-7 プラザ高円寺2F
+          - generic [ref=e196]: 1回
+        - link "三軒茶屋HEAVEN'S DOOR 東京都世田谷区三軒茶屋1-33-19 ケイオーハロービルB1 1回" [ref=e197] [cursor=pointer]:
+          - /url: /venues/heavens-door
+          - generic [ref=e198]: 三軒茶屋HEAVEN'S DOOR
+          - generic [ref=e199]: 東京都世田谷区三軒茶屋1-33-19 ケイオーハロービルB1
+          - generic [ref=e200]: 1回
+        - link "渋谷Club Malcolm 東京都渋谷区宇田川町30-5 JOWビルB1F 1回" [ref=e201] [cursor=pointer]:
+          - /url: /venues/club-malcolm
+          - generic [ref=e202]: 渋谷Club Malcolm
+          - generic [ref=e203]: 東京都渋谷区宇田川町30-5 JOWビルB1F
+          - generic [ref=e204]: 1回
+        - link "渋谷LOFT HEAVEN 東京都渋谷区渋谷2-12-13 八千代ビルB1F 1回" [ref=e205] [cursor=pointer]:
+          - /url: /venues/loft-heaven
+          - generic [ref=e206]: 渋谷LOFT HEAVEN
+          - generic [ref=e207]: 東京都渋谷区渋谷2-12-13 八千代ビルB1F
+          - generic [ref=e208]: 1回
+        - link "新高円寺LOFT X 東京都杉並区梅里2-9-11 小池ビルB1 1回" [ref=e209] [cursor=pointer]:
+          - /url: /venues/loft-x
+          - generic [ref=e210]: 新高円寺LOFT X
+          - generic [ref=e211]: 東京都杉並区梅里2-9-11 小池ビルB1
+          - generic [ref=e212]: 1回
+        - link "新大久保EARTHDOM 東京都新宿区大久保2-32-3 リスボンビルB1 1回" [ref=e213] [cursor=pointer]:
+          - /url: /venues/earthdom
+          - generic [ref=e214]: 新大久保EARTHDOM
+          - generic [ref=e215]: 東京都新宿区大久保2-32-3 リスボンビルB1
+          - generic [ref=e216]: 1回
+        - link "神保町waiwaihall 東京都千代田区神田神保町2-4 神保町麺業会館ビルB1 1回" [ref=e217] [cursor=pointer]:
+          - /url: /venues/waiwaihall
+          - generic [ref=e218]: 神保町waiwaihall
+          - generic [ref=e219]: 東京都千代田区神田神保町2-4 神保町麺業会館ビルB1
+          - generic [ref=e220]: 1回
+        - link "聖蹟桜ヶ丘ヴィータモールせいせき 1回" [ref=e221] [cursor=pointer]:
+          - /url: /venues/vita-seiseki
+          - generic [ref=e222]: 聖蹟桜ヶ丘ヴィータモールせいせき
+          - generic [ref=e223]: 1回
+        - link "西川口GALAXY 埼玉県川口市西川口1-22-7 上新ハイツ西川口B1 1回" [ref=e224] [cursor=pointer]:
+          - /url: /venues/galaxy
+          - generic [ref=e225]: 西川口GALAXY
+          - generic [ref=e226]: 埼玉県川口市西川口1-22-7 上新ハイツ西川口B1
+          - generic [ref=e227]: 1回
+        - link "大久保ひかりのうま 1回" [ref=e228] [cursor=pointer]:
+          - /url: /venues/hikarinouma
+          - generic [ref=e229]: 大久保ひかりのうま
+          - generic [ref=e230]: 1回
+        - link "大阪オフ会 1回" [ref=e231] [cursor=pointer]:
+          - /url: /venues/osaka-offkai
+          - generic [ref=e232]: 大阪オフ会
+          - generic [ref=e233]: 1回
+        - link "大森風に吹かれて 1回" [ref=e234] [cursor=pointer]:
+          - /url: /venues/kazenifukarete
+          - generic [ref=e235]: 大森風に吹かれて
+          - generic [ref=e236]: 1回
+        - link "池袋手刀 1回" [ref=e237] [cursor=pointer]:
+          - /url: /venues/chop
+          - generic [ref=e238]: 池袋手刀
+          - generic [ref=e239]: 1回
+        - link "町田ヒットパレード 1回" [ref=e240] [cursor=pointer]:
+          - /url: /venues/hit-parade
+          - generic [ref=e241]: 町田ヒットパレード
+          - generic [ref=e242]: 1回
+        - link "東心斎橋bright moon 大阪府大阪市中央区東心斎橋1-12-14 ZELKOVAビル6F 1回" [ref=e243] [cursor=pointer]:
+          - /url: /venues/bright-moon
+          - generic [ref=e244]: 東心斎橋bright moon
+          - generic [ref=e245]: 大阪府大阪市中央区東心斎橋1-12-14 ZELKOVAビル6F
+          - generic [ref=e246]: 1回
+        - link "難波メレ 1回" [ref=e247] [cursor=pointer]:
+          - /url: /venues/mele
+          - generic [ref=e248]: 難波メレ
+          - generic [ref=e249]: 1回
+        - link "八王子Time Tokyo 東京都八王子市別所1-1-4 B1 1回" [ref=e250] [cursor=pointer]:
+          - /url: /venues/time-tokyo
+          - generic [ref=e251]: 八王子Time Tokyo
+          - generic [ref=e252]: 東京都八王子市別所1-1-4 B1
+          - generic [ref=e253]: 1回
+        - link "府中Flight 東京都府中市緑町1-17-18 シャトーアルフィーB1F 1回" [ref=e254] [cursor=pointer]:
+          - /url: /venues/flight
+          - generic [ref=e255]: 府中Flight
+          - generic [ref=e256]: 東京都府中市緑町1-17-18 シャトーアルフィーB1F
+          - generic [ref=e257]: 1回
+  - contentinfo [ref=e258]:
+    - navigation "フッターナビゲーション" [ref=e259]:
+      - link "ライブ予定" [ref=e260] [cursor=pointer]:
+        - /url: /
+      - link "音源" [ref=e261] [cursor=pointer]:
+        - /url: /releases
+      - link "メンバー" [ref=e262] [cursor=pointer]:
+        - /url: /members
+      - link "沿革" [ref=e263] [cursor=pointer]:
+        - /url: /history
+      - link "会場" [ref=e264] [cursor=pointer]:
+        - /url: /venues
+      - link "対バン" [ref=e265] [cursor=pointer]:
+        - /url: /acts
+      - link "リンク" [ref=e266] [cursor=pointer]:
+        - /url: /links
+      - link "お問い合わせ" [ref=e267] [cursor=pointer]:
+        - /url: /contact
+    - generic [ref=e268]:
+      - link "X（公式）" [ref=e269] [cursor=pointer]:
+        - /url: https://x.com/nantyaraidol
+        - generic [ref=e270]: 
+      - link "YouTube" [ref=e271] [cursor=pointer]:
+        - /url: https://www.youtube.com/@nagaokatasuku
+        - generic [ref=e272]: 
+      - link "Podcast" [ref=e273] [cursor=pointer]:
+        - /url: https://podcast.nantyara.com
+        - generic [ref=e274]: 
+      - link "グッズ" [ref=e275] [cursor=pointer]:
+        - /url: https://nantyara.thebase.in/
+        - generic [ref=e276]: 
+    - paragraph [ref=e277]: © 2018-2026 なんちゃらアイドル

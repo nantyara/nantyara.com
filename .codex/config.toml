@@ -1,0 +1,6 @@
+# BEGIN codex-project skills
+# Managed by codex-project; enable optional skills only after user approval.
+[[skills.config]]
+path = "/Users/yancya/.codex/skills/project-skills/SKILL.md"
+enabled = true
+# END codex-project skills
