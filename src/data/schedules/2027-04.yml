@@ -1,3 +1,31 @@
+- id: event-20270404-timetree-69115399
+  slug: 20270404-timetree-69115399
+  date: 2027-04-04 10:00:00 +0900
+  title: イベント予定
+  site: イベント予定
+  timetree_id: "3108428768969115399"
+  content: TBD
+- id: event-20270409-timetree-50859911
+  slug: 20270409-timetree-50859911
+  date: 2027-04-09 18:00:00 +0900
+  title: 池袋LIVE INN ROSA
+  site: 池袋LIVE INN ROSA
+  timetree_id: "3108413519150859911"
+  content: TBD
+- id: event-20270411-timetree-96464180
+  slug: 20270411-timetree-96464180
+  date: 2027-04-11 18:00:00 +0900
+  title: 下北沢モナレコード
+  site: 下北沢モナレコード
+  timetree_id: "3108414191296464180"
+  content: TBD
+- id: event-20270414-timetree-45091426
+  slug: 20270414-timetree-45091426
+  date: 2027-04-14 19:00:00 +0900
+  title: 蒲田オッタンタ
+  site: 蒲田オッタンタ
+  timetree_id: "3108414665345091426"
+  content: DJ
 - id: event-20270417-timetree-20531266
   slug: 20270417-timetree-20531266
   date: 2027-04-17 18:30:00 +0900
@@ -24,3 +52,10 @@
     - 恵中瞳
   sources:
     - https://x.com/0209Japan/status/2112408453511827506
+- id: event-20270428-timetree-17380779
+  slug: 20270428-timetree-17380779
+  date: 2027-04-28 18:00:00 +0900
+  title: 渋谷La.mama
+  site: 渋谷La.mama
+  timetree_id: "3108414952017380779"
+  content: TBD

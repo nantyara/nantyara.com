@@ -38,6 +38,14 @@
     - 山村茜
   sources:
     - https://x.com/HEISEI_ARASHI/status/2125482461169877136
+  timetree_id: "3108403385485903448"
+- id: event-20270105-timetree-93182614
+  slug: 20270105-timetree-93182614
+  date: 2027-01-05 18:00:00 +0900
+  title: 新宿めたもるふぉーぜ
+  site: 新宿めたもるふぉーぜ
+  timetree_id: "3108405044593182614"
+  content: TBD
 - id: event-20270110-timetree-92449568
   slug: 20270110-timetree-92449568
   date: 2027-01-10 11:00:00 +0900
@@ -77,6 +85,47 @@
     - エレクトリックリボン
   sources:
     - https://x.com/eribon_official/status/2109787256139747470
+- id: event-20270111-timetree-77450185
+  slug: 20270111-timetree-77450185
+  date: 2027-01-11 18:00:00 +0900
+  title: 東新宿LOVE TKO
+  site: 東新宿LOVE TKO
+  timetree_id: "3108419890877450185"
+  content: TBD
+  labels:
+    - マミソロ
+- id: event-20270112-timetree-21122460
+  slug: 20270112-timetree-21122460
+  date: 2027-01-12 18:00:00 +0900
+  title: 新宿めたもるふぉーぜ
+  site: 新宿めたもるふぉーぜ
+  timetree_id: "3108420015121122460"
+  content: TBD
+  labels:
+    - マミソロ
+- id: event-20270115-timetree-19935721
+  slug: 20270115-timetree-19935721
+  date: 2027-01-15 19:00:00 +0900
+  title: 大森風に吹かれて
+  site: 大森風に吹かれて
+  timetree_id: "3108420219819935721"
+  content: TBD
+- id: event-20270118-timetree-35106169
+  slug: 20270118-timetree-35106169
+  date: 2027-01-18 18:00:00 +0900
+  title: 東新宿LOVE TKO
+  site: 東新宿LOVE TKO
+  timetree_id: "3108405957735106169"
+  content: ソメソメツーマン
+- id: event-20270119-timetree-94551808
+  slug: 20270119-timetree-94551808
+  date: 2027-01-19 18:00:00 +0900
+  title: 新宿めたもるふぉーぜ
+  site: 新宿めたもるふぉーぜ
+  timetree_id: "3108406176694551808"
+  content: TBD
+  labels:
+    - あおはるソロ
 - id: event-20270121-welcomeback
   slug: 20270121-welcomeback
   date: 2027-01-21 18:45:00 +0900
@@ -104,3 +153,41 @@
     - 723シャトンヌ⤴
   sources:
     - https://x.com/723chatoNne/status/2124841643534848463
+  timetree_id: "3108406448577725517"
+- id: event-20270124-timetree-95041071
+  slug: 20270124-timetree-95041071
+  date: 2027-01-24 00:00:00 +0900
+  title: S.B.Q.個人撮影会
+  site: S.B.Q.個人撮影会
+  timetree_id: "3108406734495041071"
+  content: TBD
+- id: event-20270127-timetree-83841322
+  slug: 20270127-timetree-83841322
+  date: 2027-01-27 06:00:00 +0900
+  title: 渋谷La.mama なんちゃら13周年
+  site: 渋谷La.mama なんちゃら13周年
+  timetree_id: "3108407080583841322"
+  content: TBD
+- id: event-20270128-timetree-19202182
+  slug: 20270128-timetree-19202182
+  date: 2027-01-28 18:00:00 +0900
+  title: 渋谷La.mama
+  site: 渋谷La.mama
+  timetree_id: "3108407190919202182"
+  content: TBD
+- id: event-20270129-timetree-72900814
+  slug: 20270129-timetree-72900814
+  date: 2027-01-29 18:30:00 +0900
+  title: 渋谷La.mama あおはる生誕
+  site: 渋谷La.mama あおはる生誕
+  timetree_id: "3108407664472900814"
+  content: TBD
+- id: event-20270131-timetree-39032791
+  slug: 20270131-timetree-39032791
+  date: 2027-01-31 12:00:00 +0900
+  title: 蕨レッスル武闘館
+  site: 蕨レッスル武闘館
+  timetree_id: "3108422571239032791"
+  content: 2公演ある
+  images:
+    - /events/20270131-timetree-39032791.jpg

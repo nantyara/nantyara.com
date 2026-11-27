@@ -837,6 +837,8 @@
   x: parkdinertwit
 - id: wrestle-butokan
   name: レッスル武闘館
+  aliases:
+    - 蕨レッスル武闘館
   address: 埼玉県蕨市南町2-4-4
   url: http://butoukan.ne07.jp
   note: プロレス・格闘技会場（旧イサミアリーナ）

@@ -1,3 +1,32 @@
+- id: event-20261201-timetree-57323456
+  slug: 20261201-timetree-57323456
+  date: 2026-12-01 18:00:00 +0900
+  title: 新宿めたもるふぉーぜ
+  site: 新宿めたもるふぉーぜ
+  timetree_id: "3108390821557323456"
+  content: TBD
+  labels:
+    - マミソロ
+- id: event-20261202-timetree-60766937
+  slug: 20261202-timetree-60766937
+  date: 2026-12-02 19:00:00 +0900
+  title: 下北沢モナレコード
+  site: 下北沢モナレコード
+  timetree_id: "3108391281160766937"
+  content: |-
+    12/2(水)
+    下北沢 mona records
+    「LOLIPOP」
+
+    OPEN：19:00　START：19:30
+    TICKET：前売・当日： 2,800円 (各+1D)
+
+    tiget.net/events/535106
+
+
+    19:30〜20:05 sommeil sommeil
+    20:10〜20:45 なんちゃらアイドル
+    20:50～21:25 S.B.Q.アイドル
 - id: event-20261206-timetree-78581255
   slug: 20261206-timetree-78581255
   date: 2026-12-06 13:00:00 +0900
@@ -5,6 +34,8 @@
   site: なんちゃってバー 庭
   timetree_id: "3100958619978581255"
   content: TBD
+  images:
+    - /events/20261206-timetree-78581255.jpg
 - id: event-20261207-timetree-13010044
   slug: 20261207-timetree-13010044
   date: 2026-12-07 18:00:00 +0900
@@ -12,6 +43,17 @@
   site: 東新宿LOVE TKO
   timetree_id: "3073656470513010044"
   content: TBD
+- id: event-20261212-timetree-29299160
+  slug: 20261212-timetree-29299160
+  date: 2026-12-12 18:00:00 +0900
+  title: 高円寺オリエンタルフォース
+  site: 高円寺オリエンタルフォース
+  timetree_id: "3108392184429299160"
+  content: TBD
+  labels:
+    - マミソロ
+  images:
+    - /events/20261212-timetree-29299160.jpg
 - id: event-20261213-nantyara-fes-shinshoga
   slug: 20261213-nantyara-fes-shinshoga
   date: 2026-12-13 15:00:00 +0900
@@ -42,6 +84,7 @@
     - POPPY
   images:
     - /events/20261213-nantyara-fes-shinshoga.jpg
+  timetree_id: "3108392698105710298"
 - id: event-20261214-timetree-67377512
   slug: 20261214-timetree-67377512
   date: 2026-12-14 18:00:00 +0900
@@ -49,6 +92,19 @@
   site: 東新宿LOVE TKO
   timetree_id: "3073656625467377512"
   content: TBD
+  images:
+    - /events/20261214-timetree-67377512.jpg
+  labels:
+    - マミソロ
+- id: event-20261215-timetree-65971750
+  slug: 20261215-timetree-65971750
+  date: 2026-12-15 18:00:00 +0900
+  title: 新宿めたもるふぉーぜ
+  site: 新宿めたもるふぉーぜ
+  timetree_id: "3108393612765971750"
+  content: TBD
+  labels:
+    - あおはるソロ
 - id: event-20261216-timetree-36166912
   slug: 20261216-timetree-36166912
   date: 2026-12-16 19:00:00 +0900
@@ -71,12 +127,20 @@
     - /events/ottanta-dj-2026.jpeg
   acts:
     - "Q太郎"
+- id: event-20261219-timetree-28968262
+  slug: 20261219-timetree-28968262
+  date: 2026-12-19 19:00:00 +0900
+  title: 蒲田 音楽食堂スターウッズスペース
+  site: 蒲田 音楽食堂スターウッズスペース
+  timetree_id: "3108394918628968262"
+  content: TBD
+  images:
+    - /events/20261219-timetree-28968262.jpg
 - id: event-20261220-wrestle-butokan
   slug: 20261220-wrestle-butokan
-  date: 2026-12-20 12:00:00 +0900
-  title: Hプロ蕨レッスル武闘館大会
+  date: 2026-12-20 11:45:00 +0900
+  title: Hプロ Wonderful days in 蕨
   site: レッスル武闘館
-  time_tbd: true
   content: |
     Hプロダクションのプロレス大会。なんちゃらアイドルはリングライブ＆EDライブで出演。
 
@@ -86,12 +150,16 @@
     ■リングライブ＆EDライブ
     なんちゃらアイドル
 
-    開始時刻は未発表
+    開場/開演　11:30/11:45
+    料金：最前列 ¥5,000／自由席 ¥4,500（高校生半額・中学生以下無料、事前連絡粗品付き）
   acts:
     - 亜斗
     - めろる
   sources:
     - https://x.com/pesyumeruga/status/2115396284534423791
+  timetree_id: "3108395269843207835"
+  images:
+    - /events/20261220-timetree-43207835.jpg
 - id: event-20261221-timetree-23546035
   slug: 20261221-timetree-23546035
   date: 2026-12-21 18:00:00 +0900
@@ -106,6 +174,41 @@
     - sommeil sommeil
   sources:
     - https://x.com/sommeil_staff/status/2118958347928125746
+- id: event-20261224-timetree-75884385
+  slug: 20261224-timetree-75884385
+  date: 2026-12-24 11:00:00 +0900
+  title: 新宿ポトレ(集合めたもるふぉーぜ)
+  site: 新宿ポトレ(集合めたもるふぉーぜ)
+  timetree_id: "3108396908775884385"
+  content: TBD
+- id: event-20261225-timetree-22230753
+  slug: 20261225-timetree-22230753
+  date: 2026-12-25 18:00:00 +0900
+  title: 渋谷La.mama
+  site: 渋谷La.mama
+  timetree_id: "3108397588622230753"
+  content: 大人の文化祭
+- id: event-20261226-timetree-06209888
+  slug: 20261226-timetree-06209888
+  date: 2026-12-26 18:00:00 +0900
+  title: ライブ予定
+  site: ライブ予定
+  timetree_id: "3108407917406209888"
+  content: TBD
+- id: event-20261227-timetree-13317114
+  slug: 20261227-timetree-13317114
+  date: 2026-12-27 12:00:00 +0900
+  title: S.B.Q.個人撮影会
+  site: S.B.Q.個人撮影会
+  timetree_id: "3108398878513317114"
+  content: TBD
+- id: event-20261229-timetree-86506975
+  slug: 20261229-timetree-86506975
+  date: 2026-12-29 19:00:00 +0900
+  title: 蒲田オッタンタ
+  site: 蒲田オッタンタ
+  timetree_id: "3108399188086506975"
+  content: TBD
 - id: event-20261231-lamama
   slug: 20261231-lamama
   date: 2026-12-31 20:30:00 +0900
@@ -148,3 +251,4 @@
     - https://x.com/higemisoshirumc/status/2111049046706274441
     - https://x.com/sommeil_staff/status/2111036707940479105
     - https://x.com/moritakkata/status/2116041322574270609
+  timetree_id: "3108400265745811340"
