@@ -1,2 +1,0 @@
-[      44ms] [ERROR] A bad HTTP response code (404) was received when fetching the script. @ :0
-[      45ms] [LOG] SW registration failed: TypeError: Failed to register a ServiceWorker for scope ('http://localhost:3000/') with script ('http://localhost:3000/sw.js'): A bad HTTP response code (404) was received when fetching the script. @ http://localhost:3000/gallery:2981

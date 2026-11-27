@@ -149,15 +149,6 @@ sync-timetree --dry-run        # ドライラン
 - TimeTreeのラベル（`public_calendar_label.name`）を自動的にYAMLの`labels`フィールドに反映
 - イベントのslugは `YYYYMMDD-timetree-{ID末尾8桁}` 形式で生成
 
-### 定期自動実行（launchd）
-
-- `~/Library/LaunchAgents/com.yancya.nantyara-timetree-sync.plist` が毎朝9:00に
-  `~/.claude/scripts/nantyara-sync.sh` を起動（リポジトリ外・このMac固有）
-- `/sync-timetree` は毎回、`/sync-x` は `.claude/sync-x-last-run` が3日以上前のときだけ `claude -p` で実行
-- 追跡ファイルに未コミット変更がある／main以外にいる場合は丸ごとスキップ（人間の作業を邪魔しない）
-- ログ: `~/.local/log/nantyara-timetree-sync.log`。停止: `touch ~/.config/nantyara-sync/disabled`
-  （sync-x だけ止めるなら `sync-x-disabled`）
-
 ## TimeTree API仕様
 
 ### エンドポイント
