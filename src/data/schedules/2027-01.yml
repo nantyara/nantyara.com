@@ -1,3 +1,43 @@
+- id: event-20270103-lamama
+  slug: 20270103-lamama
+  date: 2027-01-03 15:45:00 +0900
+  end: 2027-01-03 22:00:00 +0900
+  title: DADAフェス Vol80 あけおめDAWN!
+  site: 渋谷La.mama
+  content: |
+    DADAフェス Vol80 あけおめDAWN!（DADAフェス 10th Anniversary）
+
+    【出演】
+    やまだだ / なんちゃらアイドル / 寝込みかんぱにゅら / 人人オピトピア
+    デブパレード / すず佳 / 髭狼-HIGE WOLF- / 平成墓嵐
+
+    【サブステージ】
+    追々 / Ling / Tokimeki Fabulous / 教祖仮面 / 山村茜
+
+    なんちゃらアイドル出番 21:20〜21:50（トリ）
+
+    OPEN 15:35 / START 15:45
+    前売 ¥3,000 / 当日 ¥3,500（+1D）
+    学割 ¥2,000（+1D、大学生以下）
+    前売り予約：e+、各アーティスト、主催者（X：@DADAFES）
+  images:
+    - /events/20270103-lamama.jpeg
+    - /events/20270103-lamama-tt.jpeg
+  acts:
+    - やまだだ
+    - 寝込みかんぱにゅら
+    - 人人オピトピア
+    - デブパレード
+    - すず佳
+    - 髭狼-HIGE WOLF-
+    - 平成墓嵐
+    - 追々
+    - Ling
+    - Tokimeki Fabulous
+    - 教祖仮面
+    - 山村茜
+  sources:
+    - https://x.com/HEISEI_ARASHI/status/2125482461169877136
 - id: event-20270110-timetree-92449568
   slug: 20270110-timetree-92449568
   date: 2027-01-10 11:00:00 +0900
@@ -37,3 +77,30 @@
     - エレクトリックリボン
   sources:
     - https://x.com/eribon_official/status/2109787256139747470
+- id: event-20270121-welcomeback
+  slug: 20270121-welcomeback
+  date: 2027-01-21 18:45:00 +0900
+  title: Welcome back presents Let's Party!
+  site: 大塚Welcome Back
+  content: |
+    Welcome back presents「Let's Party!」
+
+    【出演】
+    なんちゃらアイドル / デカシャツ喫茶 / 武岡あや乃 / さおり凛ね / 茉莉子 / 723シャトンヌ⤴
+
+    なんちゃらアイドル出番 21:15〜21:40（トリ）
+
+    OPEN 18:15 / START 18:45
+    TICKET ¥2,500 + 1Drink ¥600
+    ご予約は各出演者まで。
+  images:
+    - /events/20270121-welcomeback.jpeg
+    - /events/20270121-welcomeback-tt.jpeg
+  acts:
+    - デカシャツ喫茶
+    - 武岡あや乃
+    - さおり凛ね
+    - 茉莉子
+    - 723シャトンヌ⤴
+  sources:
+    - https://x.com/723chatoNne/status/2124841643534848463
