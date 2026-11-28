@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "f=\".claude/sync-x-last-run\"; if [ -f \"$f\" ]; then age=$(( ( $(date +%s) - $(stat -f %m \"$f\") ) / 86400 )); msg=\"/sync-x の最終実行から${age}日経過しています\"; else age=9999; msg=\"/sync-x は一度も実行されていません\"; fi; if [ \"$age\" -ge 7 ]; then printf '{\"hookSpecificOutput\":{\"hookEventName\":\"SessionStart\",\"additionalContext\":\"%s。Xの告知回収のため /sync-x の実行をユーザーに提案してください。\"}}' \"$msg\"; fi",
+            "timeout": 10,
+            "statusMessage": "sync-x の鮮度チェック中..."
+          }
+        ]
+      }
+    ]
+  }
+}
