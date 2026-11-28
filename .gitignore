@@ -25,3 +25,10 @@ Thumbs.db
 
 # Chrome extension (keep in repo)
 # x-post-collector/.claude/
+
+# Codex（プロジェクト共有するのは hooks だけ。config.toml はマシン固有パス、claude-context*.md はローカルのメモリ書き出し）
+.codex/*
+!.codex/hooks.json
+
+# Deno は使っていない（npm + package-lock.json が正）
+deno.lock
